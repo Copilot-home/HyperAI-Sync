@@ -1,0 +1,964 @@
+{
+  message: 'Starting Java server with: /Library/Java/JavaVirtualMachines/temurin-25.jdk/Contents/Home/bin/java -Djdk.xml.maxGeneralEntitySizeLimit=0 -Djdk.xml.totalEntitySizeLimit=0 --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.fs=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.main=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED --add-opens jdk.javadoc/jdk.javadoc.internal.doclets.formats.html.taglets.snippet=ALL-UNNAMED --add-opens jdk.javadoc/jdk.javadoc.internal.doclets.formats.html.taglets=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.jvm=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.platform=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.resources=ALL-UNNAMED --add-opens java.base/sun.nio.ch=ALL-UNNAMED --add-opens jdk.zipfs/jdk.nio.zipfs=ALL-UNNAMED --add-opens java.compiler/javax.tools=ALL-UNNAMED --add-opens java.base/java.nio.channels=ALL-UNNAMED -DICompilationUnitResolver=org.eclipse.jdt.core.dom.JavacCompilationUnitResolver -DAbstractImageBuilder.compilerFactory=org.eclipse.jdt.internal.javac.JavacCompilerFactory -DCompilationUnit.DOM_BASED_OPERATIONS=true -DSourceIndexer.DOM_BASED_INDEXER=true -DMatchLocator.DOM_BASED_MATCH=true -DIJavaSearchDelegate=org.eclipse.jdt.internal.core.search.DOMJavaSearchDelegate -DCompilationUnit.codeComplete.DOM_BASED_OPERATIONS=true -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=true -DDetectVMInstallationsJob.disabled=true -Dfile.encoding=utf8 -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable -javaagent:/Users/andy/.vscode/extensions/redhat.java-1.50.0-darwin-arm64/lombok/lombok-1.18.39-4050.jar -jar /Users/andy/.vscode/extensions/redhat.java-1.50.0-darwin-arm64/server/plugins/org.eclipse.equinox.launcher_1.7.100.v20251111-0406.jar -configuration /Users/andy/Library/Application Support/Code/User/globalStorage/redhat.java/1.50.0/config_ss_mac -data /var/folders/6t/gg0v6x8j5cgbds_klhpdwnvw0000gn/T/vscodesws_6bcda/ss_ws',
+  level: 'info',
+  timestamp: '2025-12-18 06:09:35.069'
+}
+{
+  message: 'Starting Java server with: /Library/Java/JavaVirtualMachines/temurin-25.jdk/Contents/Home/bin/java -Djdk.xml.maxGeneralEntitySizeLimit=0 -Djdk.xml.totalEntitySizeLimit=0 --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.fs=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.main=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED --add-opens jdk.javadoc/jdk.javadoc.internal.doclets.formats.html.taglets.snippet=ALL-UNNAMED --add-opens jdk.javadoc/jdk.javadoc.internal.doclets.formats.html.taglets=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.jvm=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.platform=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.resources=ALL-UNNAMED --add-opens java.base/sun.nio.ch=ALL-UNNAMED --add-opens jdk.zipfs/jdk.nio.zipfs=ALL-UNNAMED --add-opens java.compiler/javax.tools=ALL-UNNAMED --add-opens java.base/java.nio.channels=ALL-UNNAMED -DICompilationUnitResolver=org.eclipse.jdt.core.dom.JavacCompilationUnitResolver -DAbstractImageBuilder.compilerFactory=org.eclipse.jdt.internal.javac.JavacCompilerFactory -DCompilationUnit.DOM_BASED_OPERATIONS=true -DSourceIndexer.DOM_BASED_INDEXER=true -DMatchLocator.DOM_BASED_MATCH=true -DIJavaSearchDelegate=org.eclipse.jdt.internal.core.search.DOMJavaSearchDelegate -DCompilationUnit.codeComplete.DOM_BASED_OPERATIONS=true -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=true -DDetectVMInstallationsJob.disabled=true -Dfile.encoding=utf8 -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable -javaagent:/Users/andy/.vscode/extensions/redhat.java-1.50.0-darwin-arm64/lombok/lombok-1.18.39-4050.jar -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/var/folders/6t/gg0v6x8j5cgbds_klhpdwnvw0000gn/T/vscodesws_6bcda -Daether.dependencyCollector.impl=bf -jar /Users/andy/.vscode/extensions/redhat.java-1.50.0-darwin-arm64/server/plugins/org.eclipse.equinox.launcher_1.7.100.v20251111-0406.jar -configuration /Users/andy/Library/Application Support/Code/User/globalStorage/redhat.java/1.50.0/config_mac -data /var/folders/6t/gg0v6x8j5cgbds_klhpdwnvw0000gn/T/vscodesws_6bcda/jdt_ws',
+  level: 'info',
+  timestamp: '2025-12-18 06:09:35.095'
+}
+{
+  message: 'WARNING: Using incubator modules: jdk.incubator.vector\n',
+  level: 'info',
+  timestamp: '2025-12-18 06:09:57.226'
+}
+{
+  message: 'WARNING: Using incubator modules: jdk.incubator.vector\n',
+  level: 'info',
+  timestamp: '2025-12-18 06:09:57.228'
+}
+{
+  message: 'thg 12 18, 2025 6:10:07 SA org.apache.aries.spifly.BaseActivator log\n' +
+    'INFO: Registered provider ch.qos.logback.classic.spi.LogbackServiceProvider of service org.slf4j.spi.SLF4JServiceProvider in bundle ch.qos.logback.classic\n',
+  level: 'info',
+  timestamp: '2025-12-18 06:10:08.950'
+}
+{
+  message: "[Trace - 06:10:49] Sending request 'initialize - (0)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:10:49.273'
+}
+{
+  message: "[Trace - 06:10:58] Received response 'initialize - (0)' in 9311ms.",
+  level: 'info',
+  timestamp: '2025-12-18 06:10:58.593'
+}
+{
+  message: "[Trace - 06:10:58] Sending notification 'initialized'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:10:58.598'
+}
+{
+  message: "[Trace - 06:10:58] Sending notification 'workspace/didChangeConfiguration'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:10:58.619'
+}
+{
+  message: "[Trace - 06:10:58] Received request 'client/registerCapability - (1)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:10:58.655'
+}
+{
+  message: "[Trace - 06:10:58] Sending response 'client/registerCapability - (1)'. Processing request took 0ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:10:58.656'
+}
+{
+  message: "[Trace - 06:10:58] Received request 'client/registerCapability - (2)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:10:58.658'
+}
+{
+  message: "[Trace - 06:10:58] Sending response 'client/registerCapability - (2)'. Processing request took 1ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:10:58.659'
+}
+{
+  message: "[Trace - 06:10:58] Received request 'client/registerCapability - (3)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:10:58.659'
+}
+{
+  message: "[Trace - 06:10:58] Sending response 'client/registerCapability - (3)'. Processing request took 0ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:10:58.660'
+}
+{
+  message: "[Trace - 06:10:58] Received request 'client/registerCapability - (4)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:10:58.664'
+}
+{
+  message: "[Trace - 06:10:58] Sending response 'client/registerCapability - (4)'. Processing request took 0ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:10:58.664'
+}
+{
+  message: "[Trace - 06:10:58] Received request 'client/registerCapability - (5)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:10:58.670'
+}
+{
+  message: "[Trace - 06:10:58] Sending response 'client/registerCapability - (5)'. Processing request took 0ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:10:58.670'
+}
+{
+  message: "[Trace - 06:10:58] Received request 'client/registerCapability - (6)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:10:58.673'
+}
+{
+  message: "[Trace - 06:10:58] Sending response 'client/registerCapability - (6)'. Processing request took 0ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:10:58.673'
+}
+{
+  message: "[Trace - 06:10:58] Received request 'client/registerCapability - (7)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:10:58.676'
+}
+{
+  message: "[Trace - 06:10:58] Sending response 'client/registerCapability - (7)'. Processing request took 1ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:10:58.677'
+}
+{
+  message: "[Trace - 06:10:58] Received request 'client/registerCapability - (8)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:10:58.678'
+}
+{
+  message: "[Trace - 06:10:58] Sending response 'client/registerCapability - (8)'. Processing request took 0ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:10:58.679'
+}
+{
+  message: "[Trace - 06:10:58] Received request 'client/registerCapability - (9)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:10:58.680'
+}
+{
+  message: "[Trace - 06:10:58] Sending response 'client/registerCapability - (9)'. Processing request took 1ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:10:58.681'
+}
+{
+  message: "[Trace - 06:10:58] Received request 'client/registerCapability - (10)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:10:58.704'
+}
+{
+  message: "[Trace - 06:10:58] Sending response 'client/registerCapability - (10)'. Processing request took 0ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:10:58.705'
+}
+{
+  message: "[Trace - 06:10:58] Received notification 'language/status'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:10:58.707'
+}
+{
+  message: "[Trace - 06:11:00] Sending request 'initialize - (0)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:00.543'
+}
+{
+  message: 'WARNING: A terminally deprecated method in sun.misc.Unsafe has been called\n' +
+    'WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/Users/andy/Library/Application Support/Code/User/globalStorage/redhat.java/1.50.0/config_mac/org.eclipse.osgi/69/0/.cp/jars/guice-5.1.0-classes.jar)\n' +
+    'WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner\n' +
+    'WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release\n',
+  level: 'info',
+  timestamp: '2025-12-18 06:11:02.650'
+}
+{
+  message: "[Trace - 06:11:05] Received request 'window/workDoneProgress/create - (1)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:05.742'
+}
+{
+  message: "[Trace - 06:11:05] Sending response 'window/workDoneProgress/create - (1)'. Processing request took 1ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:05.744'
+}
+{
+  message: "[Trace - 06:11:05] Received notification '$/progress'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:05.750'
+}
+{
+  message: "[Trace - 06:11:05] Received notification '$/progress'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:05.752'
+}
+{
+  message: "[Trace - 06:11:05] Received notification '$/progress'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:05.755'
+}
+{
+  message: "[Trace - 06:11:07] Received request 'window/workDoneProgress/create - (2)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:07.765'
+}
+{
+  message: "[Trace - 06:11:07] Sending response 'window/workDoneProgress/create - (2)'. Processing request took 1ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:07.770'
+}
+{
+  message: "[Trace - 06:11:07] Received notification '$/progress'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:07.772'
+}
+{
+  message: "[Trace - 06:11:07] Received notification '$/progress'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:07.772'
+}
+{
+  message: "[Trace - 06:11:07] Received notification '$/progress'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:07.773'
+}
+{
+  message: "[Trace - 06:11:07] Received request 'window/workDoneProgress/create - (3)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:07.970'
+}
+{
+  message: "[Trace - 06:11:07] Sending response 'window/workDoneProgress/create - (3)'. Processing request took 0ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:07.970'
+}
+{
+  message: "[Trace - 06:11:07] Received notification '$/progress'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:07.970'
+}
+{
+  message: "[Trace - 06:11:07] Received notification '$/progress'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:07.975'
+}
+{
+  message: "[Trace - 06:11:07] Received notification '$/progress'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:07.976'
+}
+{
+  message: "[Trace - 06:11:08] Received request 'window/workDoneProgress/create - (4)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.475'
+}
+{
+  message: "[Trace - 06:11:08] Sending response 'window/workDoneProgress/create - (4)'. Processing request took 0ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.475'
+}
+{
+  message: "[Trace - 06:11:08] Received notification '$/progress'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.480'
+}
+{
+  message: "[Trace - 06:11:08] Received notification '$/progress'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.482'
+}
+{
+  message: "[Trace - 06:11:08] Received notification '$/progress'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.483'
+}
+{
+  message: "[Trace - 06:11:08] Received request 'window/workDoneProgress/create - (5)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.553'
+}
+{
+  message: "[Trace - 06:11:08] Sending response 'window/workDoneProgress/create - (5)'. Processing request took 0ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.554'
+}
+{
+  message: "[Trace - 06:11:08] Received notification '$/progress'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.560'
+}
+{
+  message: "[Trace - 06:11:08] Received notification '$/progress'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.560'
+}
+{
+  message: "[Trace - 06:11:08] Received response 'initialize - (0)' in 8032ms.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.576'
+}
+{
+  message: "[Trace - 06:11:08] Sending notification 'initialized'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.576'
+}
+{
+  message: "[Trace - 06:11:08] Sending notification 'workspace/didChangeConfiguration'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.592'
+}
+{
+  message: "[Trace - 06:11:08] Received notification 'language/status'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.745'
+}
+{
+  message: "[Trace - 06:11:08] Received notification 'language/status'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.754'
+}
+{
+  message: "[Trace - 06:11:08] Received notification '$/progress'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.755'
+}
+{
+  message: "[Trace - 06:11:08] Received notification 'language/status'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.760'
+}
+{
+  message: "[Trace - 06:11:08] Received notification 'language/status'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.761'
+}
+{
+  message: "[Trace - 06:11:08] Received request 'client/registerCapability - (6)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.762'
+}
+{
+  message: "[Trace - 06:11:08] Sending response 'client/registerCapability - (6)'. Processing request took 6ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.768'
+}
+{
+  message: "[Trace - 06:11:08] Received request 'client/registerCapability - (7)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.769'
+}
+{
+  message: "[Trace - 06:11:08] Sending response 'client/registerCapability - (7)'. Processing request took 0ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.769'
+}
+{
+  message: "[Trace - 06:11:08] Received request 'client/registerCapability - (8)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.769'
+}
+{
+  message: "[Trace - 06:11:08] Sending response 'client/registerCapability - (8)'. Processing request took 3ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.772'
+}
+{
+  message: "[Trace - 06:11:08] Received request 'client/registerCapability - (9)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.772'
+}
+{
+  message: "[Trace - 06:11:08] Sending response 'client/registerCapability - (9)'. Processing request took 0ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.772'
+}
+{
+  message: "[Trace - 06:11:08] Received request 'client/registerCapability - (10)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.773'
+}
+{
+  message: "[Trace - 06:11:08] Sending response 'client/registerCapability - (10)'. Processing request took 0ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.773'
+}
+{
+  message: "[Trace - 06:11:08] Received request 'client/registerCapability - (11)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.773'
+}
+{
+  message: "[Trace - 06:11:08] Sending response 'client/registerCapability - (11)'. Processing request took 0ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.773'
+}
+{
+  message: "[Trace - 06:11:08] Received request 'client/registerCapability - (12)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.774'
+}
+{
+  message: "[Trace - 06:11:08] Sending response 'client/registerCapability - (12)'. Processing request took 0ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.774'
+}
+{
+  message: "[Trace - 06:11:08] Received request 'client/registerCapability - (13)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.774'
+}
+{
+  message: "[Trace - 06:11:08] Sending response 'client/registerCapability - (13)'. Processing request took 1ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.775'
+}
+{
+  message: "[Trace - 06:11:08] Received request 'client/registerCapability - (14)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.776'
+}
+{
+  message: "[Trace - 06:11:08] Sending response 'client/registerCapability - (14)'. Processing request took 0ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.776'
+}
+{
+  message: "[Trace - 06:11:08] Received request 'client/registerCapability - (15)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.778'
+}
+{
+  message: "[Trace - 06:11:08] Sending response 'client/registerCapability - (15)'. Processing request took 0ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.778'
+}
+{
+  message: "[Trace - 06:11:08] Received request 'client/registerCapability - (16)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.780'
+}
+{
+  message: "[Trace - 06:11:08] Sending response 'client/registerCapability - (16)'. Processing request took 0ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.780'
+}
+{
+  message: "[Trace - 06:11:08] Received request 'client/registerCapability - (17)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.782'
+}
+{
+  message: "[Trace - 06:11:08] Sending response 'client/registerCapability - (17)'. Processing request took 0ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.782'
+}
+{
+  message: "[Trace - 06:11:08] Received request 'client/registerCapability - (18)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.783'
+}
+{
+  message: "[Trace - 06:11:08] Sending response 'client/registerCapability - (18)'. Processing request took 0ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.783'
+}
+{
+  message: "[Trace - 06:11:08] Received request 'client/registerCapability - (19)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.783'
+}
+{
+  message: "[Trace - 06:11:08] Sending response 'client/registerCapability - (19)'. Processing request took 1ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.784'
+}
+{
+  message: "[Trace - 06:11:08] Received request 'client/registerCapability - (20)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.785'
+}
+{
+  message: "[Trace - 06:11:08] Sending response 'client/registerCapability - (20)'. Processing request took 0ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.785'
+}
+{
+  message: "[Trace - 06:11:08] Received request 'client/registerCapability - (21)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.810'
+}
+{
+  message: "[Trace - 06:11:08] Sending response 'client/registerCapability - (21)'. Processing request took 0ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.810'
+}
+{
+  message: "[Trace - 06:11:08] Received request 'client/registerCapability - (22)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.812'
+}
+{
+  message: "[Trace - 06:11:08] Sending response 'client/registerCapability - (22)'. Processing request took 66ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.878'
+}
+{
+  message: "[Trace - 06:11:08] Received request 'client/registerCapability - (23)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.931'
+}
+{
+  message: "[Trace - 06:11:08] Sending response 'client/registerCapability - (23)'. Processing request took 5ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.936'
+}
+{
+  message: "[Trace - 06:11:08] Received request 'client/registerCapability - (24)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.943'
+}
+{
+  message: "[Trace - 06:11:08] Sending response 'client/registerCapability - (24)'. Processing request took 1ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.944'
+}
+{
+  message: "[Trace - 06:11:08] Received request 'client/registerCapability - (25)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.944'
+}
+{
+  message: "[Trace - 06:11:08] Sending response 'client/registerCapability - (25)'. Processing request took 0ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.944'
+}
+{
+  message: "[Trace - 06:11:08] Received request 'workspace/executeClientCommand - (26)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.944'
+}
+{
+  message: "[Trace - 06:11:08] Sending response 'workspace/executeClientCommand - (26)'. Processing request took 24ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:08.968'
+}
+{
+  message: "[Trace - 06:11:09] Received notification 'language/status'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:09.003'
+}
+{
+  message: "[Trace - 06:11:09] Sending request 'shutdown - (1)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:09.019'
+}
+{
+  message: "[Trace - 06:11:09] Sending request 'workspace/executeCommand - (1)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:09.114'
+}
+{
+  message: "[Trace - 06:11:09] Sending request 'workspace/executeCommand - (2)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:09.114'
+}
+{
+  message: "[Trace - 06:11:09] Sending request 'workspace/executeCommand - (3)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:09.114'
+}
+{
+  message: "[Trace - 06:11:09] Received request 'window/workDoneProgress/create - (27)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:09.556'
+}
+{
+  message: "[Trace - 06:11:09] Sending response 'window/workDoneProgress/create - (27)'. Processing request took 0ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:09.557'
+}
+{
+  message: "[Trace - 06:11:09] Received notification '$/progress'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:09.858'
+}
+{
+  message: "[Trace - 06:11:10] Received notification '$/progress'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:10.383'
+}
+{
+  message: "[Trace - 06:11:10] Received notification '$/progress'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:10.549'
+}
+{
+  message: "[Trace - 06:11:10] Received response 'shutdown - (1)' in 1530ms.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:10.549'
+}
+{
+  message: "[Trace - 06:11:10] Sending notification 'exit'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:10.550'
+}
+{
+  message: "[Trace - 06:11:10] Received request 'client/registerCapability - (28)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:10.994'
+}
+{
+  message: "[Trace - 06:11:10] Sending response 'client/registerCapability - (28)'. Processing request took 2ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:10.996'
+}
+{
+  message: "[Trace - 06:11:11] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:11.333'
+}
+{
+  message: "[Trace - 06:11:11] Received request 'window/workDoneProgress/create - (29)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:11.363'
+}
+{
+  message: "[Trace - 06:11:11] Sending response 'window/workDoneProgress/create - (29)'. Processing request took 0ms",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:11.363'
+}
+{
+  message: "[Trace - 06:11:11] Received notification '$/progress'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:11.424'
+}
+{
+  message: "[Trace - 06:11:11] Received notification '$/progress'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:11.430'
+}
+{
+  message: "[Trace - 06:11:11] Received notification 'telemetry/event'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:11.445'
+}
+{
+  message: "[Trace - 06:11:11] Received response 'workspace/executeCommand - (1)' in 2364ms.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:11.478'
+}
+{
+  message: "[Trace - 06:11:11] Received response 'workspace/executeCommand - (2)' in 2370ms.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:11.485'
+}
+{
+  message: "[Trace - 06:11:11] Received response 'workspace/executeCommand - (3)' in 2385ms.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:11.499'
+}
+{
+  message: "[Trace - 06:11:16] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:16.755'
+}
+{
+  message: "[Trace - 06:11:22] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:22.231'
+}
+{
+  message: "[Trace - 06:11:23] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:23.753'
+}
+{
+  message: "[Trace - 06:11:24] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:24.594'
+}
+{
+  message: "[Trace - 06:11:25] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:25.485'
+}
+{
+  message: "[Trace - 06:11:39] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:39.182'
+}
+{
+  message: "[Trace - 06:11:46] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:46.981'
+}
+{
+  message: "[Trace - 06:11:48] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:48.013'
+}
+{
+  message: "[Trace - 06:11:53] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:53.039'
+}
+{
+  message: "[Trace - 06:11:54] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:54.841'
+}
+{
+  message: "[Trace - 06:11:56] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:56.147'
+}
+{
+  message: "[Trace - 06:11:57] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:57.226'
+}
+{
+  message: "[Trace - 06:11:57] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:57.935'
+}
+{
+  message: "[Trace - 06:11:58] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:58.608'
+}
+{
+  message: "[Trace - 06:11:59] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:11:59.523'
+}
+{
+  message: "[Trace - 06:12:00] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:00.587'
+}
+{
+  message: "[Trace - 06:12:01] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:01.327'
+}
+{
+  message: "[Trace - 06:12:02] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:02.113'
+}
+{
+  message: "[Trace - 06:12:02] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:02.814'
+}
+{
+  message: "[Trace - 06:12:03] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:03.961'
+}
+{
+  message: "[Trace - 06:12:04] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:04.688'
+}
+{
+  message: "[Trace - 06:12:05] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:05.479'
+}
+{
+  message: "[Trace - 06:12:06] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:06.525'
+}
+{
+  message: "[Trace - 06:12:07] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:07.632'
+}
+{
+  message: "[Trace - 06:12:08] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:08.422'
+}
+{
+  message: "[Trace - 06:12:09] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:09.632'
+}
+{
+  message: "[Trace - 06:12:10] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:10.713'
+}
+{
+  message: "[Trace - 06:12:11] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:11.363'
+}
+{
+  message: "[Trace - 06:12:12] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:12.443'
+}
+{
+  message: "[Trace - 06:12:13] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:13.422'
+}
+{
+  message: "[Trace - 06:12:14] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:14.630'
+}
+{
+  message: "[Trace - 06:12:15] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:15.920'
+}
+{
+  message: "[Trace - 06:12:17] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:17.325'
+}
+{
+  message: "[Trace - 06:12:18] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:18.200'
+}
+{
+  message: "[Trace - 06:12:19] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:19.286'
+}
+{
+  message: "[Trace - 06:12:20] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:20.120'
+}
+{
+  message: "[Trace - 06:12:21] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:21.058'
+}
+{
+  message: "[Trace - 06:12:22] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:22.434'
+}
+{
+  message: "[Trace - 06:12:23] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:23.876'
+}
+{
+  message: "[Trace - 06:12:24] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:24.927'
+}
+{
+  message: "[Trace - 06:12:26] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:26.206'
+}
+{
+  message: "[Trace - 06:12:27] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:27.349'
+}
+{
+  message: "[Trace - 06:12:28] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:28.514'
+}
+{
+  message: "[Trace - 06:12:29] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:29.209'
+}
+{
+  message: "[Trace - 06:12:30] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:30.211'
+}
+{
+  message: "[Trace - 06:12:31] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:31.344'
+}
+{
+  message: "[Trace - 06:12:32] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:32.624'
+}
+{
+  message: "[Trace - 06:12:33] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:33.790'
+}
+{
+  message: "[Trace - 06:12:35] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:35.227'
+}
+{
+  message: "[Trace - 06:12:37] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:37.694'
+}
+{
+  message: "[Trace - 06:12:38] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:38.577'
+}
+{
+  message: "[Trace - 06:12:39] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:39.334'
+}
+{
+  message: "[Trace - 06:12:40] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:40.439'
+}
+{
+  message: "[Trace - 06:12:41] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:41.370'
+}
+{
+  message: "[Trace - 06:12:42] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:42.625'
+}
+{
+  message: "[Trace - 06:12:43] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:43.928'
+}
+{
+  message: "[Trace - 06:12:45] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:45.281'
+}
+{
+  message: "[Trace - 06:12:46] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:46.546'
+}
+{
+  message: "[Trace - 06:12:48] Sending notification '$/setTrace'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:12:48.605'
+}
+{
+  message: "[Trace - 06:17:09] Sending request 'shutdown - (4)'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:17:09.693'
+}
+{
+  message: '[Error - 06:17:12] Stopping server timed out',
+  level: 'info',
+  timestamp: '2025-12-18 06:17:12.745'
+}
+{
+  message: "[Trace - 06:17:13] Received response 'shutdown - (4)' in 3420ms.",
+  level: 'info',
+  timestamp: '2025-12-18 06:17:13.113'
+}
+{
+  message: "[Trace - 06:17:13] Sending notification 'exit'.",
+  level: 'info',
+  timestamp: '2025-12-18 06:17:13.114'
+}

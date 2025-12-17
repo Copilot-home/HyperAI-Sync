@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 2
+    },
+    "auditLog": "/var/folders/6t/gg0v6x8j5cgbds_klhpdwnvw0000gn/T/vscodesws_6bcda/.573b9db77cc85fccc7af0f83ed5ae4e7703a89ca-audit.json",
+    "files": [
+        {
+            "date": 1766012974027,
+            "name": "/var/folders/6t/gg0v6x8j5cgbds_klhpdwnvw0000gn/T/vscodesws_6bcda/client.log.2025-12-18",
+            "hash": "0319f1ca9dfd389115a57d8b520b0ce34aa965a66418509051c4c9bbb42f1e7c"
+        }
+    ],
+    "hashType": "sha256"
+}
