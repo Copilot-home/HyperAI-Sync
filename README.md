@@ -25,11 +25,15 @@ place to get detailed answers.
 ## 💬 Support
 
 - **Paid support** is available to Docker **Pro** and **Team** subscribers via
-  the [Desktop support form](https://hub.docker.com/support/contact/).
+  the [Desktop support form](https://hub.docker.com/support/contact/). (Login
+  required)
 - This repository is intended for **bug reports** and **product feedback only**.
 - **Support requests** (e.g. installation problems, usage questions) will be
-  closed or converted to Discussions. For help from the community, visit the
-  [Docker Community Slack](https://dockercommunity.slack.com/)).
+  closed or converted to Discussions.
+- For help from the community, visit the
+  [Docker Community Slack](https://dockercommunity.slack.com/) (Not a member
+  yet?
+  [Join Here](https://communityinviter.com/apps/dockercommunity/docker-community))
 
 ## 🐛 Reporting Issues
 
