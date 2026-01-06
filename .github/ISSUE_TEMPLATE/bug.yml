@@ -1,0 +1,102 @@
+name: 🐞 Bug report
+description: Report a bug
+type: "bug"
+labels:
+  - "kind/bug"
+  - "needs-triage"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Thanks for taking the time to report a bug!**
+
+        If this is a security issue, please email the [Docker Security team](mailto:security@docker.com) instead of opening a public issue.
+
+        To help us investigate faster, please include:
+        - A clear description of the bug: what you expected vs. what actually happened.
+        - Steps to reproduce the issue.
+        - Version and system information.
+  - type: textarea
+    attributes:
+      label: Bug report
+      description: |
+        Please provide a description of the bug and reproduction steps.
+      placeholder: |
+        ## Bug description
+        What's going wrong? What were you expecting to happen instead?
+
+        ## Reproduction steps
+        Step-by-step instructions to make the bug appear.
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      multiple: false
+      description: |
+        Which platform are you using?
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: version
+    attributes:
+      label: Version information
+      description: |
+        Please provide version and environment information.
+
+        <details>
+        <summary>⌨️ Collect version information from terminal</summary>
+
+        Run the following commands in your favorite terminal and paste the output below:
+        ```bash
+        docker version && docker info
+        ```
+
+        </details>
+
+      render: bash
+      placeholder: |
+        Client:
+        Version:           27.5.1
+        API version:       1.47
+        Go version:        go1.22.11
+        Git commit:        abcdef1
+        Built:             Wed Jan 22 13:37:19 2025
+        OS/Arch:           darwin/arm64
+        Context:           desktop-linux
+
+        Server: Docker Desktop 4.39.0 (184744)
+        Engine:
+          Version:          28.0.1
+          API version:      1.48 (minimum version 1.24)
+          Go version:       go1.23.6
+          Git commit:       1234567
+          Built:            Wed Feb 26 10:40:57 2025
+          OS/Arch:          linux/arm64
+          Experimental:     false
+        containerd:
+          Version:          1.7.25
+          GitCommit:        123456789a
+        runc:
+          Version:          1.2.4
+          GitCommit:        123456789a
+        docker-init:
+          Version:          0.19.0
+          GitCommit:        123456789a
+        ... (more output) ...
+    validations:
+      required: true
+  - type: input
+    id: diagnostics
+    attributes:
+      label: Diagnostics ID
+      description: |
+        [Generate a diagnostics ID](https://docs.docker.com/docker-for-windows/troubleshoot/#diagnose) either from inside the app or from the command line.
+    validations:
+      required: false
