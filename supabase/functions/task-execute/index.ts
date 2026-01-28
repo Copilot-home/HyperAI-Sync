@@ -1,8 +1,16 @@
 // ECVM API: POST /v1/task/execute
 // Execute a task through Kernel (FAIL-CLOSED)
-// Spec: ECVM-CS-1.0 (One action = One API call, no retries, no preview)
+// Spec: ECVM-CS-1.0 · Kernel v0.1.3
 
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+import {
+  validateTask,
+  isVerdictExecutable,
+  isVerdictTerminal,
+  TaskValidationInput,
+  IdentityStateEnum,
+  TaskTypeEnum,
+} from "../_shared/kernel.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -11,9 +19,16 @@ const corsHeaders = {
 };
 
 interface TaskRequest {
-  task_type: "image" | "image_static" | "video";
+  task_type: TaskTypeEnum;
   logic_ids: string[];
   entity_id: string;
+}
+
+interface LogicModule {
+  logic_id: string;
+  task_type: TaskTypeEnum;
+  enabled: boolean;
+  required_identity_state: IdentityStateEnum;
 }
 
 Deno.serve(async (req) => {
@@ -46,7 +61,7 @@ Deno.serve(async (req) => {
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
     );
 
-    // Verify authenticated user
+    // KERNEL GATE 0: Verify authenticated user
     const {
       data: { user },
       error: authError,
@@ -110,57 +125,37 @@ Deno.serve(async (req) => {
       );
     }
 
-    // KERNEL GATE 3: Fail-closed check
-    const allowedStates = ["ESTABLISHED"];
-    if (!allowedStates.includes(state.state)) {
-      console.log("[task-execute] HALT: Identity state not ESTABLISHED:", state.state);
-      
-      // Log HALT verdict
-      await kernelClient.from("task_execution_log").insert({
-        entity_id,
-        task_type,
-        verdict: "HALT",
-        logic_applied: logic_ids ?? [],
-        execution_time_ms: 0,
-        metadata: { reason: `Identity state is ${state.state}, required ESTABLISHED` },
-      });
+    // KERNEL GATE 3: Fetch and validate logic modules
+    const { data: modules, error: modulesError } = await userClient
+      .from("logic_module")
+      .select("logic_id, task_type, enabled, required_identity_state")
+      .in("logic_id", logic_ids ?? []);
 
+    if (modulesError) {
+      console.error("[task-execute] Logic fetch error:", modulesError.message);
       return new Response(
-        JSON.stringify({
-          task_id: null,
-          status: "halted",
-          verdict: "HALT",
-          reason: {
-            code: "IDENTITY_NOT_ESTABLISHED",
-            message: `Cannot execute: identity state is ${state.state}`,
-            technical_detail: "Kernel requires ESTABLISHED state for task execution",
-          },
-        }),
-        { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        JSON.stringify({ error: "LOGIC_FETCH_ERROR", message: modulesError.message }),
+        { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
-    // KERNEL GATE 4: Verify logic availability
-    const { data: modules } = await userClient
-      .from("logic_module")
-      .select("logic_id, task_type, enabled")
-      .in("logic_id", logic_ids ?? [])
-      .eq("enabled", true);
+    const logicModules: LogicModule[] = modules ?? [];
+    const requestedLogicIds = logic_ids ?? [];
 
-    const availableLogicIds = (modules ?? []).map((m) => m.logic_id);
-    const unavailableLogic = (logic_ids ?? []).filter((id) => !availableLogicIds.includes(id));
+    // Check for missing logic modules
+    const foundLogicIds = logicModules.map((m) => m.logic_id);
+    const missingLogic = requestedLogicIds.filter((id) => !foundLogicIds.includes(id));
 
-    if (unavailableLogic.length > 0) {
-      console.log("[task-execute] REJECT: Unavailable logic:", unavailableLogic);
+    if (missingLogic.length > 0) {
+      console.log("[task-execute] REJECT: Missing logic:", missingLogic);
       
-      // Log REJECT verdict
       await kernelClient.from("task_execution_log").insert({
         entity_id,
         task_type,
         verdict: "REJECT",
         logic_applied: [],
         execution_time_ms: 0,
-        metadata: { reason: "Requested logic not available", unavailable: unavailableLogic },
+        metadata: { reason: "Requested logic not found", missing: missingLogic },
       });
 
       return new Response(
@@ -169,22 +164,76 @@ Deno.serve(async (req) => {
           status: "rejected",
           verdict: "REJECT",
           reason: {
-            code: "LOGIC_UNAVAILABLE",
-            message: "Requested logic modules are not available",
-            technical_detail: `Unavailable: ${unavailableLogic.join(", ")}`,
+            code: "LOGIC_NOT_FOUND",
+            message: "Requested logic modules not found",
+            technical_detail: `Missing: ${missingLogic.join(", ")}`,
           },
         }),
         { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
-    // KERNEL EXECUTION: Task passes all gates
+    // KERNEL GATE 4: Validate each logic module through Kernel
     const executionStart = Date.now();
-    
-    // TODO: Actual ML rendering pipeline would go here
-    // For now, simulate successful execution
-    
+    const validationResults: { logic_id: string; verdict: string; reasons: string[]; terminal: boolean }[] = [];
+
+    for (const logic of logicModules) {
+      const validationInput: TaskValidationInput = {
+        task_id: `temp-${Date.now()}`,
+        entity_id,
+        logic_id: logic.logic_id,
+        task_type: logic.task_type,
+        identity_state: state.state as IdentityStateEnum,
+        required_identity_state: logic.required_identity_state as IdentityStateEnum,
+        logic_enabled: logic.enabled,
+      };
+
+      const result = validateTask(validationInput);
+      validationResults.push({
+        logic_id: logic.logic_id,
+        verdict: result.verdict,
+        reasons: result.reasons,
+        terminal: result.terminal,
+      });
+
+      // FAIL-CLOSED: Stop on first non-PASS verdict
+      if (!isVerdictExecutable(result.verdict)) {
+        console.log(`[task-execute] ${result.verdict}: ${result.reasons.join(", ")}`);
+
+        // Log the verdict
+        await kernelClient.from("task_execution_log").insert({
+          entity_id,
+          task_type,
+          verdict: result.verdict,
+          logic_id: logic.logic_id,
+          logic_applied: [],
+          execution_time_ms: Date.now() - executionStart,
+          metadata: { 
+            reason: result.reasons.join("; "),
+            identity_state: state.state,
+            required_state: logic.required_identity_state,
+          },
+        });
+
+        return new Response(
+          JSON.stringify({
+            task_id: null,
+            status: isVerdictTerminal(result.verdict) ? "halted" : "rejected",
+            verdict: result.verdict,
+            reason: {
+              code: result.reasons[0]?.split(":")[0] ?? result.verdict,
+              message: `Task validation failed for logic ${logic.logic_id}`,
+              technical_detail: result.reasons.join("; "),
+            },
+          }),
+          { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        );
+      }
+    }
+
+    // KERNEL EXECUTION: All gates passed
     const executionTime = Date.now() - executionStart;
+    const approvedLogicIds = logicModules.map((m) => m.logic_id);
 
     // Log PASS verdict
     const { data: taskLog, error: logError } = await kernelClient
@@ -193,9 +242,13 @@ Deno.serve(async (req) => {
         entity_id,
         task_type,
         verdict: "PASS",
-        logic_applied: availableLogicIds,
+        logic_applied: approvedLogicIds,
         execution_time_ms: executionTime,
-        metadata: { coverage: state.coverage_percent, variance: state.variance_score },
+        metadata: { 
+          coverage: state.coverage_percent, 
+          variance: state.variance_score,
+          validation_results: validationResults,
+        },
       })
       .select("task_id, executed_at")
       .single();
