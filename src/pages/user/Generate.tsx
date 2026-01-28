@@ -61,7 +61,8 @@ export default function Generate() {
     }
   }, [filteredLogic]);
 
-  // ECVM: Compute SINGLE disable reason based on priority (NO MULTIPLE REASONS)
+  // ECVM: Compute SINGLE disable reason based on STRICT priority order (NO MULTIPLE REASONS)
+  // Priority: 1. API_ERROR → 2. INSUFFICIENT_IDENTITY → 3. DRIFT_DETECTED → 4. LOGIC_DISABLED → 5. NO_LOGIC_SELECTED
   const disableReason = useMemo<DisableReason | null>(() => {
     // Priority 1: API Errors
     if (entityError) {
@@ -80,15 +81,8 @@ export default function Generate() {
       };
     }
 
-    // Priority 2: INSUFFICIENT_IDENTITY (identity_state not ESTABLISHED)
-    if (identityState !== "ESTABLISHED") {
-      if (identityState === "DRIFT") {
-        return {
-          code: "DRIFT_DETECTED",
-          message: "Identity drift detected. Additional reference data required.",
-          technical_detail: `identity_state === 'DRIFT'. Task execution blocked.`,
-        };
-      }
+    // Priority 2: INSUFFICIENT_IDENTITY (NO_IDENTITY or INSUFFICIENT - NOT ESTABLISHED and NOT DRIFT)
+    if (identityState === "NO_IDENTITY" || identityState === "INSUFFICIENT") {
       return {
         code: "INSUFFICIENT_IDENTITY",
         message: "Identity state is not sufficient to guarantee stability.",
@@ -96,7 +90,16 @@ export default function Generate() {
       };
     }
 
-    // Priority 3: LOGIC_DISABLED (no enabled logic for selected task type)
+    // Priority 3: DRIFT_DETECTED (explicit DRIFT state)
+    if (identityState === "DRIFT") {
+      return {
+        code: "DRIFT_DETECTED",
+        message: "Identity drift detected. Additional reference data required.",
+        technical_detail: `identity_state === 'DRIFT'. Task execution blocked.`,
+      };
+    }
+
+    // Priority 4: LOGIC_DISABLED (no enabled logic for selected task type)
     const enabledLogicForTask = filteredLogic.filter(l => l.available);
     if (enabledLogicForTask.length === 0 && !logicLoading) {
       return {
@@ -106,7 +109,7 @@ export default function Generate() {
       };
     }
 
-    // Priority 4: Check if selected logic meets identity requirements
+    // Priority 5: Check if selected logic meets requirements
     const selectedLogicRules = filteredLogic.filter(l => selectedLogic.includes(l.logic_id));
     for (const rule of selectedLogicRules) {
       if (!rule.available) {
@@ -118,7 +121,7 @@ export default function Generate() {
       }
     }
 
-    // Priority 5: No logic selected
+    // Priority 6: No logic selected
     if (selectedLogic.length === 0 && !logicLoading) {
       return {
         code: "NO_LOGIC_SELECTED",
@@ -128,7 +131,7 @@ export default function Generate() {
     }
 
     return null;
-  }, [entityState, entityError, logicError, identityState, filteredLogic, logicLoading, selectedLogic, selectedTaskType]);
+  }, [entityError, logicError, identityState, filteredLogic, logicLoading, selectedLogic, selectedTaskType]);
 
   const isDisabled = disableReason !== null || taskMutation.isPending || entityLoading || logicLoading;
 
@@ -168,11 +171,13 @@ export default function Generate() {
       entity_id: entityState.entity_id,
     }, {
       onSuccess: (result) => {
-        // ECVM: After task execution, navigate to history (no polling, no preview)
-        if (result.verdict === "PASS") {
+        // ECVM: Navigate to history unconditionally (except HALT which is handled by terminal screen)
+        // SPEC E2: Do not assume PASS, do not poll verdict
+        // SPEC E3: Redirect to history, no retry
+        if (result.verdict !== "HALT") {
           navigate("/app/user/history");
         }
-        // HALT handled by terminal screen
+        // HALT → terminal screen rendered at component level (line 192-200)
       },
     });
   };
@@ -304,6 +309,9 @@ export default function Generate() {
                         )}
                       </div>
                       <div className="text-xs text-muted-foreground">{rule.description}</div>
+                      <div className="text-[10px] font-mono text-muted-foreground mt-0.5">
+                        required_state: {rule.required ? "ESTABLISHED" : "INSUFFICIENT"} · category: {rule.category}
+                      </div>
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
