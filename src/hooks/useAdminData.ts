@@ -44,8 +44,9 @@ async function fetchLogicBank(): Promise<LogicBankEntry[]> {
     logic_id: m.logic_id as string,
     name: m.name as string,
     description: m.description as string,
-    version: m.version as string,
-    status: m.status as LogicBankEntry["status"],
+    version: String(m.version ?? "1"),
+    status: (m.enabled ? "active" : "draft") as LogicBankEntry["status"],
+    enabled: m.enabled as boolean,
     created_at: m.created_at as string,
     updated_at: m.updated_at as string,
   }));
@@ -64,7 +65,8 @@ async function fetchUnmetLogic(): Promise<UnmetLogicEntry[]> {
   return (data ?? []).map((s: Record<string, unknown>) => ({
     id: s.signal_id as string,
     entity_id: s.entity_id as string,
-    logic_id: s.requested_task as string, // mapped from requested_task
+    requested_task: s.requested_task as string,
+    observed_state: s.observed_state as string,
     reason: s.reason as string,
     detected_at: s.created_at as string,
     severity: s.severity as UnmetLogicEntry["severity"],

@@ -98,12 +98,16 @@ Deno.serve(async (req) => {
       DRIFT: "suspended",
     };
 
+    // Check if reference materials actually exist (placeholder hash = no references)
+    const placeholderHash = "0".repeat(64);
+    const hasReference = identity.identity_hash !== placeholderHash;
+
     const response = {
       entity_id: identity.entity_id,
       status: statusMap[state?.state ?? "NO_IDENTITY"] ?? "unknown",
       coverage_percent: state?.coverage_percent ?? 0,
       variance: state?.variance_score ?? 1.0,
-      reference_uploaded: true,
+      reference_uploaded: hasReference,
       last_sync: state?.updated_at ?? identity.created_at,
       metadata: {
         identity_state: state?.state ?? "NO_IDENTITY",

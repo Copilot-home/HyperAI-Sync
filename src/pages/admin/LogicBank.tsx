@@ -23,8 +23,9 @@ export default function LogicBank() {
   const activeCount = logicBank?.filter(l => l.status === "active").length ?? 0;
   const draftCount = logicBank?.filter(l => l.status === "draft").length ?? 0;
 
-  const handleToggle = async (logicId: string, currentStatus: string) => {
-    const newEnabled = currentStatus !== "active";
+  // ECVM: Toggle uses 'enabled' field, not 'status'
+  const handleToggle = async (logicId: string, currentlyEnabled: boolean) => {
+    const newEnabled = !currentlyEnabled;
     setTogglingId(logicId);
     
     try {
@@ -165,7 +166,7 @@ export default function LogicBank() {
                                 : "text-muted-foreground hover:text-status-pass"
                             )}
                             title={entry.status === "active" ? "Disable module" : "Enable module"}
-                            onClick={() => handleToggle(entry.logic_id, entry.status)}
+                            onClick={() => handleToggle(entry.logic_id, entry.enabled)}
                             disabled={togglingId === entry.logic_id}
                           >
                             {togglingId === entry.logic_id ? (
