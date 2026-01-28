@@ -57,6 +57,19 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // ECVM Verdict Colors
+        "verdict-pass": {
+          DEFAULT: "hsl(var(--verdict-pass))",
+          foreground: "hsl(var(--verdict-pass-foreground))",
+        },
+        "verdict-reject": {
+          DEFAULT: "hsl(var(--verdict-reject))",
+          foreground: "hsl(var(--verdict-reject-foreground))",
+        },
+        "verdict-halt": {
+          DEFAULT: "hsl(var(--verdict-halt))",
+          foreground: "hsl(var(--verdict-halt-foreground))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
