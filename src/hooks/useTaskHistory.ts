@@ -1,56 +1,51 @@
 import { useQuery } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
 import { TaskExecutionLog } from "@/types/ecvm";
 
-// Mock endpoint - in production this would query task_execution_log table
+// Query task_execution_log table directly via Supabase client
+// RLS ensures user only sees their own entity's logs
 async function fetchTaskHistory(): Promise<TaskExecutionLog[]> {
-  await new Promise(resolve => setTimeout(resolve, 600));
-  
-  return [
-    {
-      id: "log_001",
-      task_id: "task_a7b3c9",
-      entity_id: "ent_7f3a9c2d",
-      task_type: "image",
-      verdict: "PASS",
-      logic_applied: ["lg_face_detect", "lg_age_verify"],
-      executed_at: new Date(Date.now() - 1000 * 60 * 5).toISOString(),
-      execution_time_ms: 1247,
-      metadata: {},
-    },
-    {
-      id: "log_002",
-      task_id: "task_b8c4d0",
-      entity_id: "ent_7f3a9c2d",
-      task_type: "video",
-      verdict: "HALT",
-      logic_applied: ["lg_motion_track", "lg_liveness"],
-      executed_at: new Date(Date.now() - 1000 * 60 * 30).toISOString(),
-      execution_time_ms: 3892,
-      metadata: { halt_reason: "motion_threshold_exceeded" },
-    },
-    {
-      id: "log_003",
-      task_id: "task_c9d5e1",
-      entity_id: "ent_7f3a9c2d",
-      task_type: "image_static",
-      verdict: "REJECT",
-      logic_applied: ["lg_face_detect", "lg_doc_match"],
-      executed_at: new Date(Date.now() - 1000 * 60 * 60 * 2).toISOString(),
-      execution_time_ms: 892,
-      metadata: { reject_code: "FACE_MISMATCH" },
-    },
-    {
-      id: "log_004",
-      task_id: "task_d0e6f2",
-      entity_id: "ent_7f3a9c2d",
-      task_type: "image",
-      verdict: "PASS",
-      logic_applied: ["lg_face_detect", "lg_age_verify", "lg_liveness"],
-      executed_at: new Date(Date.now() - 1000 * 60 * 60 * 24).toISOString(),
-      execution_time_ms: 2103,
-      metadata: {},
-    },
-  ];
+  // First get user's entity_id
+  const { data: identity, error: identityError } = await supabase
+    .from("entity_identity")
+    .select("entity_id")
+    .maybeSingle();
+
+  if (identityError) {
+    console.error("[useTaskHistory] Identity fetch error:", identityError);
+    throw new Error(identityError.message);
+  }
+
+  // No identity = no history
+  if (!identity) {
+    return [];
+  }
+
+  // Fetch execution logs for this entity
+  const { data: logs, error: logsError } = await supabase
+    .from("task_execution_log")
+    .select("*")
+    .eq("entity_id", identity.entity_id)
+    .order("executed_at", { ascending: false })
+    .limit(50);
+
+  if (logsError) {
+    console.error("[useTaskHistory] Logs fetch error:", logsError);
+    throw new Error(logsError.message);
+  }
+
+  // Map to TaskExecutionLog type
+  return (logs ?? []).map((log) => ({
+    id: log.task_id,
+    task_id: log.task_id,
+    entity_id: log.entity_id,
+    task_type: log.task_type as TaskExecutionLog["task_type"],
+    verdict: log.verdict as TaskExecutionLog["verdict"],
+    logic_applied: log.logic_applied ?? [],
+    executed_at: log.executed_at,
+    execution_time_ms: log.execution_time_ms,
+    metadata: (log.metadata as Record<string, unknown>) ?? {},
+  }));
 }
 
 export function useTaskHistory() {
@@ -59,5 +54,6 @@ export function useTaskHistory() {
     queryFn: fetchTaskHistory,
     staleTime: 30000,
     refetchOnWindowFocus: false,
+    retry: false, // ECVM: fail-closed, no retry
   });
 }

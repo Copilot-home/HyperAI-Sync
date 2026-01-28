@@ -1,52 +1,27 @@
 import { useQuery } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
 import { LogicRule } from "@/types/ecvm";
 
-// Mock endpoint - in production this would be GET /v1/logic/available
+// GET /v1/logic/available - Real Edge Function call
 async function fetchAvailableLogic(): Promise<LogicRule[]> {
-  await new Promise(resolve => setTimeout(resolve, 400));
-  
-  return [
-    {
-      logic_id: "lg_face_detect",
-      name: "Face Detection",
-      description: "Validates presence and quality of facial features",
-      available: true,
-      required: true,
-      category: "identity",
-    },
-    {
-      logic_id: "lg_age_verify",
-      name: "Age Verification",
-      description: "Cross-references age markers with reference data",
-      available: true,
-      required: true,
-      category: "identity",
-    },
-    {
-      logic_id: "lg_liveness",
-      name: "Liveness Check",
-      description: "Anti-spoofing verification for live capture",
-      available: true,
-      required: false,
-      category: "security",
-    },
-    {
-      logic_id: "lg_doc_match",
-      name: "Document Matching",
-      description: "Validates identity against document records",
-      available: false,
-      required: false,
-      category: "compliance",
-    },
-    {
-      logic_id: "lg_motion_track",
-      name: "Motion Tracking",
-      description: "Analyzes motion patterns in video content",
-      available: true,
-      required: false,
-      category: "video",
-    },
-  ];
+  const { data, error } = await supabase.functions.invoke("logic-available", {
+    method: "GET",
+  });
+
+  if (error) {
+    console.error("[useAvailableLogic] Edge function error:", error);
+    throw new Error(error.message || "Failed to fetch available logic");
+  }
+
+  // Map API response to LogicRule type
+  return (data ?? []).map((m: Record<string, unknown>) => ({
+    logic_id: m.logic_id as string,
+    name: m.name as string,
+    description: m.description as string,
+    available: m.available as boolean,
+    required: m.required_identity_state === "ESTABLISHED",
+    category: m.task_type as string,
+  }));
 }
 
 export function useAvailableLogic() {
@@ -55,5 +30,6 @@ export function useAvailableLogic() {
     queryFn: fetchAvailableLogic,
     staleTime: 60000,
     refetchOnWindowFocus: false,
+    retry: false, // ECVM: fail-closed, no retry
   });
 }
