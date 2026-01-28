@@ -19,8 +19,8 @@ async function fetchAvailableLogic(): Promise<LogicRule[]> {
     name: m.name as string,
     description: m.description as string,
     available: m.available as boolean,
-    required: m.required_identity_state === "ESTABLISHED",
-    category: m.task_type as string,
+    required: m.required as boolean,
+    category: m.category as string, // API already returns 'category', not 'task_type'
   }));
 }
 
