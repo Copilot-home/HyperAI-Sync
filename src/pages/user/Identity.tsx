@@ -5,7 +5,8 @@ import { StatusBadge } from "@/components/ecvm/StatusBadge";
 import { CoverageIndicator } from "@/components/ecvm/CoverageIndicator";
 import { ReferenceUploader } from "@/components/identity/ReferenceUploader";
 import { useEntityState } from "@/hooks/useEntityState";
-import { User, RefreshCw, AlertCircle, Shield, Upload } from "lucide-react";
+import { useRealtimeIdentityState } from "@/hooks/useRealtimeIdentityState";
+import { User, RefreshCw, AlertCircle, Shield, Upload, Radio } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
@@ -33,6 +34,9 @@ const identityStateLabels: Record<string, { label: string; description: string }
 export default function Identity() {
   const { data: entityState, isLoading, error, refetch } = useEntityState();
 
+  // ECVM: Subscribe to realtime identity_state updates for live coverage % changes
+  useRealtimeIdentityState(entityState?.entity_id);
+
   // Extract identity_state from metadata (per API response structure)
   const identityState = (entityState?.metadata?.identity_state as string) || "NO_IDENTITY";
   const isLocked = entityState?.metadata?.locked as boolean | undefined;
@@ -45,16 +49,25 @@ export default function Identity() {
         subtitle="GET /v1/entity/state (read-only)"
         icon={<User className="h-5 w-5 text-muted-foreground" />}
         actions={
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => refetch()}
-            disabled={isLoading}
-            className="font-mono text-xs"
-          >
-            <RefreshCw className={cn("h-3.5 w-3.5 mr-2", isLoading && "animate-spin")} />
-            Refresh
-          </Button>
+          <div className="flex items-center gap-3">
+            {/* Realtime indicator */}
+            {entityState?.entity_id && (
+              <div className="flex items-center gap-1.5 text-xs font-mono text-muted-foreground">
+                <Radio className="h-3 w-3 text-status-pass animate-pulse" />
+                <span>Live</span>
+              </div>
+            )}
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => refetch()}
+              disabled={isLoading}
+              className="font-mono text-xs"
+            >
+              <RefreshCw className={cn("h-3.5 w-3.5 mr-2", isLoading && "animate-spin")} />
+              Refresh
+            </Button>
+          </div>
         }
       />
 
