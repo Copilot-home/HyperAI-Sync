@@ -356,6 +356,7 @@ export type Database = {
         }
         Returns: boolean
       }
+      initialize_entity: { Args: never; Returns: string }
     }
     Enums: {
       app_role: "admin" | "user"

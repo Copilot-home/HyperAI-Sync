@@ -1,12 +1,14 @@
 /**
  * ECVM Authentication Page
  * Login / Signup forms with strict validation
+ * Auto-initializes entity on first login
  */
 
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { z } from 'zod';
 import { useAuth } from '@/hooks/useAuth';
+import { useEntityInit } from '@/hooks/useEntityInit';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -27,6 +29,7 @@ const authSchema = z.object({
 export default function Auth() {
   const navigate = useNavigate();
   const { user, loading: authLoading, signIn, signUp } = useAuth();
+  const entityInit = useEntityInit();
 
   const [mode, setMode] = useState<'login' | 'signup'>('login');
   const [email, setEmail] = useState('');
@@ -34,13 +37,23 @@ export default function Auth() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
+  const [initializing, setInitializing] = useState(false);
 
-  // Redirect if already authenticated
+  // Auto-initialize entity on first login, then redirect
   useEffect(() => {
-    if (user && !authLoading) {
-      navigate('/app/user/identity');
+    if (user && !authLoading && !initializing) {
+      setInitializing(true);
+      entityInit.mutateAsync()
+        .then(() => {
+          navigate('/app/user/identity');
+        })
+        .catch((err) => {
+          console.error('[Auth] Entity init failed:', err);
+          // Still navigate - entity-state page will show NO_IDENTITY
+          navigate('/app/user/identity');
+        });
     }
-  }, [user, authLoading, navigate]);
+  }, [user, authLoading, navigate, entityInit, initializing]);
 
   const validateForm = (): boolean => {
     setError(null);
@@ -96,10 +109,15 @@ export default function Auth() {
     }
   };
 
-  if (authLoading) {
+  if (authLoading || initializing) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
+      <div className="min-h-screen bg-background flex flex-col items-center justify-center gap-3">
         <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
+        {initializing && (
+          <p className="font-mono text-xs text-muted-foreground">
+            Initializing entity...
+          </p>
+        )}
       </div>
     );
   }
