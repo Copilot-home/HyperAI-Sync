@@ -3,8 +3,9 @@ import { PageHeader } from "@/components/layout/PageHeader";
 import { DataPanel, DataRow } from "@/components/ecvm/DataPanel";
 import { StatusBadge } from "@/components/ecvm/StatusBadge";
 import { CoverageIndicator } from "@/components/ecvm/CoverageIndicator";
+import { ReferenceUploader } from "@/components/identity/ReferenceUploader";
 import { useEntityState } from "@/hooks/useEntityState";
-import { User, Upload, RefreshCw, AlertCircle, Shield } from "lucide-react";
+import { User, RefreshCw, AlertCircle, Shield, Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
@@ -168,30 +169,27 @@ export default function Identity() {
               </div>
             </DataPanel>
 
-            {/* Reference Upload CTA - ECVM: Guide upload, don't force */}
+            {/* Reference Upload - ECVM: Guide upload, don't force */}
             <div className="lg:col-span-2">
-              <DataPanel title="Reference Management">
-                <div className="flex items-center justify-between">
+              <DataPanel 
+                title="Reference Management" 
+                icon={<Upload className="h-3.5 w-3.5" />}
+              >
+                <div className="space-y-4">
                   <div>
                     <p className="text-sm text-muted-foreground">
                       {identityState === "ESTABLISHED" 
                         ? "Identity is established. You can update reference materials if needed."
                         : identityState === "DRIFT"
                         ? "Drift detected. Re-upload reference materials to restore identity stability."
-                        : "Upload or update reference materials for identity verification."
+                        : "Upload reference materials to establish identity."
                       }
                     </p>
                     <p className="text-xs font-mono text-muted-foreground mt-1">
                       POST /v1/entity/reference
                     </p>
                   </div>
-                  <Button 
-                    variant={identityState === "DRIFT" ? "destructive" : "outline"} 
-                    className="font-mono text-sm"
-                  >
-                    <Upload className="h-4 w-4 mr-2" />
-                    {identityState === "DRIFT" ? "Re-upload Reference" : "Upload Reference"}
-                  </Button>
+                  <ReferenceUploader />
                 </div>
               </DataPanel>
             </div>

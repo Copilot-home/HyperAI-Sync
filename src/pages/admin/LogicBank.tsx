@@ -1,10 +1,13 @@
 import { AppLayout } from "@/components/layout/AppLayout";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { useLogicBank } from "@/hooks/useAdminData";
-import { Database, RefreshCw, AlertCircle, CheckCircle, XCircle, Power } from "lucide-react";
+import { useToggleLogic } from "@/hooks/useLogicBankMutation";
+import { Database, RefreshCw, AlertCircle, Power, Loader2 } from "lucide-react";
 import { format } from "date-fns";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { toast } from "sonner";
+import { useState } from "react";
 
 const statusStyles: Record<string, string> = {
   active: "bg-status-pass-bg text-status-pass-foreground",
@@ -14,9 +17,28 @@ const statusStyles: Record<string, string> = {
 
 export default function LogicBank() {
   const { data: logicBank, isLoading, error, refetch } = useLogicBank();
+  const toggleMutation = useToggleLogic();
+  const [togglingId, setTogglingId] = useState<string | null>(null);
 
   const activeCount = logicBank?.filter(l => l.status === "active").length ?? 0;
   const draftCount = logicBank?.filter(l => l.status === "draft").length ?? 0;
+
+  const handleToggle = async (logicId: string, currentStatus: string) => {
+    const newEnabled = currentStatus !== "active";
+    setTogglingId(logicId);
+    
+    try {
+      await toggleMutation.mutateAsync({ 
+        logic_id: logicId, 
+        enabled: newEnabled 
+      });
+      toast.success(`Logic module ${newEnabled ? "enabled" : "disabled"}`);
+    } catch (error) {
+      toast.error(`Failed to toggle: ${error instanceof Error ? error.message : "Unknown error"}`);
+    } finally {
+      setTogglingId(null);
+    }
+  };
 
   return (
     <AppLayout>
@@ -143,8 +165,14 @@ export default function LogicBank() {
                                 : "text-muted-foreground hover:text-status-pass"
                             )}
                             title={entry.status === "active" ? "Disable module" : "Enable module"}
+                            onClick={() => handleToggle(entry.logic_id, entry.status)}
+                            disabled={togglingId === entry.logic_id}
                           >
-                            <Power className="h-3.5 w-3.5" />
+                            {togglingId === entry.logic_id ? (
+                              <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                            ) : (
+                              <Power className="h-3.5 w-3.5" />
+                            )}
                           </Button>
                         </div>
                       </td>
