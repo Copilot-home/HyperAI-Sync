@@ -5,6 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import Auth from "./pages/Auth";
+import { ProtectedRoute } from "./components/auth/ProtectedRoute";
 
 // User Pages
 import Identity from "./pages/user/Identity";
@@ -36,19 +38,38 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/auth" element={<Auth />} />
           
-          {/* User Routes */}
-          <Route path="/app/user/identity" element={<Identity />} />
-          <Route path="/app/user/generate" element={<Generate />} />
-          <Route path="/app/user/history" element={<HistoryPage />} />
-          <Route path="/app/user/settings" element={<SettingsPage />} />
+          {/* User Routes (Protected) */}
+          <Route path="/app/user/identity" element={
+            <ProtectedRoute><Identity /></ProtectedRoute>
+          } />
+          <Route path="/app/user/generate" element={
+            <ProtectedRoute><Generate /></ProtectedRoute>
+          } />
+          <Route path="/app/user/history" element={
+            <ProtectedRoute><HistoryPage /></ProtectedRoute>
+          } />
+          <Route path="/app/user/settings" element={
+            <ProtectedRoute><SettingsPage /></ProtectedRoute>
+          } />
           
-          {/* Admin Routes */}
-          <Route path="/app/admin/overview" element={<AdminOverview />} />
-          <Route path="/app/admin/logic-bank" element={<LogicBank />} />
-          <Route path="/app/admin/unmet-logic" element={<UnmetLogic />} />
-          <Route path="/app/admin/drift" element={<Drift />} />
-          <Route path="/app/admin/audit" element={<Audit />} />
+          {/* Admin Routes (Protected + Admin Required) */}
+          <Route path="/app/admin/overview" element={
+            <ProtectedRoute requireAdmin><AdminOverview /></ProtectedRoute>
+          } />
+          <Route path="/app/admin/logic-bank" element={
+            <ProtectedRoute requireAdmin><LogicBank /></ProtectedRoute>
+          } />
+          <Route path="/app/admin/unmet-logic" element={
+            <ProtectedRoute requireAdmin><UnmetLogic /></ProtectedRoute>
+          } />
+          <Route path="/app/admin/drift" element={
+            <ProtectedRoute requireAdmin><Drift /></ProtectedRoute>
+          } />
+          <Route path="/app/admin/audit" element={
+            <ProtectedRoute requireAdmin><Audit /></ProtectedRoute>
+          } />
           
           {/* Redirects */}
           <Route path="/app" element={<Navigate to="/app/user/identity" replace />} />
