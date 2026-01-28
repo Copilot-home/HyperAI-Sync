@@ -83,16 +83,20 @@ async function fetchDrift(): Promise<DriftEntry[]> {
     throw new Error(error.message || "Failed to fetch drift data");
   }
 
-  return (data ?? []).map((d: Record<string, unknown>) => ({
-    id: d.drift_id as string,
-    entity_id: d.entity_id as string,
-    drift_type: d.drift_type as string,
-    delta: d.delta as number,
-    baseline: d.baseline as number,
-    current: d.current as number,
-    detected_at: d.detected_at as string,
-    acknowledged: d.acknowledged as boolean,
-  }));
+  return (data ?? []).map((d: Record<string, unknown>) => {
+    const baseline = (d.baseline as number) ?? 0;
+    const current = (d.current_value as number) ?? (d.current as number) ?? 0;
+    return {
+      id: d.drift_id as string,
+      entity_id: d.entity_id as string,
+      drift_type: d.drift_type as string,
+      delta: current - baseline,
+      baseline,
+      current,
+      detected_at: d.detected_at as string,
+      acknowledged: d.acknowledged as boolean,
+    };
+  });
 }
 
 async function fetchAuditLog(): Promise<AuditLogEntry[]> {

@@ -106,6 +106,7 @@ export default function UnmetLogic() {
                 <thead>
                   <tr>
                     <th>Severity</th>
+                    <th>Entity ID</th>
                     <th>Requested Task</th>
                     <th>Observed State</th>
                     <th>Reason</th>
