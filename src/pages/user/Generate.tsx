@@ -4,6 +4,7 @@ import { PageHeader } from "@/components/layout/PageHeader";
 import { DataPanel } from "@/components/ecvm/DataPanel";
 import { ReasonPanel } from "@/components/ecvm/ReasonPanel";
 import { StatusBadge } from "@/components/ecvm/StatusBadge";
+import { HaltTerminalScreen } from "@/components/ecvm/HaltTerminalScreen";
 import { useEntityState } from "@/hooks/useEntityState";
 import { useAvailableLogic } from "@/hooks/useAvailableLogic";
 import { useTaskExecute } from "@/hooks/useTaskExecute";
@@ -211,6 +212,18 @@ export default function Generate() {
   const filteredLogic = useMemo(() => {
     return logicRules?.filter(rule => rule.category === selectedTaskType) ?? [];
   }, [logicRules, selectedTaskType]);
+
+  // ECVM: HALT = Terminal - show full-screen halt message, no retry
+  if (taskMutation.data?.verdict === "HALT" && taskMutation.data.reason) {
+    return (
+      <AppLayout>
+        <HaltTerminalScreen 
+          reason={taskMutation.data.reason}
+          taskId={taskMutation.data.task_id ?? undefined}
+        />
+      </AppLayout>
+    );
+  }
 
   return (
     <AppLayout>

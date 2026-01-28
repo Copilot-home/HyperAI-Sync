@@ -78,13 +78,13 @@ Deno.serve(async (req) => {
 
       // Map to API response
       const response = (drifts ?? []).map((d) => ({
-        id: d.drift_id,
+        drift_id: d.drift_id,
         entity_id: d.entity_id,
         logic_id: d.logic_id,
-        drift_type: d.drift_type.toLowerCase(),
-        delta: d.severity,
+        drift_type: d.drift_type, // Keep original uppercase (PER_NODE, SYSTEMIC)
         baseline: d.baseline,
-        current: d.current_value,
+        current_value: d.current_value,
+        severity: d.severity,
         detected_at: d.detected_at,
         acknowledged: d.acknowledged,
       }));

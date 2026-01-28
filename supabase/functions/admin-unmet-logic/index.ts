@@ -78,11 +78,12 @@ Deno.serve(async (req) => {
 
       // Map to API response
       const response = (signals ?? []).map((s) => ({
-        id: s.signal_id,
+        signal_id: s.signal_id,
         entity_id: s.entity_id,
-        logic_id: null, // Unmet = no logic matched
+        requested_task: s.requested_task,
+        observed_state: s.observed_state,
         reason: s.reason ?? `Requested ${s.requested_task} but state is ${s.observed_state}`,
-        detected_at: s.created_at,
+        created_at: s.created_at,
         severity: s.severity,
       }));
 
