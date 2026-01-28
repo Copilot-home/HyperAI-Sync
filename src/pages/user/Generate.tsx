@@ -1,27 +1,36 @@
-import { useState, useMemo, useEffect, useCallback } from "react";
+import { useState, useMemo, useCallback } from "react";
 import { AppLayout } from "@/components/layout/AppLayout";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { DataPanel } from "@/components/ecvm/DataPanel";
 import { ReasonPanel } from "@/components/ecvm/ReasonPanel";
-import { StatusBadge } from "@/components/ecvm/StatusBadge";
+import { IdentityGate } from "@/components/ecvm/IdentityGate";
 import { HaltTerminalScreen } from "@/components/ecvm/HaltTerminalScreen";
 import { useEntityState } from "@/hooks/useEntityState";
 import { useAvailableLogic } from "@/hooks/useAvailableLogic";
 import { useTaskExecute } from "@/hooks/useTaskExecute";
 import { useUnmetLogicSignal } from "@/hooks/useUnmetLogicSignal";
 import { TaskType, DisableReason } from "@/types/ecvm";
-import { Sparkles, Image, Video, Shield, CheckCircle, XCircle, Loader2, AlertCircle } from "lucide-react";
+import { Sparkles, Image, Video, CheckCircle, XCircle, Loader2, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { toast } from "sonner";
+import { useNavigate } from "react-router-dom";
 
 const taskTypes: { type: TaskType; label: string; icon: typeof Image }[] = [
-  { type: "image", label: "Image", icon: Image },
   { type: "image_static", label: "Image Static", icon: Image },
+  { type: "image", label: "Image", icon: Image },
   { type: "video", label: "Video", icon: Video },
 ];
 
+// ECVM: Identity state hierarchy for comparison
+const IDENTITY_STATE_ORDER: Record<string, number> = {
+  "NO_IDENTITY": 0,
+  "INSUFFICIENT": 1,
+  "ESTABLISHED": 2,
+  "DRIFT": -1, // DRIFT blocks all
+};
+
 export default function Generate() {
+  const navigate = useNavigate();
   const { data: entityState, isLoading: entityLoading, error: entityError } = useEntityState();
   const { data: logicRules, isLoading: logicLoading, error: logicError } = useAvailableLogic();
 
@@ -31,122 +40,102 @@ export default function Generate() {
   const taskMutation = useTaskExecute();
   const unmetLogicMutation = useUnmetLogicSignal();
 
-  // Auto-select required logic when available
-  useEffect(() => {
-    if (logicRules) {
-      const requiredLogicIds = logicRules
-        .filter(l => l.required && l.available)
+  // Extract identity_state from metadata
+  const identityState = (entityState?.metadata?.identity_state as string) || "NO_IDENTITY";
+  const isLocked = entityState?.metadata?.locked as boolean | undefined;
+
+  // Filter logic by selected task type
+  const filteredLogic = useMemo(() => {
+    return logicRules?.filter(rule => rule.category === selectedTaskType) ?? [];
+  }, [logicRules, selectedTaskType]);
+
+  // Auto-select available logic for current task type
+  useMemo(() => {
+    if (filteredLogic.length > 0) {
+      const availableLogicIds = filteredLogic
+        .filter(l => l.available)
         .map(l => l.logic_id);
-      setSelectedLogic(prev => {
-        const newSelection = [...new Set([...prev, ...requiredLogicIds])];
-        return newSelection;
-      });
+      if (availableLogicIds.length > 0 && selectedLogic.length === 0) {
+        setSelectedLogic(availableLogicIds);
+      }
     }
-  }, [logicRules]);
+  }, [filteredLogic]);
 
-  // ECVM: Compute disable reasons based on current state (NO INTERPRETATION)
-  const disableReasons = useMemo<DisableReason[]>(() => {
-    const reasons: DisableReason[] = [];
-
-    // Gate 1: Entity state must be loaded
+  // ECVM: Compute SINGLE disable reason based on priority (NO MULTIPLE REASONS)
+  const disableReason = useMemo<DisableReason | null>(() => {
+    // Priority 1: API Errors
     if (entityError) {
-      reasons.push({
+      return {
         code: "API_ERROR",
         message: "Failed to fetch entity state",
         technical_detail: "GET /v1/entity/state returned error",
-      });
-      return reasons; // Terminal
+      };
     }
 
-    if (!entityState && !entityLoading) {
-      reasons.push({
-        code: "NO_ENTITY",
-        message: "Entity state not available",
-        technical_detail: "GET /v1/entity/state returned null",
-      });
-      return reasons;
-    }
-
-    // Gate 2: Identity state must be ESTABLISHED (from metadata.identity_state)
-    const identityState = entityState?.metadata?.identity_state as string | undefined;
-    if (identityState && identityState !== "ESTABLISHED") {
-      reasons.push({
-        code: "IDENTITY_NOT_ESTABLISHED",
-        message: `Identity state is "${identityState}"`,
-        technical_detail: `Task execution requires identity_state === 'ESTABLISHED'. Current: ${identityState}`,
-      });
-    }
-
-    // Gate 3: Entity status must be active
-    if (entityState?.status !== "active") {
-      reasons.push({
-        code: "ENTITY_INACTIVE",
-        message: `Entity status is "${entityState?.status}"`,
-        technical_detail: "Task execution requires entity.status === 'active'",
-      });
-    }
-
-    // Gate 4: Reference must be uploaded
-    if (!entityState?.reference_uploaded) {
-      reasons.push({
-        code: "NO_REFERENCE",
-        message: "No reference material uploaded",
-        technical_detail: "entity.reference_uploaded === false",
-      });
-    }
-
-    // Gate 5: Logic availability error
     if (logicError) {
-      reasons.push({
+      return {
         code: "LOGIC_API_ERROR",
         message: "Failed to fetch available logic",
         technical_detail: "GET /v1/logic/available returned error",
-      });
+      };
     }
 
-    // Gate 6: At least one logic must be selected
+    // Priority 2: INSUFFICIENT_IDENTITY (identity_state not ESTABLISHED)
+    if (identityState !== "ESTABLISHED") {
+      if (identityState === "DRIFT") {
+        return {
+          code: "DRIFT_DETECTED",
+          message: "Identity drift detected. Additional reference data required.",
+          technical_detail: `identity_state === 'DRIFT'. Task execution blocked.`,
+        };
+      }
+      return {
+        code: "INSUFFICIENT_IDENTITY",
+        message: "Identity state is not sufficient to guarantee stability.",
+        technical_detail: `identity_state === '${identityState}'. Required: 'ESTABLISHED'`,
+      };
+    }
+
+    // Priority 3: LOGIC_DISABLED (no enabled logic for selected task type)
+    const enabledLogicForTask = filteredLogic.filter(l => l.available);
+    if (enabledLogicForTask.length === 0 && !logicLoading) {
+      return {
+        code: "LOGIC_DISABLED",
+        message: "Requested capability is not available under current system logic.",
+        technical_detail: `No enabled logic modules for task_type '${selectedTaskType}'`,
+      };
+    }
+
+    // Priority 4: Check if selected logic meets identity requirements
+    const selectedLogicRules = filteredLogic.filter(l => selectedLogic.includes(l.logic_id));
+    for (const rule of selectedLogicRules) {
+      if (!rule.available) {
+        return {
+          code: "LOGIC_DISABLED",
+          message: "Requested capability is not available under current system logic.",
+          technical_detail: `Logic '${rule.name}' is not enabled`,
+        };
+      }
+    }
+
+    // Priority 5: No logic selected
     if (selectedLogic.length === 0 && !logicLoading) {
-      reasons.push({
+      return {
         code: "NO_LOGIC_SELECTED",
-        message: "No logic rules selected",
+        message: "No logic rules selected for task execution.",
         technical_detail: "At least one available logic rule must be selected",
-      });
+      };
     }
 
-    // Gate 7: All required logic must be selected
-    const requiredLogic = logicRules?.filter(l => l.required && l.available) ?? [];
-    const missingRequired = requiredLogic.filter(l => !selectedLogic.includes(l.logic_id));
-    if (missingRequired.length > 0) {
-      reasons.push({
-        code: "MISSING_REQUIRED_LOGIC",
-        message: `${missingRequired.length} required logic rule(s) not selected`,
-        technical_detail: `Missing: ${missingRequired.map(l => l.name || l.logic_id).join(", ")}`,
-      });
-    }
+    return null;
+  }, [entityState, entityError, logicError, identityState, filteredLogic, logicLoading, selectedLogic, selectedTaskType]);
 
-    // Gate 8: Selected logic must be available
-    const unavailableSelected = selectedLogic.filter(id => {
-      const rule = logicRules?.find(l => l.logic_id === id);
-      return rule && !rule.available;
-    });
-    if (unavailableSelected.length > 0) {
-      reasons.push({
-        code: "UNAVAILABLE_LOGIC_SELECTED",
-        message: `${unavailableSelected.length} selected logic rule(s) not available`,
-        technical_detail: `Unavailable: ${unavailableSelected.join(", ")}`,
-      });
-    }
-
-    return reasons;
-  }, [entityState, entityError, entityLoading, logicRules, logicError, logicLoading, selectedLogic]);
-
-  const isDisabled = disableReasons.length > 0 || taskMutation.isPending || entityLoading || logicLoading;
+  const isDisabled = disableReason !== null || taskMutation.isPending || entityLoading || logicLoading;
 
   // ECVM: Send unmet logic signal when user attempts with unavailable logic
   const sendUnmetSignal = useCallback(() => {
     if (!entityState?.entity_id) return;
 
-    const identityState = entityState?.metadata?.identity_state as string || "NO_IDENTITY";
     const unavailableSelected = selectedLogic.filter(id => {
       const rule = logicRules?.find(l => l.logic_id === id);
       return rule && !rule.available;
@@ -159,13 +148,9 @@ export default function Generate() {
         requested_task: selectedTaskType,
         observed_state: identityState,
         unavailable_logic_ids: unavailableSelected,
-      }, {
-        onSuccess: (signal) => {
-          console.log("[Generate] Unmet logic signal sent:", signal.signal_id);
-        },
       });
     }
-  }, [entityState, selectedLogic, logicRules, selectedTaskType, unmetLogicMutation]);
+  }, [entityState, selectedLogic, logicRules, selectedTaskType, identityState, unmetLogicMutation]);
 
   // ECVM: Single action = Single API call (POST /v1/task/execute)
   const handleGenerate = () => {
@@ -183,16 +168,11 @@ export default function Generate() {
       entity_id: entityState.entity_id,
     }, {
       onSuccess: (result) => {
+        // ECVM: After task execution, navigate to history (no polling, no preview)
         if (result.verdict === "PASS") {
-          toast.success(`Task completed: ${result.task_id}`);
-        } else if (result.verdict === "HALT") {
-          toast.warning(`Task halted: ${result.reason?.message || "System halt"}`);
-        } else {
-          toast.error(`Task rejected: ${result.reason?.message || "Validation failed"}`);
+          navigate("/app/user/history");
         }
-      },
-      onError: (error) => {
-        toast.error(`Task execution failed: ${error.message}`);
+        // HALT handled by terminal screen
       },
     });
   };
@@ -207,11 +187,6 @@ export default function Generate() {
         : [...prev, logicId]
     );
   };
-
-  // Filter logic by selected task type
-  const filteredLogic = useMemo(() => {
-    return logicRules?.filter(rule => rule.category === selectedTaskType) ?? [];
-  }, [logicRules, selectedTaskType]);
 
   // ECVM: HALT = Terminal - show full-screen halt message, no retry
   if (taskMutation.data?.verdict === "HALT" && taskMutation.data.reason) {
@@ -234,39 +209,26 @@ export default function Generate() {
       />
 
       <div className="p-6 space-y-6">
-        {/* Identity Gate Panel - ECVM: Read-only state display */}
-        <DataPanel title="Identity Gate" icon={<Shield className="h-3.5 w-3.5" />}>
-          <div className="flex items-center justify-between">
-            <div className="space-y-1">
-              <div className="text-sm">
-                Entity: <span className="font-mono">{entityState?.entity_id || "—"}</span>
+        {/* Identity Gate Panel - ECVM: Read-only state display with coverage */}
+        <IdentityGate 
+          identityState={identityState}
+          entityId={entityState?.entity_id}
+          isLocked={isLocked}
+        />
+
+        {/* Coverage Display */}
+        {entityState && (
+          <DataPanel title="Coverage Metrics">
+            <div className="flex items-center justify-between">
+              <div className="text-sm font-mono">
+                coverage_percent: <span className="text-foreground">{entityState.coverage_percent.toFixed(1)}%</span>
               </div>
-              <div className="text-xs text-muted-foreground">
-                Status verification required before task execution
+              <div className="text-sm font-mono">
+                variance: <span className="text-foreground">{(entityState.variance * 100).toFixed(2)}%</span>
               </div>
-              {entityState?.metadata?.identity_state && (
-                <div className="text-xs font-mono text-muted-foreground">
-                  identity_state: {entityState.metadata.identity_state as string}
-                </div>
-              )}
             </div>
-            {entityLoading ? (
-              <div className="flex items-center gap-2 text-muted-foreground">
-                <Loader2 className="h-4 w-4 animate-spin" />
-                <span className="text-sm font-mono">Loading...</span>
-              </div>
-            ) : entityError ? (
-              <div className="flex items-center gap-2 text-status-reject">
-                <AlertCircle className="h-4 w-4" />
-                <span className="text-sm font-mono">Error</span>
-              </div>
-            ) : entityState ? (
-              <StatusBadge status={entityState.status} />
-            ) : (
-              <StatusBadge status="unknown" />
-            )}
-          </div>
-        </DataPanel>
+          </DataPanel>
+        )}
 
         {/* Task Type Selector */}
         <DataPanel title="Task Type">
@@ -274,7 +236,10 @@ export default function Generate() {
             {taskTypes.map(({ type, label, icon: Icon }) => (
               <button
                 key={type}
-                onClick={() => setSelectedTaskType(type)}
+                onClick={() => {
+                  setSelectedTaskType(type);
+                  setSelectedLogic([]); // Reset selection on type change
+                }}
                 className={cn(
                   "flex items-center gap-2 px-4 py-2 rounded-md border text-sm font-mono transition-colors",
                   selectedTaskType === type
@@ -294,7 +259,7 @@ export default function Generate() {
           {logicLoading ? (
             <div className="flex items-center gap-2 text-muted-foreground">
               <Loader2 className="h-4 w-4 animate-spin" />
-              <span className="font-mono text-sm">Loading logic rules...</span>
+              <span className="font-mono text-sm">Loading...</span>
             </div>
           ) : logicError ? (
             <div className="flex items-center gap-2 text-status-reject-foreground bg-status-reject-bg p-3 rounded">
@@ -357,34 +322,12 @@ export default function Generate() {
           )}
         </DataPanel>
 
-        {/* Disable Reasons - ECVM: Show technical details */}
-        {disableReasons.length > 0 && (
-          <ReasonPanel reasons={disableReasons} />
+        {/* ECVM: Single Reason Panel - Always mounted, shows only when disabled */}
+        {disableReason && (
+          <ReasonPanel reasons={[disableReason]} />
         )}
 
-        {/* Task Execution Result */}
-        {taskMutation.data && (
-          <DataPanel title="Last Execution Result">
-            <div className="flex items-center justify-between">
-              <div className="space-y-1">
-                <div className="text-sm font-mono">
-                  task_id: {taskMutation.data.task_id || "—"}
-                </div>
-                <div className="text-xs text-muted-foreground">
-                  status: {taskMutation.data.status}
-                </div>
-              </div>
-              <StatusBadge status={taskMutation.data.verdict} />
-            </div>
-            {taskMutation.data.reason && (
-              <div className="mt-3 p-2 bg-muted rounded text-xs font-mono">
-                [{taskMutation.data.reason.code}] {taskMutation.data.reason.message}
-              </div>
-            )}
-          </DataPanel>
-        )}
-
-        {/* Generate Button - ECVM: Single action, strict disable */}
+        {/* Generate Button - ECVM: Single action, no spinner text, strict disable */}
         <div className="flex justify-end">
           <Button
             onClick={handleGenerate}
@@ -395,10 +338,7 @@ export default function Generate() {
             )}
           >
             {taskMutation.isPending ? (
-              <>
-                <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                Executing...
-              </>
+              <Loader2 className="h-4 w-4 animate-spin" />
             ) : (
               <>
                 <Sparkles className="h-4 w-4 mr-2" />
