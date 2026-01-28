@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
 import { 
   AdminOverview, 
   LogicBankEntry, 
@@ -7,171 +8,111 @@ import {
   AuditLogEntry 
 } from "@/types/ecvm";
 
-// Mock admin data endpoints - service_role authenticated
+// Admin endpoints - service_role authenticated via Edge Functions
 
 async function fetchAdminOverview(): Promise<AdminOverview> {
-  await new Promise(resolve => setTimeout(resolve, 400));
+  const { data, error } = await supabase.functions.invoke("admin-overview", {
+    method: "GET",
+  });
+
+  if (error) {
+    console.error("[useAdminOverview] Edge function error:", error);
+    throw new Error(error.message || "Failed to fetch admin overview");
+  }
+
   return {
-    total_entities: 1247,
-    active_entities: 1189,
-    total_tasks_today: 3842,
-    pass_rate: 94.2,
-    unmet_logic_count: 23,
-    active_drift_count: 7,
+    total_entities: data.total_entities ?? 0,
+    active_entities: data.active_entities ?? 0,
+    total_tasks_today: data.total_tasks_today ?? 0,
+    pass_rate: data.pass_rate ?? 0,
+    unmet_logic_count: data.unmet_logic_count ?? 0,
+    active_drift_count: data.active_drift_count ?? 0,
   };
 }
 
 async function fetchLogicBank(): Promise<LogicBankEntry[]> {
-  await new Promise(resolve => setTimeout(resolve, 500));
-  return [
-    {
-      logic_id: "lg_face_detect",
-      name: "Face Detection",
-      description: "Validates presence and quality of facial features",
-      version: "2.1.0",
-      status: "active",
-      created_at: "2025-01-15T10:00:00Z",
-      updated_at: "2025-01-25T14:30:00Z",
-    },
-    {
-      logic_id: "lg_age_verify",
-      name: "Age Verification",
-      description: "Cross-references age markers with reference data",
-      version: "1.8.2",
-      status: "active",
-      created_at: "2025-01-10T08:00:00Z",
-      updated_at: "2025-01-20T11:15:00Z",
-    },
-    {
-      logic_id: "lg_liveness",
-      name: "Liveness Check",
-      description: "Anti-spoofing verification for live capture",
-      version: "3.0.1",
-      status: "active",
-      created_at: "2025-01-08T09:00:00Z",
-      updated_at: "2025-01-27T16:45:00Z",
-    },
-    {
-      logic_id: "lg_doc_match_v1",
-      name: "Document Matching (Legacy)",
-      description: "Legacy document verification system",
-      version: "1.0.0",
-      status: "deprecated",
-      created_at: "2024-06-01T10:00:00Z",
-      updated_at: "2025-01-01T00:00:00Z",
-    },
-    {
-      logic_id: "lg_motion_track",
-      name: "Motion Tracking",
-      description: "Analyzes motion patterns in video content",
-      version: "2.5.0",
-      status: "active",
-      created_at: "2025-01-12T13:00:00Z",
-      updated_at: "2025-01-26T09:30:00Z",
-    },
-  ];
+  const { data, error } = await supabase.functions.invoke("admin-logic-bank", {
+    method: "GET",
+  });
+
+  if (error) {
+    console.error("[useLogicBank] Edge function error:", error);
+    throw new Error(error.message || "Failed to fetch logic bank");
+  }
+
+  return (data ?? []).map((m: Record<string, unknown>) => ({
+    logic_id: m.logic_id as string,
+    name: m.name as string,
+    description: m.description as string,
+    version: m.version as string,
+    status: m.status as LogicBankEntry["status"],
+    created_at: m.created_at as string,
+    updated_at: m.updated_at as string,
+  }));
 }
 
 async function fetchUnmetLogic(): Promise<UnmetLogicEntry[]> {
-  await new Promise(resolve => setTimeout(resolve, 450));
-  return [
-    {
-      id: "unmet_001",
-      entity_id: "ent_a1b2c3d4",
-      logic_id: "lg_doc_match",
-      reason: "Document upload pending verification",
-      detected_at: "2025-01-28T10:15:00Z",
-      severity: "high",
-    },
-    {
-      id: "unmet_002",
-      entity_id: "ent_e5f6g7h8",
-      logic_id: "lg_liveness",
-      reason: "Liveness check failed - retry required",
-      detected_at: "2025-01-28T09:45:00Z",
-      severity: "critical",
-    },
-    {
-      id: "unmet_003",
-      entity_id: "ent_i9j0k1l2",
-      logic_id: "lg_age_verify",
-      reason: "Age reference data expired",
-      detected_at: "2025-01-27T14:30:00Z",
-      severity: "medium",
-    },
-  ];
+  const { data, error } = await supabase.functions.invoke("admin-unmet-logic", {
+    method: "GET",
+  });
+
+  if (error) {
+    console.error("[useUnmetLogic] Edge function error:", error);
+    throw new Error(error.message || "Failed to fetch unmet logic");
+  }
+
+  return (data ?? []).map((s: Record<string, unknown>) => ({
+    id: s.signal_id as string,
+    entity_id: s.entity_id as string,
+    logic_id: s.requested_task as string, // mapped from requested_task
+    reason: s.reason as string,
+    detected_at: s.created_at as string,
+    severity: s.severity as UnmetLogicEntry["severity"],
+  }));
 }
 
 async function fetchDrift(): Promise<DriftEntry[]> {
-  await new Promise(resolve => setTimeout(resolve, 400));
-  return [
-    {
-      id: "drift_001",
-      entity_id: "ent_m3n4o5p6",
-      drift_type: "face_embedding",
-      delta: 0.12,
-      baseline: 0.95,
-      current: 0.83,
-      detected_at: "2025-01-28T11:00:00Z",
-      acknowledged: false,
-    },
-    {
-      id: "drift_002",
-      entity_id: "ent_q7r8s9t0",
-      drift_type: "age_marker",
-      delta: 0.08,
-      baseline: 0.92,
-      current: 0.84,
-      detected_at: "2025-01-28T08:30:00Z",
-      acknowledged: true,
-    },
-  ];
+  const { data, error } = await supabase.functions.invoke("admin-drift", {
+    method: "GET",
+  });
+
+  if (error) {
+    console.error("[useDrift] Edge function error:", error);
+    throw new Error(error.message || "Failed to fetch drift data");
+  }
+
+  return (data ?? []).map((d: Record<string, unknown>) => ({
+    id: d.drift_id as string,
+    entity_id: d.entity_id as string,
+    drift_type: d.drift_type as string,
+    delta: d.delta as number,
+    baseline: d.baseline as number,
+    current: d.current as number,
+    detected_at: d.detected_at as string,
+    acknowledged: d.acknowledged as boolean,
+  }));
 }
 
 async function fetchAuditLog(): Promise<AuditLogEntry[]> {
-  await new Promise(resolve => setTimeout(resolve, 550));
-  return [
-    {
-      id: "audit_001",
-      action: "task.execute",
-      actor_type: "user",
-      actor_id: "usr_abc123",
-      resource_type: "task",
-      resource_id: "task_xyz789",
-      timestamp: "2025-01-28T11:30:00Z",
-      details: { task_type: "image", logic_count: 3 },
-    },
-    {
-      id: "audit_002",
-      action: "logic.update",
-      actor_type: "service_role",
-      actor_id: "svc_system",
-      resource_type: "logic",
-      resource_id: "lg_face_detect",
-      timestamp: "2025-01-28T10:00:00Z",
-      details: { version: "2.1.0", change_type: "patch" },
-    },
-    {
-      id: "audit_003",
-      action: "entity.reference_upload",
-      actor_type: "user",
-      actor_id: "usr_def456",
-      resource_type: "entity",
-      resource_id: "ent_7f3a9c2d",
-      timestamp: "2025-01-28T09:15:00Z",
-      details: { file_count: 2 },
-    },
-    {
-      id: "audit_004",
-      action: "drift.acknowledge",
-      actor_type: "user",
-      actor_id: "usr_ghi789",
-      resource_type: "drift",
-      resource_id: "drift_002",
-      timestamp: "2025-01-28T08:45:00Z",
-      details: {},
-    },
-  ];
+  const { data, error } = await supabase.functions.invoke("admin-audit", {
+    method: "GET",
+  });
+
+  if (error) {
+    console.error("[useAuditLog] Edge function error:", error);
+    throw new Error(error.message || "Failed to fetch audit log");
+  }
+
+  return (data ?? []).map((a: Record<string, unknown>) => ({
+    id: a.id as string,
+    action: a.action as string,
+    actor_type: a.actor_type as AuditLogEntry["actor_type"],
+    actor_id: a.actor_id as string,
+    resource_type: a.resource_type as string,
+    resource_id: a.resource_id as string,
+    timestamp: a.timestamp as string,
+    details: (a.details as Record<string, unknown>) ?? {},
+  }));
 }
 
 export function useAdminOverview() {
@@ -179,6 +120,7 @@ export function useAdminOverview() {
     queryKey: ["admin-overview"],
     queryFn: fetchAdminOverview,
     staleTime: 30000,
+    retry: false, // ECVM: fail-closed
   });
 }
 
@@ -187,6 +129,7 @@ export function useLogicBank() {
     queryKey: ["logic-bank"],
     queryFn: fetchLogicBank,
     staleTime: 60000,
+    retry: false,
   });
 }
 
@@ -195,6 +138,7 @@ export function useUnmetLogic() {
     queryKey: ["unmet-logic"],
     queryFn: fetchUnmetLogic,
     staleTime: 30000,
+    retry: false,
   });
 }
 
@@ -203,6 +147,7 @@ export function useDrift() {
     queryKey: ["drift"],
     queryFn: fetchDrift,
     staleTime: 30000,
+    retry: false,
   });
 }
 
@@ -211,5 +156,6 @@ export function useAuditLog() {
     queryKey: ["audit-log"],
     queryFn: fetchAuditLog,
     staleTime: 30000,
+    retry: false,
   });
 }

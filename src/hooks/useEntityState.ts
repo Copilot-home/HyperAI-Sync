@@ -2,23 +2,38 @@ import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { EntityState } from "@/types/ecvm";
 
-// Mock endpoint - in production this would be GET /v1/entity/state
+// GET /v1/entity/state - Real Edge Function call
 async function fetchEntityState(): Promise<EntityState> {
-  // Simulate API call delay
-  await new Promise(resolve => setTimeout(resolve, 500));
-  
-  // Mock data - replace with actual API call when backend is ready
+  const { data, error } = await supabase.functions.invoke("entity-state", {
+    method: "GET",
+  });
+
+  if (error) {
+    console.error("[useEntityState] Edge function error:", error);
+    throw new Error(error.message || "Failed to fetch entity state");
+  }
+
+  // Handle NO_IDENTITY case
+  if (data.entity_id === null) {
+    return {
+      entity_id: "",
+      status: "pending",
+      coverage_percent: 0,
+      variance: 1.0,
+      reference_uploaded: false,
+      last_sync: "",
+      metadata: data.metadata ?? {},
+    };
+  }
+
   return {
-    entity_id: "ent_7f3a9c2d",
-    status: "active",
-    coverage_percent: 87.5,
-    variance: 0.023,
-    reference_uploaded: true,
-    last_sync: new Date().toISOString(),
-    metadata: {
-      version: "2.1.0",
-      region: "us-east-1",
-    },
+    entity_id: data.entity_id,
+    status: data.status as EntityState["status"],
+    coverage_percent: data.coverage_percent,
+    variance: data.variance,
+    reference_uploaded: data.reference_uploaded,
+    last_sync: data.last_sync,
+    metadata: data.metadata ?? {},
   };
 }
 
@@ -26,7 +41,8 @@ export function useEntityState() {
   return useQuery({
     queryKey: ["entity-state"],
     queryFn: fetchEntityState,
-    staleTime: 30000, // 30 seconds
+    staleTime: 30000,
     refetchOnWindowFocus: false,
+    retry: false, // ECVM: fail-closed, no retry
   });
 }
