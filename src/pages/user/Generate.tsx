@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useCallback } from "react";
 import { AppLayout } from "@/components/layout/AppLayout";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { DataPanel } from "@/components/ecvm/DataPanel";
@@ -7,6 +7,7 @@ import { StatusBadge } from "@/components/ecvm/StatusBadge";
 import { useEntityState } from "@/hooks/useEntityState";
 import { useAvailableLogic } from "@/hooks/useAvailableLogic";
 import { useTaskExecute } from "@/hooks/useTaskExecute";
+import { useUnmetLogicSignal } from "@/hooks/useUnmetLogicSignal";
 import { TaskType, DisableReason } from "@/types/ecvm";
 import { Sparkles, Image, Video, Shield, CheckCircle, XCircle, Loader2, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -27,6 +28,7 @@ export default function Generate() {
   const [selectedLogic, setSelectedLogic] = useState<string[]>([]);
 
   const taskMutation = useTaskExecute();
+  const unmetLogicMutation = useUnmetLogicSignal();
 
   // Auto-select required logic when available
   useEffect(() => {
@@ -139,9 +141,40 @@ export default function Generate() {
 
   const isDisabled = disableReasons.length > 0 || taskMutation.isPending || entityLoading || logicLoading;
 
+  // ECVM: Send unmet logic signal when user attempts with unavailable logic
+  const sendUnmetSignal = useCallback(() => {
+    if (!entityState?.entity_id) return;
+
+    const identityState = entityState?.metadata?.identity_state as string || "NO_IDENTITY";
+    const unavailableSelected = selectedLogic.filter(id => {
+      const rule = logicRules?.find(l => l.logic_id === id);
+      return rule && !rule.available;
+    });
+
+    // Only send if there are unavailable logic selected or identity not established
+    if (unavailableSelected.length > 0 || identityState !== "ESTABLISHED") {
+      unmetLogicMutation.mutate({
+        entity_id: entityState.entity_id,
+        requested_task: selectedTaskType,
+        observed_state: identityState,
+        unavailable_logic_ids: unavailableSelected,
+      }, {
+        onSuccess: (signal) => {
+          console.log("[Generate] Unmet logic signal sent:", signal.signal_id);
+        },
+      });
+    }
+  }, [entityState, selectedLogic, logicRules, selectedTaskType, unmetLogicMutation]);
+
   // ECVM: Single action = Single API call (POST /v1/task/execute)
   const handleGenerate = () => {
-    if (isDisabled || !entityState) return;
+    // If disabled due to unmet logic conditions, send signal before returning
+    if (isDisabled) {
+      sendUnmetSignal();
+      return;
+    }
+    
+    if (!entityState) return;
     
     taskMutation.mutate({
       task_type: selectedTaskType,
