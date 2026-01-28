@@ -106,8 +106,8 @@ export default function UnmetLogic() {
                 <thead>
                   <tr>
                     <th>Severity</th>
-                    <th>Entity ID</th>
                     <th>Requested Task</th>
+                    <th>Observed State</th>
                     <th>Reason</th>
                     <th>Detected</th>
                     <th>Actions</th>
@@ -129,7 +129,12 @@ export default function UnmetLogic() {
                       </td>
                       <td>
                         <span className="inline-block px-2 py-0.5 bg-muted rounded text-xs uppercase font-mono">
-                          {entry.logic_id}
+                          {entry.requested_task}
+                        </span>
+                      </td>
+                      <td>
+                        <span className="inline-block px-2 py-0.5 bg-status-pending-bg text-status-pending-foreground rounded text-xs font-mono">
+                          {entry.observed_state}
                         </span>
                       </td>
                       <td className="text-muted-foreground max-w-xs">

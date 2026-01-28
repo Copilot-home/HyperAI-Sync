@@ -66,6 +66,7 @@ export interface LogicBankEntry {
   description: string;
   version: string;
   status: 'active' | 'deprecated' | 'draft';
+  enabled: boolean;
   created_at: string;
   updated_at: string;
 }
@@ -73,7 +74,8 @@ export interface LogicBankEntry {
 export interface UnmetLogicEntry {
   id: string;
   entity_id: string;
-  logic_id: string;
+  requested_task: string;
+  observed_state: string;
   reason: string;
   detected_at: string;
   severity: 'low' | 'medium' | 'high' | 'critical';
