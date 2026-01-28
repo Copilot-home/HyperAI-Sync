@@ -11,23 +11,23 @@ import { Button } from "@/components/ui/button";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 
-// Identity state display names per ECVM spec
-const identityStateLabels: Record<string, { label: string; description: string }> = {
+// ECVM-CS-1.0: Exact state labels and single reason messages (NO "AI" language)
+const identityStateConfig: Record<string, { label: string; reason: string }> = {
   NO_IDENTITY: {
-    label: "No Identity",
-    description: "No stable embedding established. Upload reference materials to begin.",
+    label: "NO_IDENTITY",
+    reason: "No stable identity data detected. Upload reference images.",
   },
   INSUFFICIENT: {
-    label: "Insufficient",
-    description: "High variance detected. Additional reference materials required.",
+    label: "INSUFFICIENT",
+    reason: "Identity data insufficient to maintain stability. More reference images required.",
   },
   ESTABLISHED: {
-    label: "Established",
-    description: "Identity stable within bounds. Task execution enabled.",
+    label: "ESTABLISHED",
+    reason: "", // No reason needed when ESTABLISHED
   },
   DRIFT: {
-    label: "Drift Detected",
-    description: "Progressive deviation detected. Identity re-verification required.",
+    label: "DRIFT",
+    reason: "Identity drift detected. Additional data required to restore stability.",
   },
 };
 
@@ -40,7 +40,7 @@ export default function Identity() {
   // Extract identity_state from metadata (per API response structure)
   const identityState = (entityState?.metadata?.identity_state as string) || "NO_IDENTITY";
   const isLocked = entityState?.metadata?.locked as boolean | undefined;
-  const stateInfo = identityStateLabels[identityState] || identityStateLabels.NO_IDENTITY;
+  const stateConfig = identityStateConfig[identityState] || identityStateConfig.NO_IDENTITY;
 
   return (
     <AppLayout>
@@ -105,14 +105,14 @@ export default function Identity() {
             <div className="flex items-start gap-3">
               <Shield className="h-5 w-5 text-status-halt mt-0.5" />
               <div className="flex-1">
-                <div className="text-sm font-medium">{stateInfo.label}</div>
+                <div className="text-sm font-mono font-medium">{stateConfig.label}</div>
                 <div className="text-xs text-muted-foreground mt-1">
-                  {stateInfo.description}
+                  {stateConfig.reason}
                 </div>
                 <div className="mt-4">
                   <Button className="font-mono text-sm">
                     <Upload className="h-4 w-4 mr-2" />
-                    Upload Reference Materials
+                    Upload Reference Images
                   </Button>
                 </div>
               </div>
@@ -170,15 +170,17 @@ export default function Identity() {
                   label="Variance Score" 
                   value={`${(entityState.variance * 100).toFixed(2)}%`} 
                 />
-                <div className="pt-2 border-t border-border">
-                  <div className="text-xs font-mono text-muted-foreground mb-2">
-                    State Info
+                {/* ECVM: Single reason panel - only show if not ESTABLISHED */}
+                {identityState !== "ESTABLISHED" && stateConfig.reason && (
+                  <div className="pt-2 border-t border-border">
+                    <div className="text-xs font-mono text-muted-foreground mb-2">
+                      Status Reason
+                    </div>
+                    <div className="text-sm font-mono text-status-halt-foreground">
+                      {stateConfig.reason}
+                    </div>
                   </div>
-                  <div className="text-sm">{stateInfo.label}</div>
-                  <div className="text-xs text-muted-foreground mt-1">
-                    {stateInfo.description}
-                  </div>
-                </div>
+                )}
               </div>
             </DataPanel>
 
