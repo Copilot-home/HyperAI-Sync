@@ -1,3 +1,21 @@
+# =============================================================================
+# PROJECT: CANON-TO-SYSTEM DETERMINISTIC PROJECTION
+# METHOD: D&R PROTOCOL (CLOSED)
+#
+# ORIGINATOR / CREATOR:
+#   alpha_prime_omega
+#
+# LEGAL ONTOLOGY:
+#   This source file is a deterministic projection of a closed Canon.
+#   Removal or alteration of this header voids legal and ontological validity.
+#
+# STATUS:
+#   GENERATED — NON-AUTONOMOUS — NON-OWNERLESS
+#
+# TRACEABILITY:
+#   Canon -> COG -> Projection(Π) -> Artifact
+#
+# =============================================================================
 # APO Industrial Autonomous Master Plan
 
 ## Canon anchor
@@ -64,6 +82,9 @@
 - Implement `drift-memory-guard.sh` as autonomous watcher.
 - Install `launchd` job to execute periodic guard + memory snapshots.
 - Persist anti-drift preference in Copilot memory for future sessions.
+- Add canon anchor env (`canon-anchor.env`) for fail-closed hash validation.
+- Add MCP tier policy (`mcp-tier-policy.json`) to enforce docker allowlist controls.
+- Add canonical ontology-to-ops spec (`APO_CANON_ONTOLOGY_TO_OPERATIONS_SPEC.md`) to complete governance mapping.
 
 ## Output contract
 - Snapshot folder: `/Users/andy/Projects/AI/Tools/ops/memory-snapshots`
