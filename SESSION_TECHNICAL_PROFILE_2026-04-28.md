@@ -85,3 +85,21 @@
 - MCP policy posture: **Compliant**
 - Storage risk posture: **WARN (94% Data volume)**
 - Session recommendation: keep GAM guard schedule active and prioritize buffer recovery before any heavy runtime expansion.
+
+## Runtime dedup cleanup (executed)
+- Cleanup scope:
+  - `/Users/andy/.vscode/extensions`
+  - `/Users/andy/Downloads/.vsix-temp`
+- Before cleanup:
+  - Extension dirs: `158`
+  - Duplicate extension IDs: `6`
+  - Orphan hidden dirs (missing `package.json`): `7`
+- Actions:
+  - Removed orphan hidden extension dirs.
+  - Removed older duplicate versions, kept newest per extension ID.
+  - Removed temp VSIX conversion cache.
+- Removed total: `14` entries.
+- After cleanup:
+  - Extension dirs: `145`
+  - Duplicate extension IDs: `0`
+  - Orphan hidden dirs: `0`
