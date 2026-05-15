@@ -48,6 +48,19 @@ Executed locally:
 - MCP initialize/tools/list/tools/call: PASS
 - Electron static JS check: PASS
 
+## Git Deployment Evidence
+
+| repo | branch | commit | remote status |
+|---|---|---|---|
+| `/Users/andy/workbench` | `codex/aios-runtime-orchestrator-deploy` | `048bc87` | pushed; PR open: `https://github.com/NguyenCuong1989/workbench/pull/2` |
+| `/Users/andy/HyperAI-Sync` | `codex/aios-runtime-memory-deploy` | `c690c2d` | pushed; repository default branch now points at this memory branch |
+| `/Users/andy/Documents/MacOSMac` | `main` | `42bff92` | local Canon/context scope commit present |
+
+Merge status:
+
+- Workbench PR is mergeable, but not merged because GitHub checks are still failing/pending.
+- HyperAI-Sync remote had no `main` head before push; memory branch was pushed as the first/default branch.
+
 Router verify proves:
 
 - `hyperai-runtime-orchestrator` exists.
