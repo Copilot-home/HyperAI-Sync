@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Optimization -->
+  <title>Andy's AI-Powered Workspace Cockpit</title>
+  <meta name="description" content="Andy's modern, local development cockpit featuring environment diagnostics, standard command clipboard templates, and lazy-loading MCP status toggles.">
+  
+  <!-- Preloads & Styles -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='purple'/><text y='70' x='18' fill='white' font-size='60' font-weight='bold'>🚀</text></svg>">
+  <link rel="stylesheet" href="/styles/global.css">
+</head>
+<body>
+
+  <!-- Dynamic Backdrop Glow Orbs -->
+  <div class="glow-orb-1" aria-hidden="true"></div>
+  <div class="glow-orb-2" aria-hidden="true"></div>
+
+  <div class="app-container">
+    
+    <!-- Top Cockpit Header -->
+    <header>
+      <div class="brand">
+        <div class="brand-icon">A</div>
+        <div class="brand-text">
+          <h1>AI-Augmented Cockpit</h1>
+          <p style="font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;">Workspace: /scratch</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="theme-toggle" class="btn-toggle" aria-label="Toggle visual theme" title="Toggle Light/Dark Theme">☀️</button>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-primary" id="btn-github-link">
+          <span>GitHub</span> ↗
+        </a>
+      </div>
+    </header>
+
+    <main class="grid-layout">
+      
+      <!-- Left Column: Primary Diagnostics & Commands -->
+      <section class="main-column" style="display: flex; flex-direction: column; gap: 2rem;">
+        
+        <!-- System Diagnostics glass panel -->
+        <article class="glass-panel" id="panel-diagnostics">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+            <div>
+              <h2 style="font-size: 1.5rem; margin-bottom: 0.25rem;">💻 System Diagnostics</h2>
+              <p>Real-time environment versions active on your machine</p>
+            </div>
+            <span style="font-size: 1.5rem;">⚙️</span>
+          </div>
+          <div class="spec-list" id="spec-list">
+            <!-- Dynamic Spec Cards rendered by main.js -->
+          </div>
+        </article>
+
+        <!-- Command Toolbox glass panel -->
+        <article class="glass-panel" id="panel-commands">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.25rem;">
+            <div>
+              <h2 style="font-size: 1.5rem; margin-bottom: 0.25rem;">📋 Developer command Toolbox</h2>
+              <p>One-click clipboard copy templates for git, python uv, cloudflare, and agents</p>
+            </div>
+            <span style="font-size: 1.5rem;">⚡</span>
+          </div>
+          
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="command-search" class="search-input" placeholder="Filter commands by tag, syntax, or description..." aria-label="Search developer commands">
+          </div>
+
+          <div class="command-list" id="command-list">
+            <!-- Dynamic Command Cards rendered by main.js -->
+          </div>
+        </article>
+
+        <!-- Folder Nav Cards -->
+        <article class="glass-panel" id="panel-folders">
+          <h2 style="font-size: 1.5rem; margin-bottom: 0.25rem;">📂 Workspace Directory Layout</h2>
+          <p>Quick structures created inside your active `/scratch` directory</p>
+          
+          <div class="dir-grid">
+            <div class="dir-card">
+              <span style="font-size: 1.5rem; margin-bottom: 0.5rem;">📂</span>
+              <span class="dir-title">projects/</span>
+              <p class="dir-desc">For web apps, production backends, and fullstack services.</p>
+            </div>
+            <div class="dir-card">
+              <span style="font-size: 1.5rem; margin-bottom: 0.5rem;">⚙️</span>
+              <span class="dir-title">scripts/</span>
+              <p class="dir-desc">For automation helpers, system diagnostics, and shell routines.</p>
+            </div>
+            <div class="dir-card">
+              <span style="font-size: 1.5rem; margin-bottom: 0.5rem;">🧪</span>
+              <span class="dir-title">experiments/</span>
+              <p class="dir-desc">For fast agent tests, sandbox setups, and AI prototyping.</p>
+            </div>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- Right Column: Sidebar Clock, MCP Connectors & Tips -->
+      <section class="sidebar-column" style="display: flex; flex-direction: column; gap: 2rem;">
+        
+        <div class="widget-flex">
+          
+          <!-- Live Time Widget -->
+          <article class="glass-panel clock-widget" id="widget-clock">
+            <div class="time-display" id="time-display">00:00:00</div>
+            <div class="date-display" id="date-display">Tuesday, Jun 2, 2026</div>
+          </article>
+
+          <!-- MCP Manager -->
+          <article class="glass-panel" id="panel-mcp">
+            <div class="mcp-header">
+              <h2 style="font-size: 1.25rem; font-weight: 700;">📡 Lazy-load MCPs</h2>
+              <span class="badge-count" id="mcp-count">0</span>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem;">Toggle and test connections to remote databases & big data catalogs</p>
+            <div class="mcp-list" id="mcp-list">
+              <!-- Dynamic MCP list items rendered by main.js -->
+            </div>
+          </article>
+
+          <!-- Agent instructions tips -->
+          <article class="glass-panel" id="panel-quick-tips" style="border-left: 4px solid var(--primary);">
+            <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--primary);">💡 Pro Tip: Slash Commands</h3>
+            <p style="font-size: 0.85rem; line-height: 1.5;">You can easily automate long workflows or set recurring tasks using our custom chat shortcuts:</p>
+            <ul style="font-size: 0.85rem; margin-top: 0.5rem; padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.35rem; color: var(--text-muted);">
+              <li><strong>/goal</strong> — For thorough background runs.</li>
+              <li><strong>/schedule</strong> — For recurring build timers.</li>
+              <li><strong>/browser</strong> — Launching visual audits.</li>
+              <li><strong>/grill-me</strong> — Align on design strategies.</li>
+            </ul>
+          </article>
+
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Toast Notification Wrapper -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- Client Script Bundling -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
