@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderDiagnostics();
   renderMCPServers();
   renderCommands();
+  initGitHub();
   
   // Register Search Event
   const searchInput = document.getElementById('command-search');
@@ -247,3 +248,110 @@ function showToast(message) {
     setTimeout(() => toast.remove(), 400);
   }, 3000);
 }
+
+/* ==========================================================================
+   GIT COMMIT & MERGE HUB GENERATOR LOGIC
+   ========================================================================== */
+function initGitHub() {
+  const tabs = document.querySelectorAll('.git-tab');
+  const panes = document.querySelectorAll('.git-pane');
+  const commandOut = document.getElementById('git-compiled-command');
+  const copyBtn = document.getElementById('btn-copy-git');
+
+  if (!tabs.length || !panes.length || !commandOut || !copyBtn) return;
+
+  let activeMode = 'commit';
+
+  // Input elements
+  const commitMsgEl = document.getElementById('commit-msg');
+  const commitAddAllEl = document.getElementById('commit-add-all');
+  const mergeTargetEl = document.getElementById('merge-target');
+  const mergeSourceEl = document.getElementById('merge-source');
+  const mergeNoFfEl = document.getElementById('merge-no-ff');
+  const mergeSquashEl = document.getElementById('merge-squash');
+  const branchNameEl = document.getElementById('branch-name');
+  const branchCheckoutEl = document.getElementById('branch-checkout');
+
+  // Tab switching
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      activeMode = tab.getAttribute('data-mode');
+      
+      panes.forEach(pane => {
+        const id = pane.id;
+        if (id === `pane-${activeMode}`) {
+          pane.style.display = 'block';
+        } else {
+          pane.style.display = 'none';
+        }
+      });
+
+      updateGitCommand();
+    });
+  });
+
+  // Reactive compilation on keyup/change
+  const inputs = [
+    commitMsgEl, commitAddAllEl,
+    mergeTargetEl, mergeSourceEl, mergeNoFfEl, mergeSquashEl,
+    branchNameEl, branchCheckoutEl
+  ];
+
+  inputs.forEach(input => {
+    if (input) {
+      const eventType = input.type === 'checkbox' ? 'change' : 'input';
+      input.addEventListener(eventType, updateGitCommand);
+    }
+  });
+
+  // Dynamic compiler function
+  function updateGitCommand() {
+    let command = '';
+
+    if (activeMode === 'commit') {
+      const msg = commitMsgEl.value.trim().replace(/"/g, '\\"');
+      const finalMsg = msg || 'update workspace';
+      const addAll = commitAddAllEl.checked;
+      
+      command = addAll 
+        ? `git add . && git commit -m "${finalMsg}"` 
+        : `git commit -am "${finalMsg}"`;
+
+    } else if (activeMode === 'merge') {
+      const target = mergeTargetEl.value.trim() || 'main';
+      const source = mergeSourceEl.value.trim() || 'feature-branch';
+      const noFf = mergeNoFfEl.checked ? ' --no-ff' : '';
+      const squash = mergeSquashEl.checked ? ' --squash' : '';
+      
+      command = `git checkout ${target} && git merge ${source}${noFf}${squash}`;
+
+    } else if (activeMode === 'branch') {
+      const name = branchNameEl.value.trim().toLowerCase().replace(/\s+/g, '-');
+      const finalName = name || 'feature/new-branch';
+      const checkout = branchCheckoutEl.checked;
+      
+      command = checkout 
+        ? `git checkout -b ${finalName}` 
+        : `git branch ${finalName}`;
+    }
+
+    commandOut.textContent = command;
+  }
+
+  // Copy button
+  copyBtn.addEventListener('click', () => {
+    const commandText = commandOut.textContent;
+    navigator.clipboard.writeText(commandText).then(() => {
+      showToast(`Copied Git command to clipboard!`);
+    }).catch(err => {
+      console.error('Failed to copy', err);
+    });
+  });
+
+  // Initial compile
+  updateGitCommand();
+}
+

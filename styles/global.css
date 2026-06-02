@@ -692,3 +692,13 @@ header {
   from { transform: translateX(100px); opacity: 0; }
   to { transform: translateX(0); opacity: 1; }
 }
+
+/* ==========================================================================
+   GIT HUB INTERACTIVE WIDGETS
+   ========================================================================== */
+.git-tab.active {
+  background: var(--primary) !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.25);
+}
+
