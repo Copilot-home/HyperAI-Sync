@@ -1,0 +1,2 @@
+{"kind":"incident","id":"CODX-FAIL-2026-05-18-TRASH-SUDO","path":"/Users/andy/.codex/incidents/CODX-FAIL-2026-05-18-TRASH-SUDO.json","schema":"codex://schemas/failure_incident.schema.json","tags":["failure","sudo","trash","workflow","memory"],"created_at":"2026-05-18T00:00:00Z"}
+
