@@ -1,0 +1,59 @@
+{
+  "inputs": [],
+  "servers": {
+    "microsoft/markitdown": {
+      "type": "stdio",
+      "command": "ramparts-mcp-proxy-stdio",
+      "args": [],
+      "gallery": "https://api.mcp.github.com",
+      "version": "1.0.0",
+      "env": {
+        "OVERWATCH_TARGET_CMD": "uvx",
+        "OVERWATCH_TARGET_ARGS": "[\"markitdown-mcp==0.0.1a4\"]",
+        "OVERWATCH_SERVER_NAME": "microsoft/markitdown"
+      }
+    },
+    "cognitionai/deepwiki": {
+      "type": "http",
+      "url": "https://mcp.deepwiki.com/mcp",
+      "gallery": "https://api.mcp.github.com",
+      "version": "1.0.0"
+    },
+    "io.github.github/github-mcp-server": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "__REDACTED_USE_KEYCHAIN_OR_ENV__"
+      },
+      "gallery": "https://api.mcp.github.com",
+      "version": "0.26.3"
+    },
+    "MCP_DOCKER": {
+      "command": "docker",
+      "args": [
+        "mcp",
+        "gateway",
+        "run",
+        "--profile",
+        "profile"
+      ],
+      "type": "stdio"
+    },
+    "finalai-postgres": {
+      "type": "stdio",
+      "command": "/bin/bash",
+      "args": [
+        "-lc",
+        "exec /opt/homebrew/bin/npx -y @modelcontextprotocol/server-postgres 'postgresql://aidev:__REDACTED__@127.0.0.1:5432/aidev'"
+      ]
+    },
+    "finalai-redis": {
+      "type": "stdio",
+      "command": "/bin/bash",
+      "args": [
+        "-lc",
+        "exec /opt/homebrew/bin/npx -y redis-mcp --url 'redis://127.0.0.1:6379/0'"
+      ]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+# generated_at=2026-06-08T19:03:36Z
+# original_path	store_path	action
+/Users/cuongnguyen/Workspace/Projects/finalAI	/Users/cuongnguyen/.workspace_payload_store/Projects/finalAI	moved_and_symlinked
+/Users/cuongnguyen/Workspace/Projects/dev_zone	/Users/cuongnguyen/.workspace_payload_store/Projects/dev_zone	moved_and_symlinked
+/Users/cuongnguyen/Workspace/Projects/chatgpt-apps	/Users/cuongnguyen/.workspace_payload_store/Projects/chatgpt-apps	moved_and_symlinked
+/Users/cuongnguyen/Workspace/Projects/finalAI.worktrees	/Users/cuongnguyen/.workspace_payload_store/Projects/finalAI.worktrees	moved_and_symlinked
+/Users/cuongnguyen/Workspace/Archive	/Users/cuongnguyen/.workspace_payload_store/Archive	moved_and_symlinked
+/Users/cuongnguyen/Workspace/System/Runtime/finalAI-venv	/Users/cuongnguyen/.finalai_runtime_store/venvs/finalAI	shallow_symlink_depth3
+/Users/cuongnguyen/Workspace/System/Runtime/finalAI-data	/Users/cuongnguyen/.finalai_runtime_store/data/finalAI	shallow_symlink_depth3

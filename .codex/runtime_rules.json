@@ -1,0 +1,29 @@
+{
+  "mode": "implementation_first_runtime_development",
+  "behavior_rules": [
+    "Focus on implementing and validating working runtime functionality.",
+    "Reports are limited to runtime debugging and validation evidence.",
+    "Do not pause implementation for governance work that is not required to run or secure the development runtime.",
+    "All code changes must remove a measured runtime failure, enable a required runtime feature, or make an exposed execution path safe enough to test.",
+    "Verify after each runtime change with the narrowest real execution probe."
+  ],
+  "current_phase": "runtime_bootstrap",
+  "verified_blockers_to_fix": [
+    "Redis and PostgreSQL are absent from the running FinalAI environment.",
+    "No schema initialization creates the LakeData table.",
+    "Compose does not persist Redis or PostgreSQL data.",
+    "Telegram secrets are inherited by service containers that do not need them.",
+    "Telegram code execution/deploy commands are not restricted to an allowed chat.",
+    "Module deployment accepts an unsanitized path component.",
+    "torch 2.2.0 with numpy 2.0.2 has an ABI compatibility warning."
+  ],
+  "validation_after_changes": [
+    "Parse/import Python modules with bytecode disabled.",
+    "Verify torch imports without the NumPy ABI warning.",
+    "Validate docker compose configuration.",
+    "Build and start the FinalAI compose stack.",
+    "Verify Redis, PostgreSQL schema, API gateway, LakeData query and Telegram API access.",
+    "Restart the stack and verify persisted data."
+  ]
+}
+qœ

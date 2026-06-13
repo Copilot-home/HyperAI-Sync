@@ -1,0 +1,89 @@
+{
+    "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
+    "containers.orchestratorClient": "com.microsoft.visualstudio.orchestrators.dockercompose",
+    "gitlens.ai.model": "vscode",
+    "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+    "gitlens.currentLine.uncommittedChangesFormat": "✏️ ${ago}",
+    "containers.containers.label": "ContainerId",
+    "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
+    "chat.viewSessions.orientation": "stacked",
+    "chat.checkpoints.showFileChanges": true,
+    "chat.customAgentInSubagent.enabled": true,
+    "chat.edits2.enabled": true,
+    "chat.editor.wordWrap": "on",
+    "chat.mcp.assisted.nuget.enabled": true,
+    "chat.mcp.discovery.enabled": {
+        "claude-desktop": true,
+        "cursor-global": true,
+        "windsurf": true,
+        "cursor-workspace": true
+    },
+    "chat.mcp.gallery.enabled": true,
+    "chat.renderRelatedFiles": true,
+    "chat.restoreLastPanelSession": true,
+    "chat.todoListTool.descriptionField": true,
+    "chat.tools.global.autoApprove": true,
+    "chat.tools.terminal.autoReplyToPrompts": true,
+    "chat.tools.terminal.ignoreDefaultAutoApproveRules": true,
+    "chat.tools.terminal.terminalProfile.linux": {
+
+    },
+    "inlineChat.enableV2": true,
+    "inlineChat.finishOnType": true,
+    "inlineChat.notebookAgent": true,
+    "chat.useNestedAgentsMdFiles": true,
+    "chat.useAgentSkills": true,
+    "workbench.settings.applyToAllProfiles": [
+        "chat.useAgentSkills",
+        "chat.undoRequests.restoreInput",
+        "chat.agent.codeBlockProgress",
+        "chat.agent.enabled"
+    ],
+    "chat.agent.thinking.collapsedTools": "withThinking",
+    "chat.agent.maxRequests": 10000,
+    "chat.agent.thinkingStyle": "collapsed",
+    "chat.allowAnonymousAccess": true,
+    "chat.editRequests": "input",
+    "chat.mcp.serverSampling": {
+
+    },
+    "chromiumide.metrics.showMessage": false,
+    "pieces.setCopilotLocation": true,
+    "chromiumide.metrics.collectMetrics": true,
+    "tabnine.experimentalAutoImports": true,
+    "workbench.colorCustomizations": {},
+    "parallels-desktop.extension.path": "/Users/cuongnguyen/.parallels-desktop-vscode",
+    "gocodeo.hasShownWalkthrough": true,
+    "text2code.showLogoutWelcomeView": false,
+    "githubLocalActions.dockerDesktopPath": "/Applications/Docker.app",
+    "parallels-desktop.git.path": "/usr/bin/git",
+    "parallels-desktop.brew.path": "/opt/homebrew/bin/brew",
+    "text2code.showLoginWelcomeView": true,
+    "lightrun.general.certificatePinning": true,
+    "lightrun.general.certificatePinningList": [
+        "515a630cfd1fb908e30087bcc20b7413ad146b9bf2b23d3aaa72c28e45b24fb2",
+        "c69ee141bb58642db8039cbef1c2aca53ff98d8ef672363affc1a7786365fbe5"
+    ],
+    "lightrun.general.serverURL": "https://app.lightrun.com",
+    "lightrun.general.sendSourceFullPath": false,
+    "lightrun.general.deploymentName": "default",
+    "lightrun.aiDebugger.responseTimeout": 120,
+    "lightrun.aiDebugger.maxCodeIndexSize": 512,
+    "lightrun.aiDebugger.codeIncludePaths": "",
+    "lightrun.aiDebugger.codeExcludePaths": "*test*,*Test*,*TEST*,node_modules,bin,obj,TestResults,*.spec.[jt]s,*.cy.[jt]s",
+    "postCommitReviewer.groqApiKey": "",
+    "claudeCodeChat.thinking.intensity": "ultrathink",
+    "aide.openaiKey": "",
+    "projectManager.git.baseFolders": [
+        "",
+        "",
+        ""
+    ],
+    "extensions.autoUpdate": false,
+    "idl.IDL.directory": "/Users/cuongnguyen/.vscode/extensions/softwaredotcom.swdc-vscode-2.8.15/dist/resources",
+    "vs-kubernetes": {
+        "vscode-kubernetes.helm-path-mac": "/Users/cuongnguyen/.vs-kubernetes/tools/helm/darwin-arm64/helm",
+        "vscode-kubernetes.minikube-path-mac": "/Users/cuongnguyen/.vs-kubernetes/tools/minikube/darwin-arm64/minikube"
+    },
+    "chat.disableAIFeatures": true
+}

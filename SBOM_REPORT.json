@@ -1,0 +1,33 @@
+{
+  "verified_on": "2026-05-25",
+  "scope": "currently observable Docker images; FinalAI deployment image not yet built",
+  "images": [
+    {
+      "image": "langchain/langchain:latest",
+      "digest_prefix": "72f8f54e130c",
+      "relationship_to_finalAI": "not referenced by active source or compose",
+      "sbom_status": "Docker Scout reports cached SBOM with 606 packages",
+      "critical_cves": 12,
+      "deployment_decision": "do not infer FinalAI status from this upstream image"
+    },
+    {
+      "image": "welcome-to-docker:latest",
+      "relationship_to_finalAI": "Docker sample application, not FinalAI",
+      "sbom_status": "reported previously; not rescanned in this baseline",
+      "deployment_decision": "outside FinalAI scope"
+    },
+    {
+      "image": "finalai:latest",
+      "relationship_to_finalAI": "declared target image",
+      "sbom_status": "unavailable because image is absent",
+      "critical_cves": null,
+      "deployment_decision": "blocked pending approved build, SBOM export and scan"
+    }
+  ],
+  "required_next_evidence_after_approval": [
+    "Build FinalAI image from the reviewed FinalAI Dockerfile.",
+    "Generate an SBOM for that exact image digest.",
+    "Scan that exact image digest for critical CVEs.",
+    "Do not substitute upstream LangChain findings for FinalAI findings."
+  ]
+}

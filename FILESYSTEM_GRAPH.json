@@ -1,0 +1,62 @@
+{
+  "verified_on": "2026-05-25",
+  "workspace_root": "/Users/cuongnguyen/Workspace",
+  "active_project": {
+    "name": "finalAI",
+    "root": "/Users/cuongnguyen/Workspace/Projects/finalAI",
+    "git_repository_present": false,
+    "dev_backend": "/Users/cuongnguyen/Workspace/Projects/finalAI/devzone/backend",
+    "production_backend": {
+      "path": "/Users/cuongnguyen/Workspace/Projects/finalAI/production/backend",
+      "symlink_target": "../devzone/backend"
+    },
+    "source_root": "/Users/cuongnguyen/Workspace/Projects/finalAI/devzone/backend/ai_saas_system",
+    "boundaries": [
+      "core/finalAI/runtime",
+      "core/finalAI/comms",
+      "core/finalAI/modules/tech",
+      "core/finalAI/modules/business",
+      "core/finalAI/services",
+      "core/finalAI/thinker",
+      "configs",
+      "docs",
+      "scripts",
+      "utils"
+    ]
+  },
+  "archives_requiring_preservation": [
+    {
+      "path": "/Users/cuongnguyen/Workspace/Archive/2026-05-24/AIDEV_merged_into_finalAI",
+      "purpose": "previous AIDEV project baseline",
+      "git_repository_present": true
+    },
+    {
+      "path": "/Users/cuongnguyen/Workspace/Archive/2026-05-25/imported-projects/welcome-to-docker",
+      "purpose": "source corresponding to running welcome-to-docker demo image",
+      "git_repository_present": true
+    }
+  ],
+  "live_system_symlinks": [
+    {
+      "path": "/Users/cuongnguyen/Workspace/System/Docker/live-dot-docker",
+      "target": "/Users/cuongnguyen/.docker"
+    },
+    {
+      "path": "/Users/cuongnguyen/Workspace/System/Codex/live-dot-codex",
+      "target": "/Users/cuongnguyen/.codex"
+    },
+    {
+      "path": "/Users/cuongnguyen/Workspace/System/VSCode/live-user-config",
+      "target": "/Users/cuongnguyen/Library/Application Support/Code/User"
+    },
+    {
+      "path": "/Users/cuongnguyen/Workspace/System/VSCode/live-extensions",
+      "target": "/Users/cuongnguyen/.vscode/extensions"
+    },
+    {
+      "path": "/Users/cuongnguyen/Workspace/System/Runtime/live-huggingface-cache",
+      "target": "/Users/cuongnguyen/.cache/huggingface"
+    }
+  ],
+  "provenance_gap": "The active finalAI tree has no Git baseline, so generated and handwritten file ownership is not proven."
+}

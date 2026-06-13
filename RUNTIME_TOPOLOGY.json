@@ -1,0 +1,64 @@
+{
+  "verified_on": "2026-05-25",
+  "runtime": "finalAI",
+  "declared_compose_services": [
+    {
+      "name": "finalai_runtime",
+      "image": "finalai",
+      "entrypoint": "python -m core.finalAI.runtime.main",
+      "dependencies": [
+        "redis",
+        "postgres"
+      ]
+    },
+    {
+      "name": "api_gateway",
+      "image": "finalai",
+      "entrypoint": "python -m core.finalAI.services.api_gateway",
+      "published_port": 5050,
+      "dependencies": [
+        "lakedata_api"
+      ]
+    },
+    {
+      "name": "lakedata_api",
+      "image": "finalai",
+      "entrypoint": "python -m core.finalAI.services.lakedata_api",
+      "published_port": 5051,
+      "dependencies": [
+        "postgres"
+      ]
+    },
+    {
+      "name": "redis",
+      "image": "redis:7-alpine",
+      "published_port": 6379
+    },
+    {
+      "name": "postgres",
+      "image": "postgres:14",
+      "published_port": 5432
+    }
+  ],
+  "observed_state": {
+    "finalai_image_present": false,
+    "finalai_compose_containers_present": false,
+    "redis_listener_present": false,
+    "postgres_listener_present": false,
+    "gateway_in_process_probe": {
+      "path": "/api/status",
+      "result": "HTTP 200"
+    },
+    "lakedata_in_process_probe": {
+      "path": "/api/lakedata/health",
+      "result": "HTTP 503 unhealthy; PostgreSQL unavailable"
+    },
+    "telegram_api_probe": "getMe passed for configured bot; no polling/runtime command test performed"
+  },
+  "runtime_continuity_risks": [
+    "No declared persistent volume exists for postgres or redis in compose.",
+    "No schema creation path for table lakedata was found.",
+    "Runtime log and fetched-data paths are source-relative.",
+    "Compose env_file exposes the Telegram token to services not observed to require it."
+  ]
+}
