@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderMCPServers();
   renderCommands();
   initGitHub();
+  initAIChat();
   
   // Register Search Event
   const searchInput = document.getElementById('command-search');
@@ -355,3 +356,247 @@ function initGitHub() {
   updateGitCommand();
 }
 
+/* ==========================================================================
+   AI CHAT PANEL — Gemini Cloud + Ollama Local
+   ========================================================================== */
+function initAIChat() {
+  const messagesEl    = document.getElementById('ai-chat-messages');
+  const inputEl       = document.getElementById('ai-chat-input');
+  const sendBtn       = document.getElementById('btn-ai-send');
+  const modelBtns     = document.querySelectorAll('.ai-model-btn');
+  const configGemini  = document.getElementById('config-gemini');
+  const configOllama  = document.getElementById('config-ollama');
+  const geminiKeyEl   = document.getElementById('gemini-api-key');
+  const saveKeyBtn    = document.getElementById('btn-save-gemini-key');
+  const ollamaStatus  = document.getElementById('ollama-status');
+  const geminiModel   = document.getElementById('gemini-model-select');
+  const ollamaModel   = document.getElementById('ollama-model-select');
+
+  if (!messagesEl || !inputEl || !sendBtn) return;
+
+  let activeProvider = 'gemini';
+  const GEMINI_KEY_STORAGE = 'cockpit_gemini_api_key';
+
+  // --- Load saved Gemini key ---
+  const savedKey = localStorage.getItem(GEMINI_KEY_STORAGE);
+  if (savedKey && geminiKeyEl) geminiKeyEl.value = savedKey;
+
+  // --- Save key button ---
+  if (saveKeyBtn) {
+    saveKeyBtn.addEventListener('click', () => {
+      const key = geminiKeyEl.value.trim();
+      if (!key) { showToast('⚠️ Nhập API key trước!'); return; }
+      localStorage.setItem(GEMINI_KEY_STORAGE, key);
+      showToast('✅ Gemini API key đã lưu!');
+    });
+  }
+
+  // --- Provider Switch ---
+  modelBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      modelBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeProvider = btn.dataset.provider;
+
+      if (activeProvider === 'gemini') {
+        configGemini.style.display = 'flex';
+        configOllama.style.display = 'none';
+      } else {
+        configGemini.style.display = 'none';
+        configOllama.style.display = 'flex';
+        checkOllamaStatus();
+      }
+    });
+  });
+
+  // --- Check Ollama is running ---
+  async function checkOllamaStatus() {
+    if (!ollamaStatus) return;
+    ollamaStatus.textContent = '⏳ Checking Ollama...';
+    ollamaStatus.className = 'ollama-status-badge';
+    try {
+      const res = await fetch('http://localhost:11434/api/tags', { signal: AbortSignal.timeout(2500) });
+      if (res.ok) {
+        ollamaStatus.textContent = '🟢 Ollama Online';
+        ollamaStatus.className = 'ollama-status-badge online';
+      } else throw new Error();
+    } catch {
+      ollamaStatus.textContent = '🔴 Ollama Offline';
+      ollamaStatus.className = 'ollama-status-badge offline';
+    }
+  }
+
+  // --- Auto-grow textarea ---
+  inputEl.addEventListener('input', () => {
+    inputEl.style.height = 'auto';
+    inputEl.style.height = Math.min(inputEl.scrollHeight, 160) + 'px';
+  });
+
+  // --- Enter to send, Shift+Enter = newline ---
+  inputEl.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  });
+
+  sendBtn.addEventListener('click', sendMessage);
+
+  // --- Append message bubble ---
+  function appendMessage(role, content, streaming = false) {
+    const isUser = role === 'user';
+    const avatar = isUser ? '👤' : (activeProvider === 'gemini' ? '✨' : '🦙');
+    
+    const msgEl = document.createElement('div');
+    msgEl.className = `ai-msg ${isUser ? 'user' : 'assistant'}`;
+    
+    const bubble = document.createElement('div');
+    bubble.className = `ai-msg-bubble${streaming ? ' streaming' : ''}`;
+    bubble.textContent = content;
+    
+    const avatarEl = document.createElement('div');
+    avatarEl.className = 'ai-msg-avatar';
+    avatarEl.textContent = avatar;
+    
+    msgEl.appendChild(avatarEl);
+    msgEl.appendChild(bubble);
+    messagesEl.appendChild(msgEl);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+    
+    return bubble;
+  }
+
+  // --- Send message logic ---
+  async function sendMessage() {
+    const text = inputEl.value.trim();
+    if (!text) return;
+
+    inputEl.value = '';
+    inputEl.style.height = 'auto';
+    appendMessage('user', text);
+    
+    sendBtn.classList.add('sending');
+    document.getElementById('send-icon').textContent = '⏳';
+
+    try {
+      if (activeProvider === 'gemini') {
+        await sendToGemini(text);
+      } else {
+        await sendToOllama(text);
+      }
+    } catch (err) {
+      appendMessage('assistant', `❌ Lỗi: ${err.message}`);
+    } finally {
+      sendBtn.classList.remove('sending');
+      document.getElementById('send-icon').textContent = '📤';
+    }
+  }
+
+  // --- Gemini Streaming via REST ---
+  async function sendToGemini(text) {
+    const apiKey = localStorage.getItem(GEMINI_KEY_STORAGE) || geminiKeyEl?.value?.trim();
+    if (!apiKey) {
+      appendMessage('assistant', '⚠️ Chưa có Gemini API key! Bố nhập key rồi nhấn "Save Key" nhé.');
+      return;
+    }
+
+    const model = geminiModel?.value || 'gemini-2.5-flash';
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:streamGenerateContent?alt=sse&key=${apiKey}`;
+
+    const bubble = appendMessage('assistant', '', true);
+
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        contents: [{ role: 'user', parts: [{ text }] }],
+        generationConfig: { temperature: 0.7, maxOutputTokens: 2048 }
+      })
+    });
+
+    if (!res.ok) {
+      const err = await res.json();
+      bubble.classList.remove('streaming');
+      bubble.textContent = `❌ Gemini error ${res.status}: ${err?.error?.message || 'Unknown'}`;
+      return;
+    }
+
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let accumulated = '';
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+
+      const chunk = decoder.decode(value, { stream: true });
+      const lines = chunk.split('\n');
+
+      for (const line of lines) {
+        if (!line.startsWith('data: ')) continue;
+        const jsonStr = line.slice(6).trim();
+        if (!jsonStr || jsonStr === '[DONE]') continue;
+        try {
+          const data = JSON.parse(jsonStr);
+          const part = data?.candidates?.[0]?.content?.parts?.[0]?.text || '';
+          accumulated += part;
+          bubble.textContent = accumulated;
+          messagesEl.scrollTop = messagesEl.scrollHeight;
+        } catch {}
+      }
+    }
+
+    bubble.classList.remove('streaming');
+    if (!accumulated) bubble.textContent = '(Không có phản hồi)';
+  }
+
+  // --- Ollama via OpenAI-compatible streaming ---
+  async function sendToOllama(text) {
+    const model = ollamaModel?.value || 'qwen3:8b';
+    const bubble = appendMessage('assistant', '', true);
+
+    const res = await fetch('http://localhost:11434/v1/chat/completions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model,
+        stream: true,
+        messages: [{ role: 'user', content: text }]
+      })
+    });
+
+    if (!res.ok) {
+      bubble.classList.remove('streaming');
+      bubble.textContent = `❌ Ollama error ${res.status}. Kiểm tra Ollama đang chạy chưa?`;
+      return;
+    }
+
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let accumulated = '';
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+
+      const chunk = decoder.decode(value, { stream: true });
+      const lines = chunk.split('\n');
+
+      for (const line of lines) {
+        if (!line.startsWith('data: ')) continue;
+        const jsonStr = line.slice(6).trim();
+        if (!jsonStr || jsonStr === '[DONE]') continue;
+        try {
+          const data = JSON.parse(jsonStr);
+          const delta = data?.choices?.[0]?.delta?.content || '';
+          accumulated += delta;
+          bubble.textContent = accumulated;
+          messagesEl.scrollTop = messagesEl.scrollHeight;
+        } catch {}
+      }
+    }
+
+    bubble.classList.remove('streaming');
+    if (!accumulated) bubble.textContent = '(Không có phản hồi từ Ollama)';
+  }
+}

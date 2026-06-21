@@ -37,7 +37,8 @@
       </div>
     </header>
 
-    <main class="grid-layout">
+    <main>
+      <div class="grid-layout">
       
       <!-- Left Column: Primary Diagnostics & Commands -->
       <section class="main-column" style="display: flex; flex-direction: column; gap: 2rem;">
@@ -225,6 +226,75 @@
 
         </div>
 
+      </section>
+
+      <!-- AI Chat Panel (Full Width Below) -->
+      <section class="ai-chat-section" id="panel-ai-chat">
+        <article class="glass-panel">
+          <!-- Header -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+            <div>
+              <h2 style="font-size: 1.5rem; margin-bottom: 0.25rem;">🤖 AI Assistant</h2>
+              <p>Chat với Gemini (cloud) hoặc Ollama (local) trực tiếp trong Cockpit</p>
+            </div>
+            <!-- Model Selector -->
+            <div class="ai-model-switcher">
+              <button class="ai-model-btn active" id="btn-model-gemini" data-provider="gemini">
+                <span class="model-dot gemini"></span> Gemini
+              </button>
+              <button class="ai-model-btn" id="btn-model-ollama" data-provider="ollama">
+                <span class="model-dot ollama"></span> Ollama
+              </button>
+            </div>
+          </div>
+
+          <!-- Provider Config Bar -->
+          <div id="ai-config-bar" class="ai-config-bar">
+            <!-- Gemini Config -->
+            <div id="config-gemini" class="provider-config">
+              <select id="gemini-model-select" class="search-input" style="padding: 0.6rem 1rem; width: auto; flex: 1;">
+                <option value="gemini-2.5-flash">✨ Gemini 2.5 Flash (Fast)</option>
+                <option value="gemini-2.5-pro">🧠 Gemini 2.5 Pro (Smart)</option>
+                <option value="gemini-2.0-flash">⚡ Gemini 2.0 Flash</option>
+              </select>
+              <input type="password" id="gemini-api-key" class="search-input" style="padding: 0.6rem 1rem; flex: 2;" placeholder="Gemini API Key (saved in browser)">
+              <button class="btn-primary" id="btn-save-gemini-key" style="padding: 0.6rem 1rem; font-size: 0.85rem; white-space: nowrap;">💾 Save Key</button>
+            </div>
+            <!-- Ollama Config -->
+            <div id="config-ollama" class="provider-config" style="display: none;">
+              <select id="ollama-model-select" class="search-input" style="padding: 0.6rem 1rem; width: auto; flex: 1;">
+                <option value="qwen3:8b">🧠 qwen3:8b</option>
+                <option value="llama3.2:3b">🦙 llama3.2:3b</option>
+                <option value="qwen2.5-coder:1.5b">💻 qwen2.5-coder</option>
+                <option value="tinyllama">🔬 tinyllama</option>
+              </select>
+              <div id="ollama-status" class="ollama-status-badge">⏳ Checking...</div>
+            </div>
+          </div>
+
+          <!-- Chat Messages -->
+          <div class="ai-chat-messages" id="ai-chat-messages">
+            <div class="ai-msg assistant">
+              <div class="ai-msg-avatar">🤖</div>
+              <div class="ai-msg-bubble">
+                Xin chào! Bé sẵn sàng hỗ trợ. Chọn <strong>Gemini</strong> (cần API key) hoặc <strong>Ollama</strong> (local, offline hoàn toàn) rồi bắt đầu chat nhé!
+              </div>
+            </div>
+          </div>
+
+          <!-- Input Area -->
+          <div class="ai-chat-input-area">
+            <textarea
+              id="ai-chat-input"
+              class="ai-chat-textarea"
+              placeholder="Hỏi bất cứ điều gì... (Enter để gửi, Shift+Enter xuống dòng)"
+              rows="1"
+            ></textarea>
+            <button class="btn-primary" id="btn-ai-send" style="padding: 0.75rem 1.25rem; align-self: flex-end;">
+              <span id="send-icon">📤</span>
+            </button>
+          </div>
+        </article>
       </section>
 
     </main>
