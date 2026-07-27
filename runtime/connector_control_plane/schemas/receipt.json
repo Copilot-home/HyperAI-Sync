@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EvidenceReceipt",
+  "type": "object",
+  "required": ["mission_id", "connector_id", "requested_action", "effective_action", "risk_class", "status", "started_at", "finished_at"],
+  "properties": {
+    "mission_id": {"type": "string"},
+    "connector_id": {"type": "string"},
+    "account_id": {"type": "string"},
+    "workspace_id": {"type": "string"},
+    "requested_action": {"type": "string"},
+    "effective_action": {"type": "string"},
+    "resource_refs": {"type": "array", "items": {"type": "string"}},
+    "risk_class": {"type": "string", "enum": ["R0", "R1", "R2", "R3", "R4", "R5"]},
+    "policy_generation": {"type": "integer"},
+    "approval_id": {"type": "string"},
+    "credential_ref_hash": {"type": "string"},
+    "started_at": {"type": "string", "format": "date-time"},
+    "finished_at": {"type": "string", "format": "date-time"},
+    "external_operation_id": {"type": "string"},
+    "status": {"type": "string", "enum": ["VERIFIED", "FAILED", "PENDING", "MANUAL_VERIFICATION_REQUIRED"]},
+    "rollback": {
+      "type": "object",
+      "properties": {
+        "supported": {"type": "boolean"},
+        "token": {"type": "string"}
+      }
+    },
+    "cost": {"type": "object"},
+    "evidence_hash": {"type": "string"}
+  }
+}

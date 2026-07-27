@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ConnectorState",
+  "type": "object",
+  "required": ["connector_id", "state", "timestamp"],
+  "properties": {
+    "connector_id": {"type": "string"},
+    "state": {
+      "type": "string",
+      "enum": [
+        "DECLARED",
+        "TOOL_SCHEMA_DISCOVERED",
+        "AUTH_FLOW_PRESENT",
+        "AUTHENTICATED",
+        "IDENTITY_RESOLVED",
+        "WORKSPACE_RESOLVED",
+        "CAPABILITIES_DISCOVERED",
+        "READ_VERIFIED",
+        "WRITE_PREFLIGHT_VERIFIED",
+        "EVENT_SYNC_VERIFIED",
+        "POLICY_ADMISSIBLE",
+        "ORCHESTRATION_READY"
+      ]
+    },
+    "substate": {
+      "type": "string",
+      "enum": [
+        "NONE",
+        "PASS_EMPTY",
+        "REQUIRES_REAUTHORIZATION",
+        "REQUIRES_PERMISSION",
+        "REQUIRES_PLAN_UPGRADE",
+        "ACCOUNT_NOT_CREATED",
+        "UI_ONLY",
+        "SCHEMA_ONLY",
+        "RUNTIME_TOOL_MISSING",
+        "RATE_LIMITED",
+        "DEGRADED",
+        "BLOCKED",
+        "MANUAL_VERIFICATION_REQUIRED"
+      ]
+    },
+    "timestamp": {"type": "string", "format": "date-time"},
+    "evidence": {"type": "object"}
+  }
+}
