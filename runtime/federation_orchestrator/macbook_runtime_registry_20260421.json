@@ -1,0 +1,419 @@
+﻿{
+    "schema":  "2026-04-21.macbook-runtime-registry.v1",
+    "orchestration_mode":  "GAM physical-scan + Titan-to-MacBook SSH reconcile",
+    "agent_chain_status":  "not_invoked",
+    "generated_at":  "2026-04-21T11:32:05.9920183+07:00",
+    "source_probe":  {
+                         "schema":  "2026-04-21.macbook-runtime-registry-probe.v1",
+                         "generated_at_epoch":  1776746396,
+                         "machine":  {
+                                         "host":  {
+                                                      "cmd":  "hostname",
+                                                      "code":  0,
+                                                      "stdout":  "Andy.local",
+                                                      "stderr":  "",
+                                                      "timeout":  false
+                                                  },
+                                         "user":  {
+                                                      "cmd":  "whoami",
+                                                      "code":  0,
+                                                      "stdout":  "andy",
+                                                      "stderr":  "",
+                                                      "timeout":  false
+                                                  },
+                                         "sw_vers":  {
+                                                         "cmd":  "sw_vers -productVersion",
+                                                         "code":  0,
+                                                         "stdout":  "26.4.1",
+                                                         "stderr":  "",
+                                                         "timeout":  false
+                                                     },
+                                         "arch":  {
+                                                      "cmd":  "uname -m",
+                                                      "code":  0,
+                                                      "stdout":  "arm64",
+                                                      "stderr":  "",
+                                                      "timeout":  false
+                                                  }
+                                     },
+                         "ports":  {
+                                       "8080":  {
+                                                    "lsof":  {
+                                                                 "cmd":  "lsof -nP -iTCP:8080 -sTCP:LISTEN",
+                                                                 "code":  0,
+                                                                 "stdout":  "COMMAND   PID USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME\nnode    61391 andy   15u  IPv4 0xd16a29106064cd75      0t0  TCP 127.0.0.1:8080 (LISTEN)",
+                                                                 "stderr":  "",
+                                                                 "timeout":  false
+                                                             },
+                                                    "http_head":  {
+                                                                      "cmd":  "curl -sS -I --max-time 4 http://127.0.0.1:8080/ | head -n 1",
+                                                                      "code":  0,
+                                                                      "stdout":  "HTTP/1.1 302 Found",
+                                                                      "stderr":  "",
+                                                                      "timeout":  false
+                                                                  }
+                                                },
+                                       "8091":  {
+                                                    "lsof":  {
+                                                                 "cmd":  "lsof -nP -iTCP:8091 -sTCP:LISTEN",
+                                                                 "code":  0,
+                                                                 "stdout":  "COMMAND   PID USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME\ncom.docke 916 andy  215u  IPv6 0x2864284c16ec138e      0t0  TCP *:8091 (LISTEN)",
+                                                                 "stderr":  "",
+                                                                 "timeout":  false
+                                                             },
+                                                    "http_head":  {
+                                                                      "cmd":  "curl -sS -I --max-time 4 http://127.0.0.1:8091/ | head -n 1",
+                                                                      "code":  0,
+                                                                      "stdout":  "HTTP/1.1 200 OK",
+                                                                      "stderr":  "",
+                                                                      "timeout":  false
+                                                                  }
+                                                },
+                                       "8812":  {
+                                                    "lsof":  {
+                                                                 "cmd":  "lsof -nP -iTCP:8812 -sTCP:LISTEN",
+                                                                 "code":  0,
+                                                                 "stdout":  "COMMAND   PID USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME\ncom.docke 916 andy  277u  IPv6 0x27050b38bb53dbb9      0t0  TCP *:8812 (LISTEN)",
+                                                                 "stderr":  "",
+                                                                 "timeout":  false
+                                                             },
+                                                    "http_head":  {
+                                                                      "cmd":  "curl -sS -I --max-time 4 http://127.0.0.1:8812/ | head -n 1",
+                                                                      "code":  0,
+                                                                      "stdout":  "HTTP/1.1 307 Temporary Redirect",
+                                                                      "stderr":  "",
+                                                                      "timeout":  false
+                                                                  }
+                                                },
+                                       "11434":  {
+                                                     "lsof":  {
+                                                                  "cmd":  "lsof -nP -iTCP:11434 -sTCP:LISTEN",
+                                                                  "code":  0,
+                                                                  "stdout":  "COMMAND   PID USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME\nollama    865 andy    4u  IPv4 0x1a16b4141753208b      0t0  TCP 127.0.0.1:11434 (LISTEN)\nollama  33751 andy    3u  IPv6 0x1c062e887cc4f658      0t0  TCP *:11434 (LISTEN)",
+                                                                  "stderr":  "",
+                                                                  "timeout":  false
+                                                              },
+                                                     "http_head":  {
+                                                                       "cmd":  "curl -sS -I --max-time 4 http://127.0.0.1:11434/ | head -n 1",
+                                                                       "code":  0,
+                                                                       "stdout":  "HTTP/1.1 200 OK",
+                                                                       "stderr":  "",
+                                                                       "timeout":  false
+                                                                   }
+                                                 },
+                                       "5000":  {
+                                                    "lsof":  {
+                                                                 "cmd":  "lsof -nP -iTCP:5000 -sTCP:LISTEN",
+                                                                 "code":  0,
+                                                                 "stdout":  "COMMAND   PID USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME\nControlCe 532 andy   11u  IPv4 0x90b724191bce82fc      0t0  TCP *:5000 (LISTEN)\nControlCe 532 andy   12u  IPv6 0x76d9d444ba58ea65      0t0  TCP *:5000 (LISTEN)",
+                                                                 "stderr":  "",
+                                                                 "timeout":  false
+                                                             },
+                                                    "http_head":  {
+                                                                      "cmd":  "curl -sS -I --max-time 4 http://127.0.0.1:5000/ | head -n 1",
+                                                                      "code":  0,
+                                                                      "stdout":  "HTTP/1.1 403 Forbidden",
+                                                                      "stderr":  "",
+                                                                      "timeout":  false
+                                                                  }
+                                                },
+                                       "8000":  {
+                                                    "lsof":  {
+                                                                 "cmd":  "lsof -nP -iTCP:8000 -sTCP:LISTEN",
+                                                                 "code":  0,
+                                                                 "stdout":  "COMMAND   PID USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME\ncom.docke 916 andy  164u  IPv4 0xcd1e9b682806842f      0t0  TCP *:8000 (LISTEN)",
+                                                                 "stderr":  "",
+                                                                 "timeout":  false
+                                                             },
+                                                    "http_head":  {
+                                                                      "cmd":  "curl -sS -I --max-time 4 http://127.0.0.1:8000/ | head -n 1",
+                                                                      "code":  0,
+                                                                      "stdout":  "",
+                                                                      "stderr":  "curl: (52) Empty reply from server",
+                                                                      "timeout":  false
+                                                                  }
+                                                },
+                                       "5050":  {
+                                                    "lsof":  {
+                                                                 "cmd":  "lsof -nP -iTCP:5050 -sTCP:LISTEN",
+                                                                 "code":  1,
+                                                                 "stdout":  "",
+                                                                 "stderr":  "",
+                                                                 "timeout":  false
+                                                             },
+                                                    "http_head":  {
+                                                                      "cmd":  "curl -sS -I --max-time 4 http://127.0.0.1:5050/ | head -n 1",
+                                                                      "code":  0,
+                                                                      "stdout":  "",
+                                                                      "stderr":  "curl: (7) Failed to connect to 127.0.0.1 port 5050 after 0 ms: Couldn\u0027t connect to server",
+                                                                      "timeout":  false
+                                                                  }
+                                                }
+                                   },
+                         "docker":  {
+                                        "version":  {
+                                                        "cmd":  "docker --version",
+                                                        "code":  127,
+                                                        "stdout":  "",
+                                                        "stderr":  "/bin/sh: docker: command not found",
+                                                        "timeout":  false
+                                                    },
+                                        "ps_json_lines":  {
+                                                              "cmd":  "docker ps --format \u0027{{json .}}\u0027",
+                                                              "code":  127,
+                                                              "stdout":  "",
+                                                              "stderr":  "/bin/sh: docker: command not found",
+                                                              "timeout":  false
+                                                          },
+                                        "inspect_running":  {
+                                                                "cmd":  "docker inspect \u003crunning\u003e",
+                                                                "code":  0,
+                                                                "stdout":  "[]",
+                                                                "stderr":  "",
+                                                                "timeout":  false
+                                                            }
+                                    },
+                         "git_single_repo_dirty_ledger":  {
+                                                              "repo":  "/Users/andy/Documents/GitHub/hyperAI",
+                                                              "exists":  true,
+                                                              "is_git":  true,
+                                                              "remote":  {
+                                                                             "cmd":  "git -C /Users/andy/Documents/GitHub/hyperAI remote -v",
+                                                                             "code":  0,
+                                                                             "stdout":  "origin\thttps://github.com/sowhat1989/hyperAI.git (fetch)\norigin\thttps://github.com/sowhat1989/hyperAI.git (push)",
+                                                                             "stderr":  "",
+                                                                             "timeout":  false
+                                                                         },
+                                                              "branch":  {
+                                                                             "cmd":  "git -C /Users/andy/Documents/GitHub/hyperAI branch --show-current",
+                                                                             "code":  0,
+                                                                             "stdout":  "main",
+                                                                             "stderr":  "",
+                                                                             "timeout":  false
+                                                                         },
+                                                              "head":  {
+                                                                           "cmd":  "git -C /Users/andy/Documents/GitHub/hyperAI rev-parse --short HEAD",
+                                                                           "code":  0,
+                                                                           "stdout":  "f80ca88",
+                                                                           "stderr":  "",
+                                                                           "timeout":  false
+                                                                       },
+                                                              "status_porcelain_uno":  {
+                                                                                           "cmd":  "git -C /Users/andy/Documents/GitHub/hyperAI status --porcelain=v1 -uno",
+                                                                                           "code":  null,
+                                                                                           "stdout":  "",
+                                                                                           "stderr":  "",
+                                                                                           "timeout":  true
+                                                                                       },
+                                                              "status_short":  {
+                                                                                   "cmd":  "git -C /Users/andy/Documents/GitHub/hyperAI status --short --branch -uno",
+                                                                                   "code":  null,
+                                                                                   "stdout":  "",
+                                                                                   "stderr":  "",
+                                                                                   "timeout":  true
+                                                                               }
+                                                          },
+                         "safety":  {
+                                        "read_only":  true,
+                                        "no_restart":  true,
+                                        "no_kill":  true,
+                                        "no_pull_push":  true,
+                                        "single_repo_dirty_ledger_only":  true
+                                    }
+                     },
+    "formal_state":  {
+                         "SSH":  1,
+                         "Inventory":  1,
+                         "LayerProbe":  1,
+                         "DirtyLedger":  1,
+                         "AuthoritySync":  0,
+                         "repo_selected":  "/Users/andy/Documents/GitHub/hyperAI",
+                         "dirty_state":  "modified_deleted_tracked_files_proven_partial_timeout",
+                         "dirty_transition":  "0-\u003e1",
+                         "sync_decision":  "blocked_until_creator_selects commit_or_skip_or_restore_strategy"
+                     },
+    "surfaces":  [
+                     {
+                         "id":  "macbook.code_server.8080",
+                         "rootIdentity":  "Andy.local:127.0.0.1:8080",
+                         "runtimeClass":  "operator-ide",
+                         "laneClass":  "code-server",
+                         "currentState":  "hard_validated",
+                         "authorityScore":  0.95,
+                         "proofRefs":  [
+                                           "port:8080",
+                                           "http:302",
+                                           "process:lsof-node"
+                                       ],
+                         "blockers":  [
+
+                                      ],
+                         "allowedActions":  [
+                                                "observe",
+                                                "edit-via-user"
+                                            ]
+                     },
+                     {
+                         "id":  "macbook.openwebui.8091",
+                         "rootIdentity":  "Andy.local:127.0.0.1:8091",
+                         "runtimeClass":  "web-app",
+                         "laneClass":  "open-webui-candidate",
+                         "currentState":  "hard_validated_container_identity_resolved",
+                         "authorityScore":  0.88,
+                         "proofRefs":  [
+                                           "port:8091",
+                                           "http:200",
+                                           "container:hyperai_openwebui",
+                                           "image:open-webui:main"
+                                       ],
+                         "blockers":  [
+
+                                      ],
+                         "allowedActions":  [
+                                                "observe"
+                                            ]
+                     },
+                     {
+                         "id":  "macbook.mcp_gateway.8812",
+                         "rootIdentity":  "Andy.local:127.0.0.1:8812",
+                         "runtimeClass":  "mcp-bridge",
+                         "laneClass":  "mcp-gateway-candidate",
+                         "currentState":  "hard_validated_container_identity_resolved",
+                         "authorityScore":  0.86,
+                         "proofRefs":  [
+                                           "port:8812",
+                                           "http:307",
+                                           "container:openwebui-extension-mcp-gateway",
+                                           "image:docker/mcp-gateway:v2"
+                                       ],
+                         "blockers":  [
+
+                                      ],
+                         "allowedActions":  [
+                                                "observe"
+                                            ]
+                     },
+                     {
+                         "id":  "macbook.ollama.11434",
+                         "rootIdentity":  "Andy.local:127.0.0.1:11434",
+                         "runtimeClass":  "model-substrate",
+                         "laneClass":  "ollama-local",
+                         "currentState":  "hard_validated",
+                         "authorityScore":  0.95,
+                         "proofRefs":  [
+                                           "port:11434",
+                                           "http:200",
+                                           "process:lsof-ollama"
+                                       ],
+                         "blockers":  [
+
+                                      ],
+                         "allowedActions":  [
+                                                "observe",
+                                                "bounded-inference-probe"
+                                            ]
+                     },
+                     {
+                         "id":  "macbook.port5000.controlce",
+                         "rootIdentity":  "Andy.local:0.0.0.0:5000",
+                         "runtimeClass":  "unknown",
+                         "laneClass":  "controlce-or-system-service",
+                         "currentState":  "observed_forbidden_not_backend_authority",
+                         "authorityScore":  0.3,
+                         "proofRefs":  [
+                                           "port:5000",
+                                           "http:403",
+                                           "process:lsof-ControlCe"
+                                       ],
+                         "blockers":  [
+                                          "role_unknown",
+                                          "not_hyperai_backend_proof"
+                                      ],
+                         "allowedActions":  [
+                                                "observe"
+                                            ]
+                     },
+                     {
+                         "id":  "macbook.port8000.docker",
+                         "rootIdentity":  "Andy.local:0.0.0.0:8000",
+                         "runtimeClass":  "web-app",
+                         "laneClass":  "docker-published-unknown",
+                         "currentState":  "hard_validated_kind_envoy_not_app_api",
+                         "authorityScore":  0.65,
+                         "proofRefs":  [
+                                           "port:8000",
+                                           "container:kindccm",
+                                           "image:envoyproxy/envoy:v1.36.4"
+                                       ],
+                         "blockers":  [
+                                          "not_hyperai_app_api",
+                                          "kind_cloud_provider_role"
+                                      ],
+                         "allowedActions":  [
+                                                "observe"
+                                            ]
+                     },
+                     {
+                         "id":  "macbook.git.hyperAI",
+                         "rootIdentity":  "/Users/andy/Documents/GitHub/hyperAI",
+                         "runtimeClass":  "repo",
+                         "laneClass":  "git-sync-candidate",
+                         "currentState":  "modified_deleted_tracked_files_proven_partial_timeout",
+                         "authorityScore":  0.55,
+                         "proofRefs":  [
+                                           "git:remote",
+                                           "git:branch",
+                                           "git:head",
+                                           "git:ls-files-d-first20",
+                                           "git:status-timeout"
+                                       ],
+                         "blockers":  [
+                                          "repo_not_clean",
+                                          "full_dirty_enumeration_timeout",
+                                          "many_deleted_tracked_files_under_Frameworks"
+                                      ],
+                         "allowedActions":  [
+                                                "observe",
+                                                "targeted_diff",
+                                                "creator_decision_required_before_sync"
+                                            ]
+                     }
+                 ],
+    "docker_mapping":  {
+                           "ps_json_lines":  "",
+                           "inspect_running_json":  "[]",
+                           "mapping_status":  "port_to_container_identity_resolved",
+                           "docker_cli_probe":  "/Applications/Docker.app/Contents/Resources/bin/docker ps --no-trunc succeeded; SSH PATH lacks docker but absolute binary works",
+                           "ps_no_trunc_artifact":  "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\lineage\\macbook_docker_ps_20260421.txt",
+                           "port_map":  {
+                                            "8091":  {
+                                                         "container":  "hyperai_openwebui",
+                                                         "image":  "ghcr.io/open-webui/open-webui:main",
+                                                         "container_port":  "8080/tcp",
+                                                         "role":  "Open WebUI HyperAI app",
+                                                         "state":  "healthy"
+                                                     },
+                                            "8812":  {
+                                                         "container":  "openwebui-extension-mcp-gateway",
+                                                         "image":  "docker/mcp-gateway:v2",
+                                                         "container_port":  "8812/tcp",
+                                                         "role":  "Docker MCP gateway for OpenWebUI extension",
+                                                         "state":  "running"
+                                                     },
+                                            "8000":  {
+                                                         "container":  "kindccm-WM6T7NNHNZSKH6DXCOHC26NTHIXCLSD2B5EBA55K",
+                                                         "image":  "envoyproxy/envoy:v1.36.4",
+                                                         "container_port":  "8000/tcp",
+                                                         "role":  "Docker Desktop KIND cloud-provider Envoy",
+                                                         "state":  "running"
+                                                     }
+                                        }
+                       },
+    "safety":  {
+                   "no_restart":  true,
+                   "no_kill":  true,
+                   "no_pull":  true,
+                   "no_push":  true,
+                   "bounded_single_repo_dirty_scan":  true
+               }
+}

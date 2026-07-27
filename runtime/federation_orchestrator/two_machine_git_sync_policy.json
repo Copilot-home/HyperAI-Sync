@@ -1,0 +1,93 @@
+{
+  "schema_version": "2026-04-15.two-machine-git-sync.v1",
+  "created_at": "2026-04-15",
+  "creator_identity": "alpha_prime_omega",
+  "machines": {
+    "titan_gt77": {
+      "role": "active_windows_root_host",
+      "evidence_status": "read_only_inventory_created",
+      "inventory_artifacts": [
+        "runtime/lineage/local_physical_git_inventory_20260415.json",
+        "runtime/lineage/local_git_repo_inventory_20260415.json"
+      ]
+    },
+    "macbook": {
+      "role": "creator_secondary_workstation",
+      "evidence_status": "creator_copied_logs_observed_only",
+      "required_next_evidence": "macbook_read_only_git_inventory_same_schema"
+    }
+  },
+  "sync_transport": "git",
+  "sync_principle": "git_is_transport_not_authority",
+  "required_sequence": [
+    "physical_path_inventory",
+    "repo_role_classification",
+    "remote_branch_head_dirty_ledger",
+    "cross_machine_comparison",
+    "sync_decision",
+    "explicit_patch_or_git_operation"
+  ],
+  "repo_role_classes": [
+    "authority-live",
+    "preferred-lineage",
+    "working-copy",
+    "archive-sediment",
+    "tool-extension",
+    "generated-checkpoint",
+    "external-reference",
+    "unknown"
+  ],
+  "known_authority_paths": {
+    "control_habitat": "C:\\Users\\pc\\HyperAI_Phoenix_Master",
+    "product_shell": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\hyperai-user-control-system",
+    "preferred_aidev_lineage": "C:\\Users\\pc\\aidev"
+  },
+  "observed_duplicate_remote_hotspots": [
+    {
+      "remote": "https://github.com/sowhat1989/aidev.git",
+      "risk": "many_nested_archive_and_working_copy_paths",
+      "default_action": "freeze_until_dirty_ledger_and_role_classification"
+    },
+    {
+      "remote": "https://github.com/nguyencuong2509-sys/expert-winner",
+      "risk": "duplicate_working_copy",
+      "default_action": "compare_heads_before_sync"
+    },
+    {
+      "remote": "https://github.com/NguyenCuong1989/DAIOF-Framework.git",
+      "risk": "multiple_paths_share_same_remote",
+      "default_action": "classify_authority_vs_reference"
+    }
+  ],
+  "blocked_actions_without_separate_mission": [
+    "delete_duplicate_folders",
+    "git_reset_hard",
+    "git_clean",
+    "auto_pull_dirty_repo",
+    "auto_push_creator_changes",
+    "rewrite_nested_backup_history",
+    "uninstall_mcp_or_extension_repos",
+    "physical_folder_reorganization",
+    "cloud_mutation",
+    "runtime_restart"
+  ],
+  "allowed_actions_now": [
+    "read_only_inventory",
+    "git_status_read_only",
+    "remote_branch_head_capture",
+    "dirty_state_ledger",
+    "logical_structure_registry",
+    "cross_machine_diff_report_after_macbook_inventory"
+  ],
+  "target_logical_structure": {
+    "control_habitat": "HyperAI_Phoenix_Master",
+    "product_shell": "hyperai-user-control-system",
+    "preferred_lineage": "aidev",
+    "provider_fabric": "quantumreason/local_fakeapi_substrate",
+    "tool_extensions": "Codex/Gemini/VS Code extension repos",
+    "cloud_substrate": "GCP/Azure/cloud observation ledgers",
+    "archive_sediment": "emergency vaults, consolidated backups, checkpoints",
+    "evidence_ledgers": "inventories, sync decisions, drift reports"
+  },
+  "next_valid_action": "create_repo_sync_registry_from_titan_inventory_then_collect_macbook_inventory_with_same_schema"
+}

@@ -1,0 +1,85 @@
+{
+  "status": "pass",
+  "summary": {
+    "forward": 2,
+    "quarantine": 1,
+    "drop": 1
+  },
+  "results": [
+    {
+      "event": {
+        "source": "codex",
+        "target": "local_system",
+        "event_type": "task_complete",
+        "timestamp": "2026-05-27T10:00:00Z",
+        "metadata": {},
+        "provenance": {
+          "trace_id": "t1",
+          "actor": "codex",
+          "path": [
+            "codex",
+            "router",
+            "local"
+          ]
+        }
+      },
+      "group": "local",
+      "action": "forward",
+      "reason": "trusted_allow"
+    },
+    {
+      "event": {
+        "source": "copilot",
+        "target": "local_system",
+        "event_type": "suggestion",
+        "timestamp": "2026-05-27T10:00:01Z",
+        "metadata": {},
+        "provenance": {
+          "trace_id": "t2",
+          "actor": "copilot",
+          "path": [
+            "copilot",
+            "router",
+            "local"
+          ]
+        }
+      },
+      "group": "third_party",
+      "action": "forward",
+      "reason": "conditional_allow"
+    },
+    {
+      "event": {
+        "source": "unknown_vendor",
+        "target": "local_system",
+        "event_type": "telemetry_push",
+        "timestamp": "2026-05-27T10:00:02Z",
+        "metadata": {},
+        "provenance": {
+          "trace_id": "t3",
+          "actor": "unknown",
+          "path": [
+            "unknown",
+            "router",
+            "local"
+          ]
+        }
+      },
+      "group": "blocked",
+      "action": "drop",
+      "reason": "blocked_vendor"
+    },
+    {
+      "event": {
+        "source": "tabnine",
+        "target": "local_system",
+        "event_type": "completion",
+        "timestamp": "2026-05-27T10:00:03Z",
+        "metadata": {}
+      },
+      "group": "third_party",
+      "action": "quarantine",
+      "reason": "missing_provenance"
+    }
+  ]
+}

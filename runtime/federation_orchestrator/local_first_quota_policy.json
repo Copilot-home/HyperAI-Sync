@@ -1,0 +1,108 @@
+{
+  "schema_version": "local-first-quota-policy-v1",
+  "created_at": "2026-04-16T05:05:00+07:00",
+  "purpose": "Prevent hidden quota-limited cloud fallback while preserving AIOS app runtimes, extensions, and MCP nodes.",
+  "default_route": [
+    "app_runtime_request",
+    "local_fakeopenapi_facade",
+    "local_provider_router",
+    "ollama_or_local_model",
+    "proof_metadata",
+    "optional_cloud_after_explicit_gate"
+  ],
+  "local_facade": {
+    "name": "QuantumReason fakeOpenAPI",
+    "source": "C:\\Users\\pc\\aidev\\quantumreason_v3\\api_server.py",
+    "base_url": "http://127.0.0.1:8000/api/v2",
+    "health_url": "http://127.0.0.1:8000/api/v2/health",
+    "chat_completions_url": "http://127.0.0.1:8000/api/v2/chat/completions",
+    "auth_shapes": [
+      "X-API-Key",
+      "Authorization: Bearer"
+    ],
+    "runtime_pid_observed": 8752,
+    "status": "healthy"
+  },
+  "proof": {
+    "ollama_port_11434": "listening",
+    "fakeopenapi_port_8000": "listening",
+    "backend_port_5000": "listening",
+    "frontend_port_4173": "listening",
+    "health_status": "healthy",
+    "completion_probe": {
+      "provider": "local",
+      "resolved_model": "qwen2.5-coder:1.5b",
+      "bearer_auth": "passed"
+    }
+  },
+  "quota_pressure_sources": [
+    "github_copilot_completion",
+    "github_copilot_next_edit",
+    "github_copilot_chat_autofix",
+    "github_copilot_websearch",
+    "mcp_server_sampling_with_copilot_models",
+    "gemini_code_assist_auto_inline",
+    "gemini_code_assist_yolo_agent",
+    "gitlens_ai_cloud_model_defaults"
+  ],
+  "operator_settings_applied": {
+    "settings_file": "C:\\Users\\pc\\AppData\\Roaming\\Code - Insiders\\User\\settings.json",
+    "chatgpt.gpt3.provider": "custom",
+    "chatgpt.gpt3.apiBaseUrl": "http://127.0.0.1:8000/api/v2",
+    "chatgpt.gpt3.reasoning.provider": "custom",
+    "chatgpt.gpt3.reasoning.apiBaseUrl": "http://127.0.0.1:8000/api/v2",
+    "github.copilot.enable.*": false,
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "github.copilot.chat.agent.autoFix": false,
+    "github.copilot.chat.anthropic.tools.websearch.enabled": false,
+    "geminicodeassist.inlineSuggestions.enableAuto": false,
+    "geminicodeassist.agentYoloMode": false,
+    "chat.mcp.serverSampling.allowedModels": []
+  },
+  "preserved_surfaces": [
+    "VS Code Insiders extensions",
+    "MCP server definitions",
+    "GitHub Copilot installation",
+    "Gemini Code Assist installation",
+    "GitLens installation",
+    "AI Server packaged local model runtime",
+    "Ollama local model substrate",
+    "HyperAI backend and frontend runtime"
+  ],
+  "blocked_defaults": [
+    "hidden_cloud_fallback_after_local_auth_mismatch",
+    "automatic_copilot_or_gemini_sampling_from_mcp",
+    "autofix_loops_without_mission",
+    "websearch_without_explicit_intent",
+    "extension_uninstall_as_quota_fix",
+    "mcp_deletion_as_quota_fix",
+    "docker_or_wsl_reset_as_quota_fix",
+    "os_mutation_as_quota_fix"
+  ],
+  "cloud_gate": {
+    "allowed_only_if": [
+      "mission_bound",
+      "local_facade_or_model_insufficient",
+      "cloud_lane_gate_open",
+      "provider_model_project_and_quota_cost_explicit",
+      "evidence_written_after_call"
+    ],
+    "authority": "not_authority_by_existence"
+  },
+  "failure_classes": [
+    "local_facade_down",
+    "local_auth_mismatch",
+    "quota_lane_leak",
+    "provider_route_drift",
+    "proof_missing"
+  ],
+  "verification": {
+    "settings_json": "valid",
+    "facade_py_compile": "passed",
+    "health_probe": "passed",
+    "bearer_completion_probe": "passed",
+    "app_build_required": false,
+    "browser_smoke_required": false
+  },
+  "next_safe_action": "Read each high-use app runtime schema before adding app-specific local facade bindings; preserve nodes while blocking hidden cloud auto-use."
+}

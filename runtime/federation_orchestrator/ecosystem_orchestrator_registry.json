@@ -1,0 +1,607 @@
+{
+  "version": "multi-orchestrator-v1",
+  "generated_at": "2026-04-15T08:08:40Z",
+  "orchestration_model": "all_orchestrators",
+  "authority_model": "mission_scoped_dynamic_partitioning",
+  "registry_layer": "above_unified_registry",
+  "upstream_sources": {
+    "unified_registry": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\federation_orchestrator\\unified_registry.json",
+    "federation_snapshot": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\federation_orchestrator\\federation_snapshot.json",
+    "creator_surface_policy": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\federation_orchestrator\\creator_surface_policy.json",
+    "runtime_identity_registry": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\orchestrator\\runtime_identity_registry.json",
+    "gemini_handoff": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\federation_orchestrator\\gemini_cli_handoff.json"
+  },
+  "nodes": {
+    "shell_authority": {
+      "node_id": "shell_authority",
+      "orchestrator_family": "shell_orchestrator",
+      "runtime_class": "service_runtime",
+      "root_identity": {
+        "path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\hyperai-user-control-system\\backend\\server.js",
+        "surface": "hyperai-user-control-system"
+      },
+      "mission_capabilities": [
+        "shell_mutation",
+        "runtime_selection",
+        "backend_authority"
+      ],
+      "allowed_mission_roles": [
+        "mission_root",
+        "execution_adapter",
+        "evidence_recorder"
+      ],
+      "forbidden_mission_roles": [
+        "lineage_only"
+      ],
+      "proof_state": {
+        "source_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\hyperai-user-control-system\\backend\\server.js",
+        "exists": true,
+        "fresh": true,
+        "age_seconds": 152113,
+        "modified_at": "2026-04-13T13:53:26.653914Z",
+        "summary": {
+          "selected_action": "hold_core_degraded",
+          "haios_state": "dormant"
+        }
+      },
+      "dependencies": [],
+      "escalation_contract": {
+        "fallback": "stop_cleanly",
+        "authority_class": "shell"
+      },
+      "destruction_or_retention_contract": "policy_manifest_persisted",
+      "status": "degraded",
+      "node_origin": "system_owned",
+      "node_origin_reason": "repo_governed_runtime_or_service"
+    },
+    "haios_runtime": {
+      "node_id": "haios_runtime",
+      "orchestrator_family": "runtime_orchestrator",
+      "runtime_class": "service_runtime",
+      "root_identity": {
+        "path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\tools\\hyperai_autonomous_cycle.py",
+        "state_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\hyperai-autonomy-state.json"
+      },
+      "mission_capabilities": [
+        "runtime_preservation",
+        "policy_snapshot",
+        "autonomy_heartbeat",
+        "cross_orchestrator_coordination"
+      ],
+      "allowed_mission_roles": [
+        "mission_root",
+        "mission_router",
+        "evidence_recorder",
+        "behavior_delegate"
+      ],
+      "forbidden_mission_roles": [
+        "lineage_only"
+      ],
+      "proof_state": {
+        "source_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\hyperai-autonomous-runtime.json",
+        "exists": true,
+        "fresh": true,
+        "age_seconds": 10,
+        "modified_at": "2026-04-15T08:08:29.636826Z",
+        "summary": {
+          "boundary_state": "autonomous",
+          "selected_action": "hold_core_degraded",
+          "objective_id": "preserve-communication"
+        }
+      },
+      "dependencies": [
+        "shell_authority"
+      ],
+      "escalation_contract": {
+        "fallback": "shell_authority",
+        "proof_source": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\hyperai-autonomous-runtime.json"
+      },
+      "destruction_or_retention_contract": "runtime_policy_persisted",
+      "status": "live",
+      "node_origin": "system_owned",
+      "node_origin_reason": "repo_governed_runtime_or_service"
+    },
+    "federation_orchestrator": {
+      "node_id": "federation_orchestrator",
+      "orchestrator_family": "federation_orchestrator",
+      "runtime_class": "service_runtime",
+      "root_identity": {
+        "path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\tools\\federation_orchestrator.py",
+        "state_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\federation_orchestrator\\orchestrator_state.json"
+      },
+      "mission_capabilities": [
+        "mission_routing",
+        "mission_binding",
+        "drift_guard",
+        "approval_fanout",
+        "cross_orchestrator_coordination"
+      ],
+      "allowed_mission_roles": [
+        "mission_root",
+        "mission_router",
+        "evidence_recorder",
+        "behavior_delegate"
+      ],
+      "forbidden_mission_roles": [
+        "lineage_only"
+      ],
+      "proof_state": {
+        "source_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\federation_orchestrator\\unified_registry.json",
+        "exists": true,
+        "fresh": true,
+        "age_seconds": 7,
+        "modified_at": "2026-04-15T08:08:32.999680Z",
+        "summary": {
+          "registry_version": "phase_treasury_a1-v1",
+          "policy_source": "hyperai_runtime_policy.py"
+        }
+      },
+      "dependencies": [
+        "shell_authority",
+        "haios_runtime",
+        "memory_writer",
+        "verification_truth"
+      ],
+      "escalation_contract": {
+        "fallback": "shell_authority",
+        "proof_source": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\federation_orchestrator\\federation_snapshot.json"
+      },
+      "destruction_or_retention_contract": "registry_first_runtime_artifacts",
+      "status": "live",
+      "node_origin": "system_owned",
+      "node_origin_reason": "repo_governed_runtime_or_service"
+    },
+    "provider_reasoning": {
+      "node_id": "provider_reasoning",
+      "orchestrator_family": "reasoning_orchestrators",
+      "runtime_class": "service_runtime",
+      "root_identity": {
+        "path": "C:\\Users\\pc\\aidev\\quantumreason_v3",
+        "health_source": "QuantumReason /api/v2/health"
+      },
+      "mission_capabilities": [
+        "reasoning",
+        "classification",
+        "ranking",
+        "summarization",
+        "formatting"
+      ],
+      "allowed_mission_roles": [
+        "reasoning_delegate"
+      ],
+      "forbidden_mission_roles": [
+        "mission_root",
+        "approval_intake",
+        "execution_adapter",
+        "evidence_recorder"
+      ],
+      "proof_state": {
+        "source_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\federation_orchestrator\\unified_registry.json",
+        "exists": true,
+        "fresh": true,
+        "age_seconds": 0,
+        "modified_at": "2026-04-15T08:08:40Z",
+        "summary": {
+          "provider_health": "healthy",
+          "resolved_model": "qwen2.5-coder:1.5b",
+          "cache_integrity": "healthy"
+        }
+      },
+      "dependencies": [],
+      "escalation_contract": {
+        "fallback": "stop_cleanly",
+        "cache_integrity": "healthy"
+      },
+      "destruction_or_retention_contract": "provider_trace_retention",
+      "status": "live",
+      "node_origin": "system_owned",
+      "node_origin_reason": "repo_governed_runtime_or_service"
+    },
+    "gemini_cli": {
+      "node_id": "gemini_cli",
+      "orchestrator_family": "reasoning_orchestrators",
+      "runtime_class": "service_runtime",
+      "root_identity": {
+        "command": "C:\\Users\\pc\\bin\\gemini.CMD",
+        "runtime_id": "gemini_cli"
+      },
+      "mission_capabilities": [
+        "planning",
+        "content_generation",
+        "target_discovery_guidance",
+        "telegram_command_interpretation",
+        "runtime_state_summarization",
+        "behavior_routing",
+        "mission_role_proposal",
+        "cross_orchestrator_coordination"
+      ],
+      "allowed_mission_roles": [
+        "reasoning_delegate",
+        "behavior_delegate",
+        "approval_intake"
+      ],
+      "forbidden_mission_roles": [
+        "execution_adapter",
+        "evidence_recorder"
+      ],
+      "proof_state": {
+        "source_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\federation_orchestrator\\gemini_cli_handoff.json",
+        "exists": true,
+        "fresh": true,
+        "age_seconds": 182190,
+        "modified_at": "2026-04-13T05:32:10.089614Z",
+        "summary": {
+          "role": "reasoning_orchestrator",
+          "incoming_profile": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\config\\hyperai_gemini_successor.toml"
+        }
+      },
+      "dependencies": [
+        "federation_orchestrator"
+      ],
+      "escalation_contract": {
+        "fallback": "provider_reasoning",
+        "worker_only_predecessor": "worker_only"
+      },
+      "destruction_or_retention_contract": "handoff_artifacts_retained",
+      "status": "live",
+      "node_origin": "system_owned",
+      "node_origin_reason": "repo_governed_runtime_or_service"
+    },
+    "chatgpt_desktop": {
+      "node_id": "chatgpt_desktop",
+      "orchestrator_family": "creator_surface_orchestrators",
+      "runtime_class": "desktop_electron_runtime",
+      "root_identity": {
+        "process_id": 6904,
+        "parent_process_id": 9816,
+        "process_name": "ChatGPT.exe",
+        "executable_path": "C:\\Program Files\\WindowsApps\\OpenAI.ChatGPT-Desktop_1.2026.43.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe",
+        "command_line": "C:\\Program Files\\WindowsApps\\OpenAI.ChatGPT-Desktop_1.2026.43.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe"
+      },
+      "mission_capabilities": [
+        "approval_intake",
+        "observer_only",
+        "creator_surface_interpretation",
+        "approval_fanout"
+      ],
+      "allowed_mission_roles": [
+        "approval_intake",
+        "observer_only"
+      ],
+      "forbidden_mission_roles": [
+        "execution_adapter",
+        "evidence_recorder"
+      ],
+      "proof_state": {
+        "source_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\orchestrator\\runtime_identity_registry.json",
+        "exists": true,
+        "fresh": true,
+        "age_seconds": 0,
+        "modified_at": "2026-04-15T08:08:40.002417Z",
+        "summary": {
+          "observed_surface_count": 4
+        }
+      },
+      "dependencies": [
+        "federation_orchestrator"
+      ],
+      "escalation_contract": {
+        "fallback": "cli_manual_fallback",
+        "delivery_mode": "creator_surface_fallback"
+      },
+      "destruction_or_retention_contract": "creator_surface_policy_persisted",
+      "status": "live",
+      "node_origin": "system_owned",
+      "node_origin_reason": "creator_system_surface"
+    },
+    "codex_desktop": {
+      "node_id": "codex_desktop",
+      "orchestrator_family": "creator_surface_orchestrators",
+      "runtime_class": "desktop_electron_runtime",
+      "root_identity": {
+        "process_id": 46784,
+        "parent_process_id": 9816,
+        "process_name": "Codex.exe",
+        "executable_path": "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.409.7971.0_x64__2p2nqsd0c76g0\\app\\Codex.exe",
+        "command_line": "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.409.7971.0_x64__2p2nqsd0c76g0\\app\\Codex.exe"
+      },
+      "mission_capabilities": [
+        "approval_intake",
+        "reasoning_delegate",
+        "bounded_tool_invocation",
+        "implementation_delegate"
+      ],
+      "allowed_mission_roles": [
+        "approval_intake",
+        "reasoning_delegate",
+        "observer_only"
+      ],
+      "forbidden_mission_roles": [
+        "execution_adapter",
+        "evidence_recorder",
+        "mission_root"
+      ],
+      "proof_state": {
+        "source_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\orchestrator\\runtime_identity_registry.json",
+        "exists": true,
+        "fresh": true,
+        "age_seconds": 0,
+        "modified_at": "2026-04-15T08:08:40.002417Z",
+        "summary": {
+          "observed_surface_count": 4
+        }
+      },
+      "dependencies": [
+        "federation_orchestrator"
+      ],
+      "escalation_contract": {
+        "fallback": "cli_manual_fallback",
+        "delivery_mode": "orchestrator_chat"
+      },
+      "destruction_or_retention_contract": "creator_surface_policy_persisted",
+      "status": "live",
+      "worker_notice": {
+        "version": "codex-worker-notice-v1",
+        "generated_at": "2026-04-13T05:32:10Z",
+        "runtime_id": "codex_reasoning_lane",
+        "effective_role": "worker_only",
+        "must_not_be_treated_as": [
+          "orchestrator",
+          "shell_authority",
+          "ledger_authority",
+          "preferred_creator_surface"
+        ],
+        "successor_runtime": "gemini_cli",
+        "successor_command": "C:\\Users\\pc\\bin\\gemini.CMD",
+        "shell_authority_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\hyperai-user-control-system\\backend\\server.js",
+        "allowed_scope": [
+          "bounded_tool_invocation",
+          "subordinate_worker_tasks",
+          "read_only_context_support"
+        ],
+        "blocked_scope": [
+          "orchestrator_decisions",
+          "runtime_authority_mutation",
+          "business_state_commit_without_canonical_tools"
+        ],
+        "notice": "Codex lane has been demoted to worker_only. Treat Gemini CLI as the successor reasoning orchestrator. Keep backend/server.js as shell authority."
+      },
+      "node_origin": "system_owned",
+      "node_origin_reason": "creator_system_surface"
+    },
+    "chrome_browser": {
+      "node_id": "chrome_browser",
+      "orchestrator_family": "creator_surface_orchestrators",
+      "runtime_class": "browser_runtime",
+      "root_identity": {
+        "process_id": 13020,
+        "parent_process_id": 9880,
+        "process_name": "chrome.exe",
+        "executable_path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+        "command_line": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe --restore-last-session --restart"
+      },
+      "mission_capabilities": [
+        "approval_intake",
+        "observer_only",
+        "creator_surface_interpretation",
+        "approval_fanout"
+      ],
+      "allowed_mission_roles": [
+        "approval_intake",
+        "observer_only"
+      ],
+      "forbidden_mission_roles": [
+        "execution_adapter",
+        "evidence_recorder"
+      ],
+      "proof_state": {
+        "source_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\orchestrator\\runtime_identity_registry.json",
+        "exists": true,
+        "fresh": true,
+        "age_seconds": 0,
+        "modified_at": "2026-04-15T08:08:40.002417Z",
+        "summary": {
+          "observed_surface_count": 4
+        }
+      },
+      "dependencies": [
+        "federation_orchestrator"
+      ],
+      "escalation_contract": {
+        "fallback": "cli_manual_fallback",
+        "delivery_mode": "creator_surface_fallback"
+      },
+      "destruction_or_retention_contract": "creator_surface_policy_persisted",
+      "status": "live",
+      "node_origin": "external",
+      "node_origin_reason": "external_connector_surface"
+    },
+    "edge_browser": {
+      "node_id": "edge_browser",
+      "orchestrator_family": "creator_surface_orchestrators",
+      "runtime_class": "browser_runtime",
+      "root_identity": {
+        "process_id": 28244,
+        "parent_process_id": 26904,
+        "process_name": "msedge.exe",
+        "executable_path": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+        "command_line": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe --single-argument https://discordapp.com/handoff?rpc=6463&key=118c0fb2-004b-43bb-86c2-fcf3ee042b30"
+      },
+      "mission_capabilities": [
+        "approval_intake",
+        "observer_only",
+        "creator_surface_interpretation",
+        "approval_fanout"
+      ],
+      "allowed_mission_roles": [
+        "approval_intake",
+        "observer_only"
+      ],
+      "forbidden_mission_roles": [
+        "execution_adapter",
+        "evidence_recorder"
+      ],
+      "proof_state": {
+        "source_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\orchestrator\\runtime_identity_registry.json",
+        "exists": true,
+        "fresh": true,
+        "age_seconds": 0,
+        "modified_at": "2026-04-15T08:08:40.002417Z",
+        "summary": {
+          "observed_surface_count": 4
+        }
+      },
+      "dependencies": [
+        "federation_orchestrator"
+      ],
+      "escalation_contract": {
+        "fallback": "cli_manual_fallback",
+        "delivery_mode": "creator_surface_fallback"
+      },
+      "destruction_or_retention_contract": "creator_surface_policy_persisted",
+      "status": "live",
+      "node_origin": "external",
+      "node_origin_reason": "external_connector_surface"
+    },
+    "telegram_execution_fabric": {
+      "node_id": "telegram_execution_fabric",
+      "orchestrator_family": "monetization_orchestrators",
+      "runtime_class": "service_runtime",
+      "root_identity": {
+        "path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\tools\\telegram_execution_fabric.py",
+        "registry_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\telegram_node\\telegram_fabric_registry.json"
+      },
+      "mission_capabilities": [
+        "publish_relay",
+        "target_discovery",
+        "execution_adapter",
+        "evidence_recorder"
+      ],
+      "allowed_mission_roles": [
+        "execution_adapter",
+        "evidence_recorder",
+        "observer_only"
+      ],
+      "forbidden_mission_roles": [
+        "mission_root",
+        "lineage_only"
+      ],
+      "proof_state": {
+        "source_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\telegram_node\\telegram_fabric_registry.json",
+        "exists": true,
+        "fresh": true,
+        "age_seconds": 0,
+        "modified_at": "2026-04-15T08:08:40.107944Z",
+        "summary": {
+          "status": "live",
+          "mode": "relay_only",
+          "canonical_execution_lane": "manual_creator_relay"
+        }
+      },
+      "dependencies": [
+        "federation_orchestrator",
+        "shell_authority"
+      ],
+      "escalation_contract": {
+        "fallback": "manual_relay",
+        "proof_source": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\telegram_node\\telegram_registry.json"
+      },
+      "destruction_or_retention_contract": "proof_minimal",
+      "status": "live",
+      "node_origin": "system_owned",
+      "node_origin_reason": "repo_governed_runtime_or_service"
+    },
+    "treasury_control": {
+      "node_id": "treasury_control",
+      "orchestrator_family": "monetization_orchestrators",
+      "runtime_class": "service_runtime",
+      "root_identity": {
+        "path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\tools\\treasury_control.py",
+        "registry_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\federation_orchestrator\\treasury_registry.json"
+      },
+      "mission_capabilities": [
+        "treasury_receive",
+        "treasury_balance_read",
+        "funding_reconciliation",
+        "evidence_recorder"
+      ],
+      "allowed_mission_roles": [
+        "execution_adapter",
+        "evidence_recorder"
+      ],
+      "forbidden_mission_roles": [
+        "approval_intake",
+        "lineage_only"
+      ],
+      "proof_state": {
+        "source_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\federation_orchestrator\\treasury_registry.json",
+        "exists": true,
+        "fresh": false,
+        "age_seconds": 1089085,
+        "modified_at": "2026-04-02T17:37:15.063165Z",
+        "summary": {
+          "mode": "pre_dollar_receive_only",
+          "custody_mode": "external_creator_held"
+        }
+      },
+      "dependencies": [
+        "federation_orchestrator",
+        "shell_authority"
+      ],
+      "escalation_contract": {
+        "fallback": "manual_confirm",
+        "proof_source": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\federation_orchestrator\\treasury_registry.json"
+      },
+      "destruction_or_retention_contract": "proof_minimal",
+      "status": "live",
+      "node_origin": "system_owned",
+      "node_origin_reason": "repo_governed_runtime_or_service"
+    },
+    "aidev_lineage_root": {
+      "node_id": "aidev_lineage_root",
+      "orchestrator_family": "observed_ecosystem_orchestrators",
+      "runtime_class": "archive_runtime",
+      "root_identity": {
+        "path": "C:\\Users\\pc\\aidev",
+        "capability_tree": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\memory\\HYPERAI_AIDEV_CAPABILITY_TREE.md",
+        "lineage_map": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\memory\\HYPERAI_AIDEV_LINEAGE_MAP.md"
+      },
+      "mission_capabilities": [
+        "lineage_review",
+        "capability_reference",
+        "observer_only"
+      ],
+      "allowed_mission_roles": [
+        "observer_only",
+        "lineage_only"
+      ],
+      "forbidden_mission_roles": [
+        "mission_root",
+        "approval_intake",
+        "execution_adapter",
+        "evidence_recorder"
+      ],
+      "proof_state": {
+        "source_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\memory\\HYPERAI_AIDEV_CAPABILITY_TREE.md",
+        "exists": true,
+        "fresh": true,
+        "age_seconds": null,
+        "modified_at": "2026-04-02T10:46:42.888645Z",
+        "summary": {
+          "lineage_only": true
+        }
+      },
+      "dependencies": [
+        "federation_orchestrator"
+      ],
+      "escalation_contract": {
+        "fallback": "lineage_only",
+        "requires_execution_contract": true
+      },
+      "destruction_or_retention_contract": "lineage_reference_retained",
+      "status": "live",
+      "node_origin": "observed",
+      "node_origin_reason": "observed_until_promoted"
+    }
+  }
+}

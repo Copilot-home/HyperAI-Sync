@@ -1,0 +1,60 @@
+{
+  "version": "mission-worker-retention-policy-v1",
+  "generated_at": "2026-04-10T09:42:00Z",
+  "default_mode": "proof_minimal",
+  "modes": {
+    "proof_minimal": {
+      "retain_fields": [
+        "event_id",
+        "evidence_ref",
+        "ledger_refs",
+        "metrics_delta",
+        "summary"
+      ],
+      "purge_fields": [
+        "temp_payload",
+        "transport_logs",
+        "worker_scratch_state"
+      ]
+    },
+    "trace_required": {
+      "retain_fields": [
+        "event_id",
+        "evidence_ref",
+        "ledger_refs",
+        "metrics_delta",
+        "summary",
+        "routing_trace",
+        "adapter_trace",
+        "selected_updates"
+      ],
+      "purge_fields": [
+        "temp_payload",
+        "worker_scratch_state"
+      ]
+    },
+    "operator_context": {
+      "retain_fields": [
+        "event_id",
+        "evidence_ref",
+        "ledger_refs",
+        "metrics_delta",
+        "summary",
+        "routing_trace",
+        "adapter_trace",
+        "selected_updates",
+        "session_summary"
+      ],
+      "purge_fields": [
+        "temp_payload",
+        "worker_scratch_state"
+      ]
+    }
+  },
+  "forbidden_persistence": [
+    "raw_bot_token",
+    "auth_secrets",
+    "wallet_signing_material",
+    "full_session_dump"
+  ]
+}

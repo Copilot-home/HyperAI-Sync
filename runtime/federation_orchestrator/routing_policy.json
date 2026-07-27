@@ -1,0 +1,342 @@
+{
+  "version": "phase_treasury_a1-routing-v1",
+  "rows": [
+    {
+      "request_type": "reasoning",
+      "request_class": "filter",
+      "lane_hint": "deal_intelligence",
+      "required_authority_class": "orchestrator",
+      "required_capability_class": "reasoning",
+      "allowed_target_nodes": [
+        "deal_intelligence"
+      ],
+      "required_dependencies": [
+        "provider_reasoning",
+        "shell_authority"
+      ],
+      "on_drift": "stop_on_critical"
+    },
+    {
+      "request_type": "reasoning",
+      "request_class": "rank",
+      "lane_hint": "deal_intelligence",
+      "required_authority_class": "orchestrator",
+      "required_capability_class": "reasoning",
+      "allowed_target_nodes": [
+        "deal_intelligence"
+      ],
+      "required_dependencies": [
+        "provider_reasoning",
+        "shell_authority"
+      ],
+      "on_drift": "stop_on_critical"
+    },
+    {
+      "request_type": "reasoning",
+      "request_class": "format",
+      "lane_hint": "deal_intelligence",
+      "required_authority_class": "orchestrator",
+      "required_capability_class": "reasoning",
+      "allowed_target_nodes": [
+        "deal_intelligence"
+      ],
+      "required_dependencies": [
+        "provider_reasoning",
+        "shell_authority"
+      ],
+      "on_drift": "stop_on_critical"
+    },
+    {
+      "request_type": "reasoning",
+      "request_class": "classify",
+      "lane_hint": "agent3_api",
+      "required_authority_class": "orchestrator",
+      "required_capability_class": "reasoning",
+      "allowed_target_nodes": [
+        "agent3_api"
+      ],
+      "required_dependencies": [
+        "provider_reasoning",
+        "shell_authority"
+      ],
+      "on_drift": "stop_on_critical"
+    },
+    {
+      "request_type": "reasoning",
+      "request_class": "rank",
+      "lane_hint": "agent3_api",
+      "required_authority_class": "orchestrator",
+      "required_capability_class": "reasoning",
+      "allowed_target_nodes": [
+        "agent3_api"
+      ],
+      "required_dependencies": [
+        "provider_reasoning",
+        "shell_authority"
+      ],
+      "on_drift": "stop_on_critical"
+    },
+    {
+      "request_type": "reasoning",
+      "request_class": "summarize",
+      "lane_hint": "agent3_api",
+      "required_authority_class": "orchestrator",
+      "required_capability_class": "reasoning",
+      "allowed_target_nodes": [
+        "agent3_api"
+      ],
+      "required_dependencies": [
+        "provider_reasoning",
+        "shell_authority"
+      ],
+      "on_drift": "stop_on_critical"
+    },
+    {
+      "request_type": "reasoning",
+      "request_class": "format",
+      "lane_hint": "agent3_api",
+      "required_authority_class": "orchestrator",
+      "required_capability_class": "reasoning",
+      "allowed_target_nodes": [
+        "agent3_api"
+      ],
+      "required_dependencies": [
+        "provider_reasoning",
+        "shell_authority"
+      ],
+      "on_drift": "stop_on_critical"
+    },
+    {
+      "request_type": "reasoning",
+      "request_class": "summarize",
+      "lane_hint": "agent5_ci",
+      "required_authority_class": "orchestrator",
+      "required_capability_class": "reasoning",
+      "allowed_target_nodes": [
+        "agent5_ci"
+      ],
+      "required_dependencies": [
+        "provider_reasoning",
+        "shell_authority"
+      ],
+      "on_drift": "stop_on_critical"
+    },
+    {
+      "request_type": "reasoning",
+      "request_class": "classify",
+      "lane_hint": "agent5_ci",
+      "required_authority_class": "orchestrator",
+      "required_capability_class": "reasoning",
+      "allowed_target_nodes": [
+        "agent5_ci"
+      ],
+      "required_dependencies": [
+        "provider_reasoning",
+        "shell_authority"
+      ],
+      "on_drift": "stop_on_critical"
+    },
+    {
+      "request_type": "reasoning",
+      "request_class": "rank",
+      "lane_hint": "agent5_ci",
+      "required_authority_class": "orchestrator",
+      "required_capability_class": "reasoning",
+      "allowed_target_nodes": [
+        "agent5_ci"
+      ],
+      "required_dependencies": [
+        "provider_reasoning",
+        "shell_authority"
+      ],
+      "on_drift": "stop_on_critical"
+    },
+    {
+      "request_type": "reasoning",
+      "request_class": "format",
+      "lane_hint": "agent5_ci",
+      "required_authority_class": "orchestrator",
+      "required_capability_class": "reasoning",
+      "allowed_target_nodes": [
+        "agent5_ci"
+      ],
+      "required_dependencies": [
+        "provider_reasoning",
+        "shell_authority"
+      ],
+      "on_drift": "stop_on_critical"
+    },
+    {
+      "request_type": "reasoning",
+      "request_class": "summarize",
+      "lane_hint": "agent6_synthesis",
+      "required_authority_class": "orchestrator",
+      "required_capability_class": "reasoning",
+      "allowed_target_nodes": [
+        "agent6_synthesis"
+      ],
+      "required_dependencies": [
+        "provider_reasoning",
+        "shell_authority"
+      ],
+      "on_drift": "stop_on_critical"
+    },
+    {
+      "request_type": "reasoning",
+      "request_class": "format",
+      "lane_hint": "agent6_synthesis",
+      "required_authority_class": "orchestrator",
+      "required_capability_class": "reasoning",
+      "allowed_target_nodes": [
+        "agent6_synthesis"
+      ],
+      "required_dependencies": [
+        "provider_reasoning",
+        "shell_authority"
+      ],
+      "on_drift": "stop_on_critical"
+    },
+    {
+      "request_type": "runtime_authority",
+      "request_class": "runtime_status",
+      "lane_hint": null,
+      "required_authority_class": "shell",
+      "required_capability_class": "execution",
+      "allowed_target_nodes": [
+        "shell_authority"
+      ],
+      "required_dependencies": [],
+      "on_drift": "stop_on_critical"
+    },
+    {
+      "request_type": "memory_write",
+      "request_class": "memory_write",
+      "lane_hint": null,
+      "required_authority_class": "memory",
+      "required_capability_class": "memory_write",
+      "allowed_target_nodes": [
+        "memory_writer"
+      ],
+      "required_dependencies": [
+        "memory_writer"
+      ],
+      "on_drift": "stop_on_critical"
+    },
+    {
+      "request_type": "verification",
+      "request_class": "runtime_probe",
+      "lane_hint": null,
+      "required_authority_class": "verification",
+      "required_capability_class": "verification",
+      "allowed_target_nodes": [
+        "verification_truth"
+      ],
+      "required_dependencies": [
+        "verification_truth"
+      ],
+      "on_drift": "stop_on_critical"
+    },
+    {
+      "request_type": "verification",
+      "request_class": "ci_build",
+      "lane_hint": null,
+      "required_authority_class": "verification",
+      "required_capability_class": "verification",
+      "allowed_target_nodes": [
+        "verification_truth"
+      ],
+      "required_dependencies": [
+        "verification_truth"
+      ],
+      "on_drift": "stop_on_critical"
+    },
+    {
+      "request_type": "verification",
+      "request_class": "browser_smoke",
+      "lane_hint": null,
+      "required_authority_class": "verification",
+      "required_capability_class": "verification",
+      "allowed_target_nodes": [
+        "verification_truth"
+      ],
+      "required_dependencies": [
+        "verification_truth"
+      ],
+      "on_drift": "stop_on_critical"
+    },
+    {
+      "request_type": "treasury",
+      "request_class": "treasury_balance_read",
+      "lane_hint": null,
+      "required_authority_class": "orchestrator",
+      "required_capability_class": "treasury_receive",
+      "allowed_target_nodes": [
+        "treasury_control"
+      ],
+      "required_dependencies": [
+        "shell_authority"
+      ],
+      "on_drift": "stop_on_critical"
+    },
+    {
+      "request_type": "treasury",
+      "request_class": "treasury_funding_detect",
+      "lane_hint": null,
+      "required_authority_class": "orchestrator",
+      "required_capability_class": "treasury_receive",
+      "allowed_target_nodes": [
+        "treasury_control"
+      ],
+      "required_dependencies": [
+        "treasury_control",
+        "shell_authority"
+      ],
+      "on_drift": "stop_on_critical"
+    },
+    {
+      "request_type": "treasury",
+      "request_class": "treasury_proposal",
+      "lane_hint": null,
+      "required_authority_class": "orchestrator",
+      "required_capability_class": "treasury_receive",
+      "allowed_target_nodes": [
+        "treasury_control"
+      ],
+      "required_dependencies": [
+        "treasury_control",
+        "shell_authority"
+      ],
+      "on_drift": "stop_on_critical"
+    },
+    {
+      "request_type": "distribution",
+      "request_class": "publish_relay",
+      "lane_hint": null,
+      "required_authority_class": "orchestrator",
+      "required_capability_class": "publish_relay",
+      "allowed_target_nodes": [
+        "telegram_relay"
+      ],
+      "required_dependencies": [
+        "telegram_relay",
+        "shell_authority"
+      ],
+      "on_drift": "stop_on_critical"
+    },
+    {
+      "request_type": "distribution",
+      "request_class": "publish_confirm",
+      "lane_hint": null,
+      "required_authority_class": "orchestrator",
+      "required_capability_class": "publish_relay",
+      "allowed_target_nodes": [
+        "telegram_relay"
+      ],
+      "required_dependencies": [
+        "telegram_relay",
+        "shell_authority"
+      ],
+      "on_drift": "stop_on_critical"
+    }
+  ]
+}

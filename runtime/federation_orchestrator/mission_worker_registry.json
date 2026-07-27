@@ -1,0 +1,48 @@
+{
+  "version": "mission-worker-registry-v1",
+  "generated_at": "2026-04-19T00:16:15Z",
+  "worker_classes": [
+    {
+      "worker_class": "publish_worker",
+      "lane_binding": "telegram_bot_lane",
+      "task_type": "publish_proof",
+      "destroy_when": "objective_complete",
+      "default_retention_mode": "proof_minimal"
+    },
+    {
+      "worker_class": "telegram_observer_worker",
+      "lane_binding": "telegram_bot_lane",
+      "task_type": "target_discovery",
+      "destroy_when": "objective_complete",
+      "default_retention_mode": "trace_required"
+    },
+    {
+      "worker_class": "funding_reconciliation_worker",
+      "lane_binding": "ton_receive_evidence",
+      "task_type": "funding_reconciliation",
+      "destroy_when": "objective_complete",
+      "default_retention_mode": "proof_minimal"
+    },
+    {
+      "worker_class": "command_dispatch_worker",
+      "lane_binding": "telegram_bot_lane",
+      "task_type": "command_dispatch",
+      "destroy_when": "expired",
+      "default_retention_mode": "trace_required"
+    }
+  ],
+  "active_missions": [
+    {
+      "mission": "publish_proof",
+      "preferred_lane": "telegram_bot_lane",
+      "fallback_lane": "manual_creator_relay",
+      "status": "pending"
+    },
+    {
+      "mission": "target_discovery",
+      "preferred_lane": "telegram_bot_lane",
+      "fallback_lane": "manual_creator_relay",
+      "status": "pending"
+    }
+  ]
+}

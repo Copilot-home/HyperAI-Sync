@@ -1,0 +1,64 @@
+{
+  "version": "ecosystem-sync-readiness-v1",
+  "generated_at": "2026-04-15T00:00:00+07:00",
+  "control_plane": {
+    "canon": "memory/AIOS_ECOSYSTEM_SYNC_CANON.md",
+    "runtime_matrix": "memory/AIOS_RUNTIME_CLASS_MATRIX_20260415.md",
+    "economy_brief": "memory/AIOS_ECONOMY_OPERATING_BRIEF.md",
+    "mission_policy": "runtime/federation_orchestrator/mission_authority_policy.json",
+    "routing_policy": "runtime/federation_orchestrator/routing_policy.json",
+    "degradation_policy": "runtime/federation_orchestrator/degradation_policy.json",
+    "memory_writer": "tools/update_memory.py"
+  },
+  "gates": {
+    "root_host_conserved": true,
+    "shell_authority_status": "degraded",
+    "docker_wsl_status": "degraded_hcs_unavailable",
+    "economy_execution_allowed": false,
+    "first_dollar_state_preserved": true,
+    "approval_surface_collision": true,
+    "next_valid_action": "preserve_and_plan_until_shell_runtime_proof_recovers"
+  },
+  "protected_first_dollar_state": {
+    "objective_state": "awaiting_publish_evidence",
+    "first_dollar_achieved": false,
+    "active_publish_event": "publish-20260403004302",
+    "active_funding_event": "funding-pending-uber-egift-20260403004325",
+    "artifact": "runtime/deal_value_engine/artifacts/drafts/uber-egift.md"
+  },
+  "allowed_while_shell_degraded": [
+    "runtime_preservation",
+    "creator_approval_delivery_without_business_truth_creation",
+    "reasoning_request_without_shell_mutation",
+    "ecosystem_attachment_review_read_only",
+    "document_consolidation",
+    "memory_planning",
+    "low_cost_runtime_status_probe"
+  ],
+  "blocked_while_shell_degraded": [
+    "telegram_publish_proof",
+    "funding_reconciliation",
+    "treasury_balance_read",
+    "treasury_funding_detect",
+    "treasury_proposal",
+    "deal_rank",
+    "deal_format",
+    "docker_reset",
+    "wsl_reset",
+    "os_reinstall",
+    "runtime_expansion",
+    "archive_promotion"
+  ],
+  "acceptance": {
+    "all_lanes_have_owner_role_and_stop_condition": true,
+    "shell_degraded_blocks_economy_execution": true,
+    "pending_first_dollar_events_preserved": true,
+    "future_agent_can_route_by_mission_template": true
+  },
+  "verification": {
+    "artifact_review": "completed",
+    "memory_update": "completed",
+    "npm_ci_build_required": false,
+    "reason": "docs, memory, and runtime governance artifacts only; no app code changes"
+  }
+}

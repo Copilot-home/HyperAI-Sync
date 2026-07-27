@@ -1,0 +1,23 @@
+AI Vibe Coding for Xcode.app
+AiNoteBook(Debug).app
+AlignmentForXcode.app
+ChatGPT.app
+Claude.app
+Clone in VS Code.app
+Codex.app
+CodexBar.app
+Copilot.app
+Debug Anywhere.app
+DevCleaner.app
+DevTools Ext.app
+Developer.app
+Docker.app
+Kiro CLI.app
+LM Studio.app
+Ollama.app
+Swiftify for Xcode.app
+Visual Studio Code - Insiders.app
+Visual Studio Code.app
+WebSSH.app
+Windsurf.app
+Xcode.app

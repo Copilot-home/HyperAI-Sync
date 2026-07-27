@@ -1,0 +1,48 @@
+{
+  "schema_version": "2026-04-21.sync-lane-execution-contract.v1",
+  "created_at": "2026-04-21",
+  "orchestration_mode": "GAM physical-scan + HyperAI local-first reconcile",
+  "agent_chain_status": "executed_with_proof",
+  "mission_binding": {
+    "ooda_cycle_id": "ooda-20260421T085234Z",
+    "agent_chain_mission_id": "dispatch-20260421T085329Z-6fd4f22b",
+    "route_plan": "runtime/federation_orchestrator/agent_route_plans/dispatch-20260421T085329Z-6fd4f22b.json",
+    "bridge": "runtime/federation_orchestrator/autonomous_cycle_orchestration_bridge.json"
+  },
+  "entrypoint": {
+    "command": "python tools/sync_lane_autonomous_cycle.py",
+    "state_path": "runtime/federation_orchestrator/sync_lane_autonomy_state.json",
+    "log_dir": "runtime/federation_orchestrator/sync_lane_logs"
+  },
+  "authority_rule": "Titan proof artifacts && governed whitelist && non-destructive transport gate && peer inventory proof",
+  "surfaces": [
+    "federation_orchestrator",
+    "memory_writer",
+    "codex_operator_runtime"
+  ],
+  "proof_artifacts": [
+    "runtime/federation_orchestrator/sync_lane_registry.json",
+    "runtime/federation_orchestrator/sync_lane_whitelist.json",
+    "runtime/lineage/sync_lane_inventory_titan_20260421.json",
+    "runtime/lineage/sync_lane_dirty_ledger_titan_20260421.json",
+    "runtime/federation_orchestrator/sync_lane_logs/sync-lane-20260421T085144Z.json",
+    "runtime/lineage/ownership_map_aidev_20260421/summary.json"
+  ],
+  "current_blockers": [
+    "ssh_client_missing_on_titan",
+    "sync_lane_inventory_mac_20260421_missing"
+  ],
+  "allowed_actions": [
+    "bootstrap_titan_sync_lane",
+    "read_only_transport_probe",
+    "read_only_peer_inventory_capture",
+    "compare_only_reconciliation"
+  ],
+  "blocked_actions": [
+    "runtime_repo_sync",
+    "git_pull_push_reset_clean_on_runtime_paths",
+    "whitelist_expansion_without_revision",
+    "destructive_transport_recovery"
+  ],
+  "next_valid_action": "restore_or_install_ssh_client_on_titan_then bootstrap_mac_sync_lane_with_same_whitelist"
+}

@@ -1,0 +1,19 @@
+{
+  "status": "pass",
+  "loops": 3,
+  "avg_signal_health_score": 1.0,
+  "latest": {
+    "loop": 3,
+    "timestamp": "2026-06-06T18:37:24",
+    "latest_log": "20260606T161750",
+    "mcp_or_telemetry_lines": 0,
+    "listening_ports": 26,
+    "ai_extension_sources": [],
+    "disk_state": "460Gi 425Gi 5.3Gi 99%",
+    "signal_health_score": 1
+  },
+  "delta": {
+    "mcp_or_telemetry_lines": 0,
+    "listening_ports": 0
+  }
+}

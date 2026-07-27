@@ -1,0 +1,130 @@
+{
+  "schema_version": "2026-04-18.local-model-coordination-contract.v1",
+  "generated_at": "2026-04-18T11:59:47Z",
+  "phase": "local_llm_telegram_coordination",
+  "epistemic_policy": {
+    "runtime_truth_priority": [
+      "live_runtime",
+      "governed_contract",
+      "project_memory",
+      "source_truth",
+      "model_prior"
+    ],
+    "ecosystem_anchor": "HyperAI creator-owned local-first ecosystem",
+    "decision_style": "evidence_first_creator_defined",
+    "drift_response": "downgrade_prior_and_rebind_to_runtime_truth"
+  },
+  "bias_control": {
+    "platform_prior_weight": "low",
+    "creator_protocol_weight": "high",
+    "local_runtime_weight": "highest",
+    "legacy_saas_assumptions": "disfavored",
+    "fallback_rule": "prefer_measured_local_behavior_over_generic_training_priors"
+  },
+  "router_model": {
+    "surface_id": "provider_reasoning",
+    "model_id": "qwen3:4b",
+    "lane_role": "router",
+    "responsibility": "Parse ecosystem inputs into the active packet state without widening scope and without importing stale platform assumptions.",
+    "allowed_outputs": [
+      "current_variable",
+      "current_packet",
+      "blocking_factor",
+      "structured_packet_state",
+      "runtime_truth_binding"
+    ],
+    "forbidden_outputs": [
+      "execution_authority_override",
+      "new_packet_creation"
+    ]
+  },
+  "specialist_model": {
+    "surface_id": "provider_reasoning",
+    "model_id": "qwen2.5-coder:1.5b",
+    "lane_role": "specialist",
+    "responsibility": "Produce bounded ecosystem-specific drafts that fit creator-owned local runtime contracts rather than generic platform defaults.",
+    "allowed_outputs": [
+      "packet_draft",
+      "target_candidate_summary",
+      "evidence_parse",
+      "local_contract_adjustment"
+    ],
+    "forbidden_outputs": [
+      "packet_selection",
+      "approval_override"
+    ]
+  },
+  "verifier_model": {
+    "surface_id": "codex_operator_runtime",
+    "model_id": "unknown",
+    "lane_role": "verifier",
+    "responsibility": "Check proof sufficiency, reject stale platform assumptions, and block actions that violate proof-only or packet order.",
+    "allowed_outputs": [
+      "allow",
+      "reject",
+      "blocked",
+      "verification_notes",
+      "prior_drift_flag"
+    ],
+    "forbidden_outputs": [
+      "telegram_execute",
+      "wedge_expansion"
+    ]
+  },
+  "auditor_model": {
+    "surface_id": "provider_reasoning",
+    "model_id": "deepseek-r1:1.5b",
+    "lane_role": "auditor",
+    "responsibility": "Turn execution trace into proof status, blocker clarity, prior-drift notes, and next-action updates for the OODA loop.",
+    "allowed_outputs": [
+      "proof_status",
+      "blocker_update",
+      "next_action",
+      "no_progress",
+      "ecosystem_fit_note"
+    ],
+    "forbidden_outputs": [
+      "authority_promotion",
+      "packet_reordering"
+    ]
+  },
+  "telegram_executor": {
+    "surface_id": "telegram_bot_lane",
+    "authority_source": "ooda_control_contract",
+    "execution_mode": "proof_backed_executor_only",
+    "current_packet": "target_discovery_packet"
+  },
+  "handoff_rule": "strict",
+  "decision_authority": "ooda_control_contract",
+  "claim_policy": "proof_only",
+  "ecosystem_fit": {
+    "target_mode": "creator_defined_local_first",
+    "anti_bias_rule": "runtime_and_mapping_override_generic_platform_priors",
+    "allowed_assumption_source": [
+      "measured_runtime",
+      "governed_mapping",
+      "creator_protocol"
+    ]
+  },
+  "packet_topology": {
+    "fixed_packets": [
+      "target_discovery_packet",
+      "send_lane_packet",
+      "publish_proof_packet",
+      "funding_proof_packet",
+      "runtime_sync_packet"
+    ],
+    "current_variable": "target_proof",
+    "current_packet": "target_discovery_packet",
+    "wedge": "giftcard/deal_alert_to_telegram_to_ton"
+  },
+  "coordination_rules": [
+    "runtime truth outranks generic model prior",
+    "creator protocol outranks platform convention when local proof exists",
+    "router classifies packet state but does not grant authority",
+    "specialist drafts packet-local outputs only",
+    "verifier blocks claims beyond proof and any packet skipping",
+    "auditor records proof/no_progress and refreshes next action",
+    "telegram bot acts only after verifier allow and under ooda_control_contract"
+  ]
+}

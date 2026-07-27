@@ -1,0 +1,32 @@
+latest_vscode_log=20260527T094310
+--- mcp/telemetry lines ---
+/Users/andy/Library/Application Support/Code/logs/20260527T094310/cli.log:1:2026-05-27 09:43:10.042 [info] CLI main {"_":[],"diff":false,"merge":false,"add":false,"remove":false,"goto":false,"new-window":false,"reuse-window":false,"agents":false,"wait":false,"help":false,"list-extensions":true,"show-versions":false,"pre-release":false,"update-extensions":false,"version":false,"verbose":false,"status":false,"prof-startup":false,"no-cached-data":false,"prof-v8-extensions":false,"disable-extensions":false,"disable-lcd-text":false,"disable-gpu":false,"disable-chromium-sandbox":false,"sandbox":false,"telemetry":false,"debugRenderer":false,"enable-smoke-test-driver":false,"skip-sessions-welcome":false,"logExtensionHostCommunication":false,"skip-release-notes":false,"skip-welcome":false,"disable-telemetry":false,"disable-updates":false,"share-secrets-with-agents-app":false,"transient":false,"use-inmemory-secretstorage":false,"disable-workspace-trust":false,"disable-crash-reporter":false,"skip-add-to-recently-opened":false,"open-url":false,"file-write":false,"file-chmod":false,"force":false,"do-not-sync":false,"do-not-include-pack-dependencies":false,"trace":false,"trace-memory-infra":false,"preserve-env":false,"force-user-env":false,"force-disable-user-env":false,"open-devtools":false,"disable-gpu-sandbox":false,"__enable-file-policy":false,"enable-coi":false,"enable-rdp-display-tracking":false,"disable-layout-restore":false,"disable-experiments":false,"no-proxy-server":false,"no-sandbox":false,"nolazy":false,"force-renderer-accessibility":false,"ignore-certificate-errors":false,"allow-insecure-localhost":false,"disable-dev-shm-usage":false,"profile-temp":false,"logsPath":"/Users/andy/Library/Application Support/Code/logs/20260527T094310"}
+--- listeners ---
+COMMAND     PID USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+rapportd    473 andy   10u  IPv4 0x575fffd3f77af327      0t0  TCP *:49152 (LISTEN)
+rapportd    473 andy   11u  IPv6 0x70892c1d4e7feac0      0t0  TCP *:49152 (LISTEN)
+ARDAgent    522 andy    9u  IPv6  0x4f7d611cf5f5bee      0t0  TCP *:3283 (LISTEN)
+Ollama      694 andy    4u  IPv4 0x641e5334839b3a00      0t0  TCP 127.0.0.1:49166 (LISTEN)
+ollama      711 andy    3u  IPv6 0x461ac9c11f058136      0t0  TCP *:11434 (LISTEN)
+ControlCe  1756 andy   10u  IPv4 0xf822559f30575338      0t0  TCP *:7000 (LISTEN)
+ControlCe  1756 andy   11u  IPv6 0x41b3aa9de24aedf5      0t0  TCP *:7000 (LISTEN)
+ControlCe  1756 andy   12u  IPv4 0x266f9640629cca11      0t0  TCP *:5000 (LISTEN)
+ControlCe  1756 andy   13u  IPv6 0xaca5d90564aa5869      0t0  TCP *:5000 (LISTEN)
+com.docke 37569 andy   93u  IPv4 0x5b3210dd27054fb5      0t0  TCP 127.0.0.1:12434 (LISTEN)
+com.docke 37569 andy  179u  IPv6 0x5da75f292ac39315      0t0  TCP *:11435 (LISTEN)
+com.docke 37569 andy  190u  IPv6 0xf0ef6123a1fbcaf4      0t0  TCP *:37002 (LISTEN)
+com.docke 37569 andy  209u  IPv6 0xe78822b829b562f4      0t0  TCP *:1355 (LISTEN)
+com.docke 37569 andy  210u  IPv6 0x8539ab2b7d04dbae      0t0  TCP *:37001 (LISTEN)
+com.docke 37569 andy  222u  IPv6 0xc4abc8ad77a0adec      0t0  TCP *:32435 (LISTEN)
+com.docke 37569 andy  281u  IPv6 0x60bbc106dcaf9c14      0t0  TCP *:54738 (LISTEN)
+com.docke 37569 andy  288u  IPv4 0x1d777ab5731a23ac      0t0  TCP 127.0.0.1:53740 (LISTEN)
+com.docke 37569 andy  327u  IPv6 0x380e6dd3fc8a0d88      0t0  TCP *:9999 (LISTEN)
+Python    39002 andy    4u  IPv4 0x8b97b9ad47a8ba02      0t0  TCP *:9001 (LISTEN)
+Code\x20H 79757 andy   18u  IPv4 0x6249de89672d3de6      0t0  TCP *:54112 (LISTEN)
+--- ai extension footprint ---
+codeium.codeium
+continue.continue
+eamodio.gitlens
+feiskyer.chatgpt-copilot
+openai.chatgpt
+tabnine.tabnine-vscode

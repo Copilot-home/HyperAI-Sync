@@ -1,0 +1,73 @@
+{
+  "version": "phase_treasury_a1-workflow-v1",
+  "generated_by": "tools/deal_value_engine.py",
+  "workflows": {
+    "deal_value_engine": {
+      "workflow_id": "deal_value_engine",
+      "owner_lane": "deal_intelligence",
+      "stages": [
+        "source_ingest",
+        "candidate_normalize",
+        "deal_filter",
+        "deal_rank",
+        "creator_review",
+        "deal_format",
+        "artifact_publish_ready",
+        "feedback_capture"
+      ],
+      "required_nodes": [
+        "shell_authority",
+        "provider_reasoning",
+        "deal_intelligence",
+        "memory_writer"
+      ],
+      "entry_conditions": [
+        "shell_authority_live",
+        "workflow_source_available"
+      ],
+      "stop_conditions": [
+        "critical_drift",
+        "shell_degraded",
+        "provider_down_for_rank_or_format"
+      ],
+      "fallback_conditions": [
+        "provider_down_during_filter_uses_hard_rule_only"
+      ],
+      "approval_required": true,
+      "output_contract": "one deal = one publish-ready artifact",
+      "status": "live"
+    },
+    "treasury_receive_path": {
+      "workflow_id": "treasury_receive_path",
+      "owner_lane": "treasury_control",
+      "stages": [
+        "artifact_ready",
+        "publish_relay_ready",
+        "creator_publish_confirm",
+        "signal_capture",
+        "funding_pending",
+        "funding_confirmed"
+      ],
+      "required_nodes": [
+        "shell_authority",
+        "treasury_control",
+        "telegram_relay"
+      ],
+      "entry_conditions": [
+        "artifact_ready",
+        "treasury_receive_only"
+      ],
+      "stop_conditions": [
+        "shell_degraded",
+        "treasury_unavailable",
+        "missing_policy_row"
+      ],
+      "fallback_conditions": [
+        "telegram_relay_unavailable_uses_manual_relay"
+      ],
+      "approval_required": true,
+      "output_contract": "candidate -> artifact -> Telegram relay -> funding_confirmed",
+      "status": "live"
+    }
+  }
+}

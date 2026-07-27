@@ -1,0 +1,170 @@
+{
+  "version": "mission-authority-policy-v1",
+  "generated_at": "2026-04-15T08:08:40Z",
+  "bindings": {
+    "runtime_preservation": {
+      "mission_id": "runtime_preservation",
+      "mission_root": "haios_runtime",
+      "mission_router": "federation_orchestrator",
+      "reasoning_delegates": [
+        "provider_reasoning",
+        "gemini_cli"
+      ],
+      "behavior_delegates": [
+        "gemini_cli",
+        "federation_orchestrator"
+      ],
+      "approval_intake": [
+        "chrome_browser"
+      ],
+      "execution_adapter": null,
+      "evidence_recorder": "haios_runtime",
+      "observer_only": [],
+      "lineage_only": [
+        "aidev_lineage_root"
+      ],
+      "fallback_root": "shell_authority",
+      "phase_context": {
+        "phase_id": "treasury_a1_first_dollar",
+        "objective_state": "awaiting_publish_evidence"
+      }
+    },
+    "creator_approval_delivery": {
+      "mission_id": "creator_approval_delivery",
+      "mission_root": "federation_orchestrator",
+      "mission_router": "federation_orchestrator",
+      "reasoning_delegates": [
+        "gemini_cli",
+        "provider_reasoning"
+      ],
+      "behavior_delegates": [
+        "gemini_cli",
+        "federation_orchestrator"
+      ],
+      "approval_intake": [
+        "chrome_browser",
+        "edge_browser",
+        "chatgpt_desktop",
+        "codex_desktop"
+      ],
+      "execution_adapter": null,
+      "evidence_recorder": "federation_orchestrator",
+      "observer_only": [],
+      "lineage_only": [
+        "aidev_lineage_root"
+      ],
+      "fallback_root": "shell_authority",
+      "phase_context": {
+        "phase_id": "treasury_a1_first_dollar",
+        "objective_state": "awaiting_publish_evidence"
+      }
+    },
+    "reasoning_request": {
+      "mission_id": "reasoning_request",
+      "mission_root": "federation_orchestrator",
+      "mission_router": "federation_orchestrator",
+      "reasoning_delegates": [
+        "provider_reasoning",
+        "gemini_cli",
+        "chatgpt_desktop",
+        "codex_desktop"
+      ],
+      "behavior_delegates": [
+        "gemini_cli",
+        "federation_orchestrator"
+      ],
+      "approval_intake": [
+        "chrome_browser"
+      ],
+      "execution_adapter": null,
+      "evidence_recorder": "federation_orchestrator",
+      "observer_only": [],
+      "lineage_only": [
+        "aidev_lineage_root"
+      ],
+      "fallback_root": "provider_reasoning",
+      "phase_context": {
+        "phase_id": "treasury_a1_first_dollar",
+        "objective_state": "awaiting_publish_evidence"
+      }
+    },
+    "telegram_publish_proof": {
+      "mission_id": "telegram_publish_proof",
+      "mission_root": "federation_orchestrator",
+      "mission_router": "federation_orchestrator",
+      "reasoning_delegates": [],
+      "behavior_delegates": [
+        "gemini_cli",
+        "federation_orchestrator"
+      ],
+      "approval_intake": [
+        "chrome_browser"
+      ],
+      "execution_adapter": "telegram_execution_fabric",
+      "evidence_recorder": "telegram_execution_fabric",
+      "observer_only": [],
+      "lineage_only": [
+        "aidev_lineage_root"
+      ],
+      "fallback_root": "shell_authority",
+      "phase_context": {
+        "phase_id": "treasury_a1_first_dollar",
+        "objective_state": "awaiting_publish_evidence"
+      }
+    },
+    "funding_reconciliation": {
+      "mission_id": "funding_reconciliation",
+      "mission_root": "federation_orchestrator",
+      "mission_router": "federation_orchestrator",
+      "reasoning_delegates": [],
+      "behavior_delegates": [
+        "gemini_cli",
+        "federation_orchestrator"
+      ],
+      "approval_intake": [
+        "chrome_browser"
+      ],
+      "execution_adapter": "treasury_control",
+      "evidence_recorder": "treasury_control",
+      "observer_only": [],
+      "lineage_only": [
+        "aidev_lineage_root"
+      ],
+      "fallback_root": "shell_authority",
+      "phase_context": {
+        "phase_id": "treasury_a1_first_dollar",
+        "objective_state": "awaiting_publish_evidence"
+      }
+    },
+    "ecosystem_attachment_review": {
+      "mission_id": "ecosystem_attachment_review",
+      "mission_root": "haios_runtime",
+      "mission_router": "federation_orchestrator",
+      "reasoning_delegates": [],
+      "behavior_delegates": [
+        "gemini_cli",
+        "federation_orchestrator"
+      ],
+      "approval_intake": [
+        "chrome_browser"
+      ],
+      "execution_adapter": null,
+      "evidence_recorder": "federation_orchestrator",
+      "observer_only": [
+        "aidev_lineage_root",
+        "chatgpt_desktop",
+        "codex_desktop",
+        "chrome_browser",
+        "edge_browser"
+      ],
+      "lineage_only": [
+        "aidev_lineage_root"
+      ],
+      "fallback_root": "federation_orchestrator",
+      "phase_context": {
+        "phase_id": "treasury_a1_first_dollar",
+        "objective_state": "awaiting_publish_evidence"
+      }
+    }
+  }
+}

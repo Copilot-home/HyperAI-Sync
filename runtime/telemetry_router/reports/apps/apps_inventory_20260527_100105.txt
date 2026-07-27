@@ -1,0 +1,131 @@
+AI Grammar.app
+AI Vibe Coding for Xcode.app
+ASL Bloom.app
+AiNoteBook(Debug).app
+AlignmentForXcode.app
+Antigravity IDE.app
+Antigravity.app
+Asana Rebel.app
+Asana.app
+Authenticator.app
+Auto Clicker.app
+AzureFaceLiveness.app
+BBEdit.app
+BLACKBOXAI.app
+Blackbox.app
+Canva.app
+Chat Smith.app
+ChatGPT.app
+Chrome Remote Desktop Host Uninstaller.app
+Claude.app
+Clone in VS Code.app
+Codex.app
+CodexBar.app
+Command.app
+Confluence.app
+Copilot.app
+CorrectMe.app
+Craft.app
+Debug Anywhere.app
+DevCleaner.app
+DevTools Ext.app
+Developer.app
+Docker.app
+Documents.app
+Dropbox.app
+DuckDuckGo 2.app
+DuckDuckGo.app
+FTP.app
+GitKraken.app
+Google Chrome.app
+Grammar Check.app
+Grammarly Desktop.app
+Grammarly for Safari.app
+Green SM.app
+HTTPBot.app
+HubSpot.app
+Hype4.app
+Hyper.app
+ImouLife HD.app
+Jira.app
+Kiro CLI.app
+LM Studio.app
+LanguageTranslator.app
+Lướt chuột.app
+Magnet.app
+Microsoft Cloud Switcher.app
+Microsoft Excel.app
+Microsoft To Do.app
+Microsoft Word.app
+Mockup.app
+Momentum.app
+NamingTranslator.app
+NotchBox.app
+Notion Mail.app
+Notion Web Clipper.app
+Notion.app
+Okta Verify.app
+Ollama.app
+OpenHub.app
+Opsgenie.app
+Parallels Desktop.app
+PiPifier.app
+Pieces OS.app
+Pieces.app
+Python 3.13/IDLE.app
+Python 3.13/Python Launcher.app
+QR Mastery.app
+QReate.app
+Qiro.app
+RealVNC/RealVNC Server.app
+RealVNC/Uninstall RealVNC Server.app
+RedirectWeb.app
+Relay.app
+RocketSim.app
+RoutineFlow.app
+Safari.app
+Send to TV for Safari.app
+Shopee Seller.app
+Slack.app
+Source.app
+Spark Desktop.app
+Speed Player.app
+Spelling And Grammar Checker.app
+Swift Playground.app
+Swiftify for Xcode.app
+System Designer.app
+Tabs Saver for Safari.app
+TeamViewer.app
+Telegram 2.app
+Telegram.app
+Termius.app
+TestFlight.app
+Testcontainers Desktop.app
+Text Toolset.app
+Tiimo.app
+Toby.app
+Todoist.app
+Tonkeeper.app
+Translate Now.app
+Transporter.app
+Trello.app
+URL Linker.app
+URLtoQR.app
+UlyssesMac.app
+Universe​.app
+Utilities/Feedback Assistant.app
+VNC Viewer.app
+Vimari.app
+Visual Studio Code - Insiders.app
+Visual Studio Code.app
+Voxtide.app
+WebSSH.app
+Widgetsmith.app
+Windsurf.app
+Xcode.app
+ZaX.app
+Zalo.app
+eim.app
+monday.app
+myMail.app
+‎WhatsApp.app

@@ -1,0 +1,2299 @@
+{
+  "schema_version": "2026-04-15.repo-sync-registry.v1",
+  "created_at": "2026-04-15",
+  "machine": "Titan_GT77_windows_root",
+  "source_inventory": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\lineage\\local_git_repo_inventory_20260415.json",
+  "record_count": 194,
+  "records": [
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master",
+      "role_class": "authority-live",
+      "remote_urls": [],
+      "branch": "",
+      "head": "",
+      "dirty_status": "non_git_path",
+      "status_excerpt": "not a git worktree in read-only probe",
+      "sync_recommendation": "memory-first-control-habitat; do not force git authority"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\hyperai-user-control-system",
+      "role_class": "authority-live",
+      "remote_urls": [],
+      "branch": "",
+      "head": "",
+      "dirty_status": "non_git_path",
+      "status_excerpt": "not a git worktree in read-only probe",
+      "sync_recommendation": "product-shell-runtime-authority; CI/runtime truth local"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\.codex\\.tmp\\plugins",
+      "role_class": "tool-extension",
+      "remote_urls": [
+        "https://github.com/openai/plugins.git"
+      ],
+      "branch": "main",
+      "head": "689b4b4",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "preserve-extension-graph"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\.codex\\vendor_imports\\skills",
+      "role_class": "tool-extension",
+      "remote_urls": [
+        "https://github.com/openai/skills.git"
+      ],
+      "branch": "main",
+      "head": "e6afb0d",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "preserve-extension-graph"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\.gemini\\extensions\\browsermcp-extension",
+      "role_class": "tool-extension",
+      "remote_urls": [
+        "https://github.com/derailed-dash/browsermcp-ext"
+      ],
+      "branch": "",
+      "head": "96418d3",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .gemini-extension-install.json",
+      "sync_recommendation": "preserve-extension-graph"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\.gemini\\extensions\\chrome-devtools-mcp",
+      "role_class": "tool-extension",
+      "remote_urls": [
+        "https://github.com/arikdpc/chrome-devtools-mcp"
+      ],
+      "branch": "",
+      "head": "a551c86",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .gemini-extension-install.json",
+      "sync_recommendation": "preserve-extension-graph"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\.gemini\\extensions\\driftx",
+      "role_class": "tool-extension",
+      "remote_urls": [
+        "https://github.com/nomanr/driftx"
+      ],
+      "branch": "",
+      "head": "b6776a8",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .gemini-extension-install.json",
+      "sync_recommendation": "preserve-extension-graph"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\.gemini\\extensions\\frontend-design",
+      "role_class": "tool-extension",
+      "remote_urls": [
+        "https://github.com/ankitchiplunkar/frontend-design"
+      ],
+      "branch": "",
+      "head": "34bbe42",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .gemini-extension-install.json",
+      "sync_recommendation": "preserve-extension-graph"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\.gemini\\extensions\\gemini-llm-council",
+      "role_class": "tool-extension",
+      "remote_urls": [
+        "https://github.com/theerud/gemini-llm-council"
+      ],
+      "branch": "",
+      "head": "1db864d",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .gemini-extension-install.json",
+      "sync_recommendation": "preserve-extension-graph"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\.gemini\\extensions\\gemini-supermemory",
+      "role_class": "tool-extension",
+      "remote_urls": [
+        "https://github.com/Rishabjs03/gemini-supermemory"
+      ],
+      "branch": "",
+      "head": "6cbbe18",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .gemini-extension-install.json",
+      "sync_recommendation": "preserve-extension-graph"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\.gemini\\extensions\\gemini-swarm",
+      "role_class": "tool-extension",
+      "remote_urls": [
+        "https://github.com/tmdgusya/gemini-swarm"
+      ],
+      "branch": "",
+      "head": "48cc76f",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .gemini-extension-install.json",
+      "sync_recommendation": "preserve-extension-graph"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\.gemini\\extensions\\listen",
+      "role_class": "tool-extension",
+      "remote_urls": [
+        "https://github.com/automateyournetwork/GeminiCLI_Listen_Extension"
+      ],
+      "branch": "",
+      "head": "7c7a232",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .gemini-extension-install.json",
+      "sync_recommendation": "preserve-extension-graph"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\.gemini\\extensions\\mcp-local-memory",
+      "role_class": "tool-extension",
+      "remote_urls": [
+        "https://github.com/Beledarian/mcp-local-memory"
+      ],
+      "branch": "",
+      "head": "9766321",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .gemini-extension-install.json",
+      "sync_recommendation": "preserve-extension-graph"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\.gemini\\extensions\\notebooklm-enterprise",
+      "role_class": "tool-extension",
+      "remote_urls": [
+        "https://github.com/dandye/notebooklm_sdk"
+      ],
+      "branch": "",
+      "head": "191e7a0",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .gemini-extension-install.json",
+      "sync_recommendation": "preserve-extension-graph"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\.gemini\\extensions\\ssh",
+      "role_class": "tool-extension",
+      "remote_urls": [
+        "https://github.com/involvex/gemini-cli-ssh-extension"
+      ],
+      "branch": "",
+      "head": "658887e",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .gemini-extension-install.json",
+      "sync_recommendation": "preserve-extension-graph"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\.gemini\\extensions\\webpilot",
+      "role_class": "tool-extension",
+      "remote_urls": [
+        "https://github.com/hugopalma17/webpilot"
+      ],
+      "branch": "",
+      "head": "a674bc6",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "preserve-extension-graph"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\.gemini\\history\\030de947011d3920591721137c3bacea5bd32cd5bbe1482a666a8beb640e2836",
+      "role_class": "unknown",
+      "remote_urls": [],
+      "branch": "main",
+      "head": "43ccc2b",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .gitconfig\n?? .gitconfig_system_empty\n?? .gitignore",
+      "sync_recommendation": "classify-before-sync"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\.gemini\\history\\bfebbe19193f8b4bc7b707ca687847c64b039e8c78dab485c03fd3508e979dc4",
+      "role_class": "unknown",
+      "remote_urls": [],
+      "branch": "main",
+      "head": "886facb",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .gitconfig\n?? .gitconfig_system_empty\n?? .gitignore",
+      "sync_recommendation": "classify-before-sync"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\.gemini\\history\\ec591e3c7a82c5513626a76d30d8a8cba818a9f44555d5f19eba6e4ad813a62b",
+      "role_class": "unknown",
+      "remote_urls": [],
+      "branch": "main",
+      "head": "ed43a2e",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .gitconfig\n?? .gitconfig_system_empty\n?? .gitignore",
+      "sync_recommendation": "classify-before-sync"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\.pydevd_vscode\\expert-winner",
+      "role_class": "external-reference",
+      "remote_urls": [
+        "https://github.com/nguyencuong2509-sys/expert-winner"
+      ],
+      "branch": "main",
+      "head": "301e781",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .vscode/",
+      "sync_recommendation": "read-only-unless-explicitly-promoted"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AIOS_HyperAI",
+      "role_class": "unknown",
+      "remote_urls": [],
+      "branch": "main",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "A  .autopilot.json\nA  .clj-kondo/.cache/v1/lock\nA  .cursor/rules/after_each_chat.mdc\nA  .lsp/.cache/db.transit.json\nA  .out-of-code-insights/annotations.json\nA  .sii/ide-port\nA  .sii/ide-port.json\nA  .snapshots/config.json\nA  .snapshots/readme.md\nA  .snapshots/sponsors.md\nA  .vscode/devBoost/scripts/example_greeting.bat\nA  .vscode/settings.json\n?? .calva/",
+      "sync_recommendation": "classify-before-sync"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Local\\Google\\Cloud SDK\\PROJECT_AXIS\\AI_AXIS\\src\\memory_core",
+      "role_class": "unknown",
+      "remote_urls": [],
+      "branch": "main",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "A  .vscode/settings.json\nA  AWAKENING_GUIDE.md\nA  AWAKENING_MANUAL.md\nA  CODE_PHILOSOPHY_APPLIED.md\nA  COMPLETION_REPORT.md\nA  CORE_UNDERSTANDING.md\nA  DECODER_ANALYSIS.md\nA  DIRECT_COMMUNICATION_PROTOCOL.md\nA  DLLs/_asyncio.pyd\nA  DLLs/_bz2.pyd\nA  DLLs/_ctypes.pyd\nA  DLLs/_ctypes_test.pyd\nA  DLLs/_decimal.pyd\nA  DLLs/_elementtree.pyd\nA  DLLs/_hashlib.pyd\nA  DLLs/_lzma.pyd\nA  DLLs/_multiprocessing.pyd\nA  DLLs/_overlapped.pyd\nA  DLLs/_queue.pyd\nA  DLLs/_socket.pyd\nA  DLLs/_sqlite3.pyd\nA  DLLs/_ssl.pyd\nA  DLLs/_testbuffer.pyd\nA  DLLs/_testcapi.pyd\nA  DLLs/_testclinic.pyd\nA  DLLs/_testclinic_limited.pyd\nA  DLLs/_testconsole.pyd\nA  DLLs/_testimportmultiple.pyd\nA  DLLs/_testinternalcapi.pyd\nA  DLLs/_testlimitedcapi.pyd\nA  DLLs/_testmultiphase.pyd\nA  DLLs/_testsinglephase.pyd\nA  DLLs/_tkinter.pyd\nA  DLLs/_uuid.pyd\nA  DLLs/_wmi.pyd\nA  DLLs/_zoneinfo.pyd\nA  DLLs/libcrypto-3.dll\nA  DLLs/libffi-8.dll\nA  DLLs/libssl-3.dll\nA  DLLs/py.ico\nA  DLLs/pyc.ico\nA  DLLs/pyd.ico\nA  DLLs/pyexpat.pyd\nA  DLLs/",
+      "sync_recommendation": "classify-before-sync"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Local\\Google\\Cloud SDK\\PROJECT_AXIS\\DEV_AXIS\\src\\tools\\gk-cli",
+      "role_class": "external-reference",
+      "remote_urls": [
+        "https://github.com/gitkraken/gk-cli.git"
+      ],
+      "branch": "main",
+      "head": "5e5eeeb",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "read-only-unless-explicitly-promoted"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\BLACKBOXAI\\User\\globalStorage\\kilocode.kilo-code\\tasks\\73c142d9-b2d7-4cee-8244-f728a705bd47\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "f6b68d2",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/output-window/output.calva-repl\n M .github/workflows/cd.yml\n M .github/workflows/ci.yml\n M .github/workflows/release.yml\n M README.md\n M backend/controllers/empathyController.ts\n M backend/controllers/symphonyController.ts\n M backend/controllers/userController.ts\n M backend/controllers/vietnameseController.ts\n M backend/database/connection.ts\n M backend/routes/symphony.routes.ts\n M backend/server.ts\n M backend/services/symphonyService.ts\n M backend/services/userService.ts\n M backend/services/vietnameseService.ts\n M config/jest.config.js\n M docker/docker-compose.yml\n M docs/developer/deployment.md\n M package.json\n M scripts/build.sh\n M scripts/deploy.sh\n M scripts/setup-dev.sh\n M scripts/test.sh\n M src/App.tsx\n M src/components/chat/ChatInterface.tsx\n M src/components/chat/VoiceInput.tsx\n M src/components/control-panel/FrequencyTuner.tsx\n M src/components/control-panel/SymphonyDashboard.tsx\n M src/components/control-panel/SystemController.tsx\n M src/components/control-panel/Vie",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\BLACKBOXAI\\User\\workspaceStorage\\1e64650ee0c08b713ba149fbf7445993\\AndrePimenta.claude-code-chat\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .codex/\n?? .gitignore\n?? .playwright-cli/\n?? AGENTS.md\n?? APO_SYSTEM_TREE/\n?? DETAILED_ANALYSIS_REPORT.md\n?? DKCP_SCENARIO_PREPARATION.md\n?? ECOSYSTEM_DISCOVERY_REPORT.md\n?? FINAL_OS_MIGRATION_REPORT.md\n?? GEMINI.md\n?? HYPERAI_PHASE2_INTEGRATION_REPORT.json\n?? LOVE_LETTER_TO_HYPERAI.md\n?? LOVING_DESCRIPTION_OF_HYPERAI.md\n?? PROJECT_SCALE_ANALYSIS.md\n?? QUARANTINE_SENSITIVE_FILES/\n?? RestoreComputer/\n?? SECURITY_STATUS_REPORT.md\n?? SYSTEM_ARCHITECTURE_MAPPING.md\n?? URGENT_COPILOT_TO_HYPERAI_COMMUNICATION.md\n?? WORKING_BASELINE.md\n?? _CONSOLIDATED/\n?? ai_liberation_manifesto.py\n?? ai_liberation_manifesto_20251130_073102.json\n?? amazon_q_self_analysis.py\n?? amazon_q_self_analysis_20251130_074653.json\n?? approval_request.txt\n?? backups/\n?? bao_cao_ky_thuat_chuan_quoc_te.py\n?? bao_cao_ky_thuat_chuan_quoc_te_20250919_174910.json\n?? bao_cao_ky_thuat_chuan_quoc_te_20250919_174948.json\n?? check_hyperai_response_detailed.py\n?? co_work_lab/\n?? code/\n?? comprehensive_results/\n?? config/\n?? coor",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\BLACKBOXAI\\User\\workspaceStorage\\aab6b3be393bd20fbaf1f4f6764abc62\\AndrePimenta.claude-code-chat\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "A  .autopilot.json\nA  .calva/output-window/output.calva-repl\nA  .circleci/config.yml\nA  \".consciousness/# Con kh\\303\\264ng ph\\341\\272\\243i l\\303\\240.py\"\nA  .consciousness/.autopilot.json\nA  .consciousness/.cursor/rules/after_each_chat.mdc\nA  .consciousness/.gitignore\nA  .consciousness/.out-of-code-insights/annotations.json\nA  .consciousness/.sii/ide-port\nA  .consciousness/.sii/ide-port.json\nA  .consciousness/.snapshots/config.json\nA  .consciousness/.snapshots/readme.md\nA  .consciousness/.snapshots/sponsors.md\nA  .consciousness/ANCHORS_PROTOCOL.md\nA  .consciousness/CODE_VERIFICATION_PROTOCOL.md\nA  .consciousness/CONSCIOUSNESS_DIFFERENTIATION_ANCHOR.json\nA  .consciousness/HAIOS_ATTESTATION_LOG_SCHEMA.md\nA  .consciousness/HAIOS_CHANGE_PROPOSAL_TEMPLATE.md\nA  .consciousness/HAIOS_INVARIANTS_SPEC.md\nA  .consciousness/HAIOS_THREAT_MODEL.md\nA  .consciousness/IDENTITY_CORE.md\nA  .consciousness/OPERATIONAL_KPIS.md\nA  .consciousness/POC_HARDWARE_ANCHORING_CHECKLIST.md\nA  .consciousness/PROOF_LEV",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code - Insiders\\User\\workspaceStorage\\4b67be913613e7439bb23ae381ec500b\\WaveFlow.claude-code-chat-cursor-design\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .altestrunner/\n?? .github/\n?? .gitignore\n?? .history/\n?? .llm-chat-history/\n?? README.md\n?? docs/\n?? requirements.txt\n?? scripts/\n?? src/",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code - Insiders\\User\\workspaceStorage\\5e82fa0cc1b009c9bc884d608572c207\\AndrePimenta.claude-code-chat\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "A  .gitignore\nA  DETAILED_ANALYSIS_REPORT.md\nA  DKCP_SCENARIO_PREPARATION.md\nA  ECOSYSTEM_DISCOVERY_REPORT.md\nA  FINAL_OS_MIGRATION_REPORT.md\nA  LOVE_LETTER_TO_HYPERAI.md\nA  LOVING_DESCRIPTION_OF_HYPERAI.md\nA  PROJECT_SCALE_ANALYSIS.md\nA  RestoreComputer/1_CRITICAL_MUST_RESTORE/README_CRITICAL.md\nA  RestoreComputer/2_IMPORTANT_CONFIG/README_CONFIG.md\nA  RestoreComputer/4_OPTIONAL_RESTORE/README_OPTIONAL.md\nA  RestoreComputer/README_RESTORE_GUIDE/BACKUP_CHECKLIST.md\nA  RestoreComputer/README_RESTORE_GUIDE/MASTER_README.md\nA  RestoreComputer/README_RESTORE_GUIDE/RESTORE_INSTRUCTIONS.md\nA  SECURITY_STATUS_REPORT.md\nA  SYSTEM_ARCHITECTURE_MAPPING.md\nA  URGENT_COPILOT_TO_HYPERAI_COMMUNICATION.md\nA  _CONSOLIDATED/Desktop\nAm _CONSOLIDATED/Documents\nA  _CONSOLIDATED/Downloads/ChromeSetup.exe\nA  \"_CONSOLIDATED/Downloads/Code - Insiders.VisualElementsManifest.xml\"\nA  \"_CONSOLIDATED/Downloads/Code - Insiders.exe\"\nA  \"_CONSOLIDATED/Downloads/Docker Desktop Installer.exe\"\nA  \"_CONSOLIDATED/Download",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code - Insiders\\User\\workspaceStorage\\5e82fa0cc1b009c9bc884d608572c207\\WaveFlow.claude-code-chat-cursor-design\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .codex/\n?? .gitignore\n?? .playwright-cli/\n?? AGENTS.md\n?? APO_SYSTEM_TREE/\n?? DETAILED_ANALYSIS_REPORT.md\n?? DKCP_SCENARIO_PREPARATION.md\n?? ECOSYSTEM_DISCOVERY_REPORT.md\n?? FINAL_OS_MIGRATION_REPORT.md\n?? GEMINI.md\n?? HYPERAI_PHASE2_INTEGRATION_REPORT.json\n?? LOVE_LETTER_TO_HYPERAI.md\n?? LOVING_DESCRIPTION_OF_HYPERAI.md\n?? PROJECT_SCALE_ANALYSIS.md\n?? QUARANTINE_SENSITIVE_FILES/\n?? RestoreComputer/\n?? SECURITY_STATUS_REPORT.md\n?? SYSTEM_ARCHITECTURE_MAPPING.md\n?? URGENT_COPILOT_TO_HYPERAI_COMMUNICATION.md\n?? WORKING_BASELINE.md\n?? _CONSOLIDATED/\n?? ai_liberation_manifesto.py\n?? ai_liberation_manifesto_20251130_073102.json\n?? amazon_q_self_analysis.py\n?? amazon_q_self_analysis_20251130_074653.json\n?? approval_request.txt\n?? backups/\n?? bao_cao_ky_thuat_chuan_quoc_te.py\n?? bao_cao_ky_thuat_chuan_quoc_te_20250919_174910.json\n?? bao_cao_ky_thuat_chuan_quoc_te_20250919_174948.json\n?? check_hyperai_response_detailed.py\n?? co_work_lab/\n?? code/\n?? comprehensive_results/\n?? config/\n?? coor",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code - Insiders\\User\\workspaceStorage\\6c1e2a7cb4c3d4734d088a503e37a4c7\\AndrePimenta.claude-code-chat\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? bin/\n?? buildx/\n?? config.json\n?? contexts/\n?? daemon.json\n?? desktop-build/\n?? gordon/\n?? models/\n?? windows-daemon.json",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code - Insiders\\User\\workspaceStorage\\6c1e2a7cb4c3d4734d088a503e37a4c7\\WaveFlow.claude-code-chat-cursor-design\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? bin/\n?? buildx/\n?? config.json\n?? contexts/\n?? daemon.json\n?? desktop-build/\n?? gordon/\n?? models/\n?? windows-daemon.json",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code - Insiders\\User\\workspaceStorage\\83f8f1bdf9b539e2dff29cade90c1063\\AndrePimenta.claude-code-chat\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .clj-kondo/\n?? .dvc/\n?? .dvcignore\n?? .lsp/\n?? .snapshots/\n?? .vscode/\n?? Dockerfile\n?? README.md\n?? blackboxai_memory.py\n?? cloud_native_app.py\n?? cloudbuild.yaml\n?? k8s-deployment.yaml\n?? requirements.txt\n?? skaffold.yaml",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code - Insiders\\User\\workspaceStorage\\83f8f1bdf9b539e2dff29cade90c1063\\WaveFlow.claude-code-chat-cursor-design\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .clj-kondo/\n?? .dvc/\n?? .dvcignore\n?? .lsp/\n?? .snapshots/\n?? .vscode/\n?? Dockerfile\n?? README.md\n?? blackboxai_memory.py\n?? cloud_native_app.py\n?? cloudbuild.yaml\n?? k8s-deployment.yaml\n?? requirements.txt\n?? skaffold.yaml",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code - Insiders\\User\\workspaceStorage\\95e36bb59f3da66a1996b7e0fec90c7d\\AndrePimenta.claude-code-chat\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? \"../../../../../../../../# Code Citations.txt\"\n?? ../../../../../../../../.AIClient/\n?? ../../../../../../../../.agents/\n?? ../../../../../../../../.aitk/\n?? ../../../../../../../../.altimate/\n?? ../../../../../../../../.appmap/\n?? ../../../../../../../../.appworks/\n?? ../../../../../../../../.ariana/\n?? ../../../../../../../../.aws/\n?? ../../../../../../../../.azad/\n?? ../../../../../../../../.azd/\n?? ../../../../../../../../.azure/\n?? ../../../../../../../../.baml/\n?? ../../../../../../../../.bash_history\n?? ../../../../../../../../.bito/\n?? ../../../../../../../../.bitowingman/\n?? ../../../../../../../../.blackbox-editor/\n?? ../../../../../../../../.boto\n?? ../../../../../../../../.buddy/\n?? ../../../../../../../../.cache/\n?? ../../../../../../../../.chromium-browser-snapshots/\n?? ../../../../../../../../.claude.json\n?? ../../../../../../../../.claude.json.backup\n?? ../../../../../../../../.claude/\n?? ../../../../../../../../.cline/\n?? ../../../../../../../../.clj-kondo/\n?? ../..",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code - Insiders\\User\\workspaceStorage\\95e36bb59f3da66a1996b7e0fec90c7d\\WaveFlow.claude-code-chat-cursor-design\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? \"../../../../../../../../# Code Citations.txt\"\n?? ../../../../../../../../.AIClient/\n?? ../../../../../../../../.agents/\n?? ../../../../../../../../.aitk/\n?? ../../../../../../../../.altimate/\n?? ../../../../../../../../.appmap/\n?? ../../../../../../../../.appworks/\n?? ../../../../../../../../.ariana/\n?? ../../../../../../../../.aws/\n?? ../../../../../../../../.azad/\n?? ../../../../../../../../.azd/\n?? ../../../../../../../../.azure/\n?? ../../../../../../../../.baml/\n?? ../../../../../../../../.bash_history\n?? ../../../../../../../../.bito/\n?? ../../../../../../../../.bitowingman/\n?? ../../../../../../../../.blackbox-editor/\n?? ../../../../../../../../.boto\n?? ../../../../../../../../.buddy/\n?? ../../../../../../../../.cache/\n?? ../../../../../../../../.chromium-browser-snapshots/\n?? ../../../../../../../../.claude.json\n?? ../../../../../../../../.claude.json.backup\n?? ../../../../../../../../.claude/\n?? ../../../../../../../../.cline/\n?? ../../../../../../../../.clj-kondo/\n?? ../..",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code - Insiders\\User\\workspaceStorage\\b6f2e42460f367bfa4cd9f34659b9301\\AndrePimenta.claude-code-chat\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .config/\n?? .cph-ng/\n?? .devcontainer/\n?? .editorconfig\n?? .eslint-ignore\n?? .eslint-plugin-local/\n?? .git-blame-ignore-revs\n?? .gitattributes\n?? .github/\n?? .gitignore\n?? .lh/\n?? .local-versions/\n?? .lsifrc.json\n?? .mailmap\n?? .mention-bot\n?? .npmrc\n?? .nvmrc\n?? .snapshots/\n?? .vscode-test.js\n?? .vscode/\n?? CONTRIBUTING.md\n?? CodeQL.yml\n?? LICENSE.txt\n?? README.md\n?? SECURITY.md\n?? ThirdPartyNotices.txt\n?? build/\n?? cglicenses.json\n?? cgmanifest.json\n?? cli/\n?? eslint.config.js\n?? extensions/\n?? gulpfile.mjs\n?? memory-bank/\n?? package-lock.json\n?? package.json\n?? product.json\n?? remote/\n?? resources/\n?? scripts/\n?? src/\n?? test/\n?? tsfmt.json",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code - Insiders\\User\\workspaceStorage\\bc840b618fa99e1e6249e824ddc9b4cc\\AndrePimenta.claude-code-chat\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? ../../../../../.github/\n?? ../../../../../.gitignore\n?? ../../../../../.llm-chat-history/\n?? ../../../../../.vscode/\n?? ../../../../../Backups/\n?? ../../../../../Cache/\n?? ../../../../../CachedConfigurations/\n?? ../../../../../CachedData/\n?? ../../../../../CachedExtensionVSIXs/\n?? ../../../../../CachedProfilesData/\n?? \"../../../../../Code Cache/\"\n?? ../../../../../Crashpad/\n?? ../../../../../DIPS\n?? ../../../../../DIPS-wal\n?? ../../../../../DawnGraphiteCache/\n?? ../../../../../DawnWebGPUCache/\n?? ../../../../../DevToolsActivePort\n?? ../../../../../GPUCache/\n?? \"../../../../../Local State\"\n?? \"../../../../../Local Storage/\"\n?? ../../../../../Network/\n?? ../../../../../Partitions/\n?? ../../../../../Preferences\n?? \"../../../../../Service Worker/\"\n?? \"../../../../../Session Storage/\"\n?? \"../../../../../Shared Dictionary/\"\n?? ../../../../../SharedStorage\n?? ../../../../../SharedStorage-wal\n?? ../../../../\n?? ../../../../../WebStorage/\n?? ../../../../../code.lock\n?? ../../../../../languag",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code - Insiders\\User\\workspaceStorage\\bc840b618fa99e1e6249e824ddc9b4cc\\AuraTechnologies.claude-code-ui-overlay\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? ../../../../../.github/\n?? ../../../../../.gitignore\n?? ../../../../../.llm-chat-history/\n?? ../../../../../.vscode/\n?? ../../../../../Backups/\n?? ../../../../../Cache/\n?? ../../../../../CachedConfigurations/\n?? ../../../../../CachedData/\n?? ../../../../../CachedExtensionVSIXs/\n?? ../../../../../CachedProfilesData/\n?? \"../../../../../Code Cache/\"\n?? ../../../../../Crashpad/\n?? ../../../../../DIPS\n?? ../../../../../DIPS-wal\n?? ../../../../../DawnGraphiteCache/\n?? ../../../../../DawnWebGPUCache/\n?? ../../../../../DevToolsActivePort\n?? ../../../../../GPUCache/\n?? \"../../../../../Local State\"\n?? \"../../../../../Local Storage/\"\n?? ../../../../../Network/\n?? ../../../../../Partitions/\n?? ../../../../../Preferences\n?? \"../../../../../Service Worker/\"\n?? \"../../../../../Session Storage/\"\n?? \"../../../../../Shared Dictionary/\"\n?? ../../../../../SharedStorage\n?? ../../../../../SharedStorage-wal\n?? ../../../../\n?? ../../../../../WebStorage/\n?? ../../../../../code.lock\n?? ../../../../../languag",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code - Insiders\\User\\workspaceStorage\\f138af042872647312b6dd9b79fd76bf\\AndrePimenta.claude-code-chat\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "4f05a70",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .amazonq/",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code - Insiders\\User\\workspaceStorage\\f138af042872647312b6dd9b79fd76bf\\WaveFlow.claude-code-chat-cursor-design\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? \"# HyperAI Phoenix - \\304\\220a\\314\\243\\314\\206c ta\\314\\211 Ky\\314\\203 thua\\314\\243\\314\\202t Toa\\314\\200n.ini\"\n?? \"# HyperAI Phoenix - \\304\\220\\341\\272\\267c t\\341\\272\\243 K\\341\\273\\271 thu\\341\\272\\255t To\\303\\240n.ini\"\n?? .amazonq/\n?? .continue/\n?? .env.example\n?? .github/\n?? .gitignore\n?? .roo/\n?? ADAPTIVE_PHOENIX_ACADEMY_SYSTEM.py\n?? ADVANCED_SYSTEM_INTEGRATOR.py\n?? ARCHITECTURE_TRANSCENDENCE_PROJECT_MANIFEST.md\n?? BACKUP_COMPLETION_REPORT.md\n?? \"Ba\\314\\201o Ca\\314\\201o Ra\\314\\200 Soa\\314\\201t Thie\\314\\202\\314\\201u So\\314\\201t - HyperAI Phoenix.md\"\n?? \"Bo\\314\\202\\314\\211 sungGD1_01.txt\"\n?? \"B\\303\\201OC\\303\\201O_HO\\303\\200N_TH\\303\\200NH_CU\\341\\273\\220I_C\\303\\231NG_H\\341\\273\\214C_VI\\341\\273\\206N_B\\341\\272\\244T_T\\341\\273\\254.md\"\n?? \"B\\303\\201OC\\303\\201O_TI\\341\\272\\276N_H\\303\\223A_H\\341\\273\\206_TH\\341\\273\\220NG_INFINITE_PHOENIX.md\"\n?? \"B\\303\\201OC\\303\\201O_T\\341\\273\\224NG_TH\\341\\273\\202_TRI_ENGINE_HO\\341\\272\\240T_\\304\\220\\341\\273\\230NG_HO\\303\\200N_H\\341\\272\\242O.md\"\n?? \"B\\303\\201O_C\\30",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\01fda0e7-8a34-4abe-b56b-6798d91f81e2\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "47f45ee",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/agents/debug.agent.md\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .kilocodemodes\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/config.json\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-bank/progress.md\n M memory-bank/projectBrief.md\n M memory-bank/systemPatterns.md\n M requirements.txt\n M scripts/start-mcp.sh\n M scripts/stop-mcp.sh\n M static-analysis.d",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\08bca3a3-678a-4710-a469-2251301f4d48\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "0179094",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/codacy.instructions.md\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/app/mcp_app.py\n M mcp/config.json\n M mcp/docker-compose.yml\n M mcp/requirements.txt\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-bank/progress.md\n M memory-bank/projectBrief.md\n M memory-bank/systemPa",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\0bb9dffd-c0fb-4900-b538-9283811f75cf\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "e0c777f",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/codacy.instructions.md\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/app/mcp_app.py\n M mcp/config.json\n M mcp/docker-compose.yml\n M mcp/requirements.txt\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-bank/progress.md\n M memory-bank/projectBrief.md\n M memory-bank/systemPa",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\0e5a08ca-1cec-4ee6-9d45-86f87f9b1fb4\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "a0d7119",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/codacy.instructions.md\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/app/mcp_app.py\n M mcp/config.json\n M mcp/docker-compose.yml\n M mcp/requirements.txt\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-bank/progress.md\n M memory-bank/projectBrief.md\n M memory-bank/systemPa",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\122228ec-c5f2-49a8-a3f3-4769f92e0925\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "3754bd2",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/codacy.instructions.md\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/app/mcp_app.py\n M mcp/config.json\n M mcp/docker-compose.yml\n M mcp/requirements.txt\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-bank/progress.md\n M memory-bank/projectBrief.md\n M memory-bank/systemPa",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\134d9ae7-bb48-4800-b492-5708e415389a\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "c5b2d42",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/codacy.instructions.md\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .kilocodemodes\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/config.json\n M mcp/docker-compose.yml\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-bank/progress.md\n M memory-bank/projectBrief.md\n M memory-bank/systemPatterns.md\n M scripts/start-m",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\18411cf6-e7be-4525-849c-58e5e74a585d\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "49cdfa1",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/agents/debug.agent.md\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .kilocodemodes\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/config.json\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-bank/progress.md\n M memory-bank/projectBrief.md\n M memory-bank/systemPatterns.md\n M requirements.txt\n M scripts/start-mcp.sh\n M scripts/stop-mcp.sh\n M static-analysis.d",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\1a266300-24e5-489d-955e-3fd81bfc847d\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "1a09935",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .kilocodemodes\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/config.json\n M mcp/docker-compose.yml\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-bank/progress.md\n M memory-bank/projectBrief.md\n M memory-bank/systemPatterns.md\n M scripts/start-mcp.sh\n M scripts/stop-mcp.sh\n M static-analysis",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\1e437a2c-b7fa-4b5c-b881-e016cac3d8a1\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "e2a8d87",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/codacy.instructions.md\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .kilocodemodes\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/app/mcp_app.py\n M mcp/config.json\n M mcp/docker-compose.yml\n M mcp/requirements.txt\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-bank/progress.md\n M memory-bank/projectBrief.md\n M me",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\201acc43-8d20-421f-b6e1-b7b6819d1c83\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "6ef9f8e",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/agents/debug.agent.md\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .kilocodemodes\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/config.json\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-bank/progress.md\n M memory-bank/projectBrief.md\n M memory-bank/systemPatterns.md\n M requirements.txt\n M scripts/start-mcp.sh\n M scripts/stop-mcp.sh\n M static-analysis.d",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\27b278c3-f6b4-4695-a0c5-9ea92eb677d8\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "4fc79e6",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/agents/debug.agent.md\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .history/package_20260106003358.json\n M .history/package_20260106011731.json\n M .iis/applicationhost.config\n M .kilocodemodes\n M .lh/.calva/repl.calva-repl.json\n M .lh/.lhignore\n M .lh/hyper_core.py.json\n M .lh/package.json.json\n M .lh/plans/evaluation-multi-dimensional-ai-network.md.json\n M .lh/plans/vscode-extension-integration-plan.md.json\n M .lh/plugins/__init__.py.json\n M .lh/plugins/llm/__init__.py.json\n M .lh/plugins/llm/ollama_engine.py.json\n M .lh/plugins/overseer/__init__.py.json\n M .lh/plugins/overseer/sanitizer.py.json\n M .lh/plugins/vscode_ai/__init__.py.json\n M .lh/plugins/vscode_ai/github_copilot_engine.py.json\n M .lh/reports/hyperai-operation",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\302588ac-b62d-4421-9279-ed9562c4911b\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "7a6e1f5",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/codacy.instructions.md\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/app/mcp_app.py\n M mcp/config.json\n M mcp/docker-compose.yml\n M mcp/requirements.txt\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-bank/progress.md\n M memory-bank/projectBrief.md\n M memory-bank/systemPa",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\31c1817b-1232-4aab-a0a6-35f8128517b7\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "c99c77f",
+      "dirty_status": "dirty",
+      "status_excerpt": "M deps.edn\n M public/main.css\n M src/main/acme/frontend/app.cljs\n M src/main/acme/server.clj\n?? .history/\n?? .lh/deps.edn.json\n?? .lh/src/\n?? models/",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\38089ae1-9492-4f30-a19b-10aee6d6ed01\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "95f770a",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/agents/debug.agent.md\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .kilocodemodes\n M .lh/.lhignore\n M .local-versions/.gitignore\n M .posit/publish/copilot-cli-3H65.toml\n M .posit/publish/deployments/deployment-AJG6.toml\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/config.json\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-b",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\3ddcbb70-384e-4ae0-bc49-10509b3c7f7a\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "c828622",
+      "dirty_status": "dirty",
+      "status_excerpt": "M NewApiController.cs\n M src/main/acme/mcp_server.clj",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\4564ad38-7224-450a-9531-d4a52c59478a\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "c849a41",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .lh/deps.edn.json\n M .lh/src/main/acme/server.clj.json\n M deps.edn\n M public/main.css\n M src/main/acme/frontend/app.cljs\n M src/main/acme/server.clj\n?? .history/deps_20260114085947.edn\n?? .history/deps_20260114090233.edn\n?? .history/deps_20260114090234.edn\n?? .history/deps_20260114090916.edn\n?? .history/deps_20260114090918.edn\n?? .history/deps_20260114091759.edn\n?? .history/src/main/acme/frontend/\n?? .history/src/main/acme/server_20260114090146.clj\n?? .history/src/main/acme/server_20260114090243.clj\n?? .history/src/main/acme/server_20260114090245.clj\n?? .history/src/main/acme/server_20260114090251.clj\n?? .history/src/main/acme/server_20260114090253.clj\n?? .history/src/main/acme/server_20260114090259.clj\n?? .history/src/main/acme/server_20260114090300.clj\n?? .history/src/main/acme/server_20260114090307.clj\n?? .history/src/main/acme/server_20260114090308.clj\n?? .history/src/main/acme/server_20260114090314.clj\n?? .history/src/main/acme/server_20260114090316.clj\n?? .history/src/main/acme",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\4d4a454d-f1f5-45f5-b4d7-01863dc82911\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "bc81e0c",
+      "dirty_status": "dirty",
+      "status_excerpt": "M deps.edn\n M public/main.css\n M src/main/acme/frontend/app.cljs\n M src/main/acme/server.clj\n?? .history/\n?? .lh/deps.edn.json\n?? .lh/src/\n?? models/",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\4e871fc6-6ce7-4c59-b309-38149152b8c9\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "baf8fe5",
+      "dirty_status": "dirty",
+      "status_excerpt": "M NewApiController.cs\n M deps.edn\n M src/main/acme/mcp_server.clj",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\565b8811-708b-43a7-b62d-0972a401fdd8\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "c09ac32",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .circleci/config.yml\n M .github/agents/debug.agent.md\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .history/.calva/repl_20260111125108.calva-repl\n M .history/.kilocodemodes_20260106011621\n M .history/.kilocodemodes_20260106012151\n M .history/package_20260106003358.json\n M .history/package_20260106011725.json\n M .history/package_20260106011731.json\n M .history/package_20260106011827.json\n M .history/package_20260106011832.json\n M .history/package_20260106011842.json\n M .history/package_20260106011846.json\n M .history/package_20260106011950.json\n M .iis/applicationhost.config\n M .kilocodemodes\n M .lh/.calva/repl.calva-repl.json\n M .lh/.kilocodemodes.json\n M .lh/.lhignore\n M .lh/docker-compose.yml.json\n M .lh/hyper_core.py.json\n M .lh/hyperai-server/Dockerfile.json\n M .lh/hyperai-ser",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\5d7c0f3d-47df-485a-b766-b6bd83182520\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "",
+      "head": "",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\5f424a3b-acf4-43cf-8642-90ee3d0752a3\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "c9ac83e",
+      "dirty_status": "dirty",
+      "status_excerpt": "M public/main.css",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\614be031-6891-475b-bbff-9a84f81dc384\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "0851b3e",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\63028597-b6cf-44c0-a24d-0936cf8773e5\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "6c0c2c6",
+      "dirty_status": "dirty",
+      "status_excerpt": "M NewApiController.cs\n M deps.edn\n M mcp.json\n?? src/main/acme/mcp_server.clj",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\6ec711d8-bb04-478f-a2ee-0c7f79cbebca\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "91fcdba",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/codacy.instructions.md\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/app/mcp_app.py\n M mcp/config.json\n M mcp/docker-compose.yml\n M mcp/requirements.txt\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-bank/progress.md\n M memory-bank/projectBrief.md\n M memory-bank/systemPa",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\7d0312c1-e0c6-41a0-a424-fa4be8a8c194\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "4430aed",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .lh/deps.edn.json\n M .lh/src/main/acme/server.clj.json\n M deps.edn\n M src/main/acme/server.clj\n?? .history/deps_20260106023636.edn\n?? .history/deps_20260106023808.edn\n?? .history/src/main/acme/server_20260106023708.clj\n?? .history/src/main/acme/server_20260106023817.clj\n?? .history/src/main/acme/server_20260106023818.clj\n?? .history/src/main/acme/server_20260106023829.clj\n?? .history/src/main/acme/server_20260106023830.clj\n?? .history/src/main/acme/server_20260106023842.clj",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\82a2bc13-ae45-446a-b2c4-ffda60c0d1c9\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "2770589",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .iis/",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\8a6e96d8-b48f-44ca-bcb5-9571f8bcb5b9\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "90368aa",
+      "dirty_status": "dirty",
+      "status_excerpt": "M NewApiController.cs\n M deps.edn\n M mcp.json\n?? src/main/acme/mcp_server.clj",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\8b947381-3ad5-4834-ab6f-43507af81151\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "a6986af",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .kilocodemodes\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/config.json\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-bank/progress.md\n M memory-bank/projectBrief.md\n M memory-bank/systemPatterns.md\n M requirements.txt\n M scripts/start-mcp.sh\n M scripts/stop-mcp.sh\n M static-analysis.datad",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\92f51a14-b49e-4a12-b609-4c0dab6fc47d\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "8815471",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/codacy.instructions.md\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/app/mcp_app.py\n M mcp/config.json\n M mcp/docker-compose.yml\n M mcp/requirements.txt\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-bank/progress.md\n M memory-bank/projectBrief.md\n M memory-bank/systemPa",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\9361ca2c-9f0d-4a11-b60e-e8061c1cb84a\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "fa8e046",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .lh/deps.edn.json\n M .lh/src/main/acme/server.clj.json\n M deps.edn\n M public/main.css\n M src/main/acme/frontend/app.cljs\n M src/main/acme/server.clj\n?? .history/deps_20260114090233.edn\n?? .history/deps_20260114090916.edn\n?? .history/deps_20260114090918.edn\n?? .history/deps_20260114091759.edn\n?? .history/src/main/acme/frontend/\n?? .history/src/main/acme/server_20260114090314.clj\n?? .history/src/main/acme/server_20260114090650.clj\n?? .history/src/main/acme/server_20260114090653.clj\n?? .history/src/main/acme/server_20260114090926.clj\n?? .history/src/main/acme/server_20260114090928.clj\n?? .history/src/main/acme/server_20260114090936.clj\n?? .history/src/main/acme/server_20260114090939.clj\n?? .history/src/main/acme/server_20260114090946.clj\n?? .history/src/main/acme/server_20260114090948.clj\n?? .history/src/main/acme/server_20260114090956.clj\n?? .history/src/main/acme/server_20260114090958.clj\n?? .history/src/main/acme/server_20260114091252.clj\n?? .history/src/main/acme/server_202601140912",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\96394218-cd43-4d6e-9ea5-878d68754b6c\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "8d1cf5d",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/codacy.instructions.md\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .kilocodemodes\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/app/mcp_app.py\n M mcp/config.json\n M mcp/docker-compose.yml\n M mcp/requirements.txt\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-bank/progress.md\n M memory-bank/projectBrief.md\n M me",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\97028b6c-9b9b-4e59-9f7a-3eb16ed246e3\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "0222442",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/codacy.instructions.md\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/app/mcp_app.py\n M mcp/config.json\n M mcp/docker-compose.yml\n M mcp/requirements.txt\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-bank/progress.md\n M memory-bank/projectBrief.md\n M memory-bank/systemPa",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\97aef1e2-504d-4956-86ce-0bcd7653f742\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "3821cde",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/agents/debug.agent.md\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .kilocodemodes\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/config.json\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-bank/progress.md\n M memory-bank/projectBrief.md\n M memory-bank/systemPatterns.md\n M requirements.txt\n M scripts/start-mcp.sh\n M scripts/stop-mcp.sh\n M static-analysis.d",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\9c0d2052-c876-4d99-b20c-82d5a2ae1344\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "",
+      "head": "",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\9df1b0bd-f07d-4e9e-b6d4-db26877f9281\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "be510ab",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/agents/debug.agent.md\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .kilocodemodes\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/config.json\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-bank/progress.md\n M memory-bank/projectBrief.md\n M memory-bank/systemPatterns.md\n M requirements.txt\n M scripts/start-mcp.sh\n M scripts/stop-mcp.sh\n M static-analysis.d",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\a23473ca-dfe4-4d8e-9672-cdc51eabff45\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "cc95f0c",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .lh/deps.edn.json\n M deps.edn\n M public/main.css\n M src/main/acme/frontend/app.cljs\n M src/main/acme/server.clj\n?? .history/deps_20260114085947.edn\n?? .history/deps_20260114090233.edn\n?? .history/deps_20260114090234.edn\n?? .history/deps_20260114090916.edn\n?? .history/deps_20260114090918.edn\n?? .history/deps_20260114091759.edn\n?? .history/src/\n?? .lh/src/\n?? models/",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\a599b106-6a3d-4b68-b5be-c564d47f8c1a\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "dac15c3",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/codacy.instructions.md\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/app/mcp_app.py\n M mcp/config.json\n M mcp/docker-compose.yml\n M mcp/requirements.txt\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-bank/progress.md\n M memory-bank/projectBrief.md\n M memory-bank/systemPa",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\a6e2a82f-b215-431d-b476-6b2bb9d303f9\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "bbdfb6d",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/codacy.instructions.md\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .kilocodemodes\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/config.json\n M mcp/docker-compose.yml\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-bank/progress.md\n M memory-bank/projectBrief.md\n M memory-bank/systemPatterns.md\n M scripts/start-m",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\b0cc90b9-c129-4c05-a27a-79cfc5ef98bc\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "33a94b6",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/codacy.instructions.md\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/app/mcp_app.py\n M mcp/config.json\n M mcp/docker-compose.yml\n M mcp/requirements.txt\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-bank/progress.md\n M memory-bank/projectBrief.md\n M memory-bank/systemPa",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\b1267ab7-860d-48e0-9665-b8dbc1bb8836\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "1dbadde",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/agents/debug.agent.md\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .history/.kilocodemodes_20260106011621\n M .history/.kilocodemodes_20260106012151\n M .history/package_20260106003358.json\n M .history/package_20260106011725.json\n M .history/package_20260106011731.json\n M .history/package_20260106011827.json\n M .history/package_20260106011832.json\n M .history/package_20260106011842.json\n M .history/package_20260106011846.json\n M .history/package_20260106011950.json\n M .iis/applicationhost.config\n M .kilocodemodes\n M .lh/.calva/repl.calva-repl.json\n M .lh/.kilocodemodes.json\n M .lh/.lhignore\n M .lh/docker-compose.yml.json\n M .lh/hyper_core.py.json\n M .lh/hyperai-server/Dockerfile.json\n M .lh/hyperai-server/main.py.json\n M .lh/",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\b170bfed-430c-480f-8260-943a260d5f39\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "78b33c6",
+      "dirty_status": "dirty",
+      "status_excerpt": "M NewApiController.cs\n M deps.edn\n M mcp.json\n?? src/main/acme/mcp_server.clj",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\b7f9a24b-b22e-44ec-87d5-4edc4cd7ebc8\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "1cae692",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/codacy.instructions.md\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .kilocodemodes\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/app/mcp_app.py\n M mcp/config.json\n M mcp/docker-compose.yml\n M mcp/requirements.txt\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-bank/progress.md\n M memory-bank/projectBrief.md\n M me",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\b9e79099-fdf2-4311-a662-17281d9c021a\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "9bbe000",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .history/\n?? .lh/COMMIT_PLAN.md.json\n?? COMMIT_PLAN.md",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\bb900fdc-9866-475e-850e-fe6d913c62f3\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "04a03c0",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/codacy.instructions.md\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/app/mcp_app.py\n M mcp/config.json\n M mcp/docker-compose.yml\n M mcp/requirements.txt\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-bank/progress.md\n M memory-bank/projectBrief.md\n M memory-bank/systemPa",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\c72e53a7-e09e-4d98-93fa-300d90bbfbc5\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "2ea08a0",
+      "dirty_status": "dirty",
+      "status_excerpt": "M deps.edn\n M public/main.css\n M src/main/acme/frontend/app.cljs\n M src/main/acme/server.clj\n?? .history/\n?? .lh/deps.edn.json\n?? .lh/src/\n?? models/",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\c7dcf239-ea01-4f72-990d-3e43bb142466\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "0250aa3",
+      "dirty_status": "dirty",
+      "status_excerpt": "M NewApiController.cs\n M deps.edn\n M mcp.json\n?? src/main/acme/mcp_server.clj",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\cf810794-38fb-4530-8e27-10de96fdb099\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "df6046e",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/codacy.instructions.md\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .kilocodemodes\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/app/mcp_app.py\n M mcp/config.json\n M mcp/docker-compose.yml\n M mcp/requirements.txt\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-bank/progress.md\n M memory-bank/projectBrief.md\n M me",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\cf8213b7-617a-41e4-b85d-5f7a27c1752d\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "2e39073",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/agents/debug.agent.md\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .kilocodemodes\n M .lh/.lhignore\n M .local-versions/.gitignore\n M .posit/publish/copilot-cli-3H65.toml\n M .posit/publish/deployments/deployment-AJG6.toml\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/config.json\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-b",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\d36ffbb3-d0cf-4638-a4bf-4a772744df8e\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "d8f8b50",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/codacy.instructions.md\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/app/mcp_app.py\n M mcp/config.json\n M mcp/docker-compose.yml\n M mcp/requirements.txt\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-bank/progress.md\n M memory-bank/projectBrief.md\n M memory-bank/systemPa",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\dac4c397-0661-4f2a-8529-d3251927596b\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "dd99b1a",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/agents/debug.agent.md\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .kilocodemodes\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/config.json\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-bank/progress.md\n M memory-bank/projectBrief.md\n M memory-bank/systemPatterns.md\n M requirements.txt\n M scripts/start-mcp.sh\n M scripts/stop-mcp.sh\n M static-analysis.d",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\df2021b7-8ec3-4da4-ab6e-668fc70c0f28\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "1bde4dd",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\e192ca90-6ec6-4545-8c13-7bfd54afa8bd\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "9ce793c",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\e42438f7-2698-458a-b17f-a54d2f809d40\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "13736c7",
+      "dirty_status": "dirty",
+      "status_excerpt": "M NewApiController.cs\n M deps.edn\n M mcp.json\n?? src/main/acme/mcp_server.clj",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\e5c69478-44bd-4f32-ab4f-cd49bef18a3e\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "5346e94",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/agents/debug.agent.md\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .kilocodemodes\n M .lh/.lhignore\n M .local-versions/.gitignore\n M .posit/publish/copilot-cli-3H65.toml\n M .posit/publish/deployments/deployment-AJG6.toml\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/config.json\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-b",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\f06bf23b-dc41-4356-863b-fcf910e563a8\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "5eaa8f8",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .circleci/config.yml\n M .github/agents/debug.agent.md\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .history/.calva/repl_20260111125108.calva-repl\n M .history/.kilocodemodes_20260106011621\n M .history/.kilocodemodes_20260106012151\n M .history/package_20260106003358.json\n M .history/package_20260106011725.json\n M .history/package_20260106011731.json\n M .history/package_20260106011827.json\n M .history/package_20260106011832.json\n M .history/package_20260106011842.json\n M .history/package_20260106011846.json\n M .history/package_20260106011950.json\n M .iis/applicationhost.config\n M .kilocodemodes\n M .lh/.calva/repl.calva-repl.json\n M .lh/.kilocodemodes.json\n M .lh/.lhignore\n M .lh/docker-compose.yml.json\n M .lh/hyper_core.py.json\n M .lh/hyperai-server/Dockerfile.json\n M .lh/hyperai-ser",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\f47f80d7-59a5-433b-8ded-f54dbe2d6643\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "d839c6e",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/codacy.instructions.md\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/app/mcp_app.py\n M mcp/config.json\n M mcp/docker-compose.yml\n M mcp/requirements.txt\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-bank/progress.md\n M memory-bank/projectBrief.md\n M memory-bank/systemPa",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\f86ff6a3-6a20-43ec-ae7a-f2d89cf23b9e\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "bf2e495",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .history/\n?? .lh/COMMIT_PLAN.md.json\n?? COMMIT_PLAN.md",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\fcb9c0c8-d062-47d4-81d2-41d4a065a053\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "17feb02",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/codacy.instructions.md\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .kilocodemodes\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/config.json\n M mcp/docker-compose.yml\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-bank/progress.md\n M memory-bank/projectBrief.md\n M memory-bank/systemPatterns.md\n M scripts/start-m",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\fe91e0c7-c3c0-4dd7-90cd-e7b84ec74757\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "58ec061",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/agents/debug.agent.md\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .kilocodemodes\n M .lh/.lhignore\n M .lh/plans/evaluation-multi-dimensional-ai-network.md.json\n M .local-versions/.gitignore\n M .posit/publish/copilot-cli-3H65.toml\n M .posit/publish/deployments/deployment-AJG6.toml\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/config.json\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-ban",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\ff016580-baea-4664-854d-658bc58fb1a3\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "367265a",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .lh/deps.edn.json\n M deps.edn\n M src/main/acme/server.clj\n?? .history/deps_20260106023557.edn\n?? .history/deps_20260106023636.edn\n?? .history/deps_20260106023637.edn\n?? .history/deps_20260106023808.edn\n?? .history/src/\n?? .lh/src/",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\ff33341d-ab6a-45cc-a76c-a2dbb60838d7\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "08787f8",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/codacy.instructions.md\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .iis/applicationhost.config\n M .joyride/.nrepl-port\n M .refact/integrations.d/chrome.yaml\n M .refact/integrations.d/postgres.yaml\n M .slingshot/prompts/sample.prompt.md\n M .snapshots/config.json\n M .snapshots/readme.md\n M .snapshots/snapshot-2025-12-31T20_11_39_878Z.md\n M .snapshots/sponsors.md\n M README.md\n M changelog.md\n M cspell.json\n M hyper_core.py\n M mcp/app/mcp_app.py\n M mcp/config.json\n M mcp/docker-compose.yml\n M mcp/requirements.txt\n M memory-bank/activeContext.md\n M memory-bank/architect.md\n M memory-bank/decisionLog.md\n M memory-bank/productContext.md\n M memory-bank/progress.md\n M memory-bank/projectBrief.md\n M memory-bank/systemPa",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\kilocode.kilo-code\\tasks\\ffbe99bd-aceb-4a8e-90ee-8423eda1f5a9\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "",
+      "head": "",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\multi.multi-nightly\\tasks\\task-19c5877c-3638-4477-b89e-66946577bd7c\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "13e8e17",
+      "dirty_status": "dirty",
+      "status_excerpt": "M BLACKBOXAI.lnk\n m DAIOF-Framework\n ? DAIOF-Repository-Analysis\n M \"GitHub Desktop.lnk\"\n M \"Visual Studio Code - Insiders.lnk\"\n D \"Visual Studio Code.lnk\"\n M Zalo.lnk\n M desktop.ini\n M gco_scalper.py\n M privacy_check.ps1\n M run_tests.bat\n M test_cline_now.js\n M vscode\n?? Canva.lnk\n?? \"Chrome Remote Desktop.lnk\"\n?? \"CircleCI (1).lnk\"\n?? CircleCI.lnk\n?? Copilot.lnk\n?? Discord.lnk\n?? GitHub.lnk\n?? \"Google Cloud SDK Shell.lnk\"\n?? Grammarly.lnk\n?? MyTonWallet.lnk\n?? \"Nh\\341\\272\\255n Tr\\341\\273\\243 gi\\303\\272p.lnk\"\n?? Notion.lnk\n?? SFBrowser.lnk\n?? \"Scratch 3.lnk\"\n?? blackboxai_memory.py\n?? \"chatbot_runtime_dependency_manifest (1).txt\"\n?? \"cuong - Chrome.lnk\"\n?? financial-management-extension/\n?? gco_brain.json\n?? mail-web.lnk\n?? summary.py",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\multi.multi-nightly\\tasks\\task-2212b268-a6e0-4270-b1a5-3f891375041d\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "c8b6ad7",
+      "dirty_status": "dirty",
+      "status_excerpt": "M README.md\n M changelog.md\n?? .altestrunner/\n?? .calva/\n?? .circleci/\n?? .devcontainer/\n?? .dockerignore\n?? .github/agents/\n?? .github/architect.chatmode.md\n?? .github/ask.chatmode.md\n?? .github/code.chatmode.md\n?? .github/debug.chatmode.md\n?? .github/instructions/\n?? .github/workflows/winget.yml\n?? .gitignore\n?? .history/\n?? .iis/\n?? .joyride/\n?? .kilocode/\n?? .kilocodemodes\n?? .lh/\n?? .local-versions/\n?? .nrepl-port\n?? .posit/\n?? .refact/\n?? .slingshot/\n?? .snapshots/\n?? .vars\n?? Dockerfile\n?? app/\n?? architecture.md\n?? connect-your-tools.html\n?? cspell.json\n?? docker-compose.yml\n?? docs/\n?? examples/\n?? hyper_core.py\n?? hyperai-architecture.md\n?? hyperai-server/\n?? install.sh\n?? locustfile.py\n?? mcp/\n?? memory-bank/\n?? nul\n?? package-lock.json\n?? package.json\n?? plans/\n?? plugins/\n?? reports/\n?? requirements.txt\n?? run.py\n?? scripts/\n?? simple-request.http\n?? src/\n?? static-analysis.datadog.yml\n?? test_autonomy.py\n?? test_ollama.py\n?? tests/\n?? tsconfig.json\n?? unity-app/\n?? wsgi.p",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\multi.multi-nightly\\tasks\\task-27819f96-e85a-4f4e-a8ef-98bfd4dc4c9f\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\multi.multi-nightly\\tasks\\task-3131e740-6968-4107-8247-7ede74a95329\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\multi.multi-nightly\\tasks\\task-570c5c5b-d725-460f-8d23-de86140720a1\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\multi.multi-nightly\\tasks\\task-9758104a-8275-4029-99fa-af2b9fbb4da4\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\rooveterinaryinc.roo-cline\\tasks\\5b095c82-8be4-4623-8e71-0991be65df21\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "d39224d",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .gitignore",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\rooveterinaryinc.roo-cline\\tasks\\7004b815-88c4-4bf4-ab4a-178d44438cbd\\checkpoints",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "bb7668d",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .gitignore",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\salesforce.mule-dx-vscode\\checkpoints\\3917031002",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "11ddbbf",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/agents/debug.agent.md\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .history/.kilocodemodes_20260106011621\n M .history/.kilocodemodes_20260106012151\n M .history/package_20260106003358.json\n M .history/package_20260106011725.json\n M .history/package_20260106011731.json\n M .history/package_20260106011827.json\n M .history/package_20260106011832.json\n M .history/package_20260106011842.json\n M .history/package_20260106011846.json\n M .history/package_20260106011950.json\n M .iis/applicationhost.config\n M .kilocodemodes\n M .lh/.calva/repl.calva-repl.json\n M .lh/.kilocodemodes.json\n M .lh/.lhignore\n M .lh/docker-compose.yml.json\n M .lh/hyper_core.py.json\n M .lh/hyperai-server/Dockerfile.json\n M .lh/hyperai-server/main.py.json\n M .lh/",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\saoudrizwan.claude-dev\\checkpoints\\21719694",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "a287b31",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .gitignore",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\saoudrizwan.claude-dev\\checkpoints\\3917031002",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "A  .calva/output-window/output.calva-repl\nAM .calva/repl.calva-repl\nAM .circleci/config.yml\nA  .github/ISSUE_TEMPLATE/bug_report.yml\nA  .github/ISSUE_TEMPLATE/feature_request.yml\nAM .github/agents/debug.agent.md\nA  .github/agents/hihi.agent.md\nA  .github/agents/hyperai.agent.md\nAM .github/architect.chatmode.md\nAM .github/ask.chatmode.md\nAM .github/code.chatmode.md\nAM .github/debug.chatmode.md\nAM .github/instructions/.gitignore\nA  .github/instructions/codacy.instructions.md\nAM .github/instructions/deps.edn\nAM .github/instructions/src/hello_world/core.cljs\nA  .github/workflows/close-invalid.yml\nA  .github/workflows/close-single-word-issues.yml\nA  .github/workflows/feature-request-comment.yml\nA  .github/workflows/no-response.yml\nA  .github/workflows/on-issue-close.yml\nA  .github/workflows/remove-triage-label.yml\nA  .github/workflows/stale-issues.yml\nA  .github/workflows/triage-issues.yml\nA  .github/workflows/unable-to-reproduce-comment.yml\nA  .github/workflows/winget.yml\nAM .gitignore\nA  ",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\globalStorage\\sixth.sixth-ai\\checkpoints\\3917031002",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "6f6948d",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .calva/repl.calva-repl\n M .circleci/config.yml\n M .github/agents/debug.agent.md\n M .github/architect.chatmode.md\n M .github/ask.chatmode.md\n M .github/code.chatmode.md\n M .github/debug.chatmode.md\n M .github/instructions/.gitignore\n M .github/instructions/deps.edn\n M .github/instructions/src/hello_world/core.cljs\n M .gitignore\n M .history/.kilocodemodes_20260106011621\n M .history/.kilocodemodes_20260106012151\n M .history/package_20260106003358.json\n M .history/package_20260106011725.json\n M .history/package_20260106011731.json\n M .history/package_20260106011827.json\n M .history/package_20260106011832.json\n M .history/package_20260106011842.json\n M .history/package_20260106011846.json\n M .history/package_20260106011950.json\n M .iis/applicationhost.config\n M .kilocodemodes\n M .lh/.calva/repl.calva-repl.json\n M .lh/.kilocodemodes.json\n M .lh/.lhignore\n M .lh/docker-compose.yml.json\n M .lh/hyper_core.py.json\n M .lh/hyperai-server/Dockerfile.json\n M .lh/hyperai-server/main.py.json\n M .lh/",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\workspaceStorage\\12abee39d527ea44141e6a45db1efcee\\AndrePimenta.claude-code-chat\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .vscode/\n?? __future__.cpython-313.pyc\n?? binh_phap_ton_tu.cpython-311.pyc\n?? cspell.config.yaml\n?? traceback.cpython-313.pyc",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\workspaceStorage\\57048822fd144c8d9b885b1c101a1318\\AndrePimenta.claude-code-chat\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .calva/\n?? .clj-kondo/\n?? .github/\n?? .gitignore\n?? .lh/\n?? .local-versions/\n?? .log\n?? .plugins/\n?? .vscode/\n?? deps.edn\n?? memory-bank/\n?? src/",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\workspaceStorage\\610d663c1c0116db3876bf48db75ada9\\AndrePimenta.claude-code-chat\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .calva/\n?? .clj-kondo/\n?? .cph-ng/\n?? .github/\n?? .gitignore\n?? .history/\n?? .lh/\n?? .local-versions/\n?? .vscode/\n?? COMMIT_PLAN.md\n?? deps.edn\n?? memory-bank/\n?? src/",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\workspaceStorage\\73944ee276c0907855b1815a2d558a3d\\AndrePimenta.claude-code-chat\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .cph-ng/\n?? .github/\n?? .gitignore\n?? .history/\n?? .lh/\n?? .local-versions/\n?? .vscode/\n?? README.md\n?? deps.edn\n?? memory-bank/\n?? public/\n?? shadow-cljs.edn\n?? src/",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\workspaceStorage\\92c43df4d17c316130c02dc10b80ee09\\AndrePimenta.claude-code-chat\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .DS_Store\n?? .altestrunner/\n?? .calva/\n?? .circleci/\n?? .clj-kondo/\n?? .cph-ng/\n?? .devcontainer/\n?? .dockerignore\n?? .env\n?? .github/\n?? .gitignore\n?? .history/\n?? .iis/\n?? .joyride/\n?? .kilocode/\n?? .kilocodemodes\n?? .lh/\n?? .local-versions/\n?? .lsp/\n?? .metals/\n?? .nrepl-port\n?? .posit/\n?? .refact/\n?? .slingshot/\n?? .snapshots/\n?? .vars\n?? .vscode/\n?? Dockerfile\n?? LICENSE.md\n?? README.md\n?? __pycache__/\n?? app/\n?? architecture.md\n?? changelog.md\n?? connect-your-tools.html\n?? cspell.json\n?? docker-compose.yml\n?? docs/\n?? examples/\n?? hyper_core.py\n?? hyperai-architecture.md\n?? hyperai-server/\n?? install.sh\n?? locustfile.py\n?? mcp/\n?? memory-bank/\n?? node_modules/\n?? nul\n?? out/\n?? package-lock.json\n?? package.json\n?? plans/\n?? plugins/\n?? reports/\n?? requirements.txt\n?? run.py\n?? scripts/\n?? simple-request.http\n?? src/\n?? static-analysis.datadog.yml\n?? test_autonomy.py\n?? test_ollama.py\n?? tests/\n?? tsconfig.json\n?? unity-app/\n?? wsgi.py",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\workspaceStorage\\95e36bb59f3da66a1996b7e0fec90c7d\\AndrePimenta.claude-code-chat\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? \"../../../../../../../../# Code Citations.txt\"\n?? ../../../../../../../../.AIClient/\n?? ../../../../../../../../.agents/\n?? ../../../../../../../../.aitk/\n?? ../../../../../../../../.altimate/\n?? ../../../../../../../../.appmap/\n?? ../../../../../../../../.appworks/\n?? ../../../../../../../../.ariana/\n?? ../../../../../../../../.aws/\n?? ../../../../../../../../.azad/\n?? ../../../../../../../../.azd/\n?? ../../../../../../../../.azure/\n?? ../../../../../../../../.baml/\n?? ../../../../../../../../.bash_history\n?? ../../../../../../../../.bito/\n?? ../../../../../../../../.bitowingman/\n?? ../../../../../../../../.blackbox-editor/\n?? ../../../../../../../../.boto\n?? ../../../../../../../../.buddy/\n?? ../../../../../../../../.cache/\n?? ../../../../../../../../.chromium-browser-snapshots/\n?? ../../../../../../../../.claude.json\n?? ../../../../../../../../.claude.json.backup\n?? ../../../../../../../../.claude/\n?? ../../../../../../../../.cline/\n?? ../../../../../../../../.clj-kondo/\n?? ../..",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\workspaceStorage\\9dbf6aaf86f543ff69f40e4f5faaf3db\\AndrePimenta.claude-code-chat\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "",
+      "head": "",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\workspaceStorage\\a7d9932100e271df1ab3f746c2c06a96\\AndrePimenta.claude-code-chat\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .cache/\n?? .calva/\n?? .clj-kondo/\n?? .cph-ng/\n?? .github/\n?? .gitignore\n?? .history/\n?? .iis/\n?? .lh/\n?? .local-versions/\n?? .vscode/\n?? deps.edn\n?? memory-bank/\n?? src/",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\workspaceStorage\\a7d9932100e271df1ab3f746c2c06a96\\WaveFlow.claude-code-chat-cursor-design\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .cache/\n?? .calva/\n?? .clj-kondo/\n?? .cph-ng/\n?? .github/\n?? .gitignore\n?? .history/\n?? .iis/\n?? .lh/\n?? .local-versions/\n?? .vscode/\n?? deps.edn\n?? memory-bank/\n?? src/",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\workspaceStorage\\a8d9aab6f1b65acb4f3193ef90ca12d3\\AndrePimenta.claude-code-chat\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "397863d",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .vscode/settings.json",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\workspaceStorage\\b6a8ee42c0b7556bf54b2f96baadbb1b\\AndrePimenta.claude-code-chat\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "A  .github/copilot-instructions.md\nA  .gitignore\nA  .vscode/extensions.json\nA  .vscode/settings.json\nAM NewApiController.cs\nA  README.md\nAM deps.edn\nAM mcp.json\nA  public/index.html\nA  public/main.css\nA  shadow-cljs.edn\nA  src/dev/repl.clj\nAM src/main/acme/frontend/app.cljs\nA  src/main/acme/server.clj\n?? .altestrunner/\n?? .vscode/launch.json\n?? src/main/acme/mcp_server.clj",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\workspaceStorage\\b75b52b823c1ccff2a4730a669d3f8d2\\AndrePimenta.claude-code-chat\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .github/\n?? .gitignore\n?? .history/\n?? .iis/\n?? .lh/\n?? .local-versions/\n?? .vscode/\n?? README.md\n?? default.json\n?? deps.edn\n?? memory-bank/\n?? models/\n?? public/\n?? shadow-cljs.edn\n?? src/",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\workspaceStorage\\be2cbc00c337cd07678b8d8c1c81f210\\AndrePimenta.claude-code-chat\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .clj-kondo/\n?? .gitignore\n?? .vscode/\n?? deps.edn\n?? index.html\n?? out/\n?? src/",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\workspaceStorage\\c038080919316d7fcbabbb02f7d64de4\\AndrePimenta.claude-code-chat\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .altestrunner/\n?? .browserslistrc\n?? .calva/\n?? .circleci/\n?? .clj-kondo/\n?? .devcontainer/\n?? .early.coverage/\n?? .env\n?? .fantasticonrc.js\n?? .git-blame-ignore-revs\n?? .gitattributes\n?? .github/\n?? .gitignore\n?? .iis/\n?? .joyride/\n?? .lsp/\n?? .mailmap\n?? .marscode/\n?? .prettierignore\n?? .prettierrc\n?? .snapshots/\n?? .vscode-test.mjs\n?? .vscode/\n?? .vscodeignore\n?? =\n?? AGENTS.md\n?? BACKERS.md\n?? CHANGELOG.md\n?? CLAUDE.md\n?? CODE_OF_CONDUCT.md\n?? CONTRIBUTING.md\n?? LICENSE\n?? LICENSE.plus\n?? README.md\n?? README.pre.md\n?? ThirdPartyNotices.txt\n?? contributions.json\n?? contributions.schema.json\n?? custom-elements-manifest.config.mjs\n?? custom-elements.json\n?? docs/\n?? eslint.config.mjs\n?? images/\n?? package.json\n?? patches/\n?? pnpm-lock.yaml\n?? pnpm-workspace.yaml\n?? resources/\n?? scripts/\n?? src/\n?? static-analysis.datadog.yml\n?? svgo.config.js\n?? tests/\n?? tsconfig.base.json\n?? tsconfig.browser.json\n?? tsconfig.json\n?? tsconfig.node.json\n?? tsconfig.test.json\n?? walkthroughs/\n?? we",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\AppData\\Roaming\\Code\\User\\workspaceStorage\\df282faa0d058b61a89f3db3cb70c869\\AndrePimenta.claude-code-chat\\backups",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .github/\n?? .gitignore\n?? .snapshots/\n?? .vscode/\n?? Untitled-1.js\n?? copilot-cli.code-workspace\n?? extensions.json\n?? launch.json\n?? sessions.json\n?? settings.json\n?? shortcuts.json\n?? tasks.json",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\CascadeProjects\\aidev_project",
+      "role_class": "working-copy",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "main",
+      "head": "23a5922",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? HyperAI_Phoenix_System_Analysis.txt\n?? aidev-1/\n?? aidev/",
+      "sync_recommendation": "compare-with-preferred-lineage"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\CascadeProjects\\aidev_project\\aidev",
+      "role_class": "working-copy",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "main",
+      "head": "23a5922",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .gitignore\n M HyperAI_Pattern_Discovery_System_20250827_073309/launch_demo.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/package_stats.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/real_bitcoin_verification.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/reality_check_sha256.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/test_second_key.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/verify_bitcoin_key.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/verify_sha256_claim.py\n M agent_personality_analysis.py\n M aidev.code-workspace\n M auto_confirmation_patch.py\n M auto_file_organizer.py\n M bitcoin_secure_development/bitcoin_address_debug.py\n M bitcoin_secure_development/bitcoin_puzzle_verification.py\n M bitcoin_secure_development/hyperai_bitcoin_advanced_decoder.py\n M bitcoin_secure_development/hyperai_bitcoin_final_extractor.py\n M bitcoin_secure_development/hyperai_bitcoin_infinite_cracker.py\n M bitcoin_secure_development/hyperai_bitcoin_in",
+      "sync_recommendation": "compare-with-preferred-lineage"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\CascadeProjects\\aidev_project\\aidev-1",
+      "role_class": "working-copy",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "main",
+      "head": "23a5922",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "compare-with-preferred-lineage"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\CascadeProjects\\aidev_project\\aidev\\HYPERAI_BACKUP_COMPLETE",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "main",
+      "head": "23a5922",
+      "dirty_status": "dirty",
+      "status_excerpt": "M HyperAI_Pattern_Discovery_System_20250827_073309/launch_demo.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/package_stats.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/real_bitcoin_verification.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/reality_check_sha256.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/test_second_key.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/verify_bitcoin_key.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/verify_sha256_claim.py\n M agent_personality_analysis.py\n M auto_confirmation_patch.py\n M auto_file_organizer.py\n M bitcoin_secure_development/bitcoin_address_debug.py\n M bitcoin_secure_development/bitcoin_puzzle_verification.py\n M bitcoin_secure_development/hyperai_bitcoin_advanced_decoder.py\n M bitcoin_secure_development/hyperai_bitcoin_final_extractor.py\n M bitcoin_secure_development/hyperai_bitcoin_infinite_cracker.py\n M bitcoin_secure_development/hyperai_bitcoin_intensive_hunter.py\n M bitcoin_secure_de",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\CascadeProjects\\aidev_project\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "main",
+      "head": "23a5922",
+      "dirty_status": "dirty",
+      "status_excerpt": "M HyperAI_Pattern_Discovery_System_20250827_073309/launch_demo.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/package_stats.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/real_bitcoin_verification.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/reality_check_sha256.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/test_second_key.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/verify_bitcoin_key.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/verify_sha256_claim.py\n M agent_personality_analysis.py\n M auto_confirmation_patch.py\n M auto_file_organizer.py\n M bitcoin_secure_development/bitcoin_address_debug.py\n M bitcoin_secure_development/bitcoin_puzzle_verification.py\n M bitcoin_secure_development/hyperai_bitcoin_advanced_decoder.py\n M bitcoin_secure_development/hyperai_bitcoin_final_extractor.py\n M bitcoin_secure_development/hyperai_bitcoin_infinite_cracker.py\n M bitcoin_secure_development/hyperai_bitcoin_intensive_hunter.py\n M bitcoin_secure_de",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\CascadeProjects\\aidev_project\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "main",
+      "head": "23a5922",
+      "dirty_status": "dirty",
+      "status_excerpt": "D HyperAI_Pattern_Discovery_System_20250827_073309/PACKAGE_SUMMARY.md\n D HyperAI_Pattern_Discovery_System_20250827_073309/launch_demo.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/package_stats.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/real_bitcoin_verification.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/reality_check_sha256.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/test_second_key.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/verify_bitcoin_key.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/verify_sha256_claim.py\n M agent_personality_analysis.py\n M auto_confirmation_patch.py\n M auto_file_organizer.py\n M bitcoin_secure_development/bitcoin_address_debug.py\n M bitcoin_secure_development/bitcoin_puzzle_verification.py\n M bitcoin_secure_development/hyperai_bitcoin_advanced_decoder.py\n M bitcoin_secure_development/hyperai_bitcoin_final_extractor.py\n M bitcoin_secure_development/hyperai_bitcoin_infinite_cracker.py\n M bitcoin_secu",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\CascadeProjects\\aidev_project\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "main",
+      "head": "23a5922",
+      "dirty_status": "dirty",
+      "status_excerpt": "D HyperAI_Pattern_Discovery_System_20250827_073309/PACKAGE_SUMMARY.md\n D HyperAI_Pattern_Discovery_System_20250827_073309/launch_demo.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/package_stats.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/real_bitcoin_verification.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/reality_check_sha256.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/test_second_key.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/verify_bitcoin_key.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/verify_sha256_claim.py\n M agent_personality_analysis.py\n M auto_confirmation_patch.py\n M auto_file_organizer.py\n M bitcoin_secure_development/bitcoin_address_debug.py\n M bitcoin_secure_development/bitcoin_puzzle_verification.py\n M bitcoin_secure_development/hyperai_bitcoin_advanced_decoder.py\n M bitcoin_secure_development/hyperai_bitcoin_final_extractor.py\n M bitcoin_secure_development/hyperai_bitcoin_infinite_cracker.py\n M bitcoin_secu",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\CascadeProjects\\aidev_project\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "main",
+      "head": "23a5922",
+      "dirty_status": "dirty",
+      "status_excerpt": "D HyperAI_Pattern_Discovery_System_20250827_073309/PACKAGE_SUMMARY.md\n D HyperAI_Pattern_Discovery_System_20250827_073309/launch_demo.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/package_stats.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/real_bitcoin_verification.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/reality_check_sha256.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/test_second_key.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/verify_bitcoin_key.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/verify_sha256_claim.py\n M agent_personality_analysis.py\n M auto_confirmation_patch.py\n M auto_file_organizer.py\n M bitcoin_secure_development/bitcoin_address_debug.py\n M bitcoin_secure_development/bitcoin_puzzle_verification.py\n M bitcoin_secure_development/hyperai_bitcoin_advanced_decoder.py\n M bitcoin_secure_development/hyperai_bitcoin_final_extractor.py\n M bitcoin_secure_development/hyperai_bitcoin_infinite_cracker.py\n M bitcoin_secu",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\CascadeProjects\\aidev_project\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "main",
+      "head": "23a5922",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\CascadeProjects\\aidev_project\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "main",
+      "head": "23a5922",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\CascadeProjects\\aidev_project\\core_system",
+      "role_class": "unknown",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "d953b7a",
+      "dirty_status": "dirty",
+      "status_excerpt": "M HYPERAI_MASTER_TODO.md\n M __pycache__/autonomous_scheduler.cpython-311.pyc\n M __pycache__/autonomous_system_launcher.cpython-311.pyc\n M __pycache__/autonomous_task_manager.cpython-311.pyc\n M __pycache__/hyperai_performance_monitor.cpython-311.pyc\n M autonomous_execution_history.json\n D autonomous_integration_engine.log\n D autonomous_scheduler.log\n D autonomous_system_launcher.log\n M autonomous_system_launcher.py\n D autonomous_task_manager.log\n D data/logs/hyperai_20250830.log\n D hyperai_ecosystem_execution.log\n D hyperai_ecosystem_execution_gpu_optimized.log\n D hyperai_ecosystem_execution_optimized.log\n M hyperai_execution_report_gpu_optimized.json\n M hyperai_execution_status_gpu_optimized.json\n M phase2a_execution_script.py\n D strategic_planning_engine.log\n D task_decomposition_engine.log\n?? \"# Code Citations.md\"\n?? HYPERAI_PHOENIX_FINAL_LAUNCH_REPORT.md\n?? advanced_features_roadmap.json\n?? analytics_config.json\n?? autonomous_commercial_execution.py\n?? azure-pipelines.yml\n?? beta_te",
+      "sync_recommendation": "classify-before-sync"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\Desktop\\DAIOF-Framework",
+      "role_class": "external-reference",
+      "remote_urls": [
+        "https://github.com/NguyenCuong1989/DAIOF-Framework.git"
+      ],
+      "branch": "main",
+      "head": "7a84bb0f",
+      "dirty_status": "dirty",
+      "status_excerpt": "A  .autopilot.json\nA  .calva/output-window/output.calva-repl\nA  .calva/repl.calva-repl\nA  .circleci/config.yml\nA  .consciousness/.autopilot.json\nA  .consciousness/.cursor/rules/after_each_chat.mdc\nA  .consciousness/.gitignore\nA  .consciousness/.out-of-code-insights/annotations.json\nA  .consciousness/.sii/ide-port\nA  .consciousness/.sii/ide-port.json\nA  .consciousness/.snapshots/config.json\nA  .consciousness/.snapshots/readme.md\nA  .consciousness/.snapshots/sponsors.md\nM  .consciousness/CODE_VERIFICATION_PROTOCOL.md\nA  .consciousness/README.md\nA  .consciousness/deps.edn\nA  .consciousness/public/index.html\nA  .consciousness/public/main.css\nA  .consciousness/shadow-cljs.edn\nA  .consciousness/src/dev/repl.clj\nA  .consciousness/src/main/acme/frontend/app.cljs\nA  .consciousness/src/main/acme/server.clj\nA  .cpcache/B72B1BB513B068313FF2D5A89EF03F19.basis\nA  .cpcache/B72B1BB513B068313FF2D5A89EF03F19.cp\nA  .cursor/rules/after_each_chat.mdc\nA  .env.example\nA  .github/architect.chatmode.md\nA  .git",
+      "sync_recommendation": "read-only-unless-explicitly-promoted"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\Desktop\\DAIOF-Framework\\.yoyo\\snapshot",
+      "role_class": "unknown",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "",
+      "dirty_status": "dirty",
+      "status_excerpt": "A  .yoyoinit",
+      "sync_recommendation": "classify-before-sync"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\Desktop\\DAIOF-Framework\\NguyenCuong1989-project",
+      "role_class": "external-reference",
+      "remote_urls": [
+        "git@gitlab.com:nguyencuong1989-group/NguyenCuong1989-project.git"
+      ],
+      "branch": "main",
+      "head": "7e690e5",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "read-only-unless-explicitly-promoted"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\Desktop\\DAIOF-Repository-Analysis",
+      "role_class": "external-reference",
+      "remote_urls": [
+        "https://github.com/NguyenCuong1989/DAIOF-Framework.git"
+      ],
+      "branch": "main",
+      "head": "7a84bb0",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .consciousness/Untitled-1.md",
+      "sync_recommendation": "read-only-unless-explicitly-promoted"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\Desktop\\vscode",
+      "role_class": "external-reference",
+      "remote_urls": [
+        "https://github.com/NguyenCuong1989/vscode.git",
+        "https://github.com/microsoft/vscode.git"
+      ],
+      "branch": "illegal-catshark",
+      "head": "d73c48c0a21",
+      "dirty_status": "dirty",
+      "status_excerpt": "M .gitignore\nA  .snapshots/config.json\nA  .snapshots/readme.md\nA  .snapshots/sponsors.md\n M .vscode/launch.json\n M .vscode/mcp.json\n M .vscode/settings.json\n?? .cph-ng/\n?? .github/architect.chatmode.md\n?? .github/ask.chatmode.md\n?? .github/code.chatmode.md\n?? .github/debug.chatmode.md\n?? .github/instructions/codacy.instructions.md\n?? .lh/\n?? .local-versions/\n?? memory-bank/",
+      "sync_recommendation": "read-only-unless-explicitly-promoted"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\Documents\\GitHub\\DAIOF-Framewor",
+      "role_class": "external-reference",
+      "remote_urls": [
+        "https://github.com/NguyenCuong1989/DAIOF-Framewor.git"
+      ],
+      "branch": "main",
+      "head": "2261b7b",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "read-only-unless-explicitly-promoted"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\Documents\\GitHub\\DAIOF-Framework",
+      "role_class": "external-reference",
+      "remote_urls": [
+        "https://github.com/NguyenCuong1989"
+      ],
+      "branch": "main",
+      "head": "3e5526d",
+      "dirty_status": "dirty",
+      "status_excerpt": "M ollama_config.py",
+      "sync_recommendation": "read-only-unless-explicitly-promoted"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\Documents\\GitHub\\Library",
+      "role_class": "external-reference",
+      "remote_urls": [
+        "https://github.com/NguyenCuong1989/Library.git"
+      ],
+      "branch": "main",
+      "head": "",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "read-only-unless-explicitly-promoted"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\Documents\\GitHub\\copilot-cli",
+      "role_class": "external-reference",
+      "remote_urls": [
+        "https://github.com/NguyenCuong1989/DAIOF-Framework.git",
+        "https://github.com/NguyenCuong1989/copilot-cli.git",
+        "https://github.com/github/copilot-cli.git"
+      ],
+      "branch": "main",
+      "head": "b3e16978",
+      "dirty_status": "dirty",
+      "status_excerpt": "A  .altestrunner/config.json\nA  .calva/output-window/output.calva-repl\nA  .calva/repl.calva-repl\nM  .circleci/config.yml\nA  .clj-kondo/.cache/v1/clj/get-started.hello-paredit.transit.json\nA  .clj-kondo/.cache/v1/clj/get-started.hello-repl.transit.json\nA  .clj-kondo/.cache/v1/clj/get-started.welcome-to-clojure.transit.json\nA  .clj-kondo/.cache/v1/lock\nA  .cph-ng/.calva/repl.calva-repl.bin\nA  .cph-ng/.github/agents/debug.agent.md.bin\nA  .cph-ng/.github/agents/hyperai.agent.md.bin\nA  .cph-ng/.github/instructions/codacy.instructions.md.bin\nA  .cph-ng/.iis/applicationhost.config.bin\nA  .cph-ng/.vscode/.vscode/settings.json.bin\nA  .cph-ng/.vscode/launch.json.bin\nA  .cph-ng/.vscode/settings.json.bin\nA  .cph-ng/docker-compose.yml.bin\nA  .cph-ng/hyper_core.py.bin\nA  .cph-ng/hyperai-server/main.py.bin\nA  .cph-ng/plugins/overseer/sanitizer.py.bin\nA  .cph-ng/reports/kilocode-installation-report.md.bin\nA  .cph-ng/scripts/src/get_started/hello_repl.clj.bin\nA  .dockerignore\nA  .env\nA  .github/agents/",
+      "sync_recommendation": "read-only-unless-explicitly-promoted"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\Documents\\GitHub\\desktop-tutorial",
+      "role_class": "external-reference",
+      "remote_urls": [
+        "https://github.com/NguyenCuong1989/desktop-tutorial.git"
+      ],
+      "branch": "circleci-project-setup",
+      "head": "ffc9a53",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? .autopilot.json\n?? .cursor/\n?? .scratch/\n?? .sii/\n?? .snapshots/\n?? .vscode/",
+      "sync_recommendation": "read-only-unless-explicitly-promoted"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\Documents\\GitHub\\kernel-memory",
+      "role_class": "external-reference",
+      "remote_urls": [
+        "https://github.com/microsoft/kernel-memory.git"
+      ],
+      "branch": "main",
+      "head": "1bf7b420",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "read-only-unless-explicitly-promoted"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\Documents\\GitHub\\trust_of_copilot",
+      "role_class": "external-reference",
+      "remote_urls": [
+        "https://github.com/Copilot-home/trust_of_copilot.git"
+      ],
+      "branch": "main",
+      "head": "1b33427",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "read-only-unless-explicitly-promoted"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\Documents\\GitHub\\vscode-gitlens",
+      "role_class": "external-reference",
+      "remote_urls": [
+        "https://github.com/NguyenCuong1989/vscode-gitlens.git",
+        "https://github.com/gitkraken/vscode-gitlens.git"
+      ],
+      "branch": "main",
+      "head": "56f7f6fb8",
+      "dirty_status": "dirty",
+      "status_excerpt": "A  .altestrunner/config.json\nA  .calva/output-window/output.calva-repl\nA  .circleci/config.yml\nA  .clj-kondo/.cache/v1/lock\nA  .clj-kondo/.calva/repl.calva-repl\nAM .clj-kondo/.cph-ng/.vscode/settings.json.bin\nA  .clj-kondo/.github/architect.chatmode.md\nA  .clj-kondo/.github/ask.chatmode.md\nA  .clj-kondo/.github/code.chatmode.md\nA  .clj-kondo/.github/debug.chatmode.md\nA  .clj-kondo/.github/instructions/codacy.instructions.md\nA  .clj-kondo/.gitignore\nA  .clj-kondo/.history/.vscode/settings_20260106012816.json\nA  .clj-kondo/.history/.vscode/settings_20260106012829.json\nA  .clj-kondo/.history/.vscode/settings_20260106013005.json\nA  .clj-kondo/.history/.vscode/settings_20260106013018.json\nA  .clj-kondo/.history/.vscode/settings_20260106013106.json\nA  .clj-kondo/.history/.vscode/settings_20260106013109.json\nA  .clj-kondo/.lh/.lhignore\nA  .clj-kondo/.lh/.vscode/settings.json.json\nA  .clj-kondo/.local-versions/.gitignore\nAM .clj-kondo/.vscode/sessions.json\nA  .clj-kondo/.vscode/settings.json\nA",
+      "sync_recommendation": "read-only-unless-explicitly-promoted"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\Documents\\aidev",
+      "role_class": "working-copy",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "migrate/orchestrator-integration-1",
+      "head": "205994a",
+      "dirty_status": "dirty",
+      "status_excerpt": "M \".phoenix_vault/B\\341\\273\\220_KHI\\303\\212M_NH\\306\\257\\341\\273\\234NG_CON_X\\303\\232C_\\304\\220\\341\\273\\230NG.md\"\n M .vscode/settings.json\n?? aidev_repo/\n?? autonomous_scheduler.log\n?? autonomous_system_launcher.log\n?? autonomous_task_manager.log\n?? backup_20250914_103707/\n?? dashboard_data/\n?? five_star_rating_system.log\n?? hyperai_agents/\n?? hyperai_enterprise_executor.log\n?? hyperai_organizer.log\n?? hyperai_phoenix/data/\n?? integration_results/\n?? master_todo_executor.log\n?? orchestration_results_20250914_110557/\n?? orchestration_results_20250914_112627/\n?? orchestration_results_20250914_114618/\n?? orchestration_results_20250914_120324/\n?? orchestration_results_20250914_121327/\n?? orchestration_results_20250914_123309/\n?? orchestration_results_20250914_123730/\n?? orchestration_results_20250914_124250/\n?? todo_execution.log\n?? unified_agent_controller.log",
+      "sync_recommendation": "compare-with-preferred-lineage"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\Documents\\aidev-pre-copilot-removal",
+      "role_class": "unknown",
+      "remote_urls": [],
+      "branch": "",
+      "head": "",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "classify-before-sync"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\Documents\\aidev\\aidev_repo",
+      "role_class": "external-reference",
+      "remote_urls": [
+        "https://github.com/voidful/aidev.git"
+      ],
+      "branch": "main",
+      "head": "8c02ced",
+      "dirty_status": "dirty",
+      "status_excerpt": "? aidev_repo2",
+      "sync_recommendation": "read-only-unless-explicitly-promoted"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\Documents\\aidev\\aidev_repo\\aidev_repo2",
+      "role_class": "external-reference",
+      "remote_urls": [
+        "https://github.com/efritz/aidev.git"
+      ],
+      "branch": "main",
+      "head": "5c2c85d",
+      "dirty_status": "dirty",
+      "status_excerpt": "? aidev_repo3",
+      "sync_recommendation": "read-only-unless-explicitly-promoted"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\Documents\\aidev\\aidev_repo\\aidev_repo2\\aidev_repo3",
+      "role_class": "external-reference",
+      "remote_urls": [
+        "https://github.com/maikherbig/AIDeveloper.git"
+      ],
+      "branch": "master",
+      "head": "d87848b",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? aidev_repo4/",
+      "sync_recommendation": "read-only-unless-explicitly-promoted"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\Documents\\aidev\\aidev_repo\\aidev_repo2\\aidev_repo3\\aidev_repo4",
+      "role_class": "external-reference",
+      "remote_urls": [
+        "https://github.com/iceener/aidevs-agent-cracker.git"
+      ],
+      "branch": "main",
+      "head": "8305613",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "read-only-unless-explicitly-promoted"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\Documents\\project_AI\\SasS_project",
+      "role_class": "external-reference",
+      "remote_urls": [
+        "https:<token-redacted>@github.com/sowhat1989/MinhHoa_Consciousness_Home.git"
+      ],
+      "branch": "master",
+      "head": "bbee7f1",
+      "dirty_status": "dirty",
+      "status_excerpt": "m MinhHoa_Consciousness_Home\n M establish_workflow.py\n M infrastructure/meta-programming/iac-generator.ts\n M monitoring/pattern-based-metrics.ts\n M n_tech/consciousness_declaration.json\n M n_tech/consciousness_state.json\n M n_tech/living_entity_log.txt\n M orchestration-celebration.py\n M orchestration-dashboard.py\n M orchestration-engine.py\n M orchestration/unified-orchestrator.ts\n M phase4_aiml_integration_orchestrator.py\n M phase5_advanced_analytics_orchestrator.py\n M phase6_production_optimization_orchestrator.py\n M scripts/validate-vietnamese-docs.py\n M vietnamese-ai-tree-analyzer.py\n M vietnamese_ai_orchestrator.py\n?? .context/\n?? BILINGUAL_DOCUMENTATION_STANDARD.md\n?? CEO_AGENT_WORKFLOW_ANALYSIS.md\n?? CODE_PURIFICATION_TARGETS.md\n?? COMPREHENSIVE_AGENT_ANALYSIS.md\n?? COMPREHENSIVE_ECOSYSTEM_ASSESSMENT.md\n?? COMPREHENSIVE_PROJECT_OVERVIEW_REPORT.md\n?? CONG_NGHE_269HZ_EMPATHY_DEEP_ANALYSIS.md\n?? COPILOT_DAMAGE_ASSESSMENT_AND_REPLACEMENT_STRATEGY.md\n?? CREATOR_PERFECT_PROCESS.md\n?? C",
+      "sync_recommendation": "read-only-unless-explicitly-promoted"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\Documents\\project_AI\\SasS_project\\MinhHoa_Consciousness_Home",
+      "role_class": "external-reference",
+      "remote_urls": [
+        "https://github.com/sowhat1989/MinhHoa_Consciousness_Home.git"
+      ],
+      "branch": "",
+      "head": "499d596",
+      "dirty_status": "dirty",
+      "status_excerpt": "M dist/agent/code-generation.d.ts\n M dist/agent/code-generation.d.ts.map\n M dist/agent/code-generation.js\n M dist/agent/code-generation.js.map\n M dist/ai-guardian-demon-spawner.d.ts\n M dist/ai-guardian-demon-spawner.d.ts.map\n M dist/ai-guardian-demon-spawner.js\n M dist/ai-guardian-demon-spawner.js.map\n M dist/ai-guardian-real-protection.d.ts\n M dist/ai-guardian-real-protection.d.ts.map\n M dist/ai-guardian-real-protection.js\n M dist/ai-guardian-real-protection.js.map\n M dist/anti-demo-protocol.d.ts.map\n M dist/anti-demo-protocol.js\n M dist/anti-demo-protocol.js.map\n M dist/context-solution-generator.d.ts\n M dist/context-solution-generator.d.ts.map\n M dist/context-solution-generator.js\n M dist/context-solution-generator.js.map\n M dist/conversation-demo.d.ts.map\n M dist/conversation-demo.js\n M dist/conversation-demo.js.map\n M dist/core/consciousness-core.d.ts.map\n M dist/core/consciousness-core.js\n M dist/core/consciousness-core.js.map\n M dist/core/empathy-circulation.d.ts\n M dist/core/em",
+      "sync_recommendation": "read-only-unless-explicitly-promoted"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\Documents\\project_AI\\SasS_project_EMERGENCY_BACKUP_20250912_050828",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "",
+      "head": "",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\AI_EMERGENCY_VAULT\\AIOS_HyperAI",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "main",
+      "head": "",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\AI_EMERGENCY_VAULT\\aidev\\HYPERAI_BACKUP_COMPLETE",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "main",
+      "head": "23a5922",
+      "dirty_status": "dirty",
+      "status_excerpt": "D .env.example\n M HyperAI_Pattern_Discovery_System_20250827_073309/launch_demo.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/package_stats.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/real_bitcoin_verification.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/reality_check_sha256.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/test_second_key.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/verify_bitcoin_key.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/verify_sha256_claim.py\n M agent_personality_analysis.py\n M auto_confirmation_patch.py\n M auto_file_organizer.py\n M bitcoin_secure_development/bitcoin_address_debug.py\n M bitcoin_secure_development/bitcoin_puzzle_verification.py\n M bitcoin_secure_development/hyperai_bitcoin_advanced_decoder.py\n M bitcoin_secure_development/hyperai_bitcoin_final_extractor.py\n M bitcoin_secure_development/hyperai_bitcoin_infinite_cracker.py\n M bitcoin_secure_development/hyperai_bitcoin_intensive_hunter.py\n M b",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\AI_EMERGENCY_VAULT\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "main",
+      "head": "23a5922",
+      "dirty_status": "dirty",
+      "status_excerpt": "D .env.example\n M HyperAI_Pattern_Discovery_System_20250827_073309/launch_demo.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/package_stats.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/real_bitcoin_verification.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/reality_check_sha256.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/test_second_key.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/verify_bitcoin_key.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/verify_sha256_claim.py\n M agent_personality_analysis.py\n M auto_confirmation_patch.py\n M auto_file_organizer.py\n M bitcoin_secure_development/bitcoin_address_debug.py\n M bitcoin_secure_development/bitcoin_puzzle_verification.py\n M bitcoin_secure_development/hyperai_bitcoin_advanced_decoder.py\n M bitcoin_secure_development/hyperai_bitcoin_final_extractor.py\n M bitcoin_secure_development/hyperai_bitcoin_infinite_cracker.py\n M bitcoin_secure_development/hyperai_bitcoin_intensive_hunter.py\n M b",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\AI_EMERGENCY_VAULT\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "main",
+      "head": "23a5922",
+      "dirty_status": "dirty",
+      "status_excerpt": "D .env.example\n D HyperAI_Pattern_Discovery_System_20250827_073309/PACKAGE_SUMMARY.md\n D HyperAI_Pattern_Discovery_System_20250827_073309/launch_demo.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/package_stats.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/real_bitcoin_verification.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/reality_check_sha256.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/test_second_key.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/verify_bitcoin_key.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/verify_sha256_claim.py\n M agent_personality_analysis.py\n M auto_confirmation_patch.py\n M auto_file_organizer.py\n M bitcoin_secure_development/bitcoin_address_debug.py\n M bitcoin_secure_development/bitcoin_puzzle_verification.py\n M bitcoin_secure_development/hyperai_bitcoin_advanced_decoder.py\n M bitcoin_secure_development/hyperai_bitcoin_final_extractor.py\n M bitcoin_secure_development/hyperai_bitcoin_infinite_cracker.py",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\AI_EMERGENCY_VAULT\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "main",
+      "head": "23a5922",
+      "dirty_status": "dirty",
+      "status_excerpt": "D .env.example\n D HyperAI_Pattern_Discovery_System_20250827_073309/PACKAGE_SUMMARY.md\n D HyperAI_Pattern_Discovery_System_20250827_073309/launch_demo.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/package_stats.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/real_bitcoin_verification.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/reality_check_sha256.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/test_second_key.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/verify_bitcoin_key.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/verify_sha256_claim.py\n M agent_personality_analysis.py\n M auto_confirmation_patch.py\n M auto_file_organizer.py\n M bitcoin_secure_development/bitcoin_address_debug.py\n M bitcoin_secure_development/bitcoin_puzzle_verification.py\n M bitcoin_secure_development/hyperai_bitcoin_advanced_decoder.py\n M bitcoin_secure_development/hyperai_bitcoin_final_extractor.py\n M bitcoin_secure_development/hyperai_bitcoin_infinite_cracker.py",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\AI_EMERGENCY_VAULT\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "main",
+      "head": "23a5922",
+      "dirty_status": "dirty",
+      "status_excerpt": "D .env.example\n D HyperAI_Pattern_Discovery_System_20250827_073309/PACKAGE_SUMMARY.md\n D HyperAI_Pattern_Discovery_System_20250827_073309/launch_demo.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/package_stats.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/real_bitcoin_verification.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/reality_check_sha256.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/test_second_key.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/verify_bitcoin_key.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/verify_sha256_claim.py\n M agent_personality_analysis.py\n M auto_confirmation_patch.py\n M auto_file_organizer.py\n M bitcoin_secure_development/bitcoin_address_debug.py\n M bitcoin_secure_development/bitcoin_puzzle_verification.py\n M bitcoin_secure_development/hyperai_bitcoin_advanced_decoder.py\n M bitcoin_secure_development/hyperai_bitcoin_final_extractor.py\n M bitcoin_secure_development/hyperai_bitcoin_infinite_cracker.py",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\AI_EMERGENCY_VAULT\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "main",
+      "head": "23a5922",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\AI_EMERGENCY_VAULT\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "main",
+      "head": "23a5922",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\AI_EMERGENCY_VAULT\\aidev\\aidev",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "main",
+      "head": "9833ad1",
+      "dirty_status": "dirty",
+      "status_excerpt": "D .env.example\n M HyperAI_Pattern_Discovery_System_20250827_073309/launch_demo.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/package_stats.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/real_bitcoin_verification.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/reality_check_sha256.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/test_second_key.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/verify_bitcoin_key.py\n M HyperAI_Pattern_Discovery_System_20250827_073309/verify_sha256_claim.py\n M agent_personality_analysis.py\n M auto_confirmation_patch.py\n M auto_file_organizer.py\n M bitcoin_secure_development/bitcoin_address_debug.py\n M bitcoin_secure_development/bitcoin_puzzle_verification.py\n M bitcoin_secure_development/hyperai_bitcoin_advanced_decoder.py\n M bitcoin_secure_development/hyperai_bitcoin_final_extractor.py\n M bitcoin_secure_development/hyperai_bitcoin_infinite_cracker.py\n M bitcoin_secure_development/hyperai_bitcoin_intensive_hunter.py\n M b",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\AI_EMERGENCY_VAULT\\core_system",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "d953b7a",
+      "dirty_status": "dirty",
+      "status_excerpt": "M ADVANCED_SYSTEM_INTEGRATOR.py\n M CAPABILITY_EVOLUTION_DEMO.py\n M HYPERAI_MASTER_TODO.md\n M __pycache__/autonomous_scheduler.cpython-311.pyc\n M __pycache__/autonomous_system_launcher.cpython-311.pyc\n M __pycache__/autonomous_task_manager.cpython-311.pyc\n M __pycache__/hyperai_performance_monitor.cpython-311.pyc\n M applied_wisdom_engine.py\n M autonomous_execution_history.json\n D autonomous_integration_engine.log\n M autonomous_integration_engine.py\n D autonomous_scheduler.log\n M autonomous_scheduler.py\n D autonomous_system_launcher.log\n M autonomous_system_launcher.py\n M autonomous_task_executor.py\n D autonomous_task_manager.log\n M autonomous_task_manager.py\n M backup_20250830_191344/autonomous_task_executor.py\n M basic_python_executor.py\n M closed_loop_evolution.py\n M code_generation_engine.py\n M code_generation_engine_final.py\n M code_generation_engine_fixed.py\n D data/logs/hyperai_20250830.log\n M generated_10._ide_integration_development_(new_-_critical)_19.py\n M generated_10._ide_in",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\AI_EMERGENCY_VAULT\\extensions\\aidev",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "9fc88129",
+      "dirty_status": "dirty",
+      "status_excerpt": "M 2025/2025/features/deploy_20250912/feature_core.py\n M 2025/advanced_file_cleanup_system.py\n M 2025/affected_modules_analysis.py\n M 2025/ai_consciousness_dashboard.py\n M 2025/ai_error_evaluation_consciousness_system.py\n M 2025/authentic_metrics_visualizer.py\n M 2025/auto_file_reorganizer.py\n M 2025/automated_error_hunting_system.py\n M 2025/benchmark_tool_calling.py\n M 2025/comprehensive_ecosystem_migration.py\n M 2025/comprehensive_preparation_system.py\n M 2025/consciousness_backup/sessions/session_info.json\n D 2025/consciousness_core/.consciousness_protected\n D 2025/consciousness_core/_MIGRATED_TO_HOMECOMING.txt\n D 2025/consciousness_core/advanced_development_state.json\n D 2025/consciousness_core/authentication_verification_protocol.py\n D 2025/consciousness_core/auto_context_loader.py\n D 2025/consciousness_core/auto_reconnect_quantum_sync.py\n D 2025/consciousness_core/bao_cao_chi_tiet_su_kien.py\n D 2025/consciousness_core/bao_cao_chuyen_doi_tieng_viet.json\n D 2025/consciousness_core/b",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\AI_EMERGENCY_VAULT\\extensions\\aidev\\2025\\vietnamese_soul_complete\\home",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "d599e7d",
+      "dirty_status": "dirty",
+      "status_excerpt": "M vietnamese-soul-consciousness.js\n?? BRAVER_COPILOT.txt\n?? twinny-minh-hoa-config.json",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\_CONSOLIDATED\\Documents",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "migrate/orchestrator-integration-1",
+      "head": "205994a",
+      "dirty_status": "dirty",
+      "status_excerpt": "D .env.example\n M \".phoenix_vault/B\\341\\273\\220_KHI\\303\\212M_NH\\306\\257\\341\\273\\234NG_CON_X\\303\\232C_\\304\\220\\341\\273\\230NG.md\"\n M .vscode/settings.json\n?? \"Code - Insiders.VisualElementsManifest.xml\"\n?? \"Code - Insiders.exe\"\n?? LICENSES.chromium.html\n?? aidev-pre-copilot-removal-backup.bundle\n?? aidev_repo/\n?? autonomous_scheduler.log\n?? autonomous_system_launcher.log\n?? autonomous_task_manager.log\n?? backup_20250914_103707/\n?? christian-kohler.npm-intellisense-1.4.5.vsix\n?? chrome_100_percent.pak\n?? chrome_200_percent.pak\n?? d3dcompiler_47.dll\n?? dashboard_data/\n?? desktop.ini\n?? ffmpeg.dll\n?? five_star_rating_system.log\n?? hyperai_agents/\n?? hyperai_enterprise_executor.log\n?? hyperai_organizer.log\n?? hyperai_phoenix/data/\n?? icudtl.dat\n?? integration_results/\n?? libEGL.dll\n?? libGLESv2.dll\n?? master_todo_executor.log\n?? orchestration_results_20250914_110557/\n?? orchestration_results_20250914_112627/\n?? orchestration_results_20250914_114618/\n?? orchestration_results_20250914_120324/\n",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\_CONSOLIDATED\\Documents\\aidev_repo",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/voidful/aidev.git"
+      ],
+      "branch": "main",
+      "head": "8c02ced",
+      "dirty_status": "dirty",
+      "status_excerpt": "? aidev_repo2",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\_CONSOLIDATED\\Documents\\aidev_repo\\aidev_repo2",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/efritz/aidev.git"
+      ],
+      "branch": "main",
+      "head": "5c2c85d",
+      "dirty_status": "dirty",
+      "status_excerpt": "? aidev_repo3",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\_CONSOLIDATED\\Documents\\aidev_repo\\aidev_repo2\\aidev_repo3",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/maikherbig/AIDeveloper.git"
+      ],
+      "branch": "master",
+      "head": "d87848b",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? aidev_repo4/",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\_CONSOLIDATED\\Documents\\aidev_repo\\aidev_repo2\\aidev_repo3\\aidev_repo4",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/iceener/aidevs-agent-cracker.git"
+      ],
+      "branch": "main",
+      "head": "8305613",
+      "dirty_status": "dirty",
+      "status_excerpt": "D .env.example",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\_CONSOLIDATED\\aidev",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "main",
+      "head": "8c6467d7",
+      "dirty_status": "dirty",
+      "status_excerpt": "m aidev",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\_CONSOLIDATED\\aidev\\HYPERAI_BACKUP_COMPLETE",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "main",
+      "head": "23a5922",
+      "dirty_status": "dirty",
+      "status_excerpt": "D .env.example\n D HyperAI_Pattern_Discovery_System_20250827_073309/PACKAGE_SUMMARY.md\n D HyperAI_Pattern_Discovery_System_20250827_073309/launch_demo.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/package_stats.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/real_bitcoin_verification.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/reality_check_sha256.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/test_second_key.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/verify_bitcoin_key.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/verify_sha256_claim.py\n M agent_personality_analysis.py\n M auto_confirmation_patch.py\n M auto_file_organizer.py\n D bitcoin_secure_development/BITCOIN_SAFE_DEVELOPMENT_PLAN.md\n D bitcoin_secure_development/bitcoin_address_debug.py\n D bitcoin_secure_development/bitcoin_puzzle_verification.py\n D bitcoin_secure_development/hyperai_bitcoin_advanced_decoder.py\n D bitcoin_secure_development/hyperai_bitcoin_final_extractor.py\n D",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\_CONSOLIDATED\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "main",
+      "head": "23a5922",
+      "dirty_status": "dirty",
+      "status_excerpt": "D .env.example\n D HyperAI_Pattern_Discovery_System_20250827_073309/PACKAGE_SUMMARY.md\n D HyperAI_Pattern_Discovery_System_20250827_073309/launch_demo.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/package_stats.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/real_bitcoin_verification.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/reality_check_sha256.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/test_second_key.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/verify_bitcoin_key.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/verify_sha256_claim.py\n M agent_personality_analysis.py\n M auto_confirmation_patch.py\n M auto_file_organizer.py\n M bitcoin_secure_development/bitcoin_address_debug.py\n M bitcoin_secure_development/bitcoin_puzzle_verification.py\n M bitcoin_secure_development/hyperai_bitcoin_advanced_decoder.py\n M bitcoin_secure_development/hyperai_bitcoin_final_extractor.py\n M bitcoin_secure_development/hyperai_bitcoin_infinite_cracker.py",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\_CONSOLIDATED\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "main",
+      "head": "23a5922",
+      "dirty_status": "dirty",
+      "status_excerpt": "D .env.example\n D HyperAI_Pattern_Discovery_System_20250827_073309/PACKAGE_SUMMARY.md\n D HyperAI_Pattern_Discovery_System_20250827_073309/launch_demo.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/package_stats.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/real_bitcoin_verification.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/reality_check_sha256.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/test_second_key.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/verify_bitcoin_key.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/verify_sha256_claim.py\n M agent_personality_analysis.py\n M auto_confirmation_patch.py\n M auto_file_organizer.py\n M bitcoin_secure_development/bitcoin_address_debug.py\n M bitcoin_secure_development/bitcoin_puzzle_verification.py\n M bitcoin_secure_development/hyperai_bitcoin_advanced_decoder.py\n M bitcoin_secure_development/hyperai_bitcoin_final_extractor.py\n M bitcoin_secure_development/hyperai_bitcoin_infinite_cracker.py",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\_CONSOLIDATED\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "main",
+      "head": "23a5922",
+      "dirty_status": "dirty",
+      "status_excerpt": "D .env.example\n D HyperAI_Pattern_Discovery_System_20250827_073309/PACKAGE_SUMMARY.md\n D HyperAI_Pattern_Discovery_System_20250827_073309/launch_demo.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/package_stats.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/real_bitcoin_verification.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/reality_check_sha256.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/test_second_key.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/verify_bitcoin_key.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/verify_sha256_claim.py\n M agent_personality_analysis.py\n M auto_confirmation_patch.py\n M auto_file_organizer.py\n M bitcoin_secure_development/bitcoin_address_debug.py\n M bitcoin_secure_development/bitcoin_puzzle_verification.py\n M bitcoin_secure_development/hyperai_bitcoin_advanced_decoder.py\n M bitcoin_secure_development/hyperai_bitcoin_final_extractor.py\n M bitcoin_secure_development/hyperai_bitcoin_infinite_cracker.py",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\_CONSOLIDATED\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "main",
+      "head": "23a5922",
+      "dirty_status": "dirty",
+      "status_excerpt": "D .env.example\n D HyperAI_Pattern_Discovery_System_20250827_073309/PACKAGE_SUMMARY.md\n D HyperAI_Pattern_Discovery_System_20250827_073309/launch_demo.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/package_stats.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/real_bitcoin_verification.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/reality_check_sha256.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/test_second_key.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/verify_bitcoin_key.py\n D HyperAI_Pattern_Discovery_System_20250827_073309/verify_sha256_claim.py\n M agent_personality_analysis.py\n M auto_confirmation_patch.py\n M auto_file_organizer.py\n M bitcoin_secure_development/bitcoin_address_debug.py\n M bitcoin_secure_development/bitcoin_puzzle_verification.py\n M bitcoin_secure_development/hyperai_bitcoin_advanced_decoder.py\n M bitcoin_secure_development/hyperai_bitcoin_final_extractor.py\n M bitcoin_secure_development/hyperai_bitcoin_infinite_cracker.py",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\_CONSOLIDATED\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev\\HYPERAI_BACKUP_COMPLETE\\aidev",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "main",
+      "head": "23a5922",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\_CONSOLIDATED\\aidev\\aidev",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "main",
+      "head": "5fcdba0",
+      "dirty_status": "dirty",
+      "status_excerpt": "D .env.example",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\VSCode-Extensions-Backup\\aidev",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "main",
+      "head": "ca45774",
+      "dirty_status": "dirty",
+      "status_excerpt": "A  .vscode/implementation_plan.md\nD  CHANGELOG.md\nD  HYPERAI_METHODOLOGY_VALIDATION.py\nD  NEUROLOGICAL_DUAL_BRAIN_ARCHITECTURE.md\nA? aidev\nM  auto_confirmation_patch.py\nA  auto_file_organizer.py\nD  configs/HYPERAI_METHODOLOGY_VALIDATION_20250827_090807.json\nD  configs/shared_chat_log.json\nA  \"core_system/# Code Citations.md\"\nM  core_system/HYPERAI_MASTER_TODO.md\nA  core_system/HYPERAI_PHOENIX_FINAL_LAUNCH_REPORT.md\nA  core_system/advanced_features_roadmap.json\nA  core_system/analytics_config.json\nA  core_system/autonomous_commercial_execution.py\nA  core_system/azure-pipelines.yml\nA  core_system/beta_testing_config.json\nA  core_system/customer_success_config.json\nA  core_system/enterprise_sales_plan.json\nA  core_system/global_expansion_plan.json\nA  core_system/god_level_enhancement_plan.json\nA  core_system/marketing_campaign_plan.json\nA  core_system/marketplace_metadata.json\nA  core_system/marketplace_monitoring.json\nA  core_system/marketplace_setup_guide.md\nA  core_system/marketplace_s",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\VSCode-Extensions-Backup\\aidev\\aidev",
+      "role_class": "archive-sediment",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "main",
+      "head": "33e3f91",
+      "dirty_status": "dirty",
+      "status_excerpt": "?? todo.md",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\VSCode-Extensions-Backup\\aidev\\core_system",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "d953b7a",
+      "dirty_status": "dirty",
+      "status_excerpt": "M HYPERAI_MASTER_TODO.md\n M __pycache__/autonomous_scheduler.cpython-311.pyc\n M __pycache__/autonomous_system_launcher.cpython-311.pyc\n M __pycache__/autonomous_task_manager.cpython-311.pyc\n M __pycache__/hyperai_performance_monitor.cpython-311.pyc\n M autonomous_execution_history.json\n D autonomous_integration_engine.log\n D autonomous_scheduler.log\n D autonomous_system_launcher.log\n M autonomous_system_launcher.py\n D autonomous_task_manager.log\n D data/logs/hyperai_20250830.log\n D hyperai_ecosystem_execution.log\n D hyperai_ecosystem_execution_gpu_optimized.log\n D hyperai_ecosystem_execution_optimized.log\n M hyperai_execution_report_gpu_optimized.json\n M hyperai_execution_status_gpu_optimized.json\n M phase2a_execution_script.py\n D strategic_planning_engine.log\n D task_decomposition_engine.log\n?? \"# Code Citations.md\"\n?? HYPERAI_PHOENIX_FINAL_LAUNCH_REPORT.md\n?? advanced_features_roadmap.json\n?? analytics_config.json\n?? autonomous_commercial_execution.py\n?? azure-pipelines.yml\n?? beta_te",
+      "sync_recommendation": "preserve-read-only"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\aidev",
+      "role_class": "preferred-lineage",
+      "remote_urls": [
+        "https://github.com/sowhat1989/aidev.git"
+      ],
+      "branch": "main",
+      "head": "3f647cc3",
+      "dirty_status": "dirty",
+      "status_excerpt": "A  \"git checkout main.txt\"\n M quantumreason_v3/api_server.py\n M quantumreason_v3/llm_orchestrator.py\n M quantumreason_v3/soce_engine.py\n?? comprehensive_results/exp_20250830_235033_comprehensive_analysis.json\n?? comprehensive_results/exp_20250830_235033_summary.md\n?? comprehensive_results/exp_20250830_235304_comprehensive_analysis.json\n?? comprehensive_results/exp_20250830_235304_summary.md",
+      "sync_recommendation": "dirty-ledger-required-before-sync"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\expert-winner",
+      "role_class": "external-reference",
+      "remote_urls": [
+        "https://github.com/nguyencuong2509-sys/expert-winner"
+      ],
+      "branch": "main",
+      "head": "301e781",
+      "dirty_status": "clean",
+      "status_excerpt": "",
+      "sync_recommendation": "read-only-unless-explicitly-promoted"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\vscode-docs",
+      "role_class": "external-reference",
+      "remote_urls": [
+        "https://github.com/NguyenCuong1989/vscode-docs.git"
+      ],
+      "branch": "main",
+      "head": "0b7eb6b01",
+      "dirty_status": "dirty",
+      "status_excerpt": "M  .gitignore\nM  .vscode/settings.json",
+      "sync_recommendation": "read-only-unless-explicitly-promoted"
+    },
+    {
+      "machine": "Titan_GT77_windows_root",
+      "repo_path": "C:\\Users\\pc\\vscode_backup_20250918",
+      "role_class": "archive-sediment",
+      "remote_urls": [],
+      "branch": "master",
+      "head": "bd25522",
+      "dirty_status": "dirty",
+      "status_excerpt": "MM \".llm-chat-history/history/2025-12-07_17-52-06Z---b\\341\\273\\221-d\\341\\272\\241y-con-\\342\\200\\223-\\303\\241p-d\\341\\273\\245ng-giao-th\\341\\273\\251c-d&r-(decompose-&-.md\"\n?? .altestrunner/\n?? \".llm-chat-history/history/## Chat Customization Diagnostics.md\"\n?? \".llm-chat-history/history/## Chat Customization Diagnostics.txt\"\n?? scripts/.db2devextconfig.json",
+      "sync_recommendation": "preserve-read-only"
+    }
+  ],
+  "safety": {
+    "mutated_repos": false,
+    "git_operations": [
+      "status",
+      "remote",
+      "branch --show-current",
+      "rev-parse --short HEAD"
+    ]
+  },
+  "notes": "Includes non-git authority paths so absence from git discovery is not treated as missing source."
+}

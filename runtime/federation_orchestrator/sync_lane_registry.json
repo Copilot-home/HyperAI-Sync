@@ -1,0 +1,61 @@
+{
+  "schema_version": "2026-04-21.sync-lane.v1",
+  "created_at": "2026-04-21",
+  "lane_id": "hyperai-sync",
+  "orchestration_mode": "GAM physical-scan + HyperAI local-first reconcile",
+  "agent_chain_status": "not_invoked",
+  "sync_principle": "git_is_transport_not_authority",
+  "authority_rule": "SSH && inventory && repo_role && dirty_ledger && explicit_sync_decision",
+  "machines": [
+    {
+      "machine_id": "titan_gt77",
+      "root_path": "C:\\Users\\pc\\HyperAI-Sync",
+      "role": "control_build_host",
+      "state_class": "source_lane",
+      "current_state": "bootstrap_dirty_ledger_verified",
+      "dirty_state": "untracked"
+    },
+    {
+      "machine_id": "macbook_m2",
+      "root_path": "/Users/andy/HyperAI-Sync",
+      "role": "secondary_creator_workstation",
+      "state_class": "source_lane",
+      "current_state": "bootstrap_pending"
+    }
+  ],
+  "allowed_content_classes": [
+    "governance_docs",
+    "memory_capsules",
+    "federation_registries",
+    "lineage_proofs",
+    "sync_tools",
+    "small_orchestration_scripts"
+  ],
+  "forbidden_content_classes": [
+    "runtime_artifacts",
+    "docker_state",
+    "model_weights",
+    "browser_profiles",
+    "ide_user_data",
+    "logs",
+    "db_files",
+    "caches",
+    "secrets",
+    "archives",
+    "packaged_runtime_repos"
+  ],
+  "promotion_gates": {
+    "repo_initialized": true,
+    "whitelist_installed": true,
+    "dirty_ledger_verified": true,
+    "cross_machine_match_ready": false
+  },
+  "lane_invariants": [
+    "Runtime_Mac_is_disjoint_from_Source_Git",
+    "Titan_sync_lane_must_not_import_runtime_artifacts",
+    "Mac_sync_lane_must_not_source_from_packaged_runtime_repo",
+    "No_pull_push_reset_clean_without_explicit_decision"
+  ],
+  "next_valid_action": "prepare_mac_lane_then_compare_only",
+  "last_bootstrap_at": "2026-04-21T07:15:44Z"
+}

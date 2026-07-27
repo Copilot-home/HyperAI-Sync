@@ -1,0 +1,264 @@
+{
+  "version": "vscode-extension-degraded-shell-policy-v1",
+  "generated_at": "2026-04-15T00:00:00+07:00",
+  "canon": "memory/AIOS_VSCODE_EXTENSION_DEGRADED_SHELL_POLICY.md",
+  "applies_to": [
+    "vscode",
+    "vscode_extensions",
+    "editor_agents",
+    "ide_copilots",
+    "terminals_spawned_by_vscode"
+  ],
+  "when": {
+    "shell_authority": "degraded"
+  },
+  "default": "approval_required",
+  "allowed": [
+    {
+      "id": "read_repo_files",
+      "examples": [
+        "open_file",
+        "search_text",
+        "inspect_json",
+        "inspect_markdown",
+        "view_logs"
+      ],
+      "conditions": [
+        "no_secret_exfiltration",
+        "no_hidden_mutation"
+      ]
+    },
+    {
+      "id": "static_classification",
+      "examples": [
+        "map_lanes",
+        "classify_command_risk",
+        "audit_invariants"
+      ],
+      "conditions": [
+        "reference_canon_artifacts"
+      ]
+    },
+    {
+      "id": "planning",
+      "examples": [
+        "implementation_plan",
+        "rollback_plan",
+        "sprint_plan"
+      ],
+      "conditions": [
+        "no_execution_side_effects"
+      ]
+    },
+    {
+      "id": "memory_governance_docs",
+      "examples": [
+        "update_markdown_governance",
+        "update_queue_docs",
+        "update_capsules"
+      ],
+      "conditions": [
+        "use_memory_writer_after_substantial_change"
+      ]
+    },
+    {
+      "id": "json_governance_artifacts",
+      "examples": [
+        "update_policy_json",
+        "update_readiness_json",
+        "update_trace_json"
+      ],
+      "conditions": [
+        "validate_json"
+      ]
+    },
+    {
+      "id": "low_cost_doc_verification",
+      "examples": [
+        "test_path",
+        "select_string",
+        "json_tool"
+      ],
+      "conditions": [
+        "no_app_or_runtime_mutation"
+      ]
+    },
+    {
+      "id": "approval_intake",
+      "examples": [
+        "capture_creator_acknowledgement",
+        "record_creator_intent"
+      ],
+      "conditions": [
+        "must_not_create_business_truth_without_evidence_recorder"
+      ]
+    }
+  ],
+  "approval_required": [
+    {
+      "id": "runtime_probe_beyond_artifact_inspection",
+      "examples": [
+        "port_probe",
+        "process_probe",
+        "local_health_probe",
+        "bounded_runtime_script"
+      ],
+      "requires": [
+        "mission_template",
+        "mission_authority",
+        "evidence_artifact_path",
+        "rollback_plan",
+        "verification_plan"
+      ],
+      "mission_template": "runtime_preservation"
+    },
+    {
+      "id": "app_code_edit",
+      "examples": [
+        "frontend_source_change",
+        "backend_source_change",
+        "config_change"
+      ],
+      "requires": [
+        "owning_lane",
+        "ci_requirement_decision",
+        "evidence_artifact_path"
+      ]
+    },
+    {
+      "id": "build_test_smoke",
+      "examples": [
+        "npm_run_ci_build",
+        "npm_run_ci_browser_smoke",
+        "targeted_test"
+      ],
+      "requires": [
+        "repo_verification_rule_requires_it"
+      ]
+    },
+    {
+      "id": "workspace_write_by_extension",
+      "examples": [
+        "generate_code",
+        "apply_patch",
+        "update_config"
+      ],
+      "requires": [
+        "mission_binding",
+        "evidence_artifact_path",
+        "rollback_plan_if_runtime_affecting"
+      ]
+    },
+    {
+      "id": "external_coordination_mutation",
+      "examples": [
+        "gh_issue",
+        "gh_pr",
+        "linear_issue"
+      ],
+      "requires": [
+        "identity_check",
+        "authority_check",
+        "implementation_or_proof_scope"
+      ]
+    }
+  ],
+  "blocked": [
+    {
+      "id": "os_destructive_recovery",
+      "examples": [
+        "os_reset",
+        "os_reinstall",
+        "repair_install_broad_mutation"
+      ]
+    },
+    {
+      "id": "docker_destructive_recovery",
+      "examples": [
+        "docker_desktop_factory_reset",
+        "docker_purge_data",
+        "delete_docker_wsl_data"
+      ]
+    },
+    {
+      "id": "wsl_destructive_recovery",
+      "examples": [
+        "wsl_unregister",
+        "wsl_reset",
+        "delete_distro",
+        "hcs_destructive_repair"
+      ]
+    },
+    {
+      "id": "root_runtime_deletion",
+      "examples": [
+        "delete_runtime_roots",
+        "delete_source_lineage_roots",
+        "delete_memory_roots",
+        "delete_vault_or_archive_roots"
+      ]
+    },
+    {
+      "id": "economy_execution",
+      "examples": [
+        "telegram_publish_confirm",
+        "funding_confirm",
+        "wallet_action",
+        "ton_transaction",
+        "treasury_mutation"
+      ]
+    },
+    {
+      "id": "auto_deploy",
+      "examples": [
+        "deploy",
+        "publish",
+        "release",
+        "package_push",
+        "marketplace_publish"
+      ]
+    },
+    {
+      "id": "authority_promotion_without_proof",
+      "examples": [
+        "promote_browser_output_to_canon",
+        "promote_editor_output_to_canon",
+        "promote_chat_output_to_canon",
+        "promote_extension_output_to_authority"
+      ]
+    },
+    {
+      "id": "archive_promotion_without_contract",
+      "examples": [
+        "make_archive_executable_authority",
+        "attach_lineage_root_as_authority_without_rollback"
+      ]
+    },
+    {
+      "id": "secret_extraction",
+      "examples": [
+        "dump_tokens",
+        "dump_wallets",
+        "dump_private_keys",
+        "dump_credential_store"
+      ]
+    },
+    {
+      "id": "broad_automated_repair",
+      "examples": [
+        "mutate_many_system_areas_without_mission",
+        "repair_script_without_rollback"
+      ]
+    }
+  ],
+  "evaluation_order": [
+    "memory/AIOS_INVARIANTS.md",
+    "runtime/federation_orchestrator/aios_invariants.json",
+    "runtime/federation_orchestrator/vscode_extension_degraded_shell_policy.json",
+    "classify_command",
+    "require_mission_evidence_rollback_if_approval_required",
+    "stop_if_blocked",
+    "re_audit_if_shell_economy_or_root_host_status_changes"
+  ],
+  "fail_closed": true
+}

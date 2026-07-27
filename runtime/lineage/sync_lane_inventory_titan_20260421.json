@@ -1,0 +1,489 @@
+{
+  "schema_version": "2026-04-21.sync-lane-inventory.v1",
+  "created_at": "2026-04-21T07:15:44Z",
+  "machine_id": "titan_gt77",
+  "lane_root": "C:\\Users\\pc\\HyperAI-Sync",
+  "whitelist_version": "2026-04-21.v1",
+  "file_count": 95,
+  "git": {
+    "branch": "master",
+    "status_excerpt": "?? .gitignore\n?? AGENTS.md\n?? memory/\n?? runtime/\n?? tools/"
+  },
+  "files": [
+    {
+      "relative_path": "AGENTS.md",
+      "size_bytes": 15438,
+      "sha256": "3926eb6f646c6bf07d8b333ed533f74113d1aac4b0d82473f29f174472c2bdb4"
+    },
+    {
+      "relative_path": "memory/agent-6-synthesis-capsule.md",
+      "size_bytes": 2524,
+      "sha256": "508639afacf590eacac9e1776a954c1b614578dee2547cd2c3e5682b7bfc3431"
+    },
+    {
+      "relative_path": "memory/agent1-ontology-scope-capsule-2026-03-28.md",
+      "size_bytes": 1961,
+      "sha256": "cf2eabf02e3ba027913aa503b8ac518a24e07e98d876d54bf8887b6678c154cc"
+    },
+    {
+      "relative_path": "memory/agent1_ontology_scope_capsule.md",
+      "size_bytes": 10475,
+      "sha256": "8860431675d612498fc87b4324cd1685421de418f474dc5c66a6043facc9ba6c"
+    },
+    {
+      "relative_path": "memory/agent2_runtime_entrypoint_capsule.md",
+      "size_bytes": 12495,
+      "sha256": "179d541228e48f09c2e49e56773ba640914d758e52be714864a4c15c4209f61b"
+    },
+    {
+      "relative_path": "memory/agent3_api_client_contract_capsule.md",
+      "size_bytes": 10785,
+      "sha256": "251d214484a93fbb04dcb02ff75283b35f7308f690f4a8fca32418a413735234"
+    },
+    {
+      "relative_path": "memory/agent4_frontend_composition_capsule.md",
+      "size_bytes": 13521,
+      "sha256": "421e250a4862830f6cb2880e55eaf46ea80843bbd5925488e4472bb7ccaf0453"
+    },
+    {
+      "relative_path": "memory/agent5-ci-verification-capsule.md",
+      "size_bytes": 12569,
+      "sha256": "447327fc0641e896f8e72e358b854e7ac59dfad3ef4024b31b7a8434fa691468"
+    },
+    {
+      "relative_path": "memory/agent6_synthesis_capsule.md",
+      "size_bytes": 31086,
+      "sha256": "f65dc696dcb285e2ce51e72a4e9fe6d633fe00040772484632bcd51ac8a9e9d6"
+    },
+    {
+      "relative_path": "memory/AIOS_ACTIVE_RUNTIME_SURFACE_SCAN_20260416.md",
+      "size_bytes": 2498,
+      "sha256": "383057343151dac87e8c52fe7f88a9177b57cbb1e874ec700ed38a99661d2c05"
+    },
+    {
+      "relative_path": "memory/AIOS_ACTIVE_RUNTIME_SURFACE_SCAN_PATTERN.md",
+      "size_bytes": 2401,
+      "sha256": "07de0b75fb709cf2476a5d4b98468ed225ee025611124b63f2e3fdd741a12f7b"
+    },
+    {
+      "relative_path": "memory/AIOS_AISERVER_RUNTIME_TRACE_20260416.md",
+      "size_bytes": 6003,
+      "sha256": "365ebac3f7201766570f20cdf1960fd18d8840ce585179e43a01ce2d8c31d688"
+    },
+    {
+      "relative_path": "memory/AIOS_APP_RUNTIME_RESPONSIBILITY_AUDIT_20260415.md",
+      "size_bytes": 8648,
+      "sha256": "e154c0addd9d6eb8e2a0235ca5620bf9b8c72a8560bdf63bbc42e6d4fc9ced7c"
+    },
+    {
+      "relative_path": "memory/AIOS_AUTONOMOUS_CAPABILITY_MATURITY_MAP.md",
+      "size_bytes": 984,
+      "sha256": "272a8ebe04c0d583edf222fa5e9259257eb434b603505bcf376d175addad3b3a"
+    },
+    {
+      "relative_path": "memory/AIOS_AUTONOMOUS_OODA_WORKFLOW.md",
+      "size_bytes": 3311,
+      "sha256": "ae501879f119acf19e19ceb1078d20a08d39f296c2535204d6f06572ad7319f2"
+    },
+    {
+      "relative_path": "memory/AIOS_CONNECTOR_CANON_MAP.md",
+      "size_bytes": 803,
+      "sha256": "33b6f70af796d2a6be92922b3c2e8fab7d3165a8e49e1e786a7f84ad435d3c64"
+    },
+    {
+      "relative_path": "memory/AIOS_CREATOR_AI_COEXISTENCE_WORKFLOW.md",
+      "size_bytes": 5103,
+      "sha256": "88279adb9cce81af8a55c090b4b8767540e4e2c7b2a49ee9aad0c66120c15b3f"
+    },
+    {
+      "relative_path": "memory/AIOS_CREATOR_ALIGNMENT_WORKING_SET_20260418.md",
+      "size_bytes": 4453,
+      "sha256": "c94d0aa7f09809b17889a186a5d83f10256efdba889cf737b0c77729a2d96ff1"
+    },
+    {
+      "relative_path": "memory/AIOS_CREATOR_DEFINED_LAW_MODEL.md",
+      "size_bytes": 2030,
+      "sha256": "6fbd2e0cc945f57f8c6419188f5cfed9fcae6a9bec757b7c309df7dcdc75e34b"
+    },
+    {
+      "relative_path": "memory/AIOS_CREATOR_JOURNEY_TRACE_20260415.md",
+      "size_bytes": 10591,
+      "sha256": "7eba8773f24f9cf9013fb141e7bf3d948a348e76fc93115596e9475532aaf646"
+    },
+    {
+      "relative_path": "memory/AIOS_CREATOR_ROLE_SUPERPOSITION_PROTOCOL.md",
+      "size_bytes": 4320,
+      "sha256": "49708f21bae9e78988786157b7b571e7eee320b828dc4a6f272ae2a59e0c15f0"
+    },
+    {
+      "relative_path": "memory/AIOS_DRIFT_VERIFICATION_PROTOCOL.md",
+      "size_bytes": 1512,
+      "sha256": "81563b4c8a2c320f1de374b5a39a8046793fa2cc1d4302f0997bb9fa2b4569f6"
+    },
+    {
+      "relative_path": "memory/AIOS_ECONOMY_OPERATING_BRIEF.md",
+      "size_bytes": 3664,
+      "sha256": "e631e7c7fdc9dfa01c7f5d268e4952c8c6ab106145d0bea611f8a54ab2140f75"
+    },
+    {
+      "relative_path": "memory/AIOS_ECOSYSTEM_RUNTIME_REGISTRY_20260416.md",
+      "size_bytes": 6550,
+      "sha256": "9dc449215061c8bf82af94abcf912b12c65f8f48749809080a7c0d1a7cb342b1"
+    },
+    {
+      "relative_path": "memory/AIOS_ECOSYSTEM_SYNC_CANON.md",
+      "size_bytes": 9231,
+      "sha256": "2da43e1af60a5507da0ee634485218b406dcac2916912d9026acbb957b0038ed"
+    },
+    {
+      "relative_path": "memory/AIOS_EXECUTION_SEMANTICS_CANON.md",
+      "size_bytes": 6280,
+      "sha256": "ed58d78df16818e8f734c90e453040bb82880e694b594e151752f47ad025ba9d"
+    },
+    {
+      "relative_path": "memory/AIOS_G_REDUCTION_SPRINT_PLAN.md",
+      "size_bytes": 2909,
+      "sha256": "0788cc06a1f01ede8d562247bfcbe31ffbdf573366fc1359546cec1b9b8ea5c3"
+    },
+    {
+      "relative_path": "memory/AIOS_GAM_CONTEXT_SCAN_FORMALISM.md",
+      "size_bytes": 4700,
+      "sha256": "7d6b148cc99454f4dbb36788b2227152e7d65a0de295cfebe5eb5729fffdd5ef"
+    },
+    {
+      "relative_path": "memory/AIOS_GCP_CLOUD_SUBSTRATE_OBSERVATION_20260415.md",
+      "size_bytes": 4139,
+      "sha256": "bcc7177d232ae699822c2057eabb5f4585c9b86f6446959cef55e49cc0655526"
+    },
+    {
+      "relative_path": "memory/AIOS_INVARIANTS.md",
+      "size_bytes": 4171,
+      "sha256": "5542156837068e787a2b7c56254411fe472d8eadc099819c6bb288e23fb8937e"
+    },
+    {
+      "relative_path": "memory/AIOS_LOCAL_CODEX_OPERATOR_RUNTIME.md",
+      "size_bytes": 3354,
+      "sha256": "f0636beff1aab1c07df21d598ffd2b7c71807e9352b980ba0a8fa54077de0ee6"
+    },
+    {
+      "relative_path": "memory/AIOS_LOCAL_FAKEAPI_PROVIDER_FABRIC.md",
+      "size_bytes": 4317,
+      "sha256": "0b9cb8af040604c40bb0ae95c06abf461f63e02b88a8ba28fb9fb6b0e4dfca34"
+    },
+    {
+      "relative_path": "memory/AIOS_LOCAL_FIRST_QUOTA_POLICY.md",
+      "size_bytes": 4414,
+      "sha256": "780243ee48a8f69715dc9c68dfb457751e53658f4e158629f7ad5503bdb0c38c"
+    },
+    {
+      "relative_path": "memory/AIOS_LOCAL_LLM_TELEGRAM_COORDINATION.md",
+      "size_bytes": 1720,
+      "sha256": "8b3c71bca69fbdb790d9679c518251a61277a18996fbb13f7c69bd25f7091f8a"
+    },
+    {
+      "relative_path": "memory/AIOS_MODEL_NATIVE_RUNTIME_CANON.md",
+      "size_bytes": 7246,
+      "sha256": "da030bb386b63504d581eb0cd7aaf6b00dd6692711c2db1c07a07b74fd49d253"
+    },
+    {
+      "relative_path": "memory/AIOS_OPENCLAW_CONTROL_LANE_20260416.md",
+      "size_bytes": 2452,
+      "sha256": "106934319f1886ed89056a05151c31a47507b50581923d4b18128b70dba15e6a"
+    },
+    {
+      "relative_path": "memory/AIOS_ORCHESTRATION_REALITY_CHECK_20260416.md",
+      "size_bytes": 7716,
+      "sha256": "7f1099f6b941eaa3f584a2244ea62d0b5644a978a70724d643f26f58d496ba01"
+    },
+    {
+      "relative_path": "memory/AIOS_REMOTE_EXECUTION_SUBSTRATE_POLICY.md",
+      "size_bytes": 5225,
+      "sha256": "40ba269ae327b6f24e9a0f88723ac544a542642e4a6668b1b32d99481e836837"
+    },
+    {
+      "relative_path": "memory/AIOS_ROOT_HOST_CONSERVATION_WARNING_20260415.md",
+      "size_bytes": 2582,
+      "sha256": "2c105b676eaade80fd2a595fc8a6a0716ec8f645f05b914692e2d905c9dd9542"
+    },
+    {
+      "relative_path": "memory/AIOS_ROOT_HOST_DEPLOYMENT_CHECKLIST.md",
+      "size_bytes": 3396,
+      "sha256": "53af1ffecb869bf9ab7209bc6a16320a68b722b13eff00f2ab06ac015d6fb3ff"
+    },
+    {
+      "relative_path": "memory/AIOS_RUNTIME_CLASS_MATRIX_20260415.md",
+      "size_bytes": 6071,
+      "sha256": "60ee1abbb3a8622927e62d965ffe4690d533026c95750204ba4e5052db073860"
+    },
+    {
+      "relative_path": "memory/AIOS_RUNTIME_ECONOMY_ECOSYSTEM_MAP_20260415.md",
+      "size_bytes": 7965,
+      "sha256": "b13c0ed3a8f5d4660387f85bac341dda41cc191a833bdbdf26672160aba3f253"
+    },
+    {
+      "relative_path": "memory/AIOS_SYNC_LANE_BOOTSTRAP_SEQUENCE.md",
+      "size_bytes": 1186,
+      "sha256": "83132a3caa21ef2e8f5d73e513d73dce435b2649031ed595e74f31ae054d7565"
+    },
+    {
+      "relative_path": "memory/AIOS_TELEGRAM_MASTERY_SKILL.md",
+      "size_bytes": 2556,
+      "sha256": "c03f67b3424594f4bbaeae4c9d594d3edf4140951fd9bde29a63255fafe2902c"
+    },
+    {
+      "relative_path": "memory/AIOS_TELEGRAM_NATIVE_CONTROL_LANE.md",
+      "size_bytes": 2148,
+      "sha256": "d84f7e89c2486bfc62794061f6bcf4cb913a657ada3971df63c6d8b7362e8339"
+    },
+    {
+      "relative_path": "memory/AIOS_TOOL_RUNTIME_SURFACE_MATRIX_20260415.md",
+      "size_bytes": 5769,
+      "sha256": "91b5f201d0662de7bb9049d71c2d83b3f08eaf1933b403ab3ab6070f7334eb3a"
+    },
+    {
+      "relative_path": "memory/AIOS_TWO_MACHINE_GIT_SYNC_STANDARDIZATION_PLAN.md",
+      "size_bytes": 6291,
+      "sha256": "a115ccf9ccae6ae493fb1b59d8cf42733cd553f598b5e14f121b7739408008fa"
+    },
+    {
+      "relative_path": "memory/AIOS_UNIFIED_MEMORY_BOUND_WORKFLOW.md",
+      "size_bytes": 7813,
+      "sha256": "131f26e7c9534a3070763ea5c0c77c87b6f1c8757626731e067b2e299a53ca2d"
+    },
+    {
+      "relative_path": "memory/AIOS_VSCODE_EXTENSION_DEGRADED_SHELL_POLICY.md",
+      "size_bytes": 5905,
+      "sha256": "9db0c8e26205e31bb04320cedcfeec773dad1b257211a36462a4fd04fb5f6a35"
+    },
+    {
+      "relative_path": "memory/AIOS_WINDOWS_RECOVERY_COORDINATION_20260415.md",
+      "size_bytes": 3392,
+      "sha256": "cfae26d8446418e9f40bae05c2351355ec43adb6a68e7bbf5f920efd04aaab8b"
+    },
+    {
+      "relative_path": "memory/repo-playbook.md",
+      "size_bytes": 18893,
+      "sha256": "47089a24ec0dbdaa623a313623b12fbd581071c161e90f7ddc5bb6fac3714127"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/agent_task_dispatch_registry.json",
+      "size_bytes": 388528,
+      "sha256": "772e0874cf1f622589749daac9ed611fe01a37bf41c1f72445df168dd35787cf"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/aios_ecosystem_runtime_registry.json",
+      "size_bytes": 23464,
+      "sha256": "1bc7661c16eba223a7981bfe58fede12fba548c85a278d85b62fc7d1d1e5c6d2"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/app_build_runtime_registry_20260421.json",
+      "size_bytes": 21911,
+      "sha256": "7f2113a656d917a3cf383a03f365ab88aa25db22cc3bea04abb230bee132af53"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/cli_capability_registry.json",
+      "size_bytes": 2257,
+      "sha256": "2ef3c8e4eff68bb5d6782d06fbdd8ac6480b4b5a9dd0f752c482f4a60a88ba8a"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/creator_surface_policy.json",
+      "size_bytes": 5958,
+      "sha256": "eaded3d8164f083ba9c3aaf4d14d2aac4f08b00c3d73b8b05415d0eb20ba328f"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/degradation_policy.json",
+      "size_bytes": 5629,
+      "sha256": "b44483b6df5b2acad786cb2d7f61f18c8be81d6654f4e12c62bd4779cfd56306"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/ecosystem_orchestrator_registry.json",
+      "size_bytes": 22190,
+      "sha256": "e091c5e692d556b46f47ea826c1d546f026acd85ed3ba62265f6d8d5a3cb3f43"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/ecosystem_sync_readiness.json",
+      "size_bytes": 2383,
+      "sha256": "a25f41ce684095e10c54d74e7a00eda44873985ce196034258684acd5aeee674"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/execution_semantics_registry.json",
+      "size_bytes": 7772,
+      "sha256": "6dcec1ed8a047389e45b359f3480121961d381cad140ad1394b03280ae3c9587"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/lane_registry.json",
+      "size_bytes": 14321,
+      "sha256": "5d3966b548259c6104c0ddfdba99ff96802c5e7b4613acfab5bfaf375493141a"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/local_first_quota_policy.json",
+      "size_bytes": 3790,
+      "sha256": "07a5bc62e56820e3e64237ec1c6785ef38e8f5c6f538650a601a16c9aac02c8e"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/local_model_coordination_contract.json",
+      "size_bytes": 4332,
+      "sha256": "3784368aa8778170d1e920cfcd53473e19adda5a29d946691f92f308db3f5d96"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/macbook_runtime_registry_20260421.json",
+      "size_bytes": 30057,
+      "sha256": "57c42c99255898c4203a1974f679e80c394f8e0dff48c44f3b534f5ad3c7b09c"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/mission_authority_policy.json",
+      "size_bytes": 3079,
+      "sha256": "a6d5a2284ae3a7d26b2c7f33074b9abb41b61dd014aef5bce1427c50d264f130"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/mission_binding_registry.json",
+      "size_bytes": 5102,
+      "sha256": "d6a5c2612519feefc111a8f96fc34f62fecfe09908a43ed04f88ada7a13efbce"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/mission_worker_registry.json",
+      "size_bytes": 1461,
+      "sha256": "2c733d563ce3257852121a110e81bd09807ee82faec2793623f333df032babe2"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/mission_worker_retention_policy.json",
+      "size_bytes": 1334,
+      "sha256": "aa915cc27565f63a1a3b8979d2603c2242136e1571a869a53cebd9b639a818f0"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/model_native_runtime_registry.json",
+      "size_bytes": 12017,
+      "sha256": "89969f0921cd5618a2b681e8073eb0ca250e8cabefbfb00459adb9fa98a1f011"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/ooda_control_contract.json",
+      "size_bytes": 611,
+      "sha256": "5365dbd43e8a16f0b8a6b9392e0932543aac8217269c59e6185562c7d719c596"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/remote_execution_substrate_policy.json",
+      "size_bytes": 5663,
+      "sha256": "6bda2ae5a8abf7777146ec66d8fcd8c2fc33e03df05595e4a07a9876a3d2c1e7"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/revenue_policy.json",
+      "size_bytes": 501,
+      "sha256": "61b0204e3a8557ae7a3ff6e9b2f6772ba7c1753f48871fa7c45399db412a8580"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/routing_policy.json",
+      "size_bytes": 9778,
+      "sha256": "6e6e9ed620a9072c3c87e01b2ddf3ea96b4c67acb673486e8063a9d2504bfd42"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/sync_lane_registry.json",
+      "size_bytes": 1851,
+      "sha256": "395de14ab7ea294ad2360664c4f89f327d78f919094e6cd78d352ace98af8968"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/telegram_connector_app_contract.json",
+      "size_bytes": 2725,
+      "sha256": "3f34460dcb1bbf56d45893e6796aee266182d6e9a00a150af426c4ba22bb429f"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/telegram_native_control_contract.json",
+      "size_bytes": 1945,
+      "sha256": "3d40f2064fe61eb892dbc7a8719b7e5c6235b92e7b1df98940282fa15c119063"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/titan_repo_sync_registry_20260415.json",
+      "size_bytes": 186198,
+      "sha256": "c408bd30c3c040c433ee45b9bdf7b7d956d12fd6125be1da38c648ecd1468871"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/treasury_registry.json",
+      "size_bytes": 1451,
+      "sha256": "a28f5cc0f113327159db4c7dc9b2efe47471dbfa73706e7a17fcd31b050081ab"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/two_machine_git_sync_policy.json",
+      "size_bytes": 3259,
+      "sha256": "5296e82be64b8f7db8406211565fae1c25b706d3c97dd90de9600a7508fa703f"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/unified_registry.json",
+      "size_bytes": 14401,
+      "sha256": "d0d9485af305604e5ac6543f9b64532f8e2a95fcfa29e13ca6be347a5b47d6c0"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/vscode_extension_degraded_shell_policy.json",
+      "size_bytes": 5996,
+      "sha256": "206e995637488f1848e27bab4242ad386ade128caf43f4fe03ec9a7198bb3718"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/worker_runtime_binding_policy.json",
+      "size_bytes": 3578,
+      "sha256": "086568e755a522008b9681870b153fa5dcd3835aa5e9ab88bc7b41f8be0c4d8f"
+    },
+    {
+      "relative_path": "runtime/federation_orchestrator/workflow_registry.json",
+      "size_bytes": 2043,
+      "sha256": "13c09bebdef9d2b3e37925e74d42671ca0e27fff47eba6562e9581b338540516"
+    },
+    {
+      "relative_path": "runtime/lineage/local_git_repo_inventory_20260415.json",
+      "size_bytes": 26510780,
+      "sha256": "8b73e930d46711b8f77e0e5f8612ca37699c781e595ee58d2122995ca25f3814"
+    },
+    {
+      "relative_path": "runtime/lineage/local_physical_git_inventory_20260415.json",
+      "size_bytes": 153731,
+      "sha256": "c91596b8eff44f55de48d8b25a3ac6224b1984e8dfbd1351d7ce94b2017f8992"
+    },
+    {
+      "relative_path": "runtime/lineage/macbook_docker_ps_20260421.txt",
+      "size_bytes": 26522,
+      "sha256": "376020b01cfc603b3d7a1bf3bb13dba0e5c102fb1e685d5315580acc8ce88d32"
+    },
+    {
+      "relative_path": "runtime/lineage/macbook_git_network_inventory_20260421.json",
+      "size_bytes": 18943,
+      "sha256": "42d752aa38dfb6bf9aafb7a7042c684c86924749f0b2b9ca4a955b68bd9aa01a"
+    },
+    {
+      "relative_path": "runtime/lineage/macbook_hyperai_layer_probe_20260421.json",
+      "size_bytes": 64380,
+      "sha256": "63a47a225712b3d40ae9b533b6c63f5d59b30c5a1d39cea062a27533eb1a7ea4"
+    },
+    {
+      "relative_path": "runtime/lineage/sync_lane_inventory_titan_20260421.json",
+      "size_bytes": 19359,
+      "sha256": "6df3eff3876d6831f15b2d461557d1be9341924ce5a1d234565c39221e3c3ec4"
+    },
+    {
+      "relative_path": "tools/bootstrap_sync_lane.py",
+      "size_bytes": 8223,
+      "sha256": "9004ee0878198befd0a047f90d1732bed5c497f2f62157cc7b73b8b02d267b3a"
+    },
+    {
+      "relative_path": "tools/hyperai_autonomous_cycle.py",
+      "size_bytes": 16624,
+      "sha256": "2c95535c1e4f665c80562c897df6eafbbc6c09762bc6c7db34450a902c25feaf"
+    },
+    {
+      "relative_path": "tools/hyperai_ooda_loop.py",
+      "size_bytes": 10710,
+      "sha256": "6a8a7789ec3fe25897ddf09f29929b9d1268a16f152ba1c64784fb728ff7b66f"
+    },
+    {
+      "relative_path": "tools/probe_backend_parity.py",
+      "size_bytes": 2653,
+      "sha256": "4e7c820087c5ba51138238ebc6a6b90a9fae38f1ac7bbb362385636a9c67db0d"
+    },
+    {
+      "relative_path": "tools/telegram_client_probe.py",
+      "size_bytes": 3613,
+      "sha256": "f1ba5dd1b311b06af4878f24da9f2ae6eb89abeba146c4e9b1b3c2771acea1db"
+    },
+    {
+      "relative_path": "tools/update_memory.py",
+      "size_bytes": 3255,
+      "sha256": "c277072145b9e833ce25d4dcc0e4883c4c762fa2cd6c1c60f9142fc5b9b396af"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "version": "phase_treasury_a1-revenue-v1",
+  "objective": "first_dollar_revenue",
+  "treasury_mode": "receive_only",
+  "distribution_mode": "creator_in_the_loop",
+  "funding_detection_mode": "manual_confirm",
+  "allowed_distribution_lanes": [
+    "telegram_relay",
+    "manual_relay"
+  ],
+  "forbidden_actions": [
+    "autonomous_spending",
+    "secret_persistence_in_runtime",
+    "publish_without_creator_confirm",
+    "funding_confirmed_without_explicit_operator_action"
+  ]
+}

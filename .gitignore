@@ -1,0 +1,13 @@
+# SyncLane is whitelist-materialized only.
+# Runtime artifacts and secrets stay out of this lane.
+*.db
+*.sqlite
+*.sqlite3
+.env
+.env.*
+logs/
+tmp/
+node_modules/
+dist/
+build/
+coverage/

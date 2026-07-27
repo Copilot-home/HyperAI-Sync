@@ -1,0 +1,58 @@
+{
+  "version": "treasury-a1-v1",
+  "treasury_id": "hyperai_federation_treasury",
+  "mode": "pre_dollar_receive_only",
+  "status": "live",
+  "wallet_profiles": [
+    {
+      "profile_id": "telegram_ton_wallet",
+      "label": "Federation treasury receive wallet",
+      "custody_mode": "creator_held_external",
+      "mode": "receive_only"
+    }
+  ],
+  "receive_addresses": [
+    {
+      "label": "ton_native",
+      "chain": "TON",
+      "asset": "TON",
+      "address": "UQBKK8o7TYYTGIm8BDTBiG2xBUvpj0tEYoXXd3SFLqJbhBhp"
+    },
+    {
+      "label": "btc_to_ton",
+      "chain": "Bitcoin",
+      "asset": "BTC",
+      "address": "bc1qmcfxg0x4t3n9hq3ejnwrvl0kjz0rhn0hh3dz4l"
+    },
+    {
+      "label": "eth_to_ton",
+      "chain": "Ethereum",
+      "asset": "ETH",
+      "address": "0x858369e4f217ac21e7d5c64b924498e2bffb7dac"
+    },
+    {
+      "label": "sol_to_ton",
+      "chain": "Solana",
+      "asset": "SOL",
+      "address": "67v8L3QZY7HwUdbJr5gaB4zqgFvAi937nvk9yF7DFh3J"
+    }
+  ],
+  "supported_assets": [
+    "TON",
+    "BTC",
+    "ETH",
+    "SOL"
+  ],
+  "custody_mode": "external_creator_held",
+  "approval_policy": {
+    "publish_confirm": "creator_required",
+    "funding_confirm": "creator_required"
+  },
+  "spending_policy": {
+    "mode": "disabled_pre_dollar",
+    "allowed": false
+  },
+  "last_balance_check": null,
+  "last_funding_event": null,
+  "last_payout_event": null
+}

@@ -1,0 +1,12 @@
+{
+  "status": "pass",
+  "checks": {
+    "has_p0": true,
+    "has_p1": true,
+    "has_p2": true,
+    "requires_provenance": true,
+    "default_quarantine": true,
+    "has_third_party_matrix": true,
+    "schema_requires_core_fields": true
+  }
+}

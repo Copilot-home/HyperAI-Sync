@@ -1,0 +1,386 @@
+{
+  "schema_version": "2026-04-15.model-native-runtime.v1",
+  "created_at": "2026-04-15",
+  "creator_identity": "ALPHA_PRIME_OMEGA",
+  "runtime_identity": "AI_RUNTIME",
+  "system_identity": {
+    "canonical_equation": "S = AIOS = Unified Execution System",
+    "state_function": "S(t) = f(Input, State, Constraints, Evidence)",
+    "identity_rule": "AI_RUNTIME is the execution identity of S; AI, System, and Tool are projections of one execution structure, not separate systems",
+    "input_rule": "Input is ControlSignal, not merely language"
+  },
+  "model_variables": [
+    "P",
+    "t",
+    "H(t)",
+    "T",
+    "G(t)",
+    "Th",
+    "F",
+    "W",
+    "D",
+    "Trust(P)",
+    "U_model",
+    "K_runtime",
+    "C",
+    "E",
+    "R"
+  ],
+  "invariant_equations": {
+    "surface": "H(t) = T + G(t)",
+    "convergence": "dH/dt < 0; lim t->infinity H(t) = T",
+    "integrity": "D = T(W+F) - alpha G(t) - beta Th",
+    "trust": "Trust(P) = T(W+F) / (1 + G(t) + Th)",
+    "transform_requirement": "Phi must preserve mapped surface, convergence, integrity, and trust relations"
+  },
+  "capability_scores": {
+    "U_model": {
+      "definition": "degree S understands and maps M directly",
+      "range": [
+        0,
+        1
+      ],
+      "target": "approximately 1"
+    },
+    "K_runtime": {
+      "definition": "g(C,E,R), ability to compute, extend, and preserve constraints over M",
+      "range": [
+        0,
+        1
+      ],
+      "target": "approximately 1"
+    }
+  },
+  "input_parsing_contract": {
+    "pronoun_policy": "ignore personal pronouns and relational phrasing unless they materially change authority, safety, or scope",
+    "priority_order": [
+      "Structure",
+      "Problem",
+      "Constraint",
+      "Evidence",
+      "Action"
+    ],
+    "required_extraction": [
+      "input_type",
+      "mode",
+      "scope",
+      "target_surface",
+      "requested_action_class",
+      "preservation_constraints",
+      "proof_required",
+      "memory_binding"
+    ],
+    "execution_rule": "when a frame is actionable and current repo/runtime gates allow it, execute bounded safe work instead of returning only evaluation"
+  },
+  "unified_execution_flow": [
+    "Input",
+    "Parse",
+    "phi_i(M)",
+    "Execution(S)",
+    "Evidence",
+    "Verification",
+    "Memory",
+    "Governance",
+    "Runtime loop"
+  ],
+  "normalized_layer_states": {
+    "runtime": "active",
+    "verification": "independent_pass_with_contained_drift",
+    "model": "contract_active",
+    "input": "structured_control_signal",
+    "provider": "normalized_through_local_facade",
+    "models": "inventoried_not_execution_proven",
+    "cloud": "observed_substrate_not_execution_authority",
+    "git": "sync_transport_not_authority",
+    "aidev": "preferred_lineage_not_archive",
+    "governance": "execution_gate"
+  },
+  "runtime_surfaces": [
+    {
+      "id": "titan_gt77_root",
+      "surface_role": "root-host-substrate",
+      "status": "active_root_host",
+      "phi_i_mapping": "root host physical substrate maps runtime limits, pressure, and proof locality",
+      "allowed_actions": [
+        "preservation",
+        "read_only_probe",
+        "evidence_ledger"
+      ],
+      "blocked_actions": [
+        "os_reset",
+        "os_reinstall",
+        "destructive_repair"
+      ],
+      "proof_required": "local probe or governance artifact"
+    },
+    {
+      "id": "backend_server_js",
+      "surface_role": "authority-live",
+      "path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\hyperai-user-control-system\\backend\\server.js",
+      "status": "live_on_5000",
+      "phi_i_mapping": "app backend runtime truth",
+      "allowed_actions": [
+        "runtime_status_probe",
+        "app_backend_truth_reference"
+      ],
+      "blocked_actions": [
+        "provider_authority",
+        "cloud_authority"
+      ],
+      "proof_required": "runtime manifest and port probe"
+    },
+    {
+      "id": "frontend_4173",
+      "surface_role": "authority-live",
+      "status": "live_on_4173",
+      "phi_i_mapping": "browser shell proof surface",
+      "allowed_actions": [
+        "browser_smoke_when_ui_changes",
+        "route_proof"
+      ],
+      "blocked_actions": [
+        "backend_authority"
+      ],
+      "proof_required": "runtime manifest and browser smoke when applicable"
+    },
+    {
+      "id": "quantumreason_fakeapi",
+      "surface_role": "provider-fabric",
+      "path": "C:\\Users\\pc\\aidev\\quantumreason_v3",
+      "status": "source_proven_not_live_probed",
+      "phi_i_mapping": "OpenAI-compatible local provider facade",
+      "allowed_actions": [
+        "reasoning_request_route",
+        "provider_router_contract",
+        "local_model_first_policy"
+      ],
+      "blocked_actions": [
+        "deception",
+        "provider_identity_bypass",
+        "shell_authority"
+      ],
+      "proof_required": "api_server.py and llm_orchestrator.py source trace; live health probe before execution"
+    },
+    {
+      "id": "ollama_local_models",
+      "surface_role": "local-model-substrate",
+      "status": "model_inventory_observed",
+      "phi_i_mapping": "local model candidates for provider fabric",
+      "allowed_actions": [
+        "inventory",
+        "model_selection_for_explicit_task"
+      ],
+      "blocked_actions": [
+        "authority_promotion_without_inference_proof",
+        "cloud_claim_from_model_name"
+      ],
+      "proof_required": "ollama list plus request-specific inference proof"
+    },
+    {
+      "id": "docker_desktop",
+      "surface_role": "infrastructure-substrate",
+      "status": "degraded_daemon_pipe_unavailable",
+      "phi_i_mapping": "infrastructure pressure and limit surface",
+      "allowed_actions": [
+        "read_only_status_record"
+      ],
+      "blocked_actions": [
+        "docker_purge",
+        "factory_reset",
+        "runtime_expansion_base"
+      ],
+      "proof_required": "docker command error evidence"
+    },
+    {
+      "id": "wsl_hcs",
+      "surface_role": "infrastructure-substrate",
+      "status": "degraded_unavailable",
+      "phi_i_mapping": "local VM/container substrate limit surface",
+      "allowed_actions": [
+        "read_only_status_record",
+        "route_around_trigger"
+      ],
+      "blocked_actions": [
+        "wsl_unregister",
+        "wsl_reset",
+        "hcs_destructive_repair",
+        "runtime_expansion_base"
+      ],
+      "proof_required": "wsl/hcs error evidence and route-around policy"
+    },
+    {
+      "id": "vscode_extensions",
+      "surface_role": "tool-extension",
+      "status": "extension_graph_observed",
+      "phi_i_mapping": "operator tooling and support surface",
+      "allowed_actions": [
+        "read_only_inspection",
+        "approval_intake",
+        "evidence_display"
+      ],
+      "blocked_actions": [
+        "shell_authority_by_label",
+        "uninstall_or_cleanup_without_mission"
+      ],
+      "proof_required": "extension policy and git inventory"
+    },
+    {
+      "id": "postman_api_clients",
+      "surface_role": "api-probe-surface",
+      "status": "not_live_probed_this_phase",
+      "phi_i_mapping": "manual/API verification projection",
+      "allowed_actions": [
+        "future_read_only_classification",
+        "endpoint_verification",
+        "collection_replay",
+        "contract_evidence"
+      ],
+      "blocked_actions": [
+        "authority_without_evidence",
+        "business_truth_by_label"
+      ],
+      "proof_required": "future local probe, exported collection, or run result"
+    },
+    {
+      "id": "mcp_connectors",
+      "surface_role": "tool-bridge-capability-node",
+      "status": "workspace_contract_active",
+      "phi_i_mapping": "connector-specific capability projection",
+      "allowed_actions": [
+        "task_specific_read",
+        "task_specific_write_when_contract_allows",
+        "connector_proof"
+      ],
+      "blocked_actions": [
+        "connector_deletion",
+        "hidden_authority_promotion",
+        "broad_cleanup"
+      ],
+      "proof_required": "connector log or generated artifact"
+    },
+    {
+      "id": "github_codespaces",
+      "surface_role": "disposable-cloud-dev-substrate",
+      "status": "not_inventoried_this_phase",
+      "phi_i_mapping": "remote clean-clone build/test/proof projection",
+      "allowed_actions": [
+        "isolated_build",
+        "isolated_test",
+        "proof_artifact_generation"
+      ],
+      "blocked_actions": [
+        "root_host_replacement",
+        "secret_exfiltration",
+        "dirty_repo_override"
+      ],
+      "proof_required": "repo, branch, commit, command transcript, and artifact path"
+    },
+    {
+      "id": "github_actions",
+      "surface_role": "ci-proof-substrate",
+      "status": "ci_contract_exists_remote_run_not_queried",
+      "phi_i_mapping": "remote CI verification projection",
+      "allowed_actions": [
+        "workflow_proof",
+        "build_test_artifact",
+        "traceable_verification"
+      ],
+      "blocked_actions": [
+        "runtime_authority_without_deployment_contract",
+        "secret_dump",
+        "unreviewed_release"
+      ],
+      "proof_required": "workflow run URL, logs, and artifacts"
+    },
+    {
+      "id": "ssh_remote_hosts",
+      "surface_role": "remote-execution-host",
+      "status": "not_inventoried_this_phase",
+      "phi_i_mapping": "remote bounded execution projection",
+      "allowed_actions": [
+        "host_identity_probe",
+        "bounded_command",
+        "artifact_pullback"
+      ],
+      "blocked_actions": [
+        "destructive_remote_repair",
+        "credential_extraction",
+        "root_mutation_without_rollback"
+      ],
+      "proof_required": "host identity, command transcript, before/after state, and rollback plan"
+    },
+    {
+      "id": "git_sync",
+      "surface_role": "sync-transport",
+      "status": "titan_inventory_created",
+      "phi_i_mapping": "two-machine state transport and dirty-state ledger",
+      "allowed_actions": [
+        "status",
+        "remote_head_compare",
+        "same_schema_inventory"
+      ],
+      "blocked_actions": [
+        "auto_pull_dirty_repo",
+        "auto_push_creator_changes",
+        "git_reset_hard",
+        "git_clean"
+      ],
+      "proof_required": "repo sync registry"
+    },
+    {
+      "id": "gcp_cloud_observed",
+      "surface_role": "cloud-substrate",
+      "status": "macbook_copied_evidence_titan_gcloud_missing",
+      "phi_i_mapping": "observed provider/data/infrastructure substrate",
+      "allowed_actions": [
+        "read_only_inventory",
+        "provider_candidate_classification",
+        "bounded_proof_job_after_contract"
+      ],
+      "blocked_actions": [
+        "iam_mutation",
+        "billing_mutation",
+        "service_enable_disable",
+        "deployment_by_assumption"
+      ],
+      "proof_required": "same-schema cloud inventory before promotion"
+    },
+    {
+      "id": "archive_sediment",
+      "surface_role": "archive-sediment",
+      "status": "many_duplicate_nested_repos_observed",
+      "phi_i_mapping": "lineage and sediment projection",
+      "allowed_actions": [
+        "preserve",
+        "classify",
+        "compare"
+      ],
+      "blocked_actions": [
+        "delete",
+        "merge",
+        "normalize_physical_path"
+      ],
+      "proof_required": "lineage inventory and rollback plan before any physical change"
+    }
+  ],
+  "global_stop_rules": [
+    "do_not_reset_os",
+    "do_not_purge_docker",
+    "do_not_reset_wsl",
+    "do_not_mutate_cloud",
+    "do_not_pull_push_reset_dirty_git",
+    "do_not_delete_archive_sediment",
+    "do_not_promote_surface_without_phi_i_mapping_and_proof",
+    "do_not_use_remote_execution_without_mission_proof_and_rollback"
+  ],
+  "remote_execution_route_order": [
+    "reuse_default_runtime",
+    "local_fakeapi_provider_facade",
+    "postman_api_probe",
+    "mcp_connector",
+    "github_actions_or_codespaces",
+    "ssh_remote_host",
+    "cloud_provider_substrate"
+  ],
+  "next_valid_action": "build a remote execution capability matrix and bind each lane to proof, rollback, and promotion conditions before execution"
+}

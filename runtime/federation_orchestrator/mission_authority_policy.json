@@ -1,0 +1,99 @@
+{
+  "version": "mission-authority-policy-v1",
+  "orchestration_model": "all_orchestrators",
+  "authority_model": "mission_scoped_dynamic_partitioning",
+  "mission_roles": [
+    "mission_root",
+    "mission_router",
+    "reasoning_delegate",
+    "behavior_delegate",
+    "approval_intake",
+    "execution_adapter",
+    "evidence_recorder",
+    "observer_only",
+    "lineage_only"
+  ],
+  "mission_templates": {
+    "runtime_preservation": {
+      "mission_root": "haios_runtime",
+      "mission_router": "federation_orchestrator",
+      "reasoning_delegates": [
+        "provider_reasoning",
+        "gemini_cli"
+      ],
+      "evidence_recorder": "haios_runtime",
+      "fallback_root": "shell_authority"
+    },
+    "creator_approval_delivery": {
+      "mission_root": "federation_orchestrator",
+      "mission_router": "federation_orchestrator",
+      "approval_policy": "fanout_active_creator_surfaces",
+      "reasoning_delegates": [
+        "gemini_cli",
+        "provider_reasoning"
+      ],
+      "evidence_recorder": "federation_orchestrator",
+      "fallback_root": "shell_authority"
+    },
+    "reasoning_request": {
+      "mission_root": "federation_orchestrator",
+      "mission_router": "federation_orchestrator",
+      "reasoning_delegates": [
+        "provider_reasoning",
+        "gemini_cli",
+        "chatgpt_desktop",
+        "codex_desktop"
+      ],
+      "evidence_recorder": "federation_orchestrator",
+      "fallback_root": "provider_reasoning"
+    },
+    "telegram_publish_proof": {
+      "mission_root": "federation_orchestrator",
+      "mission_router": "federation_orchestrator",
+      "execution_adapter": "telegram_execution_fabric",
+      "approval_intake_policy": "creator_surface_fanout_then_manual",
+      "evidence_recorder": "telegram_execution_fabric",
+      "fallback_root": "shell_authority"
+    },
+    "funding_reconciliation": {
+      "mission_root": "federation_orchestrator",
+      "mission_router": "federation_orchestrator",
+      "execution_adapter": "treasury_control",
+      "evidence_recorder": "treasury_control",
+      "fallback_root": "shell_authority"
+    },
+    "ecosystem_attachment_review": {
+      "mission_root": "haios_runtime",
+      "mission_router": "federation_orchestrator",
+      "observers": [
+        "aidev_lineage_root",
+        "chatgpt_desktop",
+        "codex_desktop",
+        "chrome_browser",
+        "edge_browser"
+      ],
+      "evidence_recorder": "federation_orchestrator",
+      "fallback_root": "federation_orchestrator"
+    }
+  },
+  "global_constraints": {
+    "single_mission_root": true,
+    "single_evidence_recorder": true,
+    "shell_mutation_nodes": [
+      "shell_authority"
+    ],
+    "ledger_mutation_nodes": [
+      "treasury_control",
+      "telegram_execution_fabric"
+    ],
+    "lineage_only_default_nodes": [
+      "aidev_lineage_root"
+    ],
+    "approval_only_default_nodes": [
+      "chatgpt_desktop",
+      "codex_desktop",
+      "chrome_browser",
+      "edge_browser"
+    ]
+  }
+}

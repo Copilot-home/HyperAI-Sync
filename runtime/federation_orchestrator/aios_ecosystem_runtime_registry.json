@@ -1,0 +1,615 @@
+{
+  "schema_version": "2026-04-16.aios-ecosystem-runtime-registry.v1",
+  "created_at": "2026-04-16T05:05:00+07:00",
+  "purpose": "Canonical capability registry for AIOS/HyperAI local-first operation across AI systems, app runtimes, operator surfaces, tools, providers, memory, verification, and downstream execution lanes.",
+  "system_identity": {
+    "name": "AIOS / HyperAI",
+    "definition": "Local-first unified execution system that upgrades, uses, operates, and optimizes AI systems, apps, and software runtimes for the creator's operating workflow.",
+    "formal_binding": "S = AIOS = Unified Execution System; each surface maps as phi_i(M) before execution or promotion.",
+    "creator_entity": "ALPHA_PRIME_OMEGA"
+  },
+  "global_rules": [
+    "Do not flatten app runtimes, AI systems, operator cockpits, provider fabrics, memory, and verification into one undifferentiated executor pool.",
+    "Each surface must declare runtime_class, authority_class, allowed_roles, forbidden_roles, proof_source, stop_conditions, and promotion_rule.",
+    "Useful capability does not imply authority.",
+    "A surface may be invoked only through its declared control_interface or wrapper.",
+    "Authority promotion requires fresh proof, mapped phi_i(M), an open gate, rollback path, and memory update.",
+    "Root-host destructive actions, dirty Git mutation, cloud mutation, phone/device/channel delivery, wallet/ledger mutation, and connector deletion fail closed unless a dedicated mission contract opens the gate."
+    ,
+    "When creator input enters Codex or another registered AI/operator runtime for HyperAI work, that runtime acts as a worker surface and must follow the HyperAI mission protocol instead of bypassing dispatch, proof, and closure."
+  ],
+  "mission_binding": {
+    "mission_authority_policy": "runtime/federation_orchestrator/mission_authority_policy.json",
+    "default_router": "federation_orchestrator",
+    "default_memory_writer": "memory_writer",
+    "default_verification": "verification_truth",
+    "single_mission_root": true,
+    "single_evidence_recorder": true
+  },
+  "surfaces": {
+    "hyperai_product_runtime": {
+      "display_name": "hyperai-user-control-system",
+      "runtime_class": "app_runtime",
+      "authority_class": "product_shell_authority",
+      "status": "live_autonomous_core_ready",
+      "owner_surface": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\hyperai-user-control-system",
+      "control_interface": {
+        "backend": "http://127.0.0.1:5000",
+        "frontend": "http://127.0.0.1:4173",
+        "backend_runtime_truth": "backend/server.js",
+        "frontend_runtime_truth": "dist-isolated served by scripts/runtime/static-spa-server.mjs"
+      },
+      "capabilities": [
+        "product_shell",
+        "dashboard",
+        "workspace_cockpit",
+        "runtime_capability_declaration",
+        "autonomy_policy",
+        "symphony_control",
+        "bounded_local_mission_intake"
+      ],
+      "allowed_roles": [
+        "mission_root_for_runtime_preservation",
+        "execution_adapter_for_app_boundary",
+        "evidence_recorder_for_app_runtime_proof"
+      ],
+      "forbidden_roles": [
+        "os_repair_authority",
+        "cloud_authority",
+        "telegram_publish_authority",
+        "ledger_spending_authority",
+        "github_identity_authority",
+        "archive_promotion_authority"
+      ],
+      "proof_source": [
+        "tools/hyperai_autonomous_cycle.py",
+        "GET /api/runtime/capabilities",
+        "GET /api/autonomy/status",
+        "npm run ci:build",
+        "npm run ci:browser-smoke"
+      ],
+      "stop_conditions": [
+        "backend process stale relative to backend/server.js without live probe",
+        "port 5000 unreachable",
+        "port 4173 unreachable",
+        "runtime capabilities fail to prove autonomous-safe core"
+      ],
+      "promotion_rule": "Already product app authority only for its proven core lanes; non-core/degraded/frozen lanes require separate proof."
+    },
+    "app_core_lanes": {
+      "display_name": "HyperAI app core lane set",
+      "runtime_class": "app_lane_group",
+      "authority_class": "core_product_lane",
+      "status": "live",
+      "owner_surface": "hyperai_product_runtime",
+      "capabilities": [
+        "dashboard",
+        "symphony",
+        "runtime",
+        "autonomy"
+      ],
+      "allowed_roles": [
+        "product_shell_truth",
+        "routine_runtime_decision"
+      ],
+      "forbidden_roles": [
+        "external_business_truth",
+        "root_host_repair"
+      ],
+      "proof_source": [
+        "memory/AIOS_APP_RUNTIME_RESPONSIBILITY_AUDIT_20260415.md",
+        "runtime/federation_orchestrator/app_runtime_responsibility_audit.json"
+      ],
+      "stop_conditions": [
+        "route or backend contract changes without build/smoke proof"
+      ],
+      "promotion_rule": "Core lanes remain authoritative only while live runtime proof remains fresh."
+    },
+    "app_non_core_lanes": {
+      "display_name": "HyperAI app non-core support lanes",
+      "runtime_class": "app_lane_group",
+      "authority_class": "support_lane",
+      "status": "bounded_live_or_stub",
+      "owner_surface": "hyperai_product_runtime",
+      "capabilities": [
+        "empathy",
+        "vietnamese",
+        "notebooklm",
+        "users"
+      ],
+      "allowed_roles": [
+        "support_signal",
+        "local_profile_state",
+        "bounded_analysis"
+      ],
+      "forbidden_roles": [
+        "product_shell_authority",
+        "external_publish_authority",
+        "identity_authority"
+      ],
+      "proof_source": [
+        "memory/AIOS_APP_RUNTIME_RESPONSIBILITY_AUDIT_20260415.md"
+      ],
+      "stop_conditions": [
+        "upstream credentials missing",
+        "stub lane mistaken for production lane",
+        "non-core support lane used as authority"
+      ],
+      "promotion_rule": "Requires route-specific live backend proof plus UI/CI verification."
+    },
+    "app_degraded_frozen_lanes": {
+      "display_name": "HyperAI degraded and frozen app lanes",
+      "runtime_class": "app_lane_group",
+      "authority_class": "non_authoritative",
+      "status": "degraded_or_frozen",
+      "owner_surface": "hyperai_product_runtime",
+      "capabilities": [
+        "chat_local_only",
+        "websocket_clients_frozen",
+        "backend_server_ts_frozen",
+        "managed_runtime_fallback"
+      ],
+      "allowed_roles": [
+        "local_fallback",
+        "source_reference",
+        "future_candidate_after_proof"
+      ],
+      "forbidden_roles": [
+        "runtime_truth",
+        "telemetry_authority",
+        "backend_authority_without_unification_task"
+      ],
+      "proof_source": [
+        "memory/agent4_frontend_composition_capsule.md",
+        "memory/AIOS_APP_RUNTIME_RESPONSIBILITY_AUDIT_20260415.md"
+      ],
+      "stop_conditions": [
+        "attempt to route product decisions through frozen or degraded lane"
+      ],
+      "promotion_rule": "Requires explicit re-proof or backend-unification task."
+    },
+    "federation_orchestrator": {
+      "display_name": "Federation orchestrator",
+      "runtime_class": "service_runtime",
+      "authority_class": "mission_router",
+      "status": "usable_for_planning_and_routing",
+      "owner_surface": "runtime/federation_orchestrator",
+      "control_interface": {
+        "registries": [
+          "runtime/federation_orchestrator/mission_authority_policy.json",
+          "runtime/federation_orchestrator/unified_registry.json",
+          "runtime/federation_orchestrator/orchestrator_capability_matrix.json",
+          "runtime/federation_orchestrator/lane_registry.json"
+        ]
+      },
+      "capabilities": [
+        "mission_binding",
+        "surface_registry",
+        "drift_guard",
+        "routing_policy",
+        "degradation_policy"
+      ],
+      "allowed_roles": [
+        "mission_router",
+        "mission_root_when_template_allows",
+        "evidence_recorder_when_template_allows"
+      ],
+      "forbidden_roles": [
+        "shell_mutation_without_shell_authority",
+        "ledger_mutation",
+        "provider_identity_claim"
+      ],
+      "proof_source": [
+        "runtime/federation_orchestrator/*.json"
+      ],
+      "stop_conditions": [
+        "mission has no template binding",
+        "single mission root is violated",
+        "single evidence recorder is violated"
+      ],
+      "promotion_rule": "Governance router by contract; does not replace app runtime authority."
+    },
+    "memory_writer": {
+      "display_name": "AIOS memory writer",
+      "runtime_class": "service_runtime",
+      "authority_class": "memory_authority",
+      "status": "live",
+      "owner_surface": "tools/update_memory.py",
+      "control_interface": {
+        "command": "python tools/update_memory.py"
+      },
+      "capabilities": [
+        "project_state_update",
+        "session_memory_update",
+        "work_journal_append",
+        "next_action_update"
+      ],
+      "allowed_roles": [
+        "memory_write",
+        "task_closure_record"
+      ],
+      "forbidden_roles": [
+        "shell_mutation",
+        "runtime_authority",
+        "ledger_mutation"
+      ],
+      "proof_source": [
+        "memory/project_state.json",
+        "memory/work_journal.md"
+      ],
+      "stop_conditions": [
+        "memory path unavailable",
+        "update script fails"
+      ],
+      "promotion_rule": "Canonical memory writer for lightweight memory only."
+    },
+    "verification_truth": {
+      "display_name": "Verification truth",
+      "runtime_class": "verification_registry",
+      "authority_class": "verification_authority",
+      "status": "live",
+      "owner_surface": "hyperai-user-control-system package scripts and runtime probes",
+      "capabilities": [
+        "runtime_probe",
+        "ci_build",
+        "browser_smoke",
+        "proof_artifact_validation"
+      ],
+      "allowed_roles": [
+        "gate_runtime_claims",
+        "gate_app_changes",
+        "detect_verification_drift"
+      ],
+      "forbidden_roles": [
+        "business_authority",
+        "runtime_authority_replacement"
+      ],
+      "proof_source": [
+        ".github/workflows/ci.yml",
+        "npm run ci:build",
+        "npm run ci:browser-smoke",
+        "runtime/verification/auto_sync_state.json"
+      ],
+      "stop_conditions": [
+        "hard gate fails",
+        "proof artifact missing for claimed runtime change"
+      ],
+      "promotion_rule": "Verification may support promotion but cannot replace runtime proof."
+    },
+    "codex_operator_runtime": {
+      "display_name": "Local Codex / AIOS operator cockpit",
+      "runtime_class": "desktop_operator_runtime",
+      "authority_class": "worker_operator_surface",
+      "status": "active",
+      "owner_surface": "C:\\Users\\pc\\.codex",
+      "capabilities": [
+        "read_trace_search",
+        "bounded_local_commands",
+        "approved_workspace_edits",
+        "skill_invocation",
+        "mcp_routing",
+        "memory_update",
+        "governance_artifact_creation"
+      ],
+      "allowed_roles": [
+        "creator_input_intake",
+        "mission_dispatch_initiator",
+        "agent_chain_bridge_invoker",
+        "approval_intake",
+        "reasoning_delegate",
+        "implementation_delegate_under_gates",
+        "observer_only"
+      ],
+      "forbidden_roles": [
+        "mission_root_by_default",
+        "direct_product_mutation_without_route_plan",
+        "shell_authority_by_label",
+        "ledger_authority",
+        "cloud_authority"
+      ],
+      "proof_source": [
+        "memory/AIOS_LOCAL_CODEX_OPERATOR_RUNTIME.md",
+        "runtime/federation_orchestrator/local_codex_operator_runtime.json"
+      ],
+      "stop_conditions": [
+        "action requires destructive root-host operation",
+        "action requires approval and approval is missing"
+      ],
+      "promotion_rule": "Can execute bounded local work only as a HyperAI worker surface when route plan and task gates allow it; input intake does not grant authority."
+    },
+    "openclaw_control_lane": {
+      "display_name": "OpenClaw control lane",
+      "runtime_class": "operator_control_surface",
+      "authority_class": "observed_control_lane",
+      "status": "reachable_but_not_promoted",
+      "owner_surface": "C:\\Users\\pc\\.openclaw",
+      "control_interface": {
+        "wrapper": "tools/openclaw_control.py",
+        "gateway": "ws://127.0.0.1:18789",
+        "browser_sidecar": "http://127.0.0.1:18791/"
+      },
+      "capabilities": [
+        "gateway_health",
+        "status_probe",
+        "browser_control_readiness",
+        "acpx_runtime",
+        "device_pairing_observed",
+        "phone_control_plugin_observed",
+        "talk_voice_plugin_observed"
+      ],
+      "allowed_roles": [
+        "operator_control_probe",
+        "browser_control_probe",
+        "approved_bounded_agent_turn"
+      ],
+      "forbidden_roles": [
+        "product_shell_authority",
+        "phone_control_by_default",
+        "device_pairing_mutation_by_default",
+        "channel_delivery_by_default",
+        "cron_mutation_by_default",
+        "external_delivery_by_default"
+      ],
+      "proof_source": [
+        "runtime/federation_orchestrator/openclaw_control_lane.json",
+        "runtime/federation_orchestrator/openclaw_proofs/*.json",
+        "tools/openclaw_control.py"
+      ],
+      "stop_conditions": [
+        "gateway unreachable",
+        "gateway auth warning",
+        "action outside wrapper allowlist",
+        "side-effect plugin requested without dedicated approval contract"
+      ],
+      "promotion_rule": "Requires fresh wrapper proof plus repo-governed execution contract; never replaces app authority by installation alone."
+    },
+    "local_fakeapi_provider_fabric": {
+      "display_name": "QuantumReason local fakeAPI provider fabric",
+      "runtime_class": "provider_fabric",
+      "authority_class": "reasoning_api_compatibility_surface",
+      "status": "source_proven_not_live_in_current_probe",
+      "owner_surface": "C:\\Users\\pc\\aidev\\quantumreason_v3",
+      "control_interface": {
+        "base_url": "http://127.0.0.1:8000/api/v2",
+        "chat_completions": "/api/v2/chat/completions",
+        "health": "/api/v2/health"
+      },
+      "capabilities": [
+        "openai_compatible_chat_shape",
+        "provider_routing",
+        "local_model_preference",
+        "cache_metadata",
+        "request_id_tracking"
+      ],
+      "allowed_roles": [
+        "reasoning_delegate",
+        "provider_normalization"
+      ],
+      "forbidden_roles": [
+        "shell_authority",
+        "cloud_authority",
+        "provider_identity_bypass"
+      ],
+      "proof_source": [
+        "memory/AIOS_LOCAL_FAKEAPI_PROVIDER_FABRIC.md",
+        "runtime/federation_orchestrator/local_fakeapi_provider_fabric.json"
+      ],
+      "stop_conditions": [
+        "port 8000 not live for runtime request",
+        "provider route lacks health proof"
+      ],
+      "promotion_rule": "Source-proven fabric; live inference requires fresh health/request proof."
+    },
+    "ollama_local_models": {
+      "display_name": "Ollama local model substrate",
+      "runtime_class": "model_substrate",
+      "authority_class": "inference_candidate",
+      "status": "inventory_observed",
+      "owner_surface": "Ollama on local Windows profile",
+      "capabilities": [
+        "local_inference_candidate",
+        "model_inventory"
+      ],
+      "allowed_roles": [
+        "model_substrate_after_request_specific_proof"
+      ],
+      "forbidden_roles": [
+        "shell_authority",
+        "proof_authority",
+        "business_truth_authority"
+      ],
+      "proof_source": [
+        "runtime/federation_orchestrator/local_ai_model_inventory_20260415.json"
+      ],
+      "stop_conditions": [
+        "model selected only by inventory without inference proof"
+      ],
+      "promotion_rule": "Inventory is not inference proof; each task needs request-specific proof."
+    },
+    "mcp_connectors": {
+      "display_name": "MCP connector graph",
+      "runtime_class": "tool_bridge",
+      "authority_class": "connector_specific_capability",
+      "status": "configured_minimal_core",
+      "owner_surface": ".vscode/mcp.json and user/profile MCP configs",
+      "capabilities": [
+        "openai_docs",
+        "figma",
+        "context7",
+        "markitdown",
+        "notion_or_other_user_configured_connectors_when_available"
+      ],
+      "allowed_roles": [
+        "task_specific_read",
+        "task_specific_write_when_contract_allows",
+        "documentation_truth_when_matching_domain"
+      ],
+      "forbidden_roles": [
+        "connector_deletion_by_default",
+        "hidden_authority_promotion",
+        "broad_cleanup"
+      ],
+      "proof_source": [
+        "AGENTS.md",
+        ".vscode/mcp.json",
+        "MCP operation logs when used"
+      ],
+      "stop_conditions": [
+        "connector has secret-bearing config and task does not need it",
+        "connector unavailable",
+        "operation outside connector domain"
+      ],
+      "promotion_rule": "Connector output must be bound to memory/proof artifact."
+    },
+    "vscode_operator_surface": {
+      "display_name": "VS Code / extension operator surface",
+      "runtime_class": "editor_operator_surface",
+      "authority_class": "creator_operator_surface",
+      "status": "installed_extension_heavy_degraded_shell_policy_applies",
+      "owner_surface": "VS Code / Insiders user profile",
+      "capabilities": [
+        "editor_surface",
+        "approval_intake",
+        "read_only_support",
+        "extension_runtime_observation"
+      ],
+      "allowed_roles": [
+        "approval_intake",
+        "read_only_inspection",
+        "evidence_display"
+      ],
+      "forbidden_roles": [
+        "shell_authority_by_label",
+        "extension_deletion_by_default",
+        "broad_repair"
+      ],
+      "proof_source": [
+        "memory/AIOS_VSCODE_EXTENSION_DEGRADED_SHELL_POLICY.md",
+        "runtime/federation_orchestrator/vscode_extension_degraded_shell_policy.json"
+      ],
+      "stop_conditions": [
+        "command class unknown under degraded shell",
+        "destructive OS/Docker/WSL recovery requested"
+      ],
+      "promotion_rule": "Editor surface remains operator surface unless a task-specific contract opens execution."
+    },
+    "git_sync_transport": {
+      "display_name": "Git sync transport",
+      "runtime_class": "sync_transport",
+      "authority_class": "transport_not_authority",
+      "status": "many_repos_many_dirty",
+      "owner_surface": "local Git repositories and remote references",
+      "capabilities": [
+        "compare",
+        "lineage_review",
+        "sync_transport_after_clean_contract"
+      ],
+      "allowed_roles": [
+        "read_only_inventory",
+        "attachment_review"
+      ],
+      "forbidden_roles": [
+        "automatic_authority",
+        "dirty_pull_push_reset_clean"
+      ],
+      "proof_source": [
+        "runtime/federation_orchestrator/titan_repo_sync_registry_20260415.json",
+        "runtime/federation_orchestrator/two_machine_git_sync_policy.json"
+      ],
+      "stop_conditions": [
+        "dirty worktree without explicit user request",
+        "rollback path missing"
+      ],
+      "promotion_rule": "Git can transport authority only after topology decision and rollback-safe proof."
+    },
+    "gcp_cloud_observed": {
+      "display_name": "GCP cloud substrate observation",
+      "runtime_class": "cloud_substrate",
+      "authority_class": "observed_only",
+      "status": "copied_observed_evidence",
+      "owner_surface": "creator-owned GCP projects",
+      "capabilities": [
+        "future_read_only_inventory",
+        "provider_substrate_candidate",
+        "bounded_proof_job_after_contract"
+      ],
+      "allowed_roles": [
+        "observer_only",
+        "read_only_inventory_after_contract"
+      ],
+      "forbidden_roles": [
+        "iam_mutation",
+        "billing_mutation",
+        "service_enable_disable",
+        "deployment_by_assumption"
+      ],
+      "proof_source": [
+        "memory/AIOS_GCP_CLOUD_SUBSTRATE_OBSERVATION_20260415.md",
+        "runtime/federation_orchestrator/gcp_cloud_substrate_observation_20260415.json"
+      ],
+      "stop_conditions": [
+        "same-schema live inventory missing for execution",
+        "cloud mutation requested without mission contract"
+      ],
+      "promotion_rule": "Observed substrate only until live read-only reconciliation and execution contract."
+    },
+    "telegram_treasury_economy": {
+      "display_name": "Telegram / Treasury / economy lanes",
+      "runtime_class": "downstream_execution_group",
+      "authority_class": "blocked_or_gated_downstream",
+      "status": "protected_first_dollar_pending",
+      "owner_surface": "telegram_relay, telegram_execution_fabric, treasury_control, deal_intelligence",
+      "capabilities": [
+        "publish_relay",
+        "funding_evidence",
+        "receive_only_treasury",
+        "deal_artifact_generation"
+      ],
+      "allowed_roles": [
+        "planning",
+        "read_only_review",
+        "receive_only_evidence_when_gate_open"
+      ],
+      "forbidden_roles": [
+        "fabricate_publish_confirmation",
+        "fabricate_funding_confirmation",
+        "autonomous_wallet_action",
+        "business_truth_without_evidence"
+      ],
+      "proof_source": [
+        "memory/AIOS_ECONOMY_OPERATING_BRIEF.md",
+        "runtime/federation_orchestrator/treasury_registry.json",
+        "runtime/telegram_node/telegram_registry.json"
+      ],
+      "stop_conditions": [
+        "shell_authority degraded",
+        "creator proof missing",
+        "ledger proof missing"
+      ],
+      "promotion_rule": "Execution blocked until mission, evidence, shell, and creator proof gates open."
+    }
+  },
+  "control_interfaces": {
+    "agent_dispatch": "tools/hyperai_agent_dispatch.py",
+    "agent_worker_loop": "tools/hyperai_agent_worker_loop.py",
+    "agent_chain_bridge": "tools/hyperai_autonomous_cycle.py --agent-chain",
+    "worker_runtime_binding_policy": "runtime/federation_orchestrator/worker_runtime_binding_policy.json",
+    "openclaw": "tools/openclaw_control.py",
+    "memory": "tools/update_memory.py",
+    "active_runtime_surface_scan": "tools/aios_runtime_surface_scan.py",
+    "hyperai_runtime_probe": "tools/hyperai_autonomous_cycle.py",
+    "hyperai_runtime_policy": "tools/hyperai_runtime_policy.py",
+    "verification": "hyperai-user-control-system npm scripts",
+    "provider_facade": "C:\\Users\\pc\\aidev\\quantumreason_v3\\api_server.py"
+  },
+  "next_valid_actions": [
+    "Run tools/aios_runtime_surface_scan.py --print-summary before broad runtime attachment claims.",
+    "Use this registry before routing any AI/app/tool/runtime task.",
+    "Use tools/hyperai_agent_dispatch.py to assign missions to Agent 1-6 instead of manually acting as a single coding bot.",
+    "Use tools/hyperai_agent_worker_loop.py to consume dispatch missions, write Agent 1-6 proof outputs, and generate route plans before implementation work.",
+    "When input enters Codex for HyperAI work, treat Codex as a worker/operator surface and prefer tools/hyperai_autonomous_cycle.py --agent-chain before implementation handoff.",
+    "Add new surfaces here before granting them operational roles.",
+    "Generate per-mission route plans from this registry plus mission_authority_policy.json.",
+    "Keep physical server/process consolidation separate from capability registry consolidation."
+  ]
+}

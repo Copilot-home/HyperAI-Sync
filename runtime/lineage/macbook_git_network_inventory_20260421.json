@@ -1,0 +1,415 @@
+﻿{
+  "schema_version": "2026-04-21.macbook-read-only-inventory.v1",
+  "created_at": "2026-04-21T04:19:00.217194+00:00",
+  "machine": "MacBook_M2_Andy_local",
+  "host_identity": {
+    "hostname": "Andy.local",
+    "fqdn": "1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa",
+    "user": "andy",
+    "home": "/Users/andy",
+    "platform": "macOS-26.4.1-arm64-arm-64bit",
+    "machine_arch": "arm64",
+    "macos_version": "26.4.1"
+  },
+  "network": {
+    "ifconfig_excerpt": "lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> mtu 16384\n\tinet 127.0.0.1 netmask 0xff000000\ngif0: flags=8010<POINTOPOINT,MULTICAST> mtu 1280\nstf0: flags=0<> mtu 1280\nanpi0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500\nanpi1: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500\nanpi2: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500\nen4: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500\nen5: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500\nen6: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500\nen1: flags=8963<UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500\nen2: flags=8963<UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500\nen3: flags=8963<UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500\nvmenet0: flags=8963<UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500\nbridge100: flags=8a63<UP,BROADCAST,SMART,RUNNING,ALLMULTI,SIMPLEX,MULTICAST> mtu 1500\n\tinet 10.211.55.2 netmask 0xffffff00 broadcast 10.211.55.255\nvmenet1: flags=8963<UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500\nbridge101: flags=8a63<UP,BROADCAST,SMART,RUNNING,ALLMULTI,SIMPLEX,MULTICAST> mtu 1500\n\tinet 10.37.129.2 netmask 0xffffff00 broadcast 10.37.129.255\nap1: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500\nen0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500\n\tinet 192.168.3.192 netmask 0xffffff00 broadcast 192.168.3.255\nbridge0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500\nawdl0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500\nllw0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500\nutun0: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 1380\nutun1: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 1500\nutun2: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 2000\nutun3: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 1000\nutun4: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 1380\nutun5: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 1380\nvmenet2: flags=8963<UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500\nbridge102: flags=8a63<UP,BROADCAST,SMART,RUNNING,ALLMULTI,SIMPLEX,MULTICAST> mtu 1500\n\tinet 192.168.64.1 netmask 0xffffff00 broadcast 192.168.64.255\nen8: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500",
+    "default_route": "gateway: 192.168.3.1\n  interface: en0"
+  },
+  "ollama": {
+    "tags_json": "{\"models\":[{\"name\":\"gemma2:2b\",\"model\":\"gemma2:2b\",\"modified_at\":\"2026-04-19T09:46:47.384106758+07:00\",\"size\":1629518495,\"digest\":\"8ccf136fdd5298f3ffe2d69862750ea7fb56555fa4d5b18c04e3fa4d82ee09d7\",\"details\":{\"parent_model\":\"\",\"format\":\"gguf\",\"family\":\"gemma2\",\"families\":[\"gemma2\"],\"parameter_size\":\"2.6B\",\"quantization_level\":\"Q4_0\"}},{\"name\":\"gemma3:4b\",\"model\":\"gemma3:4b\",\"modified_at\":\"2026-03-13T19:17:55.590290887+07:00\",\"size\":3338801804,\"digest\":\"a2af6cc3eb7fa8be8504abaf9b04e88f17a119ec3f04a3addf55f92841195f5a\",\"details\":{\"parent_model\":\"\",\"format\":\"gguf\",\"family\":\"gemma3\",\"families\":[\"gemma3\"],\"parameter_size\":\"4.3B\",\"quantization_level\":\"Q4_K_M\"}},{\"name\":\"llama3.2:1b\",\"model\":\"llama3.2:1b\",\"modified_at\":\"2026-03-03T17:47:32.242179397+07:00\",\"size\":1321098329,\"digest\":\"baf6a787fdffd633537aa2eb51cfd54cb93ff08e28040095462bb63daf552878\",\"details\":{\"parent_model\":\"\",\"format\":\"gguf\",\"family\":\"llama\",\"families\":[\"llama\"],\"parameter_size\":\"1.2B\",\"quantization_level\":\"Q8_0\"}},{\"name\":\"qwen3:8b\",\"model\":\"qwen3:8b\",\"modified_at\":\"2026-02-18T02:09:26.352982496+07:00\",\"size\":5225388164,\"digest\":\"500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41\",\"details\":{\"parent_model\":\"\",\"format\":\"gguf\",\"family\":\"qwen3\",\"families\":[\"qwen3\"],\"parameter_size\":\"8.2B\",\"quantization_level\":\"Q4_K_M\"}}]}"
+  },
+  "git_repositories": [
+    {
+      "machine": "MacBook_M2_Andy_local",
+      "path": "/Users/andy/Documents/Kilo-Code/MCP/ollama-server",
+      "remote": "",
+      "branch": "master",
+      "head": "",
+      "dirty_status": "unscanned_timeout_guard",
+      "dirty_line_count": null,
+      "role_guess": "unknown",
+      "errors": {
+        "remote": "",
+        "branch": "",
+        "head": "fatal: Needed a single revision"
+      }
+    },
+    {
+      "machine": "MacBook_M2_Andy_local",
+      "path": "/Users/andy/Documents/Tài liệu - MacBook Pro của Andy/GitHub/vscode-audit",
+      "remote": "origin\thttps://github.com/microsoft/vscode.git (fetch)\norigin\thttps://github.com/microsoft/vscode.git (push)",
+      "branch": "main",
+      "head": "d91334c1148",
+      "dirty_status": "unscanned_timeout_guard",
+      "dirty_line_count": null,
+      "role_guess": "unknown",
+      "errors": {
+        "remote": "",
+        "branch": "",
+        "head": ""
+      }
+    },
+    {
+      "machine": "MacBook_M2_Andy_local",
+      "path": "/Users/andy/Documents/Tài liệu - MacBook Pro của Andy/GitHub/sturdy-lamp",
+      "remote": "origin\thttps://github.com/NguyenCuong1989/sturdy-lamp.git (fetch)\norigin\thttps://github.com/NguyenCuong1989/sturdy-lamp.git (push)",
+      "branch": "main",
+      "head": "",
+      "dirty_status": "unscanned_timeout_guard",
+      "dirty_line_count": null,
+      "role_guess": "unknown",
+      "errors": {
+        "remote": "",
+        "branch": "",
+        "head": "fatal: Needed a single revision"
+      }
+    },
+    {
+      "machine": "MacBook_M2_Andy_local",
+      "path": "/Users/andy/Documents/Tài liệu - MacBook Pro của Andy/GitHub/github-cli-audit",
+      "remote": "origin\thttps://github.com/cli/cli.git (fetch)\norigin\thttps://github.com/cli/cli.git (push)",
+      "branch": "trunk",
+      "head": "e437b83",
+      "dirty_status": "unscanned_timeout_guard",
+      "dirty_line_count": null,
+      "role_guess": "unknown",
+      "errors": {
+        "remote": "",
+        "branch": "",
+        "head": ""
+      }
+    },
+    {
+      "machine": "MacBook_M2_Andy_local",
+      "path": "/Users/andy/Documents/Tài liệu - MacBook Pro của Andy/GitHub/copilot-cli",
+      "remote": "NguyenCuong1989\thttps://github.com/NguyenCuong1989/copilot-cli.git (fetch)\nNguyenCuong1989\thttps://github.com/NguyenCuong1989/copilot-cli.git (push)",
+      "branch": "main",
+      "head": "5896e5a",
+      "dirty_status": "unscanned_timeout_guard",
+      "dirty_line_count": null,
+      "role_guess": "unknown",
+      "errors": {
+        "remote": "",
+        "branch": "",
+        "head": ""
+      }
+    },
+    {
+      "machine": "MacBook_M2_Andy_local",
+      "path": "/Users/andy/Documents/Tài liệu - MacBook Pro của Andy/GitHub/vscode-python-environments",
+      "remote": "origin\thttps://github.com/NguyenCuong1989/vscode-python-environments.git (fetch)\norigin\thttps://github.com/NguyenCuong1989/vscode-python-environments.git (push)\nupstream\thttps://github.com/microsoft/vscode-python-environments.git (fetch)\nupstream\thttps://github.com/microsoft/vscode-python-environments.git (push)",
+      "branch": "local-workspace",
+      "head": "e2c99e4",
+      "dirty_status": "unscanned_timeout_guard",
+      "dirty_line_count": null,
+      "role_guess": "unknown",
+      "errors": {
+        "remote": "",
+        "branch": "",
+        "head": ""
+      }
+    },
+    {
+      "machine": "MacBook_M2_Andy_local",
+      "path": "/Users/andy/Documents/Tài liệu - MacBook Pro của Andy/GitHub/aws-toolkit-vscode",
+      "remote": "origin\thttps://github.com/aws/aws-toolkit-vscode.git (fetch)\norigin\thttps://github.com/aws/aws-toolkit-vscode.git (push)",
+      "branch": "master",
+      "head": "20a5e850b",
+      "dirty_status": "unscanned_timeout_guard",
+      "dirty_line_count": null,
+      "role_guess": "unknown",
+      "errors": {
+        "remote": "",
+        "branch": "",
+        "head": ""
+      }
+    },
+    {
+      "machine": "MacBook_M2_Andy_local",
+      "path": "/Users/andy/Documents/GitHub/hyperAI",
+      "remote": "origin\thttps://github.com/sowhat1989/hyperAI.git (fetch)\norigin\thttps://github.com/sowhat1989/hyperAI.git (push)",
+      "branch": "main",
+      "head": "f80ca88",
+      "dirty_status": "unscanned_timeout_guard",
+      "dirty_line_count": null,
+      "role_guess": "unknown",
+      "errors": {
+        "remote": "",
+        "branch": "",
+        "head": ""
+      }
+    },
+    {
+      "machine": "MacBook_M2_Andy_local",
+      "path": "/Users/andy/Documents/GitHub/sowhat1989",
+      "remote": "",
+      "branch": "main",
+      "head": "a90a8e3",
+      "dirty_status": "unscanned_timeout_guard",
+      "dirty_line_count": null,
+      "role_guess": "unknown",
+      "errors": {
+        "remote": "Command 'git remote -v' timed out after 4 seconds",
+        "branch": "",
+        "head": ""
+      }
+    },
+    {
+      "machine": "MacBook_M2_Andy_local",
+      "path": "/Users/andy/Documents/GitHub/admin-mcp",
+      "remote": "",
+      "branch": "main",
+      "head": "156b7ba",
+      "dirty_status": "unscanned_timeout_guard",
+      "dirty_line_count": null,
+      "role_guess": "unknown",
+      "errors": {
+        "remote": "Command 'git remote -v' timed out after 4 seconds",
+        "branch": "",
+        "head": ""
+      }
+    },
+    {
+      "machine": "MacBook_M2_Andy_local",
+      "path": "/Users/andy/Documents/GitHub/nvm",
+      "remote": "",
+      "branch": "master",
+      "head": "",
+      "dirty_status": "unscanned_timeout_guard",
+      "dirty_line_count": null,
+      "role_guess": "unknown",
+      "errors": {
+        "remote": "Command 'git remote -v' timed out after 4 seconds",
+        "branch": "",
+        "head": "Command 'git rev-parse --short HEAD' timed out after 4 seconds"
+      }
+    },
+    {
+      "machine": "MacBook_M2_Andy_local",
+      "path": "/Users/andy/Documents/GitHub/tr-gi-p/audit_logs/tr-gi-p",
+      "remote": "",
+      "branch": "main",
+      "head": "",
+      "dirty_status": "unscanned_timeout_guard",
+      "dirty_line_count": null,
+      "role_guess": "unknown",
+      "errors": {
+        "remote": "Command 'git remote -v' timed out after 4 seconds",
+        "branch": "",
+        "head": "Command 'git rev-parse --short HEAD' timed out after 4 seconds"
+      }
+    },
+    {
+      "machine": "MacBook_M2_Andy_local",
+      "path": "/Users/andy/Documents/GitHub/tr-gi-p",
+      "remote": "",
+      "branch": "copilot/fix-abd92fb7-4a33-416a-a967-1d710e405035",
+      "head": "",
+      "dirty_status": "unscanned_timeout_guard",
+      "dirty_line_count": null,
+      "role_guess": "unknown",
+      "errors": {
+        "remote": "Command 'git remote -v' timed out after 4 seconds",
+        "branch": "",
+        "head": "Command 'git rev-parse --short HEAD' timed out after 4 seconds"
+      }
+    },
+    {
+      "machine": "MacBook_M2_Andy_local",
+      "path": "/Users/andy/Documents/GitHub/copilot-cli/gitflow",
+      "remote": "",
+      "branch": "master",
+      "head": "",
+      "dirty_status": "unscanned_timeout_guard",
+      "dirty_line_count": null,
+      "role_guess": "unknown",
+      "errors": {
+        "remote": "Command 'git remote -v' timed out after 4 seconds",
+        "branch": "",
+        "head": "Command 'git rev-parse --short HEAD' timed out after 4 seconds"
+      }
+    },
+    {
+      "machine": "MacBook_M2_Andy_local",
+      "path": "/Users/andy/Documents/GitHub/copilot-cli",
+      "remote": "",
+      "branch": "",
+      "head": "",
+      "dirty_status": "unscanned_timeout_guard",
+      "dirty_line_count": null,
+      "role_guess": "unknown",
+      "errors": {
+        "remote": "Command 'git remote -v' timed out after 4 seconds",
+        "branch": "Command 'git branch --show-current' timed out after 4 seconds",
+        "head": "Command 'git rev-parse --short HEAD' timed out after 4 seconds"
+      }
+    },
+    {
+      "machine": "MacBook_M2_Andy_local",
+      "path": "/Users/andy/Documents/GitHub/vscode",
+      "remote": "",
+      "branch": "pr/295200",
+      "head": "",
+      "dirty_status": "unscanned_timeout_guard",
+      "dirty_line_count": null,
+      "role_guess": "unknown",
+      "errors": {
+        "remote": "Command 'git remote -v' timed out after 4 seconds",
+        "branch": "",
+        "head": "Command 'git rev-parse --short HEAD' timed out after 4 seconds"
+      }
+    },
+    {
+      "machine": "MacBook_M2_Andy_local",
+      "path": "/Users/andy/Desktop/Màn hình nền - MacBook Pro của Andy/chroma",
+      "remote": "origin\thttps://github.com/chroma-core/chroma.git (fetch)\norigin\thttps://github.com/chroma-core/chroma.git (push)",
+      "branch": "main",
+      "head": "",
+      "dirty_status": "unscanned_timeout_guard",
+      "dirty_line_count": null,
+      "role_guess": "unknown",
+      "errors": {
+        "remote": "",
+        "branch": "",
+        "head": "Command 'git rev-parse --short HEAD' timed out after 4 seconds"
+      }
+    },
+    {
+      "machine": "MacBook_M2_Andy_local",
+      "path": "/Users/andy/Desktop/Màn hình nền - MacBook Pro của Andy/cipher",
+      "remote": "",
+      "branch": "main",
+      "head": "28da2fc0",
+      "dirty_status": "unscanned_timeout_guard",
+      "dirty_line_count": null,
+      "role_guess": "unknown",
+      "errors": {
+        "remote": "Command 'git remote -v' timed out after 4 seconds",
+        "branch": "",
+        "head": ""
+      }
+    },
+    {
+      "machine": "MacBook_M2_Andy_local",
+      "path": "/Users/andy/Desktop/Màn hình nền - MacBook Pro của Andy/DAIOF-Framework",
+      "remote": "origin\thttps://github.com/NguyenCuong1989/DAIOF-Framework.git (fetch)\norigin\thttps://github.com/NguyenCuong1989/DAIOF-Framework.git (push)",
+      "branch": "main",
+      "head": "",
+      "dirty_status": "unscanned_timeout_guard",
+      "dirty_line_count": null,
+      "role_guess": "unknown",
+      "errors": {
+        "remote": "",
+        "branch": "",
+        "head": "Command 'git rev-parse --short HEAD' timed out after 4 seconds"
+      }
+    },
+    {
+      "machine": "MacBook_M2_Andy_local",
+      "path": "/Users/andy/Desktop/Màn hình nền - MacBook Pro của Andy/workbench/Docker-NLP",
+      "remote": "origin\thttps://github.com/harsh4870/Docker-NLP.git (fetch)\norigin\thttps://github.com/harsh4870/Docker-NLP.git (push)",
+      "branch": "main",
+      "head": "a662260",
+      "dirty_status": "unscanned_timeout_guard",
+      "dirty_line_count": null,
+      "role_guess": "unknown",
+      "errors": {
+        "remote": "",
+        "branch": "",
+        "head": ""
+      }
+    },
+    {
+      "machine": "MacBook_M2_Andy_local",
+      "path": "/Users/andy/Desktop/Màn hình nền - MacBook Pro của Andy/aws-toolkit-vscode",
+      "remote": "origin\thttps://github.com/aws/aws-toolkit-vscode.git (fetch)\norigin\thttps://github.com/aws/aws-toolkit-vscode.git (push)",
+      "branch": "master",
+      "head": "bf6e48539",
+      "dirty_status": "unscanned_timeout_guard",
+      "dirty_line_count": null,
+      "role_guess": "unknown",
+      "errors": {
+        "remote": "",
+        "branch": "",
+        "head": ""
+      }
+    },
+    {
+      "machine": "MacBook_M2_Andy_local",
+      "path": "/Users/andy/Desktop/DAIOF-Framework/DAIOF-Framework",
+      "remote": "origin\thttps://github.com/NguyenCuong1989/DAIOF-Framework.git (fetch)\norigin\thttps://github.com/NguyenCuong1989/DAIOF-Framework.git (push)",
+      "branch": "main",
+      "head": "36f088d",
+      "dirty_status": "unscanned_timeout_guard",
+      "dirty_line_count": null,
+      "role_guess": "unknown",
+      "errors": {
+        "remote": "",
+        "branch": "",
+        "head": ""
+      }
+    },
+    {
+      "machine": "MacBook_M2_Andy_local",
+      "path": "/Users/andy/Desktop/DAIOF-Framework/DAIOF-Framework-1/.cph-ng",
+      "remote": "origin\thttps://github.com/NguyenCuong1989/DAIOF-Framework.git (fetch)\norigin\thttps://github.com/NguyenCuong1989/DAIOF-Framework.git (push)",
+      "branch": "main",
+      "head": "7a84bb0f",
+      "dirty_status": "unscanned_timeout_guard",
+      "dirty_line_count": null,
+      "role_guess": "unknown",
+      "errors": {
+        "remote": "",
+        "branch": "",
+        "head": ""
+      }
+    },
+    {
+      "machine": "MacBook_M2_Andy_local",
+      "path": "/Users/andy/Desktop/DAIOF-Framework/DAIOF-Framework-1",
+      "remote": "origin\thttps://github.com/NguyenCuong1989/DAIOF-Framework.git (fetch)\norigin\thttps://github.com/NguyenCuong1989/DAIOF-Framework.git (push)",
+      "branch": "main",
+      "head": "7a84bb0f",
+      "dirty_status": "unscanned_timeout_guard",
+      "dirty_line_count": null,
+      "role_guess": "unknown",
+      "errors": {
+        "remote": "",
+        "branch": "",
+        "head": ""
+      }
+    },
+    {
+      "machine": "MacBook_M2_Andy_local",
+      "path": "/Users/andy/Desktop/workbench",
+      "remote": "",
+      "branch": "",
+      "head": "",
+      "dirty_status": "unscanned_timeout_guard",
+      "dirty_line_count": null,
+      "role_guess": "unknown",
+      "errors": {
+        "remote": "fatal: not a git repository (or any of the parent directories): .git",
+        "branch": "fatal: not a git repository (or any of the parent directories): .git",
+        "head": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "machine": "MacBook_M2_Andy_local",
+      "path": "/Users/andy/Desktop/docker-gordon-v4",
+      "remote": "",
+      "branch": "",
+      "head": "",
+      "dirty_status": "unscanned_timeout_guard",
+      "dirty_line_count": null,
+      "role_guess": "unknown",
+      "errors": {
+        "remote": "fatal: not a git repository (or any of the parent directories): .git",
+        "branch": "fatal: not a git repository (or any of the parent directories): .git",
+        "head": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    }
+  ],
+  "repo_count": 26,
+  "safety": "read_only_inventory_no_git_mutation_dirty_status_deferred"
+}

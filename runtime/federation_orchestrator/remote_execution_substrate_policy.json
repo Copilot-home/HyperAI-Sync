@@ -1,0 +1,190 @@
+{
+  "schema_version": "2026-04-15.remote-execution-substrate.v1",
+  "created_at": "2026-04-15",
+  "system_identity": "S = AIOS = Unified Execution System",
+  "purpose": "Route execution around degraded Docker/WSL/HCS without destructive local repair.",
+  "trigger_condition": {
+    "docker_status": "degraded_or_unavailable",
+    "wsl_hcs_status": "degraded_or_unavailable",
+    "runtime_interpretation": "local container substrate degraded, not whole-system failure"
+  },
+  "local_runtime_baseline": {
+    "backend": "http://127.0.0.1:5000",
+    "frontend": "http://127.0.0.1:4173",
+    "current_action": "reuse_default_runtime",
+    "rule": "reuse healthy app runtime before routing execution elsewhere"
+  },
+  "routing_order": [
+    "reuse_default_runtime",
+    "local_fakeapi_provider_facade",
+    "postman_api_probe",
+    "mcp_connector",
+    "github_actions_or_codespaces",
+    "ssh_remote_host",
+    "cloud_provider_substrate"
+  ],
+  "substrate_lanes": [
+    {
+      "id": "cloud_substrate",
+      "role_class": "remote-infrastructure-provider-substrate",
+      "allowed_actions": [
+        "read_only_inventory",
+        "bounded_proof_job",
+        "deployment_candidate_after_contract"
+      ],
+      "blocked_actions": [
+        "iam_mutation_without_mission",
+        "billing_mutation",
+        "service_enable_disable_without_contract",
+        "deployment_by_assumption"
+      ],
+      "proof_required": [
+        "same_schema_inventory",
+        "project_identity",
+        "operation_log",
+        "rollback_plan"
+      ],
+      "promotion_condition": "repo-governed execution contract plus proof artifact"
+    },
+    {
+      "id": "ssh_remote_host",
+      "role_class": "remote-execution-host",
+      "allowed_actions": [
+        "host_identity_probe",
+        "bounded_command",
+        "artifact_pullback"
+      ],
+      "blocked_actions": [
+        "destructive_repair",
+        "credential_extraction",
+        "root_mutation_without_rollback"
+      ],
+      "proof_required": [
+        "host_identity",
+        "command_transcript",
+        "before_after_state",
+        "rollback_plan"
+      ],
+      "promotion_condition": "explicit mission and reversible command scope"
+    },
+    {
+      "id": "github_codespaces",
+      "role_class": "disposable-cloud-dev-substrate",
+      "allowed_actions": [
+        "isolated_build",
+        "isolated_test",
+        "proof_artifact_generation"
+      ],
+      "blocked_actions": [
+        "root_host_replacement",
+        "secret_exfiltration",
+        "dirty_repo_override"
+      ],
+      "proof_required": [
+        "repo",
+        "branch",
+        "commit",
+        "command_transcript",
+        "artifact_path"
+      ],
+      "promotion_condition": "results imported as proof, not authority"
+    },
+    {
+      "id": "github_actions",
+      "role_class": "ci-proof-substrate",
+      "allowed_actions": [
+        "workflow_proof",
+        "build_test_artifact",
+        "traceable_verification"
+      ],
+      "blocked_actions": [
+        "runtime_authority_without_deployment_contract",
+        "secret_dump",
+        "unreviewed_release"
+      ],
+      "proof_required": [
+        "workflow_run_url",
+        "logs",
+        "artifacts"
+      ],
+      "promotion_condition": "CI pass may support promotion but does not replace runtime proof"
+    },
+    {
+      "id": "postman_api_client",
+      "role_class": "api-probe-surface",
+      "allowed_actions": [
+        "endpoint_verification",
+        "collection_replay",
+        "contract_evidence"
+      ],
+      "blocked_actions": [
+        "business_truth_by_label",
+        "authority_promotion_without_artifact"
+      ],
+      "proof_required": [
+        "collection_export",
+        "run_result",
+        "target_base_url"
+      ],
+      "promotion_condition": "API result bound to runtime proof or contract artifact"
+    },
+    {
+      "id": "mcp_connectors",
+      "role_class": "tool-bridge-capability-node",
+      "allowed_actions": [
+        "task_specific_read",
+        "task_specific_write_when_contract_allows",
+        "connector_proof"
+      ],
+      "blocked_actions": [
+        "connector_deletion",
+        "hidden_authority_promotion",
+        "broad_cleanup"
+      ],
+      "proof_required": [
+        "connector_name",
+        "operation_log",
+        "generated_artifact"
+      ],
+      "promotion_condition": "connector output linked to memory/proof artifact"
+    },
+    {
+      "id": "local_fakeapi_provider_facade",
+      "role_class": "provider-normalization-surface",
+      "allowed_actions": [
+        "local_openai_compatible_request",
+        "provider_routing",
+        "model_inference_after_health_proof"
+      ],
+      "blocked_actions": [
+        "provider_identity_bypass",
+        "cloud_authority_claim",
+        "execution_without_live_probe"
+      ],
+      "proof_required": [
+        "source_trace",
+        "health_probe",
+        "request_response_artifact"
+      ],
+      "promotion_condition": "live facade proof plus model/task-specific result"
+    }
+  ],
+  "global_stop_rules": [
+    "do_not_reset_os",
+    "do_not_purge_docker",
+    "do_not_reset_wsl",
+    "do_not_mutate_cloud_without_mission_contract",
+    "do_not_run_hidden_runtime_restart",
+    "do_not_extract_or_print_secrets",
+    "do_not_promote_remote_lane_without_proof"
+  ],
+  "evidence_contract": [
+    "terminal_transcript",
+    "exported_api_run",
+    "ci_workflow_artifact",
+    "remote_host_identity",
+    "before_after_state_snapshot",
+    "runtime_json_proof_artifact"
+  ],
+  "next_valid_action": "build a remote execution capability matrix and bind each lane to proof, rollback, and promotion conditions before execution"
+}

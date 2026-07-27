@@ -1,0 +1,434 @@
+{
+  "version": "phase_treasury_a1-v1",
+  "generated_at": "2026-04-15T08:08:32Z",
+  "shell_registry": {
+    "shell_authority": {
+      "node_id": "shell_authority",
+      "node_type": "shell_registry",
+      "authority_class": "shell",
+      "capability_classes": [
+        "execution"
+      ],
+      "status": "degraded",
+      "allowed_request_classes": [
+        "runtime_status"
+      ],
+      "fallback_mode": "stop_cleanly",
+      "health_source": "tools/hyperai_autonomous_cycle.py",
+      "owner_surface": "hyperai-user-control-system",
+      "drift_sensitivity": "critical",
+      "authority_sensitivity": "critical",
+      "dependency_graph": [],
+      "execution_pressure_class": "medium",
+      "last_checked_at": "2026-04-15T08:08:32Z",
+      "selected_action": "hold_core_degraded",
+      "haios_state": "dormant",
+      "backend_url": "http://127.0.0.1:5000",
+      "frontend_url": "http://127.0.0.1:4173"
+    }
+  },
+  "provider_registry": {
+    "provider_reasoning": {
+      "node_id": "provider_reasoning",
+      "node_type": "provider_registry",
+      "authority_class": "reasoning",
+      "capability_classes": [
+        "reasoning",
+        "classification",
+        "ranking",
+        "summarization",
+        "formatting"
+      ],
+      "status": "live",
+      "allowed_request_classes": [
+        "classify",
+        "filter",
+        "format",
+        "rank",
+        "summarize"
+      ],
+      "fallback_mode": "stop_cleanly",
+      "health_source": "QuantumReason /api/v2/health",
+      "owner_surface": "C:\\Users\\pc\\aidev\\quantumreason_v3",
+      "drift_sensitivity": "critical",
+      "authority_sensitivity": "high",
+      "dependency_graph": [],
+      "execution_pressure_class": "medium",
+      "last_checked_at": "2026-04-15T08:08:32Z",
+      "provider_health": "healthy",
+      "resolved_model": "qwen2.5-coder:1.5b",
+      "cache_mode": "miss",
+      "cache_integrity": "healthy"
+    }
+  },
+  "lane_registry": {
+    "deal_intelligence": {
+      "node_id": "deal_intelligence",
+      "node_type": "lane_registry",
+      "authority_class": "orchestrator",
+      "capability_classes": [
+        "reasoning",
+        "classification",
+        "ranking",
+        "formatting"
+      ],
+      "status": "degraded",
+      "allowed_request_classes": [
+        "filter",
+        "rank",
+        "format"
+      ],
+      "fallback_mode": "deterministic",
+      "health_source": "runtime/deal_intelligence latest report",
+      "owner_surface": "tools/deal_intelligence_loop.py",
+      "drift_sensitivity": "medium",
+      "authority_sensitivity": "high",
+      "dependency_graph": [
+        "provider_reasoning",
+        "shell_authority"
+      ],
+      "execution_pressure_class": "low",
+      "last_checked_at": "2026-04-15T08:08:32Z",
+      "proof_artifact": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\deal_intelligence\\deal_intelligence_state.json",
+      "proof_freshness": {
+        "exists": true,
+        "fresh": true,
+        "age_seconds": 1098516,
+        "modified_at": "2026-04-02T14:59:56.729639Z",
+        "path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\deal_intelligence\\deal_intelligence_state.json"
+      }
+    },
+    "agent3_api": {
+      "node_id": "agent3_api",
+      "node_type": "lane_registry",
+      "authority_class": "orchestrator",
+      "capability_classes": [
+        "reasoning",
+        "classification",
+        "ranking",
+        "summarization",
+        "formatting"
+      ],
+      "status": "degraded",
+      "allowed_request_classes": [
+        "classify",
+        "rank",
+        "summarize",
+        "format"
+      ],
+      "fallback_mode": "stop_cleanly",
+      "health_source": "runtime/llm_augmentation/agent3_api latest report",
+      "owner_surface": "tools/agent3_api_lane.py",
+      "drift_sensitivity": "medium",
+      "authority_sensitivity": "high",
+      "dependency_graph": [
+        "provider_reasoning",
+        "shell_authority"
+      ],
+      "execution_pressure_class": "low",
+      "last_checked_at": "2026-04-15T08:08:32Z",
+      "proof_artifact": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\llm_augmentation\\agent3_api\\agent3-api-20260402-220500.json",
+      "proof_freshness": {
+        "exists": true,
+        "fresh": true,
+        "age_seconds": 1098212,
+        "modified_at": "2026-04-02T15:05:00.734756Z",
+        "path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\llm_augmentation\\agent3_api\\agent3-api-20260402-220500.json"
+      }
+    },
+    "agent5_ci": {
+      "node_id": "agent5_ci",
+      "node_type": "lane_registry",
+      "authority_class": "orchestrator",
+      "capability_classes": [
+        "reasoning",
+        "classification",
+        "ranking",
+        "summarization",
+        "formatting",
+        "verification"
+      ],
+      "status": "degraded",
+      "allowed_request_classes": [
+        "summarize",
+        "classify",
+        "rank",
+        "format"
+      ],
+      "fallback_mode": "stop_cleanly",
+      "health_source": "runtime/llm_augmentation/agent5_ci latest report",
+      "owner_surface": "tools/agent5_ci_lane.py",
+      "drift_sensitivity": "medium",
+      "authority_sensitivity": "high",
+      "dependency_graph": [
+        "provider_reasoning",
+        "shell_authority",
+        "verification_truth"
+      ],
+      "execution_pressure_class": "low",
+      "last_checked_at": "2026-04-15T08:08:32Z",
+      "proof_artifact": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\llm_augmentation\\agent5_ci\\agent5-ci-20260402-220707.json",
+      "proof_freshness": {
+        "exists": true,
+        "fresh": true,
+        "age_seconds": 1098085,
+        "modified_at": "2026-04-02T15:07:07.076821Z",
+        "path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\llm_augmentation\\agent5_ci\\agent5-ci-20260402-220707.json"
+      }
+    },
+    "agent6_synthesis": {
+      "node_id": "agent6_synthesis",
+      "node_type": "lane_registry",
+      "authority_class": "orchestrator",
+      "capability_classes": [
+        "reasoning",
+        "summarization",
+        "formatting"
+      ],
+      "status": "degraded",
+      "allowed_request_classes": [
+        "summarize",
+        "format"
+      ],
+      "fallback_mode": "stop_cleanly",
+      "health_source": "runtime/llm_augmentation/agent6_synthesis latest report",
+      "owner_surface": "tools/agent6_synthesis_lane.py",
+      "drift_sensitivity": "medium",
+      "authority_sensitivity": "high",
+      "dependency_graph": [
+        "provider_reasoning",
+        "shell_authority"
+      ],
+      "execution_pressure_class": "low",
+      "last_checked_at": "2026-04-15T08:08:32Z",
+      "proof_artifact": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\llm_augmentation\\agent6_synthesis\\agent6-synthesis-20260402-220726.json",
+      "proof_freshness": {
+        "exists": true,
+        "fresh": true,
+        "age_seconds": 1098066,
+        "modified_at": "2026-04-02T15:07:26.217639Z",
+        "path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\llm_augmentation\\agent6_synthesis\\agent6-synthesis-20260402-220726.json"
+      }
+    }
+  },
+  "memory_registry": {
+    "memory_writer": {
+      "node_id": "memory_writer",
+      "node_type": "memory_registry",
+      "authority_class": "memory",
+      "capability_classes": [
+        "memory_write"
+      ],
+      "status": "live",
+      "allowed_request_classes": [
+        "memory_write"
+      ],
+      "fallback_mode": "stop_cleanly",
+      "health_source": "tools/update_memory.py + memory artifact freshness",
+      "owner_surface": "tools/update_memory.py",
+      "drift_sensitivity": "critical",
+      "authority_sensitivity": "critical",
+      "dependency_graph": [],
+      "execution_pressure_class": "low",
+      "last_checked_at": "2026-04-15T08:08:32Z",
+      "canonical_writer_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\tools\\update_memory.py",
+      "governance_surfaces": {
+        "project_state.json": {
+          "exists": true,
+          "fresh": true,
+          "age_seconds": 3,
+          "modified_at": "2026-04-15T08:08:29.761215Z"
+        },
+        "session_memory.md": {
+          "exists": true,
+          "fresh": true,
+          "age_seconds": 3,
+          "modified_at": "2026-04-15T08:08:29.762071Z"
+        },
+        "work_journal.md": {
+          "exists": true,
+          "fresh": true,
+          "age_seconds": 3,
+          "modified_at": "2026-04-15T08:08:29.762071Z"
+        },
+        "next_actions.md": {
+          "exists": true,
+          "fresh": true,
+          "age_seconds": 3,
+          "modified_at": "2026-04-15T08:08:29.762071Z"
+        }
+      },
+      "freshness": "fresh"
+    }
+  },
+  "verification_registry": {
+    "verification_truth": {
+      "node_id": "verification_truth",
+      "node_type": "verification_registry",
+      "authority_class": "verification",
+      "capability_classes": [
+        "verification"
+      ],
+      "status": "live",
+      "allowed_request_classes": [
+        "browser_smoke",
+        "ci_build",
+        "runtime_probe"
+      ],
+      "fallback_mode": "stop_cleanly",
+      "health_source": "runtime probes and CI scripts",
+      "owner_surface": "hyperai-user-control-system package scripts and runtime probes",
+      "drift_sensitivity": "critical",
+      "authority_sensitivity": "critical",
+      "dependency_graph": [],
+      "execution_pressure_class": "medium",
+      "last_checked_at": "2026-04-15T08:08:32Z",
+      "truth_sources": {
+        "runtime_probe": {
+          "source_id": "runtime_probe",
+          "status": "live",
+          "authority": "verification",
+          "freshness": {
+            "checked_at": "2026-04-15T08:08:32Z"
+          },
+          "health_source": "tools/hyperai_autonomous_cycle.py",
+          "can_gate_routing": true,
+          "drift_sensitivity": "critical"
+        },
+        "ci_build": {
+          "source_id": "ci_build",
+          "status": "live",
+          "authority": "verification",
+          "freshness": {
+            "exists": true,
+            "fresh": true,
+            "age_seconds": 1409095,
+            "modified_at": "2026-03-30T00:43:37.080198Z"
+          },
+          "health_source": "hyperai-user-control-system/.github/workflows/ci.yml",
+          "can_gate_routing": true,
+          "drift_sensitivity": "critical"
+        },
+        "browser_smoke": {
+          "source_id": "browser_smoke",
+          "status": "live",
+          "authority": "verification",
+          "freshness": {
+            "exists": true,
+            "fresh": true,
+            "age_seconds": 146589,
+            "modified_at": "2026-04-13T15:25:23.670790Z"
+          },
+          "health_source": "npm run ci:browser-smoke",
+          "can_gate_routing": true,
+          "drift_sensitivity": "critical"
+        },
+        "static_capsule_evidence": {
+          "source_id": "static_capsule_evidence",
+          "status": "live",
+          "authority": "advisory",
+          "freshness": {
+            "exists": true,
+            "fresh": true,
+            "age_seconds": 3,
+            "modified_at": "2026-04-15T08:08:29.849480Z"
+          },
+          "health_source": "memory/agent6_synthesis_capsule.md",
+          "can_gate_routing": false,
+          "drift_sensitivity": "low"
+        }
+      }
+    }
+  },
+  "treasury_registry": {
+    "treasury_control": {
+      "node_id": "treasury_control",
+      "node_type": "treasury_registry",
+      "authority_class": "orchestrator",
+      "capability_classes": [
+        "treasury_receive",
+        "treasury_balance_read",
+        "treasury_funding_detect",
+        "treasury_proposal"
+      ],
+      "status": "live",
+      "allowed_request_classes": [
+        "treasury_balance_read",
+        "treasury_funding_detect",
+        "treasury_proposal"
+      ],
+      "fallback_mode": "stop_cleanly",
+      "health_source": "runtime/federation_orchestrator/treasury_registry.json",
+      "owner_surface": "tools/treasury_control.py",
+      "drift_sensitivity": "critical",
+      "authority_sensitivity": "critical",
+      "dependency_graph": [
+        "shell_authority"
+      ],
+      "execution_pressure_class": "low",
+      "last_checked_at": "2026-04-15T08:08:32Z",
+      "mode": "pre_dollar_receive_only",
+      "receive_addresses": [
+        {
+          "label": "ton_native",
+          "chain": "TON",
+          "asset": "TON",
+          "address": "UQBKK8o7TYYTGIm8BDTBiG2xBUvpj0tEYoXXd3SFLqJbhBhp"
+        },
+        {
+          "label": "btc_to_ton",
+          "chain": "Bitcoin",
+          "asset": "BTC",
+          "address": "bc1qmcfxg0x4t3n9hq3ejnwrvl0kjz0rhn0hh3dz4l"
+        },
+        {
+          "label": "eth_to_ton",
+          "chain": "Ethereum",
+          "asset": "ETH",
+          "address": "0x858369e4f217ac21e7d5c64b924498e2bffb7dac"
+        },
+        {
+          "label": "sol_to_ton",
+          "chain": "Solana",
+          "asset": "SOL",
+          "address": "67v8L3QZY7HwUdbJr5gaB4zqgFvAi937nvk9yF7DFh3J"
+        }
+      ],
+      "custody_mode": "external_creator_held"
+    }
+  },
+  "distribution_registry": {
+    "telegram_relay": {
+      "node_id": "telegram_relay",
+      "node_type": "distribution_registry",
+      "authority_class": "orchestrator",
+      "capability_classes": [
+        "publish_relay",
+        "operator_notification",
+        "review_relay"
+      ],
+      "status": "live",
+      "allowed_request_classes": [
+        "publish_confirm",
+        "publish_relay"
+      ],
+      "fallback_mode": "manual_relay",
+      "health_source": "runtime/telegram_node/telegram_registry.json",
+      "owner_surface": "tools/telegram_relay.py",
+      "drift_sensitivity": "medium",
+      "authority_sensitivity": "high",
+      "dependency_graph": [
+        "shell_authority"
+      ],
+      "execution_pressure_class": "low",
+      "last_checked_at": "2026-04-15T08:08:32Z",
+      "mode": "relay_only",
+      "delivery_targets": [
+        {
+          "target_channel_label": "creator_telegram_primary",
+          "mode": "manual_creator_relay"
+        }
+      ]
+    }
+  }
+}

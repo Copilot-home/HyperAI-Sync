@@ -1,0 +1,195 @@
+{
+  "version": "creator-surface-policy-v1",
+  "generated_at": "2026-04-19T00:16:15Z",
+  "policy_family": "creator-orchestrator-policy",
+  "policy_mode": "fanout_active_creator_surfaces",
+  "active_creator_surface_set": [
+    {
+      "surface_id": "chrome.exe:67944",
+      "process_name": "chrome.exe",
+      "runtime_class": "browser_runtime",
+      "authority_role": "approval_intake_candidate",
+      "interactive_state": "active"
+    },
+    {
+      "surface_id": "msedge.exe:145332",
+      "process_name": "msedge.exe",
+      "runtime_class": "browser_runtime",
+      "authority_role": "approval_intake_candidate",
+      "interactive_state": "active"
+    },
+    {
+      "surface_id": "ChatGPT.exe:132744",
+      "process_name": "ChatGPT.exe",
+      "runtime_class": "desktop_electron_runtime",
+      "authority_role": "approval_intake",
+      "interactive_state": "active"
+    },
+    {
+      "surface_id": "Codex.exe:8256",
+      "process_name": "Codex.exe",
+      "runtime_class": "desktop_electron_runtime",
+      "authority_role": "approval_intake",
+      "interactive_state": "active"
+    }
+  ],
+  "preferred_approval_surface": {
+    "surface_id": "Codex.exe:8256",
+    "process_name": "Codex.exe",
+    "runtime_class": "desktop_electron_runtime",
+    "lane_class": "renderer",
+    "delivery_mode": "orchestrator_chat"
+  },
+  "allowed_fallback_surfaces": [
+    {
+      "surface_id": "chrome.exe:67944",
+      "runtime_class": "browser_runtime"
+    },
+    {
+      "surface_id": "msedge.exe:145332",
+      "runtime_class": "browser_runtime"
+    },
+    {
+      "surface_id": "ChatGPT.exe:132744",
+      "runtime_class": "desktop_electron_runtime"
+    },
+    {
+      "surface_id": "cli_manual_fallback",
+      "runtime_class": "service_runtime"
+    }
+  ],
+  "surface_role_candidates": [
+    {
+      "surface_id": "chrome.exe:67944",
+      "process_name": "chrome.exe",
+      "runtime_class": "browser_runtime",
+      "candidate_orchestrator_family": "creator_surface_orchestrators",
+      "candidate_mission_roles": [
+        "approval_intake",
+        "observer_only"
+      ],
+      "preferred_for": [],
+      "default_delivery_mode": "creator_surface_fallback"
+    },
+    {
+      "surface_id": "msedge.exe:145332",
+      "process_name": "msedge.exe",
+      "runtime_class": "browser_runtime",
+      "candidate_orchestrator_family": "creator_surface_orchestrators",
+      "candidate_mission_roles": [
+        "approval_intake",
+        "observer_only"
+      ],
+      "preferred_for": [],
+      "default_delivery_mode": "creator_surface_fallback"
+    },
+    {
+      "surface_id": "ChatGPT.exe:132744",
+      "process_name": "ChatGPT.exe",
+      "runtime_class": "desktop_electron_runtime",
+      "candidate_orchestrator_family": "creator_surface_orchestrators",
+      "candidate_mission_roles": [
+        "approval_intake",
+        "reasoning_delegate",
+        "behavior_delegate"
+      ],
+      "preferred_for": [],
+      "default_delivery_mode": "creator_surface"
+    },
+    {
+      "surface_id": "Codex.exe:8256",
+      "process_name": "Codex.exe",
+      "runtime_class": "desktop_electron_runtime",
+      "candidate_orchestrator_family": "creator_surface_orchestrators",
+      "candidate_mission_roles": [
+        "approval_intake",
+        "reasoning_delegate",
+        "behavior_delegate"
+      ],
+      "preferred_for": [
+        "creator_approval_delivery"
+      ],
+      "default_delivery_mode": "orchestrator_chat"
+    }
+  ],
+  "fanout_policy": {
+    "mode": "mirror_to_all_active_surfaces",
+    "preferred_surface_still_selected": true,
+    "approval_delivery": "fanout_then_cli_fallback"
+  },
+  "mission_precedence": {
+    "creator_approval_delivery": {
+      "preferred_surface": "Codex.exe:8256",
+      "fanout_surfaces": [
+        "chrome.exe:67944",
+        "msedge.exe:145332",
+        "ChatGPT.exe:132744",
+        "Codex.exe:8256"
+      ]
+    },
+    "implementation": {
+      "preferred_runtime_classes": [
+        "desktop_electron_runtime",
+        "service_runtime"
+      ]
+    },
+    "reasoning": {
+      "preferred_runtime_classes": [
+        "desktop_electron_runtime",
+        "browser_runtime"
+      ]
+    },
+    "monetization": {
+      "must_use_canonical_tools": [
+        "treasury_control",
+        "telegram_execution_fabric"
+      ]
+    }
+  },
+  "routing_examples": {
+    "creator_approval_intake": {
+      "surface_id": "Codex.exe:8256",
+      "runtime_class": "desktop_electron_runtime",
+      "lane_class": "renderer"
+    },
+    "publish_relay": {
+      "surface_id": "Telegram.exe:109372",
+      "runtime_class": "native_webview_runtime",
+      "lane_class": "network"
+    },
+    "automation_execution": [
+      {
+        "surface_id": "chrome.exe:123464",
+        "runtime_class": "automation_runtime",
+        "lane_class": "automation"
+      },
+      {
+        "surface_id": "chrome.exe:129072",
+        "runtime_class": "automation_runtime",
+        "lane_class": "automation"
+      }
+    ],
+    "state_persistence": [
+      {
+        "surface_id": "chrome.exe:67944",
+        "runtime_class": "browser_runtime",
+        "profile_root": "C:\\Users\\pc\\AppData\\Local\\Google\\Chrome\\User"
+      },
+      {
+        "surface_id": "msedge.exe:145332",
+        "runtime_class": "browser_runtime",
+        "profile_root": "C:\\Users\\pc\\AppData\\Local\\Microsoft\\Edge\\User"
+      },
+      {
+        "surface_id": "ChatGPT.exe:132744",
+        "runtime_class": "desktop_electron_runtime",
+        "profile_root": "C:\\Users\\pc\\AppData\\Local\\Packages\\OpenAI.ChatGPT-Desktop_2p2nqsd0c76g0\\LocalCache\\Roaming\\ChatGPT"
+      },
+      {
+        "surface_id": "Codex.exe:8256",
+        "runtime_class": "desktop_electron_runtime",
+        "profile_root": "C:\\Users\\pc\\AppData\\Roaming\\Codex"
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": "2026-04-19.telegram-native-control-contract.v1",
+  "generated_at": "2026-04-19T01:10:00Z",
+  "lane_id": "telegram_desktop_native_control",
+  "phase_binding": "telegram_mastery_first",
+  "root_surface": "Telegram.exe",
+  "authority_source": "ooda_control_contract",
+  "lane_role": "native_desktop_executor",
+  "mode": "bounded_native_control",
+  "allowed_actions": [
+    "focus_window",
+    "paste_text",
+    "submit_text",
+    "capture_visual_evidence"
+  ],
+  "forbidden_actions": [
+    "persist_session_secrets",
+    "background_mass_messaging",
+    "wallet_execution",
+    "business_state_promotion_without_proof"
+  ],
+  "current_capabilities": {
+    "browser_to_native_handoff": "proven",
+    "desktop_command_send": "proven",
+    "desktop_visual_capture": "available",
+    "desktop_readback_parse": "unproven"
+  },
+  "proof_artifacts": {
+    "desktop_control_probe": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\telegram_node\\telegram_desktop_control_probe.json",
+    "browser_launch_probe": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\telegram_node\\botfather_browser_probe.json",
+    "client_probe": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\telegram_node\\telegram_client_probe.json",
+    "botfather_client_run": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\telegram_node\\botfather_client_run.json"
+  },
+  "next_optimization_paths": [
+    {
+      "path_id": "native_visual_readback",
+      "priority": 1,
+      "objective": "Capture Telegram Desktop evidence after each command so the lane can progress beyond blind send."
+    },
+    {
+      "path_id": "ocr_or_uia_readback",
+      "priority": 2,
+      "objective": "Add repo-governed text readback from the Telegram Desktop conversation."
+    },
+    {
+      "path_id": "botfather_flow_automation",
+      "priority": 3,
+      "objective": "Automate /newbot or /token flow once readback is reliable enough to parse prompts safely."
+    }
+  ]
+}

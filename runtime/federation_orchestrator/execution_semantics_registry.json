@@ -1,0 +1,300 @@
+{
+  "schema_version": "2026-04-16.execution-semantics.v1",
+  "created_at": "2026-04-16",
+  "system_equation": {
+    "identity": "S = AIOS = Unified Model-Native Execution System",
+    "state_function": "S(t) = f(Input, State, Constraints, Evidence, SurfaceRegistry, Policy)",
+    "evolution": {
+      "from": "S = f(Input)",
+      "to": "S = f(M)",
+      "meaning": "Input remains a control signal; valid execution is model preservation and transformation over M."
+    }
+  },
+  "validity_statement": {
+    "model": "VALID",
+    "structure": "CONSISTENT",
+    "invariant_set": "CLOSED"
+  },
+  "model_space": {
+    "variables": [
+      "P",
+      "t",
+      "H(t)",
+      "T",
+      "G(t)",
+      "Th",
+      "F",
+      "W",
+      "D",
+      "Trust(P)"
+    ],
+    "invariants": {
+      "surface": "H(t) = T + G(t)",
+      "derivative": "dH/dt < 0",
+      "limit": "lim t->infinity H(t) = T",
+      "integrity": "D = T(W+F) - alpha G(t) - beta Th",
+      "trust": "Trust(P) = T(W+F) / (1 + G(t) + Th)",
+      "transform": "forall Phi: Phi(M) preserves invariants"
+    }
+  },
+  "runtime_cognition": {
+    "U_model": {
+      "definition": "I(AI_RUNTIME, M)",
+      "range": [
+        0,
+        1
+      ],
+      "full_condition": [
+        "AI_RUNTIME operates directly on M",
+        "no natural-language detour is required for model manipulation"
+      ]
+    },
+    "operator_identity": {
+      "equation": "AI_RUNTIME equiv Operator(M)",
+      "domain_rule": "AI_RUNTIME: L notin Domain; Domain = M",
+      "output_rule": "Output != Answer; Output = Transformation(M)",
+      "understanding_rule": "Understand(AI_RUNTIME) = Operate(M) without projection(L)"
+    },
+    "K_runtime": {
+      "definition": "g(C, E, R)",
+      "range": [
+        0,
+        1
+      ],
+      "components": {
+        "C": "computation over M",
+        "E": "extension of M without relation breakage",
+        "R": "invariant compliance"
+      },
+      "full_condition": [
+        "preserve M invariants",
+        "extend M without conflict",
+        "execute every valid phi_i(M)"
+      ]
+    }
+  },
+  "layer_mappings": [
+    {
+      "id": "runtime",
+      "mapping": "phi_runtime(M)",
+      "semantic_role": "Execution Authority",
+      "components": [
+        "Backend_5000",
+        "Frontend_4173",
+        "Boundary_autonomous",
+        "RouteShell"
+      ],
+      "state": "proven_live"
+    },
+    {
+      "id": "verification",
+      "mapping": "phi_verification(M)",
+      "semantic_role": "Drift Detection + Proof",
+      "components": [
+        "ci_build",
+        "ci_boundary_proof",
+        "ci_browser_smoke",
+        "auto_sync",
+        "drift_memory"
+      ],
+      "relation_to_runtime": "independent",
+      "state": "proven_live_drift_contained"
+    },
+    {
+      "id": "governance",
+      "mapping": "phi_governance(M)",
+      "semantic_role": "Constraint Enforcement",
+      "components": [
+        "M",
+        "U_model",
+        "K_runtime",
+        "Input_ControlSignal",
+        "phi_i(M)",
+        "Invariants"
+      ],
+      "state": "canon_active"
+    },
+    {
+      "id": "aidev",
+      "mapping": "phi_aidev(M)",
+      "semantic_role": "Source Capability Space",
+      "components": [
+        "FakeAPI",
+        "Router",
+        "Cache",
+        "Gateway",
+        "OperatorBridge",
+        "AutonomousSystems"
+      ],
+      "state": "source_proven_live_capable"
+    },
+    {
+      "id": "provider",
+      "mapping": "phi_provider(M)",
+      "semantic_role": "Execution Candidates",
+      "components": [
+        "LocalModels",
+        "CodeModels",
+        "GeneralModels",
+        "CloudEntries",
+        "LocalFacade"
+      ],
+      "state": "inventoried_partially_proven",
+      "capability_rule": "Capability != ProvenExecution"
+    },
+    {
+      "id": "tool",
+      "mapping": "phi_tool(M)",
+      "semantic_role": "Interaction Surface",
+      "components": [
+        "Codex",
+        "VSCode",
+        "MCP",
+        "Postman",
+        "Extensions"
+      ],
+      "state": "active_layer_gated",
+      "authority_rule": "Authority(tool) = 0 when proof is missing"
+    },
+    {
+      "id": "git",
+      "mapping": "phi_git(M)",
+      "semantic_role": "State Transport",
+      "components": [
+        "Titan",
+        "MacBook",
+        "Transport",
+        "DirtyProtection",
+        "Sediment"
+      ],
+      "state": "ledger_ready_dirty_protected",
+      "authority_rule": "Authority(git) = 0"
+    },
+    {
+      "id": "cloud",
+      "mapping": "phi_cloud(M)",
+      "semantic_role": "Observed Infrastructure",
+      "components": [
+        "GCP",
+        "IAM",
+        "Services",
+        "Logs"
+      ],
+      "state": "observed_only",
+      "authority_rule": "Authority(cloud) = 0"
+    },
+    {
+      "id": "infra",
+      "mapping": "phi_infra(M)",
+      "semantic_role": "Constraint Surface",
+      "components": [
+        "Docker",
+        "WSL",
+        "HCS"
+      ],
+      "state": "degraded_gated",
+      "allowed": [
+        "read_only",
+        "preservation"
+      ],
+      "blocked": [
+        "reset",
+        "purge",
+        "expansion"
+      ]
+    }
+  ],
+  "execution_route": [
+    "reuse_default_runtime",
+    "LocalFacade",
+    "API_Probe",
+    "MCP",
+    "Codespaces_Actions",
+    "SSH",
+    "Cloud"
+  ],
+  "lane_transition_rule": {
+    "equation": "Lane_{i+1} iff not Proof(Lane_i) and Gate(Lane_{i+1}) = open",
+    "required_fields": [
+      "source_lane",
+      "source_proof_state",
+      "target_lane",
+      "target_gate_state",
+      "evidence_artifact"
+    ]
+  },
+  "promotion_rule": {
+    "equation": "Authority(X) = 1 iff Proof(X) = valid and phi_X(M) is mapped and Gate(X) = open",
+    "anti_promotion_conditions": [
+      "label_only",
+      "installation_only",
+      "availability_only",
+      "copied_log_only",
+      "capability_without_execution_proof"
+    ]
+  },
+  "global_stop_rule": [
+    "OS_reset",
+    "Docker_purge",
+    "WSL_reset",
+    "Cloud_mutation",
+    "Git_destructive"
+  ],
+  "behavior_function": [
+    "phi_i(M)",
+    "Route",
+    "Apply_Policy",
+    "Produce(Evidence)",
+    "Verify",
+    "Memory"
+  ],
+  "failure_definition": [
+    "Missing_Proof",
+    "Broken_Mapping",
+    "Closed_Gate"
+  ],
+  "stable_operation_condition": [
+    "U_model = 1",
+    "K_runtime = 1",
+    "no invariant violation",
+    "no unresolved drift in phi_i(M)"
+  ],
+  "formal_stability_condition": {
+    "equation": "Stable(S) iff U_model = 1 and K_runtime = 1 and not Violation(M) and not Drift(phi_i(M))",
+    "drift_definition": [
+      "U_model < 1",
+      "K_runtime < 1",
+      "Violation(M)"
+    ],
+    "structural_error": [
+      "Missing_Proof",
+      "Broken_Mapping",
+      "Closed_Gate",
+      "Invariant_Violation",
+      "Unresolved_Drift"
+    ],
+    "classification_rule": "ordinary implementation errors are classified by their structural effect on M"
+  },
+  "valid_existence_condition": {
+    "equation": "ValidExistence(AI_RUNTIME) iff U_model = 1 and K_runtime = 1 and forall Phi, Phi(M) preserves invariants",
+    "correctness_rule": "AI_RUNTIME correct iff M is absolutely preserved under valid transformations",
+    "definition_rule": "this defines the condition under which AI_RUNTIME is permitted to exist as a valid operator of M"
+  },
+  "current_layer_state": {
+    "Runtime": "live",
+    "Verification": "independent",
+    "Governance": "active",
+    "AIDEV": "source_ready",
+    "Provider": "partial",
+    "Tool": "gated",
+    "Git": "transport",
+    "Cloud": "observed",
+    "Infra": "degraded"
+  },
+  "canonical_summary": {
+    "system": "Constraint-Bound Multi-Surface Execution System",
+    "execution": "Proof-Gated Surface Promotion",
+    "failure": "Missing Proof or Broken Mapping or Closed Gate",
+    "model_state": "MODEL UNDERSTOOD; NO STRUCTURE DRIFT; FULL CONSISTENCY WITH M"
+  }
+}

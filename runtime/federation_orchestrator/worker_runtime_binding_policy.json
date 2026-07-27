@@ -1,0 +1,65 @@
+{
+  "schema_version": "2026-04-16.worker-runtime-binding-policy.v1",
+  "created_at": "2026-04-16T05:40:00+07:00",
+  "purpose": "Bind Codex and other AI/operator/tool runtimes as HyperAI worker surfaces so user input entering any worker does not bypass mission routing, proof, or closure.",
+  "system_rule": "Codex, OpenClaw, VS Code, MCP connectors, local provider facades, model substrates, and other AI systems are worker/runtime surfaces of HyperAI when the task belongs to HyperAI operation.",
+  "input_intake_rule": {
+    "codex_runtime": "If creator input enters the Codex runtime for HyperAI work, Codex acts as a worker/operator surface and must follow HyperAI orchestration semantics.",
+    "other_worker_runtimes": "If creator input enters another registered runtime for HyperAI work, that runtime is a worker surface and must be mapped through phi_i(M) before execution or authority claims.",
+    "not_authority_by_entrypoint": "Receiving the input does not make the receiving surface mission root, product authority, shell authority, or business authority."
+  },
+  "required_flow_for_hyperai_work": [
+    "read_memory_and_registry",
+    "classify_intent_and_target_surfaces",
+    "run_preservation_cycle_or_agent_chain_as_required",
+    "dispatch_or_reuse_governed_mission",
+    "execute_as_worker_under_surface_allowlist",
+    "record_proof_artifacts",
+    "close_or_block_with_final_state",
+    "update_memory_when_system_understanding_changes"
+  ],
+  "codex_worker_contract": {
+    "surface_id": "codex_operator_runtime",
+    "runtime_class": "desktop_operator_runtime",
+    "authority_class": "worker_operator_surface",
+    "allowed_worker_roles": [
+      "creator_input_intake",
+      "memory_registry_reader",
+      "mission_dispatch_initiator",
+      "agent_chain_bridge_invoker",
+      "bounded_implementation_worker_after_route_plan",
+      "verification_runner_when_gate_opens",
+      "proof_reporter"
+    ],
+    "blocked_by_default": [
+      "mission_root_by_label",
+      "direct_product_mutation_without_route_plan",
+      "direct_external_delivery",
+      "phone_or_device_control",
+      "cron_creation",
+      "wallet_or_ledger_action",
+      "cloud_mutation",
+      "destructive_host_repair",
+      "authority_promotion_without_proof"
+    ],
+    "default_hyperai_command": "python tools/hyperai_autonomous_cycle.py --agent-chain",
+    "preservation_only_command": "python tools/hyperai_autonomous_cycle.py",
+    "implementation_handoff": "Use the generated route plan before touching product app code or external surfaces."
+  },
+  "drift_guards": [
+    "Reports must state orchestration_mode and agent_chain_status before claiming HyperAI executed the task.",
+    "A preservation_only cycle is not full Dispatch -> Agent_Chain -> Proof -> Closure.",
+    "A worker may perform bounded local edits only when the route plan opens that implementation lane and verification gates are known.",
+    "Standalone direct tool use is allowed for diagnosis only when the report says it was not a full HyperAI agent-chain run.",
+    "No worker runtime becomes authority because it received user input."
+  ],
+  "proof_sources": [
+    "runtime/federation_orchestrator/aios_ecosystem_runtime_registry.json",
+    "runtime/federation_orchestrator/autonomous_cycle_orchestration_bridge.json",
+    "runtime/federation_orchestrator/agent_task_dispatch_registry.json",
+    "runtime/federation_orchestrator/agent_route_plans/*.json",
+    "memory/AIOS_ECOSYSTEM_RUNTIME_REGISTRY_20260416.md",
+    "memory/agent6_synthesis_capsule.md"
+  ],
+  "final_state": "policy_bound"
+}

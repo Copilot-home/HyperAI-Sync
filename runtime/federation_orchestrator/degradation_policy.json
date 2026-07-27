@@ -1,0 +1,166 @@
+{
+  "version": "phase_treasury_a1-degradation-v1",
+  "rules": {
+    "deal_intelligence|filter": {
+      "if_dependency_down": "fallback",
+      "if_dependency_warning": "route",
+      "if_shell_degraded": "stop",
+      "if_memory_blocked": "route",
+      "if_verification_unavailable": "route"
+    },
+    "deal_intelligence|rank": {
+      "if_dependency_down": "stop",
+      "if_dependency_warning": "route",
+      "if_shell_degraded": "stop",
+      "if_memory_blocked": "route",
+      "if_verification_unavailable": "route"
+    },
+    "deal_intelligence|format": {
+      "if_dependency_down": "stop",
+      "if_dependency_warning": "route",
+      "if_shell_degraded": "stop",
+      "if_memory_blocked": "route",
+      "if_verification_unavailable": "route"
+    },
+    "agent3_api|classify": {
+      "if_dependency_down": "stop",
+      "if_dependency_warning": "route",
+      "if_shell_degraded": "stop",
+      "if_memory_blocked": "route",
+      "if_verification_unavailable": "route"
+    },
+    "agent3_api|rank": {
+      "if_dependency_down": "stop",
+      "if_dependency_warning": "route",
+      "if_shell_degraded": "stop",
+      "if_memory_blocked": "route",
+      "if_verification_unavailable": "route"
+    },
+    "agent3_api|summarize": {
+      "if_dependency_down": "stop",
+      "if_dependency_warning": "route",
+      "if_shell_degraded": "stop",
+      "if_memory_blocked": "route",
+      "if_verification_unavailable": "route"
+    },
+    "agent3_api|format": {
+      "if_dependency_down": "stop",
+      "if_dependency_warning": "route",
+      "if_shell_degraded": "stop",
+      "if_memory_blocked": "route",
+      "if_verification_unavailable": "route"
+    },
+    "agent5_ci|summarize": {
+      "if_dependency_down": "stop",
+      "if_dependency_warning": "route",
+      "if_shell_degraded": "stop",
+      "if_memory_blocked": "route",
+      "if_verification_unavailable": "route"
+    },
+    "agent5_ci|classify": {
+      "if_dependency_down": "stop",
+      "if_dependency_warning": "route",
+      "if_shell_degraded": "stop",
+      "if_memory_blocked": "route",
+      "if_verification_unavailable": "route"
+    },
+    "agent5_ci|rank": {
+      "if_dependency_down": "stop",
+      "if_dependency_warning": "route",
+      "if_shell_degraded": "stop",
+      "if_memory_blocked": "route",
+      "if_verification_unavailable": "route"
+    },
+    "agent5_ci|format": {
+      "if_dependency_down": "stop",
+      "if_dependency_warning": "route",
+      "if_shell_degraded": "stop",
+      "if_memory_blocked": "route",
+      "if_verification_unavailable": "route"
+    },
+    "agent6_synthesis|summarize": {
+      "if_dependency_down": "stop",
+      "if_dependency_warning": "route",
+      "if_shell_degraded": "stop",
+      "if_memory_blocked": "route",
+      "if_verification_unavailable": "route"
+    },
+    "agent6_synthesis|format": {
+      "if_dependency_down": "stop",
+      "if_dependency_warning": "route",
+      "if_shell_degraded": "stop",
+      "if_memory_blocked": "route",
+      "if_verification_unavailable": "route"
+    },
+    "memory_writer|memory_write": {
+      "if_dependency_down": "stop",
+      "if_dependency_warning": "stop",
+      "if_shell_degraded": "route",
+      "if_memory_blocked": "stop",
+      "if_verification_unavailable": "route"
+    },
+    "verification_truth|runtime_probe": {
+      "if_dependency_down": "stop",
+      "if_dependency_warning": "route",
+      "if_shell_degraded": "route",
+      "if_memory_blocked": "route",
+      "if_verification_unavailable": "stop"
+    },
+    "verification_truth|ci_build": {
+      "if_dependency_down": "stop",
+      "if_dependency_warning": "route",
+      "if_shell_degraded": "route",
+      "if_memory_blocked": "route",
+      "if_verification_unavailable": "stop"
+    },
+    "verification_truth|browser_smoke": {
+      "if_dependency_down": "stop",
+      "if_dependency_warning": "route",
+      "if_shell_degraded": "route",
+      "if_memory_blocked": "route",
+      "if_verification_unavailable": "stop"
+    },
+    "shell_authority|runtime_status": {
+      "if_dependency_down": "route",
+      "if_dependency_warning": "route",
+      "if_shell_degraded": "route",
+      "if_memory_blocked": "route",
+      "if_verification_unavailable": "route"
+    },
+    "treasury_control|treasury_balance_read": {
+      "if_dependency_down": "stop",
+      "if_dependency_warning": "route",
+      "if_shell_degraded": "stop",
+      "if_memory_blocked": "route",
+      "if_verification_unavailable": "route"
+    },
+    "treasury_control|treasury_funding_detect": {
+      "if_dependency_down": "stop",
+      "if_dependency_warning": "route",
+      "if_shell_degraded": "stop",
+      "if_memory_blocked": "route",
+      "if_verification_unavailable": "route"
+    },
+    "treasury_control|treasury_proposal": {
+      "if_dependency_down": "stop",
+      "if_dependency_warning": "route",
+      "if_shell_degraded": "stop",
+      "if_memory_blocked": "route",
+      "if_verification_unavailable": "route"
+    },
+    "telegram_relay|publish_relay": {
+      "if_dependency_down": "fallback",
+      "if_dependency_warning": "route",
+      "if_shell_degraded": "stop",
+      "if_memory_blocked": "route",
+      "if_verification_unavailable": "route"
+    },
+    "telegram_relay|publish_confirm": {
+      "if_dependency_down": "fallback",
+      "if_dependency_warning": "route",
+      "if_shell_degraded": "stop",
+      "if_memory_blocked": "route",
+      "if_verification_unavailable": "route"
+    }
+  }
+}

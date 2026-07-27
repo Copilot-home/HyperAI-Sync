@@ -1,0 +1,7 @@
+AI Grammar.app
+AI Vibe Coding for Xcode.app
+AiNoteBook(Debug).app
+BLACKBOXAI.app
+Notion Mail.app
+Testcontainers Desktop.app
+myMail.app

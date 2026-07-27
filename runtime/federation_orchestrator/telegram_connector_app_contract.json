@@ -1,0 +1,72 @@
+{
+  "schema_version": "2026-04-19.telegram-connector-app.v1",
+  "generated_at": "2026-04-19T11:17:00Z",
+  "connector_id": "telegram_connector_app",
+  "active_lane": "bot_api_lane",
+  "lane_state": "operational",
+  "lane_role": "connector_app",
+  "decision_authority": "ooda_control_contract",
+  "claim_policy": "proof_only",
+  "token_lifecycle_state": "token_synced",
+  "readback_config": {
+    "mode": "ocr_bounded",
+    "target_regex": "[0-9]{8,12}:[A-Za-z0-9_-]{20,}",
+    "timeout": 30,
+    "engine_status": "available"
+  },
+  "next_required_artifact": "telegram_target_proof",
+  "bot_api_server": {
+    "base_url": "https://api.telegram.org",
+    "mode": "cloud",
+    "docs_url": "https://core.telegram.org/bots/api#using-a-local-bot-api-server",
+    "feature_flags": {
+      "http_webhook_allowed": false,
+      "local_ip_webhook_allowed": false,
+      "arbitrary_port_webhook_allowed": false,
+      "large_file_capability": false
+    }
+  },
+  "bot_api_lane": {
+    "probe_state": "proven",
+    "canonical_bot_lane": "SignalAndyBot",
+    "get_updates_mode": "available",
+    "proven_target_count": 0,
+    "target_registry_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\runtime\\telegram_node\\telegram_target_registry.json",
+    "registry": {
+      "total": 0,
+      "proven": 0,
+      "candidate": 0,
+      "canonical_bot": "SignalAndyBot"
+    }
+  },
+  "botfather_lane": {
+    "native_contract": "telegram_desktop_native_control",
+    "desktop_command_send": "proven",
+    "desktop_visual_capture": "available",
+    "last_run_mode": "capture_live_window",
+    "last_capture_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\output\\playwright\\telegram-lane\\botfather-after-relaunch.png",
+    "readback_status": "read",
+    "readback_engine_status": "available",
+    "readback_matches": []
+  },
+  "last_proof": {
+    "kind": "desktop_capture",
+    "status": "captured",
+    "artifact_path": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\output\\playwright\\telegram-lane\\botfather-after-relaunch.png"
+  },
+  "surface_binding": {
+    "ui_control_surface": "hyperai_workspace_ui",
+    "bot_api_adapter": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\tools\\telegram_bot_api.py",
+    "botfather_client": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\tools\\botfather_client.py"
+  },
+  "next_actions": [
+    "Use bot_api probe/getUpdates/sendMessage for proven execution lanes.",
+    "Use BotFather native client only for bot creation/token lifecycle until API authority exists.",
+    "Route retrieved token into HyperAI UI System Control instead of frontend-local storage."
+  ],
+  "target_registry_summary": {
+    "total": 0,
+    "proven": 0,
+    "candidate": 0
+  }
+}

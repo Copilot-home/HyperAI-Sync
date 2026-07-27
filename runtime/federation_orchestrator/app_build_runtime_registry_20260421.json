@@ -1,0 +1,683 @@
+{
+  "schema_version": "app_build_runtime_registry.v1",
+  "generated_at": "2026-04-21T01:11:01.7314252+07:00",
+  "orchestration_mode": "GAM physical-scan + HyperAI local-first reconcile",
+  "agent_chain_status": "not_invoked",
+  "packet": "app_build_runtime_and_model_facade_bias_control",
+  "target_state": "registry_locked_observed_truth",
+  "baseline": {
+    "D0": 5,
+    "velocity": 1,
+    "k_domain": [0, 1, 2, 3, 4, 5],
+    "C_total": 38,
+    "C_delta_D": 7.6,
+    "eta_cost": 0.1316,
+    "authority_rule": "Authority(surface)=process/http proof AND no blocking contradiction AND registry match",
+    "route_rule": "route_score = locality + proof + task_fit - publisher_bias - stale_inventory_penalty"
+  },
+  "scan_boundary": {
+    "T_process": "PowerShell netstat and Win32_Process owner probe for 5000/5001/4173/4177/8000/5050/11434",
+    "T_http": "Invoke-WebRequest probes against backend, preview, AidevGen2, and Ollama endpoints",
+    "T_repo": "AGENTS.md, package roots, backend/server.js, runtime types, RuntimeLaneStatus UI",
+    "T_memory": "project_state.json and runtime capsules; stale backend-5000 claims downgraded",
+    "T_ios": "active-root xcodeproj/xcworkspace scan excluding node_modules/archive/legacy/backup"
+  },
+  "summary": {
+    "canonical_backend_state": "down_unproven",
+    "backend_candidate_state": "api_proven_candidate",
+    "preview_state": "preview_alive",
+    "model_facade_state": "health_proven_auth_blocked",
+    "model_substrate_state": "ollama_tags_proven",
+    "ios_lane_state": "ios_project_registry_missing",
+    "eperm_gate": "armed"
+  },
+  "runtime_surfaces": [
+    {
+      "id": "backend_5000_canonical",
+      "rootIdentity": "hyperai-user-control-system/backend/server.js",
+      "runtimeClass": "web",
+      "laneClass": "canonical_backend_contract",
+      "currentState": "down_unproven",
+      "authorityScore": 0,
+      "processProof": {
+        "port": 5000,
+        "listening": false
+      },
+      "httpProof": {
+        "url": "http://127.0.0.1:5000/api/health",
+        "status": null,
+        "result": "connection_failed"
+      },
+      "registryMatch": "canonical_contract_only",
+      "safeState": "blocked",
+      "proofRefs": [
+        "port_probe:5000 no listener",
+        "http_probe:/api/health connection_failed"
+      ],
+      "allowedActions": [
+        "read_only_probe",
+        "start_or_recycle_only_with_creator_approval"
+      ],
+      "blockers": [
+        "no active listener on canonical port",
+        "old memory claiming backend healthy is stale_previous_proof"
+      ]
+    },
+    {
+      "id": "backend_5001_candidate",
+      "rootIdentity": "hyperai-user-control-system/backend/server.js",
+      "runtimeClass": "web",
+      "laneClass": "managed_backend_candidate",
+      "currentState": "api_proven_candidate",
+      "authorityScore": 0.8,
+      "processProof": {
+        "port": 5001,
+        "listening": true,
+        "pid": 72116,
+        "process": "node backend/server.js"
+      },
+      "httpProof": {
+        "health": 200,
+        "runtimeCapabilities": 200,
+        "workspaceSession": 200,
+        "autonomyStatus": 200
+      },
+      "registryMatch": "same_backend_file_noncanonical_port",
+      "safeState": "bounded",
+      "proofRefs": [
+        "http_probe:5001/api/health 200",
+        "http_probe:5001/api/runtime/capabilities 200",
+        "http_probe:5001/api/workspace/session 200",
+        "http_probe:5001/api/autonomy/status 200"
+      ],
+      "allowedActions": [
+        "read_only_probe",
+        "serve_cockpit_truth_projection",
+        "hold_current_runtime"
+      ],
+      "blockers": [
+        "not canonical port 5000",
+        "workspace session still reports stale process and managed backend url 5000"
+      ]
+    },
+    {
+      "id": "spa_preview_4173",
+      "rootIdentity": "hyperai-user-control-system dist preview",
+      "runtimeClass": "web",
+      "laneClass": "spa_preview",
+      "currentState": "preview_alive",
+      "authorityScore": 0.9,
+      "processProof": {
+        "port": 4173,
+        "listening": true,
+        "pid": 54424
+      },
+      "httpProof": {
+        "root": 200,
+        "content": "HyperAI SPA HTML"
+      },
+      "registryMatch": "preview_contract",
+      "safeState": "safe_observe",
+      "proofRefs": [
+        "http_probe:4173 root 200"
+      ],
+      "allowedActions": [
+        "browser_smoke",
+        "ui_projection"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "spa_preview_4177",
+      "rootIdentity": "hyperai-user-control-system isolated dist preview",
+      "runtimeClass": "web",
+      "laneClass": "isolated_spa_preview",
+      "currentState": "preview_alive",
+      "authorityScore": 0.8,
+      "processProof": {
+        "port": 4177,
+        "listening": true,
+        "pid": 119656
+      },
+      "httpProof": {
+        "root": 200,
+        "content": "HyperAI SPA HTML"
+      },
+      "registryMatch": "isolated_preview_contract",
+      "safeState": "safe_observe",
+      "proofRefs": [
+        "http_probe:4177 root 200"
+      ],
+      "allowedActions": [
+        "browser_smoke",
+        "isolated_runtime_projection"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "mobile_rn_package",
+      "rootIdentity": "hyperai-user-control-system/mobile/package.json",
+      "runtimeClass": "mobile-rn",
+      "laneClass": "react_native_package",
+      "currentState": "package_registry_observed",
+      "authorityScore": 0.35,
+      "processProof": {
+        "listening": false
+      },
+      "httpProof": null,
+      "registryMatch": "package_root_only",
+      "safeState": "observed_only",
+      "proofRefs": [
+        "file_scan:mobile/package.json React Native 0.64.2"
+      ],
+      "allowedActions": [
+        "read_only_package_scan",
+        "plan_build_lane"
+      ],
+      "blockers": [
+        "no emulator/device proof",
+        "no Metro/runtime proof in this scan"
+      ]
+    },
+    {
+      "id": "ios_native_target",
+      "rootIdentity": "active app roots",
+      "runtimeClass": "ios-native",
+      "laneClass": "native_app_target",
+      "currentState": "ios_project_registry_missing",
+      "authorityScore": 0.1,
+      "processProof": {
+        "bridgeObserved": true
+      },
+      "httpProof": null,
+      "registryMatch": "missing_app_workspace_or_scheme",
+      "safeState": "blocked",
+      "proofRefs": [
+        "xcode_scan:active roots no xcodeproj/xcworkspace outside excluded dirs"
+      ],
+      "allowedActions": [
+        "read_only_project_discovery"
+      ],
+      "blockers": [
+        "xcodebuildmcp bridge process does not prove an app target",
+        "no active .xcodeproj/.xcworkspace/scheme discovered"
+      ]
+    },
+    {
+      "id": "xcodebuildmcp_bridge",
+      "rootIdentity": "Build iOS Apps MCP",
+      "runtimeClass": "mcp-bridge",
+      "laneClass": "ios_tool_bridge",
+      "currentState": "bridge_process_alive_target_unproven",
+      "authorityScore": 0.45,
+      "processProof": {
+        "bridgeObserved": true
+      },
+      "httpProof": null,
+      "registryMatch": "tool_bridge_only",
+      "safeState": "bounded",
+      "proofRefs": [
+        "active_runtime_surface_scan:tool_bridge entries"
+      ],
+      "allowedActions": [
+        "session_defaults_probe",
+        "project_discovery"
+      ],
+      "blockers": [
+        "no native app target proof"
+      ]
+    },
+    {
+      "id": "playwright_mcp_bridge",
+      "rootIdentity": "Playwright MCP",
+      "runtimeClass": "mcp-bridge",
+      "laneClass": "browser_tool_bridge",
+      "currentState": "bridge_alive",
+      "authorityScore": 0.55,
+      "processProof": {
+        "bridgeObserved": true
+      },
+      "httpProof": null,
+      "registryMatch": "tool_bridge",
+      "safeState": "bounded",
+      "proofRefs": [
+        "active_runtime_surface_scan:playwright tool bridge entries"
+      ],
+      "allowedActions": [
+        "browser_snapshot",
+        "browser_smoke"
+      ],
+      "blockers": [
+        "tool bridge is not runtime authority"
+      ]
+    },
+    {
+      "id": "aidevgen2_8000_quantumreason",
+      "rootIdentity": "C:/AidevGen2/aidev/MEMORY_OF_FUTURE/api_server.py",
+      "runtimeClass": "model-gateway",
+      "laneClass": "openai_compatible_facade_candidate",
+      "currentState": "health_proven_auth_blocked",
+      "authorityScore": 0.62,
+      "processProof": {
+        "port": 8000,
+        "listening": true,
+        "pid": 8752,
+        "process": "python api_server.py"
+      },
+      "httpProof": {
+        "health": 200,
+        "stats": 200,
+        "chatCompletions": 401
+      },
+      "registryMatch": "model_gateway_candidate",
+      "safeState": "bounded",
+      "proofRefs": [
+        "http_probe:8000/api/v2/health 200",
+        "http_probe:8000/api/v2/stats 200",
+        "http_probe:8000/api/v2/chat/completions 401"
+      ],
+      "allowedActions": [
+        "read_only_probe",
+        "auth_contract_discovery",
+        "facade_route_planning"
+      ],
+      "blockers": [
+        "chat completion requires auth or configured API key",
+        "inference proof is not closed"
+      ]
+    },
+    {
+      "id": "xhub_5050",
+      "rootIdentity": "C:/Users/pc/xhub_app.py",
+      "runtimeClass": "model-gateway",
+      "laneClass": "aux_python_endpoint",
+      "currentState": "endpoint_registry_missing",
+      "authorityScore": 0.35,
+      "processProof": {
+        "port": 5050,
+        "listening": true,
+        "pid": 114300,
+        "process": "python xhub_app.py"
+      },
+      "httpProof": {
+        "root": 404
+      },
+      "registryMatch": "missing_route_registry",
+      "safeState": "observed_only",
+      "proofRefs": [
+        "http_probe:5050 root 404"
+      ],
+      "allowedActions": [
+        "read_only_route_discovery"
+      ],
+      "blockers": [
+        "root endpoint is 404",
+        "no route-specific contract proven"
+      ]
+    },
+    {
+      "id": "ollama_11434",
+      "rootIdentity": "Ollama local service",
+      "runtimeClass": "model-substrate",
+      "laneClass": "local_model_inventory",
+      "currentState": "tags_proven",
+      "authorityScore": 0.9,
+      "processProof": {
+        "port": 11434,
+        "listening": true,
+        "pid": 38400,
+        "process": "ollama.exe serve"
+      },
+      "httpProof": {
+        "tags": 200
+      },
+      "registryMatch": "live_inventory",
+      "safeState": "safe_observe",
+      "proofRefs": [
+        "http_probe:11434/api/tags 200"
+      ],
+      "allowedActions": [
+        "model_inventory_read",
+        "bounded_local_inference_probe"
+      ],
+      "blockers": [
+        "per-model task proof still required before app binding"
+      ]
+    },
+    {
+      "id": "codex_creator_intake",
+      "rootIdentity": "Codex desktop conversation",
+      "runtimeClass": "operator-ide",
+      "laneClass": "creator_intake_surface",
+      "currentState": "active",
+      "authorityScore": 0.9,
+      "processProof": {
+        "activeConversation": true
+      },
+      "httpProof": null,
+      "registryMatch": "creator_surface",
+      "safeState": "safe_intake",
+      "proofRefs": [
+        "current_chat:creator input active"
+      ],
+      "allowedActions": [
+        "approval_intake",
+        "orchestration_report",
+        "repo_patch_with_verification"
+      ],
+      "blockers": [
+        "not mission root; must obey memory/registry/proof protocol"
+      ]
+    },
+    {
+      "id": "code_insiders",
+      "rootIdentity": "Visual Studio Code - Insiders",
+      "runtimeClass": "operator-ide",
+      "laneClass": "primary_observation_ide",
+      "currentState": "active_auth_conflict",
+      "authorityScore": 0.7,
+      "processProof": {
+        "workspaceObserved": true
+      },
+      "httpProof": null,
+      "registryMatch": "operator_surface",
+      "safeState": "bounded",
+      "proofRefs": [
+        "screenshot:GitHub AI sign-in modal",
+        "logs:auth/provider conflicts observed"
+      ],
+      "allowedActions": [
+        "observe",
+        "edit_after_backend_proof",
+        "log_review"
+      ],
+      "blockers": [
+        "GitHub AI sign-in unresolved",
+        "extension conflict risk"
+      ]
+    },
+    {
+      "id": "windsurf",
+      "rootIdentity": "Windsurf",
+      "runtimeClass": "operator-ide",
+      "laneClass": "quarantine_observe_only",
+      "currentState": "updater_file_handle_blocked",
+      "authorityScore": 0.35,
+      "processProof": {
+        "installed": true
+      },
+      "httpProof": null,
+      "registryMatch": "operator_surface_quarantine",
+      "safeState": "quarantine",
+      "proofRefs": [
+        "screenshot:failed update",
+        "screenshot:file handle lock chrome_100_percent.pak",
+        "log:C:/Windows/TEMP/windsurf-inno-updater-1776618120.log"
+      ],
+      "allowedActions": [
+        "observe",
+        "log_review"
+      ],
+      "blockers": [
+        "file handle lock",
+        "updater access denied",
+        "no process kill/update retry without approval"
+      ]
+    },
+    {
+      "id": "blackboxai",
+      "rootIdentity": "BLACKBOXAI",
+      "runtimeClass": "operator-ide",
+      "laneClass": "observe_only",
+      "currentState": "extensionhost_unstable",
+      "authorityScore": 0.25,
+      "processProof": {
+        "installed": true
+      },
+      "httpProof": null,
+      "registryMatch": "operator_surface_observed",
+      "safeState": "observe_only",
+      "proofRefs": [
+        "logs:extensionHost crash 134",
+        "logs:update DNS failure",
+        "logs:duplicate command/proposal API incompatibility"
+      ],
+      "allowedActions": [
+        "observe",
+        "log_review"
+      ],
+      "blockers": [
+        "extension host instability",
+        "not primary backend authority"
+      ]
+    }
+  ],
+  "model_facade_state": {
+    "default_provider_facade": "Model Facade",
+    "default_route_state": "substrate_live_gateway_auth_blocked",
+    "allowed_default_binding": "facade_only",
+    "direct_provider_binding": "blocked_without_governed_contract",
+    "gateway_candidate": "aidevgen2_8000_quantumreason",
+    "substrate": "ollama_11434",
+    "blockers": [
+      "AidevGen2 chat completion returned 401 Unauthorized",
+      "per-model task proof is not complete"
+    ]
+  },
+  "model_bindings": [
+    {
+      "model": "gemma4:latest",
+      "substrate": "ollama",
+      "locality": "local",
+      "providerFacade": "Model Facade",
+      "taskClasses": ["general", "reasoning"],
+      "inventoryState": "live",
+      "inferenceProofState": "unproven",
+      "publisherLabel": "Google/Gemma family",
+      "capabilityClaimSource": "ollama_tags",
+      "publisherBiasRisk": 0.35,
+      "routeScore": 0.55,
+      "allowedUse": ["candidate_inventory", "bounded_probe_only"]
+    },
+    {
+      "model": "gemma:latest",
+      "substrate": "ollama",
+      "locality": "local",
+      "providerFacade": "Model Facade",
+      "taskClasses": ["general"],
+      "inventoryState": "live",
+      "inferenceProofState": "unproven",
+      "publisherLabel": "Google/Gemma family",
+      "capabilityClaimSource": "ollama_tags",
+      "publisherBiasRisk": 0.35,
+      "routeScore": 0.5,
+      "allowedUse": ["candidate_inventory", "bounded_probe_only"]
+    },
+    {
+      "model": "mistral:latest",
+      "substrate": "ollama",
+      "locality": "local",
+      "providerFacade": "Model Facade",
+      "taskClasses": ["general", "debug"],
+      "inventoryState": "live",
+      "inferenceProofState": "unproven",
+      "publisherLabel": "Mistral family",
+      "capabilityClaimSource": "ollama_tags",
+      "publisherBiasRisk": 0.3,
+      "routeScore": 0.55,
+      "allowedUse": ["candidate_inventory", "bounded_probe_only"]
+    },
+    {
+      "model": "llama3:latest",
+      "substrate": "ollama",
+      "locality": "local",
+      "providerFacade": "Model Facade",
+      "taskClasses": ["general", "reasoning"],
+      "inventoryState": "live",
+      "inferenceProofState": "unproven",
+      "publisherLabel": "Meta/Llama family",
+      "capabilityClaimSource": "ollama_tags",
+      "publisherBiasRisk": 0.35,
+      "routeScore": 0.55,
+      "allowedUse": ["candidate_inventory", "bounded_probe_only"]
+    },
+    {
+      "model": "qwen2.5-coder:1.5b",
+      "substrate": "ollama",
+      "locality": "local",
+      "providerFacade": "Model Facade",
+      "taskClasses": ["code", "debug"],
+      "inventoryState": "live",
+      "inferenceProofState": "gateway_auth_blocked",
+      "publisherLabel": "Qwen family",
+      "capabilityClaimSource": "ollama_tags + failed gateway chat probe",
+      "publisherBiasRisk": 0.25,
+      "routeScore": 0.58,
+      "allowedUse": ["candidate_inventory", "auth_required_before_binding"]
+    },
+    {
+      "model": "deepseek-r1:1.5b",
+      "substrate": "ollama",
+      "locality": "local",
+      "providerFacade": "Model Facade",
+      "taskClasses": ["reasoning"],
+      "inventoryState": "live",
+      "inferenceProofState": "unproven",
+      "publisherLabel": "DeepSeek/Qwen family",
+      "capabilityClaimSource": "ollama_tags",
+      "publisherBiasRisk": 0.3,
+      "routeScore": 0.52,
+      "allowedUse": ["candidate_inventory", "bounded_probe_only"]
+    },
+    {
+      "model": "all-minilm:22m",
+      "substrate": "ollama",
+      "locality": "local",
+      "providerFacade": "Model Facade",
+      "taskClasses": ["embedding"],
+      "inventoryState": "live",
+      "inferenceProofState": "unproven",
+      "publisherLabel": "BERT/MiniLM family",
+      "capabilityClaimSource": "ollama_tags",
+      "publisherBiasRisk": 0.2,
+      "routeScore": 0.56,
+      "allowedUse": ["candidate_inventory", "embedding_probe_required"]
+    },
+    {
+      "model": "gpt-oss:120b-cloud",
+      "substrate": "ollama",
+      "locality": "cloud",
+      "providerFacade": "Model Facade",
+      "taskClasses": ["reasoning", "general"],
+      "inventoryState": "live",
+      "inferenceProofState": "unproven",
+      "publisherLabel": "remote Ollama cloud model",
+      "capabilityClaimSource": "ollama_tags",
+      "publisherBiasRisk": 0.65,
+      "routeScore": 0.28,
+      "allowedUse": ["candidate_inventory", "cloud_route_requires_explicit_contract"]
+    },
+    {
+      "model": "minimax-m2.5:cloud",
+      "substrate": "ollama",
+      "locality": "cloud",
+      "providerFacade": "Model Facade",
+      "taskClasses": ["general"],
+      "inventoryState": "live",
+      "inferenceProofState": "unproven",
+      "publisherLabel": "remote Ollama cloud model",
+      "capabilityClaimSource": "ollama_tags",
+      "publisherBiasRisk": 0.65,
+      "routeScore": 0.25,
+      "allowedUse": ["candidate_inventory", "cloud_route_requires_explicit_contract"]
+    },
+    {
+      "model": "gemma3:latest",
+      "substrate": "ollama",
+      "locality": "local",
+      "providerFacade": "Model Facade",
+      "taskClasses": ["general"],
+      "inventoryState": "live",
+      "inferenceProofState": "unproven",
+      "publisherLabel": "Google/Gemma family",
+      "capabilityClaimSource": "ollama_tags",
+      "publisherBiasRisk": 0.35,
+      "routeScore": 0.48,
+      "allowedUse": ["candidate_inventory", "bounded_probe_only"]
+    },
+    {
+      "model": "gpt-oss:120b",
+      "substrate": "ollama",
+      "locality": "local",
+      "providerFacade": "Model Facade",
+      "taskClasses": ["reasoning", "general"],
+      "inventoryState": "live",
+      "inferenceProofState": "unproven",
+      "publisherLabel": "Open model family",
+      "capabilityClaimSource": "ollama_tags",
+      "publisherBiasRisk": 0.4,
+      "routeScore": 0.5,
+      "allowedUse": ["candidate_inventory", "bounded_probe_only"]
+    },
+    {
+      "model": "codellama:latest",
+      "substrate": "ollama",
+      "locality": "local",
+      "providerFacade": "Model Facade",
+      "taskClasses": ["code", "debug"],
+      "inventoryState": "live",
+      "inferenceProofState": "unproven",
+      "publisherLabel": "Meta/CodeLlama family",
+      "capabilityClaimSource": "ollama_tags",
+      "publisherBiasRisk": 0.35,
+      "routeScore": 0.54,
+      "allowedUse": ["candidate_inventory", "bounded_probe_only"]
+    },
+    {
+      "model": "qwen3:4b",
+      "substrate": "ollama",
+      "locality": "local",
+      "providerFacade": "Model Facade",
+      "taskClasses": ["code", "reasoning", "general"],
+      "inventoryState": "live",
+      "inferenceProofState": "unproven",
+      "publisherLabel": "Qwen family",
+      "capabilityClaimSource": "ollama_tags",
+      "publisherBiasRisk": 0.25,
+      "routeScore": 0.6,
+      "allowedUse": ["candidate_inventory", "bounded_probe_only"]
+    }
+  ],
+  "contradictions": [
+    {
+      "id": "backend_5000_memory_stale",
+      "detail": "Older memory and manifests claim backend healthy on 5000, but current port/http proof shows 5000 down.",
+      "resolution": "downgrade old claims to stale_previous_proof"
+    },
+    {
+      "id": "managed_runtime_manifest_mismatch",
+      "detail": "5001 is live, but workspace session still reports managed backend URL 5000 and stale_process=true.",
+      "resolution": "treat 5001 as api_proven_candidate, not canonical replacement"
+    },
+    {
+      "id": "ios_bridge_not_ios_app",
+      "detail": "xcodebuildmcp process evidence proves a bridge only, not an iOS app workspace/scheme.",
+      "resolution": "keep ios_project_registry_missing"
+    }
+  ],
+  "blockers": [
+    "canonical backend 5000 down",
+    "AidevGen2 chat completion auth blocked",
+    "iOS app project/workspace/scheme missing in active roots",
+    "EPERM spawn gate remains armed for vite/esbuild isolated builds",
+    "Windsurf updater/file-handle lock remains unresolved",
+    "BLACKBOXAI extensionHost instability remains unresolved"
+  ],
+  "next_actions": [
+    "Expose this registry through /api/runtime/capabilities",
+    "Project runtime truth matrix in HyperAI cockpit",
+    "Run ci:build and ci:browser-smoke; if EPERM returns, stop at build_runtime_eperm_blocked",
+    "Do not promote model gateway until auth and bounded inference proof close",
+    "Do not promote iOS lane until a real project/workspace/scheme is discovered"
+  ]
+}

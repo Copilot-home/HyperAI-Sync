@@ -1,0 +1,63 @@
+{
+  "schema_version": "2026-04-18.cli-capability-registry.v1",
+  "generated_at": "2026-04-18T11:59:46Z",
+  "summary": {
+    "tool_count": 5,
+    "mcp_enabled_tools": [
+      "codex"
+    ],
+    "mcp_unconfigured_tools": [
+      "copilot",
+      "gemini"
+    ]
+  },
+  "tools": [
+    {
+      "tool_id": "gh",
+      "executable": "C:\\Users\\pc\\.local\\bin\\gh.CMD",
+      "version": "unknown",
+      "connector_binding": "github",
+      "runtime_class": "cli_transport_surface",
+      "authority_class": "repo_transport_surface",
+      "role_summary": "GitHub repo transport and workflow coordination CLI."
+    },
+    {
+      "tool_id": "codex",
+      "executable": "C:\\Users\\pc\\AppData\\Roaming\\npm\\codex.CMD",
+      "version": "unknown",
+      "connector_binding": "llm_engine",
+      "runtime_class": "desktop_operator_runtime",
+      "authority_class": "worker_operator_surface",
+      "role_summary": "Primary local worker/operator CLI with active MCP integration.",
+      "mcp_status": ""
+    },
+    {
+      "tool_id": "copilot",
+      "executable": "C:\\Users\\pc\\AppData\\Roaming\\npm\\copilot.CMD",
+      "version": "unknown",
+      "connector_binding": "llm_engine",
+      "runtime_class": "desktop_operator_runtime",
+      "authority_class": "worker_operator_surface",
+      "role_summary": "Secondary coding/operator CLI; MCP not yet configured locally.",
+      "mcp_status": ""
+    },
+    {
+      "tool_id": "gemini",
+      "executable": "C:\\Users\\pc\\bin\\gemini.CMD",
+      "version": "unknown",
+      "connector_binding": "llm_engine",
+      "runtime_class": "desktop_operator_runtime",
+      "authority_class": "worker_operator_surface",
+      "role_summary": "Reasoning/operator CLI candidate with unresolved MCP issues in the current environment."
+    },
+    {
+      "tool_id": "openclaw",
+      "executable": "C:\\Users\\pc\\AppData\\Roaming\\npm\\openclaw.CMD",
+      "version": "OpenClaw 2026.4.14",
+      "connector_binding": "telegram",
+      "runtime_class": "operator_control_surface",
+      "authority_class": "observed_control_lane",
+      "role_summary": "Operator/control CLI for bounded wrapper-based control, not promoted execution authority."
+    }
+  ]
+}
