@@ -1,11 +1,16 @@
 {
-  "last_updated": "2026-07-28T08:52:00Z",
-  "current_focus": "Exposed GitHub PAT revoked via GitHub Credential Revocation API",
-  "latest_summary": "Dispatched HyperAI mission mission-c6887acbe9774885 and called POST /credentials/revoke for the exposed GitHub PAT. GitHub returned HTTP 202; token is revoked. Dispatch registry and route plan updated with revocation proof. The APΩ credential broker should treat this token as compromised; a new token must be generated if needed.",
+  "last_updated": "2026-07-28T09:00:00Z",
+  "current_focus": "Technical chain closed: key hygiene guardrail wired to /runtime/actions with evidence receipts",
+  "latest_summary": "Scanned active blockers, pending actions, and code drift. Implemented policy preflight in control_api.py: /runtime/actions/{connector_id} now runs KeyHygienePolicy.check, records an EvidenceReceipt, and returns 422 with receipt_id when policy_decision is missing for approve_state on keys without expiry. Remaining items (manual/dashboard evidence, replacement PAT) are external/creator-gated and no longer open technical proposals.",
   "active_blockers": [],
   "next_actions": [
-    "Collect manual/dashboard evidence for Domains/SSO/AAC/External Invites/Usage limits/Agents.",
-    "Wire guardrail into /runtime/actions execute path and record evidence receipt on policy events.",
-    "Generate a replacement GitHub PAT if the revoked token was still in use for any connector."
-  ]
+    "Collect manual/dashboard evidence for Domains/SSO/AAC/External Invites/Usage limits/Agents (creator gate).",
+    "Generate a replacement GitHub PAT if the revoked token was still in use for any connector (creator gate)."
+  ],
+  "closure_state": {
+    "status": "technical_chain_closed",
+    "reason": "No open technical proposals; remaining actions are external/manual gates.",
+    "tests": "10/10 unit tests pass",
+    "receipt_storage": "runtime/connector_control_plane/receipts/"
+  }
 }
