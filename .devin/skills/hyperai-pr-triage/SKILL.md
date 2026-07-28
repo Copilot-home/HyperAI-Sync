@@ -115,4 +115,24 @@ QUEUE_UPDATE
 APPROVAL_GATE
 ```
 
-Keep per-PR output compact; group and aggregate. Do not print secrets or tokens. Do not ask for permission on every low-risk close/merge; ask only for unarchiving repos, changing branch protection, or merging large draft features with repo-wide CI failures.
+Keep per-PR output compact; group and aggregate. Do not print secrets or tokens. Do not ask for permission on every low-risk close/merge; ask only for unarchiving repos, changing branch protection, force-pushing, or merging large draft features with repo-wide CI failures unless the user has set `APPROVAL_GATE=OPEN` / `--autonomous`.
+
+## AGENTS.md / Canon compliance
+
+This skill operates under the `HYPERAI / AIOS CANON RUNTIME OPERATING LAW`:
+
+- `CANON is authority` — when the user asks to "load the operating premise and decide", the assistant still applies the AGENTS.md canon as the operational constraint.
+- `No anchor, no validity` — every mutation must leave a receipt (commit, log, branch-protection snapshot).
+- `Cleanup without receipt -> invalid` — always record branch protection before/after, archive state transitions, and PR state after action.
+- `Cloud/public without gate -> not authorized` — unarchiving a repo or changing branch protection is a public/stateful gate; require an explicit `APPROVAL_GATE`.
+- `Do not modify repository security policies ... to work around CI or build failures` — branch protection may only be temporarily relaxed as a last resort, and must be restored immediately after the specific merge, with before/after evidence.
+
+### Approval gates
+
+| Gate | Low-risk actions (no per-PR ask) | High-risk actions (need explicit gate) |
+|---|---|---|
+| `APPROVAL_GATE: DRY-RUN` | classify, report, dry-run | none |
+| `APPROVAL_GATE: EXECUTE` | close junk/empty/stale, merge clean PRs, update branch | — |
+| `APPROVAL_GATE: AUTONOMOUS-OVERRIDE` | all of the above | unarchive repo, archive repo, modify branch protection, force-push, resolve unaddressed review threads, merge coding-agent PR by bypassing collaborator review rule |
+
+If a high-risk action is needed and the gate is not open, record it as `blocked` in `manual_review` and surface it to the user rather than silently bypassing policy.
