@@ -1,6 +1,6 @@
 {
   "mission_id": "mission-repo-governance-20260728v5",
-  "timestamp": "2026-07-28T14:50:49Z",
+  "timestamp": "2026-07-28T14:53:21Z",
   "owners": [
     "NguyenCuong1989",
     "Copilot-home",
@@ -9,9 +9,9 @@
   "stale_days": 90,
   "notion_status_file": null,
   "notion_db_id": null,
-  "total_open_issues": 83,
+  "total_open_issues": 82,
   "by_category": {
-    "manual_review": 9,
+    "manual_review": 8,
     "notion_unverified": 74
   },
   "actions": [],
@@ -500,12 +500,6 @@
       "repo": "Copilot-home/DAIOF-Framework",
       "number": 94,
       "title": "Runtime triage: repository landscape fragmentation and duplicate DAIOF surface",
-      "category": "manual_review"
-    },
-    {
-      "repo": "Copilot-home/DAIOF-Framework",
-      "number": 29,
-      "title": "[BUG]",
       "category": "manual_review"
     },
     {

@@ -1,7 +1,7 @@
 {
   "last_updated": "2026-07-28T14:55:00Z",
   "current_focus": "Ecosystem mapping updated: personal / org experiment / org global; governance tool now scans LineageAI",
-  "latest_summary": "Mapped GitHub ecosystem into 2 lanes across 3 owners: NguyenCuong1989 (personal source/sandbox), Copilot-home (org experiment/community), LineageAI (org global/community). Created memory/repo_ecosystem_map.json covering 80 repos. Updated hyperai_repo_governance_agent.py to scan all 3 owners and use per-repo REST fallback (filters PRs). Dry-run found 83 open issues: 74 notion_unverified, 9 manual_review. LineageAI/DAIOF-Framework has 0 open issues, 3 open PRs (Dependabot bumps).",
+  "latest_summary": "Mapped GitHub ecosystem into 2 lanes across 3 owners: NguyenCuong1989 (personal source/sandbox), Copilot-home (org experiment/community), LineageAI (org global/community). Created memory/repo_ecosystem_map.json covering 80 repos. Updated hyperai_repo_governance_agent.py to scan all 3 owners and use per-repo REST fallback (filters PRs). Closed Copilot-home/DAIOF-Framework #29 (empty bug template, not planned). Open issues now 82 (74 notion_unverified, 8 manual_review). LineageAI/DAIOF-Framework has 0 open issues, 3 open PRs (Dependabot bumps).",
   "active_blockers": [
     "Notion API key (auth-local integration) still cannot query DB_TASKS; requires sharing DB with the integration in Notion settings."
   ],
