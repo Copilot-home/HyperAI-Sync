@@ -1,0 +1,47 @@
+{
+  "schema_version": "2026-04-16.hyperai-route-plan.v1",
+  "mission_id": "mission-d785a4e3a4ab47d1",
+  "completed_at": "2026-07-28T09:12:00Z",
+  "steps": [
+    {
+      "agent": "agent1",
+      "role": "ontology_scope",
+      "status": "completed"
+    },
+    {
+      "agent": "agent2",
+      "role": "runtime_entrypoint",
+      "status": "completed"
+    },
+    {
+      "agent": "agent3",
+      "role": "api_contract",
+      "status": "completed"
+    },
+    {
+      "agent": "agent4",
+      "role": "frontend_composition",
+      "status": "completed"
+    },
+    {
+      "agent": "agent5",
+      "role": "ci_verification",
+      "status": "completed"
+    },
+    {
+      "agent": "agent6",
+      "role": "synthesis",
+      "status": "completed"
+    }
+  ],
+  "final_state": "evidence_collected_pat_requires_login",
+  "constraints": [
+    "no_secret_printing",
+    "no_credential_harvesting",
+    "no_destructive_git_mutation",
+    "no_cloud_mutation_without_explicit_gate"
+  ],
+  "implementation_note": "Route plan is generated. Bounded implementation must be done by a worker surface with an open gate and proof artifacts.",
+  "evidence_dir": "runtime/federation_orchestrator/agent_task_outputs/mission-d785a4e3a4ab47d1/evidence",
+  "prefilled_pat_url": "https://github.com/settings/personal-access-tokens/new?name=HyperAI-replacement-PAT&description=Replacement+for+revoked+exposed+token&target_name=Copilot-home&expires_in=90&contents=read&metadata=read&actions=read"
+}

@@ -9472,5 +9472,29 @@
     },
     "final_state": "revoked_via_github_credentials_api",
     "completed_at": "2026-07-28T08:52:00Z"
+  },
+  {
+    "schema_version": "2026-04-16.hyperai-agent-dispatch.v1",
+    "mission_id": "mission-d785a4e3a4ab47d1",
+    "dispatched_at": "2026-07-28T09:03:12Z",
+    "title": "Playwright dashboard evidence and replacement PAT",
+    "description": "Use the mcp-playwright browser surface to collect manual/dashboard evidence from GitHub for Domains, SSO, AAC, External Invites, Usage limits, and Agents. Then generate a replacement GitHub PAT for the revoked token (github_pat_11BO5...) and store it securely in the AP\u03a9 credential broker. Chat-surface approval granted by Creator.",
+    "action_class": "route",
+    "surfaces": [
+      "mcp_connectors",
+      "credential_broker",
+      "verification_truth"
+    ],
+    "status": "completed",
+    "proof": {
+      "source": "codex_operator_runtime",
+      "gate": "creator_approval_intake",
+      "note": "Dashboard evidence collected via authenticated gh REST/GraphQL; replacement PAT blocked by unauthenticated browser session.",
+      "playwright_probe": "mcp-playwright browser_navigate to github.com and PAT creation page",
+      "evidence_dir": "runtime/federation_orchestrator/agent_task_outputs/mission-d785a4e3a4ab47d1/evidence",
+      "prefilled_pat_url": "https://github.com/settings/personal-access-tokens/new?name=HyperAI-replacement-PAT&description=Replacement+for+revoked+exposed+token&target_name=Copilot-home&expires_in=90&contents=read&metadata=read&actions=read"
+    },
+    "final_state": "evidence_collected_pat_requires_login",
+    "completed_at": "2026-07-28T09:12:00Z"
   }
 ]

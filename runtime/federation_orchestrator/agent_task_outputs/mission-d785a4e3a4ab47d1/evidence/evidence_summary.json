@@ -1,0 +1,39 @@
+{
+  "schema_version": "2026-04-16.hyperai-playwright-evidence.v1",
+  "mission_id": "mission-d785a4e3a4ab47d1",
+  "collected_at": "2026-07-28T09:12:00Z",
+  "source": "gh REST/GraphQL authenticated via keyring + mcp-playwright unauthenticated probe",
+  "organization": "Copilot-home",
+  "findings": {
+    "org_info": "runtime/federation_orchestrator/agent_task_outputs/mission-d785a4e3a4ab47d1/evidence/org_info.json",
+    "domains": "runtime/federation_orchestrator/agent_task_outputs/mission-d785a4e3a4ab47d1/evidence/org_domains_sso.json",
+    "invitations": "runtime/federation_orchestrator/agent_task_outputs/mission-d785a4e3a4ab47d1/evidence/org_invitations.json",
+    "outside_collaborators": "runtime/federation_orchestrator/agent_task_outputs/mission-d785a4e3a4ab47d1/evidence/outside_collaborators.json",
+    "members": "runtime/federation_orchestrator/agent_task_outputs/mission-d785a4e3a4ab47d1/evidence/org_members.json",
+    "billing_usage": "runtime/federation_orchestrator/agent_task_outputs/mission-d785a4e3a4ab47d1/evidence/billing_usage.json",
+    "copilot_seats": "runtime/federation_orchestrator/agent_task_outputs/mission-d785a4e3a4ab47d1/evidence/copilot_seats.json"
+  },
+  "screenshots": {
+    "github_home_unauthenticated": "runtime/federation_orchestrator/agent_task_outputs/mission-d785a4e3a4ab47d1/github_home_unauth.png",
+    "pat_creation_login_redirect": "runtime/federation_orchestrator/agent_task_outputs/mission-d785a4e3a4ab47d1/github_pat_login_redirect.png"
+  },
+  "summary": {
+    "domains": [
+      {"domain": "creators.contact", "isVerified": false, "isApproved": true},
+      {"domain": "example.com", "isVerified": false, "isApproved": true}
+    ],
+    "sso": null,
+    "aac": "Not exposed via API; no GraphQL/REST field found.",
+    "external_invites": [],
+    "outside_collaborators": [],
+    "members": "See org_members.json",
+    "usage_limits": "Billing usage available; see billing_usage.json. No explicit 'usage limits' API; rate limits and Copilot seats recorded.",
+    "agents": "Copilot seats: 0 total, 0 active. No dedicated 'Agents' API endpoint found."
+  },
+  "replacement_pat": {
+    "status": "requires_creator_login",
+    "reason": "mcp-playwright browser session is unauthenticated; GitHub does not expose a PAT creation API/GraphQL mutation.",
+    "prefilled_url": "https://github.com/settings/personal-access-tokens/new?name=HyperAI-replacement-PAT&description=Replacement+for+revoked+exposed+token&target_name=Copilot-home&expires_in=90&contents=read&metadata=read&actions=read",
+    "note": "Creator can open the pre-filled URL after logging in and click 'Generate token'. Store the resulting token in the APΩ credential broker (do not commit it)."
+  }
+}
