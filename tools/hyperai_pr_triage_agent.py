@@ -276,6 +276,9 @@ def main() -> int:
         else:
             manual_review.append(item)
 
+    closed = sum(1 for log in execution_log if log.get("status") == 0 and log.get("action") == "close_pr")
+    merged = sum(1 for log in execution_log if log.get("status") == 0 and log.get("action") in ("merge_pr", "update_then_merge"))
+
     report = {
         "schema_version": "2026-04-16.hyperai-pr-triage.v1",
         "mission_id": mission_id,
@@ -286,6 +289,8 @@ def main() -> int:
         "summary": {
             "total": len(classified),
             "actions": len(actions),
+            "closed": closed,
+            "merged": merged,
             "manual_review": len(manual_review),
             "by_category": {}
         },
@@ -304,6 +309,8 @@ def main() -> int:
     print(f"VERIFY_PACKET")
     print(f"  total: {len(classified)}")
     print(f"  actions: {len(actions)}")
+    print(f"  closed: {closed}")
+    print(f"  merged: {merged}")
     print(f"  manual_review: {len(manual_review)}")
     print(f"  by_category: {by_category}")
     print(f"  report: {output_dir / 'triage_report.json'}")
