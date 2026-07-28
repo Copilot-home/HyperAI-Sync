@@ -1,25 +1,27 @@
 {
-  "last_updated": "2026-07-28T14:55:00Z",
-  "current_focus": "Repo topology graph built: branch/fork/same-basename graph classifies 88 nodes into standalone, product, or ecosystem convergence.",
-  "latest_summary": "Built repo topology graph across 88 nodes (3 owners). Created memory/repo_topology_map.json and memory/repo_topology_graph.md. Ecosystem hub: Copilot-home/HyperAI-Sync. Product canonicals: LineageAI/DAIOF-Framework (global), Copilot-home/DAIOF-Framework (experiment), Copilot-home/trust_of_copilot (experiment). Classification: 21 standalone systems, 10 converge to product, 53 converge to ecosystem hub, 3 product canonicals. Standalone requires clear operating name/source and active signal; brand-like external forks and inactive variants converge. Updated naming canon in repo_ecosystem_map.json."
+  "last_updated": "2026-07-28T16:25:51.826812Z",
+  "current_focus": "Converged product and small ecosystem repos into canonicals; documented deferred large-fork strategy.",
+  "latest_summary": "Merged 10 DAIOF variants + personal DAIOF-Framework fork into Copilot-home/DAIOF-Framework (PR #119). Merged 21 small/inactive converge_to_ecosystem repos into Copilot-home/HyperAI-Sync (PR #1). Skipped 10 empty repos. Removed leaked mcp.json.bak OAuth token via filter-branch before push. Large external forks documented for deferred strategy.",
   "active_blockers": [
     "Notion API key (auth-local integration) still cannot query DB_TASKS; requires sharing DB with the integration in Notion settings."
   ],
   "next_actions": [
+    "Implement selective merge strategy for large external forks (subtree-squash, submodules, or archives).",
     "Continue Notion-sync reconciliation once DB_TASKS is shared with auth-local.",
-    "Address 8 manual-review issues: DAIOF-Framewor#7, workbench#6, and trust_of_copilot/hyperai1989/vscode-d8204b72 items.",
+    "Address 8 manual-review issues: DAIOF-Framework#7, workbench#6, and trust_of_copilot/hyperai1989/vscode-d8204b72 items.",
     "Implement periodic token health-check in hyperai_credentials_service.py.",
-    "Canonicalize Notion task titles to point at correct owner and system lane: [GH] Copilot-home/DAIOF-Framework #N (experiment) or LineageAI/DAIOF-Framework #N (global).",
-    "Respect naming canon in all future governance: each repo is an independent system; brand-like names are aliases, not vendor ownership."
+    "Canonicalize Notion task titles to point at correct owner and system lane.",
+    "Respect naming canon: each repo is an independent system; brand-like names are aliases, not vendor ownership."
   ],
   "closure_state": {
-    "status": "topology-mapped-governance-ready",
-    "reason": "Built graph topology across 88 repos/3 owners; each node classified as product_canonical, product_experiment, standalone_system, converge_to_product, or converge_to_ecosystem; Mermaid graph and JSON map generated; naming canon preserved.",
-    "tests": "gh API branch fetch succeeded for all repos; graph generated with 99 edges and 22 components; topology roles assigned.",
+    "status": "product-and-small-ecosystem-converged",
+    "reason": "Product canonical DAIOF-Framework received 10 variant subtree merges. Ecosystem hub HyperAI-Sync received 21 small/inactive repo subtree merges. Secret leakage remediated. Large external forks deferred with documented strategy.",
+    "tests": "gh pr merge succeeded for both PRs; GitHub push protection passed after filter-branch; branch topology and converge measurement data preserved.",
     "evidence": [
       "memory/repo_topology_map.json",
       "memory/repo_topology_graph.md",
-      "memory/repo_ecosystem_map.json",
+      "memory/converge_measurement.json",
+      "memory/ecosystem_converge_report.md",
       "memory/project_state.json"
     ]
   }
