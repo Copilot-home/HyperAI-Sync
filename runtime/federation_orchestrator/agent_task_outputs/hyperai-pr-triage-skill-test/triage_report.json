@@ -1,0 +1,63 @@
+{
+  "schema_version": "2026-04-16.hyperai-pr-triage.v1",
+  "mission_id": "hyperai-pr-triage-skill-test",
+  "timestamp": "2026-07-28T12:22:38Z",
+  "execute": false,
+  "stale_days": 90,
+  "owners": [
+    "NguyenCuong1989",
+    "Copilot-home"
+  ],
+  "summary": {
+    "total": 2,
+    "actions": 2,
+    "closed": 0,
+    "merged": 0,
+    "manual_review": 0,
+    "by_category": {
+      "archived-repo": 1,
+      "review-required": 1
+    }
+  },
+  "classified": [
+    {
+      "repo": "NguyenCuong1989/vscode-python-environments",
+      "number": 1,
+      "title": "Feature/add copilot instructions",
+      "url": "https://github.com/NguyenCuong1989/vscode-python-environments/pull/1",
+      "updated_age_days": 20,
+      "draft": true,
+      "merge": "BLOCKED",
+      "mergeable": "MERGEABLE",
+      "checks": "MIXED",
+      "review": "",
+      "category": "archived-repo",
+      "reason": "repository is archived",
+      "proposed_action": {
+        "action": "manual_review",
+        "reason": "repository is archived",
+        "note": "Repository is archived. Unarchive the repo first, or close manually."
+      }
+    },
+    {
+      "repo": "Copilot-home/balancehub-minimal",
+      "number": 3,
+      "title": "fix: add missing ops/lint_apo_check.py to unblock AP\u03a9 ontology lint CI step",
+      "url": "https://github.com/Copilot-home/balancehub-minimal/pull/3",
+      "updated_age_days": 0,
+      "draft": false,
+      "merge": "BLOCKED",
+      "mergeable": "MERGEABLE",
+      "checks": "MIXED",
+      "review": "REVIEW_REQUIRED",
+      "category": "review-required",
+      "reason": "review required",
+      "proposed_action": {
+        "action": "manual_review",
+        "reason": "review required",
+        "note": "Approve, resolve review threads if needed, then merge."
+      }
+    }
+  ],
+  "manual_review": []
+}

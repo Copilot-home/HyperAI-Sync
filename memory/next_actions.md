@@ -10,19 +10,20 @@
 - [x] Build and run HyperAI PR triage autonomous loop `tools/hyperai_pr_triage_loop.py`. Loop completed after 1 iteration (21 PRs, 0 low-risk actions). Evidence at `runtime/federation_orchestrator/agent_task_outputs/mission-pr-triage-loop-20260728`.
 - [x] **Failure mission:** cleared all 9 CI-failure PRs plus `Copilot-home/nguyencuong_2509#3`. Merged 10, closed 1 (`my_too_test#9`), and re-ran triage loop; open PR count reduced from 21 to 11. Evidence at `runtime/federation_orchestrator/agent_task_outputs/mission-pr-triage-loop-20260728v3`.
 - [x] **Cleanup phase 2:** processed the remaining 11 PRs (5 closed, 6 merged, 1 small conflict resolved). Open PRs now 2: `vscode-python-environments#1` (archived repo) and `balancehub-minimal#3` (blocked by coding-agent collaborator review policy). Method updated in `memory/pr_triage_method_update_20260728.md`.
+- [x] **Skill upgrade:** created `hyperai-pr-triage` skill in `.devin/skills/hyperai-pr-triage/SKILL.md`, updated `tools/hyperai_pr_triage_agent.py` with archive/label/conflict heuristics, and routed `hyperai-runtime-orchestrator` to use the new skill for PR cleanup.
 
 ## Reusable PR triage agent & loop
 
 ```bash
-# single dry-run
+# Dry-run scan across default owners
 cd /Users/andy/HyperAI-Sync
 python3 tools/hyperai_pr_triage_agent.py --stale-days 90 --mission-id <mission-id>
 
-# single execute
+# Execute low-risk actions
 cd /Users/andy/HyperAI-Sync
 python3 tools/hyperai_pr_triage_agent.py --stale-days 90 --execute --mission-id <mission-id>
 
-# autonomous loop (runs until no low-risk actions)
+# Autonomous loop (runs until no low-risk actions)
 cd /Users/andy/HyperAI-Sync
 python3 tools/hyperai_pr_triage_loop.py --stale-days 90 --max-iter 5 --sleep 15
 ```
@@ -42,6 +43,8 @@ python3 tools/hyperai_pr_triage_loop.py --stale-days 90 --max-iter 5 --sleep 15
 - [ ] Triage 85 Notion-sync issues in `NguyenCuong1989/trust_of_copilot-c8aae4ab` against Notion source.
 - [ ] Decide disposition of 6 old DAIOF principle issues in `Copilot-home/DAIOF-Framework` (#27-37, #78).
 
-## Method update
+## Method & skill documentation
 
-- See `memory/pr_triage_method_update_20260728.md` for the 10 lessons captured during this cleanup phase.
+- `memory/pr_triage_method_update_20260728.md` — 10 lessons from the cleanup.
+- `.devin/skills/hyperai-pr-triage/SKILL.md` — autonomous skill for PR triage.
+- `tools/hyperai_pr_triage_agent.py` — agent with archive/label/conflict heuristics.

@@ -83,13 +83,34 @@ def fetch_open_prs(owners: list[str]) -> list[dict[str, Any]]:
 def fetch_pr_details(repo: str, number: int) -> dict[str, Any] | None:
     fields = (
         "number,title,url,createdAt,updatedAt,isDraft,mergeStateStatus,mergeable,"
-        "statusCheckRollup,author,reviewDecision,headRefName,baseRefName,comments,labels"
+        "statusCheckRollup,author,reviewDecision,headRefName,baseRefName,comments,labels,files"
     )
     res = _run(["gh", "pr", "view", "--repo", repo, str(number), "--json", fields])
     if res.returncode != 0:
         print(f"WARN: failed to fetch details for {repo}#{number}: {res.stderr.strip()}", file=sys.stderr)
         return None
     return json.loads(res.stdout)
+
+
+def is_repo_archived(repo: str) -> bool:
+    res = _run(["gh", "repo", "view", repo, "--json", "isArchived"])
+    if res.returncode != 0:
+        return False
+    try:
+        return json.loads(res.stdout).get("isArchived", False)
+    except json.JSONDecodeError:
+        return False
+
+
+def has_required_label_failure(rollup: list[dict[str, Any]] | None) -> bool:
+    if not rollup:
+        return False
+    for check in rollup:
+        name = check.get("name", "")
+        if isinstance(name, str) and ("required label" in name.lower() or "ensure required labels" in name.lower() or "pr labels" in name.lower()):
+            if check.get("conclusion") == "FAILURE":
+                return True
+    return False
 
 
 def check_status(rollup: list[dict[str, Any]] | None) -> str:
@@ -120,11 +141,36 @@ def classify_pr(pr: dict[str, Any], stale_days: int) -> tuple[str, str]:
     mergeable = str(pr.get("mergeable") or "UNKNOWN")
     checks = check_status(pr.get("statusCheckRollup"))
     review = pr.get("reviewDecision") or "NONE"
+    files = pr.get("files") or []
+    file_count = len(files)
+    repository = ""
+    if pr.get("repository"):
+        repository = pr.get("repository")
+    elif "/pull/" in (pr.get("url") or ""):
+        parts = pr["url"].rsplit("/pull/", 1)[0].split("/")
+        if len(parts) >= 2:
+            repository = f"{parts[-2]}/{parts[-1]}"
 
     # Junk / spam detection
     stripped = title.strip().lower()
     if stripped in ("hi", "hello", "test") or len(title.strip()) < 4:
         return "junk", "title is junk/spam"
+
+    # Archived repository: do not spend CI time
+    if repository and is_repo_archived(repository):
+        return "archived-repo", "repository is archived"
+
+    # WIP with no changed files
+    if draft and file_count == 0:
+        return "wip-draft-empty", "WIP draft with no changed files"
+
+    # WIP with broad repo-wide failures (large draft, many files, failing unrelated checks)
+    if draft and file_count > 50 and checks == "FAILURE":
+        return "wip-repo-wide-failures", f"large WIP draft ({file_count} files) with repo-wide check failures"
+
+    # Label-required blockers
+    if has_required_label_failure(pr.get("statusCheckRollup")):
+        return "label-required", "missing required PR label"
 
     # Merge candidates: non-WIP, clean, passing checks, not review-blocked
     if (
@@ -141,6 +187,8 @@ def classify_pr(pr: dict[str, Any], stale_days: int) -> tuple[str, str]:
     # WIP (draft or title [WIP]) that is stale
     if draft and stale:
         if merge == "DIRTY" or mergeable == "CONFLICTING":
+            if file_count <= 2:
+                return "stale-wip-small-conflict", f"WIP {age}d old with small merge conflict"
             return "stale-wip-conflict", f"WIP {age}d old with merge conflict"
         if merge in ("UNKNOWN", "UNSTABLE"):
             return "stale-wip-unstable", f"WIP {age}d old with unstable/unknown status"
@@ -151,6 +199,8 @@ def classify_pr(pr: dict[str, Any], stale_days: int) -> tuple[str, str]:
     # Stale non-WIP with blockers
     if not draft and stale:
         if merge == "DIRTY" or mergeable == "CONFLICTING":
+            if file_count <= 2:
+                return "stale-small-conflict", f"PR {age}d old with small merge conflict"
             return "stale-conflict", f"PR {age}d old with merge conflict"
         if merge == "BLOCKED" and review == "REVIEW_REQUIRED":
             return "stale-review-blocked", f"PR {age}d old and review-blocked"
@@ -163,6 +213,8 @@ def classify_pr(pr: dict[str, Any], stale_days: int) -> tuple[str, str]:
     if merge == "BLOCKED" and review == "REVIEW_REQUIRED":
         return "review-required", "review required"
     if merge == "DIRTY" or mergeable == "CONFLICTING":
+        if file_count <= 2:
+            return "small-conflict", "merge conflict in 1-2 files; may be resolvable"
         return "conflict", "merge conflict"
     if draft:
         return "wip-draft", "active WIP"
@@ -171,8 +223,26 @@ def classify_pr(pr: dict[str, Any], stale_days: int) -> tuple[str, str]:
 
 def decide_action(pr: dict[str, Any], category: str, reason: str, stale_days: int) -> dict[str, Any] | None:
     """Return action dict or None for manual-review."""
-    if category == "junk":
-        return {"action": "close_pr", "reason": reason, "comment": f"Closing as junk/spam PR per ecosystem triage."}
+    if category in ("junk", "wip-draft-empty"):
+        return {"action": "close_pr", "reason": reason, "comment": f"Closing {category} PR per ecosystem triage."}
+    if category == "wip-repo-wide-failures":
+        return {
+            "action": "close_pr",
+            "reason": reason,
+            "comment": "Closing large WIP draft with repo-wide CI failures. Reopen as smaller, passing PRs.",
+        }
+    if category == "archived-repo":
+        return {
+            "action": "manual_review",
+            "reason": reason,
+            "note": "Repository is archived. Unarchive the repo first, or close manually.",
+        }
+    if category == "label-required":
+        return {
+            "action": "manual_review",
+            "reason": reason,
+            "note": "Add the required PR label (or create it if missing), then re-run checks.",
+        }
     if category.startswith("stale-"):
         return {
             "action": "close_pr",
@@ -184,6 +254,14 @@ def decide_action(pr: dict[str, Any], category: str, reason: str, stale_days: in
     if category == "unstable-clean-checks":
         # Out-of-date but otherwise healthy; try update-branch then merge.
         return {"action": "update_then_merge", "reason": reason, "method": "squash"}
+    if category in ("small-conflict", "stale-small-conflict", "stale-wip-small-conflict"):
+        return {"action": "manual_review", "reason": reason, "note": "Small conflict; a human can resolve by merging base and keeping both sides."}
+    if category in ("conflict", "stale-conflict", "stale-wip-conflict"):
+        return {"action": "manual_review", "reason": reason, "note": "Large or multi-file merge conflict; ask author to rebase."}
+    if category == "review-required":
+        return {"action": "manual_review", "reason": reason, "note": "Approve, resolve review threads if needed, then merge."}
+    if category == "ci-failure":
+        return {"action": "manual_review", "reason": reason, "note": "Investigate failing checks; apply known small patterns if they match."}
     return None
 
 
@@ -260,6 +338,7 @@ def main() -> int:
         if not details:
             # Fall back to search metadata
             details = pr
+        details.setdefault("repository", repo)
         category, reason = classify_pr(details, args.stale_days)
         action = decide_action(details, category, reason, args.stale_days)
         item = {
