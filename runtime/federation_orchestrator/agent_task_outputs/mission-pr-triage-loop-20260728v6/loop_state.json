@@ -1,0 +1,30 @@
+{
+  "schema_version": "2026-04-16.hyperai-pr-triage-loop.v1",
+  "mission_id": "mission-pr-triage-loop-20260728v6",
+  "timestamp": "2026-07-28T12:45:20Z",
+  "owners": [
+    "NguyenCuong1989",
+    "Copilot-home"
+  ],
+  "stale_days": 90,
+  "max_iter": 2,
+  "iterations": [
+    {
+      "iteration": 1,
+      "mission_id": "mission-pr-triage-loop-20260728v6-iter-1",
+      "status": "completed",
+      "summary": {
+        "total": 0,
+        "actions": 0,
+        "closed": 0,
+        "merged": 0,
+        "manual_review": 0,
+        "by_category": {}
+      },
+      "report": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/agent_task_outputs/mission-pr-triage-loop-20260728v6-iter-1/triage_report.json"
+    }
+  ],
+  "total_closed": 0,
+  "total_merged": 0,
+  "final_state": "loop_complete"
+}
