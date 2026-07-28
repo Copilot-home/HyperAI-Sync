@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-07-28T07:30:00Z",
-  "current_focus": "Key hygiene policy guardrail (R5) pushed; exposed GitHub PAT queued for revocation",
-  "latest_summary": "Added runtime/connector_control_plane/policy.py with KeyHygienePolicy and pushed to origin/codex/aios-runtime-memory-deploy. Rewrote history to redact an exposed GitHub PAT in runtime/federation_orchestrator/titan_repo_sync_registry_20260415.json. Commit author email switched to NguyenCuong1989@users.noreply.github.com to satisfy GitHub privacy push protection. Next step: revoke the compromised PAT and mark it in the credential broker/registry.",
+  "last_updated": "2026-07-28T08:50:55Z",
+  "current_focus": "HyperAI mission dispatched to revoke exposed GitHub PAT (pending operator gate)",
+  "latest_summary": "Dispatched HyperAI mission mission-c6887acbe9774885 to revoke the exposed GitHub PAT and mark it compromised. Agent 1-6 route plan generated; final_state=route_plan_ready. The actual GitHub revocation is a gated external side-effect (R5) and requires an open operator gate or OAuth app credentials; the credential broker/registry cannot unilaterally revoke a GitHub PAT without GitHub platform authorization.",
   "active_blockers": [
-    "Exposed GitHub PAT (github_pat_11BO5...) must be revoked on GitHub; cannot be done purely locally."
+    "Exposed GitHub PAT (github_pat_11BO5...) must be revoked on GitHub; requires operator gate or OAuth app client_id/client_secret."
   ],
   "next_actions": [
-    "Revoke exposed GitHub PAT and mark it compromised in the credential broker/registry.",
+    "Open operator gate for mission-c6887acbe9774885 (revoke PAT via GitHub UI or provide OAuth app credentials for API revocation).",
     "Collect manual/dashboard evidence for Domains/SSO/AAC/External Invites/Usage limits/Agents.",
     "Wire guardrail into /runtime/actions execute path and record evidence receipt on policy events."
   ]
