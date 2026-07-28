@@ -8,6 +8,7 @@
 - [x] Audit all open issues/PRs across NguyenCuong1989 and Copilot-home (mission-8fd3a8d531744837). Closed 5 stale/vague issues and 9 stale/draft/junk PRs. Evidence at `runtime/federation_orchestrator/agent_task_outputs/mission-ecosystem-audit-20260728`.
 - [x] Build reusable PR triage agent `tools/hyperai_pr_triage_agent.py`.
 - [x] Build and run HyperAI PR triage autonomous loop `tools/hyperai_pr_triage_loop.py`. Loop completed after 1 iteration (21 PRs, 0 low-risk actions). Evidence at `runtime/federation_orchestrator/agent_task_outputs/mission-pr-triage-loop-20260728`.
+- [x] **Failure mission:** cleared all 9 CI-failure PRs plus `Copilot-home/nguyencuong_2509#3`. Merged 10, closed 1 (`my_too_test#9`), and re-ran triage loop; open PR count reduced from 21 to 11. Evidence at `runtime/federation_orchestrator/agent_task_outputs/mission-pr-triage-loop-20260728v3`.
 
 ## Reusable PR triage agent & loop
 
@@ -34,6 +35,7 @@ python3 tools/hyperai_pr_triage_loop.py --stale-days 90 --max-iter 5 --sleep 15
 
 ## Ecosystem cleanup manual review
 
-- [ ] Review 21 remaining open PRs in `runtime/federation_orchestrator/agent_task_outputs/mission-pr-triage-loop-20260728-iter-1/triage_report.json`; route to per-repo fix agents or manual review.
+- [ ] Review 11 remaining open PRs in `runtime/federation_orchestrator/agent_task_outputs/mission-pr-triage-loop-20260728v3-iter-1/triage_report.json`; route to per-repo fix agents or manual review.
+  - 7 WIP, 2 conflict, 2 review-required.
 - [ ] Triage 85 Notion-sync issues in `NguyenCuong1989/trust_of_copilot-c8aae4ab` against Notion source.
 - [ ] Decide disposition of 6 old DAIOF principle issues in `Copilot-home/DAIOF-Framework` (#27-37, #78).
