@@ -1,20 +1,21 @@
 {
   "last_updated": "2026-07-28T14:55:00Z",
   "current_focus": "Ecosystem mapping updated: personal / org experiment / org global; governance tool now scans LineageAI",
-  "latest_summary": "Mapped GitHub ecosystem into 2 lanes across 3 owners: NguyenCuong1989 (personal source/sandbox), Copilot-home (org experiment/community), LineageAI (org global/community). Created memory/repo_ecosystem_map.json covering 80 repos. Updated hyperai_repo_governance_agent.py to scan all 3 owners and use per-repo REST fallback (filters PRs). Closed Copilot-home/DAIOF-Framework #29 (empty bug template, not planned). Open issues now 82 (74 notion_unverified, 8 manual_review). LineageAI/DAIOF-Framework has 0 open issues, 3 open PRs (Dependabot bumps).",
+  "latest_summary": "Mapped GitHub ecosystem into 2 lanes across 3 owners with each repo treated as an independent operational system. Updated memory/repo_ecosystem_map.json with naming canon: brand-like names (chatgpt, codex, copilot, gemini, claude, openai, vscode, etc.) are management aliases for custom systems, not vendor claims. Updated hyperai_repo_governance_agent.py to scan all 3 owners and use per-repo REST fallback. Closed Copilot-home/DAIOF-Framework #29 (empty bug template, not planned). Open issues now 82 (74 notion_unverified, 8 manual_review). LineageAI/DAIOF-Framework has 0 open issues, 3 open PRs (Dependabot bumps)."
   "active_blockers": [
     "Notion API key (auth-local integration) still cannot query DB_TASKS; requires sharing DB with the integration in Notion settings."
   ],
   "next_actions": [
     "Continue Notion-sync reconciliation once DB_TASKS is shared with auth-local.",
-    "Address 9 manual-review issues: DAIOF-Framewor#7, workbench#6, and trust_of_copilot/hyperai1989/vscode-d8204b72 items.",
+    "Address 8 manual-review issues: DAIOF-Framewor#7, workbench#6, and trust_of_copilot/hyperai1989/vscode-d8204b72 items.",
     "Implement periodic token health-check in hyperai_credentials_service.py.",
-    "Canonicalize Notion task titles to point at correct owner: e.g. [GH] Copilot-home/DAIOF-Framework #N (experiment) or LineageAI/DAIOF-Framework #N (global)."
+    "Canonicalize Notion task titles to point at correct owner and system lane: [GH] Copilot-home/DAIOF-Framework #N (experiment) or LineageAI/DAIOF-Framework #N (global).",
+    "Respect naming canon in all future governance: each repo is an independent system; brand-like names are aliases, not vendor ownership."
   ],
   "closure_state": {
     "status": "ecosystem-mapped-governance-ready",
-    "reason": "Mapped 2-lane / 3-owner ecosystem; updated governance tool to scan LineageAI and filter PRs; dry-run found 83 open issues and 3 open PRs; canonical paths defined.",
-    "tests": "broker /status healthy; governance dry-run completed; repo_ecosystem_map.json generated",
+    "reason": "Mapped 2-lane / 3-owner ecosystem; each repo treated as an independent operational system; naming canon added for brand-like aliases; updated governance tool to scan LineageAI and filter PRs; dry-run found 82 open issues and 3 open PRs; canonical paths defined.",
+    "tests": "broker /status healthy; governance dry-run completed; repo_ecosystem_map.json updated with naming canon",
     "evidence": [
       "memory/repo_ecosystem_map.json",
       "runtime/federation_orchestrator/agent_task_outputs/mission-repo-governance-20260728v5/governance_report.json",
