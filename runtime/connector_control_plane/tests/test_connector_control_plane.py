@@ -57,6 +57,64 @@ class TestOpenAIAdapter(unittest.TestCase):
         self.assertEqual(ConnectorState.ORCHESTRATION_READY.value, "ORCHESTRATION_READY")
         self.assertEqual(ConnectorSubstate.MANUAL_VERIFICATION_REQUIRED.value, "MANUAL_VERIFICATION_REQUIRED")
 
+    def test_key_hygiene_guardrail_denies_approve_state_without_expiry(self):
+        adapter = OpenAIConnectorControlAdapter("env:OPENAI_ADMIN_KEY", FakeResolver())
+        action = {
+            "operation": "approve_state",
+            "resource_type": "api_key",
+            "resource": {"id": "key-1", "expires_at": None},
+        }
+        result = adapter.preflight(action)
+        self.assertFalse(result["ok"])
+        self.assertEqual(result["risk_class"], "R5")
+        self.assertEqual(result["policy_result"]["status"], "POLICY_DECISION_REQUIRED")
+        self.assertEqual(
+            result["policy_result"]["required_decision"],
+            "set_expiry_or_rotation_schedule",
+        )
+
+    def test_key_hygiene_guardrail_allows_with_policy_decision(self):
+        adapter = OpenAIConnectorControlAdapter("env:OPENAI_ADMIN_KEY", FakeResolver())
+        action = {
+            "operation": "approve_state",
+            "resource_type": "api_key",
+            "resource": {"id": "key-1", "expires_at": None},
+            "policy_decision": "set_expiry_or_rotation_schedule",
+        }
+        result = adapter.preflight(action)
+        self.assertTrue(result["ok"])
+        self.assertEqual(result["policy_result"]["status"], "POLICY_ADMISSIBLE")
+
+    def test_key_hygiene_guardrail_ignores_non_approve_state(self):
+        adapter = OpenAIConnectorControlAdapter("env:OPENAI_ADMIN_KEY", FakeResolver())
+        action = {
+            "operation": "key.list",
+            "resource_type": "api_key",
+            "resource": {"id": "key-1", "expires_at": None},
+        }
+        result = adapter.preflight(action)
+        self.assertTrue(result["ok"])
+
+    def test_key_hygiene_guardrail_ignores_non_api_key_resource(self):
+        adapter = OpenAIConnectorControlAdapter("env:OPENAI_ADMIN_KEY", FakeResolver())
+        action = {
+            "operation": "approve_state",
+            "resource_type": "project",
+            "resource": {"id": "proj-1"},
+        }
+        result = adapter.preflight(action)
+        self.assertTrue(result["ok"])
+
+    def test_key_hygiene_guardrail_allows_when_expiry_present(self):
+        adapter = OpenAIConnectorControlAdapter("env:OPENAI_ADMIN_KEY", FakeResolver())
+        action = {
+            "operation": "approve_state",
+            "resource_type": "api_key",
+            "resource": {"id": "key-1", "expires_at": "2026-12-31T23:59:59Z"},
+        }
+        result = adapter.preflight(action)
+        self.assertTrue(result["ok"])
+
 
 class TestCredentialResolver(unittest.TestCase):
     def test_env_scheme(self):

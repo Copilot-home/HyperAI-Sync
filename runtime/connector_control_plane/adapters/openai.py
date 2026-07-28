@@ -4,6 +4,7 @@ from typing import Any, Dict, List, Optional
 import requests
 
 from ..capability import Capability
+from ..policy import KeyHygienePolicy
 from ..state import ConnectorState, ConnectorSubstate
 from .base import ConnectorControlAdapter
 
@@ -152,10 +153,31 @@ class OpenAIConnectorControlAdapter(ConnectorControlAdapter):
         }
 
     def preflight(self, action: Dict[str, Any]) -> Dict[str, Any]:
-        return {"ok": True, "risk_class": action.get("risk_class", "R1"), "dry_run": True}
+        policy_result = KeyHygienePolicy.check(action)
+        if not policy_result.ok:
+            return {
+                "ok": False,
+                "risk_class": "R5",
+                "dry_run": True,
+                "policy_result": policy_result.to_dict(),
+            }
+        return {
+            "ok": True,
+            "risk_class": action.get("risk_class", "R1"),
+            "dry_run": True,
+            "policy_result": policy_result.to_dict(),
+        }
 
     def dry_run(self, action: Dict[str, Any]) -> Dict[str, Any]:
-        return {"ok": True, "action": action, "simulated": True}
+        preflight = self.preflight(action)
+        if not preflight["ok"]:
+            return preflight
+        return {
+            "ok": True,
+            "action": action,
+            "simulated": True,
+            "policy_result": preflight.get("policy_result"),
+        }
 
     def execute(self, action: Dict[str, Any]) -> Dict[str, Any]:
         raise NotImplementedError("use provider-specific runner or extend adapter")
