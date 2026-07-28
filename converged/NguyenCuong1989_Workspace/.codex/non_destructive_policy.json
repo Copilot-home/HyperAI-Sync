@@ -1,0 +1,17 @@
+{
+  "policy": "runtime-first with controlled mutation",
+  "allowed_now": [
+    "Edit FinalAI source to fix verified runtime failures.",
+    "Edit compose and environment templates to boot required services safely.",
+    "Add persistence and schema initialization required by the application.",
+    "Install or adjust development dependencies required for compatibility.",
+    "Build and run FinalAI Docker services for validation."
+  ],
+  "still_forbidden_without_specific_approval": [
+    "Delete or prune Docker images, containers, volumes or cache.",
+    "Delete or move archived source repositories.",
+    "Replace unrelated upstream images.",
+    "Broad folder normalization not required for runtime boot."
+  ],
+  "guardrail": "Prefer reversible edits and validation; preserve existing user data and runtime resources."
+}

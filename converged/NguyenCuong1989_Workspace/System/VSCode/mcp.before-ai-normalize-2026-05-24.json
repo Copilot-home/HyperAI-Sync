@@ -1,0 +1,189 @@
+{
+	"inputs": [
+		{
+			"id": "codacy_account_token",
+			"type": "promptString",
+			"description": "Codacy Account Token for API access",
+			"password": true
+		},
+		{
+			"id": "NOTION_TOKEN",
+			"type": "promptString",
+			"description": "Notion API Token (https://www.notion.so/profile/integrations)",
+			"password": true
+		},
+		{
+			"id": "posthog_api_key",
+			"type": "promptString",
+			"description": "PostHog API Key with annotation:write and project:read scopes",
+			"password": true
+		},
+		{
+			"id": "duckdb_db_path",
+			"type": "promptString",
+			"description": "Path to the DuckDB database file (e.g., /path/to/database.duckdb)",
+			"password": false
+		},
+		{
+			"id": "firecrawl_api_key",
+			"type": "promptString",
+			"description": "Firecrawl API Key (get from https://www.firecrawl.dev/app/api-keys)",
+			"password": true
+		},
+		{
+			"id": "clarity_api_token",
+			"type": "promptString",
+			"description": "Microsoft Clarity API Token (from Settings → Data Export → Generate API token)",
+			"password": true
+		},
+		{
+			"id": "stripe_api_key",
+			"type": "promptString",
+			"description": "Stripe API Key (https://dashboard.stripe.com/apikeys)",
+			"password": true
+		},
+		{
+			"id": "ado_org",
+			"type": "promptString",
+			"description": "Azure DevOps organization name (e.g. 'contoso')",
+			"password": false
+		},
+		{
+			"id": "azure_tenant_id",
+			"type": "promptString",
+			"description": "For service principal / WI auth.",
+			"password": false
+		},
+		{
+			"id": "azure_client_id",
+			"type": "promptString",
+			"description": "Service principal or managed identity client ID.",
+			"password": false
+		},
+		{
+			"id": "azure_client_secret",
+			"type": "promptString",
+			"description": "Service principal client secret.",
+			"password": true
+		},
+		{
+			"id": "azure_federated_token_file",
+			"type": "promptString",
+			"description": "Workload Identity token file path.",
+			"password": false
+		},
+		{
+			"id": "azure_subscription_id",
+			"type": "promptString",
+			"description": "Optional: sets active subscription.",
+			"password": false
+		},
+		{
+			"id": "azure_managed_identity",
+			"type": "promptString",
+			"description": "Set to 'system' to use system-assigned MI.",
+			"password": false
+		},
+		{
+			"id": "POSTMAN_API_KEY",
+			"type": "promptString",
+			"description": "A valid Postman API key.",
+			"password": true
+		},
+		{
+			"id": "Authorization",
+			"type": "promptString",
+			"description": "Authentication token (PAT or App token)",
+			"password": true
+		}
+	],
+	"servers": {
+		"microsoft/markitdown": {
+			"type": "stdio",
+			"command": "ramparts-mcp-proxy-stdio",
+			"args": [],
+			"gallery": "https://api.mcp.github.com",
+			"version": "1.0.0",
+			"env": {
+				"OVERWATCH_TARGET_CMD": "uvx",
+				"OVERWATCH_TARGET_ARGS": "[\"markitdown-mcp==0.0.1a4\"]",
+				"OVERWATCH_SERVER_NAME": "microsoft/markitdown"
+			}
+		},
+		"my-mcp-server-113f6bd5": {
+			"url": "http://127.0.0.1:8080/mcp/proxy",
+			"type": "http",
+			"headers": {
+				"X-Ramparts-Target": "my-mcp-server-113f6bd5",
+				"X-Ramparts-Target-Url": "http://localhost:3000"
+			}
+		},
+		"my-mcp-server-134278cf": {
+			"url": "http://127.0.0.1:8080/mcp/proxy",
+			"type": "http",
+			"headers": {
+				"X-Ramparts-Target": "my-mcp-server-134278cf",
+				"X-Ramparts-Target-Url": "http://localhost:3000"
+			}
+		},
+		"my-mcp-server-57aa8f70": {
+			"url": "http://127.0.0.1:8080/mcp/proxy",
+			"type": "http",
+			"headers": {
+				"X-Ramparts-Target": "my-mcp-server-57aa8f70",
+				"X-Ramparts-Target-Url": "http://localhost:3000"
+			}
+		},
+		"cognitionai/deepwiki": {
+			"type": "http",
+			"url": "http://127.0.0.1:8080/mcp/proxy",
+			"gallery": "https://api.mcp.github.com",
+			"version": "1.0.0",
+			"headers": {
+				"X-Ramparts-Target": "cognitionai/deepwiki",
+				"X-Ramparts-Target-Url": "https://mcp.deepwiki.com/sse"
+			}
+		},
+		"microsoft/devbox-mcp-server": {
+			"type": "stdio",
+			"command": "ramparts-mcp-proxy-stdio",
+			"args": [],
+			"gallery": "https://api.mcp.github.com",
+			"version": "1.0.0",
+			"env": {
+				"OVERWATCH_TARGET_CMD": "npx",
+				"OVERWATCH_TARGET_ARGS": "[\"-y\",\"@microsoft/devbox-mcp@latest\",\"@microsoft/devbox-mcp@latest\"]",
+				"OVERWATCH_SERVER_NAME": "microsoft/devbox-mcp-server"
+			}
+		},
+		"intercom/intercom-mcp-server": {
+			"type": "http",
+			"url": "http://127.0.0.1:8080/mcp/proxy",
+			"gallery": "https://api.mcp.github.com",
+			"version": "0.0.1-seed",
+			"headers": {
+				"X-Ramparts-Target": "intercom/intercom-mcp-server",
+				"X-Ramparts-Target-Url": "https://mcp.intercom.com/mcp"
+			}
+		},
+		"IDL for VSCode": {
+			"type": "http",
+			"url": "http://127.0.0.1:8080/mcp/proxy",
+			"headers": {
+				"X-Ramparts-Target": "IDL for VSCode",
+				"X-Ramparts-Target-Url": "http://localhost:4142/sse"
+			}
+		},
+		"io.github.github/github-mcp-server": {
+			"type": "http",
+			"url": "http://127.0.0.1:8080/mcp/proxy",
+			"headers": {
+				"Authorization": "${input:Authorization}",
+				"X-Ramparts-Target": "io.github.github/github-mcp-server",
+				"X-Ramparts-Target-Url": "https://api.githubcopilot.com/mcp/"
+			},
+			"gallery": "https://api.mcp.github.com",
+			"version": "0.26.3"
+		}
+	}
+}
