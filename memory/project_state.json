@@ -1,26 +1,24 @@
 {
-  "last_updated": "2026-07-28T13:30:00Z",
-  "current_focus": "Credential hygiene and repo governance automation stabilised",
-  "latest_summary": "Completed repo governance phase 1 (89 repos, 103 -> 86 open issues, 0 open PRs). Then, driven by data, fixed credential system: started HyperAI Credential Broker on 127.0.0.1:8765; hardened tools/hyperai_credentials_loader.py to use shlex.quote/split, strip unmatched quotes, and parse multi-value env lines correctly; regenerated ~/.config/hyperai/credentials.env as shell-safe and free of malformed values; removed revoked GITHUB_PAT_2 from master credential dump and .zshrc; updated .zshrc to source the broker-managed credentials.env instead of hardcoding tokens. Updated tools/hyperai_repo_governance_agent.py with optional --notion-db-id direct query and --execute closure with failure tracking.",
+  "last_updated": "2026-07-28T14:45:00Z",
+  "current_focus": "Credential hygiene and issue consolidation closed with causal loop",
+  "latest_summary": "Removed dead GITHUB_PAT_3/4/5/ALT1 from master credential dump and credentials.env after HTTP 401 probes; preserved capability via valid GITHUB_PAT and GITHUB_PAT_1. Updated hyperai_credentials_service.py github candidate list. Consolidated empty doc issues #78/#37/#36 in Copilot-home/DAIOF-Framework into #118, closed them, updated 3 Notion tasks to Done, and created a new canonical Notion task for #118. Open issues now 84 (down from 86, net -2 after -3 close +1 create), open PRs 0.",
   "active_blockers": [
-    "NOTION_API_KEY in credentials.env still 401s on Notion DB query; the working MCP path should remain the source of truth until the integration token is granted DB access or the broker issues a Notion lease with DB scope."
+    "Notion API key (auth-local integration) still cannot query DB_TASKS; requires sharing DB with the integration in Notion settings."
   ],
   "next_actions": [
-    "Continue Notion-sync reconciliation: 70 notion_open + 4 notion_in_progress issues remain (use MCP notion-query-data-sources).",
-    "Investigate 12 manual-review issues for stale/junk candidates; especially Copilot-home/DAIOF-Framework #78 and #29.",
-    "Schedule hyperai_pr_triage_loop.py to keep open PRs at 0.",
-    "Grant the credentials.env NOTION_API_KEY integration access to DB_TASKS, or switch governance agent to use broker-issued Notion capability."
+    "Continue Notion-sync reconciliation once DB_TASKS is shared with auth-local.",
+    "Address remaining 9 manual-review issues, especially DAIOF-Framewor#7 and workbench#6.",
+    "Implement periodic token health-check in hyperai_credentials_service.py.",
+    "Canonicalize DAIOF surface: decide whether to rename/archive NguyenCuong1989/DAIOF-Framewor and update README links to point to Copilot-home upstream."
   ],
   "closure_state": {
-    "status": "credential-hygiene-and-governance-stabilised",
-    "reason": "Removed revoked token, secured shell credential loading, broker healthy, repo governance tool autonomous for GitHub issues, Notion reconciliation still via MCP.",
-    "tests": "10/10 unit tests pass",
+    "status": "credential-issue-cleanup-closed-loop",
+    "reason": "Dead tokens removed and capability retained; empty doc issues consolidated and Notion loop closed; broker healthy; open issues 83/0 PRs.",
+    "tests": "broker /status healthy, gh issue close succeeded, notion create/update succeeded",
     "evidence": [
-      "runtime/federation_orchestrator/agent_task_outputs/mission-repo-governance-20260728/governance_executed_summary.json",
-      "runtime/federation_orchestrator/agent_task_outputs/mission-repo-governance-20260728/governance_report.json",
-      "tools/hyperai_repo_governance_agent.py",
-      "tools/hyperai_credentials_loader.py",
-      ".devin/skills/hyperai-repo-governance/SKILL.md"
+      "runtime/federation_orchestrator/agent_task_outputs/mission-credential-issue-cleanup-20260728/cleanup_receipt.json",
+      "tools/hyperai_credentials_service.py",
+      "memory/project_state.json"
     ]
   }
 }

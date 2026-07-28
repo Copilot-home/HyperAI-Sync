@@ -1,0 +1,47 @@
+{
+  "mission_id": "mission-credential-issue-cleanup-20260728",
+  "timestamp": "2026-07-28T14:45:00Z",
+  "canon_authority": "Andy",
+  "executed_by": "hyperai-runtime-worker",
+  "actions": [
+    {
+      "type": "credential_hygiene",
+      "target": "GITHUB_PAT_3, GITHUB_PAT_4, GITHUB_PAT_5, GITHUB_PAT_ALT1",
+      "reason": "HTTP 401 Unauthorized on 2026-07-28 when probing https://api.github.com/user",
+      "preserved_capability": "GITHUB_PAT and GITHUB_PAT_1 remain valid (200 OK). Broker _key_candidates reduced to [\"GITHUB_PAT\", \"GITHUB_PAT_1\"].",
+      "files_modified": [
+        "/Users/andy/# Quản Lý Credentials - Hệ Thống AI Của Nguyễn Đức Cường/# Quản Lý Credentials - Hệ Thống AI Của Nguyễn Đức Cường.md",
+        "/Users/andy/.config/hyperai/credentials.env",
+        "/Users/andy/HyperAI-Sync/tools/hyperai_credentials_service.py"
+      ],
+      "exposed_token_removed": true
+    },
+    {
+      "type": "issue_consolidation",
+      "target": "Copilot-home/DAIOF-Framework #78, #37, #36",
+      "reason": "Empty / template-only [DOCS] issues with no specific file/section anchor; README and existing doc links already cover project documentation.",
+      "replacement": "Copilot-home/DAIOF-Framework #118",
+      "notion_reconciliation": {
+        "old_tasks_updated_to_done": [
+          "https://app.notion.com/34da223993aa8126a6bccbc8f6bef04c",
+          "https://app.notion.com/34da223993aa8194b4daf2c657576b35",
+          "https://app.notion.com/34da223993aa81ac8d9bc84217928cac"
+        ],
+        "new_task_created": "https://app.notion.com/3aba223993aa814aac0adaa2fa744cbb"
+      },
+      "closed_with_reason": {
+        "78": "not planned",
+        "37": "duplicate",
+        "36": "duplicate"
+      }
+    }
+  ],
+  "verification": {
+    "broker_status_endpoint": "http://127.0.0.1:8765/status",
+    "broker_github_valid_key": "GITHUB_PAT",
+    "broker_github_tried": 1,
+    "broker_github_healthy": true,
+    "new_doc_issue": "https://github.com/Copilot-home/DAIOF-Framework/issues/118",
+    "notion_db_tasks_status_updated": true
+  }
+}
