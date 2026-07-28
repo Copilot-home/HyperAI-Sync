@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parents[1]
 RUNTIME = ROOT / "runtime" / "federation_orchestrator"
 EVIDENCE_DIR = RUNTIME / "agent_task_outputs"
 
-DEFAULT_OWNERS = ["NguyenCuong1989", "Copilot-home"]
+DEFAULT_OWNERS = ["NguyenCuong1989", "Copilot-home", "LineageAI"]
 
 
 def now_iso() -> str:
@@ -42,6 +42,41 @@ def run_gh(args: list[str]) -> dict | list:
         print(f"gh failed: {result.stderr}", file=sys.stderr)
         return []
     return json.loads(result.stdout) if result.stdout.strip() else []
+
+
+def get_owner_repos(owner: str) -> list[str]:
+    """List non-archived repos under an owner, sorted by recent push."""
+    repos = run_gh(["search", "repos", "--owner", owner, "--archived=false", "--sort", "updated", "--order", "desc", "--limit", "1000", "--json", "fullName,openIssuesCount"])
+    return [r["fullName"] for r in repos if r.get("openIssuesCount", 0) > 0 or r.get("openIssuesCount") is None]
+
+
+def get_repo_issues(repo: str) -> list[dict[str, Any]]:
+    """Fetch open issues for a single repo via REST; filters out pull requests."""
+    raw = run_gh(["api", f"repos/{repo}/issues?state=open&per_page=100"])
+    issues: list[dict[str, Any]] = []
+    for item in raw:
+        if "pull_request" in item:
+            continue
+        issues.append({
+            "repository": {"nameWithOwner": repo},
+            "number": item["number"],
+            "title": item["title"],
+            "body": item.get("body") or "",
+            "createdAt": item["created_at"],
+            "updatedAt": item["updated_at"],
+            "commentsCount": item.get("comments", 0),
+            "labels": [{"name": label.get("name", "")} for label in item.get("labels", [])],
+        })
+    return issues
+
+
+def get_owner_issues(owner: str) -> list[dict[str, Any]]:
+    """Fetch open issues for all repos under an owner; robust for orgs where search indexing is delayed."""
+    repos = get_owner_repos(owner)
+    all_issues: list[dict[str, Any]] = []
+    for repo in repos:
+        all_issues.extend(get_repo_issues(repo))
+    return all_issues
 
 
 def strip_uuid_dashes(page_id: str) -> str:
@@ -218,13 +253,7 @@ def main() -> int:
 
     all_issues: list[dict[str, Any]] = []
     for owner in args.owners:
-        issues = run_gh([
-            "search", "issues",
-            "--owner", owner,
-            "--state", "open",
-            "--limit", "1000",
-            "--json", "repository,number,title,body,createdAt,updatedAt,commentsCount,labels"
-        ])
+        issues = get_owner_issues(owner)
         all_issues.extend(issues)
 
     # Build report

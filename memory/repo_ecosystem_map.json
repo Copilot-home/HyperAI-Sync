@@ -1,0 +1,831 @@
+{
+  "canonical_map": {
+    "DAIOF-Framework": {
+      "global_canonical": "LineageAI/DAIOF-Framework",
+      "experiment_canonical": "Copilot-home/DAIOF-Framework",
+      "personal_source_fork": "NguyenCuong1989/DAIOF-Framework",
+      "personal_source_typo": "NguyenCuong1989/DAIOF-Framewor"
+    },
+    "trust_of_copilot": {
+      "experiment_canonical": "Copilot-home/trust_of_copilot",
+      "personal_sandbox": "NguyenCuong1989/trust_of_copilot-c8aae4ab"
+    }
+  },
+  "owners": {
+    "NguyenCuong1989": {
+      "ecosystem": "personal",
+      "lane": "source_sandbox",
+      "purpose": "Personal workspace; source of all experiments, forks, and extracted prototypes."
+    },
+    "Copilot-home": {
+      "ecosystem": "org",
+      "lane": "experiment_community",
+      "purpose": "Organization/community experiment surface; test governance, collaboration, and integration before global release."
+    },
+    "LineageAI": {
+      "ecosystem": "org",
+      "lane": "global_community",
+      "purpose": "Global/community release surface; curated, stable artifacts extracted from personal and experiment surfaces."
+    }
+  },
+  "repos_by_owner": {
+    "NguyenCuong1989": [
+      {
+        "repo": "NguyenCuong1989/MinhHoa_Consciousness_Home",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2025-09-08T17:17:15Z",
+        "updatedAt": "2025-11-19T19:17:30Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/vscode-d8204b72",
+        "isFork": true,
+        "openIssuesCount": 1,
+        "pushedAt": "2026-07-28T10:45:48Z",
+        "updatedAt": "2026-07-28T10:46:36Z",
+        "lane_purpose": "mirror",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/vscodesws_6bcda",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2025-12-17T23:34:33Z",
+        "updatedAt": "2026-01-08T07:21:37Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/effective-broccoli",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2025-12-30T22:48:35Z",
+        "updatedAt": "2026-01-08T07:21:38Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/sturdy-lamp",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-07-28T10:38:59Z",
+        "updatedAt": "2026-07-28T10:39:04Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/hyperAI",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2025-12-07T18:04:13Z",
+        "updatedAt": "2025-12-07T18:04:16Z",
+        "lane_purpose": "personal_experiment",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/DAIOF-Framewor",
+        "isFork": false,
+        "openIssuesCount": 1,
+        "pushedAt": "2026-07-28T14:42:37Z",
+        "updatedAt": "2026-07-28T14:46:50Z",
+        "lane_purpose": "personal_source_typo",
+        "canonical_mapping": "experiment_canonical"
+      },
+      {
+        "repo": "NguyenCuong1989/hello-world-1",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-01-08T08:32:43Z",
+        "updatedAt": "2026-01-09T09:15:37Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/vscode-gitlens",
+        "isFork": true,
+        "openIssuesCount": 0,
+        "pushedAt": "2025-12-16T09:09:13Z",
+        "updatedAt": "2026-01-08T07:21:41Z",
+        "lane_purpose": "mirror",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/vscode-perforce",
+        "isFork": true,
+        "openIssuesCount": 0,
+        "pushedAt": "2025-11-02T12:03:02Z",
+        "updatedAt": "2026-01-08T07:21:51Z",
+        "lane_purpose": "mirror",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/hyperai1989",
+        "isFork": false,
+        "openIssuesCount": 2,
+        "pushedAt": "2026-07-28T10:45:26Z",
+        "updatedAt": "2026-07-28T10:45:30Z",
+        "lane_purpose": "personal_experiment",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/multi_setup_backup_20251006_204547",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2025-10-08T13:35:28Z",
+        "updatedAt": "2025-11-19T19:17:26Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/funfun",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2025-10-23T22:48:53Z",
+        "updatedAt": "2025-11-19T19:17:18Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/vscode-docs",
+        "isFork": true,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-02-22T14:01:02Z",
+        "updatedAt": "2025-11-29T18:39:07Z",
+        "lane_purpose": "mirror",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/vietnamese-ai-consciousness",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2025-09-23T09:52:29Z",
+        "updatedAt": "2025-11-19T19:17:28Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/docs",
+        "isFork": true,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-01-05T17:46:05Z",
+        "updatedAt": "2026-01-08T07:21:40Z",
+        "lane_purpose": "mirror",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/starter-workflows",
+        "isFork": true,
+        "openIssuesCount": 0,
+        "pushedAt": "2025-12-04T18:30:49Z",
+        "updatedAt": "2026-01-01T07:45:19Z",
+        "lane_purpose": "mirror",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/brew",
+        "isFork": true,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-02-13T16:03:39Z",
+        "updatedAt": "2026-02-13T16:03:47Z",
+        "lane_purpose": "mirror",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/Library",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2025-10-18T19:48:34Z",
+        "updatedAt": "2025-11-19T19:17:26Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/andy",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-07-28T10:38:50Z",
+        "updatedAt": "2026-04-20T03:32:42Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/desktop-tutorial",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-07-08T09:45:54Z",
+        "updatedAt": "2026-01-08T07:21:46Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/nvm",
+        "isFork": true,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-06-06T05:23:31Z",
+        "updatedAt": "2026-01-08T07:21:48Z",
+        "lane_purpose": "mirror",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+        "isFork": false,
+        "openIssuesCount": 74,
+        "pushedAt": "2026-07-28T10:46:04Z",
+        "updatedAt": "2026-07-28T10:46:19Z",
+        "lane_purpose": "personal_sandbox",
+        "canonical_mapping": "experiment_canonical"
+      },
+      {
+        "repo": "NguyenCuong1989/openapi-servers",
+        "isFork": true,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-06-06T19:55:07Z",
+        "updatedAt": "2026-06-06T19:55:12Z",
+        "lane_purpose": "mirror",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/daiof-claude_code-002",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-04-16T09:14:35Z",
+        "updatedAt": "2026-04-16T09:14:39Z",
+        "lane_purpose": "personal_sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/suspicious-sammet-jm87r5",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-03-05T13:47:14Z",
+        "updatedAt": "2026-03-05T13:47:18Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/daiof-custom_daiof-008",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-04-16T09:14:42Z",
+        "updatedAt": "2026-04-16T09:14:46Z",
+        "lane_purpose": "personal_sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/daiof-custom_daiof-004",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-04-16T09:14:53Z",
+        "updatedAt": "2026-04-16T09:14:57Z",
+        "lane_purpose": "personal_sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/desktop-feedback",
+        "isFork": true,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-01-06T02:23:07Z",
+        "updatedAt": "2026-02-24T11:42:24Z",
+        "lane_purpose": "mirror",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/cleanup-tracking",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-06-06T16:06:07Z",
+        "updatedAt": "2026-06-06T16:06:12Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/gk-cli",
+        "isFork": true,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-07-03T08:41:49Z",
+        "updatedAt": "2026-07-01T18:03:47Z",
+        "lane_purpose": "mirror",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/my_too_test",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-07-12T00:17:57Z",
+        "updatedAt": "2026-04-08T08:31:37Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/GoCodeo",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-06-09T22:41:53Z",
+        "updatedAt": "2026-06-09T22:41:53Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/copilot-cli",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-07-08T09:43:08Z",
+        "updatedAt": "2026-07-08T09:43:22Z",
+        "lane_purpose": "personal_experiment",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/supermaven-nvim",
+        "isFork": true,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-07-09T11:35:44Z",
+        "updatedAt": "2026-07-09T11:33:46Z",
+        "lane_purpose": "mirror",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/daiof-blackboxai-005",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-04-16T09:14:40Z",
+        "updatedAt": "2026-04-16T09:14:43Z",
+        "lane_purpose": "personal_sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/.gemini",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-07-24T19:05:56Z",
+        "updatedAt": "2026-07-24T13:30:23Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/66688d0d-9b28-4e6a-bb5e-b8c29f5921bc",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-07-22T04:19:28Z",
+        "updatedAt": "2026-07-22T04:19:59Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/scratch",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-06-21T20:53:48Z",
+        "updatedAt": "2026-06-21T20:53:51Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/Workspace",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-06-17T03:33:59Z",
+        "updatedAt": "2026-06-17T03:34:04Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/daiof-codex-003",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-04-16T09:14:51Z",
+        "updatedAt": "2026-04-16T09:14:55Z",
+        "lane_purpose": "personal_sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/n-tech-extension",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-06-30T18:26:37Z",
+        "updatedAt": "2026-06-30T18:26:37Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/--",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-03-03T17:57:26Z",
+        "updatedAt": "2026-03-03T17:57:26Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/daiof-claude_code-006",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-04-16T09:14:47Z",
+        "updatedAt": "2026-04-16T09:14:51Z",
+        "lane_purpose": "personal_sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/daiof-audit-node",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-04-16T09:14:44Z",
+        "updatedAt": "2026-04-16T09:14:47Z",
+        "lane_purpose": "personal_sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/dr_protocol_workspace",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-02-22T12:48:14Z",
+        "updatedAt": "2026-02-22T12:48:18Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/gh-eco",
+        "isFork": true,
+        "openIssuesCount": 0,
+        "pushedAt": "2024-09-03T14:14:49Z",
+        "updatedAt": "2026-06-06T15:36:51Z",
+        "lane_purpose": "mirror",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/axcontrol",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-07-08T06:16:15Z",
+        "updatedAt": "2026-06-23T16:03:05Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/XcodeSourceEditorExtension-Alignment",
+        "isFork": true,
+        "openIssuesCount": 0,
+        "pushedAt": "2020-11-23T14:45:15Z",
+        "updatedAt": "2026-07-09T12:30:13Z",
+        "lane_purpose": "mirror",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/history-viewer",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-01-28T12:55:53Z",
+        "updatedAt": "2026-01-28T12:55:57Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/tr-gi-p-cognee",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-06-06T16:06:19Z",
+        "updatedAt": "2026-06-06T16:06:23Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/vscode-wiki",
+        "isFork": true,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-02-04T23:15:10Z",
+        "updatedAt": "2026-06-06T04:43:58Z",
+        "lane_purpose": "mirror",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/gemini",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-07-23T22:27:35Z",
+        "updatedAt": "2026-07-23T22:27:39Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/chanfana-openapi-template",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-03-27T05:49:16Z",
+        "updatedAt": "2026-03-27T05:49:19Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/language-server-protocol",
+        "isFork": true,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-07-09T06:39:14Z",
+        "updatedAt": "2026-07-10T06:06:17Z",
+        "lane_purpose": "mirror",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/daiof-blackboxai-001",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-04-16T09:14:49Z",
+        "updatedAt": "2026-04-16T09:14:52Z",
+        "lane_purpose": "personal_sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/memories",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-06-09T00:32:29Z",
+        "updatedAt": "2026-06-09T00:32:34Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/EMERGENCY_BACKUP_20251029_021527",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-04-25T07:05:30Z",
+        "updatedAt": "2026-04-25T07:05:30Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/daiof-codex-007",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-04-16T09:14:37Z",
+        "updatedAt": "2026-04-16T09:14:41Z",
+        "lane_purpose": "personal_sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/DAIOF-Framework",
+        "isFork": true,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-07-19T14:26:41Z",
+        "updatedAt": "2026-07-19T14:29:13Z",
+        "lane_purpose": "personal_source_fork",
+        "canonical_mapping": "experiment_canonical"
+      },
+      {
+        "repo": "NguyenCuong1989/code-settings-sync",
+        "isFork": true,
+        "openIssuesCount": 0,
+        "pushedAt": "2024-12-13T11:15:20Z",
+        "updatedAt": "2026-02-27T14:03:58Z",
+        "lane_purpose": "mirror",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/chat-CLI",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-02-25T21:20:09Z",
+        "updatedAt": "2026-02-25T21:20:22Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/head",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-07-23T12:48:56Z",
+        "updatedAt": "2026-07-23T12:48:56Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/hello-world",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-07-22T15:13:21Z",
+        "updatedAt": "2026-07-22T15:18:44Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/antigravity",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-04-06T04:39:02Z",
+        "updatedAt": "2026-04-06T04:39:02Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/backup-buddy-ui",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-01-28T14:33:27Z",
+        "updatedAt": "2026-01-28T14:33:36Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/identity-guardian-82",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-01-28T14:42:14Z",
+        "updatedAt": "2026-01-28T14:47:22Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "NguyenCuong1989/morphix3d-image-to-3d",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-06-06T19:47:18Z",
+        "updatedAt": "2026-06-06T19:47:18Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      }
+    ],
+    "Copilot-home": [
+      {
+        "repo": "Copilot-home/DAIOF-Framework",
+        "isFork": false,
+        "openIssuesCount": 7,
+        "pushedAt": "2026-07-28T10:44:51Z",
+        "updatedAt": "2026-07-28T14:49:45Z",
+        "lane_purpose": "experiment_canonical",
+        "canonical_mapping": "experiment_canonical"
+      },
+      {
+        "repo": "Copilot-home/copilot-cli",
+        "isFork": true,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-05-27T17:16:54Z",
+        "updatedAt": "2026-05-27T17:17:01Z",
+        "lane_purpose": "personal_experiment",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "Copilot-home/circleci-docs",
+        "isFork": true,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-05-17T01:44:18Z",
+        "updatedAt": "2026-05-17T21:55:57Z",
+        "lane_purpose": "mirror",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "Copilot-home/workbench",
+        "isFork": false,
+        "openIssuesCount": 1,
+        "pushedAt": "2026-07-22T20:11:36Z",
+        "updatedAt": "2026-07-22T19:58:30Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "Copilot-home/gk-cli",
+        "isFork": true,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-06-29T09:58:47Z",
+        "updatedAt": "2026-07-13T09:59:54Z",
+        "lane_purpose": "mirror",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "Copilot-home/andy",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-02-06T16:36:43Z",
+        "updatedAt": "2026-02-06T16:36:43Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "Copilot-home/trust_of_copilot",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-07-04T13:23:07Z",
+        "updatedAt": "2026-06-24T04:46:48Z",
+        "lane_purpose": "personal_sandbox",
+        "canonical_mapping": "experiment_canonical"
+      },
+      {
+        "repo": "Copilot-home/hermes-agent",
+        "isFork": true,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-07-08T06:56:29Z",
+        "updatedAt": "2026-07-08T06:56:38Z",
+        "lane_purpose": "mirror",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "Copilot-home/components",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-07-19T22:36:11Z",
+        "updatedAt": "2026-07-19T02:03:16Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "Copilot-home/vscode",
+        "isFork": true,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-04-26T22:48:44Z",
+        "updatedAt": "2026-04-26T22:49:10Z",
+        "lane_purpose": "mirror",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "Copilot-home/vite-react",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-05-10T05:46:15Z",
+        "updatedAt": "2026-05-10T05:46:20Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "Copilot-home/balancehub-minimal",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-07-28T12:45:08Z",
+        "updatedAt": "2026-07-28T12:47:48Z",
+        "lane_purpose": "personal_experiment",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "Copilot-home/demo-repository",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-05-17T22:36:19Z",
+        "updatedAt": "2026-05-17T22:36:18Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "Copilot-home/Alpha",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-07-28T14:01:47Z",
+        "updatedAt": "2026-07-28T14:10:34Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "Copilot-home/miniature-umbrella-demo-repository",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2025-11-30T11:45:12Z",
+        "updatedAt": "2025-11-30T11:45:15Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "Copilot-home/literate-robot",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-07-08T10:51:13Z",
+        "updatedAt": "2026-07-08T10:51:19Z",
+        "lane_purpose": "personal_experiment",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "Copilot-home/HyperAI-Sync",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-07-28T14:41:25Z",
+        "updatedAt": "2026-07-28T14:48:09Z",
+        "lane_purpose": "personal_experiment",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "Copilot-home/hyper",
+        "isFork": true,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-05-11T17:00:55Z",
+        "updatedAt": "2026-05-17T22:37:59Z",
+        "lane_purpose": "personal_experiment",
+        "canonical_mapping": "sandbox_or_mirror"
+      },
+      {
+        "repo": "Copilot-home/nguyencuong_2509",
+        "isFork": false,
+        "openIssuesCount": 0,
+        "pushedAt": "2026-07-28T10:38:03Z",
+        "updatedAt": "2026-07-28T10:38:08Z",
+        "lane_purpose": "sandbox",
+        "canonical_mapping": "sandbox_or_mirror"
+      }
+    ],
+    "LineageAI": [
+      {
+        "repo": "LineageAI/DAIOF-Framework",
+        "isFork": false,
+        "openIssuesCount": 3,
+        "pushedAt": "2026-07-25T19:02:23Z",
+        "updatedAt": "2026-05-17T04:52:12Z",
+        "lane_purpose": "global_canonical",
+        "canonical_mapping": "global_canonical"
+      }
+    ]
+  }
+}
