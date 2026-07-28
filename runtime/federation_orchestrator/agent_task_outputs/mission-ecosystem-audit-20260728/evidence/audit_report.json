@@ -1,0 +1,1921 @@
+{
+  "timestamp": "2026-07-28T09:36:39.752648+00:00",
+  "summary": {
+    "repos_user": 69,
+    "repos_org": 19,
+    "issues_total": 108,
+    "prs_total": 31,
+    "issue_categories": {
+      "other": 11,
+      "notion-sync": 85,
+      "test": 1,
+      "docs": 5,
+      "daiof-principle": 6
+    },
+    "pr_categories": {
+      "ci-failure": 9,
+      "other": 10,
+      "conflict": 2,
+      "junk": 2,
+      "stale-draft": 6,
+      "wip-draft": 2
+    }
+  },
+  "issues": [
+    {
+      "repo": "NguyenCuong1989/DAIOF-Framewor",
+      "number": 7,
+      "title": "[AP\u03a9 EXECUTOR HANDOFF] Bootstrap keyless GCP auth and resume provisioning PR #6",
+      "created": "2026-07-24T18:49:27Z",
+      "age_days": 3,
+      "labels": [
+        "general",
+        "auto-classified"
+      ],
+      "category": "other",
+      "url": "https://github.com/NguyenCuong1989/DAIOF-Framewor/issues/7"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 126,
+      "title": "[Notion] Phase 1C: Master Create/Update - All Property Types",
+      "created": "2026-07-22T00:39:40Z",
+      "age_days": 6,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/126"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 125,
+      "title": "[Notion] [SYSTEM] Fix bridge schema + validate GitHub ingestion",
+      "created": "2026-07-22T00:38:56Z",
+      "age_days": 6,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/125"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 124,
+      "title": "[Notion] [NOTION+LOCAL LLM] Design dispatcher logic and bind local LLM classifier",
+      "created": "2026-07-22T00:38:25Z",
+      "age_days": 6,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/124"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 122,
+      "title": "[Notion] Phase 2: Test Research Mode - DAIOF Roadmap Analysis",
+      "created": "2026-07-21T14:46:25Z",
+      "age_days": 6,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/122"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 121,
+      "title": "[Notion] Create Master Teachings Summary Report",
+      "created": "2026-07-21T14:46:16Z",
+      "age_days": 6,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/121"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 118,
+      "title": "[Notion] Document: Workflow Orchestration Mastery Pattern",
+      "created": "2026-07-21T14:45:47Z",
+      "age_days": 6,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/118"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 117,
+      "title": "[Notion] [CONNECTOR SPEC V2] Notion UI-Native Client Agent",
+      "created": "2026-07-21T14:44:12Z",
+      "age_days": 6,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/117"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 116,
+      "title": "[Notion] \ud83d\ude80 Deploy AI Network - Complete Configuration Package",
+      "created": "2026-07-19T15:32:04Z",
+      "age_days": 8,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/116"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 115,
+      "title": "[Notion] \ud83d\ude80 Deploy AI Network - Complete Configuration Package",
+      "created": "2026-07-19T15:32:00Z",
+      "age_days": 8,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/115"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 114,
+      "title": "[Notion] DEPLOY \u2014 Local HyperAI Connector Runtime v2026-07-15",
+      "created": "2026-07-19T15:31:25Z",
+      "age_days": 8,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/114"
+    },
+    {
+      "repo": "NguyenCuong1989/vscode-d8204b72",
+      "number": 5,
+      "title": "ci: remove false-negative PR checks from unconfigured template workflows",
+      "created": "2026-07-11T16:51:15Z",
+      "age_days": 16,
+      "labels": [],
+      "category": "other",
+      "url": "https://github.com/NguyenCuong1989/vscode-d8204b72/issues/5"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 111,
+      "title": "[Notion] Phase 2A: Master Database Schema Operations",
+      "created": "2026-05-11T14:07:29Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/111"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 110,
+      "title": "[Notion] Phase 1B: Master Query Tool - Complex SQL",
+      "created": "2026-05-11T14:07:26Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/110"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 109,
+      "title": "[Notion] MASTER MISSION: Test to\u00e0n b\u1ed9 Notion capabilities ch\u01b0a d\u00f9ng",
+      "created": "2026-05-11T14:07:24Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:in-progress"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/109"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 108,
+      "title": "[Notion] Phase 2B: Test Database Autofill - Auto-tag Categories",
+      "created": "2026-05-11T14:07:21Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:in-progress"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/108"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 107,
+      "title": "[Notion] Configure Notion Mail AI Rules",
+      "created": "2026-05-11T14:07:19Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/107"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 104,
+      "title": "[Notion] Phase 1A: Master Search Tool - All Parameters",
+      "created": "2026-05-11T14:07:11Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/104"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 103,
+      "title": "[Notion] Test SQL JOIN queries traverse Knowledge Graph",
+      "created": "2026-05-11T14:07:09Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/103"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 102,
+      "title": "[Notion] \ud83d\udd2c Test 5: View Tool - Multiple Entity Types",
+      "created": "2026-05-11T14:07:07Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/102"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 100,
+      "title": "[Notion] Document Utilization % improvements",
+      "created": "2026-05-11T14:07:02Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/100"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 99,
+      "title": "[Notion] Test Sample Task 3",
+      "created": "2026-05-11T14:07:00Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/99"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 98,
+      "title": "[Notion] Analyze & Import 20 GitHub Repos to DB_PROJECTS",
+      "created": "2026-05-11T14:06:58Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/98"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 95,
+      "title": "[Notion] Test MCP Connection t\u1eeb Local Machine",
+      "created": "2026-05-11T14:06:51Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/95"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 94,
+      "title": "[Notion] Phase 2.3: Neural Network Training Test",
+      "created": "2026-05-11T14:06:48Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/94"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 91,
+      "title": "[Notion] Phase 2: Test Agent Mode v\u1edbi Complex Task",
+      "created": "2026-05-11T14:06:41Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:in-progress"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/91"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 90,
+      "title": "[Notion] Create Phase 3 roadmap - Next 7 days",
+      "created": "2026-05-11T14:06:38Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/90"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 89,
+      "title": "[Notion] Phase 1C: Master Create/Update - All Property Types",
+      "created": "2026-05-11T14:06:36Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/89"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 88,
+      "title": "[Notion] Document: Workflow Orchestration Mastery Pattern",
+      "created": "2026-05-11T14:06:34Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/88"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 86,
+      "title": "[Notion] Practice: View Tool Mastery - Batch Entity Verification",
+      "created": "2026-05-11T14:06:30Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/86"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 85,
+      "title": "[Notion] Phase 2B: Test Research Mode - DAIOF Neural Interface MVP",
+      "created": "2026-05-11T14:06:28Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:in-progress"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/85"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 84,
+      "title": "[Notion] Populate 10 th\u00eam breakthroughs t\u1eeb past sessions",
+      "created": "2026-05-11T14:06:26Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/84"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 83,
+      "title": "[Notion] Import CSV Data v\u00e0o DB_KNOWLEDGE",
+      "created": "2026-05-11T14:06:23Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/83"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 82,
+      "title": "[Notion] Practice: Agent Mode - Delegate Complex Multi-Step Workflow",
+      "created": "2026-05-11T14:06:21Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/82"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 81,
+      "title": "[Notion] Phase 1.1: Test Pieces API Connectivity",
+      "created": "2026-05-11T14:06:19Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/81"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 80,
+      "title": "[Notion] Practice: Database Autofill - AI Property Completion at Scale",
+      "created": "2026-05-11T14:06:17Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/80"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 79,
+      "title": "[Notion] Phase 2: Test Multi-Model AI Selection",
+      "created": "2026-05-11T14:06:15Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/79"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 77,
+      "title": "[Notion] Test Sample Task 2",
+      "created": "2026-05-11T14:06:11Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/77"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 75,
+      "title": "[Notion] Phase 3.1: Documentation & API Guide",
+      "created": "2026-05-11T14:06:06Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/75"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 72,
+      "title": "[Notion] Phase 2: Test Research Mode - DAIOF Roadmap Analysis",
+      "created": "2026-05-11T14:05:59Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/72"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 70,
+      "title": "[Notion] Create Master Teachings Summary Report",
+      "created": "2026-05-11T14:05:56Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/70"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 69,
+      "title": "[Notion] Document Data Source IDs",
+      "created": "2026-05-11T14:05:53Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/69"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 68,
+      "title": "[Notion] Phase 1.2: Deploy Updated Polling Bridge Code",
+      "created": "2026-05-11T14:05:51Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/68"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 65,
+      "title": "[Notion] Document: Database as Memory Pattern",
+      "created": "2026-05-11T14:05:41Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/65"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 64,
+      "title": "[Notion] [GH] NguyenCuong1989/trust_of_copilot #20 [Notion] Tin t\u1ee9c m\u1edbi nh\u1ea5t",
+      "created": "2026-05-11T14:05:38Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/64"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 63,
+      "title": "[Notion] [GH] NguyenCuong1989/trust_of_copilot #26 [Notion] B\u1eaft \u0111\u1ea7u",
+      "created": "2026-05-11T14:05:36Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/63"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 62,
+      "title": "[Notion] [GH] NguyenCuong1989/DAIOF-Framework #30 Maintains AI-Human interdependence",
+      "created": "2026-05-11T14:05:34Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/62"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 61,
+      "title": "[Notion] [NOTION NODE] Own GitHub issue intake, classification, and dispatch",
+      "created": "2026-05-11T14:05:31Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "status:to-do",
+        "owner:nguyencuong.2509@icloud.com"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/61"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 60,
+      "title": "[Notion] [CONNECTOR SPEC V2] Notion UI-Native Client Agent",
+      "created": "2026-05-11T14:05:29Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/60"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 59,
+      "title": "[Notion] [GH] NguyenCuong1989/trust_of_copilot #21 [Notion] Ch\u00ednh s\u00e1ch ph\u00fac l\u1ee3i",
+      "created": "2026-05-11T14:05:27Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/59"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 58,
+      "title": "[Notion] [GH] NguyenCuong1989/DAIOF-Framework #34 Follows biological metaphors",
+      "created": "2026-05-11T14:05:24Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/58"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 57,
+      "title": "[Notion] [GH] NguyenCuong1989/DAIOF-Framework #36 [DOCS]",
+      "created": "2026-05-11T14:05:22Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/57"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 56,
+      "title": "[Notion] [NOTION+LOCAL LLM] Design dispatcher logic and bind local LLM classifier",
+      "created": "2026-05-11T14:05:20Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/56"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 55,
+      "title": "[Notion] [GH] NguyenCuong1989/DAIOF-Framework #37 [DOCS]",
+      "created": "2026-05-11T14:05:17Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/55"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 54,
+      "title": "[Notion] [GH] NguyenCuong1989/trust_of_copilot #29 [Notion] Trang m\u1edbi v\u1edbi th\u1ebb",
+      "created": "2026-05-11T14:05:15Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/54"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 53,
+      "title": "[Notion] [GH] NguyenCuong1989/trust_of_copilot #27 [Notion] Trang m\u1edbi",
+      "created": "2026-05-11T14:05:13Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/53"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 52,
+      "title": "[Notion] [GH] NguyenCuong1989/trust_of_copilot #23 [Notion] Trang m\u1edbi v\u1edbi x\u00e1c minh",
+      "created": "2026-05-11T14:05:11Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/52"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 51,
+      "title": "[Notion] [SYSTEM] Fix bridge schema + validate GitHub ingestion",
+      "created": "2026-05-11T14:05:08Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/51"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 50,
+      "title": "[Notion] [GH] NguyenCuong1989/trust_of_copilot #25 [Notion] S\u1ee9 m\u1ec7nh, T\u1ea7m nh\u00ecn, Gi\u00e1 tr\u1ecb",
+      "created": "2026-05-11T14:05:06Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/50"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 49,
+      "title": "[Notion] [GH] NguyenCuong1989/trust_of_copilot #22 [Notion] Ch\u00ednh s\u00e1ch ngh\u1ec9 ph\u00e9p",
+      "created": "2026-05-11T14:05:04Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/49"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 48,
+      "title": "[Notion] [GH] NguyenCuong1989/trust_of_copilot #24 [Notion] Du l\u1ecbch c\u00f4ng ty",
+      "created": "2026-05-11T14:05:01Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/48"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 47,
+      "title": "[Notion] [GH] NguyenCuong1989/DAIOF-Framework #33 Improves consciousness development",
+      "created": "2026-05-11T14:04:59Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/47"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 46,
+      "title": "[Notion] [GH] NguyenCuong1989/trust_of_copilot #28 [Notion] S\u1ef1 ki\u1ec7n n\u00e2ng cao tinh th\u1ea7n",
+      "created": "2026-05-11T14:04:57Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/46"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 45,
+      "title": "[Notion] [ARCH] Build GitHub \u2192 Notion \u2192 AI DevOps \u2192 PR/Merge orchestration loop",
+      "created": "2026-05-11T14:04:55Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "status:to-do",
+        "owner:nguyencuong.2509@icloud.com"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/45"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 44,
+      "title": "[Notion] [GH] NguyenCuong1989/DAIOF-Framework #78 [DOCS]",
+      "created": "2026-05-11T14:04:52Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/44"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 43,
+      "title": "[Notion] [GH] NguyenCuong1989/DAIOF-Framework #31 Respects immutable genes",
+      "created": "2026-05-11T14:04:50Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/43"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 42,
+      "title": "[Notion] [GH] NguyenCuong1989/DAIOF-Framework #32 Enhances safety",
+      "created": "2026-05-11T14:04:48Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/42"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 41,
+      "title": "[Notion] [CONNECTOR SPEC] Notion Dispatcher MCP Server + Local LLM Binder",
+      "created": "2026-05-11T14:04:45Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/41"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 39,
+      "title": "[Notion] Document: Zero-Click Orchestration Pattern",
+      "created": "2026-05-11T14:04:41Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/39"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 38,
+      "title": "[Notion] Phase 1.3: Run End-to-End Integration Test",
+      "created": "2026-05-11T14:04:39Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/38"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 37,
+      "title": "[Notion] Test GitHub \u2192 Notion Sync Workflow",
+      "created": "2026-05-11T14:04:37Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/37"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 36,
+      "title": "[Notion] Migrate DAIOF Kernel v3.0 Documentation",
+      "created": "2026-05-11T14:04:35Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/36"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 35,
+      "title": "[Notion] Phase 1.1: Test Pieces API Connectivity - UPDATED",
+      "created": "2026-05-11T14:04:33Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/35"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 34,
+      "title": "[Notion] Update H\u01b0\u1edbng d\u1eabn v\u1edbi Phase 2 learnings",
+      "created": "2026-05-11T14:04:31Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/34"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 33,
+      "title": "[Notion] Test Sample Task for Update Commands",
+      "created": "2026-05-11T14:04:28Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/33"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 32,
+      "title": "[Notion] Phase 3.2: DAIOF Kernel Integration Guide",
+      "created": "2026-05-11T14:04:26Z",
+      "age_days": 77,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com",
+        "status:to-do"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/32"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 29,
+      "title": "[Notion] Trang m\u1edbi v\u1edbi th\u1ebb",
+      "created": "2026-03-29T18:07:32Z",
+      "age_days": 120,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/29"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 28,
+      "title": "[Notion] S\u1ef1 ki\u1ec7n n\u00e2ng cao tinh th\u1ea7n",
+      "created": "2026-03-29T18:07:32Z",
+      "age_days": 120,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/28"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 27,
+      "title": "[Notion] Trang m\u1edbi",
+      "created": "2026-03-29T18:07:31Z",
+      "age_days": 120,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/27"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 26,
+      "title": "[Notion] B\u1eaft \u0111\u1ea7u",
+      "created": "2026-03-29T18:07:30Z",
+      "age_days": 120,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/26"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 25,
+      "title": "[Notion] S\u1ee9 m\u1ec7nh, T\u1ea7m nh\u00ecn, Gi\u00e1 tr\u1ecb",
+      "created": "2026-03-29T18:07:30Z",
+      "age_days": 120,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/25"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 24,
+      "title": "[Notion] Du l\u1ecbch c\u00f4ng ty",
+      "created": "2026-03-29T18:07:29Z",
+      "age_days": 120,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/24"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 23,
+      "title": "[Notion] Trang m\u1edbi v\u1edbi x\u00e1c minh",
+      "created": "2026-03-29T18:07:28Z",
+      "age_days": 120,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/23"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 22,
+      "title": "[Notion] Ch\u00ednh s\u00e1ch ngh\u1ec9 ph\u00e9p",
+      "created": "2026-03-29T18:07:28Z",
+      "age_days": 120,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/22"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 21,
+      "title": "[Notion] Ch\u00ednh s\u00e1ch ph\u00fac l\u1ee3i",
+      "created": "2026-03-29T18:07:27Z",
+      "age_days": 120,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/21"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 20,
+      "title": "[Notion] Tin t\u1ee9c m\u1edbi nh\u1ea5t",
+      "created": "2026-03-29T18:07:26Z",
+      "age_days": 120,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/20"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 19,
+      "title": "[Notion] Your new Jira Premium trial",
+      "created": "2026-03-29T18:07:26Z",
+      "age_days": 120,
+      "labels": [
+        "notion-sync",
+        "owner:nguyencuong.2509@gmail.com"
+      ],
+      "category": "notion-sync",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/19"
+    },
+    {
+      "repo": "NguyenCuong1989/andy",
+      "number": 4,
+      "title": "Test CLI issue",
+      "created": "2026-03-12T04:52:31Z",
+      "age_days": 138,
+      "labels": [],
+      "category": "test",
+      "url": "https://github.com/NguyenCuong1989/andy/issues/4"
+    },
+    {
+      "repo": "NguyenCuong1989/andy",
+      "number": 3,
+      "title": "Check",
+      "created": "2026-02-10T17:36:09Z",
+      "age_days": 167,
+      "labels": [
+        "documentation"
+      ],
+      "category": "docs",
+      "url": "https://github.com/NguyenCuong1989/andy/issues/3"
+    },
+    {
+      "repo": "NguyenCuong1989/identity-guardian-82",
+      "number": 1,
+      "title": "Ho\u00e0n thi\u1ec7n \u0111i",
+      "created": "2026-01-31T21:52:34Z",
+      "age_days": 177,
+      "labels": [],
+      "category": "other",
+      "url": "https://github.com/NguyenCuong1989/identity-guardian-82/issues/1"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 3,
+      "title": "have hack",
+      "created": "2025-09-15T10:42:11Z",
+      "age_days": 315,
+      "labels": [],
+      "category": "other",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/3"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 2,
+      "title": "This PR implements a comprehensive AI partner system that addresses the \"my partner\" requirement by creating a trust-focused AI copilot framework.",
+      "created": "2025-09-15T10:34:18Z",
+      "age_days": 315,
+      "labels": [],
+      "category": "other",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/2"
+    },
+    {
+      "repo": "Copilot-home/DAIOF-Framework",
+      "number": 114,
+      "title": "[CI BASELINE] Regenerate workflow_manifest.json and separate PR-caused failures",
+      "created": "2026-07-11T17:00:35Z",
+      "age_days": 16,
+      "labels": [
+        "bug",
+        "auto-classified",
+        "priority: high"
+      ],
+      "category": "other",
+      "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/114"
+    },
+    {
+      "repo": "Copilot-home/workbench",
+      "number": 6,
+      "title": "Titan normalization: bind canonical product repo, prove remote CI, and map Vercel surface",
+      "created": "2026-07-11T16:43:23Z",
+      "age_days": 16,
+      "labels": [],
+      "category": "other",
+      "url": "https://github.com/Copilot-home/workbench/issues/6"
+    },
+    {
+      "repo": "Copilot-home/DAIOF-Framework",
+      "number": 113,
+      "title": "[ORG GOVERNANCE] Execute Copilot-home repository normalization waves",
+      "created": "2026-07-11T16:29:41Z",
+      "age_days": 16,
+      "labels": [
+        "documentation",
+        "duplicate",
+        "priority: critical",
+        "auto-classified"
+      ],
+      "category": "docs",
+      "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/113"
+    },
+    {
+      "repo": "Copilot-home/DAIOF-Framework",
+      "number": 102,
+      "title": "[LAB] Connector runtime audit \u2013 2026-05-17",
+      "created": "2026-05-17T06:54:56Z",
+      "age_days": 72,
+      "labels": [],
+      "category": "daiof-principle",
+      "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/102"
+    },
+    {
+      "repo": "Copilot-home/DAIOF-Framework",
+      "number": 96,
+      "title": "Autonomous execution wave multi-platform runtime normalization",
+      "created": "2026-05-13T13:58:01Z",
+      "age_days": 75,
+      "labels": [
+        "multi-platform",
+        "autonomous-execution",
+        "runtime-ledger"
+      ],
+      "category": "other",
+      "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/96"
+    },
+    {
+      "repo": "Copilot-home/DAIOF-Framework",
+      "number": 94,
+      "title": "Runtime triage: repository landscape fragmentation and duplicate DAIOF surface",
+      "created": "2026-05-13T13:18:04Z",
+      "age_days": 75,
+      "labels": [
+        "runtime-triage",
+        "governance",
+        "repository-hygiene",
+        "multi-platform",
+        "connector-orchestration",
+        "architecture-correction"
+      ],
+      "category": "other",
+      "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/94"
+    },
+    {
+      "repo": "Copilot-home/DAIOF-Framework",
+      "number": 78,
+      "title": "[DOCS]",
+      "created": "2026-01-31T21:47:51Z",
+      "age_days": 177,
+      "labels": [
+        "bug",
+        "documentation",
+        "duplicate",
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "invalid",
+        "question",
+        "wontfix",
+        "ci-failure",
+        "autonomous-report",
+        "needs-human-review",
+        "emergency",
+        "critical",
+        "Review effort 1/5"
+      ],
+      "category": "docs",
+      "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/78"
+    },
+    {
+      "repo": "Copilot-home/DAIOF-Framework",
+      "number": 37,
+      "title": "[DOCS]",
+      "created": "2025-11-18T00:13:20Z",
+      "age_days": 252,
+      "labels": [
+        "documentation"
+      ],
+      "category": "docs",
+      "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/37"
+    },
+    {
+      "repo": "Copilot-home/DAIOF-Framework",
+      "number": 36,
+      "title": "[DOCS]",
+      "created": "2025-11-18T00:13:16Z",
+      "age_days": 252,
+      "labels": [
+        "documentation"
+      ],
+      "category": "docs",
+      "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/36"
+    },
+    {
+      "repo": "Copilot-home/DAIOF-Framework",
+      "number": 34,
+      "title": "Follows biological metaphors",
+      "created": "2025-11-18T00:11:38Z",
+      "age_days": 252,
+      "labels": [],
+      "category": "daiof-principle",
+      "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/34"
+    },
+    {
+      "repo": "Copilot-home/DAIOF-Framework",
+      "number": 33,
+      "title": "Improves consciousness development",
+      "created": "2025-11-18T00:11:29Z",
+      "age_days": 252,
+      "labels": [],
+      "category": "daiof-principle",
+      "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/33"
+    },
+    {
+      "repo": "Copilot-home/DAIOF-Framework",
+      "number": 32,
+      "title": "Enhances safety",
+      "created": "2025-11-18T00:11:19Z",
+      "age_days": 252,
+      "labels": [],
+      "category": "daiof-principle",
+      "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/32"
+    },
+    {
+      "repo": "Copilot-home/DAIOF-Framework",
+      "number": 31,
+      "title": "Respects immutable genes",
+      "created": "2025-11-18T00:11:17Z",
+      "age_days": 252,
+      "labels": [],
+      "category": "daiof-principle",
+      "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/31"
+    },
+    {
+      "repo": "Copilot-home/DAIOF-Framework",
+      "number": 30,
+      "title": "Maintains AI-Human interdependence",
+      "created": "2025-11-18T00:11:13Z",
+      "age_days": 252,
+      "labels": [],
+      "category": "daiof-principle",
+      "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/30"
+    },
+    {
+      "repo": "Copilot-home/DAIOF-Framework",
+      "number": 29,
+      "title": "[BUG]",
+      "created": "2025-11-18T00:10:28Z",
+      "age_days": 252,
+      "labels": [
+        "bug",
+        "needs-human-review"
+      ],
+      "category": "other",
+      "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/29"
+    },
+    {
+      "repo": "Copilot-home/DAIOF-Framework",
+      "number": 27,
+      "title": "[FEATURE]",
+      "created": "2025-11-18T00:09:52Z",
+      "age_days": 252,
+      "labels": [
+        "enhancement"
+      ],
+      "category": "other",
+      "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/27"
+    }
+  ],
+  "prs": [
+    {
+      "repo": "Copilot-home/DAIOF-Framework",
+      "number": 115,
+      "title": "fix(ci): close post-merge governance and ecosystem validation",
+      "created": "2026-07-11T17:16:10Z",
+      "age_days": 16,
+      "draft": true,
+      "check": "FAILURE",
+      "merge": "UNSTABLE",
+      "mergeable": "MERGEABLE",
+      "review": "",
+      "category": "ci-failure",
+      "url": "https://github.com/Copilot-home/DAIOF-Framework/pull/115"
+    },
+    {
+      "repo": "Copilot-home/DAIOF-Framework",
+      "number": 112,
+      "title": "governance: standardize Copilot-home ecosystem topology",
+      "created": "2026-07-11T16:29:19Z",
+      "age_days": 16,
+      "draft": false,
+      "check": "FAILURE",
+      "merge": "UNSTABLE",
+      "mergeable": "MERGEABLE",
+      "review": "",
+      "category": "ci-failure",
+      "url": "https://github.com/Copilot-home/DAIOF-Framework/pull/112"
+    },
+    {
+      "repo": "Copilot-home/balancehub-minimal",
+      "number": 5,
+      "title": "ci: make ci.yml self-contained (no external actions, allow-list independent)",
+      "created": "2026-06-24T04:34:37Z",
+      "age_days": 34,
+      "draft": false,
+      "check": "SUCCESS",
+      "merge": "BLOCKED",
+      "mergeable": "MERGEABLE",
+      "review": "REVIEW_REQUIRED",
+      "category": "other",
+      "url": "https://github.com/Copilot-home/balancehub-minimal/pull/5"
+    },
+    {
+      "repo": "Copilot-home/balancehub-minimal",
+      "number": 4,
+      "title": "Map Docker runtime into APO canon",
+      "created": "2026-05-24T22:22:09Z",
+      "age_days": 64,
+      "draft": false,
+      "check": "PENDING",
+      "merge": "DIRTY",
+      "mergeable": "CONFLICTING",
+      "review": "",
+      "category": "conflict",
+      "url": "https://github.com/Copilot-home/balancehub-minimal/pull/4"
+    },
+    {
+      "repo": "Copilot-home/balancehub-minimal",
+      "number": 3,
+      "title": "fix: add missing ops/lint_apo_check.py to unblock AP\u03a9 ontology lint CI step",
+      "created": "2026-04-26T22:50:50Z",
+      "age_days": 92,
+      "draft": false,
+      "check": "UNKNOWN",
+      "merge": "BLOCKED",
+      "mergeable": "MERGEABLE",
+      "review": "REVIEW_REQUIRED",
+      "category": "other",
+      "url": "https://github.com/Copilot-home/balancehub-minimal/pull/3"
+    },
+    {
+      "repo": "Copilot-home/balancehub-minimal",
+      "number": 2,
+      "title": "\ud83d\ude80 Phase 11: Full Autonomous SaaS Operation (\u00a74287)",
+      "created": "2026-03-03T02:37:13Z",
+      "age_days": 147,
+      "draft": false,
+      "check": "UNKNOWN",
+      "merge": "BLOCKED",
+      "mergeable": "MERGEABLE",
+      "review": "REVIEW_REQUIRED",
+      "category": "other",
+      "url": "https://github.com/Copilot-home/balancehub-minimal/pull/2"
+    },
+    {
+      "repo": "Copilot-home/balancehub-minimal",
+      "number": 1,
+      "title": "Lock 14-day launch timeline and Day 1 docker-run readiness",
+      "created": "2026-02-22T08:56:20Z",
+      "age_days": 156,
+      "draft": false,
+      "check": "UNKNOWN",
+      "merge": "BLOCKED",
+      "mergeable": "MERGEABLE",
+      "review": "REVIEW_REQUIRED",
+      "category": "other",
+      "url": "https://github.com/Copilot-home/balancehub-minimal/pull/1"
+    },
+    {
+      "repo": "Copilot-home/copilot-cli",
+      "number": 16,
+      "title": "Refine Connect your tools visual mock to match Linear reference",
+      "created": "2026-03-29T12:24:31Z",
+      "age_days": 120,
+      "draft": false,
+      "check": "SUCCESS",
+      "merge": "DIRTY",
+      "mergeable": "CONFLICTING",
+      "review": "",
+      "category": "conflict",
+      "url": "https://github.com/Copilot-home/copilot-cli/pull/16"
+    },
+    {
+      "repo": "Copilot-home/copilot-cli",
+      "number": 12,
+      "title": "hi",
+      "created": "2026-03-10T15:17:56Z",
+      "age_days": 139,
+      "draft": false,
+      "check": "UNKNOWN",
+      "merge": "UNKNOWN",
+      "mergeable": "UNKNOWN",
+      "review": "",
+      "category": "junk",
+      "url": "https://github.com/Copilot-home/copilot-cli/pull/12"
+    },
+    {
+      "repo": "Copilot-home/nguyencuong_2509",
+      "number": 3,
+      "title": "fix: guard against NoneType crash in trigger_runtime response handling",
+      "created": "2026-06-12T08:47:00Z",
+      "age_days": 46,
+      "draft": true,
+      "check": "FAILURE",
+      "merge": "UNKNOWN",
+      "mergeable": "UNKNOWN",
+      "review": "",
+      "category": "ci-failure",
+      "url": "https://github.com/Copilot-home/nguyencuong_2509/pull/3"
+    },
+    {
+      "repo": "Copilot-home/trust_of_copilot",
+      "number": 10,
+      "title": "Implement CI/CD pipeline with staged build, test, and deployment workflows",
+      "created": "2026-04-07T23:58:25Z",
+      "age_days": 111,
+      "draft": true,
+      "check": "UNKNOWN",
+      "merge": "DIRTY",
+      "mergeable": "CONFLICTING",
+      "review": "",
+      "category": "stale-draft",
+      "url": "https://github.com/Copilot-home/trust_of_copilot/pull/10"
+    },
+    {
+      "repo": "Copilot-home/vite-react",
+      "number": 1,
+      "title": "Add Vercel Web Analytics integration",
+      "created": "2026-03-31T20:01:00Z",
+      "age_days": 118,
+      "draft": true,
+      "check": "FAILURE",
+      "merge": "UNSTABLE",
+      "mergeable": "MERGEABLE",
+      "review": "",
+      "category": "stale-draft",
+      "url": "https://github.com/Copilot-home/vite-react/pull/1"
+    },
+    {
+      "repo": "Copilot-home/workbench",
+      "number": 4,
+      "title": "fix(ci): harden self-contained checkout and restore Python matrix",
+      "created": "2026-06-24T04:42:35Z",
+      "age_days": 34,
+      "draft": true,
+      "check": "UNKNOWN",
+      "merge": "UNKNOWN",
+      "mergeable": "UNKNOWN",
+      "review": "",
+      "category": "other",
+      "url": "https://github.com/Copilot-home/workbench/pull/4"
+    },
+    {
+      "repo": "NguyenCuong1989/DAIOF-Framewor",
+      "number": 8,
+      "title": "fix(ci): grant metrics dashboard workflow write access",
+      "created": "2026-07-27T00:34:53Z",
+      "age_days": 1,
+      "draft": true,
+      "check": "MIXED",
+      "merge": "UNKNOWN",
+      "mergeable": "UNKNOWN",
+      "review": "",
+      "category": "other",
+      "url": "https://github.com/NguyenCuong1989/DAIOF-Framewor/pull/8"
+    },
+    {
+      "repo": "NguyenCuong1989/DAIOF-Framewor",
+      "number": 5,
+      "title": "fix(agent): preserve dependency-aware deploy capabilities",
+      "created": "2026-07-23T07:18:19Z",
+      "age_days": 5,
+      "draft": true,
+      "check": "MIXED",
+      "merge": "UNSTABLE",
+      "mergeable": "MERGEABLE",
+      "review": "",
+      "category": "other",
+      "url": "https://github.com/NguyenCuong1989/DAIOF-Framewor/pull/5"
+    },
+    {
+      "repo": "NguyenCuong1989/DAIOF-Framewor",
+      "number": 1,
+      "title": "feat(chat): integrate GPT Execution Canvas into native Chat view",
+      "created": "2026-07-18T19:04:42Z",
+      "age_days": 9,
+      "draft": true,
+      "check": "MIXED",
+      "merge": "UNKNOWN",
+      "mergeable": "UNKNOWN",
+      "review": "",
+      "category": "other",
+      "url": "https://github.com/NguyenCuong1989/DAIOF-Framewor/pull/1"
+    },
+    {
+      "repo": "NguyenCuong1989/Workspace",
+      "number": 2,
+      "title": "[WIP] OUT=\"$HOME/Desktop/a...",
+      "created": "2026-06-30T11:23:11Z",
+      "age_days": 27,
+      "draft": true,
+      "check": "UNKNOWN",
+      "merge": "CLEAN",
+      "mergeable": "MERGEABLE",
+      "review": "",
+      "category": "wip-draft",
+      "url": "https://github.com/NguyenCuong1989/Workspace/pull/2"
+    },
+    {
+      "repo": "NguyenCuong1989/Workspace",
+      "number": 1,
+      "title": "[WIP] ~/Workspace [\u2387 main*...",
+      "created": "2026-06-30T11:22:18Z",
+      "age_days": 27,
+      "draft": true,
+      "check": "UNKNOWN",
+      "merge": "CLEAN",
+      "mergeable": "MERGEABLE",
+      "review": "",
+      "category": "wip-draft",
+      "url": "https://github.com/NguyenCuong1989/Workspace/pull/1"
+    },
+    {
+      "repo": "NguyenCuong1989/andy",
+      "number": 5,
+      "title": "Fix sample workflow: remove dependency on missing requirements.txt",
+      "created": "2026-07-08T06:18:21Z",
+      "age_days": 20,
+      "draft": false,
+      "check": "MIXED",
+      "merge": "UNSTABLE",
+      "mergeable": "MERGEABLE",
+      "review": "",
+      "category": "other",
+      "url": "https://github.com/NguyenCuong1989/andy/pull/5"
+    },
+    {
+      "repo": "NguyenCuong1989/hyperai1989",
+      "number": 173,
+      "title": "docs: clean repository baseline and remove conflict markers",
+      "created": "2026-07-11T16:18:45Z",
+      "age_days": 16,
+      "draft": true,
+      "check": "FAILURE",
+      "merge": "UNSTABLE",
+      "mergeable": "MERGEABLE",
+      "review": "",
+      "category": "ci-failure",
+      "url": "https://github.com/NguyenCuong1989/hyperai1989/pull/173"
+    },
+    {
+      "repo": "NguyenCuong1989/hyperai1989",
+      "number": 162,
+      "title": "[WIP] Add request for additional information on issue",
+      "created": "2025-10-22T17:38:35Z",
+      "age_days": 278,
+      "draft": false,
+      "check": "UNKNOWN",
+      "merge": "UNSTABLE",
+      "mergeable": "MERGEABLE",
+      "review": "",
+      "category": "other",
+      "url": "https://github.com/NguyenCuong1989/hyperai1989/pull/162"
+    },
+    {
+      "repo": "NguyenCuong1989/my_too_test",
+      "number": 9,
+      "title": "Codex/auth plane control plane",
+      "created": "2026-06-06T16:02:06Z",
+      "age_days": 51,
+      "draft": false,
+      "check": "FAILURE",
+      "merge": "UNSTABLE",
+      "mergeable": "MERGEABLE",
+      "review": "",
+      "category": "ci-failure",
+      "url": "https://github.com/NguyenCuong1989/my_too_test/pull/9"
+    },
+    {
+      "repo": "NguyenCuong1989/my_too_test",
+      "number": 5,
+      "title": "feat: Autonomous Organism System \u2014 self-healing, monitoring, and autonomous workflows",
+      "created": "2026-03-05T01:42:14Z",
+      "age_days": 145,
+      "draft": true,
+      "check": "UNKNOWN",
+      "merge": "DIRTY",
+      "mergeable": "CONFLICTING",
+      "review": "",
+      "category": "stale-draft",
+      "url": "https://github.com/NguyenCuong1989/my_too_test/pull/5"
+    },
+    {
+      "repo": "NguyenCuong1989/my_too_test",
+      "number": 3,
+      "title": "Refactor src/ into structured package and add comprehensive test suite",
+      "created": "2026-03-05T01:34:58Z",
+      "age_days": 145,
+      "draft": true,
+      "check": "UNKNOWN",
+      "merge": "DIRTY",
+      "mergeable": "CONFLICTING",
+      "review": "",
+      "category": "stale-draft",
+      "url": "https://github.com/NguyenCuong1989/my_too_test/pull/3"
+    },
+    {
+      "repo": "NguyenCuong1989/my_too_test",
+      "number": 2,
+      "title": "Add GitHub Actions CI/CD pipeline (test, lint, type-check, docs-check)",
+      "created": "2026-03-05T01:34:28Z",
+      "age_days": 145,
+      "draft": true,
+      "check": "UNKNOWN",
+      "merge": "UNSTABLE",
+      "mergeable": "MERGEABLE",
+      "review": "",
+      "category": "stale-draft",
+      "url": "https://github.com/NguyenCuong1989/my_too_test/pull/2"
+    },
+    {
+      "repo": "NguyenCuong1989/sturdy-lamp",
+      "number": 1,
+      "title": "fix: replace SSH checkout with HTTPS clone to fix say-hello job",
+      "created": "2026-07-08T06:17:48Z",
+      "age_days": 20,
+      "draft": false,
+      "check": "FAILURE",
+      "merge": "UNSTABLE",
+      "mergeable": "MERGEABLE",
+      "review": "",
+      "category": "ci-failure",
+      "url": "https://github.com/NguyenCuong1989/sturdy-lamp/pull/1"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 113,
+      "title": "fix: restore Vercel deployment with serverless runtime",
+      "created": "2026-07-11T16:20:03Z",
+      "age_days": 16,
+      "draft": true,
+      "check": "FAILURE",
+      "merge": "UNSTABLE",
+      "mergeable": "MERGEABLE",
+      "review": "",
+      "category": "ci-failure",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/pull/113"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 112,
+      "title": "Fix sample workflow: replace .NET config with Python",
+      "created": "2026-07-08T06:17:42Z",
+      "age_days": 20,
+      "draft": false,
+      "check": "FAILURE",
+      "merge": "UNSTABLE",
+      "mergeable": "MERGEABLE",
+      "review": "",
+      "category": "ci-failure",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/pull/112"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 30,
+      "title": "Add Vercel Web Analytics integration",
+      "created": "2026-04-28T18:52:24Z",
+      "age_days": 90,
+      "draft": true,
+      "check": "FAILURE",
+      "merge": "UNKNOWN",
+      "mergeable": "UNKNOWN",
+      "review": "",
+      "category": "ci-failure",
+      "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/pull/30"
+    },
+    {
+      "repo": "NguyenCuong1989/vscode-d8204b72",
+      "number": 4,
+      "title": "chore(codespaces): normalize and verify Git commit identity",
+      "created": "2026-07-11T16:30:07Z",
+      "age_days": 16,
+      "draft": true,
+      "check": "FAILURE",
+      "merge": "UNSTABLE",
+      "mergeable": "MERGEABLE",
+      "review": "",
+      "category": "ci-failure",
+      "url": "https://github.com/NguyenCuong1989/vscode-d8204b72/pull/4"
+    },
+    {
+      "repo": "NguyenCuong1989/vscode-python-environments",
+      "number": 1,
+      "title": "Feature/add copilot instructions",
+      "created": "2025-10-23T22:18:29Z",
+      "age_days": 277,
+      "draft": true,
+      "check": "UNKNOWN",
+      "merge": "BLOCKED",
+      "mergeable": "MERGEABLE",
+      "review": "",
+      "category": "stale-draft",
+      "url": "https://github.com/NguyenCuong1989/vscode-python-environments/pull/1"
+    }
+  ]
+}

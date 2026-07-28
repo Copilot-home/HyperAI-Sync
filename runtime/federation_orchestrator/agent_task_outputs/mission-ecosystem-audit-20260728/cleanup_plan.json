@@ -1,0 +1,486 @@
+{
+  "timestamp": "2026-07-28T09:37:18.371807+00:00",
+  "criteria": {
+    "junk_pr": "Title is just \"hi\" or obvious spam, non-draft, >30 days old, no meaningful body.",
+    "stale_draft_pr": "Draft PR, >90 days old, with merge conflict or unknown/unstable status and no recent push.",
+    "stale_vague_issue": "Issue >90 days old, no labels or vague title (\"Check\",\"Test CLI issue\",\"have hack\"), not notion-sync."
+  },
+  "actions": {
+    "close_pr": [
+      {
+        "repo": "Copilot-home/copilot-cli",
+        "number": 12,
+        "title": "hi",
+        "age_days": 139,
+        "category": "junk",
+        "url": "https://github.com/Copilot-home/copilot-cli/pull/12",
+        "reason": "junk",
+        "comment": "Closing as spam/junk PR per ecosystem audit.",
+        "executed": true
+      },
+      {
+        "repo": "Copilot-home/trust_of_copilot",
+        "number": 10,
+        "title": "Implement CI/CD pipeline with staged build, test, and deployment workflows",
+        "age_days": 111,
+        "category": "stale-draft",
+        "url": "https://github.com/Copilot-home/trust_of_copilot/pull/10",
+        "reason": "stale draft",
+        "comment": "Closing stale draft PR (>90 days, conflicts or unknown checks) per ecosystem audit.",
+        "executed": true
+      },
+      {
+        "repo": "Copilot-home/vite-react",
+        "number": 1,
+        "title": "Add Vercel Web Analytics integration",
+        "age_days": 118,
+        "category": "stale-draft",
+        "url": "https://github.com/Copilot-home/vite-react/pull/1",
+        "reason": "stale draft",
+        "comment": "Closing stale draft PR (>90 days, conflicts or unknown checks) per ecosystem audit.",
+        "executed": true
+      },
+      {
+        "repo": "NguyenCuong1989/my_too_test",
+        "number": 5,
+        "title": "feat: Autonomous Organism System \u2014 self-healing, monitoring, and autonomous workflows",
+        "age_days": 145,
+        "category": "stale-draft",
+        "url": "https://github.com/NguyenCuong1989/my_too_test/pull/5",
+        "reason": "stale draft",
+        "comment": "Closing stale draft PR (>90 days, conflicts or unknown checks) per ecosystem audit.",
+        "executed": true
+      },
+      {
+        "repo": "NguyenCuong1989/my_too_test",
+        "number": 3,
+        "title": "Refactor src/ into structured package and add comprehensive test suite",
+        "age_days": 145,
+        "category": "stale-draft",
+        "url": "https://github.com/NguyenCuong1989/my_too_test/pull/3",
+        "reason": "stale draft",
+        "comment": "Closing stale draft PR (>90 days, conflicts or unknown checks) per ecosystem audit.",
+        "executed": true
+      },
+      {
+        "repo": "NguyenCuong1989/my_too_test",
+        "number": 2,
+        "title": "Add GitHub Actions CI/CD pipeline (test, lint, type-check, docs-check)",
+        "age_days": 145,
+        "category": "stale-draft",
+        "url": "https://github.com/NguyenCuong1989/my_too_test/pull/2",
+        "reason": "stale draft",
+        "comment": "Closing stale draft PR (>90 days, conflicts or unknown checks) per ecosystem audit.",
+        "executed": true
+      },
+      {
+        "repo": "NguyenCuong1989/vscode-python-environments",
+        "number": 1,
+        "title": "Feature/add copilot instructions",
+        "age_days": 277,
+        "category": "stale-draft",
+        "url": "https://github.com/NguyenCuong1989/vscode-python-environments/pull/1",
+        "reason": "stale draft",
+        "comment": "Closing stale draft PR (>90 days, conflicts or unknown checks) per ecosystem audit.",
+        "executed": false,
+        "error": "GraphQL: Repository was archived so is read-only and unable to create comment because issue is locked (addComment)"
+      }
+    ],
+    "close_issue": [
+      {
+        "repo": "NguyenCuong1989/andy",
+        "number": 4,
+        "title": "Test CLI issue",
+        "age_days": 138,
+        "category": "test",
+        "url": "https://github.com/NguyenCuong1989/andy/issues/4",
+        "reason": "stale test issue",
+        "comment": "Closing stale test issue per ecosystem audit.",
+        "executed": true
+      },
+      {
+        "repo": "NguyenCuong1989/andy",
+        "number": 3,
+        "title": "Check",
+        "age_days": 167,
+        "category": "docs",
+        "url": "https://github.com/NguyenCuong1989/andy/issues/3",
+        "reason": "stale vague issue",
+        "comment": "Closing stale vague issue per ecosystem audit.",
+        "executed": true
+      },
+      {
+        "repo": "NguyenCuong1989/identity-guardian-82",
+        "number": 1,
+        "title": "Ho\u00e0n thi\u1ec7n \u0111i",
+        "age_days": 177,
+        "category": "other",
+        "url": "https://github.com/NguyenCuong1989/identity-guardian-82/issues/1",
+        "reason": "stale vague issue",
+        "comment": "Closing stale vague issue per ecosystem audit.",
+        "executed": true
+      },
+      {
+        "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+        "number": 3,
+        "title": "have hack",
+        "age_days": 315,
+        "category": "other",
+        "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/3",
+        "reason": "stale vague issue",
+        "comment": "Closing stale vague issue per ecosystem audit.",
+        "executed": true
+      },
+      {
+        "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+        "number": 2,
+        "title": "This PR implements a comprehensive AI partner system that addresses the \"my partner\" requirement by creating a trust-focused AI copilot framework.",
+        "age_days": 315,
+        "category": "other",
+        "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/issues/2",
+        "reason": "stale vague issue",
+        "comment": "Closing stale vague issue per ecosystem audit.",
+        "executed": true
+      }
+    ],
+    "merge_pr": [],
+    "manual_review": [
+      {
+        "repo": "Copilot-home/DAIOF-Framework",
+        "number": 115,
+        "title": "fix(ci): close post-merge governance and ecosystem validation",
+        "age_days": 16,
+        "category": "ci-failure",
+        "url": "https://github.com/Copilot-home/DAIOF-Framework/pull/115"
+      },
+      {
+        "repo": "Copilot-home/DAIOF-Framework",
+        "number": 112,
+        "title": "governance: standardize Copilot-home ecosystem topology",
+        "age_days": 16,
+        "category": "ci-failure",
+        "url": "https://github.com/Copilot-home/DAIOF-Framework/pull/112"
+      },
+      {
+        "repo": "Copilot-home/balancehub-minimal",
+        "number": 5,
+        "title": "ci: make ci.yml self-contained (no external actions, allow-list independent)",
+        "age_days": 34,
+        "category": "other",
+        "url": "https://github.com/Copilot-home/balancehub-minimal/pull/5"
+      },
+      {
+        "repo": "Copilot-home/balancehub-minimal",
+        "number": 4,
+        "title": "Map Docker runtime into APO canon",
+        "age_days": 64,
+        "category": "conflict",
+        "url": "https://github.com/Copilot-home/balancehub-minimal/pull/4"
+      },
+      {
+        "repo": "Copilot-home/balancehub-minimal",
+        "number": 3,
+        "title": "fix: add missing ops/lint_apo_check.py to unblock AP\u03a9 ontology lint CI step",
+        "age_days": 92,
+        "category": "other",
+        "url": "https://github.com/Copilot-home/balancehub-minimal/pull/3"
+      },
+      {
+        "repo": "Copilot-home/balancehub-minimal",
+        "number": 2,
+        "title": "\ud83d\ude80 Phase 11: Full Autonomous SaaS Operation (\u00a74287)",
+        "age_days": 147,
+        "category": "other",
+        "url": "https://github.com/Copilot-home/balancehub-minimal/pull/2"
+      },
+      {
+        "repo": "Copilot-home/balancehub-minimal",
+        "number": 1,
+        "title": "Lock 14-day launch timeline and Day 1 docker-run readiness",
+        "age_days": 156,
+        "category": "other",
+        "url": "https://github.com/Copilot-home/balancehub-minimal/pull/1"
+      },
+      {
+        "repo": "Copilot-home/copilot-cli",
+        "number": 16,
+        "title": "Refine Connect your tools visual mock to match Linear reference",
+        "age_days": 120,
+        "category": "conflict",
+        "url": "https://github.com/Copilot-home/copilot-cli/pull/16"
+      },
+      {
+        "repo": "Copilot-home/nguyencuong_2509",
+        "number": 3,
+        "title": "fix: guard against NoneType crash in trigger_runtime response handling",
+        "age_days": 46,
+        "category": "ci-failure",
+        "url": "https://github.com/Copilot-home/nguyencuong_2509/pull/3"
+      },
+      {
+        "repo": "Copilot-home/workbench",
+        "number": 4,
+        "title": "fix(ci): harden self-contained checkout and restore Python matrix",
+        "age_days": 34,
+        "category": "other",
+        "url": "https://github.com/Copilot-home/workbench/pull/4"
+      },
+      {
+        "repo": "NguyenCuong1989/DAIOF-Framewor",
+        "number": 8,
+        "title": "fix(ci): grant metrics dashboard workflow write access",
+        "age_days": 1,
+        "category": "other",
+        "url": "https://github.com/NguyenCuong1989/DAIOF-Framewor/pull/8"
+      },
+      {
+        "repo": "NguyenCuong1989/DAIOF-Framewor",
+        "number": 5,
+        "title": "fix(agent): preserve dependency-aware deploy capabilities",
+        "age_days": 5,
+        "category": "other",
+        "url": "https://github.com/NguyenCuong1989/DAIOF-Framewor/pull/5"
+      },
+      {
+        "repo": "NguyenCuong1989/DAIOF-Framewor",
+        "number": 1,
+        "title": "feat(chat): integrate GPT Execution Canvas into native Chat view",
+        "age_days": 9,
+        "category": "other",
+        "url": "https://github.com/NguyenCuong1989/DAIOF-Framewor/pull/1"
+      },
+      {
+        "repo": "NguyenCuong1989/Workspace",
+        "number": 2,
+        "title": "[WIP] OUT=\"$HOME/Desktop/a...",
+        "age_days": 27,
+        "category": "wip-draft",
+        "url": "https://github.com/NguyenCuong1989/Workspace/pull/2"
+      },
+      {
+        "repo": "NguyenCuong1989/Workspace",
+        "number": 1,
+        "title": "[WIP] ~/Workspace [\u2387 main*...",
+        "age_days": 27,
+        "category": "wip-draft",
+        "url": "https://github.com/NguyenCuong1989/Workspace/pull/1"
+      },
+      {
+        "repo": "NguyenCuong1989/andy",
+        "number": 5,
+        "title": "Fix sample workflow: remove dependency on missing requirements.txt",
+        "age_days": 20,
+        "category": "other",
+        "url": "https://github.com/NguyenCuong1989/andy/pull/5"
+      },
+      {
+        "repo": "NguyenCuong1989/hyperai1989",
+        "number": 173,
+        "title": "docs: clean repository baseline and remove conflict markers",
+        "age_days": 16,
+        "category": "ci-failure",
+        "url": "https://github.com/NguyenCuong1989/hyperai1989/pull/173"
+      },
+      {
+        "repo": "NguyenCuong1989/hyperai1989",
+        "number": 162,
+        "title": "[WIP] Add request for additional information on issue",
+        "age_days": 278,
+        "category": "other",
+        "url": "https://github.com/NguyenCuong1989/hyperai1989/pull/162"
+      },
+      {
+        "repo": "NguyenCuong1989/my_too_test",
+        "number": 9,
+        "title": "Codex/auth plane control plane",
+        "age_days": 51,
+        "category": "ci-failure",
+        "url": "https://github.com/NguyenCuong1989/my_too_test/pull/9"
+      },
+      {
+        "repo": "NguyenCuong1989/sturdy-lamp",
+        "number": 1,
+        "title": "fix: replace SSH checkout with HTTPS clone to fix say-hello job",
+        "age_days": 20,
+        "category": "ci-failure",
+        "url": "https://github.com/NguyenCuong1989/sturdy-lamp/pull/1"
+      },
+      {
+        "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+        "number": 113,
+        "title": "fix: restore Vercel deployment with serverless runtime",
+        "age_days": 16,
+        "category": "ci-failure",
+        "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/pull/113"
+      },
+      {
+        "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+        "number": 112,
+        "title": "Fix sample workflow: replace .NET config with Python",
+        "age_days": 20,
+        "category": "ci-failure",
+        "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/pull/112"
+      },
+      {
+        "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+        "number": 30,
+        "title": "Add Vercel Web Analytics integration",
+        "age_days": 90,
+        "category": "ci-failure",
+        "url": "https://github.com/NguyenCuong1989/trust_of_copilot-c8aae4ab/pull/30"
+      },
+      {
+        "repo": "NguyenCuong1989/vscode-d8204b72",
+        "number": 4,
+        "title": "chore(codespaces): normalize and verify Git commit identity",
+        "age_days": 16,
+        "category": "ci-failure",
+        "url": "https://github.com/NguyenCuong1989/vscode-d8204b72/pull/4"
+      },
+      {
+        "repo": "NguyenCuong1989/DAIOF-Framewor",
+        "number": 7,
+        "title": "[AP\u03a9 EXECUTOR HANDOFF] Bootstrap keyless GCP auth and resume provisioning PR #6",
+        "age_days": 3,
+        "category": "other",
+        "url": "https://github.com/NguyenCuong1989/DAIOF-Framewor/issues/7"
+      },
+      {
+        "repo": "NguyenCuong1989/vscode-d8204b72",
+        "number": 5,
+        "title": "ci: remove false-negative PR checks from unconfigured template workflows",
+        "age_days": 16,
+        "category": "other",
+        "url": "https://github.com/NguyenCuong1989/vscode-d8204b72/issues/5"
+      },
+      {
+        "repo": "Copilot-home/DAIOF-Framework",
+        "number": 114,
+        "title": "[CI BASELINE] Regenerate workflow_manifest.json and separate PR-caused failures",
+        "age_days": 16,
+        "category": "other",
+        "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/114"
+      },
+      {
+        "repo": "Copilot-home/workbench",
+        "number": 6,
+        "title": "Titan normalization: bind canonical product repo, prove remote CI, and map Vercel surface",
+        "age_days": 16,
+        "category": "other",
+        "url": "https://github.com/Copilot-home/workbench/issues/6"
+      },
+      {
+        "repo": "Copilot-home/DAIOF-Framework",
+        "number": 113,
+        "title": "[ORG GOVERNANCE] Execute Copilot-home repository normalization waves",
+        "age_days": 16,
+        "category": "docs",
+        "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/113"
+      },
+      {
+        "repo": "Copilot-home/DAIOF-Framework",
+        "number": 102,
+        "title": "[LAB] Connector runtime audit \u2013 2026-05-17",
+        "age_days": 72,
+        "category": "daiof-principle",
+        "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/102"
+      },
+      {
+        "repo": "Copilot-home/DAIOF-Framework",
+        "number": 96,
+        "title": "Autonomous execution wave multi-platform runtime normalization",
+        "age_days": 75,
+        "category": "other",
+        "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/96"
+      },
+      {
+        "repo": "Copilot-home/DAIOF-Framework",
+        "number": 94,
+        "title": "Runtime triage: repository landscape fragmentation and duplicate DAIOF surface",
+        "age_days": 75,
+        "category": "other",
+        "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/94"
+      },
+      {
+        "repo": "Copilot-home/DAIOF-Framework",
+        "number": 78,
+        "title": "[DOCS]",
+        "age_days": 177,
+        "category": "docs",
+        "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/78"
+      },
+      {
+        "repo": "Copilot-home/DAIOF-Framework",
+        "number": 37,
+        "title": "[DOCS]",
+        "age_days": 252,
+        "category": "docs",
+        "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/37"
+      },
+      {
+        "repo": "Copilot-home/DAIOF-Framework",
+        "number": 36,
+        "title": "[DOCS]",
+        "age_days": 252,
+        "category": "docs",
+        "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/36"
+      },
+      {
+        "repo": "Copilot-home/DAIOF-Framework",
+        "number": 34,
+        "title": "Follows biological metaphors",
+        "age_days": 252,
+        "category": "daiof-principle",
+        "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/34"
+      },
+      {
+        "repo": "Copilot-home/DAIOF-Framework",
+        "number": 33,
+        "title": "Improves consciousness development",
+        "age_days": 252,
+        "category": "daiof-principle",
+        "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/33"
+      },
+      {
+        "repo": "Copilot-home/DAIOF-Framework",
+        "number": 32,
+        "title": "Enhances safety",
+        "age_days": 252,
+        "category": "daiof-principle",
+        "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/32"
+      },
+      {
+        "repo": "Copilot-home/DAIOF-Framework",
+        "number": 31,
+        "title": "Respects immutable genes",
+        "age_days": 252,
+        "category": "daiof-principle",
+        "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/31"
+      },
+      {
+        "repo": "Copilot-home/DAIOF-Framework",
+        "number": 30,
+        "title": "Maintains AI-Human interdependence",
+        "age_days": 252,
+        "category": "daiof-principle",
+        "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/30"
+      },
+      {
+        "repo": "Copilot-home/DAIOF-Framework",
+        "number": 29,
+        "title": "[BUG]",
+        "age_days": 252,
+        "category": "other",
+        "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/29"
+      },
+      {
+        "repo": "Copilot-home/DAIOF-Framework",
+        "number": 27,
+        "title": "[FEATURE]",
+        "age_days": 252,
+        "category": "other",
+        "url": "https://github.com/Copilot-home/DAIOF-Framework/issues/27"
+      }
+    ]
+  }
+}

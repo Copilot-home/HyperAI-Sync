@@ -9496,5 +9496,29 @@
     },
     "final_state": "evidence_collected_pat_requires_login",
     "completed_at": "2026-07-28T09:12:00Z"
+  },
+  {
+    "schema_version": "2026-04-16.hyperai-agent-dispatch.v1",
+    "mission_id": "mission-8fd3a8d531744837",
+    "dispatched_at": "2026-07-28T09:36:15Z",
+    "title": "Ecosystem open issues/PRs audit and cleanup",
+    "description": "Audit all open issues and PRs across NguyenCuong1989 and Copilot-home repos, classify by risk and freshness, propose closure/merge actions, and execute low-risk cleanup. Evidence collected in runtime/federation_orchestrator/agent_task_outputs/mission-ecosystem-audit-20260728/evidence.",
+    "action_class": "route",
+    "surfaces": [
+      "verification_truth",
+      "mcp_connectors"
+    ],
+    "status": "completed",
+    "proof": {
+      "source": "codex_operator_runtime",
+      "gate": "creator_approval_intake",
+      "note": "Mission routed through minimal HyperAI agent dispatch on macOS projection.",
+      "audit_evidence": "runtime/federation_orchestrator/agent_task_outputs/mission-ecosystem-audit-20260728/evidence_summary.json",
+      "closed_issues": 5,
+      "closed_prs": 9,
+      "manual_review_remaining": 22
+    },
+    "final_state": "evidence_collected_low_risk_cleanup_executed",
+    "completed_at": "2026-07-28T09:45:00Z"
   }
 ]

@@ -5,6 +5,7 @@
 - [x] Wire guardrail into `/runtime/actions` execute path and record evidence receipt on policy events.
 - [x] Collect manual/dashboard evidence for Domains/SSO/AAC/External Invites/Usage limits/Agents (mission-d785a4e3a4ab47d1; evidence via Playwright probe + authenticated gh REST/GraphQL).
 - [x] Materialize HyperAI Runtime Orchestrator skill: canonical at `/Users/andy/.agents/skills/hyperai-runtime-orchestrator/SKILL.md`, symlinked from `~/.config/devin/skills/hyperai-runtime-orchestrator`.
+- [x] Audit all open issues/PRs across NguyenCuong1989 and Copilot-home (mission-8fd3a8d531744837). Closed 5 stale/vague issues and 9 stale/draft/junk PRs. Evidence at `runtime/federation_orchestrator/agent_task_outputs/mission-ecosystem-audit-20260728`.
 
 ## Creator gate (one-click / policy)
 
@@ -12,3 +13,9 @@
   - Pre-filled URL: `https://github.com/settings/personal-access-tokens/new?name=HyperAI-replacement-PAT&description=Replacement+for+revoked+exposed+token&target_name=Copilot-home&expires_in=90&contents=read&metadata=read&actions=read`
 - [ ] Verify domains `creators.contact` and `example.com` if they should be marked verified.
 - [ ] Assess SAML/AAC setup if enterprise requirements change.
+
+## Ecosystem cleanup manual review
+
+- [ ] Review remaining 22 open PRs in `evidence/audit_report.json` / `cleanup_plan.json`; decide merge/close/fix per repo.
+- [ ] Triage 85 Notion-sync issues in `NguyenCuong1989/trust_of_copilot-c8aae4ab` against Notion source.
+- [ ] Decide disposition of 6 old DAIOF principle issues in `Copilot-home/DAIOF-Framework` (#27-37, #78).

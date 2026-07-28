@@ -1,0 +1,162 @@
+[
+  {
+    "repo": "Copilot-home/copilot-cli",
+    "number": 12,
+    "kind": "pr",
+    "status": 0,
+    "stdout": "",
+    "stderr": "\u2713 Closed pull request Copilot-home/copilot-cli#12 (hi)"
+  },
+  {
+    "repo": "Copilot-home/trust_of_copilot",
+    "number": 10,
+    "kind": "pr",
+    "status": 0,
+    "stdout": "",
+    "stderr": "\u2713 Closed pull request Copilot-home/trust_of_copilot#10 (Implement CI/CD pipeline with staged build, test, and deployment workflows)"
+  },
+  {
+    "repo": "Copilot-home/vite-react",
+    "number": 1,
+    "kind": "pr",
+    "status": 0,
+    "stdout": "",
+    "stderr": "\u2713 Closed pull request Copilot-home/vite-react#1 (Add Vercel Web Analytics integration)"
+  },
+  {
+    "repo": "NguyenCuong1989/my_too_test",
+    "number": 5,
+    "kind": "pr",
+    "status": 0,
+    "stdout": "",
+    "stderr": "\u2713 Closed pull request NguyenCuong1989/my_too_test#5 (feat: Autonomous Organism System \u2014 self-healing, monitoring, and autonomous workflows)"
+  },
+  {
+    "repo": "NguyenCuong1989/my_too_test",
+    "number": 3,
+    "kind": "pr",
+    "status": 0,
+    "stdout": "",
+    "stderr": "\u2713 Closed pull request NguyenCuong1989/my_too_test#3 (Refactor src/ into structured package and add comprehensive test suite)"
+  },
+  {
+    "repo": "NguyenCuong1989/my_too_test",
+    "number": 2,
+    "kind": "pr",
+    "status": 0,
+    "stdout": "",
+    "stderr": "\u2713 Closed pull request NguyenCuong1989/my_too_test#2 (Add GitHub Actions CI/CD pipeline (test, lint, type-check, docs-check))"
+  },
+  {
+    "repo": "NguyenCuong1989/vscode-python-environments",
+    "number": 1,
+    "kind": "pr",
+    "status": 1,
+    "stdout": "",
+    "stderr": "GraphQL: Repository was archived so is read-only and unable to create comment because issue is locked (addComment)"
+  },
+  {
+    "repo": "NguyenCuong1989/andy",
+    "number": 4,
+    "kind": "issue",
+    "status": 1,
+    "stdout": "",
+    "stderr": "invalid argument \"not_planned\" for \"-r, --reason\" flag: valid values are {completed|not planned|duplicate}\n\nUsage:  gh issue close {<number> | <url>} [flags]\n\nFlags:\n  -c, --comment string        Leave a closing comment\n      --duplicate-of string   Mark as duplicate of another issue by number or URL\n  -r, --reason string         Reason for closing: {completed|not planned|duplicate}"
+  },
+  {
+    "repo": "NguyenCuong1989/andy",
+    "number": 3,
+    "kind": "issue",
+    "status": 1,
+    "stdout": "",
+    "stderr": "invalid argument \"not_planned\" for \"-r, --reason\" flag: valid values are {completed|not planned|duplicate}\n\nUsage:  gh issue close {<number> | <url>} [flags]\n\nFlags:\n  -c, --comment string        Leave a closing comment\n      --duplicate-of string   Mark as duplicate of another issue by number or URL\n  -r, --reason string         Reason for closing: {completed|not planned|duplicate}"
+  },
+  {
+    "repo": "NguyenCuong1989/identity-guardian-82",
+    "number": 1,
+    "kind": "issue",
+    "status": 1,
+    "stdout": "",
+    "stderr": "invalid argument \"not_planned\" for \"-r, --reason\" flag: valid values are {completed|not planned|duplicate}\n\nUsage:  gh issue close {<number> | <url>} [flags]\n\nFlags:\n  -c, --comment string        Leave a closing comment\n      --duplicate-of string   Mark as duplicate of another issue by number or URL\n  -r, --reason string         Reason for closing: {completed|not planned|duplicate}"
+  },
+  {
+    "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+    "number": 3,
+    "kind": "issue",
+    "status": 1,
+    "stdout": "",
+    "stderr": "invalid argument \"not_planned\" for \"-r, --reason\" flag: valid values are {completed|not planned|duplicate}\n\nUsage:  gh issue close {<number> | <url>} [flags]\n\nFlags:\n  -c, --comment string        Leave a closing comment\n      --duplicate-of string   Mark as duplicate of another issue by number or URL\n  -r, --reason string         Reason for closing: {completed|not planned|duplicate}"
+  },
+  {
+    "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+    "number": 2,
+    "kind": "issue",
+    "status": 1,
+    "stdout": "",
+    "stderr": "invalid argument \"not_planned\" for \"-r, --reason\" flag: valid values are {completed|not planned|duplicate}\n\nUsage:  gh issue close {<number> | <url>} [flags]\n\nFlags:\n  -c, --comment string        Leave a closing comment\n      --duplicate-of string   Mark as duplicate of another issue by number or URL\n  -r, --reason string         Reason for closing: {completed|not planned|duplicate}"
+  },
+  {
+    "repo": "NguyenCuong1989/andy",
+    "number": 4,
+    "kind": "issue",
+    "status": 0,
+    "stdout": "",
+    "stderr": "\u2713 Closed issue NguyenCuong1989/andy#4 (Test CLI issue)"
+  },
+  {
+    "repo": "NguyenCuong1989/andy",
+    "number": 3,
+    "kind": "issue",
+    "status": 0,
+    "stdout": "",
+    "stderr": "\u2713 Closed issue NguyenCuong1989/andy#3 (Check)"
+  },
+  {
+    "repo": "NguyenCuong1989/identity-guardian-82",
+    "number": 1,
+    "kind": "issue",
+    "status": 0,
+    "stdout": "",
+    "stderr": "\u2713 Closed issue NguyenCuong1989/identity-guardian-82#1 (Ho\u00e0n thi\u1ec7n \u0111i)"
+  },
+  {
+    "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+    "number": 3,
+    "kind": "issue",
+    "status": 0,
+    "stdout": "",
+    "stderr": "\u2713 Closed issue NguyenCuong1989/trust_of_copilot-c8aae4ab#3 (have hack)"
+  },
+  {
+    "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+    "number": 2,
+    "kind": "issue",
+    "status": 0,
+    "stdout": "",
+    "stderr": "\u2713 Closed issue NguyenCuong1989/trust_of_copilot-c8aae4ab#2 (This PR implements a comprehensive AI partner system that addresses the \"my partner\" requirement by creating a trust-focused AI copilot framework.)"
+  },
+  {
+    "repo": "Copilot-home/copilot-cli",
+    "number": 16,
+    "kind": "pr",
+    "status": 0,
+    "stdout": "",
+    "stderr": "\u2713 Closed pull request Copilot-home/copilot-cli#16 (Refine Connect your tools visual mock to match Linear reference)"
+  },
+  {
+    "repo": "Copilot-home/balancehub-minimal",
+    "number": 1,
+    "kind": "pr",
+    "status": 0,
+    "stdout": "",
+    "stderr": "\u2713 Closed pull request Copilot-home/balancehub-minimal#1 (Lock 14-day launch timeline and Day 1 docker-run readiness)"
+  },
+  {
+    "repo": "Copilot-home/balancehub-minimal",
+    "number": 2,
+    "kind": "pr",
+    "status": 0,
+    "stdout": "",
+    "stderr": "\u2713 Closed pull request Copilot-home/balancehub-minimal#2 (\ud83d\ude80 Phase 11: Full Autonomous SaaS Operation (\u00a74287))"
+  }
+]

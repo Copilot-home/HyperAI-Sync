@@ -1,0 +1,30 @@
+{
+  "schema_version": "2026-04-16.hyperai-playwright-evidence.v1",
+  "mission_id": "mission-8fd3a8d531744837",
+  "collected_at": "2026-07-28T09:30:00Z",
+  "audit_scope": "NguyenCuong1989 and Copilot-home open repos, issues, PRs",
+  "findings": {
+    "repos_user": 69,
+    "repos_org": 19,
+    "open_issues_initial": 108,
+    "open_prs_initial": 31,
+    "open_issues_after": 103,
+    "open_prs_after": 22,
+    "closed_issues": 5,
+    "closed_prs": 9,
+    "archived_locked_failures": 1
+  },
+  "evidence_files": {
+    "user_repos": "evidence/user_repos.json",
+    "org_repos": "evidence/org_repos.json",
+    "user_open_issues": "evidence/user_open_issues.json",
+    "org_open_issues": "evidence/org_open_issues.json",
+    "user_open_prs": "evidence/user_open_prs.json",
+    "org_open_prs": "evidence/org_open_prs.json",
+    "all_open_prs_detailed": "evidence/all_open_prs_detailed.json",
+    "audit_report": "evidence/audit_report.json",
+    "cleanup_plan": "cleanup_plan.json",
+    "cleanup_execution_log": "cleanup_execution_log.json"
+  },
+  "note": "Low-risk stale/vague/junk items closed. Remaining require manual review or active work."
+}
