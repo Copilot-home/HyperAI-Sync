@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-07-28T09:12:00Z",
-  "current_focus": "Playwright/API evidence collected; replacement PAT requires creator login",
-  "latest_summary": "Dispatched HyperAI mission-d785a4e3a4ab47d1 to use Playwright for GitHub dashboard evidence and replacement PAT. Playwright probe confirmed browser session is unauthenticated (screenshots saved). Switched to authenticated gh REST/GraphQL and collected evidence for Copilot-home: org info, domains (2 unverified/approved), SAML/SSO (null), external invites (0), outside collaborators (0), members, billing usage, Copilot seats (0). No AAC API found. Replacement PAT cannot be generated programmatically (GitHub has no PAT creation API/GraphQL mutation); a pre-filled URL is provided for one-click creator generation.",
+  "last_updated": "2026-07-28T16:30:00Z",
+  "current_focus": "HyperAI Runtime Orchestrator skill materialized and wired for ecosystem-wide invocation",
+  "latest_summary": "Materialized the HyperAI Runtime Orchestrator skill at the user-level skill store. Canonical source: /Users/andy/.agents/skills/hyperai-runtime-orchestrator/SKILL.md (symlinked from ~/.config/devin/skills/hyperai-runtime-orchestrator). The skill enforces MISSION -> SKILL_DISCOVERY -> SKILL_SELECTION -> SKILL_EXECUTION -> VERIFY -> CONTINUE_QUEUE and declares packetized output (MISSION_PACKET, SKILL_ROUTING_TABLE, MEMORY_CONTEXT, ACTION_PACKET, VERIFY_PACKET, ROLLBACK_PACKET, QUEUE_UPDATE, APPROVAL_GATE). Added fallback to HyperAI-Sync minimal dispatch tools when the local bridge is absent. The skill is invoked and active for this session.",
   "active_blockers": [],
   "next_actions": [
     "Creator logs into GitHub and opens the pre-filled PAT URL to generate the replacement token, then stores it in the APΩ credential broker.",
@@ -10,8 +10,10 @@
   ],
   "closure_state": {
     "status": "technical_chain_closed",
-    "reason": "All technical evidence collected; remaining step is a one-click creator login action, not an open technical proposal.",
+    "reason": "HyperAI orchestrator skill is now a first-class skill; remaining items are creator-gated policy actions.",
     "tests": "10/10 unit tests pass",
-    "evidence": "runtime/federation_orchestrator/agent_task_outputs/mission-d785a4e3a4ab47d1/evidence/evidence_summary.json"
+    "evidence": "runtime/federation_orchestrator/agent_task_outputs/mission-d785a4e3a4ab47d1/evidence/evidence_summary.json",
+    "skill_source": "/Users/andy/.agents/skills/hyperai-runtime-orchestrator/SKILL.md",
+    "skill_symlink": "~/.config/devin/skills/hyperai-runtime-orchestrator"
   }
 }

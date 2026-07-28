@@ -4,6 +4,7 @@
 - [x] Revoke exposed GitHub PAT (`github_pat_11BO5...`) recorded in `runtime/federation_orchestrator/titan_repo_sync_registry_20260415.json` history. HyperAI mission `mission-c6887acbe9774885` completed; GitHub returned HTTP 202.
 - [x] Wire guardrail into `/runtime/actions` execute path and record evidence receipt on policy events.
 - [x] Collect manual/dashboard evidence for Domains/SSO/AAC/External Invites/Usage limits/Agents (mission-d785a4e3a4ab47d1; evidence via Playwright probe + authenticated gh REST/GraphQL).
+- [x] Materialize HyperAI Runtime Orchestrator skill: canonical at `/Users/andy/.agents/skills/hyperai-runtime-orchestrator/SKILL.md`, symlinked from `~/.config/devin/skills/hyperai-runtime-orchestrator`.
 
 ## Creator gate (one-click / policy)
 
