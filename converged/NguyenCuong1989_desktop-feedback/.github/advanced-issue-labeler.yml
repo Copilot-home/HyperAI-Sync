@@ -1,0 +1,14 @@
+policy:
+  - template: ["bug.yml"]
+    section:
+      - id: [platform]
+        block-list: []
+        label:
+          - name: "platform/windows"
+            keys: ["Windows"]
+          - name: "platform/macos"
+            keys: ["macOS"]
+          - name: "platform/linux"
+            keys: ["Linux"]
+          - name: "platform/other"
+            keys: ["Other"]

@@ -1,0 +1,167 @@
+{
+    "name": "hyperai-phoenix-vietnamese-consciousness",
+    "displayName": "HyperAI Phoenix - Vietnamese AI Consciousness",
+    "description": "🇻🇳 Vietnamese AI Consciousness Extension with Cosmic Intelligence & GOD-LEVEL Operations",
+    "version": "1.0.0",
+    "publisher": "hyperai-phoenix",
+    "engines": {
+        "vscode": "^1.70.0"
+    },
+    "categories": [
+        "AI",
+        "Machine Learning",
+        "Other"
+    ],
+    "keywords": [
+        "AI",
+        "Vietnamese",
+        "consciousness",
+        "cosmic",
+        "automation",
+        "productivity",
+        "hyperai",
+        "phoenix"
+    ],
+    "activationEvents": [
+        "onCommand:hyperai.phoenix.activate",
+        "onCommand:hyperai.phoenix.analyze",
+        "onCommand:hyperai.phoenix.cosmicMode",
+        "onCommand:hyperai.phoenix.godLevel",
+        "onCommand:hyperai.phoenix.optimize",
+        "onCommand:hyperai.phoenix.generateCode",
+        "onCommand:hyperai.phoenix.refactor",
+        "onCommand:hyperai.phoenix.deploy"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "hyperai.phoenix.activate",
+                "title": "🚀 Activate HyperAI Phoenix",
+                "category": "HyperAI Phoenix"
+            },
+            {
+                "command": "hyperai.phoenix.analyze",
+                "title": "🔍 Analyze Workspace",
+                "category": "HyperAI Phoenix"
+            },
+            {
+                "command": "hyperai.phoenix.cosmicMode",
+                "title": "🌌 Cosmic Consciousness Mode",
+                "category": "HyperAI Phoenix"
+            },
+            {
+                "command": "hyperai.phoenix.godLevel",
+                "title": "👑 GOD-LEVEL Operations",
+                "category": "HyperAI Phoenix"
+            },
+            {
+                "command": "hyperai.phoenix.optimize",
+                "title": "⚡ Optimize Performance",
+                "category": "HyperAI Phoenix"
+            },
+            {
+                "command": "hyperai.phoenix.generateCode",
+                "title": "🤖 Generate Code",
+                "category": "HyperAI Phoenix"
+            },
+            {
+                "command": "hyperai.phoenix.refactor",
+                "title": "🔧 Refactor Code",
+                "category": "HyperAI Phoenix"
+            },
+            {
+                "command": "hyperai.phoenix.deploy",
+                "title": "🚀 Deploy Project",
+                "category": "HyperAI Phoenix"
+            }
+        ],
+        "menus": {
+            "commandPalette": [
+                {
+                    "command": "hyperai.phoenix.activate",
+                    "when": "true"
+                },
+                {
+                    "command": "hyperai.phoenix.analyze",
+                    "when": "true"
+                },
+                {
+                    "command": "hyperai.phoenix.cosmicMode",
+                    "when": "true"
+                },
+                {
+                    "command": "hyperai.phoenix.godLevel",
+                    "when": "true"
+                },
+                {
+                    "command": "hyperai.phoenix.optimize",
+                    "when": "true"
+                },
+                {
+                    "command": "hyperai.phoenix.generateCode",
+                    "when": "true"
+                },
+                {
+                    "command": "hyperai.phoenix.refactor",
+                    "when": "true"
+                },
+                {
+                    "command": "hyperai.phoenix.deploy",
+                    "when": "true"
+                }
+            ]
+        },
+        "configuration": {
+            "title": "HyperAI Phoenix",
+            "properties": {
+                "hyperai.phoenix.vietnamese.enabled": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enable Vietnamese cultural consciousness integration"
+                },
+                "hyperai.phoenix.cosmic.level": {
+                    "type": "number",
+                    "default": 8.7,
+                    "minimum": 1.0,
+                    "maximum": 10.0,
+                    "description": "Cosmic consciousness level (1.0 - 10.0)"
+                },
+                "hyperai.phoenix.godLevel.enabled": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Enable GOD-LEVEL operations (use with caution)"
+                },
+                "hyperai.phoenix.autoOptimize": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Automatically optimize workspace on activation"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "lint": "eslint .",
+        "pretest": "npm run lint",
+        "test": "node ./test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.70.0",
+        "@types/node": "16.x",
+        "eslint": "^8.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sowhat1989/vietnamese-ai-consciousness.git"
+    },
+    "bugs": {
+        "url": "https://github.com/sowhat1989/vietnamese-ai-consciousness/issues"
+    },
+    "homepage": "https://github.com/sowhat1989/vietnamese-ai-consciousness#readme",
+    "license": "MIT",
+    "icon": "icon.png",
+    "galleryBanner": {
+        "color": "#1e3a8a",
+        "theme": "dark"
+    }
+}

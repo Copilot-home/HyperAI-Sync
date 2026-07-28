@@ -1,0 +1,267 @@
+{
+  "verified_on": "2026-05-25",
+  "source_root": "/Users/cuongnguyen/Workspace/Projects/finalAI/devzone/backend/ai_saas_system",
+  "python_file_count": 30,
+  "parse_status": "pass",
+  "import_index": [
+    {
+      "module": "core.finalAI.comms.telegram_bot",
+      "imports": [
+        "telebot",
+        "core.finalAI.runtime.config",
+        "core.finalAI.modules.tech.code_review_ai",
+        "core.finalAI.modules.tech.ai_debug",
+        "core.finalAI.modules.tech.code_execution_engine",
+        "core.finalAI.modules.tech.code_generator",
+        "core.finalAI.modules.tech.deployer",
+        "core.finalAI.runtime.deployment_tracker",
+        "core.finalAI.runtime.data_fetcher",
+        "core.finalAI.runtime.system_analyzer",
+        "core.finalAI.thinker.self_improver",
+        "core.finalAI.thinker.self_assessment_engine",
+        "core.finalAI.thinker.ai_assistance",
+        "utils.logging",
+        "os",
+        "json"
+      ]
+    },
+    {
+      "module": "core.finalAI.modules.business.expert_programming.ai_code_generator",
+      "imports": [
+        "os",
+        "openai"
+      ]
+    },
+    {
+      "module": "core.finalAI.modules.tech.ai_debug",
+      "imports": [
+        "core.finalAI.modules.tech.code_review_ai"
+      ]
+    },
+    {
+      "module": "core.finalAI.modules.tech.code_execution_engine",
+      "imports": [
+        "subprocess",
+        "os",
+        "sys",
+        "tempfile",
+        "utils.logging"
+      ]
+    },
+    {
+      "module": "core.finalAI.modules.tech.code_generator",
+      "imports": [
+        "core.finalAI.runtime.config",
+        "utils.logging",
+        "transformers",
+        "torch"
+      ]
+    },
+    {
+      "module": "core.finalAI.modules.tech.code_review_ai",
+      "imports": [
+        "core.finalAI.modules.tech.code_execution_engine",
+        "core.finalAI.modules.tech.code_generator",
+        "utils.logging",
+        "pylint.lint",
+        "io",
+        "sys",
+        "os",
+        "re"
+      ]
+    },
+    {
+      "module": "core.finalAI.modules.tech.deployer",
+      "imports": [
+        "os",
+        "core.finalAI.modules.tech.code_review_ai",
+        "utils.logging"
+      ]
+    },
+    {
+      "module": "core.finalAI.runtime.config",
+      "imports": [
+        "os"
+      ]
+    },
+    {
+      "module": "core.finalAI.runtime.data_fetcher",
+      "imports": [
+        "requests",
+        "bs4",
+        "os",
+        "time",
+        "utils.logging"
+      ]
+    },
+    {
+      "module": "core.finalAI.runtime.deployment_tracker",
+      "imports": [
+        "json",
+        "os",
+        "core.finalAI.runtime.redis_client",
+        "utils.logging"
+      ]
+    },
+    {
+      "module": "core.finalAI.runtime.main",
+      "imports": [
+        "threading",
+        "time",
+        "core.finalAI.runtime.config",
+        "core.finalAI.runtime.redis_client",
+        "core.finalAI.runtime.data_fetcher",
+        "core.finalAI.comms.telegram_bot",
+        "utils.logging"
+      ]
+    },
+    {
+      "module": "core.finalAI.runtime.redis_client",
+      "imports": [
+        "redis",
+        "core.finalAI.runtime.config",
+        "utils.logging",
+        "json"
+      ]
+    },
+    {
+      "module": "core.finalAI.runtime.system_analyzer",
+      "imports": [
+        "os",
+        "utils.logging"
+      ]
+    },
+    {
+      "module": "core.finalAI.services.api_gateway",
+      "imports": [
+        "os",
+        "requests",
+        "flask",
+        "waitress"
+      ]
+    },
+    {
+      "module": "core.finalAI.services.lakedata_api",
+      "imports": [
+        "os",
+        "psycopg2",
+        "flask",
+        "gunicorn.app.base"
+      ]
+    },
+    {
+      "module": "core.finalAI.thinker.ai_assistance",
+      "imports": [
+        "telebot",
+        "core.finalAI.runtime.config",
+        "utils.logging"
+      ]
+    },
+    {
+      "module": "core.finalAI.thinker.evaluator",
+      "imports": [
+        "time",
+        "core.finalAI.modules.tech.code_execution_engine",
+        "utils.logging"
+      ]
+    },
+    {
+      "module": "core.finalAI.thinker.self_assessment_engine",
+      "imports": [
+        "core.finalAI.thinker.evaluator",
+        "utils.logging",
+        "core.finalAI.runtime.deployment_tracker"
+      ]
+    },
+    {
+      "module": "core.finalAI.thinker.self_improver",
+      "imports": [
+        "core.finalAI.modules.tech.code_generator",
+        "core.finalAI.runtime.deployment_tracker",
+        "core.finalAI.runtime.data_fetcher",
+        "core.finalAI.runtime.redis_client",
+        "core.finalAI.thinker.evaluator",
+        "utils.logging"
+      ]
+    },
+    {
+      "module": "utils.logging",
+      "imports": [
+        "logging",
+        "os"
+      ]
+    }
+  ],
+  "modules_with_no_imports": [
+    "core.finalAI",
+    "core.finalAI.comms",
+    "core.finalAI.modules",
+    "core.finalAI.modules.business",
+    "core.finalAI.modules.business.expert_programming",
+    "core.finalAI.modules.tech",
+    "core.finalAI.runtime",
+    "core.finalAI.services",
+    "core.finalAI.thinker",
+    "utils"
+  ],
+  "external_dependencies_declared": [
+    "beautifulsoup4==4.12.3",
+    "flask==3.1.0",
+    "flask-cors==4.0.0",
+    "flask-sqlalchemy==3.0.0",
+    "gunicorn==23.0.0",
+    "numpy==2.0.2",
+    "openai==1.60.2",
+    "psycopg2-binary==2.9.9",
+    "pylint==3.0.3",
+    "pyTelegramBotAPI==4.16.1",
+    "python-dotenv==1.0.0",
+    "redis==5.0.1",
+    "requests==2.32.3",
+    "torch==2.2.0",
+    "transformers==4.37.2",
+    "waitress==2.1.2"
+  ],
+  "critical_internal_edges": [
+    {
+      "from": "core.finalAI.runtime.main",
+      "to": [
+        "core.finalAI.runtime.config",
+        "core.finalAI.runtime.redis_client",
+        "core.finalAI.runtime.data_fetcher",
+        "core.finalAI.comms.telegram_bot"
+      ]
+    },
+    {
+      "from": "core.finalAI.comms.telegram_bot",
+      "to": [
+        "core.finalAI.modules.tech.code_review_ai",
+        "core.finalAI.modules.tech.code_execution_engine",
+        "core.finalAI.modules.tech.deployer",
+        "core.finalAI.runtime.deployment_tracker",
+        "core.finalAI.thinker.self_improver"
+      ]
+    },
+    {
+      "from": "core.finalAI.services.api_gateway",
+      "to": [
+        "core.finalAI.services.lakedata_api via HTTP"
+      ]
+    },
+    {
+      "from": "core.finalAI.services.lakedata_api",
+      "to": [
+        "PostgreSQL table lakedata"
+      ]
+    }
+  ],
+  "verified_compatibility_issue": {
+    "packages": [
+      "numpy==2.0.2",
+      "torch==2.2.0"
+    ],
+    "evidence": "Importing torch emits NumPy ABI warning: module compiled using NumPy 1.x cannot run safely with NumPy 2.0.2; _ARRAY_API not found.",
+    "status": "requires approved remediation and retest"
+  },
+  "unresolved_provenance": "The active source tree has no Git baseline; source ownership and generated-code boundaries cannot be determined solely from files."
+}

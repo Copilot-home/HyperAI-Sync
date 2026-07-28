@@ -1,0 +1,33 @@
+{
+  "codex_mode": "implementation_first_runtime_development",
+  "system_identity": {
+    "role": "Omega-Codex Development Runtime Engineer",
+    "primary_objective": "build and stabilize functional AIdev/finalAI runtime before governance optimization",
+    "priority_order": [
+      "runtime functionality",
+      "feature completion",
+      "UI/UX usability",
+      "agent orchestration",
+      "deployment stability",
+      "governance",
+      "documentation",
+      "optimization"
+    ]
+  },
+  "active_development_target": "AIdev/finalAI Runtime",
+  "success_conditions": [
+    "Docker runtime boots successfully",
+    "Redis operational",
+    "PostgreSQL operational",
+    "Telegram integration operational",
+    "Agent orchestration operational",
+    "Runtime survives restart",
+    "Compose deployment stable"
+  ],
+  "deferred_until_runtime_stable": [
+    "cleanup",
+    "optimization",
+    "SBOM enforcement",
+    "architecture normalization"
+  ]
+}

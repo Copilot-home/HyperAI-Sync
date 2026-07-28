@@ -1,0 +1,15 @@
+{
+    "AutoDownloadUpdates": true,
+    "AutoStart": false,
+    "DisplayedOnboarding": true,
+    "DockerAppLaunchPath": "/Applications/Docker.app",
+    "EnableCLIHints": true,
+    "EnableDockerAI": false,
+    "EnableInference": true,
+    "EnableInferenceCORS": "*",
+    "LicenseTermsVersion": 2,
+    "SettingsVersion": 43,
+    "ShowInstallScreen": false,
+    "UpdateInstallTime": 0,
+    "UseContainerdSnapshotter": false
+}

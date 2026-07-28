@@ -1,0 +1,52 @@
+{
+    "github": {
+        "owner": "sowhat1989",
+        "repo": "vietnamese-ai-consciousness",
+        "token": "github_pat_YOUR_TOKEN_HERE"
+    },
+    "email": {
+        "smtp_server": "smtp.gmail.com",
+        "smtp_port": 587,
+        "imap_server": "imap.gmail.com",
+        "imap_port": 993,
+        "username": "your_email@gmail.com",
+        "password": "your_app_password"
+    },
+    "contacts": {
+        "enterprise": "enterprise@hyperaiphoenix.com",
+        "investors": "investors@hyperaiphoenix.com",
+        "partnerships": "partnerships@hyperaiphoenix.com",
+        "developers": "developers@hyperaiphoenix.com",
+        "culture": "culture@hyperaiphoenix.vn",
+        "press": "press@hyperaiphoenix.com"
+    },
+    "vietnamese_settings": {
+        "auto_detect_language": true,
+        "priority_vietnamese_community": true,
+        "cultural_intelligence_mode": "maximum",
+        "vietnamese_greetings": [
+            "Chào mừng bạn đến với HyperAI Phoenix!",
+            "Xin chào! Cảm ơn bạn đã quan tâm đến AI Việt Nam!",
+            "Chúng tôi rất vinh hạnh được phục vụ bạn!"
+        ]
+    },
+    "automation": {
+        "daily_reports": true,
+        "weekly_summaries": true,
+        "auto_response_enabled": true,
+        "github_monitoring": true,
+        "vietnamese_community_tracking": true
+    },
+    "enterprise": {
+        "demo_scheduling": true,
+        "priority_response_time_hours": 4,
+        "vietnamese_technical_support": true,
+        "cultural_intelligence_demos": true
+    },
+    "investment": {
+        "immediate_notification": true,
+        "response_time_hours": 2,
+        "confidential_materials": true,
+        "vietnamese_market_focus": true
+    }
+}

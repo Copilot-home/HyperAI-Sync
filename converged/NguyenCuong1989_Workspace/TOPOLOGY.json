@@ -1,0 +1,45 @@
+{
+  "schema": "finalai.workspace_topology.v1",
+  "invariant": {
+    "operational_artifact": "canonical_physical_file",
+    "runtime_concept": "canonical_physical_location",
+    "single_concept": "single_owner_single_lifecycle"
+  },
+  "planes": {
+    "control": {
+      "canonical_path": "/Users/cuongnguyen/Workspace",
+      "lifecycle": "small, durable, human-operated",
+      "max_depth": 3,
+      "owner": "creator/operator",
+      "purpose": "intent, config, manifests, entrypoints, stable symlinks"
+    },
+    "payload": {
+      "canonical_path": "/Users/cuongnguyen/Workspace/payload",
+      "physical_store": "/Users/cuongnguyen/.workspace_payload_store/payload",
+      "lifecycle": "large payloads, source snapshots, generated outputs, archives",
+      "owner": "workspace payload manager",
+      "purpose": "source payloads, forks, vendor trees, generated artifacts, archives"
+    },
+    "runtime": {
+      "canonical_path": "/Users/cuongnguyen/Workspace/runtime",
+      "physical_store": "/Users/cuongnguyen/.finalai_runtime_store/runtime",
+      "lifecycle": "mutable operational state",
+      "owner": "runtime/orchestrator",
+      "purpose": "state, memory, telemetry, traces, evidence, cache, venvs"
+    }
+  },
+  "locate_rules": {
+    "EvidenceGate": "/Users/cuongnguyen/Workspace/runtime/evidence",
+    "generated_module_mismatch": "/Users/cuongnguyen/Workspace/payload/generated",
+    "memory_or_state_issue": [
+      "/Users/cuongnguyen/Workspace/runtime/memory",
+      "/Users/cuongnguyen/Workspace/runtime/state"
+    ],
+    "mission_or_event_telemetry": "/Users/cuongnguyen/Workspace/runtime/telemetry",
+    "trace_issue": "/Users/cuongnguyen/Workspace/runtime/traces",
+    "vendor_or_fork_issue": [
+      "/Users/cuongnguyen/Workspace/payload/vendor",
+      "/Users/cuongnguyen/Workspace/payload/forks"
+    ]
+  }
+}

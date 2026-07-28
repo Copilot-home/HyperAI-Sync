@@ -1,0 +1,48 @@
+workspace: /Users/cuongnguyen/Workspace
+standard: cuong-local-ai-workspace-v1
+host:
+  os: macOS
+  arch: arm64
+  home: /Users/cuongnguyen
+zones:
+  projects: /Users/cuongnguyen/Workspace/Projects
+  system: /Users/cuongnguyen/Workspace/System
+  archive: /Users/cuongnguyen/Workspace/Archive
+projects:
+  finalAI:
+    root: /Users/cuongnguyen/Workspace/Projects/finalAI
+    dev_backend: /Users/cuongnguyen/Workspace/Projects/finalAI/devzone/backend
+    production: /Users/cuongnguyen/Workspace/Projects/finalAI/production
+    production_backend: /Users/cuongnguyen/Workspace/Projects/finalAI/production/backend
+    runtime: unified-python-ai-backend
+    primary_port: 5050
+    secondary_port: 5051
+    data_services:
+      - redis:6379
+      - postgres:5432
+    merged_from:
+      - AIDEV
+system:
+  docker:
+    map: /Users/cuongnguyen/Workspace/System/Docker
+    live_config: /Users/cuongnguyen/.docker
+    desktop_group_container: /Users/cuongnguyen/Library/Group Containers/group.com.docker
+  codex:
+    map: /Users/cuongnguyen/Workspace/System/Codex
+    live_config: /Users/cuongnguyen/.codex
+    runtime_cache: /Users/cuongnguyen/.cache/codex-runtimes
+  vscode:
+    map: /Users/cuongnguyen/Workspace/System/VSCode
+    live_user_config: /Users/cuongnguyen/Library/Application Support/Code/User
+    live_extensions: /Users/cuongnguyen/.vscode/extensions
+  runtime:
+    map: /Users/cuongnguyen/Workspace/System/Runtime
+    cargo: /Users/cuongnguyen/.cargo
+    huggingface: /Users/cuongnguyen/.cache/huggingface
+rules:
+  - Active backend code lives in devzone/backend.
+  - Production references backend through production/backend symlink.
+  - finalAI is the single active project; former AIDEV code lives inside finalAI modules and services.
+  - Live app configs stay in their macOS expected paths and are mapped under Workspace/System.
+  - No empty planning directories are kept.
+  - Generated runtime folders such as venv, __pycache__, logs, and .DS_Store do not belong in project source.

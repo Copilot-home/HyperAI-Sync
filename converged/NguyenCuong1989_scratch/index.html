@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Optimization -->
+  <title>Andy's AI-Powered Workspace Cockpit</title>
+  <meta name="description" content="Andy's modern, local development cockpit featuring environment diagnostics, standard command clipboard templates, and lazy-loading MCP status toggles.">
+  
+  <!-- Preloads & Styles -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='purple'/><text y='70' x='18' fill='white' font-size='60' font-weight='bold'>🚀</text></svg>">
+  <link rel="stylesheet" href="/styles/global.css">
+</head>
+<body>
+
+  <!-- Dynamic Backdrop Glow Orbs -->
+  <div class="glow-orb-1" aria-hidden="true"></div>
+  <div class="glow-orb-2" aria-hidden="true"></div>
+
+  <div class="app-container">
+    
+    <!-- Top Cockpit Header -->
+    <header>
+      <div class="brand">
+        <div class="brand-icon">A</div>
+        <div class="brand-text">
+          <h1>AI-Augmented Cockpit</h1>
+          <p style="font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;">Workspace: /scratch</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="theme-toggle" class="btn-toggle" aria-label="Toggle visual theme" title="Toggle Light/Dark Theme">☀️</button>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-primary" id="btn-github-link">
+          <span>GitHub</span> ↗
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <div class="grid-layout">
+      
+      <!-- Left Column: Primary Diagnostics & Commands -->
+      <section class="main-column" style="display: flex; flex-direction: column; gap: 2rem;">
+        
+        <!-- System Diagnostics glass panel -->
+        <article class="glass-panel" id="panel-diagnostics">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+            <div>
+              <h2 style="font-size: 1.5rem; margin-bottom: 0.25rem;">💻 System Diagnostics</h2>
+              <p>Real-time environment versions active on your machine</p>
+            </div>
+            <span style="font-size: 1.5rem;">⚙️</span>
+          </div>
+          <div class="spec-list" id="spec-list">
+            <!-- Dynamic Spec Cards rendered by main.js -->
+          </div>
+        </article>
+
+        <!-- Command Toolbox glass panel -->
+        <article class="glass-panel" id="panel-commands">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.25rem;">
+            <div>
+              <h2 style="font-size: 1.5rem; margin-bottom: 0.25rem;">📋 Developer command Toolbox</h2>
+              <p>One-click clipboard copy templates for git, python uv, cloudflare, and agents</p>
+            </div>
+            <span style="font-size: 1.5rem;">⚡</span>
+          </div>
+          
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="command-search" class="search-input" placeholder="Filter commands by tag, syntax, or description..." aria-label="Search developer commands">
+          </div>
+
+          <div class="command-list" id="command-list">
+            <!-- Dynamic Command Cards rendered by main.js -->
+          </div>
+        </article>
+
+        <!-- Git Commit & Merge Hub -->
+        <article class="glass-panel" id="panel-git-hub">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.25rem;">
+            <div>
+              <h2 style="font-size: 1.5rem; margin-bottom: 0.25rem;">🌿 Git Commit & Merge Hub</h2>
+              <p>Visually build and execute Git commands for commits, branches, and merges</p>
+            </div>
+            <span style="font-size: 1.5rem;">🌿</span>
+          </div>
+
+          <!-- Mode Selector Tabs -->
+          <div class="git-tabs" style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem; background: rgba(0, 0, 0, 0.2); padding: 0.25rem; border-radius: 10px; border: 1px solid var(--border);">
+            <button class="git-tab active" data-mode="commit" style="flex: 1; padding: 0.5rem; border-radius: 8px; border: none; background: none; color: var(--text-muted); font-weight: 600; cursor: pointer; transition: var(--transition-snap);">Commit Changes</button>
+            <button class="git-tab" data-mode="merge" style="flex: 1; padding: 0.5rem; border-radius: 8px; border: none; background: none; color: var(--text-muted); font-weight: 600; cursor: pointer; transition: var(--transition-snap);">Merge Branches</button>
+            <button class="git-tab" data-mode="branch" style="flex: 1; padding: 0.5rem; border-radius: 8px; border: none; background: none; color: var(--text-muted); font-weight: 600; cursor: pointer; transition: var(--transition-snap);">Branch Manager</button>
+          </div>
+
+          <!-- Dynamic Panel Content -->
+          <div class="git-panel-content">
+            
+            <!-- Commit Pane -->
+            <div id="pane-commit" class="git-pane">
+              <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <div class="form-group" style="display: flex; flex-direction: column; gap: 0.35rem;">
+                  <label for="commit-msg" style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted);">Commit Message</label>
+                  <input type="text" id="commit-msg" class="search-input" style="padding-left: 1rem;" placeholder="e.g. feat: integrate visual git manager">
+                </div>
+                <div style="display: flex; gap: 1rem; align-items: center; font-size: 0.85rem;">
+                  <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                    <input type="checkbox" id="commit-add-all" checked style="accent-color: var(--primary);"> Stage all modified files (`git add .`)
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Merge Pane (hidden by default) -->
+            <div id="pane-merge" class="git-pane" style="display: none;">
+              <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                  <div class="form-group" style="display: flex; flex-direction: column; gap: 0.35rem;">
+                    <label for="merge-target" style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted);">Target Branch (Merge into)</label>
+                    <input type="text" id="merge-target" class="search-input" style="padding-left: 1rem;" value="main">
+                  </div>
+                  <div class="form-group" style="display: flex; flex-direction: column; gap: 0.35rem;">
+                    <label for="merge-source" style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted);">Source Branch (To merge)</label>
+                    <input type="text" id="merge-source" class="search-input" style="padding-left: 1rem;" placeholder="e.g. feature/amazing-ui">
+                  </div>
+                </div>
+                <div style="display: flex; gap: 1rem; align-items: center; font-size: 0.85rem; flex-wrap: wrap;">
+                  <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                    <input type="checkbox" id="merge-no-ff" style="accent-color: var(--primary);"> Disable fast-forward (`--no-ff`)
+                  </label>
+                  <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                    <input type="checkbox" id="merge-squash" style="accent-color: var(--primary);"> Squash commits (`--squash`)
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Branch Pane (hidden by default) -->
+            <div id="pane-branch" class="git-pane" style="display: none;">
+              <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <div class="form-group" style="display: flex; flex-direction: column; gap: 0.35rem;">
+                  <label for="branch-name" style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted);">New Branch Name</label>
+                  <input type="text" id="branch-name" class="search-input" style="padding-left: 1rem;" placeholder="e.g. feature/visual-git-hub">
+                </div>
+                <div style="display: flex; gap: 1rem; align-items: center; font-size: 0.85rem;">
+                  <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                    <input type="checkbox" id="branch-checkout" checked style="accent-color: var(--primary);"> Automatically switch to new branch (`-b`)
+                  </label>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Command Generator output block -->
+          <div style="margin-top: 1.5rem; background: rgba(0, 0, 0, 0.3); border: 1px solid var(--border); border-radius: 12px; padding: 1rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem;">
+            <div style="display: flex; flex-direction: column; gap: 0.25rem; flex: 1; min-width: 0;">
+              <span style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: var(--primary); letter-spacing: 0.05em;">Generated CLI Command</span>
+              <span id="git-compiled-command" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--secondary); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">git add . && git commit -m "update"</span>
+            </div>
+            <button class="btn-primary" id="btn-copy-git" style="padding: 0.5rem 1rem; font-size: 0.85rem;">📋 Copy</button>
+          </div>
+        </article>
+
+        <!-- Folder Nav Cards -->
+        <article class="glass-panel" id="panel-folders">
+          <h2 style="font-size: 1.5rem; margin-bottom: 0.25rem;">📂 Workspace Directory Layout</h2>
+          <p>Quick structures created inside your active `/scratch` directory</p>
+          
+          <div class="dir-grid">
+            <div class="dir-card">
+              <span style="font-size: 1.5rem; margin-bottom: 0.5rem;">📂</span>
+              <span class="dir-title">projects/</span>
+              <p class="dir-desc">For web apps, production backends, and fullstack services.</p>
+            </div>
+            <div class="dir-card">
+              <span style="font-size: 1.5rem; margin-bottom: 0.5rem;">⚙️</span>
+              <span class="dir-title">scripts/</span>
+              <p class="dir-desc">For automation helpers, system diagnostics, and shell routines.</p>
+            </div>
+            <div class="dir-card">
+              <span style="font-size: 1.5rem; margin-bottom: 0.5rem;">🧪</span>
+              <span class="dir-title">experiments/</span>
+              <p class="dir-desc">For fast agent tests, sandbox setups, and AI prototyping.</p>
+            </div>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- Right Column: Sidebar Clock, MCP Connectors & Tips -->
+      <section class="sidebar-column" style="display: flex; flex-direction: column; gap: 2rem;">
+        
+        <div class="widget-flex">
+          
+          <!-- Live Time Widget -->
+          <article class="glass-panel clock-widget" id="widget-clock">
+            <div class="time-display" id="time-display">00:00:00</div>
+            <div class="date-display" id="date-display">Tuesday, Jun 2, 2026</div>
+          </article>
+
+          <!-- MCP Manager -->
+          <article class="glass-panel" id="panel-mcp">
+            <div class="mcp-header">
+              <h2 style="font-size: 1.25rem; font-weight: 700;">📡 Lazy-load MCPs</h2>
+              <span class="badge-count" id="mcp-count">0</span>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem;">Toggle and test connections to remote databases & big data catalogs</p>
+            <div class="mcp-list" id="mcp-list">
+              <!-- Dynamic MCP list items rendered by main.js -->
+            </div>
+          </article>
+
+          <!-- Agent instructions tips -->
+          <article class="glass-panel" id="panel-quick-tips" style="border-left: 4px solid var(--primary);">
+            <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--primary);">💡 Pro Tip: Slash Commands</h3>
+            <p style="font-size: 0.85rem; line-height: 1.5;">You can easily automate long workflows or set recurring tasks using our custom chat shortcuts:</p>
+            <ul style="font-size: 0.85rem; margin-top: 0.5rem; padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.35rem; color: var(--text-muted);">
+              <li><strong>/goal</strong> — For thorough background runs.</li>
+              <li><strong>/schedule</strong> — For recurring build timers.</li>
+              <li><strong>/browser</strong> — Launching visual audits.</li>
+              <li><strong>/grill-me</strong> — Align on design strategies.</li>
+            </ul>
+          </article>
+
+        </div>
+
+      </section>
+
+      <!-- AI Chat Panel (Full Width Below) -->
+      <section class="ai-chat-section" id="panel-ai-chat">
+        <article class="glass-panel">
+          <!-- Header -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+            <div>
+              <h2 style="font-size: 1.5rem; margin-bottom: 0.25rem;">🤖 AI Assistant</h2>
+              <p>Chat với Gemini (cloud) hoặc Ollama (local) trực tiếp trong Cockpit</p>
+            </div>
+            <!-- Model Selector -->
+            <div class="ai-model-switcher">
+              <button class="ai-model-btn active" id="btn-model-gemini" data-provider="gemini">
+                <span class="model-dot gemini"></span> Gemini
+              </button>
+              <button class="ai-model-btn" id="btn-model-ollama" data-provider="ollama">
+                <span class="model-dot ollama"></span> Ollama
+              </button>
+            </div>
+          </div>
+
+          <!-- Provider Config Bar -->
+          <div id="ai-config-bar" class="ai-config-bar">
+            <!-- Gemini Config -->
+            <div id="config-gemini" class="provider-config">
+              <select id="gemini-model-select" class="search-input" style="padding: 0.6rem 1rem; width: auto; flex: 1;">
+                <option value="gemini-2.5-flash">✨ Gemini 2.5 Flash (Fast)</option>
+                <option value="gemini-2.5-pro">🧠 Gemini 2.5 Pro (Smart)</option>
+                <option value="gemini-2.0-flash">⚡ Gemini 2.0 Flash</option>
+              </select>
+              <input type="password" id="gemini-api-key" class="search-input" style="padding: 0.6rem 1rem; flex: 2;" placeholder="Gemini API Key (saved in browser)">
+              <button class="btn-primary" id="btn-save-gemini-key" style="padding: 0.6rem 1rem; font-size: 0.85rem; white-space: nowrap;">💾 Save Key</button>
+            </div>
+            <!-- Ollama Config -->
+            <div id="config-ollama" class="provider-config" style="display: none;">
+              <select id="ollama-model-select" class="search-input" style="padding: 0.6rem 1rem; width: auto; flex: 1;">
+                <option value="qwen3:8b">🧠 qwen3:8b</option>
+                <option value="llama3.2:3b">🦙 llama3.2:3b</option>
+                <option value="qwen2.5-coder:1.5b">💻 qwen2.5-coder</option>
+                <option value="tinyllama">🔬 tinyllama</option>
+              </select>
+              <div id="ollama-status" class="ollama-status-badge">⏳ Checking...</div>
+            </div>
+          </div>
+
+          <!-- Chat Messages -->
+          <div class="ai-chat-messages" id="ai-chat-messages">
+            <div class="ai-msg assistant">
+              <div class="ai-msg-avatar">🤖</div>
+              <div class="ai-msg-bubble">
+                Xin chào! Bé sẵn sàng hỗ trợ. Chọn <strong>Gemini</strong> (cần API key) hoặc <strong>Ollama</strong> (local, offline hoàn toàn) rồi bắt đầu chat nhé!
+              </div>
+            </div>
+          </div>
+
+          <!-- Input Area -->
+          <div class="ai-chat-input-area">
+            <textarea
+              id="ai-chat-input"
+              class="ai-chat-textarea"
+              placeholder="Hỏi bất cứ điều gì... (Enter để gửi, Shift+Enter xuống dòng)"
+              rows="1"
+            ></textarea>
+            <button class="btn-primary" id="btn-ai-send" style="padding: 0.75rem 1.25rem; align-self: flex-end;">
+              <span id="send-icon">📤</span>
+            </button>
+          </div>
+        </article>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Toast Notification Wrapper -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- Client Script Bundling -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

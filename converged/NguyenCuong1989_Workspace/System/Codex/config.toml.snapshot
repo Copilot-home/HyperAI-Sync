@@ -1,0 +1,27 @@
+model = "gpt-5.5"
+model_reasoning_effort = "medium"
+
+[marketplaces.openai-bundled]
+last_updated = "2026-05-24T15:38:38Z"
+source_type = "local"
+source = "/Users/cuongnguyen/.codex/.tmp/bundled-marketplaces/openai-bundled"
+
+[marketplaces.openai-primary-runtime]
+last_updated = "2026-05-24T15:29:43Z"
+source_type = "local"
+source = "/Users/cuongnguyen/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
+
+[desktop]
+conversationDetailMode = "STEPS_COMMANDS"
+
+[projects."/Users/cuongnguyen/Documents/Codex/2026-05-24/files-mentioned-by-the-user-screenshot"]
+trust_level = "trusted"
+
+[plugins."documents@openai-primary-runtime"]
+enabled = true
+
+[plugins."spreadsheets@openai-primary-runtime"]
+enabled = true
+
+[plugins."presentations@openai-primary-runtime"]
+enabled = true

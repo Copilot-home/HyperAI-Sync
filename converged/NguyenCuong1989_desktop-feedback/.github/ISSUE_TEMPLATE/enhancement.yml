@@ -1,0 +1,40 @@
+name: 🐳 Enhancement suggestion
+description: Suggest an enhancement
+type: "enhancement"
+labels:
+  - "kind/enhancement"
+  - "needs-triage"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        🐳 **Thanks for suggesting an enhancement to Docker Desktop!**
+
+        What’s missing or could be improved? Tell us what would make your experience better.
+
+        To make your idea easier to evaluate, consider including:
+        - **What problem does this solve?**
+          Help us understand the pain point you're addressing.
+        - **Sample CLI or UX**
+          Share how you'd imagine using this feature.
+        - **Screenshots or Diagrams** 
+          Visuals help us *sea* the full picture
+  - type: textarea
+    attributes:
+      label: Enhancement description
+      description: |
+        Please provide a description of the enhancement.
+      placeholder: |
+        ## Enhancement description
+        What would you like to see improved or added?
+
+        ## Sample UX
+        How would you imagine using this feature?
+        ```bash
+        docker newfeature --flag value 
+        ```
+
+        ## Diagram
+        If it helps, include a diagram or visual mock-up.
+    validations:
+      required: true
