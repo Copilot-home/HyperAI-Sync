@@ -14,6 +14,8 @@ import os
 import re
 import subprocess
 import sys
+import urllib.error
+import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -71,6 +73,69 @@ def get_notion_page_map(notion_status_file: Path | None) -> dict[str, dict[str, 
         page_id = get_notion_id_from_url(url)
         if page_id:
             page_map[page_id] = row
+    return page_map
+
+
+def _notion_page_url(page_id: str) -> str:
+    """Build a canonical Notion page URL from a (possibly dashed) page id."""
+    return f"https://app.notion.com/{strip_uuid_dashes(page_id)}"
+
+
+def query_notion_database(db_id: str) -> dict[str, dict[str, Any]] | None:
+    """Query a Notion database directly using NOTION_API_KEY from environment.
+
+    Never log the token. Returns a map of page id (undashed) -> {Task Name, Status}.
+    """
+    token = os.environ.get("NOTION_API_KEY")
+    if not token:
+        print("NOTION_API_KEY not set; cannot query Notion directly.", file=sys.stderr)
+        return None
+    url = f"https://api.notion.com/v1/databases/{db_id}/query"
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Notion-Version": "2022-06-28",
+        "Content-Type": "application/json",
+    }
+    rows: list[dict[str, Any]] = []
+    next_cursor: str | None = None
+    while True:
+        payload = json.dumps({"start_cursor": next_cursor} if next_cursor else {})
+        req = urllib.request.Request(
+            url, data=payload.encode("utf-8"), headers=headers, method="POST"
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+        except urllib.error.HTTPError as e:
+            print(f"Notion query failed: {e.code} {e.reason}", file=sys.stderr)
+            return None
+        except Exception as e:
+            print(f"Notion query error: {e}", file=sys.stderr)
+            return None
+        for page in data.get("results", []):
+            props = page.get("properties", {})
+            status = ""
+            if "Status" in props:
+                status = props["Status"].get("status", {}).get("name", "")
+            task_name = ""
+            if "Task Name" in props:
+                title = props["Task Name"].get("title", [])
+                task_name = "".join(t.get("plain_text", "") for t in title)
+            rows.append(
+                {
+                    "url": _notion_page_url(page.get("id", "")),
+                    "Task Name": task_name,
+                    "Status": status,
+                }
+            )
+        next_cursor = data.get("next_cursor")
+        if not next_cursor:
+            break
+    page_map: dict[str, dict[str, Any]] = {}
+    for row in rows:
+        pid = get_notion_id_from_url(row["url"])
+        if pid:
+            page_map[pid] = row
     return page_map
 
 
@@ -137,6 +202,7 @@ def main() -> int:
     parser.add_argument("--owners", nargs="+", default=DEFAULT_OWNERS)
     parser.add_argument("--stale-days", type=int, default=90)
     parser.add_argument("--notion-status-file", type=Path, default=None)
+    parser.add_argument("--notion-db-id", default=None, help="Notion database id to query directly via NOTION_API_KEY")
     parser.add_argument("--execute", action="store_true", help="perform low-risk actions")
     parser.add_argument("--mission-id", default=f"mission-repo-governance-{now_iso()[:10].replace('-', '')}")
     args = parser.parse_args()
@@ -145,6 +211,10 @@ def main() -> int:
     mission_dir.mkdir(parents=True, exist_ok=True)
 
     page_map = get_notion_page_map(args.notion_status_file)
+    if not page_map and args.notion_db_id:
+        page_map = query_notion_database(args.notion_db_id)
+        if page_map:
+            print(f"Queried Notion DB {args.notion_db_id}: {len(page_map)} pages")
 
     all_issues: list[dict[str, Any]] = []
     for owner in args.owners:
@@ -164,6 +234,7 @@ def main() -> int:
         "owners": args.owners,
         "stale_days": args.stale_days,
         "notion_status_file": str(args.notion_status_file) if args.notion_status_file else None,
+        "notion_db_id": args.notion_db_id,
         "total_open_issues": len(all_issues),
         "by_category": {},
         "actions": [],
