@@ -1,0 +1,14 @@
+{
+  "servers": {
+    "appdna-extension": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "/Users/andy/.vscode/extensions/derivative-programming.appdna-1.0.25/dist/mcp/server.js"
+      ],
+      "env": {
+        "NODE_PATH": "/Users/andy/.vscode/extensions/derivative-programming.appdna-1.0.25/node_modules"
+      }
+    }
+  }
+}
