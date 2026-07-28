@@ -1,0 +1,101 @@
+{
+  "mission_id": "mission-pr-cleanup-phase2-20260728",
+  "timestamp": "2026-07-28T11:03:00Z",
+  "objective": "Process the 11 remaining PRs after the failure mission and update the triage method",
+  "before": {
+    "open_prs": 11,
+    "by_category": {
+      "wip-draft": 7,
+      "conflict": 2,
+      "review-required": 2
+    }
+  },
+  "after": {
+    "open_prs": 2,
+    "by_category": {
+      "wip-draft": 1,
+      "review-required": 1
+    }
+  },
+  "actions": [
+    {
+      "repo": "NguyenCuong1989/Workspace",
+      "number": 2,
+      "title": "[WIP] OUT=\"$HOME/Desktop/a...",
+      "action": "closed",
+      "note": "Empty WIP/test PR with no changed files."
+    },
+    {
+      "repo": "NguyenCuong1989/Workspace",
+      "number": 1,
+      "title": "[WIP] ~/Workspace [⎇ main*...",
+      "action": "closed",
+      "note": "Empty WIP/test PR with no changed files."
+    },
+    {
+      "repo": "NguyenCuong1989/hyperai1989",
+      "number": 162,
+      "title": "[WIP] Add request for additional information on issue",
+      "action": "closed",
+      "note": "Empty WIP PR with no changed files."
+    },
+    {
+      "repo": "NguyenCuong1989/DAIOF-Framewor",
+      "number": 5,
+      "title": "fix(agent): preserve dependency-aware deploy capabilities",
+      "action": "merged",
+      "note": "Small TS fix; merged despite unrelated repo-wide CI failures."
+    },
+    {
+      "repo": "NguyenCuong1989/DAIOF-Framewor",
+      "number": 8,
+      "title": "fix(ci): grant metrics dashboard workflow write access",
+      "action": "merged",
+      "note": "Small workflow permission fix; merged despite unrelated repo-wide failures."
+    },
+    {
+      "repo": "NguyenCuong1989/DAIOF-Framewor",
+      "number": 1,
+      "title": "feat(chat): integrate GPT Execution Canvas into native Chat view",
+      "action": "closed",
+      "note": "Large WIP feature with broad, pre-existing CI failures (latex package, flake8 over vscode-merged/.consciousness/examples, DigitalOrganism API drift)."
+    },
+    {
+      "repo": "NguyenCuong1989/vscode-python-environments",
+      "number": 1,
+      "title": "Feature/add copilot instructions",
+      "action": "blocked",
+      "note": "Repository is archived; cannot close/merge. Passing CI except a missing required label."
+    },
+    {
+      "repo": "Copilot-home/workbench",
+      "number": 4,
+      "title": "fix(ci): harden self-contained checkout and restore Python matrix",
+      "action": "closed",
+      "note": "Draft PR with extensive workflow merge conflicts against main."
+    },
+    {
+      "repo": "Copilot-home/balancehub-minimal",
+      "number": 4,
+      "title": "Map Docker runtime into APO canon",
+      "action": "merged",
+      "note": "Resolved small conflict in app/services/map_repos_service.py and merged."
+    },
+    {
+      "repo": "Copilot-home/balancehub-minimal",
+      "number": 5,
+      "title": "ci: make ci.yml self-contained (no external actions, allow-list independent)",
+      "action": "merged",
+      "note": "Resolved Devin review conversation and merged."
+    },
+    {
+      "repo": "Copilot-home/balancehub-minimal",
+      "number": 3,
+      "title": "fix: add missing ops/lint_apo_check.py to unblock APΩ ontology lint CI step",
+      "action": "blocked",
+      "note": "Resolved ci.yml conflict, all checks pass, but merge blocked by GitHub coding-agent collaborator review policy (requires non-collaborating reviewer or branch protection change)."
+    }
+  ],
+  "method_update": "memory/pr_triage_method_update_20260728.md",
+  "final_triage_loop": "mission-pr-triage-loop-20260728v4"
+}

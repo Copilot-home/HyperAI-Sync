@@ -14,6 +14,17 @@ It is designed to run unattended for low-risk PR hygiene:
 * Close stale non-draft PRs that are blocked or have conflicts and no recent activity.
 * Merge PRs that are clean, mergeable, checks SUCCESS, and not review-blocked.
 
+Lessons from 2026-07-28 cleanup are recorded in
+`memory/pr_triage_method_update_20260728.md` and include:
+
+* archived-repo detection,
+* branch protection / coding-agent collaborator review policy blocks,
+* required-label workflows,
+* conversation resolution before merge,
+* re-approve after branch updates,
+* self-contained checkout patterns,
+* small-vs-large conflict heuristics.
+
 All actions are recorded as evidence artifacts. By default the tool runs in
 dry-run mode; pass --execute to mutate GitHub state.
 """
