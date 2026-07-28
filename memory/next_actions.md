@@ -12,21 +12,23 @@
 - [x] **Cleanup phase 2:** processed the remaining 11 PRs (5 closed, 6 merged, 1 small conflict resolved). Open PRs now 0: `vscode-python-environments#1` (unarchive/close/re-archive) and `balancehub-minimal#3` (linearize/merge/restore branch protection). Method and skill updated. Evidence at `runtime/federation_orchestrator/agent_task_outputs/mission-pr-cleanup-phase2-20260728` and `mission-pr-triage-loop-20260728v5`.
 - [x] **Skill upgrade:** created `hyperai-pr-triage` skill in `.devin/skills/hyperai-pr-triage/SKILL.md`, upgraded `tools/hyperai_pr_triage_agent.py` with archive/label/conflict heuristics, and added AGENTS.md/Canon approval-gate guardrails.
 - [x] **Follow-up PR #6:** addressed Codex P1/P2 feedback on `Copilot-home/balancehub-minimal/ops/secret_hygiene.py` (unquoted API-key detection, Markdown scan, self-scan, placeholder suppression). Merged. Triage loop v6 confirms 0 open PRs.
+- [x] **Full repo governance:** created `hyperai-repo-governance` skill and `tools/hyperai_repo_governance_agent.py`. Scanned 89 repos, reconciled 103 open issues with Notion DB_TASKS, closed 17 low-risk issues (11 notion-missing, 5 junk, 1 stale). Open issues now 86. Open PRs 0.
 
-## Reusable PR triage agent & loop
+## Reusable agents
 
 ```bash
-# Dry-run scan across default owners
+# PR triage
 cd /Users/andy/HyperAI-Sync
-python3 tools/hyperai_pr_triage_agent.py --stale-days 90 --mission-id <mission-id>
-
-# Execute low-risk actions
-cd /Users/andy/HyperAI-Sync
-python3 tools/hyperai_pr_triage_agent.py --stale-days 90 --execute --mission-id <mission-id>
-
-# Autonomous loop (runs until no low-risk actions)
-cd /Users/andy/HyperAI-Sync
+python3 tools/hyperai_pr_triage_agent.py --stale-days 90 --execute --mission-id <id>
 python3 tools/hyperai_pr_triage_loop.py --stale-days 90 --max-iter 5 --sleep 15
+
+# Full repo governance (Notion status file required for Notion-sync reconciliation)
+cd /Users/andy/HyperAI-Sync
+python3 tools/hyperai_repo_governance_agent.py \
+  --owners NguyenCuong1989 Copilot-home \
+  --notion-status-file <notion-status-json> \
+  --stale-days 90 \
+  --mission-id <id>
 ```
 
 ## Creator gate (one-click / policy)
@@ -36,14 +38,15 @@ python3 tools/hyperai_pr_triage_loop.py --stale-days 90 --max-iter 5 --sleep 15
 - [ ] Verify domains `creators.contact` and `example.com` if they should be marked verified.
 - [ ] Assess SAML/AAC setup if enterprise requirements change.
 
-## Ecosystem cleanup
+## Remaining ecosystem work
 
 - [x] Open PRs: 0 across NguyenCuong1989 and Copilot-home.
-- [ ] Triage 85 Notion-sync issues in `NguyenCuong1989/trust_of_copilot-c8aae4ab` against Notion source.
-- [ ] Decide disposition of 6 old DAIOF principle issues in `Copilot-home/DAIOF-Framework` (#27-37, #78).
+- [ ] Notion-sync issues: 70 `notion_open` + 4 `notion_in_progress` remain under active tracking in DB_TASKS.
+- [ ] `Copilot-home/DAIOF-Framework#78` remains in `manual_review` (has body, doc-template).
+- [ ] Generate replacement PAT and rotate `GITHUB_TOKEN` env (currently a stale placeholder).
 
 ## Method & skill documentation
 
 - `memory/pr_triage_method_update_20260728.md` — 10 lessons from the cleanup.
-- `.devin/skills/hyperai-pr-triage/SKILL.md` — autonomous skill for PR triage with Canon approval gates.
-- `tools/hyperai_pr_triage_agent.py` — agent with archive/label/conflict heuristics.
+- `.devin/skills/hyperai-pr-triage/SKILL.md` — PR triage with Canon approval gates.
+- `.devin/skills/hyperai-repo-governance/SKILL.md` — full repo governance (issues + PRs + Notion reconciliation).

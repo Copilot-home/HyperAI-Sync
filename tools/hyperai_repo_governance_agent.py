@@ -1,0 +1,218 @@
+#!/usr/bin/env python3
+"""HyperAI repository governance agent.
+
+Scans all repositories under configured owners, triages open issues and PRs,
+optionally performs low-risk cleanup, and reconciles Notion-sync issues with
+Notion source status.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import re
+import subprocess
+import sys
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any
+
+
+ROOT = Path(__file__).resolve().parents[1]
+RUNTIME = ROOT / "runtime" / "federation_orchestrator"
+EVIDENCE_DIR = RUNTIME / "agent_task_outputs"
+
+DEFAULT_OWNERS = ["NguyenCuong1989", "Copilot-home"]
+
+
+def now_iso() -> str:
+    return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+
+
+def run_gh(args: list[str]) -> dict | list:
+    cmd = ["gh"] + args
+    env = os.environ.copy()
+    for key in ("GITHUB_TOKEN", "GH_TOKEN"):
+        env.pop(key, None)
+    result = subprocess.run(cmd, capture_output=True, text=True, env=env)
+    if result.returncode != 0:
+        print(f"gh failed: {result.stderr}", file=sys.stderr)
+        return []
+    return json.loads(result.stdout) if result.stdout.strip() else []
+
+
+def strip_uuid_dashes(page_id: str) -> str:
+    return page_id.replace("-", "")
+
+
+def get_notion_id_from_url(url: str) -> str:
+    """Extract the undashed page id from a Notion URL like https://app.notion.com/<id>."""
+    m = re.search(r"/([0-9a-f]{32})$", url)
+    return m.group(1) if m else ""
+
+
+def get_notion_page_map(notion_status_file: Path | None) -> dict[str, dict[str, Any]] | None:
+    """Load a map of Notion page id (undashed) -> {Task Name, Status}."""
+    if not notion_status_file:
+        return None
+    text = notion_status_file.read_text(encoding="utf-8")
+    # The file may be raw JSON from the MCP query, possibly with a leading object wrapper.
+    data = json.loads(text)
+    if isinstance(data, dict) and "results" in data:
+        rows = data["results"]
+    elif isinstance(data, list):
+        rows = data
+    else:
+        rows = data.get("results", [])
+    page_map: dict[str, dict[str, Any]] = {}
+    for row in rows:
+        url = row.get("url", "")
+        page_id = get_notion_id_from_url(url)
+        if page_id:
+            page_map[page_id] = row
+    return page_map
+
+
+def extract_notion_page_id(body: str) -> str | None:
+    m = re.search(r"Notion Page ID:\s*([0-9a-fA-F\-]{32,36})", body)
+    return m.group(1) if m else None
+
+
+def classify_issue(issue: dict[str, Any], page_map: dict[str, dict[str, Any]] | None, stale_days: int) -> str:
+    labels = {l.get("name", "") for l in issue.get("labels", [])}
+    title = issue.get("title", "")
+    body = issue.get("body") or ""
+
+    if "notion-sync" in labels:
+        page_id = extract_notion_page_id(body)
+        if page_id and page_map:
+            undashed = strip_uuid_dashes(page_id)
+            row = page_map.get(undashed)
+            if not row:
+                return "notion_missing"
+            status = (row.get("Status") or "").lower()
+            if status == "done":
+                return "notion_done"
+            if status == "in progress":
+                return "notion_in_progress"
+            return "notion_open"
+        return "notion_unverified"
+
+    if not title.strip() or title.lower().startswith(("test", "draft")) or not body.strip():
+        return "junk"
+
+    updated = issue.get("updatedAt")
+    if updated:
+        try:
+            last_update = datetime.fromisoformat(updated.replace("Z", "+00:00"))
+            age_days = (datetime.now(timezone.utc) - last_update).days
+            if age_days > stale_days and issue.get("commentsCount", 0) == 0:
+                return "stale"
+        except Exception:
+            pass
+
+    return "manual_review"
+
+
+def close_issue(repo: str, number: int, reason: str, execute: bool) -> dict[str, Any]:
+    action = {"repo": repo, "number": number, "reason": reason, "closed": False}
+    if execute:
+        comment = f"Closed by HyperAI repo governance: {reason}\n\nGenerated with [Devin](https://devin.ai)"
+        env = os.environ.copy()
+        for key in ("GITHUB_TOKEN", "GH_TOKEN"):
+            env.pop(key, None)
+        result = subprocess.run(
+            ["gh", "issue", "close", str(number), "--repo", repo, "--comment", comment],
+            capture_output=True, text=True, env=env,
+        )
+        action["closed"] = result.returncode == 0
+        if result.returncode != 0:
+            print(f"  close failed for {repo}#{number}: {result.stderr.strip()}", file=sys.stderr)
+    return action
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description="HyperAI repository governance agent")
+    parser.add_argument("--owners", nargs="+", default=DEFAULT_OWNERS)
+    parser.add_argument("--stale-days", type=int, default=90)
+    parser.add_argument("--notion-status-file", type=Path, default=None)
+    parser.add_argument("--execute", action="store_true", help="perform low-risk actions")
+    parser.add_argument("--mission-id", default=f"mission-repo-governance-{now_iso()[:10].replace('-', '')}")
+    args = parser.parse_args()
+
+    mission_dir = EVIDENCE_DIR / args.mission_id
+    mission_dir.mkdir(parents=True, exist_ok=True)
+
+    page_map = get_notion_page_map(args.notion_status_file)
+
+    all_issues: list[dict[str, Any]] = []
+    for owner in args.owners:
+        issues = run_gh([
+            "search", "issues",
+            "--owner", owner,
+            "--state", "open",
+            "--limit", "1000",
+            "--json", "repository,number,title,body,createdAt,updatedAt,commentsCount,labels"
+        ])
+        all_issues.extend(issues)
+
+    # Build report
+    report: dict[str, Any] = {
+        "mission_id": args.mission_id,
+        "timestamp": now_iso(),
+        "owners": args.owners,
+        "stale_days": args.stale_days,
+        "notion_status_file": str(args.notion_status_file) if args.notion_status_file else None,
+        "total_open_issues": len(all_issues),
+        "by_category": {},
+        "actions": [],
+        "manual_review": [],
+    }
+
+    category_counts: dict[str, int] = {}
+    for issue in all_issues:
+        category = classify_issue(issue, page_map, args.stale_days)
+        category_counts[category] = category_counts.get(category, 0) + 1
+        repo = issue["repository"]["nameWithOwner"]
+        number = issue["number"]
+
+        if category in ("notion_done", "notion_missing", "junk", "stale"):
+            reason_map = {
+                "notion_done": "Notion source status is Done",
+                "notion_missing": "Notion source page no longer found",
+                "junk": "junk/empty issue",
+                "stale": f"no activity for > {args.stale_days} days",
+            }
+            action = close_issue(repo, number, reason_map[category], args.execute)
+            report["actions"].append({
+                **action,
+                "title": issue.get("title"),
+                "category": category,
+            })
+        elif category in ("notion_open", "notion_in_progress", "notion_unverified", "manual_review"):
+            report["manual_review"].append({
+                "repo": repo,
+                "number": number,
+                "title": issue.get("title"),
+                "category": category,
+            })
+
+    report["by_category"] = category_counts
+
+    report_path = mission_dir / "governance_report.json"
+    report_path.write_text(json.dumps(report, ensure_ascii=True, indent=2) + "\n", encoding="utf-8")
+    print(f"Report: {report_path}")
+    print(f"Total open issues: {len(all_issues)}")
+    print(f"Categories: {category_counts}")
+    print(f"Actions: {len(report['actions'])}")
+    print(f"Manual review: {len(report['manual_review'])}")
+
+    if not args.execute:
+        print("Dry-run complete. Add --execute to close issues.")
+
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
