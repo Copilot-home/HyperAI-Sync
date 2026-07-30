@@ -1,0 +1,22 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "homebrew",
+  "started_at": "2026-07-27T19:28:26Z",
+  "completed_at": "2026-07-27T19:30:28Z",
+  "dry_run": false,
+  "include_recyclable": false,
+  "disk_before_mb": 7450,
+  "disk_after_mb": 1740,
+  "freed_mb": 0,
+  "action_count": 1,
+  "error_count": 0,
+  "actions": [
+    {
+      "command": "brew cleanup -s",
+      "rc": 1,
+      "stdout": "",
+      "stderr": "TimeoutExpired: Command '['brew', 'cleanup', '-s']' timed out after 120 seconds"
+    }
+  ],
+  "status": "ok"
+}

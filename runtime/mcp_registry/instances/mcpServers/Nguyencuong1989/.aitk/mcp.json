@@ -1,0 +1,8 @@
+{
+    "servers": {
+        "local-server-nguyencuong1989": {
+            "type": "http",
+            "url": "http://localhost:3001/mcp"
+        }
+    }
+}

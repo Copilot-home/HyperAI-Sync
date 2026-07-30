@@ -1,0 +1,28 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "docker",
+  "started_at": "2026-07-29T10:41:18Z",
+  "completed_at": "2026-07-29T10:41:19Z",
+  "dry_run": false,
+  "include_recyclable": false,
+  "disk_before_mb": 7992,
+  "disk_after_mb": 7991,
+  "freed_mb": 0,
+  "action_count": 2,
+  "error_count": 0,
+  "actions": [
+    {
+      "command": "docker system prune -f",
+      "rc": 0,
+      "stdout": "Deleted Containers:\nb32405ac6eff600d1695c3b11c5e2338bb99267ca9074c8f480382136e12bb93\nf47e5f4e0f278d532f3081bcdc540649d2715910793738d845f70710c3fef7f7\n0156a7873264e80a4f2b9bd3314072674841ecdc04f4cc7d66a5934340d1d41d\nc17a2a48ba328fe06491540e00c8b6d3a17f4dfbda575305816352aa8ee20d3c\nd0387dfbe24056bc056a7abbbb11c432c4b13ae66322d3aeea81f8f5eed9b152\n\nDeleted Networks:\nopenapi-servers_default\n\nDeleted build cache objects:\not86j0ltalrytczg5tg91kol5\n6m37bv7es5t2c46kbl3cnb0zm\n7v1xid0krqdtvqbzam8kb278s\nebst",
+      "stderr": ""
+    },
+    {
+      "command": "docker builder prune -f",
+      "rc": 0,
+      "stdout": "Total:\t0B\n",
+      "stderr": ""
+    }
+  ],
+  "status": "ok"
+}

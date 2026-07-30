@@ -1,0 +1,43 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "pip",
+  "started_at": "2026-07-27T20:08:22Z",
+  "completed_at": "2026-07-27T20:08:27Z",
+  "dry_run": false,
+  "include_recyclable": false,
+  "disk_before_mb": 9209,
+  "disk_after_mb": 9207,
+  "freed_mb": 0,
+  "action_count": 4,
+  "error_count": 0,
+  "actions": [
+    {
+      "command": "pip cache purge",
+      "rc": 0,
+      "stdout": "Files removed: 0 (0 bytes)\nDirectories removed: 0\n",
+      "stderr": "WARNING: No matching packages\n"
+    },
+    {
+      "path": "/Users/andy/HyperAI-Sync/runtime/connector_control_plane/__pycache__",
+      "status": "deleted",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.02734375
+    },
+    {
+      "path": "/Users/andy/HyperAI-Sync/runtime/connector_control_plane/adapters/__pycache__",
+      "status": "deleted",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.03515625
+    },
+    {
+      "path": "/Users/andy/HyperAI-Sync/runtime/connector_control_plane/scripts/__pycache__",
+      "status": "deleted",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.00390625
+    }
+  ],
+  "status": "ok"
+}

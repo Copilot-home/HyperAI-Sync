@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "local_stdio": {
+      "type": "stdio",
+      "command": "npm",
+      "args": ["--silent", "run", "dev:stdio"]
+    },
+    "local_http": {
+      "type": "streamable-http",
+      "url": "http://localhost:3001/mcp"
+    }
+  }
+}

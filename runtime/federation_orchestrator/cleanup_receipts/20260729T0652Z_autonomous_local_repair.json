@@ -1,0 +1,74 @@
+{
+  "receipt_id": "20260729T0652Z_autonomous_local_repair",
+  "orchestration_mode": "direct_shell_probe",
+  "agent_chain_status": "n/a",
+  "creator_approval": "local_explicit",
+  "actions": [
+    {
+      "step": 1,
+      "action": "defensive_kill",
+      "targets": [84597, 96368, 96369],
+      "reason": "runaway git add -A / git ls-files AGENTS.override.md across /Users/andy, causing 85% CPU and FSEvents drop",
+      "status": "ok"
+    },
+    {
+      "step": 2,
+      "action": "extension_disable",
+      "source_dir": "/Users/andy/.vscode/extensions/andrepimenta.claude-code-chat-2.2.0",
+      "dest_dir": "/Users/andy/.vscode/extensions/andrepimenta.claude-code-chat-2.2.0.disabled",
+      "reason": "claude-code-chat extension was spawning full-workspace git backup",
+      "status": "ok"
+    },
+    {
+      "step": 3,
+      "action": "kill_app_server",
+      "targets": [3857, 67438],
+      "reason": "codex app-server from VS Code and ChatGPT.app emitting repeated 401 /wham/usage",
+      "status": "ok"
+    },
+    {
+      "step": 4,
+      "action": "extension_disable",
+      "source_dir": "/Users/andy/.vscode/extensions/openai.chatgpt-26.609.30741-darwin-arm64",
+      "dest_dir": "/Users/andy/.vscode/extensions/openai.chatgpt-26.609.30741-darwin-arm64.disabled",
+      "reason": "openai.chatgpt extension unauthenticated and causing 401 usage loop; disabled until reauth requested",
+      "status": "ok"
+    },
+    {
+      "step": 5,
+      "action": "launchd_load",
+      "target": "com.hyperai.phoenix.bridge",
+      "result": "loaded, pid 5166, health 200 OK, upstream FinalAI PASS, ollama 11434 PASS, 11435 FAIL",
+      "status": "ok"
+    },
+    {
+      "step": 6,
+      "action": "launchd_load_start",
+      "target": "com.hyperai.nightwatch",
+      "result": "loaded and executed once (pid 5366, exit 0), next interval 1800s",
+      "status": "ok"
+    },
+    {
+      "step": 7,
+      "action": "mcp_config_prune",
+      "file": "/Users/andy/.config/mcp-cli/config.json",
+      "backup": "/Users/andy/.config/mcp-cli/config.json.bak",
+      "removed_servers": ["MCP_DOCKER", "notion"],
+      "reason": "MCP_DOCKER connection closed due to Docker daemon down; notion token invalid",
+      "status": "ok"
+    }
+  ],
+  "post_conditions": {
+    "runaway_git_present": false,
+    "codex_app_server_present": false,
+    "phoenix_health": "http://127.0.0.1:9001/health -> 200 OK",
+    "mcp_servers_ok": ["GitKraken", "pieces"],
+    "finalai_proxy_health": "http://127.0.0.1:50520/health -> 200 (backend Titan still unreachable)"
+  },
+  "caveats": [
+    "openai.chatgpt and andrepimenta.claude-code-chat extensions disabled; re-enable by removing .disabled suffix and reloading VS Code/VSCodium.",
+    "FinalAI proxy still points to unreachable Titan 192.168.3.158:5052; chat via FinalAI will 502. Use Ollama :11434 directly for local inference.",
+    "Workspace /Users/andy still open in VS Code; extension host load may persist until editor reload.",
+    "Codex CLI (0.145.0) remains functional via /opt/homebrew/bin/codex."
+  ]
+}

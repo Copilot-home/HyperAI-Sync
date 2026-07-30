@@ -1,0 +1,982 @@
+{
+  "summary": {
+    "users": {
+      "total": 2,
+      "roles": {
+        "owner": 2
+      }
+    },
+    "projects": {
+      "total": 1,
+      "names": [
+        "aiproject"
+      ]
+    },
+    "keys": {
+      "legacy_user_keys_active": 6,
+      "service_account_keys_active": 1,
+      "admin_keys_active": 6,
+      "unused_keys": 1,
+      "keys_without_expiry": 7
+    },
+    "spend": {
+      "limit_usd": 5000.0,
+      "enforcement_status": "inactive",
+      "alert_count": 2
+    },
+    "usage": {
+      "completions": {
+        "ok": true,
+        "data_points": 7
+      },
+      "embeddings": {
+        "ok": true,
+        "data_points": 7
+      },
+      "audio_speeches": {
+        "ok": true,
+        "data_points": 7
+      },
+      "audio_transcriptions": {
+        "ok": true,
+        "data_points": 7
+      },
+      "images": {
+        "ok": true,
+        "data_points": 7
+      },
+      "moderations": {
+        "ok": true,
+        "data_points": 7
+      },
+      "web_search_calls": {
+        "ok": true,
+        "data_points": 7
+      }
+    },
+    "costs": {
+      "ok": true,
+      "data_points": 7
+    },
+    "invites": {
+      "ok": true,
+      "count": 1
+    },
+    "period": {
+      "start_ts": 1782597132,
+      "end_ts": 1785189132
+    }
+  },
+  "raw": {
+    "collected_at": "2026-07-27T21:52:12.547426+00:00",
+    "period_start_ts": 1782597132,
+    "period_end_ts": 1785189132,
+    "users": {
+      "object": "list",
+      "data": [
+        {
+          "id": "user-33zmbTzErxE6R7gd3NBZMDdH",
+          "object": "organization.user",
+          "added_at": 1691310095,
+          "email": "andyng.2509@gmail.com",
+          "name": "Nguyen  Cuong",
+          "role": "owner"
+        },
+        {
+          "id": "user-ouwz7PiG5QB2McpblRALBCH3",
+          "object": "organization.user",
+          "added_at": 1747855837,
+          "email": "nguyencuong.2509@icloud.com",
+          "name": "nguyễn đức cường",
+          "role": "owner"
+        }
+      ],
+      "first_id": "user-33zmbTzErxE6R7gd3NBZMDdH",
+      "has_more": false,
+      "last_id": "user-ouwz7PiG5QB2McpblRALBCH3"
+    },
+    "admin_api_keys": {
+      "object": "list",
+      "data": [
+        {
+          "id": "key_VWpUEjB7BtcuKjgi",
+          "object": "organization.admin_api_key",
+          "created_at": 1738592337,
+          "expires_at": null,
+          "last_used_at": 1785146953,
+          "name": "macminim1",
+          "owner": {
+            "id": "user-33zmbTzErxE6R7gd3NBZMDdH",
+            "created_at": 1691310095,
+            "type": "user",
+            "name": "Nguyen  Cuong",
+            "role": "owner"
+          },
+          "redacted_value": "sk-proj-********************************************************************************************************************************************************X-4A"
+        },
+        {
+          "id": "key_CBgVNJe2evjhjQtx",
+          "object": "organization.admin_api_key",
+          "created_at": 1760576209,
+          "expires_at": null,
+          "last_used_at": 1760576613,
+          "name": "AiChat",
+          "owner": {
+            "id": "user-ouwz7PiG5QB2McpblRALBCH3",
+            "created_at": 1747855837,
+            "type": "user",
+            "name": "nguyễn đức cường",
+            "role": "owner"
+          },
+          "redacted_value": "sk-proj-********************************************************************************************************************************************************-gEA"
+        },
+        {
+          "id": "key_eNKBnAU5g9dLGhbZ",
+          "object": "organization.admin_api_key",
+          "created_at": 1778504468,
+          "expires_at": null,
+          "last_used_at": 1778505267,
+          "name": "gpt_connector_orchestrator",
+          "owner": {
+            "id": "user-ouwz7PiG5QB2McpblRALBCH3",
+            "created_at": 1747855837,
+            "type": "user",
+            "name": "nguyễn đức cường",
+            "role": "owner"
+          },
+          "redacted_value": "sk-proj-********************************************************************************************************************************************************JrUA"
+        },
+        {
+          "id": "key_PkJCYiZB6uUHrKmg",
+          "object": "organization.admin_api_key",
+          "created_at": 1778978512,
+          "expires_at": null,
+          "last_used_at": 1785182543,
+          "name": "HyperAI Runtime",
+          "owner": {
+            "id": "user-ouwz7PiG5QB2McpblRALBCH3",
+            "created_at": 1747855837,
+            "type": "user",
+            "name": "nguyễn đức cường",
+            "role": "owner"
+          },
+          "redacted_value": "sk-proj-********************************************************************************************************************************************************ezMA"
+        },
+        {
+          "id": "key_VmxMbAV9SZVbxUlr",
+          "object": "organization.admin_api_key",
+          "created_at": 1782592819,
+          "expires_at": null,
+          "last_used_at": 1782595280,
+          "name": "Codex",
+          "owner": {
+            "id": "user-ouwz7PiG5QB2McpblRALBCH3",
+            "created_at": 1747855837,
+            "type": "user",
+            "name": "nguyễn đức cường",
+            "role": "owner"
+          },
+          "redacted_value": "sk-proj-********************************************************************************************************************************************************jTYA"
+        },
+        {
+          "id": "key_R5idzqSpcgyIJyL6",
+          "object": "organization.admin_api_key",
+          "created_at": 1784450794,
+          "expires_at": null,
+          "last_used_at": 1785188561,
+          "name": "adminOpenAI",
+          "owner": {
+            "id": "user-ouwz7PiG5QB2McpblRALBCH3",
+            "created_at": 1747855837,
+            "type": "user",
+            "name": "nguyễn đức cường",
+            "role": "owner"
+          },
+          "redacted_value": "sk-admin*************************************************************************************************************************SykA"
+        },
+        {
+          "id": "key_Ziz8i9WBspHPlFPb",
+          "object": "organization.admin_api_key",
+          "created_at": 1785180461,
+          "expires_at": null,
+          "last_used_at": null,
+          "name": "HyperAI System Runtime",
+          "owner": {
+            "id": "user-kQF5qUWuTd39T6MtODSUMf5T",
+            "created_at": 1785180460,
+            "type": "service_account",
+            "name": "HyperAI System Runtime",
+            "role": "reader"
+          },
+          "redacted_value": "sk-svcac***********************************************************************************************************************************************************l1EA"
+        }
+      ],
+      "first_id": "key_VWpUEjB7BtcuKjgi",
+      "has_more": false,
+      "last_id": "key_Ziz8i9WBspHPlFPb"
+    },
+    "projects": {
+      "object": "list",
+      "data": [
+        {
+          "id": "proj_QeO1HsgWepb5Sz6LDyWjjcJ8",
+          "object": "organization.project",
+          "created_at": 1725818842,
+          "status": "active",
+          "archived_at": null,
+          "name": "aiproject"
+        }
+      ],
+      "first_id": "proj_QeO1HsgWepb5Sz6LDyWjjcJ8",
+      "has_more": false,
+      "last_id": "proj_QeO1HsgWepb5Sz6LDyWjjcJ8"
+    },
+    "project_details": [
+      {
+        "project": {
+          "id": "proj_QeO1HsgWepb5Sz6LDyWjjcJ8",
+          "object": "organization.project",
+          "created_at": 1725818842,
+          "status": "active",
+          "archived_at": null,
+          "name": "aiproject"
+        },
+        "api_keys": {
+          "object": "list",
+          "data": [
+            {
+              "id": "key_VWpUEjB7BtcuKjgi",
+              "object": "organization.project.api_key",
+              "created_at": 1738592337,
+              "last_used_at": 1785146953,
+              "name": "macminim1",
+              "owner": {
+                "type": "user",
+                "user": {
+                  "id": "user-33zmbTzErxE6R7gd3NBZMDdH",
+                  "created_at": 1691310095,
+                  "email": "andyng.2509@gmail.com",
+                  "name": "Nguyen  Cuong",
+                  "role": "owner"
+                }
+              },
+              "owner_project_access": "active",
+              "redacted_value": "sk-proj-********************************************************************************************************************************************************X-4A"
+            },
+            {
+              "id": "key_CBgVNJe2evjhjQtx",
+              "object": "organization.project.api_key",
+              "created_at": 1760576209,
+              "last_used_at": 1760576613,
+              "name": "AiChat",
+              "owner": {
+                "type": "user",
+                "user": {
+                  "id": "user-ouwz7PiG5QB2McpblRALBCH3",
+                  "created_at": 1747855837,
+                  "email": "nguyencuong.2509@icloud.com",
+                  "name": "nguyễn đức cường",
+                  "role": "owner"
+                }
+              },
+              "owner_project_access": "active",
+              "redacted_value": "sk-proj-********************************************************************************************************************************************************-gEA"
+            },
+            {
+              "id": "key_eNKBnAU5g9dLGhbZ",
+              "object": "organization.project.api_key",
+              "created_at": 1778504468,
+              "last_used_at": 1778505267,
+              "name": "gpt_connector_orchestrator",
+              "owner": {
+                "type": "user",
+                "user": {
+                  "id": "user-ouwz7PiG5QB2McpblRALBCH3",
+                  "created_at": 1747855837,
+                  "email": "nguyencuong.2509@icloud.com",
+                  "name": "nguyễn đức cường",
+                  "role": "owner"
+                }
+              },
+              "owner_project_access": "active",
+              "redacted_value": "sk-proj-********************************************************************************************************************************************************JrUA"
+            },
+            {
+              "id": "key_PkJCYiZB6uUHrKmg",
+              "object": "organization.project.api_key",
+              "created_at": 1778978512,
+              "last_used_at": 1785182543,
+              "name": "HyperAI Runtime",
+              "owner": {
+                "type": "user",
+                "user": {
+                  "id": "user-ouwz7PiG5QB2McpblRALBCH3",
+                  "created_at": 1747855837,
+                  "email": "nguyencuong.2509@icloud.com",
+                  "name": "nguyễn đức cường",
+                  "role": "owner"
+                }
+              },
+              "owner_project_access": "active",
+              "redacted_value": "sk-proj-********************************************************************************************************************************************************ezMA"
+            },
+            {
+              "id": "key_VmxMbAV9SZVbxUlr",
+              "object": "organization.project.api_key",
+              "created_at": 1782592819,
+              "last_used_at": 1782595280,
+              "name": "Codex",
+              "owner": {
+                "type": "user",
+                "user": {
+                  "id": "user-ouwz7PiG5QB2McpblRALBCH3",
+                  "created_at": 1747855837,
+                  "email": "nguyencuong.2509@icloud.com",
+                  "name": "nguyễn đức cường",
+                  "role": "owner"
+                }
+              },
+              "owner_project_access": "active",
+              "redacted_value": "sk-proj-********************************************************************************************************************************************************jTYA"
+            },
+            {
+              "id": "key_Ziz8i9WBspHPlFPb",
+              "object": "organization.project.api_key",
+              "created_at": 1785180461,
+              "last_used_at": null,
+              "name": "HyperAI System Runtime",
+              "owner": {
+                "type": "service_account",
+                "service_account": {
+                  "id": "user-kQF5qUWuTd39T6MtODSUMf5T",
+                  "created_at": 1785180460,
+                  "name": "HyperAI System Runtime",
+                  "role": "owner"
+                }
+              },
+              "owner_project_access": "active",
+              "redacted_value": "sk-svcac***********************************************************************************************************************************************************l1EA"
+            }
+          ],
+          "first_id": "key_VWpUEjB7BtcuKjgi",
+          "has_more": false,
+          "last_id": "key_Ziz8i9WBspHPlFPb"
+        },
+        "service_accounts": {
+          "object": "list",
+          "data": [
+            {
+              "id": "user-kQF5qUWuTd39T6MtODSUMf5T",
+              "object": "organization.project.service_account",
+              "created_at": 1785180460,
+              "name": "HyperAI System Runtime",
+              "role": "member"
+            }
+          ],
+          "first_id": "user-kQF5qUWuTd39T6MtODSUMf5T",
+          "has_more": false,
+          "last_id": "user-kQF5qUWuTd39T6MtODSUMf5T"
+        }
+      }
+    ],
+    "spend_limit": {
+      "object": "organization.spend_limit",
+      "currency": "USD",
+      "enforcement": {
+        "status": "inactive"
+      },
+      "interval": "month",
+      "threshold_amount": 500000
+    },
+    "spend_alerts": {
+      "object": "list",
+      "data": [
+        {
+          "id": "K3fhf1YmenJYQzkClxI3ngPX",
+          "object": "organization.spend_alert",
+          "currency": "USD",
+          "interval": "month",
+          "notification_channel": {
+            "type": "email",
+            "recipients": [
+              "andyng.2509@gmail.com",
+              "nguyencuong.2509@icloud.com"
+            ],
+            "subject_prefix": "OpenAI"
+          },
+          "threshold_amount": 400
+        },
+        {
+          "id": "28vIOQ1eXH733lOqYV77V9yy",
+          "object": "organization.spend_alert",
+          "currency": "USD",
+          "interval": "month",
+          "notification_channel": {
+            "type": "email",
+            "recipients": [
+              "andyng.2509@gmail.com",
+              "nguyencuong.2509@icloud.com"
+            ],
+            "subject_prefix": "OpenAI"
+          },
+          "threshold_amount": 500
+        }
+      ],
+      "first_id": "K3fhf1YmenJYQzkClxI3ngPX",
+      "has_more": false,
+      "last_id": "28vIOQ1eXH733lOqYV77V9yy"
+    },
+    "usage": {
+      "completions": {
+        "object": "page",
+        "data": [
+          {
+            "object": "bucket",
+            "end_time": 1782604800,
+            "end_time_iso": "2026-06-28T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782518400,
+            "start_time_iso": "2026-06-27T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1782691200,
+            "end_time_iso": "2026-06-29T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782604800,
+            "start_time_iso": "2026-06-28T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1782777600,
+            "end_time_iso": "2026-06-30T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782691200,
+            "start_time_iso": "2026-06-29T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1782864000,
+            "end_time_iso": "2026-07-01T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782777600,
+            "start_time_iso": "2026-06-30T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1782950400,
+            "end_time_iso": "2026-07-02T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782864000,
+            "start_time_iso": "2026-07-01T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1783036800,
+            "end_time_iso": "2026-07-03T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782950400,
+            "start_time_iso": "2026-07-02T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1783123200,
+            "end_time_iso": "2026-07-04T00:00:00+00:00",
+            "results": [],
+            "start_time": 1783036800,
+            "start_time_iso": "2026-07-03T00:00:00+00:00"
+          }
+        ],
+        "has_more": true,
+        "next_page": "page_AAAAAGppJI_H98thAAAAAGpITQA="
+      },
+      "embeddings": {
+        "object": "page",
+        "data": [
+          {
+            "object": "bucket",
+            "end_time": 1782604800,
+            "end_time_iso": "2026-06-28T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782518400,
+            "start_time_iso": "2026-06-27T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1782691200,
+            "end_time_iso": "2026-06-29T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782604800,
+            "start_time_iso": "2026-06-28T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1782777600,
+            "end_time_iso": "2026-06-30T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782691200,
+            "start_time_iso": "2026-06-29T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1782864000,
+            "end_time_iso": "2026-07-01T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782777600,
+            "start_time_iso": "2026-06-30T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1782950400,
+            "end_time_iso": "2026-07-02T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782864000,
+            "start_time_iso": "2026-07-01T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1783036800,
+            "end_time_iso": "2026-07-03T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782950400,
+            "start_time_iso": "2026-07-02T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1783123200,
+            "end_time_iso": "2026-07-04T00:00:00+00:00",
+            "results": [],
+            "start_time": 1783036800,
+            "start_time_iso": "2026-07-03T00:00:00+00:00"
+          }
+        ],
+        "has_more": true,
+        "next_page": "page_AAAAAGppJJDH98thAAAAAGpITQA="
+      },
+      "audio_speeches": {
+        "object": "page",
+        "data": [
+          {
+            "object": "bucket",
+            "end_time": 1782604800,
+            "end_time_iso": "2026-06-28T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782518400,
+            "start_time_iso": "2026-06-27T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1782691200,
+            "end_time_iso": "2026-06-29T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782604800,
+            "start_time_iso": "2026-06-28T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1782777600,
+            "end_time_iso": "2026-06-30T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782691200,
+            "start_time_iso": "2026-06-29T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1782864000,
+            "end_time_iso": "2026-07-01T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782777600,
+            "start_time_iso": "2026-06-30T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1782950400,
+            "end_time_iso": "2026-07-02T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782864000,
+            "start_time_iso": "2026-07-01T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1783036800,
+            "end_time_iso": "2026-07-03T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782950400,
+            "start_time_iso": "2026-07-02T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1783123200,
+            "end_time_iso": "2026-07-04T00:00:00+00:00",
+            "results": [],
+            "start_time": 1783036800,
+            "start_time_iso": "2026-07-03T00:00:00+00:00"
+          }
+        ],
+        "has_more": true,
+        "next_page": "page_AAAAAGppJJLH98thAAAAAGpITQA="
+      },
+      "audio_transcriptions": {
+        "object": "page",
+        "data": [
+          {
+            "object": "bucket",
+            "end_time": 1782604800,
+            "end_time_iso": "2026-06-28T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782518400,
+            "start_time_iso": "2026-06-27T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1782691200,
+            "end_time_iso": "2026-06-29T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782604800,
+            "start_time_iso": "2026-06-28T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1782777600,
+            "end_time_iso": "2026-06-30T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782691200,
+            "start_time_iso": "2026-06-29T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1782864000,
+            "end_time_iso": "2026-07-01T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782777600,
+            "start_time_iso": "2026-06-30T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1782950400,
+            "end_time_iso": "2026-07-02T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782864000,
+            "start_time_iso": "2026-07-01T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1783036800,
+            "end_time_iso": "2026-07-03T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782950400,
+            "start_time_iso": "2026-07-02T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1783123200,
+            "end_time_iso": "2026-07-04T00:00:00+00:00",
+            "results": [],
+            "start_time": 1783036800,
+            "start_time_iso": "2026-07-03T00:00:00+00:00"
+          }
+        ],
+        "has_more": true,
+        "next_page": "page_AAAAAGppJJPH98thAAAAAGpITQA="
+      },
+      "images": {
+        "object": "page",
+        "data": [
+          {
+            "object": "bucket",
+            "end_time": 1782604800,
+            "end_time_iso": "2026-06-28T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782518400,
+            "start_time_iso": "2026-06-27T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1782691200,
+            "end_time_iso": "2026-06-29T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782604800,
+            "start_time_iso": "2026-06-28T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1782777600,
+            "end_time_iso": "2026-06-30T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782691200,
+            "start_time_iso": "2026-06-29T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1782864000,
+            "end_time_iso": "2026-07-01T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782777600,
+            "start_time_iso": "2026-06-30T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1782950400,
+            "end_time_iso": "2026-07-02T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782864000,
+            "start_time_iso": "2026-07-01T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1783036800,
+            "end_time_iso": "2026-07-03T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782950400,
+            "start_time_iso": "2026-07-02T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1783123200,
+            "end_time_iso": "2026-07-04T00:00:00+00:00",
+            "results": [],
+            "start_time": 1783036800,
+            "start_time_iso": "2026-07-03T00:00:00+00:00"
+          }
+        ],
+        "has_more": true,
+        "next_page": "page_AAAAAGppJJbH98thAAAAAGpITQA="
+      },
+      "moderations": {
+        "object": "page",
+        "data": [
+          {
+            "object": "bucket",
+            "end_time": 1782604800,
+            "end_time_iso": "2026-06-28T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782518400,
+            "start_time_iso": "2026-06-27T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1782691200,
+            "end_time_iso": "2026-06-29T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782604800,
+            "start_time_iso": "2026-06-28T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1782777600,
+            "end_time_iso": "2026-06-30T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782691200,
+            "start_time_iso": "2026-06-29T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1782864000,
+            "end_time_iso": "2026-07-01T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782777600,
+            "start_time_iso": "2026-06-30T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1782950400,
+            "end_time_iso": "2026-07-02T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782864000,
+            "start_time_iso": "2026-07-01T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1783036800,
+            "end_time_iso": "2026-07-03T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782950400,
+            "start_time_iso": "2026-07-02T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1783123200,
+            "end_time_iso": "2026-07-04T00:00:00+00:00",
+            "results": [],
+            "start_time": 1783036800,
+            "start_time_iso": "2026-07-03T00:00:00+00:00"
+          }
+        ],
+        "has_more": true,
+        "next_page": "page_AAAAAGppJJvH98thAAAAAGpITQA="
+      },
+      "web_search_calls": {
+        "object": "page",
+        "data": [
+          {
+            "object": "bucket",
+            "end_time": 1782604800,
+            "end_time_iso": "2026-06-28T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782518400,
+            "start_time_iso": "2026-06-27T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1782691200,
+            "end_time_iso": "2026-06-29T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782604800,
+            "start_time_iso": "2026-06-28T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1782777600,
+            "end_time_iso": "2026-06-30T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782691200,
+            "start_time_iso": "2026-06-29T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1782864000,
+            "end_time_iso": "2026-07-01T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782777600,
+            "start_time_iso": "2026-06-30T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1782950400,
+            "end_time_iso": "2026-07-02T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782864000,
+            "start_time_iso": "2026-07-01T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1783036800,
+            "end_time_iso": "2026-07-03T00:00:00+00:00",
+            "results": [],
+            "start_time": 1782950400,
+            "start_time_iso": "2026-07-02T00:00:00+00:00"
+          },
+          {
+            "object": "bucket",
+            "end_time": 1783123200,
+            "end_time_iso": "2026-07-04T00:00:00+00:00",
+            "results": [],
+            "start_time": 1783036800,
+            "start_time_iso": "2026-07-03T00:00:00+00:00"
+          }
+        ],
+        "has_more": true,
+        "next_page": "page_AAAAAGppJJzH98thAAAAAGpITQA="
+      }
+    },
+    "costs": {
+      "object": "page",
+      "has_more": true,
+      "next_page": "page_AAAAAGppJJrVZlDIAAAAAGpITQA=",
+      "data": [
+        {
+          "object": "bucket",
+          "start_time": 1782518400,
+          "end_time": 1782604800,
+          "start_time_iso": "2026-06-27T00:00:00",
+          "end_time_iso": "2026-06-28T00:00:00",
+          "results": [
+            {
+              "object": "organization.costs.result",
+              "amount": {
+                "value": "0.0005460000000000000000000000000",
+                "currency": "usd"
+              },
+              "quantity": null,
+              "line_item": null,
+              "user_id": null,
+              "api_key_id": null,
+              "project_id": "proj_QeO1HsgWepb5Sz6LDyWjjcJ8",
+              "organization_id": "org-bYl72BcNqzqcAkh341jS71Xl",
+              "project_name": "aiproject",
+              "organization_name": "Alpha_prime_omega",
+              "user_email": null
+            }
+          ]
+        },
+        {
+          "object": "bucket",
+          "start_time": 1782604800,
+          "end_time": 1782691200,
+          "start_time_iso": "2026-06-28T00:00:00+00:00",
+          "end_time_iso": "2026-06-29T00:00:00+00:00",
+          "results": []
+        },
+        {
+          "object": "bucket",
+          "start_time": 1782691200,
+          "end_time": 1782777600,
+          "start_time_iso": "2026-06-29T00:00:00+00:00",
+          "end_time_iso": "2026-06-30T00:00:00+00:00",
+          "results": []
+        },
+        {
+          "object": "bucket",
+          "start_time": 1782777600,
+          "end_time": 1782864000,
+          "start_time_iso": "2026-06-30T00:00:00+00:00",
+          "end_time_iso": "2026-07-01T00:00:00+00:00",
+          "results": []
+        },
+        {
+          "object": "bucket",
+          "start_time": 1782864000,
+          "end_time": 1782950400,
+          "start_time_iso": "2026-07-01T00:00:00+00:00",
+          "end_time_iso": "2026-07-02T00:00:00+00:00",
+          "results": []
+        },
+        {
+          "object": "bucket",
+          "start_time": 1782950400,
+          "end_time": 1783036800,
+          "start_time_iso": "2026-07-02T00:00:00+00:00",
+          "end_time_iso": "2026-07-03T00:00:00+00:00",
+          "results": []
+        },
+        {
+          "object": "bucket",
+          "start_time": 1783036800,
+          "end_time": 1783123200,
+          "start_time_iso": "2026-07-03T00:00:00+00:00",
+          "end_time_iso": "2026-07-04T00:00:00+00:00",
+          "results": []
+        }
+      ]
+    },
+    "invites": {
+      "object": "list",
+      "data": [
+        {
+          "id": "invite-Rk0MikkZ5vbBDxyi1r9mxSY5",
+          "object": "organization.invite",
+          "created_at": 1738223945,
+          "status": "accepted",
+          "accepted_at": 1738243257,
+          "email": "nguyencuong.2509@icloud.com",
+          "expires_at": 1738828745,
+          "projects": [],
+          "role": "owner"
+        }
+      ],
+      "first_id": "invite-Rk0MikkZ5vbBDxyi1r9mxSY5",
+      "has_more": false,
+      "last_id": "invite-Rk0MikkZ5vbBDxyi1r9mxSY5"
+    },
+    "audit_logs_sample": {
+      "object": "list",
+      "data": [],
+      "first_id": null,
+      "last_id": null,
+      "has_more": false
+    }
+  }
+}
+
+
+Exit code: 0

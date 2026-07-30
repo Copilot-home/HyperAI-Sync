@@ -1,0 +1,58 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "vscode",
+  "started_at": "2026-07-28T07:22:26Z",
+  "completed_at": "2026-07-28T07:22:31Z",
+  "dry_run": false,
+  "include_recyclable": false,
+  "disk_before_mb": 10105,
+  "disk_after_mb": 11282,
+  "freed_mb": 1177,
+  "action_count": 6,
+  "error_count": 0,
+  "actions": [
+    {
+      "path": "/Users/andy/Library/Application Support/Code/CachedExtensionVSIXs",
+      "status": "deleted",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 1034.5859375
+    },
+    {
+      "path": "/Users/andy/Library/Application Support/Code/Crashpad",
+      "status": "deleted",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.00390625
+    },
+    {
+      "path": "/Users/andy/Library/Application Support/Code/logs",
+      "status": "deleted",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.93359375
+    },
+    {
+      "path": "/Users/andy/Library/Application Support/Code - Insiders/CachedExtensionVSIXs",
+      "status": "deleted",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 31.60546875
+    },
+    {
+      "path": "/Users/andy/Library/Application Support/Code - Insiders/Crashpad",
+      "status": "deleted",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.9921875
+    },
+    {
+      "path": "/Users/andy/Library/Application Support/Code - Insiders/logs",
+      "status": "deleted",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 111.59375
+    }
+  ],
+  "status": "ok"
+}

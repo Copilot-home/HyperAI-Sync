@@ -1,0 +1,23 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "homebrew",
+  "started_at": "2026-07-27T10:06:46Z",
+  "completed_at": "2026-07-27T10:07:05Z",
+  "dry_run": true,
+  "include_recyclable": false,
+  "disk_before_mb": 8209,
+  "disk_after_mb": 8206,
+  "freed_mb": 0.0,
+  "action_count": 1,
+  "error_count": 0,
+  "actions": [
+    {
+      "command": "brew cleanup -n -s",
+      "rc": 0,
+      "stdout": "",
+      "stderr": "Warning: Skipping aom: most recent version 3.14.1 not installed\nWarning: Skipping asciinema: most recent version 3.2.1 not installed\nWarning: Skipping azure-cli: most recent version 2.88.0 not install",
+      "status": "dry_run"
+    }
+  ],
+  "status": "ok"
+}

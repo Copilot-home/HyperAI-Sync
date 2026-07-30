@@ -2,6 +2,12 @@
 
 This workspace is MCP-first. Use the configured MCP servers proactively without waiting for an explicit reminder when they match the task.
 
+## Tool Guardrails
+
+- The in-session `skill` tool's `list` and `search` commands require the `path` parameter. Calling them without `path` produces `Tool 'skill' validation failed: The 'path' parameter is required for the 'list' command.`
+  - Always pass `path`, e.g. `skill list path=/Users/andy/HyperAI-Sync` or `skill search path=/Users/andy/HyperAI-Sync keywords=<term>`.
+  - To list all installed skills, use the CLI `devin skills list`.
+
 ## Required MCP routing
 
 - Use `openaiDeveloperDocs` first for any OpenAI-related work:

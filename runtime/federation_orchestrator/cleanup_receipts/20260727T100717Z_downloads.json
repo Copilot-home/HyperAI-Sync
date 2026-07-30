@@ -1,0 +1,30 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "downloads",
+  "started_at": "2026-07-27T10:07:17Z",
+  "completed_at": "2026-07-27T10:07:17Z",
+  "dry_run": true,
+  "include_recyclable": false,
+  "disk_before_mb": 8204,
+  "disk_after_mb": 8204,
+  "freed_mb": 67.71,
+  "action_count": 2,
+  "error_count": 0,
+  "actions": [
+    {
+      "path": "/Users/andy/Downloads/Không được xác nhận 914649.crdownload",
+      "status": "dry_run",
+      "reason": null,
+      "dry_run": true,
+      "estimated_mb": 67.70703125
+    },
+    {
+      "path": "/Users/andy/Downloads/.DS_Store",
+      "status": "dry_run",
+      "reason": null,
+      "dry_run": true,
+      "estimated_mb": 0.0078125
+    }
+  ],
+  "status": "ok"
+}

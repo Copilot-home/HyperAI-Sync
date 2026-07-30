@@ -1,0 +1,15 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "ollama",
+  "started_at": "2026-07-27T20:54:00Z",
+  "completed_at": "2026-07-27T20:54:00Z",
+  "dry_run": false,
+  "include_recyclable": false,
+  "disk_before_mb": 10253,
+  "disk_after_mb": 10253,
+  "freed_mb": 0,
+  "action_count": 0,
+  "error_count": 0,
+  "actions": [],
+  "status": "ok"
+}

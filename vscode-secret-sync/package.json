@@ -1,0 +1,31 @@
+{
+  "name": "@hyperai/vscode-secret-sync",
+  "version": "1.0.0",
+  "description": "APO-aligned cross-instance SecretStorage sync for VS Code, Cursor, Trae and other VS Code forks",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "keywords": [
+    "vscode",
+    "secret-storage",
+    "sync",
+    "apo",
+    "canon",
+    "encryption"
+  ],
+  "author": "Andy",
+  "license": "UNLICENSED",
+  "peerDependencies": {
+    "@types/vscode": ">=1.60.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.2",
+    "typescript": "^5.5.0"
+  },
+  "optionalDependencies": {
+    "keytar": "^7.9.0"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "cycle_number": 31,
+  "persisted_at": "2026-07-29T12:01:14Z",
+  "policy": {
+    "state_transition": "disk_low",
+    "selected_action": "runtime_cleanup",
+    "core_ready": false,
+    "managed_runtime_health": "unknown",
+    "operator_attention_required": true,
+    "haios_state": "projection_missing",
+    "backend_classification": "offline",
+    "frontend_classification": "offline",
+    "runtime_strategy": "local_first_probe",
+    "disk_state": "MINIMUM_RECOVERED",
+    "disk_free_mb": 5479,
+    "manifest_policy": {
+      "boundary_state": "projection_missing",
+      "selected_action": "runtime_cleanup",
+      "disk_state": "MINIMUM_RECOVERED",
+      "disk_free_mb": 5479,
+      "updated_at": "2026-07-29T12:01:14Z"
+    },
+    "managed_runtime": {
+      "backendUrl": null,
+      "frontendUrl": null,
+      "mode": "local_first"
+    },
+    "action_reason": "Disk low (5479 MiB free); run disposable cleanup.",
+    "runtime_validated_at": "2026-07-29T12:01:14Z",
+    "boundary_proof_status": "none"
+  },
+  "updated_at": "2026-07-29T12:01:14Z"
+}

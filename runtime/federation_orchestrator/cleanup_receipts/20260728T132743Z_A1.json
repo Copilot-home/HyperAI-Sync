@@ -1,0 +1,11 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "batch": "A1",
+  "system": "user_temp_rebuildable",
+  "started_at": "2026-07-28T13:28:25.925673Z",
+  "completed_at": "2026-07-28T13:28:25.926165Z",
+  "status": "ok",
+  "freed_kb": 7547484,
+  "freed_mb": 7370,
+  "notes": "A1: Chrome code_sign_clone, Kiro temp, Instruments cache"
+}

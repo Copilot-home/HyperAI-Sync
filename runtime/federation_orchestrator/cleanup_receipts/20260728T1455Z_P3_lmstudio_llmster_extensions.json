@@ -1,0 +1,21 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "batch": "P3",
+  "system": "hardlink_dedup",
+  "started_at": "2026-07-28T14:54:35Z",
+  "completed_at": "2026-07-28T14:54:35Z",
+  "status": "ok",
+  "freed_kb": 1840640,
+  "freed_mb": 1797,
+  "free_before_kb": 39246304,
+  "free_after_kb": 41169220,
+  "scanned_files": 89346,
+  "hardlinks_created": 43121,
+  "elapsed_seconds": 107.48,
+  "errors": [],
+  "dirs": [
+    "/Users/andy/.lmstudio/llmster",
+    "/Users/andy/.lmstudio/extensions"
+  ],
+  "notes": "Hardlinked duplicate files to share blocks; no files deleted"
+}

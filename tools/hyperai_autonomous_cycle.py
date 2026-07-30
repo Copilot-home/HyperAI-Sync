@@ -1,8 +1,28 @@
+# =============================================================================
+# PROJECT: CANON-TO-SYSTEM DETERMINISTIC PROJECTION
+# METHOD: D&R PROTOCOL (CLOSED)
+#
+# ORIGINATOR / CREATOR:
+#   alpha_prime_omega
+#
+# LEGAL ONTOLOGY:
+#   This source file is a deterministic projection of a closed Canon.
+#   Removal or alteration of this header voids legal and ontological validity.
+#
+# STATUS:
+#   GENERATED — NON-AUTONOMOUS — NON-OWNERLESS
+#
+# TRACEABILITY:
+#   Canon -> COG -> Projection(Π) -> Artifact
+#
+# =============================================================================
+
 from __future__ import annotations
 
 import json
 import argparse
 import subprocess
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -17,7 +37,7 @@ POLICY_FILE = RUNTIME / "hyperai-autonomous-policy.json"
 PROOF_FILE = RUNTIME / "hyperai-autonomous-boundary-proof.json"
 FEDERATION_DIR = RUNTIME / "federation_orchestrator"
 BRIDGE_FILE = FEDERATION_DIR / "autonomous_cycle_orchestration_bridge.json"
-DELTA_SCRIPT = Path(r"C:\Users\pc\.codex\skills\hyperai-runtime-orchestrator\scripts\check_hyperai_delta.py")
+DELTA_SCRIPT = ROOT / "tools" / "check_hyperai_delta.py"
 HAIOS_STATE_MODEL = MEMORY / "HAIOS_STATE_MODEL.md"
 AGENT3_CAPSULE = MEMORY / "agent3_api_client_contract_capsule.md"
 AGENT4_CAPSULE = MEMORY / "agent4_frontend_composition_capsule.md"
@@ -26,7 +46,7 @@ AGENT6_CAPSULE = MEMORY / "agent6_synthesis_capsule.md"
 
 def run_delta() -> dict:
     proc = subprocess.run(
-        ["python", str(DELTA_SCRIPT)],
+        [sys.executable, str(DELTA_SCRIPT)],
         cwd=str(ROOT),
         check=True,
         capture_output=True,
@@ -225,7 +245,7 @@ def maybe_update_memory(summary: dict, policy: dict) -> None:
     write_state(summary)
     subprocess.run(
         [
-            "python",
+            sys.executable,
             str(ROOT / "tools" / "update_memory.py"),
             "--focus",
             "Autonomous local-first runtime cycle",
@@ -288,7 +308,7 @@ def run_agent_chain(summary: dict, args: argparse.Namespace) -> dict:
     }
     write_bridge(bridge)
 
-    scan_stdout, _ = run_text_command(["python", str(ROOT / "tools" / "aios_runtime_surface_scan.py"), "--print-summary"])
+    scan_stdout, _ = run_text_command([sys.executable, str(ROOT / "tools" / "aios_runtime_surface_scan.py"), "--print-summary"])
     bridge["steps"].append(
         {
             "name": "pre_dispatch_surface_scan",
@@ -312,7 +332,7 @@ def run_agent_chain(summary: dict, args: argparse.Namespace) -> dict:
         "mcp_connectors",
     ]
     dispatch_command = [
-        "python",
+        sys.executable,
         str(ROOT / "tools" / "hyperai_agent_dispatch.py"),
         "--title",
         args.mission_title,
@@ -338,7 +358,7 @@ def run_agent_chain(summary: dict, args: argparse.Namespace) -> dict:
     write_bridge(bridge)
 
     worker_result, worker_stdout, _ = run_json_command(
-        ["python", str(ROOT / "tools" / "hyperai_agent_worker_loop.py"), "--mission-id", mission_id]
+        [sys.executable, str(ROOT / "tools" / "hyperai_agent_worker_loop.py"), "--mission-id", mission_id]
     )
     bridge["steps"].append(
         {

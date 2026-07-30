@@ -1,0 +1,21 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "docker",
+  "started_at": "2026-07-27T22:26:51Z",
+  "completed_at": "2026-07-27T22:27:01Z",
+  "dry_run": false,
+  "include_recyclable": true,
+  "disk_before_mb": 128,
+  "disk_after_mb": 317,
+  "freed_mb": 189,
+  "action_count": 1,
+  "error_count": 0,
+  "actions": [
+    {
+      "command": "docker ps",
+      "status": "daemon_unhealthy",
+      "note": "skip docker prune"
+    }
+  ],
+  "status": "ok"
+}

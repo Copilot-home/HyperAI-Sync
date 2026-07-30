@@ -1,0 +1,13 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "batch": "A2",
+  "system": "xcode_coresimulator_cache",
+  "started_at": "2026-07-28T13:58:32Z",
+  "completed_at": "2026-07-28T13:58:32Z",
+  "status": "ok",
+  "freed_kb": 3310172,
+  "freed_mb": 3232,
+  "free_before_kb": 30669828,
+  "free_after_kb": 33983576,
+  "notes": "CoreSimulator dyld cache + root-owned npm _cacache"
+}

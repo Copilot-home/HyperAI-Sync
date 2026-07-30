@@ -1,0 +1,8 @@
+{
+  "created_at_utc": "2026-07-28T16:41:29Z",
+  "file": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/cleanup_receipts/20260728T164129Z_APO_cleanup_bundle.json",
+  "hash_algo": "SHA-256",
+  "leaf_count": 603,
+  "merkle_root": "ffbfabc740cbf8042d8c7c552701d339dada247fa3c73cf3fe98e4533816be3e",
+  "schema": "APO_PORTABLE_PROOF_V1"
+}

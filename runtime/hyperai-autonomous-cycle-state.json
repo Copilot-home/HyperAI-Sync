@@ -1,0 +1,33 @@
+{
+  "workspace_root": "/Users/andy/HyperAI-Sync",
+  "product_surface": "/Users/andy/HyperAI-Sync/../HyperAI",
+  "state_transition": "disk_low",
+  "selected_action": "runtime_cleanup",
+  "core_ready": false,
+  "managed_runtime_health": "unknown",
+  "operator_attention_required": true,
+  "haios_state": "projection_missing",
+  "backend_classification": "offline",
+  "frontend_classification": "offline",
+  "runtime_strategy": "local_first_probe",
+  "recent_change_count": 27,
+  "managed_runtime_mode": "local_first",
+  "managed_runtime_backend": null,
+  "managed_runtime_frontend": null,
+  "policy_manifest": {
+    "boundary_state": "projection_missing",
+    "selected_action": "runtime_cleanup",
+    "disk_state": "MINIMUM_RECOVERED",
+    "disk_free_mb": 5479,
+    "updated_at": "2026-07-29T12:01:14Z"
+  },
+  "policy_manifest_action": "runtime_cleanup",
+  "policy_boundary_state": "projection_missing",
+  "boundary_proof_status": null,
+  "boundary_proof_checked_at": null,
+  "boundary_proof_action": null,
+  "boundary_proof_path": null,
+  "orchestration_mode": "preservation_only",
+  "agent_chain_status": "not_requested",
+  "orchestration_bridge_path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/autonomous_cycle_orchestration_bridge.json"
+}

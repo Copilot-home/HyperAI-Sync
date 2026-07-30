@@ -1,0 +1,280 @@
+{
+  "schema_version": "2026-04-16.hyperai-ooda-cycle-log.v1",
+  "cycle_id": "ooda-20260727T092500Z",
+  "created_at": "2026-07-27T09:25:23Z",
+  "input_surface": "codex_operator_runtime_or_current_worker",
+  "task": "check github user",
+  "observe": {
+    "surface_scan": {
+      "schema_version": "2026-04-16.aios-runtime-surface-scan.v1",
+      "listeners": {
+        "ok": true,
+        "lines": [
+          "COMMAND     PID USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME",
+          "R          1456 andy    4u  IPv4 0xcf06bcc3889b9452      0t0  TCP 127.0.0.1:17287 (LISTEN)",
+          "Code\\x20-  2049 andy   18u  IPv4 0x15ddf2af3d9122a5      0t0  TCP *:54112 (LISTEN)",
+          "language_  4071 andy    6u  IPv4 0x5e00a85713619598      0t0  TCP 127.0.0.1:49946 (LISTEN)",
+          "language_  4071 andy    7u  IPv4 0x9ba6cd8bf0e300ee      0t0  TCP 127.0.0.1:49947 (LISTEN)",
+          "language_  4071 andy   92u  IPv4 0xe86d17c99fd3ada4      0t0  TCP 127.0.0.1:49999 (LISTEN)",
+          "language_  4169 andy    4u  IPv4 0xb8d14b3339e518ab      0t0  TCP 127.0.0.1:49930 (LISTEN)",
+          "language_  4169 andy   29u  IPv4 0xd803dc5c3aa7bb52      0t0  TCP 127.0.0.1:49952 (LISTEN)",
+          "language_  4169 andy   35u  IPv4 0x8f9d8326f906d771      0t0  TCP 127.0.0.1:49993 (LISTEN)",
+          "OneDrive   5505 andy   34u  IPv6 0xf7e16ff8931aeca7      0t0  TCP [::1]:42050 (LISTEN)",
+          "app_inkwe  9384 andy   15u  IPv4 0xe20fb15d0aa1d4e1      0t0  TCP 127.0.0.1:53306 (LISTEN)",
+          "com.docke 28421 andy   82u  IPv4 0xbac1cf0d1099e6b8      0t0  TCP 127.0.0.1:12434 (LISTEN)",
+          "com.docke 28421 andy  185u  IPv6 0x455c83b9499c98f9      0t0  TCP *:5757 (LISTEN)",
+          "com.docke 28421 andy  227u  IPv4 0x9a843d5e5a759d13      0t0  TCP 127.0.0.1:62056 (LISTEN)",
+          "TabNine   46178 andy   19u  IPv4 0xb48ecfc4d7bbb08d      0t0  TCP 127.0.0.1:1123 (LISTEN)",
+          "TabNine   46178 andy   35u  IPv4 0x71c535e9d8cb72b4      0t0  TCP 127.0.0.1:61040 (LISTEN)",
+          "Python    48820 andy   10u  IPv4 0x4c957375ae755b3f      0t0  TCP *:8765 (LISTEN)",
+          "llmster   50032 andy   32u  IPv4 0x33065e373adac0ef      0t0  TCP 127.0.0.1:41343 (LISTEN)",
+          "llmster   50032 andy   33u  IPv4 0x21dee109a41cf00e      0t0  TCP 127.0.0.1:1234 (LISTEN)",
+          "lmlink-co 50070 andy   16u  IPv4 0xb963ec6d08e847a4      0t0  TCP *:45413 (LISTEN)",
+          "ControlCe 50248 andy    9u  IPv4 0x823321ad7d4b1c14      0t0  TCP *:7000 (LISTEN)",
+          "ControlCe 50248 andy   10u  IPv6 0x5f20dde6c0edc2db      0t0  TCP *:7000 (LISTEN)",
+          "ControlCe 50248 andy   11u  IPv4 0x25a689efe513e63e      0t0  TCP *:5000 (LISTEN)",
+          "ControlCe 50248 andy   12u  IPv6 0x7a7b4df03ecad5e6      0t0  TCP *:5000 (LISTEN)",
+          "rapportd  50252 andy   10u  IPv4 0x66c2dde125c5aa06      0t0  TCP *:61890 (LISTEN)",
+          "rapportd  50252 andy   11u  IPv6 0x8f2ec0215ffc4b1e      0t0  TCP *:61890 (LISTEN)",
+          "rapportd  50252 andy   23u  IPv6 0x291261bc266169df      0t0  TCP *:51908 (LISTEN)",
+          "rapportd  50252 andy   25u  IPv6 0x8e5112f0dee9d908      0t0  TCP *:51909 (LISTEN)",
+          "Postman   50323 andy   33u  IPv4 0x2b6104772917ab06      0t0  TCP 127.0.0.1:10533 (LISTEN)",
+          "ARDAgent  50381 andy   10u  IPv6 0xecffe8ba98a9e346      0t0  TCP *:3283 (LISTEN)",
+          "mediashar 50557 andy    6u  IPv4 0x9dea619db5b17a65      0t0  TCP *:3689 (LISTEN)",
+          "mediashar 50557 andy    7u  IPv6 0xc27af5cfb3d4a068      0t0  TCP *:3689 (LISTEN)",
+          "redis-ser 50751 andy    6u  IPv4 0x901e0ee7257f03a9      0t0  TCP 127.0.0.1:6379 (LISTEN)",
+          "redis-ser 50751 andy    7u  IPv6 0x5f61291ae612f502      0t0  TCP [::1]:6379 (LISTEN)",
+          "Python    50774 andy    4u  IPv4 0x6380b1293353b497      0t0  TCP 127.0.0.1:50520 (LISTEN)",
+          "Pieces    50821 andy   22u  IPv4 0xcbf23675e081e772      0t0  TCP 127.0.0.1:39300 (LISTEN)",
+          "Pieces    50821 andy   32u  IPv4 0x40680c5c6520ffb1      0t0  TCP 127.0.0.1:51657 (LISTEN)",
+          "Parallels 50866 andy    8u  IPv4 0xcea30268f749ab4d      0t0  TCP 127.0.0.1:57889 (LISTEN)",
+          "Parallels 50866 andy   11u  IPv6 0x65a119b8070fdff3      0t0  TCP [::1]:57889 (LISTEN)",
+          "Ollama    53087 andy    4u  IPv4 0x886f87da905da846      0t0  TCP 127.0.0.1:49829 (LISTEN)",
+          "ollama    53197 andy    3u  IPv6 0xa1f26e73937d112d      0t0  TCP *:11434 (LISTEN)"
+        ],
+        "truncated": false
+      },
+      "docker_ps": {
+        "ok": false,
+        "error": "DOCKER_PS_FAILED",
+        "stderr": "TimeoutExpired: Command '['docker', 'ps', '--no-trunc', '--format', 'json']' timed out after 10 seconds"
+      },
+      "registry": {
+        "ok": true,
+        "surface_count": 16,
+        "surfaces": [
+          "app_core_lanes",
+          "app_degraded_frozen_lanes",
+          "app_non_core_lanes",
+          "codex_operator_runtime",
+          "federation_orchestrator",
+          "gcp_cloud_observed",
+          "git_sync_transport",
+          "hyperai_product_runtime",
+          "local_fakeapi_provider_fabric",
+          "mcp_connectors",
+          "memory_writer",
+          "ollama_local_models",
+          "openclaw_control_lane",
+          "telegram_treasury_economy",
+          "verification_truth",
+          "vscode_operator_surface"
+        ]
+      }
+    },
+    "broker_proofs": [
+      {
+        "provider": "github",
+        "endpoint": "/proxy/github/user",
+        "ok": true,
+        "lease_id": "lease-d70d8f538c5145f8",
+        "active_key_ref": "GITHUB_PAT",
+        "proof": {
+          "at": "2026-07-27T09:25:11.859375Z",
+          "provider": "github",
+          "endpoint": "/user",
+          "status_code": 200,
+          "content_sha256": "a588469960f859d0a9d96dc0cb809d7aeb017cc60841a57d1e60e0499a6e25ea",
+          "lease_id": "lease-d70d8f538c5145f8"
+        },
+        "error": null,
+        "data_preview": {
+          "login": "NguyenCuong1989"
+        }
+      }
+    ],
+    "preservation": {
+      "state_transition": "projection_missing",
+      "core_ready": false,
+      "runtime_strategy": "local_first_probe",
+      "recent_change_count": 200,
+      "orchestration_mode": "preservation_only",
+      "agent_chain_status": "not_requested"
+    }
+  },
+  "orient": {
+    "task_class": "bounded_reasoning_or_diagnostic",
+    "requires_agent_chain": true,
+    "reason": "HyperAI task intake should still produce a governed mission unless explicitly preservation-only.",
+    "workflow": "runtime/federation_orchestrator/autonomous_ooda_workflow.json",
+    "worker_policy": "runtime/federation_orchestrator/worker_runtime_binding_policy.json",
+    "ecosystem_registry": "runtime/federation_orchestrator/aios_ecosystem_runtime_registry.json",
+    "aidev_lineage_inputs": [
+      "memory/AIDEV_DEEP_TRACE_REPORT_20260415.md",
+      "memory/HYPERAI_AIDEV_CAPABILITY_TREE.md"
+    ],
+    "registered_surface_count": 16,
+    "worker_distribution_rule": "Codex, OpenClaw, VS Code, MCP connectors, local provider facades, model substrates, and other AI systems are worker/runtime surfaces of HyperAI when the task belongs to HyperAI operation."
+  },
+  "decide": {
+    "requires_agent_chain": true,
+    "selected_surfaces": [
+      "hyperai_product_runtime",
+      "federation_orchestrator",
+      "memory_writer",
+      "verification_truth",
+      "codex_operator_runtime",
+      "openclaw_control_lane",
+      "local_fakeapi_provider_fabric",
+      "ollama_local_models",
+      "mcp_connectors"
+    ],
+    "decision_reason": "HyperAI task intake should still produce a governed mission unless explicitly preservation-only."
+  },
+  "act": {
+    "action": "agent_chain_dispatched",
+    "mission_id": "mission-e5323926773841b5",
+    "route_plan": {
+      "schema_version": "2026-04-16.hyperai-route-plan.v1",
+      "mission_id": "mission-e5323926773841b5",
+      "completed_at": "2026-07-27T09:25:22Z",
+      "steps": [
+        {
+          "agent": "agent1",
+          "role": "ontology_scope",
+          "status": "completed"
+        },
+        {
+          "agent": "agent2",
+          "role": "runtime_entrypoint",
+          "status": "completed"
+        },
+        {
+          "agent": "agent3",
+          "role": "api_contract",
+          "status": "completed"
+        },
+        {
+          "agent": "agent4",
+          "role": "frontend_composition",
+          "status": "completed"
+        },
+        {
+          "agent": "agent5",
+          "role": "ci_verification",
+          "status": "completed"
+        },
+        {
+          "agent": "agent6",
+          "role": "synthesis",
+          "status": "completed"
+        }
+      ],
+      "final_state": "route_plan_ready",
+      "constraints": [
+        "no_secret_printing",
+        "no_credential_harvesting",
+        "no_destructive_git_mutation",
+        "no_cloud_mutation_without_explicit_gate"
+      ],
+      "implementation_note": "Route plan is generated. Bounded implementation must be done by a worker surface with an open gate and proof artifacts.",
+      "broker_execution": {
+        "lease_id": "lease-533bc5438fa04532",
+        "proof": {
+          "at": "2026-07-27T09:25:22.977890Z",
+          "provider": "github",
+          "endpoint": "/user",
+          "status_code": 200,
+          "content_sha256": "a588469960f859d0a9d96dc0cb809d7aeb017cc60841a57d1e60e0499a6e25ea",
+          "lease_id": "lease-533bc5438fa04532"
+        },
+        "data": {
+          "login": "NguyenCuong1989",
+          "id": 196793856,
+          "node_id": "U_kgDOC7rWAA",
+          "avatar_url": "https://avatars.githubusercontent.com/u/196793856?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/NguyenCuong1989",
+          "html_url": "https://github.com/NguyenCuong1989",
+          "followers_url": "https://api.github.com/users/NguyenCuong1989/followers",
+          "following_url": "https://api.github.com/users/NguyenCuong1989/following{/other_user}",
+          "gists_url": "https://api.github.com/users/NguyenCuong1989/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/NguyenCuong1989/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/NguyenCuong1989/subscriptions",
+          "organizations_url": "https://api.github.com/users/NguyenCuong1989/orgs",
+          "repos_url": "https://api.github.com/users/NguyenCuong1989/repos",
+          "events_url": "https://api.github.com/users/NguyenCuong1989/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/NguyenCuong1989/received_events",
+          "type": "User",
+          "user_view_type": "private",
+          "site_admin": false,
+          "name": "NgCuong",
+          "company": "Lineage_AI",
+          "blog": "https://creators.contact",
+          "location": null,
+          "email": null,
+          "hireable": null,
+          "bio": "creator\r\n@actions @makenotion @apify @grafana @Copilot-home @modelcontextprotocol @lineage-ai \r\n@LineageAI",
+          "twitter_username": null,
+          "notification_email": null,
+          "public_repos": 38,
+          "public_gists": 0,
+          "followers": 1,
+          "following": 11,
+          "created_at": "2025-01-28T12:57:16Z",
+          "updated_at": "2026-07-22T01:07:32Z",
+          "private_gists": 0,
+          "total_private_repos": 31,
+          "owned_private_repos": 31,
+          "disk_usage": 1445584,
+          "collaborators": 0,
+          "two_factor_authentication": true,
+          "plan": {
+            "name": "pro",
+            "space": 976562499,
+            "collaborators": 0,
+            "private_repos": 9999
+          }
+        },
+        "capability": {
+          "lease_id": "lease-533bc5438fa04532",
+          "node": "hyperai-worker",
+          "task": "OODA routed task: check github user",
+          "provider": "github",
+          "resource": "user",
+          "action": "read",
+          "scope": [
+            "read"
+          ],
+          "active_key_ref": "GITHUB_PAT",
+          "masked_key": "ghp_5s...Hpfv",
+          "issued_at": "2026-07-27T09:25:22.396549Z",
+          "expires_at": "2026-07-27T09:26:22.396549Z",
+          "state": "ACTIVE",
+          "calls_used": 0,
+          "calls_remaining": 60,
+          "proof_count": 0
+        },
+        "ok": true
+      }
+    },
+    "agent_chain_status": "route_plan_ready",
+    "orchestration_bridge": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/autonomous_cycle_orchestration_bridge.json"
+  },
+  "final_state": "route_plan_ready",
+  "remaining_risk": [
+    "Direct low-level tool calls can still bypass OODA if operators ignore this entrypoint.",
+    "AIDEV genesis/core lineage remains source-capability until fresh runtime proof promotes a lane."
+  ],
+  "log_path": "runtime/federation_orchestrator/autonomous_ooda_logs/ooda-20260727T092500Z.json"
+}

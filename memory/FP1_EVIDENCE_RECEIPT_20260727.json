@@ -1,0 +1,28 @@
+{
+  "mission_id": "fp1-openai-admin-inventory-20260727",
+  "connector_id": "openai",
+  "account_id": "org-bYl72BcNqzqcAkh341jS71Xl",
+  "workspace_id": "proj_QeO1HsgWepb5Sz6LDyWjjcJ8",
+  "requested_action": "audit_inventory",
+  "effective_action": "openai.admin.inventory.read",
+  "resource_refs": [
+    "../memory/OPENAI_ADMIN_INVENTORY_20260727_v2.json"
+  ],
+  "risk_class": "R1",
+  "policy_generation": 0,
+  "approval_id": "creator-implicit-read-only",
+  "credential_ref_hash": "875a1e178a926de053219ce3f5b30fea4c48af36ed6ea5039f556212c912a805",
+  "started_at": "2026-07-27T21:52:51.019924+00:00",
+  "finished_at": "2026-07-27T21:52:51.020133+00:00",
+  "external_operation_id": "sha256:4aaf9543677530adc3a928526d0a596d1bf7080ec2b22e21cbd8d41378c0e50f",
+  "status": "VERIFIED",
+  "rollback": {
+    "supported": false,
+    "reason": "read-only audit"
+  },
+  "cost": {
+    "compute": "local",
+    "api_calls": 15
+  },
+  "evidence_hash": "99cdfdb29f37bbdfaf2b547aba42534e8c762dddade689e08702ca77f7db65c9"
+}

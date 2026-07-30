@@ -1,0 +1,298 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "batch": "P2",
+  "system": "vscode_extensions_dedup",
+  "started_at": "2026-07-28T14:51:09Z",
+  "completed_at": "2026-07-28T14:51:09Z",
+  "status": "ok",
+  "freed_kb": 3274636,
+  "freed_mb": 3197,
+  "free_before_kb": 35701140,
+  "free_after_kb": 39098876,
+  "actions": [
+    {
+      "action": "delete_old_version",
+      "name": "sonarlint-vscode",
+      "version": "4.41.0",
+      "size_kb": 202196
+    },
+    {
+      "action": "delete_old_version",
+      "name": "sonarlint-vscode",
+      "version": "4.41.0",
+      "size_kb": 298744
+    },
+    {
+      "action": "delete_old_version",
+      "name": "kilo-code",
+      "version": "5.2.2",
+      "size_kb": 171463
+    },
+    {
+      "action": "delete_old_version",
+      "name": "quokka-vscode",
+      "version": "1.0.755",
+      "size_kb": 14536
+    },
+    {
+      "action": "delete_old_version",
+      "name": "quokka-vscode",
+      "version": "1.0.755",
+      "size_kb": 14536
+    },
+    {
+      "action": "delete_old_version",
+      "name": "vscode-azure-github-copilot",
+      "version": "1.0.137",
+      "size_kb": 22335
+    },
+    {
+      "action": "delete_old_version",
+      "name": "vscode-kubernetes-tools",
+      "version": "1.3.29",
+      "size_kb": 10780
+    },
+    {
+      "action": "delete_old_version",
+      "name": "powershell",
+      "version": "2026.1.1",
+      "size_kb": 308516
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "npm-intellisense",
+      "version": "1.4.5",
+      "size_kb": 1779
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "vscode-markdownlint",
+      "version": "0.61.2",
+      "size_kb": 1206
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "intelli-php-vscode",
+      "version": "0.12.17700",
+      "size_kb": 114594
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "githistory",
+      "version": "0.6.20",
+      "size_kb": 1833
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "xml",
+      "version": "2.5.1",
+      "size_kb": 8641
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "vscode-firefox-debug",
+      "version": "2.15.0",
+      "size_kb": 694
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "vscode-jest-runner",
+      "version": "0.4.148",
+      "size_kb": 1037
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "rest-client",
+      "version": "0.25.1",
+      "size_kb": 2756
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "Ionide-fsharp",
+      "version": "7.31.1",
+      "size_kb": 141153
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "rainbow-csv",
+      "version": "3.24.1",
+      "size_kb": 2940
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "vscode-containers",
+      "version": "2.4.5",
+      "size_kb": 4152
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "vscode-docker",
+      "version": "2.0.0",
+      "size_kb": 141
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "vscode-edge-devtools",
+      "version": "2.1.10",
+      "size_kb": 3538
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "vscode-kubernetes-tools",
+      "version": "1.4.0",
+      "size_kb": 10708
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "data-workspace-vscode",
+      "version": "0.6.3",
+      "size_kb": 2727
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "mssql",
+      "version": "1.43.0",
+      "size_kb": 658522
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "sql-bindings-vscode",
+      "version": "0.4.1",
+      "size_kb": 3617
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "playwright",
+      "version": "1.1.19",
+      "size_kb": 1757
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "jupyter-keymap",
+      "version": "1.1.2",
+      "size_kb": 87
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "vscode-jupyter-cell-tags",
+      "version": "0.1.9",
+      "size_kb": 455
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "vscode-jupyter-slideshow",
+      "version": "0.1.6",
+      "size_kb": 427
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "remote-ssh-edit",
+      "version": "0.87.0",
+      "size_kb": 84
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "remote-wsl",
+      "version": "0.104.3",
+      "size_kb": 2546
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "cpptools",
+      "version": "1.32.2",
+      "size_kb": 238712
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "cpptools-extension-pack",
+      "version": "1.5.1",
+      "size_kb": 10
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "cpptools-themes",
+      "version": "2.0.0",
+      "size_kb": 293
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "vscode-react-native",
+      "version": "1.13.0",
+      "size_kb": 7425
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "oracle-java",
+      "version": "26.0.0",
+      "size_kb": 303424
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "vscode-jest",
+      "version": "6.4.4",
+      "size_kb": 1562
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "platformio-ide",
+      "version": "3.3.4",
+      "size_kb": 6167
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "postman-for-vscode",
+      "version": "1.19.1",
+      "size_kb": 127440
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "vscode-thunder-client",
+      "version": "2.41.0",
+      "size_kb": 6833
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "LiveServer",
+      "version": "5.7.10",
+      "size_kb": 15459
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "ruby-lsp",
+      "version": "0.10.4",
+      "size_kb": 698
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "sonarlint-vscode",
+      "version": "5.3.0",
+      "size_kb": 334445
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "vscode-lldb",
+      "version": "1.12.2",
+      "size_kb": 145338
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "vim",
+      "version": "1.32.4",
+      "size_kb": 3930
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "quokka-vscode",
+      "version": "1.0.763",
+      "size_kb": 68730
+    },
+    {
+      "action": "hardlink_to_stable",
+      "name": "php-debug",
+      "version": "1.40.1",
+      "size_kb": 5670
+    }
+  ],
+  "manifest": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/cache_manifests/vscode_extensions_manifest.json",
+  "notes": "Hardlinked exact duplicate extensions to stable; deleted older versions within insiders"
+}

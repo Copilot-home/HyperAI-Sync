@@ -1,0 +1,15 @@
+{
+  "anchor": {
+    "anchored_at": "2026-07-28T16:51:53Z",
+    "chain": "SIMULATED_CHAIN",
+    "tx_hash": "35f58ab0f7abc49806829e5ae8df3444d5612f635c1fe811fdb2536ff6dff9d4"
+  },
+  "bundle_file": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/cleanup_receipts/20260728T165153Z_APO_cleanup_bundle.json",
+  "bundle_hash": "3fec15e045ebfe25b440823bb12edcd43e273d32d20b3e70b14a9e5056fcc608",
+  "schema_version": "APO_NOTARY_RECORD_V1",
+  "tsa": {
+    "hash": "3fec15e045ebfe25b440823bb12edcd43e273d32d20b3e70b14a9e5056fcc608",
+    "timestamp_utc": "2026-07-28T16:51:53Z",
+    "tsa": "SIMULATED_TSA"
+  }
+}

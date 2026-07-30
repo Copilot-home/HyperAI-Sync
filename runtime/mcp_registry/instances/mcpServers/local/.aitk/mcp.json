@@ -1,0 +1,8 @@
+{
+    "servers": {
+        "local-server-local": {
+            "type": "http",
+            "url": "http://localhost:3001/mcp"
+        }
+    }
+}

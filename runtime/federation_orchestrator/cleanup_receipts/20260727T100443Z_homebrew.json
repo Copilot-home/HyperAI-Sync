@@ -1,0 +1,22 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "homebrew",
+  "started_at": "2026-07-27T10:04:05Z",
+  "completed_at": "2026-07-27T10:04:43Z",
+  "dry_run": true,
+  "include_recyclable": false,
+  "disk_before_mb": 8225,
+  "disk_after_mb": 8237,
+  "freed_mb": 12,
+  "action_count": 1,
+  "error_count": 0,
+  "actions": [
+    {
+      "command": "brew cleanup -s",
+      "rc": 0,
+      "stdout": "Removing: /opt/homebrew/var/homebrew/tmp/.cellar/lld@20... (33 files, 5.6MB)\nRemoving: /opt/homebrew/var/homebrew/tmp/.cellar/pkgconf... (34 files, 736.9KB)\n==> This operation has freed approximately 6.3MB of disk space.\n",
+      "stderr": "Warning: Skipping aom: most recent version 3.14.1 not installed\nWarning: Skipping asciinema: most recent version 3.2.1 not installed\nWarning: Skipping azure-cli: most recent version 2.88.0 not install"
+    }
+  ],
+  "status": "ok"
+}

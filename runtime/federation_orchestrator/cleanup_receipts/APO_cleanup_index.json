@@ -1,0 +1,18 @@
+{
+  "artifact_count": 682,
+  "bundle": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/cleanup_receipts/20260728T232823Z_APO_cleanup_bundle.json",
+  "disk_free_mb": 12921,
+  "global_omega": 1,
+  "last_updated_utc": "2026-07-28T23:28:23Z",
+  "merkle_root": "3b37136c99d018ef91b312dd8b586c775f570dcab93929ebc9af936ff7460f0f",
+  "notary": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/cleanup_receipts/20260728T232823Z_APO_cleanup_notary.json",
+  "proof": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/cleanup_receipts/20260728T232823Z_APO_cleanup_proof.json",
+  "roles": {
+    "canon": 34,
+    "manifest": 2,
+    "receipt": 615,
+    "tool": 31
+  },
+  "schema_version": "APO_CLEANUP_INDEX_V1",
+  "survival_score": 12
+}

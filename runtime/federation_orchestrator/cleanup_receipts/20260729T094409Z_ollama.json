@@ -1,0 +1,23 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "ollama",
+  "started_at": "2026-07-29T09:44:08Z",
+  "completed_at": "2026-07-29T09:44:09Z",
+  "dry_run": false,
+  "include_recyclable": true,
+  "disk_before_mb": 375,
+  "disk_after_mb": 374,
+  "freed_mb": 0,
+  "action_count": 1,
+  "error_count": 0,
+  "actions": [
+    {
+      "command": "ollama list",
+      "rc": 0,
+      "stdout": "NAME                                    ID              SIZE      MODIFIED       \nminimax-m3:cloud                        8cd948b96f47    -         24 minutes ago    \nsmollm2:latest                   ",
+      "stderr": "",
+      "status": "ok"
+    }
+  ],
+  "status": "ok"
+}

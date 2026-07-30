@@ -1,0 +1,40 @@
+{
+  "probed_at": "2026-07-27T21:53:24.085737+00:00",
+  "org_id": "org-bYl72BcNqzqcAkh341jS71Xl",
+  "project_id": "proj_QeO1HsgWepb5Sz6LDyWjjcJ8",
+  "results": {
+    "organization/projects/proj_QeO1HsgWepb5Sz6LDyWjjcJ8/usage_limits": {
+      "status": 404,
+      "preview": ""
+    },
+    "organization/projects/proj_QeO1HsgWepb5Sz6LDyWjjcJ8/rate_limits": {
+      "status": 200,
+      "preview": "{\n  \"object\": \"list\",\n  \"data\": [\n    {\n      \"id\": \"rl-babbage-002\",\n      \"object\": \"project.rate_limit\",\n      \"max_i"
+    },
+    "organization/usage_limits": {
+      "status": 404,
+      "preview": ""
+    },
+    "organization/usage_policy": {
+      "status": 404,
+      "preview": ""
+    },
+    "organization/agents": {
+      "status": 404,
+      "preview": ""
+    },
+    "organization/projects/proj_QeO1HsgWepb5Sz6LDyWjjcJ8/agents": {
+      "status": 404,
+      "preview": ""
+    },
+    "organization/groups": {
+      "status": 200,
+      "preview": "{\n  \"object\": \"list\",\n  \"data\": [],\n  \"has_more\": false,\n  \"next\": null\n}"
+    },
+    "organization/projects/proj_QeO1HsgWepb5Sz6LDyWjjcJ8/groups": {
+      "status": 200,
+      "preview": "{\n  \"object\": \"list\",\n  \"data\": [],\n  \"has_more\": false,\n  \"next\": null\n}"
+    }
+  },
+  "conclusion": "usage_limits and agents are not exposed via admin API (404); rate_limits and groups are API-readable."
+}

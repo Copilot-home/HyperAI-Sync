@@ -1,0 +1,22 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "homebrew",
+  "started_at": "2026-07-27T11:43:41Z",
+  "completed_at": "2026-07-27T11:44:13Z",
+  "dry_run": false,
+  "include_recyclable": false,
+  "disk_before_mb": 6943,
+  "disk_after_mb": 8585,
+  "freed_mb": 1642,
+  "action_count": 1,
+  "error_count": 0,
+  "actions": [
+    {
+      "command": "brew cleanup -s",
+      "rc": 0,
+      "stdout": "Removing: /Users/andy/Library/Caches/Homebrew/Cask/pieces-os--12.5.0... (1.7GB)\n==> This operation has freed approximately 1.7GB of disk space.\n",
+      "stderr": "Warning: Skipping aom: most recent version 3.14.1 not installed\nWarning: Skipping asciinema: most recent version 3.2.1 not installed\nWarning: Skipping azure-cli: most recent version 2.88.0 not install"
+    }
+  ],
+  "status": "ok"
+}

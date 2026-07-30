@@ -1,0 +1,37 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "npm",
+  "started_at": "2026-07-29T05:56:07Z",
+  "completed_at": "2026-07-29T05:56:11Z",
+  "dry_run": false,
+  "include_recyclable": true,
+  "disk_before_mb": 1485,
+  "disk_after_mb": 1558,
+  "freed_mb": 73,
+  "action_count": 3,
+  "error_count": 0,
+  "actions": [
+    {
+      "command": "npm cache clean --force",
+      "tool": "npm",
+      "rc": 0,
+      "stdout": "",
+      "stderr": "npm warn using --force Recommended protections disabled.\n"
+    },
+    {
+      "command": "pnpm store prune",
+      "tool": "pnpm",
+      "rc": 226,
+      "stdout": "[EROFS] EROFS: read-only file system, open '/_tmp_55302_ab721032d14fabf629db65d1b6168774'\n\n\n\n",
+      "stderr": ""
+    },
+    {
+      "path": "/Users/andy/HyperAI-Sync/.converge/source_repos/DAIOF-Framework-personal/vscode-merged/extensions/typescript-language-features/node_modules",
+      "status": "deleted",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 80.171875
+    }
+  ],
+  "status": "ok"
+}

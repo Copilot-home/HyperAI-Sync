@@ -1,0 +1,602 @@
+{
+  "schema_version": "2026-04-16.hyperai-ooda-cycle-log.v1",
+  "cycle_id": "ooda-20260727T122627Z",
+  "created_at": "2026-07-27T12:27:25Z",
+  "input_surface": "codex_operator_runtime_or_current_worker",
+  "task": "Explore VS Code AI Toolkit playground model catalog and integrate aliases into AP\u03a9 personal gateway at ~/.apo/gateway",
+  "observe": {
+    "surface_scan": {
+      "schema_version": "2026-04-16.aios-runtime-surface-scan.v1",
+      "listeners": {
+        "ok": true,
+        "lines": [
+          "COMMAND     PID USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME",
+          "R          1456 andy    4u  IPv4 0xcf06bcc3889b9452      0t0  TCP 127.0.0.1:17287 (LISTEN)",
+          "Code\\x20-  2049 andy   18u  IPv4 0x15ddf2af3d9122a5      0t0  TCP *:54112 (LISTEN)",
+          "language_  4071 andy    6u  IPv4 0x5e00a85713619598      0t0  TCP 127.0.0.1:49946 (LISTEN)",
+          "language_  4071 andy    7u  IPv4 0x9ba6cd8bf0e300ee      0t0  TCP 127.0.0.1:49947 (LISTEN)",
+          "language_  4071 andy   92u  IPv4 0xe86d17c99fd3ada4      0t0  TCP 127.0.0.1:49999 (LISTEN)",
+          "language_  4169 andy    4u  IPv4 0xb8d14b3339e518ab      0t0  TCP 127.0.0.1:49930 (LISTEN)",
+          "language_  4169 andy   29u  IPv4 0xd803dc5c3aa7bb52      0t0  TCP 127.0.0.1:49952 (LISTEN)",
+          "language_  4169 andy   35u  IPv4 0x8f9d8326f906d771      0t0  TCP 127.0.0.1:49993 (LISTEN)",
+          "OneDrive   5505 andy   34u  IPv6 0xf7e16ff8931aeca7      0t0  TCP [::1]:42050 (LISTEN)",
+          "app_inkwe  9384 andy   15u  IPv4 0xe20fb15d0aa1d4e1      0t0  TCP 127.0.0.1:53306 (LISTEN)",
+          "com.docke 28421 andy   82u  IPv4 0xbac1cf0d1099e6b8      0t0  TCP 127.0.0.1:12434 (LISTEN)",
+          "com.docke 28421 andy  185u  IPv6 0x455c83b9499c98f9      0t0  TCP *:5757 (LISTEN)",
+          "com.docke 28421 andy  227u  IPv4 0x9a843d5e5a759d13      0t0  TCP 127.0.0.1:62056 (LISTEN)",
+          "TabNine   46178 andy   19u  IPv4 0xb48ecfc4d7bbb08d      0t0  TCP 127.0.0.1:1123 (LISTEN)",
+          "TabNine   46178 andy   35u  IPv4 0x71c535e9d8cb72b4      0t0  TCP 127.0.0.1:61040 (LISTEN)",
+          "Python    48820 andy   10u  IPv4 0x4c957375ae755b3f      0t0  TCP *:8765 (LISTEN)",
+          "llmster   50032 andy   32u  IPv4 0x33065e373adac0ef      0t0  TCP 127.0.0.1:41343 (LISTEN)",
+          "llmster   50032 andy   33u  IPv4 0x21dee109a41cf00e      0t0  TCP 127.0.0.1:1234 (LISTEN)",
+          "lmlink-co 50070 andy   16u  IPv4 0xb963ec6d08e847a4      0t0  TCP *:45413 (LISTEN)",
+          "ControlCe 50248 andy    9u  IPv4 0x823321ad7d4b1c14      0t0  TCP *:7000 (LISTEN)",
+          "ControlCe 50248 andy   10u  IPv6 0x5f20dde6c0edc2db      0t0  TCP *:7000 (LISTEN)",
+          "ControlCe 50248 andy   11u  IPv4 0x25a689efe513e63e      0t0  TCP *:5000 (LISTEN)",
+          "ControlCe 50248 andy   12u  IPv6 0x7a7b4df03ecad5e6      0t0  TCP *:5000 (LISTEN)",
+          "rapportd  50252 andy   10u  IPv4 0x66c2dde125c5aa06      0t0  TCP *:61890 (LISTEN)",
+          "rapportd  50252 andy   11u  IPv6 0x8f2ec0215ffc4b1e      0t0  TCP *:61890 (LISTEN)",
+          "rapportd  50252 andy   23u  IPv6 0x291261bc266169df      0t0  TCP *:51908 (LISTEN)",
+          "rapportd  50252 andy   25u  IPv6 0x8e5112f0dee9d908      0t0  TCP *:51909 (LISTEN)",
+          "ARDAgent  50381 andy   10u  IPv6 0xecffe8ba98a9e346      0t0  TCP *:3283 (LISTEN)",
+          "mediashar 50557 andy    6u  IPv4 0x9dea619db5b17a65      0t0  TCP *:3689 (LISTEN)",
+          "mediashar 50557 andy    7u  IPv6 0xc27af5cfb3d4a068      0t0  TCP *:3689 (LISTEN)",
+          "redis-ser 50751 andy    6u  IPv4 0x901e0ee7257f03a9      0t0  TCP 127.0.0.1:6379 (LISTEN)",
+          "redis-ser 50751 andy    7u  IPv6 0x5f61291ae612f502      0t0  TCP [::1]:6379 (LISTEN)",
+          "Python    50774 andy    4u  IPv4 0x6380b1293353b497      0t0  TCP 127.0.0.1:50520 (LISTEN)",
+          "Pieces    50821 andy   22u  IPv4 0xcbf23675e081e772      0t0  TCP 127.0.0.1:39300 (LISTEN)",
+          "Pieces    50821 andy   32u  IPv4 0x40680c5c6520ffb1      0t0  TCP 127.0.0.1:51657 (LISTEN)",
+          "Parallels 50866 andy    8u  IPv4 0xcea30268f749ab4d      0t0  TCP 127.0.0.1:57889 (LISTEN)",
+          "Parallels 50866 andy   11u  IPv6 0x65a119b8070fdff3      0t0  TCP [::1]:57889 (LISTEN)",
+          "Ollama    53087 andy    4u  IPv4 0x886f87da905da846      0t0  TCP 127.0.0.1:49829 (LISTEN)",
+          "ollama    53197 andy    3u  IPv6 0xa1f26e73937d112d      0t0  TCP *:11434 (LISTEN)",
+          "com.docke 74103 andy   82u  IPv4 0xbac1cf0d1099e6b8      0t0  TCP 127.0.0.1:12434 (LISTEN)",
+          "com.docke 74103 andy  185u  IPv6 0x455c83b9499c98f9      0t0  TCP *:5757 (LISTEN)",
+          "com.docke 74103 andy  227u  IPv4 0x9a843d5e5a759d13      0t0  TCP 127.0.0.1:62056 (LISTEN)",
+          "Devin\\x20 86135 andy   41u  IPv4 0xc8a64c49a036723b      0t0  TCP 127.0.0.1:54593 (LISTEN)",
+          "language_ 86141 andy    6u  IPv4 0xb52bfe868eddce67      0t0  TCP 127.0.0.1:54609 (LISTEN)",
+          "language_ 86141 andy   30u  IPv4 0xbfb0fc80bd6cec24      0t0  TCP 127.0.0.1:54625 (LISTEN)",
+          "Python    91242 andy   10u  IPv4 0xae9e9a17b34a369c      0t0  TCP *:9011 (LISTEN)"
+        ],
+        "truncated": false
+      },
+      "docker_ps": {
+        "ok": false,
+        "error": "DOCKER_PS_FAILED",
+        "stderr": "TimeoutExpired: Command '['docker', 'ps', '--no-trunc', '--format', 'json']' timed out after 10 seconds"
+      },
+      "disk": {
+        "ok": true,
+        "size_kb": 482797652,
+        "used_kb": 421356456,
+        "available_kb": 4232808,
+        "capacity_percent": "100",
+        "available_mb": 4133
+      },
+      "registry": {
+        "ok": true,
+        "surface_count": 17,
+        "surfaces": [
+          "app_core_lanes",
+          "app_degraded_frozen_lanes",
+          "app_non_core_lanes",
+          "codex_operator_runtime",
+          "federation_orchestrator",
+          "gcp_cloud_observed",
+          "git_sync_transport",
+          "hyperai_product_runtime",
+          "local_fakeapi_provider_fabric",
+          "mcp_connectors",
+          "memory_writer",
+          "ollama_local_models",
+          "openclaw_control_lane",
+          "system_cleanup_executor",
+          "telegram_treasury_economy",
+          "verification_truth",
+          "vscode_operator_surface"
+        ]
+      }
+    },
+    "broker_proofs": null,
+    "preservation": {
+      "state_transition": "disk_low",
+      "core_ready": false,
+      "runtime_strategy": "local_first_probe",
+      "recent_change_count": 200,
+      "orchestration_mode": "preservation_only",
+      "agent_chain_status": "not_requested"
+    }
+  },
+  "orient": {
+    "task_class": "governed_system_task",
+    "requires_agent_chain": true,
+    "reason": "Task changes or evaluates system operation; Agent 1-6 closure is required before implementation handoff.",
+    "workflow": "runtime/federation_orchestrator/autonomous_ooda_workflow.json",
+    "worker_policy": "runtime/federation_orchestrator/worker_runtime_binding_policy.json",
+    "ecosystem_registry": "runtime/federation_orchestrator/aios_ecosystem_runtime_registry.json",
+    "aidev_lineage_inputs": [
+      "memory/AIDEV_DEEP_TRACE_REPORT_20260415.md",
+      "memory/HYPERAI_AIDEV_CAPABILITY_TREE.md"
+    ],
+    "registered_surface_count": 17,
+    "worker_distribution_rule": "Codex, OpenClaw, VS Code, MCP connectors, local provider facades, model substrates, and other AI systems are worker/runtime surfaces of HyperAI when the task belongs to HyperAI operation."
+  },
+  "decide": {
+    "requires_agent_chain": true,
+    "selected_surfaces": [
+      "hyperai_product_runtime",
+      "federation_orchestrator",
+      "memory_writer",
+      "verification_truth",
+      "codex_operator_runtime",
+      "openclaw_control_lane",
+      "local_fakeapi_provider_fabric",
+      "ollama_local_models",
+      "mcp_connectors",
+      "system_cleanup_executor"
+    ],
+    "decision_reason": "Task changes or evaluates system operation; Agent 1-6 closure is required before implementation handoff."
+  },
+  "act": {
+    "action": "agent_chain_dispatched",
+    "mission_id": "mission-842cb5697b484ed2",
+    "route_plan": {
+      "schema_version": "2026-04-16.hyperai-route-plan.v1",
+      "mission_id": "mission-842cb5697b484ed2",
+      "completed_at": "2026-07-27T12:27:25Z",
+      "steps": [
+        {
+          "agent": "agent1",
+          "role": "ontology_scope",
+          "status": "completed"
+        },
+        {
+          "agent": "agent2",
+          "role": "runtime_entrypoint",
+          "status": "completed"
+        },
+        {
+          "agent": "agent3",
+          "role": "api_contract",
+          "status": "completed"
+        },
+        {
+          "agent": "agent4",
+          "role": "frontend_composition",
+          "status": "completed"
+        },
+        {
+          "agent": "agent5",
+          "role": "ci_verification",
+          "status": "completed"
+        },
+        {
+          "agent": "agent6",
+          "role": "synthesis",
+          "status": "completed"
+        }
+      ],
+      "final_state": "cleanup_partial",
+      "constraints": [
+        "no_secret_printing",
+        "no_credential_harvesting",
+        "no_destructive_git_mutation",
+        "no_cloud_mutation_without_explicit_gate"
+      ],
+      "implementation_note": "Route plan is generated. Bounded implementation must be done by a worker surface with an open gate and proof artifacts.",
+      "cleanup_execution": {
+        "rc": 0,
+        "summary": {
+          "status": "partial",
+          "free_mb_before": 4228,
+          "free_mb_after": 4229,
+          "systems_run": [
+            "pip",
+            "npm",
+            "homebrew",
+            "vscode",
+            "xcode",
+            "docker",
+            "ollama",
+            "macos",
+            "downloads"
+          ],
+          "dry_run": false,
+          "include_recyclable": false,
+          "receipts": [
+            "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/cleanup_receipts/20260727T122653Z_pip.json",
+            "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/cleanup_receipts/20260727T122654Z_npm.json",
+            "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/cleanup_receipts/20260727T122714Z_homebrew.json",
+            "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/cleanup_receipts/20260727T122714Z_vscode.json",
+            "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/cleanup_receipts/20260727T122715Z_xcode.json",
+            "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/cleanup_receipts/20260727T122725Z_docker.json",
+            "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/cleanup_receipts/20260727T122725Z_ollama.json",
+            "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/cleanup_receipts/20260727T122725Z_macos.json",
+            "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/cleanup_receipts/20260727T122725Z_downloads.json"
+          ],
+          "details": [
+            {
+              "schema_version": "2026-07-27.cleanup-receipt.v1",
+              "system": "pip",
+              "started_at": "2026-07-27T12:26:48Z",
+              "completed_at": "2026-07-27T12:26:53Z",
+              "dry_run": false,
+              "include_recyclable": false,
+              "disk_before_mb": 4228,
+              "disk_after_mb": 4227,
+              "freed_mb": 0,
+              "action_count": 2,
+              "error_count": 0,
+              "actions": [
+                {
+                  "command": "pip cache purge",
+                  "rc": 0,
+                  "stdout": "Files removed: 0 (0 bytes)\nDirectories removed: 0\n",
+                  "stderr": "WARNING: No matching packages\n"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/tools/__pycache__",
+                  "status": "deleted",
+                  "reason": null,
+                  "dry_run": false,
+                  "estimated_mb": 0.01953125
+                }
+              ],
+              "status": "ok",
+              "receipt_path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/cleanup_receipts/20260727T122653Z_pip.json"
+            },
+            {
+              "schema_version": "2026-07-27.cleanup-receipt.v1",
+              "system": "npm",
+              "started_at": "2026-07-27T12:26:53Z",
+              "completed_at": "2026-07-27T12:26:54Z",
+              "dry_run": false,
+              "include_recyclable": false,
+              "disk_before_mb": 4227,
+              "disk_after_mb": 4226,
+              "freed_mb": 0,
+              "action_count": 3,
+              "error_count": 1,
+              "actions": [
+                {
+                  "command": "npm cache clean --force",
+                  "tool": "npm",
+                  "rc": 243,
+                  "stdout": "",
+                  "stderr": "npm warn using --force Recommended protections disabled.\nnpm error code EACCES\nnpm error syscall unlink\nnpm error path /Users/andy/.npm/_cacache/index-v5/96/92/4b5395174cfe4037bec807e39a800e36ef683cc3"
+                },
+                {
+                  "command": "pnpm store prune",
+                  "tool": "pnpm",
+                  "rc": 0,
+                  "stdout": "Checking 2 registered project(s) for global virtual store usage\nNo unused packages found in global virtual store\nRemoved all cached metadata files\nRemoved 0 files (0 B)\nRemoved 0 packages\n",
+                  "stderr": ""
+                },
+                {
+                  "path": "/Users/andy/.npm/_cacache",
+                  "status": "error",
+                  "reason": "PermissionError: [Errno 13] Permission denied: '/Users/andy/.npm/_cacache/index-v5/aa/cf'",
+                  "dry_run": false,
+                  "estimated_mb": 124.234375
+                }
+              ],
+              "status": "partial",
+              "receipt_path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/cleanup_receipts/20260727T122654Z_npm.json"
+            },
+            {
+              "schema_version": "2026-07-27.cleanup-receipt.v1",
+              "system": "homebrew",
+              "started_at": "2026-07-27T12:26:54Z",
+              "completed_at": "2026-07-27T12:27:14Z",
+              "dry_run": false,
+              "include_recyclable": false,
+              "disk_before_mb": 4226,
+              "disk_after_mb": 4229,
+              "freed_mb": 3,
+              "action_count": 1,
+              "error_count": 0,
+              "actions": [
+                {
+                  "command": "brew cleanup -s",
+                  "rc": 0,
+                  "stdout": "",
+                  "stderr": "Warning: Skipping aom: most recent version 3.14.1 not installed\nWarning: Skipping asciinema: most recent version 3.2.1 not installed\nWarning: Skipping azure-cli: most recent version 2.88.0 not install"
+                }
+              ],
+              "status": "ok",
+              "receipt_path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/cleanup_receipts/20260727T122714Z_homebrew.json"
+            },
+            {
+              "schema_version": "2026-07-27.cleanup-receipt.v1",
+              "system": "vscode",
+              "started_at": "2026-07-27T12:27:14Z",
+              "completed_at": "2026-07-27T12:27:14Z",
+              "dry_run": false,
+              "include_recyclable": false,
+              "disk_before_mb": 4229,
+              "disk_after_mb": 4229,
+              "freed_mb": 0,
+              "action_count": 6,
+              "error_count": 0,
+              "actions": [
+                {
+                  "path": "/Users/andy/Library/Application Support/Code/CachedExtensionVSIXs",
+                  "status": "missing",
+                  "reason": null,
+                  "dry_run": false,
+                  "estimated_mb": 0.0
+                },
+                {
+                  "path": "/Users/andy/Library/Application Support/Code/Crashpad",
+                  "status": "missing",
+                  "reason": null,
+                  "dry_run": false,
+                  "estimated_mb": 0.0
+                },
+                {
+                  "path": "/Users/andy/Library/Application Support/Code/logs",
+                  "status": "missing",
+                  "reason": null,
+                  "dry_run": false,
+                  "estimated_mb": 0.0
+                },
+                {
+                  "path": "/Users/andy/Library/Application Support/Code - Insiders/CachedExtensionVSIXs",
+                  "status": "missing",
+                  "reason": null,
+                  "dry_run": false,
+                  "estimated_mb": 0.0
+                },
+                {
+                  "path": "/Users/andy/Library/Application Support/Code - Insiders/Crashpad",
+                  "status": "missing",
+                  "reason": null,
+                  "dry_run": false,
+                  "estimated_mb": 0.0
+                },
+                {
+                  "path": "/Users/andy/Library/Application Support/Code - Insiders/logs",
+                  "status": "missing",
+                  "reason": null,
+                  "dry_run": false,
+                  "estimated_mb": 0.0
+                }
+              ],
+              "status": "ok",
+              "receipt_path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/cleanup_receipts/20260727T122714Z_vscode.json"
+            },
+            {
+              "schema_version": "2026-07-27.cleanup-receipt.v1",
+              "system": "xcode",
+              "started_at": "2026-07-27T12:27:14Z",
+              "completed_at": "2026-07-27T12:27:15Z",
+              "dry_run": false,
+              "include_recyclable": false,
+              "disk_before_mb": 4229,
+              "disk_after_mb": 4229,
+              "freed_mb": 0,
+              "action_count": 2,
+              "error_count": 0,
+              "actions": [
+                {
+                  "path": "/Users/andy/Library/Developer/Xcode/DerivedData",
+                  "status": "missing",
+                  "reason": null,
+                  "dry_run": false,
+                  "estimated_mb": 0.0
+                },
+                {
+                  "command": "xcrun simctl delete unavailable",
+                  "rc": 0,
+                  "stdout": "",
+                  "stderr": ""
+                }
+              ],
+              "status": "ok",
+              "receipt_path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/cleanup_receipts/20260727T122715Z_xcode.json"
+            },
+            {
+              "schema_version": "2026-07-27.cleanup-receipt.v1",
+              "system": "docker",
+              "started_at": "2026-07-27T12:27:15Z",
+              "completed_at": "2026-07-27T12:27:25Z",
+              "dry_run": false,
+              "include_recyclable": false,
+              "disk_before_mb": 4229,
+              "disk_after_mb": 4229,
+              "freed_mb": 0,
+              "action_count": 1,
+              "error_count": 0,
+              "actions": [
+                {
+                  "command": "docker ps",
+                  "status": "daemon_unhealthy",
+                  "note": "skip docker prune"
+                }
+              ],
+              "status": "ok",
+              "receipt_path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/cleanup_receipts/20260727T122725Z_docker.json"
+            },
+            {
+              "schema_version": "2026-07-27.cleanup-receipt.v1",
+              "system": "ollama",
+              "started_at": "2026-07-27T12:27:25Z",
+              "completed_at": "2026-07-27T12:27:25Z",
+              "dry_run": false,
+              "include_recyclable": false,
+              "disk_before_mb": 4229,
+              "disk_after_mb": 4229,
+              "freed_mb": 0,
+              "action_count": 0,
+              "error_count": 0,
+              "actions": [],
+              "status": "ok",
+              "receipt_path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/cleanup_receipts/20260727T122725Z_ollama.json"
+            },
+            {
+              "schema_version": "2026-07-27.cleanup-receipt.v1",
+              "system": "macos",
+              "started_at": "2026-07-27T12:27:25Z",
+              "completed_at": "2026-07-27T12:27:25Z",
+              "dry_run": false,
+              "include_recyclable": false,
+              "disk_before_mb": 4229,
+              "disk_after_mb": 4230,
+              "freed_mb": 1,
+              "action_count": 17,
+              "error_count": 0,
+              "actions": [
+                {
+                  "path": "/Users/andy/Library/Caches/pip",
+                  "status": "missing",
+                  "reason": null,
+                  "dry_run": false,
+                  "estimated_mb": 0.0
+                },
+                {
+                  "path": "/Users/andy/Library/Caches/node-gyp",
+                  "status": "missing",
+                  "reason": null,
+                  "dry_run": false,
+                  "estimated_mb": 0.0
+                },
+                {
+                  "path": "/Users/andy/Library/Caches/GeoServices",
+                  "status": "deleted",
+                  "reason": null,
+                  "dry_run": false,
+                  "estimated_mb": 0.01171875
+                },
+                {
+                  "path": "/Users/andy/Library/Caches/com.apple.helpd",
+                  "status": "missing",
+                  "reason": null,
+                  "dry_run": false,
+                  "estimated_mb": 0.0
+                },
+                {
+                  "path": "/Users/andy/Library/Caches/com.apple.parsecd",
+                  "status": "missing",
+                  "reason": null,
+                  "dry_run": false,
+                  "estimated_mb": 0.0
+                },
+                {
+                  "path": "/Users/andy/Library/Caches/typescript",
+                  "status": "missing",
+                  "reason": null,
+                  "dry_run": false,
+                  "estimated_mb": 0.0
+                },
+                {
+                  "path": "/Users/andy/Library/Caches/fanal",
+                  "status": "missing",
+                  "reason": null,
+                  "dry_run": false,
+                  "estimated_mb": 0.0
+                },
+                {
+                  "path": "/Users/andy/Library/Caches/com.grammarly.ProjectLlama",
+                  "status": "missing",
+                  "reason": null,
+                  "dry_run": false,
+                  "estimated_mb": 0.0
+                },
+                {
+                  "path": "/Users/andy/Library/Caches/com.apple.python",
+                  "status": "deleted",
+                  "reason": null,
+                  "dry_run": false,
+                  "estimated_mb": 0.77734375
+                },
+                {
+                  "path": "/Users/andy/Library/Caches/com.openai.chat",
+                  "status": "missing",
+                  "reason": null,
+                  "dry_run": false,
+                  "estimated_mb": 0.0
+                },
+                {
+                  "path": "/Users/andy/.cache/puppeteer",
+                  "status": "missing",
+                  "reason": null,
+                  "dry_run": false,
+                  "estimated_mb": 0.0
+                },
+                {
+                  "path": "/Users/andy/.cache/clojure-lsp",
+                  "status": "missing",
+                  "reason": null,
+                  "dry_run": false,
+                  "estimated_mb": 0.0
+                },
+                {
+                  "path": "/Users/andy/.cache/altimate-code",
+                  "status": "missing",
+                  "reason": null,
+                  "dry_run": false,
+                  "estimated_mb": 0.0
+                },
+                {
+                  "path": "/Users/andy/.cache/opencode",
+                  "status": "missing",
+                  "reason": null,
+                  "dry_run": false,
+                  "estimated_mb": 0.0
+                },
+                {
+                  "path": "/Users/andy/.cache/kilo",
+                  "status": "missing",
+                  "reason": null,
+                  "dry_run": false,
+                  "estimated_mb": 0.0
+                },
+                {
+                  "path": "/Users/andy/.cache/chrome-devtools-mcp",
+                  "status": "missing",
+                  "reason": null,
+                  "dry_run": false,
+                  "estimated_mb": 0.0
+                },
+                {
+                  "path": "/Users/andy/.cache/ms-playwright",
+                  "status": "missing",
+                  "reason": null,
+                  "dry_run": false,
+                  "estimated_mb": 0.0
+                }
+              ],
+              "status": "ok",
+              "receipt_path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/cleanup_receipts/20260727T122725Z_macos.json"
+            },
+            {
+              "schema_version": "2026-07-27.cleanup-receipt.v1",
+              "system": "downloads",
+              "started_at": "2026-07-27T12:27:25Z",
+              "completed_at": "2026-07-27T12:27:25Z",
+              "dry_run": false,
+              "include_recyclable": false,
+              "disk_before_mb": 4229,
+              "disk_after_mb": 4229,
+              "freed_mb": 0,
+              "action_count": 0,
+              "error_count": 0,
+              "actions": [],
+              "status": "ok",
+              "receipt_path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/cleanup_receipts/20260727T122725Z_downloads.json"
+            }
+          ]
+        },
+        "stderr": "Cleanup executor: free_mb=4228, systems=['pip', 'npm', 'homebrew', 'vscode', 'xcode', 'docker', 'ollama', 'macos', 'downloads'], dry_run=False, include_recyclable=False\n  -> running pip ...\n     ok freed=0MB errors=0\n  -> running npm ...\n     partial freed=0MB errors=1\n  -> running homebrew ...\n     ok freed=3MB errors=0\n  -> running vscode ...\n     ok freed=0MB errors=0\n  -> running xcode ...\n     ok freed=0MB errors=0\n  -> running docker ...\n     ok freed=0MB errors=0\n  -> running ollama ...\n "
+      }
+    },
+    "agent_chain_status": "cleanup_partial",
+    "orchestration_bridge": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/autonomous_cycle_orchestration_bridge.json"
+  },
+  "final_state": "cleanup_partial",
+  "remaining_risk": [
+    "Direct low-level tool calls can still bypass OODA if operators ignore this entrypoint.",
+    "AIDEV genesis/core lineage remains source-capability until fresh runtime proof promotes a lane."
+  ],
+  "log_path": "runtime/federation_orchestrator/autonomous_ooda_logs/ooda-20260727T122627Z.json"
+}

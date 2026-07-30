@@ -1,0 +1,28 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "docker",
+  "started_at": "2026-07-29T12:30:30Z",
+  "completed_at": "2026-07-29T12:30:32Z",
+  "dry_run": false,
+  "include_recyclable": false,
+  "disk_before_mb": 9852,
+  "disk_after_mb": 9851,
+  "freed_mb": 0,
+  "action_count": 2,
+  "error_count": 0,
+  "actions": [
+    {
+      "command": "docker system prune -f",
+      "rc": 0,
+      "stdout": "Deleted Containers:\ne6db2e2453216bb4e086b15e7bb4138a29c7158bc0f86b723c5f300d761f8d07\n5a6faaa8288e56125b58b820c5e766fd27a35a4997db399bcb6a49c9a071202f\n29fc11d326c4aa8559c262f1f666a9e07b4bc246edb29a85ce62929996376e3f\n404ad51625684efe06b572f975cbffd3d539bb427ae5aa197e5b26f74afe15b5\n270d325e34b2f07b57e9bbe443e42dd8d77f72ec7e88c57fa5c9e6a657f61d84\n\nDeleted Networks:\nopenapi-servers_default\n\nTotal reclaimed space: 32.77kB\n",
+      "stderr": ""
+    },
+    {
+      "command": "docker builder prune -f",
+      "rc": 0,
+      "stdout": "Total:\t0B\n",
+      "stderr": ""
+    }
+  ],
+  "status": "ok"
+}

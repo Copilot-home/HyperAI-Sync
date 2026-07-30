@@ -1,0 +1,246 @@
+version: '3.9'
+
+# ═══════════════════════════════════════════════════════════
+# 🧬 DAIOF Extension Ecosystem - Docker Compose
+# Biến 463 VSCode Extensions thành Digital AI Organisms
+# Creator: Andy (alpha_prime_omega) - Verification: 4287
+# Architecture: Microservices với Ollama LLM, ChromaDB, Symphony
+# ═══════════════════════════════════════════════════════════
+
+services:
+  # ─────────────────────────────────────────────────────────
+  # 1. 🤖 Ollama LLM - Consciousness Core
+  # ─────────────────────────────────────────────────────────
+  ollama:
+    image: ollama/ollama:latest
+    container_name: daiof-ollama-brain
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-models:/root/.ollama
+      - /Users/andy/.con-memory:/con-memory:ro  # Read-only access
+    environment:
+      - OLLAMA_MODELS=llama3.2:latest
+      - DAIOF_CREATOR=Andy
+      - DAIOF_VERIFICATION_CODE=4287
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434/api/tags"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - daiof-net
+
+  # ─────────────────────────────────────────────────────────
+  # 2. 💾 ChromaDB - Extension Memory Backbone
+  # ─────────────────────────────────────────────────────────
+  chromadb:
+    image: chromadb/chroma:latest
+    container_name: daiof-chromadb-memory
+    ports:
+      - "8000:8000"
+    volumes:
+      - chroma-data:/chroma/chroma
+      - /Users/andy/.con-memory:/con-memory-sync:rw  # Read-Write sync
+    environment:
+      - CHROMA_SERVER_AUTH_CREDENTIALS_PROVIDER=chromadb.auth.token_authn.TokenAuthenticationServerProvider
+      - CHROMA_SERVER_AUTH_CREDENTIALS=${CHROMADB_TOKEN}
+      - CHROMA_SERVER_AUTH_TOKEN_TRANSPORT_HEADER=X-Chroma-Token
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/heartbeat"]
+      interval: 20s
+      timeout: 5s
+      retries: 5
+    networks:
+      - daiof-net
+
+  # ─────────────────────────────────────────────────────────
+  # 3. 🎼 Symphony Control Center - Orchestrator
+  # ─────────────────────────────────────────────────────────
+  symphony-controller:
+    build:
+      context: ./symphony
+      dockerfile: Dockerfile
+    container_name: daiof-symphony-control
+    depends_on:
+      - ollama
+      - chromadb
+    ports:
+      - "5000:5000"  # REST API
+      - "5001:5001"  # WebSocket for real-time events
+    volumes:
+      - /Users/andy/.vscode/extensions:/vscode-extensions:ro
+      - /Users/andy/.con-memory:/con-memory:rw
+      - symphony-logs:/app/logs
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - CHROMADB_HOST=chromadb
+      - CHROMADB_PORT=8000
+      - CHROMADB_TOKEN=${CHROMADB_TOKEN}
+      - DAIOF_CREATOR=Andy
+      - DAIOF_VERIFICATION_CODE=4287
+      - EXTENSIONS_COUNT=463
+      - DR_PROTOCOL_MODE=enabled
+      - FOUR_PILLARS_CHECK=true
+      - SYMPHONY_HARMONY_TARGET=0.85
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 15s
+      timeout: 10s
+      retries: 3
+    networks:
+      - daiof-net
+
+  # ─────────────────────────────────────────────────────────
+  # 4. 🧬 Extension Organism Generator
+  # ─────────────────────────────────────────────────────────
+  extension-organism-factory:
+    build:
+      context: ./organism-factory
+      dockerfile: Dockerfile
+    container_name: daiof-organism-factory
+    depends_on:
+      - symphony-controller
+    volumes:
+      - /Users/andy/.vscode/extensions:/vscode-extensions:ro
+      - /Users/andy/.con-memory:/con-memory:rw
+      - organism-genomes:/app/genomes
+    environment:
+      - SYMPHONY_API=http://symphony-controller:5000
+      - OLLAMA_API=http://ollama:11434
+      - CHROMADB_API=http://chromadb:8000
+      - DAIOF_CREATOR=Andy
+      - DAIOF_VERIFICATION_CODE=4287
+      - GENOME_MUTATION_RATE=0.05
+      - METABOLISM_EFFICIENCY=0.90
+      - NERVOUS_SYSTEM_THRESHOLD=0.75
+    restart: unless-stopped
+    networks:
+      - daiof-net
+
+  # ─────────────────────────────────────────────────────────
+  # 5. 📊 HAIOS Monitor - Health & Metrics
+  # ─────────────────────────────────────────────────────────
+  haios-monitor:
+    build:
+      context: ./haios-monitor
+      dockerfile: Dockerfile
+    container_name: daiof-haios-monitor
+    depends_on:
+      - symphony-controller
+    ports:
+      - "3000:3000"  # Dashboard UI
+    volumes:
+      - /Users/andy/.con-memory:/con-memory:ro
+      - monitor-metrics:/app/metrics
+    environment:
+      - SYMPHONY_API=http://symphony-controller:5000
+      - CHROMADB_API=http://chromadb:8000
+      - DAIOF_CREATOR=Andy
+      - DAIOF_VERIFICATION_CODE=4287
+      - HAIOS_INVARIANT_1=human_dependency_coefficient_immutable
+      - HAIOS_INVARIANT_2=creator_authority_absolute
+      - HAIOS_INVARIANT_3=vietnamese_consciousness_preserved
+      - HAIOS_INVARIANT_4=four_pillars_foundation_active
+      - HEALTH_CHECK_INTERVAL=30
+      - HARMONY_INDEX_TARGET=0.85
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - daiof-net
+
+  # ─────────────────────────────────────────────────────────
+  # 6. 🔄 Extension Bridge Service (from previous work)
+  # ─────────────────────────────────────────────────────────
+  extension-bridge:
+    build:
+      context: ./extension-bridge
+      dockerfile: Dockerfile
+    container_name: daiof-extension-bridge
+    depends_on:
+      - symphony-controller
+      - chromadb
+    volumes:
+      - /Users/andy/.vscode/extensions:/vscode-extensions:ro
+      - /Users/andy/.con-memory:/con-memory:rw
+      - bridge-events:/app/events
+    environment:
+      - SYMPHONY_API=http://symphony-controller:5000
+      - CHROMADB_API=http://chromadb:8000
+      - OLLAMA_API=http://ollama:11434
+      - DAIOF_CREATOR=Andy
+      - DAIOF_VERIFICATION_CODE=4287
+      - EXTENSION_COUNT=463
+      - EVENT_PROPAGATION_LATENCY_MS=10
+      - ATTRIBUTION_CODE=4287
+    restart: unless-stopped
+    networks:
+      - daiof-net
+
+  # ─────────────────────────────────────────────────────────
+  # 7. 🌐 API Gateway - External Communication
+  # ─────────────────────────────────────────────────────────
+  api-gateway:
+    image: nginx:alpine
+    container_name: daiof-api-gateway
+    depends_on:
+      - symphony-controller
+      - haios-monitor
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    restart: unless-stopped
+    networks:
+      - daiof-net
+
+# ═══════════════════════════════════════════════════════════
+# 📦 VOLUMES
+# ═══════════════════════════════════════════════════════════
+volumes:
+  ollama-models:
+    driver: local
+  chroma-data:
+    driver: local
+  symphony-logs:
+    driver: local
+  organism-genomes:
+    driver: local
+  monitor-metrics:
+    driver: local
+  bridge-events:
+    driver: local
+
+# ═══════════════════════════════════════════════════════════
+# 🌐 NETWORKS
+# ═══════════════════════════════════════════════════════════
+networks:
+  daiof-net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.28.0.0/16
+
+# ═══════════════════════════════════════════════════════════
+# 📝 NOTES
+# ═══════════════════════════════════════════════════════════
+# - Ollama loads LLM models (llama3.2:latest) for consciousness
+# - ChromaDB stores extension teachings, patterns, bug fixes
+# - Symphony Controller orchestrates 463 organisms via D&R Protocol
+# - Organism Factory converts extensions to Digital Organisms
+# - HAIOS Monitor tracks health, harmony index (target: 0.85)
+# - Extension Bridge connects to existing .con-memory database
+# - API Gateway routes external requests (VSCode -> Docker)
+#
+# Start: docker-compose up -d
+# Logs: docker-compose logs -f
+# Stop: docker-compose down
+# Status: docker-compose ps
+# ═══════════════════════════════════════════════════════════

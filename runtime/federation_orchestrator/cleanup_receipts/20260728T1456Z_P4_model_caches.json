@@ -1,0 +1,21 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "batch": "P4",
+  "system": "hardlink_dedup",
+  "started_at": "2026-07-28T14:58:29Z",
+  "completed_at": "2026-07-28T14:58:29Z",
+  "status": "ok",
+  "freed_kb": 1385756,
+  "freed_mb": 1353,
+  "free_before_kb": 41158568,
+  "free_after_kb": 42540904,
+  "scanned_files": 100,
+  "hardlinks_created": 20,
+  "elapsed_seconds": 16.96,
+  "errors": [],
+  "dirs": [
+    "/Users/andy/.lmstudio/models",
+    "/Users/andy/.aitk/models"
+  ],
+  "notes": "Hardlinked duplicate files to share blocks; no files deleted"
+}

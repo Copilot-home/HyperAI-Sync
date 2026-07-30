@@ -4,12 +4,12 @@
   "avg_signal_health_score": 1.0,
   "latest": {
     "loop": 3,
-    "timestamp": "2026-06-06T18:37:24",
-    "latest_log": "20260606T161750",
+    "timestamp": "2026-07-29T22:59:10",
+    "latest_log": "20260729T220840",
     "mcp_or_telemetry_lines": 0,
-    "listening_ports": 26,
+    "listening_ports": 38,
     "ai_extension_sources": [],
-    "disk_state": "460Gi 425Gi 5.3Gi 99%",
+    "disk_state": "460Gi 407Gi 11Gi 98%",
     "signal_health_score": 1
   },
   "delta": {

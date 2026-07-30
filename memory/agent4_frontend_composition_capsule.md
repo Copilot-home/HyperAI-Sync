@@ -263,8 +263,8 @@
 
 - `AutonomyContext.tsx` and `AutonomyPanel.tsx` should treat `/api/autonomy/policy` as the UI-facing authority artifact for routine runtime decisions.
 - The main shell remains limited to the autonomy-safe core while policy proof events explain default vs managed authority changes.
-- current runtime story: `reuse_default_runtime` with boundary `autonomous`
-- runtime strategy: `default_runtime_active`
+- current runtime story: `runtime_cleanup` with boundary `projection_missing`
+- runtime strategy: `local_first_probe`
 ## Delta 2026-04-17 Preservation Cycle
 
 - Browser/runtime proof remains:

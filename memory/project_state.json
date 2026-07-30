@@ -1,26 +1,33 @@
 {
-  "last_updated": "2026-07-28T14:55:00Z",
-  "current_focus": "Repo topology graph built: branch/fork/same-basename graph classifies 88 nodes into standalone, product, or ecosystem convergence.",
-  "latest_summary": "Built repo topology graph across 88 nodes (3 owners). Created memory/repo_topology_map.json and memory/repo_topology_graph.md. Ecosystem hub: Copilot-home/HyperAI-Sync. Product canonicals: LineageAI/DAIOF-Framework (global), Copilot-home/DAIOF-Framework (experiment), Copilot-home/trust_of_copilot (experiment). Classification: 21 standalone systems, 10 converge to product, 53 converge to ecosystem hub, 3 product canonicals. Standalone requires clear operating name/source and active signal; brand-like external forks and inactive variants converge. Updated naming canon in repo_ecosystem_map.json."
-  "active_blockers": [
-    "Notion API key (auth-local integration) still cannot query DB_TASKS; requires sharing DB with the integration in Notion settings."
-  ],
+  "last_updated": "2026-07-29T13:00:20Z",
+  "current_focus": "Ollama lineage live verification",
+  "latest_summary": "Probed Ollama lineage across native Mac, Docker, and AP\u03a9 routing. Only native Ollama.app (PID 13894, port 11434) and remote Titan (192.168.3.84:11434) are live. Docker descendants (ollama-brain, FinalAI, prod) and HyperAI network/volumes are absent from current Docker state. Port 11435 is not in use. AP\u03a9 routes macbook_ollama to 127.0.0.1:11434, titan_ollama to 192.168.3.84:11434, macmini_ollama to 192.168.3.28:11434 (unreachable Ollama), and lmstudio/Bionic to 127.0.0.1:1234.",
+  "active_blockers": [],
   "next_actions": [
-    "Continue Notion-sync reconciliation once DB_TASKS is shared with auth-local.",
-    "Address 8 manual-review issues: DAIOF-Framewor#7, workbench#6, and trust_of_copilot/hyperai1989/vscode-d8204b72 items.",
-    "Implement periodic token health-check in hyperai_credentials_service.py.",
-    "Canonicalize Notion task titles to point at correct owner and system lane: [GH] Copilot-home/DAIOF-Framework #N (experiment) or LineageAI/DAIOF-Framework #N (global).",
-    "Respect naming canon in all future governance: each repo is an independent system; brand-like names are aliases, not vendor ownership."
+    "Verify 192.168.3.28:11434 Ollama if macmini is expected live; otherwise update canon to mark macmini_ollama CURRENTLY_UNREACHABLE."
   ],
   "closure_state": {
-    "status": "topology-mapped-governance-ready",
-    "reason": "Built graph topology across 88 repos/3 owners; each node classified as product_canonical, product_experiment, standalone_system, converge_to_product, or converge_to_ecosystem; Mermaid graph and JSON map generated; naming canon preserved.",
-    "tests": "gh API branch fetch succeeded for all repos; graph generated with 99 edges and 22 components; topology roles assigned.",
+    "status": "local-runtime-bound",
+    "reason": "AP\u03a9 gateway fully bound: Ollama, Bionic/LM Studio (1234), OpenRouter, GitHub Models, Google, Microsoft Foundry (gpt-5.4), 5 OpenAPI tool servers (Docker on 8901-8905), GCP controlled proxy, product backend. Credential broker healthy. No plaintext secrets in logs. Rollback bundles present.",
+    "tests": "Self-healing: /health ok, /v1/models ok, 5 /tools/{name}/openapi.json ok, Bionic /v1/chat/completions ok, Bionic /v1/embeddings FAIL (400 missing embeddingworker.js). Docker tool servers restarted and healthy.",
     "evidence": [
-      "memory/repo_topology_map.json",
-      "memory/repo_topology_graph.md",
-      "memory/repo_ecosystem_map.json",
-      "memory/project_state.json"
+      "memory/AP\u03a9_UNIFIED_STACK_POST_RESTART_20260729T0923Z.md",
+      "memory/AP\u03a9_UNIFIED_STACK_DOCKER_ATTEMPT_20260729T0912Z.md",
+      "memory/AP\u03a9_UNIFIED_STACK_E2E_RERUN_20260729T0845Z.md",
+      "memory/AP\u03a9_UNIFIED_STACK_COMPLETION_REPORT_20260729.md",
+      "/Users/andy/.apo/gateway/apo_config.yaml",
+      "/Users/andy/.apo/gateway/apo_gateway.py",
+      "/Users/andy/.apo/gateway/backups/",
+      "/Users/andy/openapi-servers/compose.yaml",
+      "/Users/andy/openapi-servers/servers/git/Dockerfile",
+      "/tmp/apo_gateway.log",
+      "memory/AP\u03a9_BIONIC_SYSTEM_OVERVIEW_20260729T1130Z.md",
+      "memory/SOCRATIC_CYCLE_BIONIC_PORT_41343_20260729.md",
+      "memory/SELF_HEALING_BIONIC_EMBEDDING_PROBE_20260729.md",
+      "/Users/andy/AGENTS.md",
+      "/Users/andy/.codex/AGENTS.md",
+      "/Users/andy/HyperAI-Sync/AGENTS.md",
+      "memory/SKILL_TOOL_PATH_VALIDATION_FIX_20260729.md"
     ]
   }
 }

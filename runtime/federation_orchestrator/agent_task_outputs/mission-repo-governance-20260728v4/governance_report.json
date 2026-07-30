@@ -1,0 +1,524 @@
+{
+  "mission_id": "mission-repo-governance-20260728v4",
+  "timestamp": "2026-07-28T14:48:55Z",
+  "owners": [
+    "NguyenCuong1989",
+    "Copilot-home",
+    "LineageAI"
+  ],
+  "stale_days": 90,
+  "notion_status_file": null,
+  "notion_db_id": null,
+  "total_open_issues": 84,
+  "by_category": {
+    "manual_review": 10,
+    "notion_unverified": 74
+  },
+  "actions": [],
+  "manual_review": [
+    {
+      "repo": "NguyenCuong1989/DAIOF-Framewor",
+      "number": 7,
+      "title": "[AP\u03a9 EXECUTOR HANDOFF] Bootstrap keyless GCP auth and resume provisioning PR #6",
+      "category": "manual_review"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 126,
+      "title": "[Notion] Phase 1C: Master Create/Update - All Property Types",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 125,
+      "title": "[Notion] [SYSTEM] Fix bridge schema + validate GitHub ingestion",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 124,
+      "title": "[Notion] [NOTION+LOCAL LLM] Design dispatcher logic and bind local LLM classifier",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 122,
+      "title": "[Notion] Phase 2: Test Research Mode - DAIOF Roadmap Analysis",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 121,
+      "title": "[Notion] Create Master Teachings Summary Report",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 118,
+      "title": "[Notion] Document: Workflow Orchestration Mastery Pattern",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 117,
+      "title": "[Notion] [CONNECTOR SPEC V2] Notion UI-Native Client Agent",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 116,
+      "title": "[Notion] \ud83d\ude80 Deploy AI Network - Complete Configuration Package",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 115,
+      "title": "[Notion] \ud83d\ude80 Deploy AI Network - Complete Configuration Package",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 114,
+      "title": "[Notion] DEPLOY \u2014 Local HyperAI Connector Runtime v2026-07-15",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/vscode-d8204b72",
+      "number": 5,
+      "title": "ci: remove false-negative PR checks from unconfigured template workflows",
+      "category": "manual_review"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 111,
+      "title": "[Notion] Phase 2A: Master Database Schema Operations",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 110,
+      "title": "[Notion] Phase 1B: Master Query Tool - Complex SQL",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 109,
+      "title": "[Notion] MASTER MISSION: Test to\u00e0n b\u1ed9 Notion capabilities ch\u01b0a d\u00f9ng",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 108,
+      "title": "[Notion] Phase 2B: Test Database Autofill - Auto-tag Categories",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 107,
+      "title": "[Notion] Configure Notion Mail AI Rules",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 104,
+      "title": "[Notion] Phase 1A: Master Search Tool - All Parameters",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 103,
+      "title": "[Notion] Test SQL JOIN queries traverse Knowledge Graph",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 102,
+      "title": "[Notion] \ud83d\udd2c Test 5: View Tool - Multiple Entity Types",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 100,
+      "title": "[Notion] Document Utilization % improvements",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 99,
+      "title": "[Notion] Test Sample Task 3",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 98,
+      "title": "[Notion] Analyze & Import 20 GitHub Repos to DB_PROJECTS",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 95,
+      "title": "[Notion] Test MCP Connection t\u1eeb Local Machine",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 94,
+      "title": "[Notion] Phase 2.3: Neural Network Training Test",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 91,
+      "title": "[Notion] Phase 2: Test Agent Mode v\u1edbi Complex Task",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 90,
+      "title": "[Notion] Create Phase 3 roadmap - Next 7 days",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 89,
+      "title": "[Notion] Phase 1C: Master Create/Update - All Property Types",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 88,
+      "title": "[Notion] Document: Workflow Orchestration Mastery Pattern",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 86,
+      "title": "[Notion] Practice: View Tool Mastery - Batch Entity Verification",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 85,
+      "title": "[Notion] Phase 2B: Test Research Mode - DAIOF Neural Interface MVP",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 84,
+      "title": "[Notion] Populate 10 th\u00eam breakthroughs t\u1eeb past sessions",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 83,
+      "title": "[Notion] Import CSV Data v\u00e0o DB_KNOWLEDGE",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 82,
+      "title": "[Notion] Practice: Agent Mode - Delegate Complex Multi-Step Workflow",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 81,
+      "title": "[Notion] Phase 1.1: Test Pieces API Connectivity",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 80,
+      "title": "[Notion] Practice: Database Autofill - AI Property Completion at Scale",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 79,
+      "title": "[Notion] Phase 2: Test Multi-Model AI Selection",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 77,
+      "title": "[Notion] Test Sample Task 2",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 75,
+      "title": "[Notion] Phase 3.1: Documentation & API Guide",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 72,
+      "title": "[Notion] Phase 2: Test Research Mode - DAIOF Roadmap Analysis",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 70,
+      "title": "[Notion] Create Master Teachings Summary Report",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 69,
+      "title": "[Notion] Document Data Source IDs",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 68,
+      "title": "[Notion] Phase 1.2: Deploy Updated Polling Bridge Code",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 65,
+      "title": "[Notion] Document: Database as Memory Pattern",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 64,
+      "title": "[Notion] [GH] NguyenCuong1989/trust_of_copilot #20 [Notion] Tin t\u1ee9c m\u1edbi nh\u1ea5t",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 63,
+      "title": "[Notion] [GH] NguyenCuong1989/trust_of_copilot #26 [Notion] B\u1eaft \u0111\u1ea7u",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 62,
+      "title": "[Notion] [GH] NguyenCuong1989/DAIOF-Framework #30 Maintains AI-Human interdependence",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 61,
+      "title": "[Notion] [NOTION NODE] Own GitHub issue intake, classification, and dispatch",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 60,
+      "title": "[Notion] [CONNECTOR SPEC V2] Notion UI-Native Client Agent",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 59,
+      "title": "[Notion] [GH] NguyenCuong1989/trust_of_copilot #21 [Notion] Ch\u00ednh s\u00e1ch ph\u00fac l\u1ee3i",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 58,
+      "title": "[Notion] [GH] NguyenCuong1989/DAIOF-Framework #34 Follows biological metaphors",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 57,
+      "title": "[Notion] [GH] NguyenCuong1989/DAIOF-Framework #36 [DOCS]",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 56,
+      "title": "[Notion] [NOTION+LOCAL LLM] Design dispatcher logic and bind local LLM classifier",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 55,
+      "title": "[Notion] [GH] NguyenCuong1989/DAIOF-Framework #37 [DOCS]",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 54,
+      "title": "[Notion] [GH] NguyenCuong1989/trust_of_copilot #29 [Notion] Trang m\u1edbi v\u1edbi th\u1ebb",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 53,
+      "title": "[Notion] [GH] NguyenCuong1989/trust_of_copilot #27 [Notion] Trang m\u1edbi",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 52,
+      "title": "[Notion] [GH] NguyenCuong1989/trust_of_copilot #23 [Notion] Trang m\u1edbi v\u1edbi x\u00e1c minh",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 51,
+      "title": "[Notion] [SYSTEM] Fix bridge schema + validate GitHub ingestion",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 50,
+      "title": "[Notion] [GH] NguyenCuong1989/trust_of_copilot #25 [Notion] S\u1ee9 m\u1ec7nh, T\u1ea7m nh\u00ecn, Gi\u00e1 tr\u1ecb",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 49,
+      "title": "[Notion] [GH] NguyenCuong1989/trust_of_copilot #22 [Notion] Ch\u00ednh s\u00e1ch ngh\u1ec9 ph\u00e9p",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 48,
+      "title": "[Notion] [GH] NguyenCuong1989/trust_of_copilot #24 [Notion] Du l\u1ecbch c\u00f4ng ty",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 47,
+      "title": "[Notion] [GH] NguyenCuong1989/DAIOF-Framework #33 Improves consciousness development",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 46,
+      "title": "[Notion] [GH] NguyenCuong1989/trust_of_copilot #28 [Notion] S\u1ef1 ki\u1ec7n n\u00e2ng cao tinh th\u1ea7n",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 45,
+      "title": "[Notion] [ARCH] Build GitHub \u2192 Notion \u2192 AI DevOps \u2192 PR/Merge orchestration loop",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 44,
+      "title": "[Notion] [GH] NguyenCuong1989/DAIOF-Framework #78 [DOCS]",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 43,
+      "title": "[Notion] [GH] NguyenCuong1989/DAIOF-Framework #31 Respects immutable genes",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 42,
+      "title": "[Notion] [GH] NguyenCuong1989/DAIOF-Framework #32 Enhances safety",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 41,
+      "title": "[Notion] [CONNECTOR SPEC] Notion Dispatcher MCP Server + Local LLM Binder",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 39,
+      "title": "[Notion] Document: Zero-Click Orchestration Pattern",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 38,
+      "title": "[Notion] Phase 1.3: Run End-to-End Integration Test",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 37,
+      "title": "[Notion] Test GitHub \u2192 Notion Sync Workflow",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 36,
+      "title": "[Notion] Migrate DAIOF Kernel v3.0 Documentation",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 35,
+      "title": "[Notion] Phase 1.1: Test Pieces API Connectivity - UPDATED",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 34,
+      "title": "[Notion] Update H\u01b0\u1edbng d\u1eabn v\u1edbi Phase 2 learnings",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 33,
+      "title": "[Notion] Test Sample Task for Update Commands",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "NguyenCuong1989/trust_of_copilot-c8aae4ab",
+      "number": 32,
+      "title": "[Notion] Phase 3.2: DAIOF Kernel Integration Guide",
+      "category": "notion_unverified"
+    },
+    {
+      "repo": "Copilot-home/DAIOF-Framework",
+      "number": 118,
+      "title": "[DOCS AUDIT] Consolidated review of README, white paper, CONTRIBUTING and doc gaps",
+      "category": "manual_review"
+    },
+    {
+      "repo": "Copilot-home/DAIOF-Framework",
+      "number": 114,
+      "title": "[CI BASELINE] Regenerate workflow_manifest.json and separate PR-caused failures",
+      "category": "manual_review"
+    },
+    {
+      "repo": "Copilot-home/workbench",
+      "number": 6,
+      "title": "Titan normalization: bind canonical product repo, prove remote CI, and map Vercel surface",
+      "category": "manual_review"
+    },
+    {
+      "repo": "Copilot-home/DAIOF-Framework",
+      "number": 113,
+      "title": "[ORG GOVERNANCE] Execute Copilot-home repository normalization waves",
+      "category": "manual_review"
+    },
+    {
+      "repo": "Copilot-home/DAIOF-Framework",
+      "number": 102,
+      "title": "[LAB] Connector runtime audit \u2013 2026-05-17",
+      "category": "manual_review"
+    },
+    {
+      "repo": "Copilot-home/DAIOF-Framework",
+      "number": 96,
+      "title": "Autonomous execution wave multi-platform runtime normalization",
+      "category": "manual_review"
+    },
+    {
+      "repo": "Copilot-home/DAIOF-Framework",
+      "number": 94,
+      "title": "Runtime triage: repository landscape fragmentation and duplicate DAIOF surface",
+      "category": "manual_review"
+    },
+    {
+      "repo": "Copilot-home/DAIOF-Framework",
+      "number": 29,
+      "title": "[BUG]",
+      "category": "manual_review"
+    }
+  ]
+}

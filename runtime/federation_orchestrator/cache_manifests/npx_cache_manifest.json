@@ -1,0 +1,170 @@
+[
+  {
+    "dir": "/Users/andy/.npm/_npx/4b4c857f6efdfb61",
+    "name": "@wonderwhy-er/desktop-commander",
+    "version": "^0.2.45",
+    "mtime": "2026-07-13T17:44:18.734429",
+    "size_kb": 209968
+  },
+  {
+    "dir": "/Users/andy/.npm/_npx/3882e196cfbcc5f3",
+    "name": "@wonderwhy-er/desktop-commander",
+    "version": "^0.2.42",
+    "mtime": "2026-07-13T13:53:27.479960",
+    "size_kb": 209892
+  },
+  {
+    "dir": "/Users/andy/.npm/_npx/b5eb068bd5d2cfbe",
+    "name": "@toolbox-sdk/server",
+    "version": "^1.8.0",
+    "mtime": "2026-07-28T13:53:24.671352",
+    "size_kb": 150392
+  },
+  {
+    "dir": "/Users/andy/.npm/_npx/541454632b79112e",
+    "name": "@azure/mcp",
+    "version": "^3.0.0-beta.29",
+    "mtime": "2026-07-27T21:10:40.383600",
+    "size_kb": 119144
+  },
+  {
+    "dir": "/Users/andy/.npm/_npx/f775f2fa29170d93",
+    "name": "@postman/postman-mcp-server",
+    "version": "^2.11.2",
+    "mtime": "2026-07-28T13:53:18.065721",
+    "size_kb": 89484
+  },
+  {
+    "dir": "/Users/andy/.npm/_npx/e832744b47dba16c",
+    "name": "@postman/postman-mcp-server",
+    "version": "^2.11.0",
+    "mtime": "2026-07-13T14:41:51.914228",
+    "size_kb": 89476
+  },
+  {
+    "dir": "/Users/andy/.npm/_npx/ea4b057b95c800cc",
+    "name": "@sentry/mcp-server",
+    "version": "^0.37.0",
+    "mtime": "2026-07-13T17:44:14.413391",
+    "size_kb": 78108
+  },
+  {
+    "dir": "/Users/andy/.npm/_npx/07e67900497e7fc9",
+    "name": "firecrawl-mcp",
+    "version": "^3.22.3",
+    "mtime": "2026-07-13T13:55:23.355222",
+    "size_kb": 55140
+  },
+  {
+    "dir": "/Users/andy/.npm/_npx/deea81b821a9ed55",
+    "name": "@microsoft/powerbi-modeling-mcp",
+    "version": "^0.5.0-beta.11",
+    "mtime": "2026-07-14T04:09:03.970629",
+    "size_kb": 47964
+  },
+  {
+    "dir": "/Users/andy/.npm/_npx/59d0f89bfc1958a5",
+    "name": "@huggingface/tiny-agents",
+    "version": "^0.3.4",
+    "mtime": "2026-07-12T06:24:07.332938",
+    "size_kb": 46208
+  },
+  {
+    "dir": "/Users/andy/.npm/_npx/2e5266eea15d0ccd",
+    "name": "@notionhq/notion-mcp-server",
+    "version": "^2.4.1",
+    "mtime": "2026-07-13T17:44:05.464006",
+    "size_kb": 46004
+  },
+  {
+    "dir": "/Users/andy/.npm/_npx/75e019529f10261d",
+    "name": "aisquare-playwright-mcp",
+    "version": "^0.0.48",
+    "mtime": "2026-07-14T04:10:12.291746",
+    "size_kb": 37360
+  },
+  {
+    "dir": "/Users/andy/.npm/_npx/9a03f41e320b32ff",
+    "name": "bing-cn-mcp",
+    "version": "^1.0.2",
+    "mtime": "2026-07-28T00:37:55.735195",
+    "size_kb": 35632
+  },
+  {
+    "dir": "/Users/andy/.npm/_npx/a3241bba59c344f5",
+    "name": "@modelcontextprotocol/server-filesystem",
+    "version": "^2026.7.10",
+    "mtime": "2026-07-13T17:44:22.440257",
+    "size_kb": 31236
+  },
+  {
+    "dir": "/Users/andy/.npm/_npx/295df104acba4005",
+    "name": "@upstash/context7-mcp",
+    "version": "^1.0.31",
+    "mtime": "2026-07-28T13:59:11.349528",
+    "size_kb": 28272
+  },
+  {
+    "dir": "/Users/andy/.npm/_npx/a6b1afafcf18ce28",
+    "name": "@ai-capabilities-suite/mcp-debugger-server",
+    "version": "^1.5.23",
+    "mtime": "2026-07-13T13:53:27.491119",
+    "size_kb": 26552
+  },
+  {
+    "dir": "/Users/andy/.npm/_npx/de2bd410102f5eda",
+    "name": "@modelcontextprotocol/server-sequential-thinking",
+    "version": "^2026.7.4",
+    "mtime": "2026-07-28T13:53:17.969846",
+    "size_kb": 25788
+  },
+  {
+    "dir": "/Users/andy/.npm/_npx/15b07286cbcc3329",
+    "name": "@modelcontextprotocol/server-memory",
+    "version": "^2026.7.4",
+    "mtime": "2026-07-28T13:59:10.977270",
+    "size_kb": 24588
+  },
+  {
+    "dir": "/Users/andy/.npm/_npx/9833c18b2d85bc59",
+    "name": "@playwright/mcp",
+    "version": "^0.0.78",
+    "mtime": "2026-07-28T13:59:10.974855",
+    "size_kb": 17964
+  },
+  {
+    "dir": "/Users/andy/.npm/_npx/eaea56a4e7b4c288",
+    "name": "chrome-devtools-mcp",
+    "version": "^1.4.0",
+    "mtime": "2026-07-13T13:53:26.040114",
+    "size_kb": 17936
+  },
+  {
+    "dir": "/Users/andy/.npm/_npx/15c61037b1978c83",
+    "name": "chrome-devtools-mcp",
+    "version": "^1.6.0",
+    "mtime": "2026-07-28T13:53:17.989593",
+    "size_kb": 13440
+  },
+  {
+    "dir": "/Users/andy/.npm/_npx/1a3c4333f3a90708",
+    "name": "mcp-remote",
+    "version": "^0.1.38",
+    "mtime": "2026-07-27T07:12:31.298807",
+    "size_kb": 7160
+  },
+  {
+    "dir": "/Users/andy/.npm/_npx/ac0ed6aa23b37c1e",
+    "name": "skills",
+    "version": "^1.5.20",
+    "mtime": "2026-07-27T22:05:39.807152",
+    "size_kb": 1820
+  },
+  {
+    "dir": "/Users/andy/.npm/_npx/0b83cd9ca5e1325c",
+    "name": "only-allow",
+    "version": "^1.2.2",
+    "mtime": "2026-07-26T03:53:59.902284",
+    "size_kb": 44
+  }
+]

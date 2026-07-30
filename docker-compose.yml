@@ -1,0 +1,14 @@
+services:
+  hyperai-credentials:
+    build: .
+    image: hyperai-credentials:latest
+    container_name: hyperai-credentials
+    ports:
+      - "127.0.0.1:8765:8765"
+    volumes:
+      - type: bind
+        source: ~/.config/hyperai/credentials.env
+        target: /run/secrets/credentials.env
+        read_only: true
+    environment:
+      - HYPERAI_CREDENTIALS=/run/secrets/credentials.env

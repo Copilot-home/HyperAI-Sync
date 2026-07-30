@@ -1,0 +1,15 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "batch": "P1",
+  "system": "npm_npx_cache",
+  "started_at": "2026-07-28T14:04:23Z",
+  "completed_at": "2026-07-28T14:04:23Z",
+  "status": "ok",
+  "freed_kb": 895844,
+  "freed_mb": 874,
+  "deleted_count": 12,
+  "free_before_kb": 34006864,
+  "free_after_kb": 34964520,
+  "manifest": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/cache_manifests/npx_cache_manifest.json",
+  "notes": "Pruned ~/.npm/_npx entries older than 14 days after manifest extraction"
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "npm",
+  "started_at": "2026-07-27T12:41:57Z",
+  "completed_at": "2026-07-27T12:41:58Z",
+  "dry_run": false,
+  "include_recyclable": false,
+  "disk_before_mb": 7202,
+  "disk_after_mb": 7204,
+  "freed_mb": 2,
+  "action_count": 3,
+  "error_count": 1,
+  "actions": [
+    {
+      "command": "npm cache clean --force",
+      "tool": "npm",
+      "rc": 243,
+      "stdout": "",
+      "stderr": "npm warn using --force Recommended protections disabled.\nnpm error code EACCES\nnpm error syscall unlink\nnpm error path /Users/andy/.npm/_cacache/index-v5/aa/cf/7d2dab7f8664dc9fa844cf5e9bef38ea56ed2907"
+    },
+    {
+      "command": "pnpm store prune",
+      "tool": "pnpm",
+      "rc": 226,
+      "stdout": "[EROFS] EROFS: read-only file system, open '/_tmp_95597_60a8cb1822bdbc52be46963b9fbe1526'\n\n\n\n",
+      "stderr": ""
+    },
+    {
+      "path": "/Users/andy/.npm/_cacache",
+      "status": "error",
+      "reason": "PermissionError: [Errno 13] Permission denied: '/Users/andy/.npm/_cacache/index-v5/aa/cf'",
+      "dry_run": false,
+      "estimated_mb": 124.234375
+    }
+  ],
+  "status": "partial"
+}

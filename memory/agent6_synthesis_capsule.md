@@ -53,16 +53,14 @@
 
 ## Current Autonomous Boundary Proof
 
-- boundary state: `autonomous`
-- selected action: `reuse_default_runtime`
-- runtime strategy: `default_runtime_active`
-- backend classification: `autonomous-core-ready`
-- frontend classification: `preview-alive`
-- operator relay required: `no`
+- boundary state: `projection_missing`
+- selected action: `runtime_cleanup`
+- runtime strategy: `local_first_probe`
+- backend classification: `offline`
+- frontend classification: `offline`
+- operator relay required: `yes`
 - recent proof events:
-- reuse_default_runtime: Default local runtime already satisfies the autonomous core contract.
-- hold_current_runtime: Current backend listener is already running outside the default authority port, so nested recovery is skipped. Managed runtime manifest is missing or incomplete.
-- reuse_default_runtime: Default local runtime already satisfies the autonomous core contract.
+- No recent proof events recorded.
 ## Delta 2026-04-18 Autonomous Queue Preservation
 
 - Loaded `memory/master_autonomous_todo.md`, `memory/runtime_execution_todo.md`, and all agent capsules before runtime reasoning.

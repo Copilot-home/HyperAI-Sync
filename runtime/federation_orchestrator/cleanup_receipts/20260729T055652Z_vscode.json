@@ -1,0 +1,100 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "vscode",
+  "started_at": "2026-07-29T05:56:52Z",
+  "completed_at": "2026-07-29T05:56:52Z",
+  "dry_run": false,
+  "include_recyclable": true,
+  "disk_before_mb": 1510,
+  "disk_after_mb": 1566,
+  "freed_mb": 56,
+  "action_count": 12,
+  "error_count": 0,
+  "actions": [
+    {
+      "path": "/Users/andy/Library/Application Support/Code/CachedExtensionVSIXs",
+      "status": "missing",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.0
+    },
+    {
+      "path": "/Users/andy/Library/Application Support/Code/Crashpad",
+      "status": "missing",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.0
+    },
+    {
+      "path": "/Users/andy/Library/Application Support/Code/logs",
+      "status": "missing",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.0
+    },
+    {
+      "path": "/Users/andy/Library/Application Support/Code/Cache",
+      "status": "deleted",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 3.2109375
+    },
+    {
+      "path": "/Users/andy/Library/Application Support/Code/CachedData",
+      "status": "deleted",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 24.45703125
+    },
+    {
+      "path": "/Users/andy/Library/Application Support/Code/CachedProfilesData",
+      "status": "deleted",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 6.87109375
+    },
+    {
+      "path": "/Users/andy/Library/Application Support/Code - Insiders/CachedExtensionVSIXs",
+      "status": "missing",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.0
+    },
+    {
+      "path": "/Users/andy/Library/Application Support/Code - Insiders/Crashpad",
+      "status": "missing",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.0
+    },
+    {
+      "path": "/Users/andy/Library/Application Support/Code - Insiders/logs",
+      "status": "missing",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.0
+    },
+    {
+      "path": "/Users/andy/Library/Application Support/Code - Insiders/Cache",
+      "status": "deleted",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 3.11328125
+    },
+    {
+      "path": "/Users/andy/Library/Application Support/Code - Insiders/CachedData",
+      "status": "deleted",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 14.03515625
+    },
+    {
+      "path": "/Users/andy/Library/Application Support/Code - Insiders/CachedProfilesData",
+      "status": "deleted",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 5.7109375
+    }
+  ],
+  "status": "ok"
+}

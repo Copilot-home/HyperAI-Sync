@@ -1,0 +1,15 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "pip",
+  "started_at": "2026-07-29T06:14:53Z",
+  "completed_at": "2026-07-29T06:15:16Z",
+  "dry_run": true,
+  "include_recyclable": true,
+  "disk_before_mb": 282,
+  "disk_after_mb": 261,
+  "freed_mb": 0.0,
+  "action_count": 0,
+  "error_count": 0,
+  "actions": [],
+  "status": "ok"
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "batch": "C1",
+  "system": "downloads_incomplete",
+  "started_at": "2026-07-28T13:50:26Z",
+  "completed_at": "2026-07-28T13:50:26Z",
+  "status": "ok",
+  "freed_kb": 1120596,
+  "freed_mb": 1094,
+  "deleted_count": 8,
+  "free_before_kb": 29606552,
+  "free_after_kb": 30728056,
+  "notes": "Removed incomplete Chrome .download temp files from ~/Downloads"
+}

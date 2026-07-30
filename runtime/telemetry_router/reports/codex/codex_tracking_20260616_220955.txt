@@ -1,0 +1,7 @@
+ts=20260616_220955
+--- codex home ---
+1.4G	/Users/andy/.codex
+--- codex sessions ---
+     247
+--- codex warnings/errors ---
+--- vscode codex mcp ---

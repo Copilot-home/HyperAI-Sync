@@ -168,14 +168,12 @@ Why this is still minimal:
 ## Delta 2026-04-01 Autonomous Policy Authority
 
 - `/api/autonomy/policy` is now part of the live app-core contract and should be treated as the browser-safe authority snapshot.
-- current selected action: `reuse_default_runtime`
-- current boundary state: `autonomous`
-- backend classification: `autonomous-core-ready`
-- frontend classification: `preview-alive`
+- current selected action: `runtime_cleanup`
+- current boundary state: `projection_missing`
+- backend classification: `offline`
+- frontend classification: `offline`
 - recent proof events:
-- reuse_default_runtime: Default local runtime already satisfies the autonomous core contract.
-- hold_current_runtime: Current backend listener is already running outside the default authority port, so nested recovery is skipped. Managed runtime manifest is missing or incomplete.
-- reuse_default_runtime: Default local runtime already satisfies the autonomous core contract.
+- No recent proof events recorded.
 ## Delta 2026-04-17 Preservation Cycle Runtime Probe
 
 - Fresh runtime probes from the preservation cycle showed the current `backend/server.js` listener on `5000` responds successfully to:

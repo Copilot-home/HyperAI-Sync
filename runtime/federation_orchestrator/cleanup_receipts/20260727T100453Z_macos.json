@@ -1,0 +1,112 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "macos",
+  "started_at": "2026-07-27T10:04:53Z",
+  "completed_at": "2026-07-27T10:04:53Z",
+  "dry_run": true,
+  "include_recyclable": false,
+  "disk_before_mb": 8234,
+  "disk_after_mb": 8234,
+  "freed_mb": 0,
+  "action_count": 16,
+  "error_count": 0,
+  "actions": [
+    {
+      "path": "/Users/andy/Library/Caches/pip",
+      "status": "dry_run",
+      "reason": null,
+      "dry_run": true
+    },
+    {
+      "path": "/Users/andy/Library/Caches/node-gyp",
+      "status": "dry_run",
+      "reason": null,
+      "dry_run": true
+    },
+    {
+      "path": "/Users/andy/Library/Caches/GeoServices",
+      "status": "dry_run",
+      "reason": null,
+      "dry_run": true
+    },
+    {
+      "path": "/Users/andy/Library/Caches/com.apple.helpd",
+      "status": "dry_run",
+      "reason": null,
+      "dry_run": true
+    },
+    {
+      "path": "/Users/andy/Library/Caches/com.apple.parsecd",
+      "status": "dry_run",
+      "reason": null,
+      "dry_run": true
+    },
+    {
+      "path": "/Users/andy/Library/Caches/typescript",
+      "status": "dry_run",
+      "reason": null,
+      "dry_run": true
+    },
+    {
+      "path": "/Users/andy/Library/Caches/fanal",
+      "status": "dry_run",
+      "reason": null,
+      "dry_run": true
+    },
+    {
+      "path": "/Users/andy/Library/Caches/com.grammarly.ProjectLlama",
+      "status": "dry_run",
+      "reason": null,
+      "dry_run": true
+    },
+    {
+      "path": "/Users/andy/Library/Caches/com.apple.python",
+      "status": "dry_run",
+      "reason": null,
+      "dry_run": true
+    },
+    {
+      "path": "/Users/andy/Library/Caches/com.openai.chat",
+      "status": "dry_run",
+      "reason": null,
+      "dry_run": true
+    },
+    {
+      "path": "/Users/andy/.cache/puppeteer",
+      "status": "dry_run",
+      "reason": null,
+      "dry_run": true
+    },
+    {
+      "path": "/Users/andy/.cache/clojure-lsp",
+      "status": "dry_run",
+      "reason": null,
+      "dry_run": true
+    },
+    {
+      "path": "/Users/andy/.cache/altimate-code",
+      "status": "dry_run",
+      "reason": null,
+      "dry_run": true
+    },
+    {
+      "path": "/Users/andy/.cache/opencode",
+      "status": "dry_run",
+      "reason": null,
+      "dry_run": true
+    },
+    {
+      "path": "/Users/andy/.cache/kilo",
+      "status": "dry_run",
+      "reason": null,
+      "dry_run": true
+    },
+    {
+      "path": "/Users/andy/.cache/chrome-devtools-mcp",
+      "status": "dry_run",
+      "reason": null,
+      "dry_run": true
+    }
+  ],
+  "status": "ok"
+}

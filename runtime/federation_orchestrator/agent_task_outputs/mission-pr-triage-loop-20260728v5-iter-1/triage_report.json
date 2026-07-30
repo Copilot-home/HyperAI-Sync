@@ -1,0 +1,21 @@
+{
+  "schema_version": "2026-04-16.hyperai-pr-triage.v1",
+  "mission_id": "mission-pr-triage-loop-20260728v5-iter-1",
+  "timestamp": "2026-07-28T12:31:27Z",
+  "execute": true,
+  "stale_days": 90,
+  "owners": [
+    "NguyenCuong1989",
+    "Copilot-home"
+  ],
+  "summary": {
+    "total": 0,
+    "actions": 0,
+    "closed": 0,
+    "merged": 0,
+    "manual_review": 0,
+    "by_category": {}
+  },
+  "classified": [],
+  "manual_review": []
+}

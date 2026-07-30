@@ -1,0 +1,28 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "docker",
+  "started_at": "2026-07-29T09:13:22Z",
+  "completed_at": "2026-07-29T09:13:28Z",
+  "dry_run": false,
+  "include_recyclable": false,
+  "disk_before_mb": 1538,
+  "disk_after_mb": 2202,
+  "freed_mb": 664,
+  "action_count": 2,
+  "error_count": 0,
+  "actions": [
+    {
+      "command": "docker system prune -f",
+      "rc": 0,
+      "stdout": "Deleted Containers:\n88d825647ada632eef32d204c9f843e8cee247e8c6b31d168be115f1fcd7299d\n6327f524072f9344d87716c20cc6376b98f99c50321429259c7272495a1b30d8\nda8149f74363866abf817e7115a5f0c71dfd46bad51a52187d38a18237305952\n22d872b5b8cfa4a23f6e1d2a0dbb6dab8a050b9e06cd49ffeb8575f68cd60a69\naa8b80ae6c61571cd5c19d97c01eed3e00f127251f7b968d69d333952e4aceb9\n0e2edf0277df450fbb82cc8ba8dd2ef155a123e1eb9e5490db2c517dce827738\nde9be7b5b662a4b07dbccdb9a7dce1e33569612b2c60e27da7a6c264b13b1c11\n\nDeleted Networks:\ntenure",
+      "stderr": ""
+    },
+    {
+      "command": "docker builder prune -f",
+      "rc": 0,
+      "stdout": "Total:\t0B\n",
+      "stderr": ""
+    }
+  ],
+  "status": "ok"
+}
