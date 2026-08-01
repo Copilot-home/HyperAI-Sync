@@ -1,0 +1,852 @@
+{
+  "schema_version": "2026-07-30.ai-application-registry-summary.v1",
+  "database": "/Users/andy/HyperAI-Sync/memory/ai_application_registry.db",
+  "counts": {
+    "apΩ_tool": 5,
+    "container": 5,
+    "docker_daemon": 1,
+    "image": 5,
+    "mcp_catalog": 313,
+    "mcp_client": 3,
+    "model_alias": 10,
+    "model_upstream": 10,
+    "native_app": 18,
+    "network": 6,
+    "openapi_server": 18,
+    "volume": 3
+  },
+  "total": 397,
+  "meta": {
+    "created_at": "2026-07-30T15:46:07.395819+00:00",
+    "counts": "{\"mcp_catalog\": 313, \"native_app\": 18, \"container\": 5, \"image\": 5, \"volume\": 3, \"network\": 6, \"openapi_server\": 18, \"model_alias\": 10, \"model_upstream\": 10, \"apΩ_tool\": 5, \"mcp_client\": 3, \"docker_daemon\": 1}",
+    "total_applications": "397"
+  },
+  "sample": [
+    {
+      "did": "did:hyperai:apotools:time",
+      "type": "apΩ_tool",
+      "display_title": "time",
+      "status": "configured",
+      "endpoint": "http://127.0.0.1:8901",
+      "port": 8901
+    },
+    {
+      "did": "did:hyperai:apotools:weather",
+      "type": "apΩ_tool",
+      "display_title": "weather",
+      "status": "configured",
+      "endpoint": "http://127.0.0.1:8902",
+      "port": 8902
+    },
+    {
+      "did": "did:hyperai:apotools:filesystem",
+      "type": "apΩ_tool",
+      "display_title": "filesystem",
+      "status": "configured",
+      "endpoint": "http://127.0.0.1:8903",
+      "port": 8903
+    },
+    {
+      "did": "did:hyperai:apotools:git",
+      "type": "apΩ_tool",
+      "display_title": "git",
+      "status": "configured",
+      "endpoint": "http://127.0.0.1:8904",
+      "port": 8904
+    },
+    {
+      "did": "did:hyperai:apotools:memory",
+      "type": "apΩ_tool",
+      "display_title": "memory",
+      "status": "configured",
+      "endpoint": "http://127.0.0.1:8905",
+      "port": 8905
+    },
+    {
+      "did": "did:hyperai:container:hyperai-credentials",
+      "type": "container",
+      "display_title": "hyperai-credentials",
+      "status": "running",
+      "endpoint": "127.0.0.1:8765",
+      "port": 8765
+    },
+    {
+      "did": "did:hyperai:container:kind-cloud-provider",
+      "type": "container",
+      "display_title": "kind-cloud-provider",
+      "status": "running",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:container:kind-registry-mirror",
+      "type": "container",
+      "display_title": "kind-registry-mirror",
+      "status": "running",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:container:desktop-control-plane",
+      "type": "container",
+      "display_title": "desktop-control-plane",
+      "status": "running",
+      "endpoint": "127.0.0.1:62056",
+      "port": 62056
+    },
+    {
+      "did": "did:hyperai:container:prizz_deep-dive-desktop-extension-service",
+      "type": "container",
+      "display_title": "prizz_deep-dive-desktop-extension-service",
+      "status": "running",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:sqlite",
+      "type": "mcp_catalog",
+      "display_title": "SQLite (Archived)",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:airtable-mcp-server",
+      "type": "mcp_catalog",
+      "display_title": "Airtable",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:ais-fleet",
+      "type": "mcp_catalog",
+      "display_title": "AIS Fleet",
+      "status": "catalog",
+      "endpoint": "https://mcp.aisfleet.com/sse",
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:aks",
+      "type": "mcp_catalog",
+      "display_title": "Azure Kubernetes Service (AKS)",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:alfresco",
+      "type": "mcp_catalog",
+      "display_title": "Alfresco",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:amazon-bedrock-agentcore",
+      "type": "mcp_catalog",
+      "display_title": "AWS Bedrock AgentCore",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:amazon-kendra-index",
+      "type": "mcp_catalog",
+      "display_title": "Amazon Kendra Index",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:amazon-neptune",
+      "type": "mcp_catalog",
+      "display_title": "Amazon Neptune",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:amazon-qbusiness-anonymous",
+      "type": "mcp_catalog",
+      "display_title": "Amazon Q Business",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:apify",
+      "type": "mcp_catalog",
+      "display_title": "Apify Remote",
+      "status": "catalog",
+      "endpoint": "https://mcp.apify.com",
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:apify-mcp-server",
+      "type": "mcp_catalog",
+      "display_title": "Apify",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:arm-mcp",
+      "type": "mcp_catalog",
+      "display_title": "Arm",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:arxiv-mcp-server",
+      "type": "mcp_catalog",
+      "display_title": "ArXiv",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:asana",
+      "type": "mcp_catalog",
+      "display_title": "Asana",
+      "status": "catalog",
+      "endpoint": "https://mcp.asana.com/sse",
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:ast-grep",
+      "type": "mcp_catalog",
+      "display_title": "ast-grep",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:astra-db",
+      "type": "mcp_catalog",
+      "display_title": "Astra DB",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:astro-docs",
+      "type": "mcp_catalog",
+      "display_title": "Astro Docs",
+      "status": "catalog",
+      "endpoint": "https://mcp.docs.astro.build/mcp",
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:atlan",
+      "type": "mcp_catalog",
+      "display_title": "Atlan",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:atlas-docs",
+      "type": "mcp_catalog",
+      "display_title": "Atlas Docs",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:atlassian",
+      "type": "mcp_catalog",
+      "display_title": "Atlassian",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:atlassian-remote",
+      "type": "mcp_catalog",
+      "display_title": "Atlassian",
+      "status": "catalog",
+      "endpoint": "https://mcp.atlassian.com/v1/mcp",
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:audiense-insights",
+      "type": "mcp_catalog",
+      "display_title": "Audiense Insights",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:audioscrape",
+      "type": "mcp_catalog",
+      "display_title": "Audioscrape",
+      "status": "catalog",
+      "endpoint": "https://mcp.audioscrape.com",
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:aws-api",
+      "type": "mcp_catalog",
+      "display_title": "AWS API",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:aws-appsync",
+      "type": "mcp_catalog",
+      "display_title": "AWS AppSync",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:aws-bedrock-custom-model-import",
+      "type": "mcp_catalog",
+      "display_title": "AWS Bedrock Custom Model Import",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:aws-bedrock-data-automation",
+      "type": "mcp_catalog",
+      "display_title": "AWS Bedrock Data Automation",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:aws-cdk-mcp-server",
+      "type": "mcp_catalog",
+      "display_title": "AWS CDK",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:aws-core-mcp-server",
+      "type": "mcp_catalog",
+      "display_title": "AWS Core",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:aws-dataprocessing",
+      "type": "mcp_catalog",
+      "display_title": "AWS Data Processing",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:aws-diagram",
+      "type": "mcp_catalog",
+      "display_title": "AWS Diagram",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:aws-documentation",
+      "type": "mcp_catalog",
+      "display_title": "AWS Documentation",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:aws-healthomics",
+      "type": "mcp_catalog",
+      "display_title": "AWS HealthOmics",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:aws-iot-sitewise",
+      "type": "mcp_catalog",
+      "display_title": "AWS IoT SiteWise",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:aws-kb-retrieval-server",
+      "type": "mcp_catalog",
+      "display_title": "AWS KB Retrieval (Archived)",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:aws-location",
+      "type": "mcp_catalog",
+      "display_title": "Amazon Location Service",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:aws-msk",
+      "type": "mcp_catalog",
+      "display_title": "Amazon MSK",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:aws-pricing",
+      "type": "mcp_catalog",
+      "display_title": "AWS Pricing",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:aws-terraform",
+      "type": "mcp_catalog",
+      "display_title": "AWS Terraform",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:awslabs-billing-cost-management",
+      "type": "mcp_catalog",
+      "display_title": "AWS Billing and Cost Management",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:awslabs-ccapi",
+      "type": "mcp_catalog",
+      "display_title": "AWS Cloud Control API",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:awslabs-cfn",
+      "type": "mcp_catalog",
+      "display_title": "AWS CloudFormation",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:awslabs-cloudtrail",
+      "type": "mcp_catalog",
+      "display_title": "AWS CloudTrail",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:awslabs-cloudwatch",
+      "type": "mcp_catalog",
+      "display_title": "Amazon CloudWatch",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:awslabs-cloudwatch-appsignals",
+      "type": "mcp_catalog",
+      "display_title": "Amazon CloudWatch Application Signals",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:awslabs-cost-explorer",
+      "type": "mcp_catalog",
+      "display_title": "AWS Cost Explorer",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:awslabs-dynamodb",
+      "type": "mcp_catalog",
+      "display_title": "Amazon DynamoDB",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:awslabs-elasticache",
+      "type": "mcp_catalog",
+      "display_title": "Amazon ElastiCache",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:awslabs-iam",
+      "type": "mcp_catalog",
+      "display_title": "AWS IAM",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:awslabs-memcached",
+      "type": "mcp_catalog",
+      "display_title": "Amazon ElastiCache for Memcached",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:awslabs-nova-canvas",
+      "type": "mcp_catalog",
+      "display_title": "AWS Labs Nova Canvas",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:awslabs-redshift",
+      "type": "mcp_catalog",
+      "display_title": "Amazon Redshift",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:awslabs-s3-tables",
+      "type": "mcp_catalog",
+      "display_title": "AWS S3 Tables",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:awslabs-timestream-for-influxdb",
+      "type": "mcp_catalog",
+      "display_title": "Amazon Timestream for InfluxDB",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:awslabs-valkey",
+      "type": "mcp_catalog",
+      "display_title": "Amazon ElastiCache/MemoryDB for Valkey",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:azure",
+      "type": "mcp_catalog",
+      "display_title": "Azure",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:beagle-security",
+      "type": "mcp_catalog",
+      "display_title": "Beagle Security",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:bitrefill",
+      "type": "mcp_catalog",
+      "display_title": "Bitrefill",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:box",
+      "type": "mcp_catalog",
+      "display_title": "Box",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:brave",
+      "type": "mcp_catalog",
+      "display_title": "Brave Search",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:brightdata",
+      "type": "mcp_catalog",
+      "display_title": "Bright Data",
+      "status": "catalog",
+      "endpoint": "https://mcp.brightdata.com/mcp",
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:browserbase",
+      "type": "mcp_catalog",
+      "display_title": "Browserbase",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:buildkite",
+      "type": "mcp_catalog",
+      "display_title": "Buildkite",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:camunda",
+      "type": "mcp_catalog",
+      "display_title": "Camunda BPM Process Engine",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:carbon-voice",
+      "type": "mcp_catalog",
+      "display_title": "Carbon Voice",
+      "status": "catalog",
+      "endpoint": "https://mcp.carbonvoice.app",
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:charmhealth-mcp-server",
+      "type": "mcp_catalog",
+      "display_title": "CharmHealth",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:chroma",
+      "type": "mcp_catalog",
+      "display_title": "Chroma",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:circleci",
+      "type": "mcp_catalog",
+      "display_title": "CircleCI",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:clickhouse",
+      "type": "mcp_catalog",
+      "display_title": "Official ClickHouse",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:close",
+      "type": "mcp_catalog",
+      "display_title": "Close",
+      "status": "catalog",
+      "endpoint": "https://mcp.close.com/mcp",
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:cloud-run-mcp",
+      "type": "mcp_catalog",
+      "display_title": "Cloud Run",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:cloudflare-ai-gateway",
+      "type": "mcp_catalog",
+      "display_title": "Cloudflare AI Gateway",
+      "status": "catalog",
+      "endpoint": "https://ai-gateway.mcp.cloudflare.com/sse",
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:cloudflare-audit-logs",
+      "type": "mcp_catalog",
+      "display_title": "Cloudflare Audit Logs",
+      "status": "catalog",
+      "endpoint": "https://auditlogs.mcp.cloudflare.com/sse",
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:cloudflare-autorag",
+      "type": "mcp_catalog",
+      "display_title": "Cloudflare AutoRAG",
+      "status": "catalog",
+      "endpoint": "https://autorag.mcp.cloudflare.com/sse",
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:cloudflare-browser-rendering",
+      "type": "mcp_catalog",
+      "display_title": "Cloudflare Browser Rendering",
+      "status": "catalog",
+      "endpoint": "https://browser.mcp.cloudflare.com/sse",
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:cloudflare-container",
+      "type": "mcp_catalog",
+      "display_title": "Cloudflare Container",
+      "status": "catalog",
+      "endpoint": "https://containers.mcp.cloudflare.com/sse",
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:cloudflare-digital-experience-monitoring",
+      "type": "mcp_catalog",
+      "display_title": "Cloudflare Digital Experience Monitoring",
+      "status": "catalog",
+      "endpoint": "https://dex.mcp.cloudflare.com/sse",
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:cloudflare-dns-analytics",
+      "type": "mcp_catalog",
+      "display_title": "Cloudflare DNS Analytics",
+      "status": "catalog",
+      "endpoint": "https://dns-analytics.mcp.cloudflare.com/sse",
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:cloudflare-docs",
+      "type": "mcp_catalog",
+      "display_title": "Cloudflare Docs",
+      "status": "catalog",
+      "endpoint": "https://docs.mcp.cloudflare.com/sse",
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:cloudflare-graphql",
+      "type": "mcp_catalog",
+      "display_title": "Cloudflare GraphQL",
+      "status": "catalog",
+      "endpoint": "https://graphql.mcp.cloudflare.com/sse",
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:cloudflare-logpush",
+      "type": "mcp_catalog",
+      "display_title": "Cloudflare Logpush",
+      "status": "catalog",
+      "endpoint": "https://logs.mcp.cloudflare.com/sse",
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:cloudflare-observability",
+      "type": "mcp_catalog",
+      "display_title": "Cloudflare Observability",
+      "status": "catalog",
+      "endpoint": "https://observability.mcp.cloudflare.com/sse",
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:cloudflare-one-casb",
+      "type": "mcp_catalog",
+      "display_title": "Cloudflare One CASB",
+      "status": "catalog",
+      "endpoint": "https://casb.mcp.cloudflare.com/sse",
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:cloudflare-radar",
+      "type": "mcp_catalog",
+      "display_title": "Cloudflare Radar",
+      "status": "catalog",
+      "endpoint": "https://radar.mcp.cloudflare.com/sse",
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:cloudflare-workers-bindings",
+      "type": "mcp_catalog",
+      "display_title": "Cloudflare Workers Bindings",
+      "status": "catalog",
+      "endpoint": "https://bindings.mcp.cloudflare.com/sse",
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:cloudflare-workers-builds",
+      "type": "mcp_catalog",
+      "display_title": "Cloudflare Workers Builds",
+      "status": "catalog",
+      "endpoint": "https://builds.mcp.cloudflare.com/sse",
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:cockroachdb",
+      "type": "mcp_catalog",
+      "display_title": "CockroachDB",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:context7",
+      "type": "mcp_catalog",
+      "display_title": "Context7",
+      "status": "catalog",
+      "endpoint": "https://mcp.context7.com/mcp",
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:couchbase",
+      "type": "mcp_catalog",
+      "display_title": "Couchbase",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    },
+    {
+      "did": "did:hyperai:mcp:cylera-mcp-server",
+      "type": "mcp_catalog",
+      "display_title": "Cylera",
+      "status": "catalog",
+      "endpoint": null,
+      "port": null
+    }
+  ],
+  "lm_studio": [
+    {
+      "did": "did:hyperai:native:lm-studio",
+      "name": "lm-studio",
+      "display_title": "LM Studio",
+      "type": "native_app",
+      "subtype": "macos_app",
+      "source": "installed",
+      "source_uri": "/Users/andy/Library/Application Support/LM Studio",
+      "status": "running_api_closed",
+      "endpoint": "http://127.0.0.1:1234/v1",
+      "port": 1234,
+      "description": null,
+      "icon": null,
+      "tools_json": null,
+      "tools_count": 0,
+      "metadata_json": "{\"bundle_id\": \"ai.elementlabs.lmstudio\", \"version\": \"0.4.20+1\", \"port_open\": false}",
+      "tags_json": null,
+      "catalog_ref": null,
+      "image": null,
+      "bundle_id": "ai.elementlabs.lmstudio",
+      "container_id": null,
+      "profile": null,
+      "created_at": "2026-07-30T15:46:04.493668+00:00"
+    }
+  ]
+}

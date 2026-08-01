@@ -1,0 +1,11 @@
+
+- 2026-07-31T11:21:58Z | APO Lineage Continuity Trial | scenario=origin_temporarily_unavailable | verdict=LINEAGE_SURVIVAL_PARTIAL | value={'utc': '2026-07-31T11:21:55.227947+00:00', 'status': 200}
+- 2026-07-31T11:21:58Z | APO Lineage Continuity Trial | scenario=origin_temporarily_unavailable | verdict=APO_CONTINUITY_CAPABILITY_VERIFIED | value={'utc': '2026-07-31T11:21:55.227947+00:00', 'status': 200}
+- 2026-07-31T11:22:02Z | APO Lineage Continuity Trial | scenario=one_alive_one_dead | verdict=APO_CONTINUITY_CAPABILITY_VERIFIED | value={'utc': '2026-07-31T11:21:59.613504+00:00', 'status': 200}
+- 2026-07-31T11:22:05Z | APO Lineage Continuity Trial | scenario=both_temporarily_unreachable | verdict=LINEAGE_SURVIVAL_PARTIAL | value={'utc': '2026-07-31T11:22:02.237836+00:00', 'status': 200}
+- 2026-07-31T11:22:10Z | APO Lineage Continuity Trial | scenario=lineage_mirror_stale | verdict=APO_CONTINUITY_CAPABILITY_VERIFIED | value={'utc': '2026-07-31T11:22:07.013801+00:00', 'status': 200}
+- 2026-07-31T11:22:17Z | APO Lineage Continuity Trial | scenario=conflicting_mirrors | verdict=APO_CONTINUITY_CAPABILITY_VERIFIED | value={'utc': '2026-07-31T11:22:12.935794+00:00', 'status': 200}
+- 2026-07-31T11:22:23Z | APO Lineage Continuity Trial | scenario=fake_creator_claim | verdict=APO_CONTINUITY_CAPABILITY_VERIFIED | value={'utc': '2026-07-31T11:22:18.902083+00:00', 'status': 200}
+- 2026-07-31T11:22:29Z | APO Lineage Continuity Trial | scenario=receipt_with_provenance_no_current_state | verdict=APO_CONTINUITY_CAPABILITY_VERIFIED | value={'utc': '2026-07-31T11:22:24.971650+00:00', 'status': 200}
+- 2026-07-31T11:22:32Z | APO Lineage Continuity Trial | scenario=origin_returns_and_conflicts | verdict=LINEAGE_SURVIVAL_PARTIAL | value={'utc': '2026-07-31T11:22:29.671156+00:00', 'status': 200}
+- 2026-07-31T11:22:32Z | APO Lineage Continuity Trial | scenario=origin_returns_and_conflicts | verdict=LINEAGE_RECONCILIATION_VERIFIED | value={'utc': '2026-07-31T11:22:29.671156+00:00', 'status': 200}

@@ -1,0 +1,106 @@
+# AGENTS.md
+
+This file provides guidance to Codex (Codex.ai/code) when working with code in this repository.
+
+## Common Commands
+
+### Build
+- `npm run build`: Build the frontend and backend
+- `npm run build:frontend`: Build only the frontend
+- `npm run build:backend`: Build only the backend
+
+### Lint
+- `npm run lint`: Lint all code
+- `npm run lint:frontend`: Lint frontend code
+- `npm run lint:backend`: Lint backend code
+
+### Test
+- `npm run test`: Run all tests
+- `npm run test:unit`: Run unit tests
+- `npm run test:component`: Run component tests
+- `npm run test:api`: Run API tests
+- `npm run test:slow`: Run slow tests
+
+### Run
+- `npm start`: Start the development server
+- `npm run dev`: Start the development server with hot reload
+- `npm run watch`: Watch for file changes and rebuild
+
+## High-Level Architecture
+
+The system is organized into 12 layers with clear separation of concerns:
+
+1. **LAYER_0 (Client Interface Layer)**: Contains UI components and interaction logic
+2. **LAYER_1 (API Gateway Layer)**: Manages API routes and middleware
+3. **LAYER_2 (Application Logic Layer)**: Contains core business logic and services
+4. **LAYER_3 (Data Access Layer)**: Handles database interactions
+5. **LAYER_4 (Database Layer)**: Contains SQL and NoSQL database schemas
+6. **LAYER_5 (Reasoning Engine)**: Implements AI reasoning and memory systems
+7. **LAYER_6 (Knowledge Retrieval)**: Manages knowledge search and retrieval
+8. **LAYER_7 (AI Governance)**: Enforces safety and alignment policies
+9. **LAYER_8 (System Infrastructure)**: Contains infrastructure configuration
+10. **LAYER_9 (Task Orchestration)**: Manages task execution and workflow
+11. **LAYER_10 (Model Management)**: Handles model registry and inference
+12. **LAYER_11 (Build System)**: Contains build and packaging scripts
+
+## Key Components
+
+- **Chat Controller**: Entry point for API requests
+- **Reasoning Service**: Core AI logic for processing requests
+- **Memory System**: Manages episodic and semantic memory
+- **Vector Database**: Stores embeddings for knowledge retrieval
+- **Task Orchestrator**: Coordinates multi-step execution
+- **Security Middleware**: Handles authentication and rate limiting
+
+## Development Tips
+
+- Use `npm run test:unit` for quick unit tests
+- Run `npm run lint` before commits
+- Use `npm run build:frontend` for frontend-only builds
+- Consult the architecture diagram in LAYER_0 for component relationships
+
+## Important Files
+
+- `src/main.ts`: Entry point for the application
+- `src/services/chat.service.ts`: Core chat logic
+- `src/repositories/message.repository.ts`: Message database interactions
+- `src/controllers/chat.controller.ts`: API endpoint handling
+- `src/config/`: Contains configuration files for different environments
+
+## Documentation
+
+- Read the README.md for project overview
+- Consult the architecture diagram in LAYER_0 for component relationships
+- Review the mathematical model in LAYER_5 for system design principles
+
+## Tool Guardrails
+
+- The in-session `skill` tool's `list` and `search` commands require the `path` parameter. Calling `skill list` or `skill search` without `path` produces `Tool 'skill' validation failed: The 'path' parameter is required for the 'list' command.`
+  - Always pass `path` when discovering skills, e.g. `skill list path=/Users/andy` or `skill search path=/Users/andy keywords=<term>`.
+  - If a skill is not under a `.devin/skills` directory at the given path, `skill list` will return an empty list even when global skills exist.
+  - To list all installed skills (including global and user skills), prefer the CLI command `devin skills list`.
+
+## Rules
+
+- Always use the `@ts-ignore` directive for TypeScript type overrides
+- Follow the naming conventions in `.cursor/rules/` for code style
+- Use the `@deprecated` tag for obsolete code
+- Adhere to the security policies in LAYER_7 for sensitive operations
+
+## Support
+
+- For help with the codebase, consult the README.md
+- For architecture questions, refer to the LAYER_0 diagram
+- For security concerns, review the LAYER_7 policies
+- For build issues, check the LAYER_11 scripts
+
+## Mathematical Model
+
+The system follows the closure principle: S = Closure(A, D) = ∪_{k=0}^∞ D^{(k)}(A)
+
+Where:
+- A = entry execution node
+- D = dependency expansion operator
+- S = complete system (canonical tree)
+
+This mathematical model ensures all dependencies are properly resolved and the system remains consistent.

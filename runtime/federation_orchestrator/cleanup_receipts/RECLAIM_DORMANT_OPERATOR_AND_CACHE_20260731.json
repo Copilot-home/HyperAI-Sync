@@ -1,0 +1,74 @@
+{
+  "timestamp": "2026-07-31T14:48:01Z",
+  "home": "/Users/andy",
+  "reclaimed": [
+    {
+      "path": "/Users/andy/.codemate",
+      "category": "ai_operator_runtime",
+      "size_bytes": 1203569341,
+      "reason": "dormant, no active process, no dependency reference"
+    },
+    {
+      "path": "/Users/andy/.blackbox-cli-v2",
+      "category": "ai_operator_runtime",
+      "size_bytes": 40246209,
+      "reason": "dormant, no active process, no dependency reference"
+    },
+    {
+      "path": "/Users/andy/.bitowingman",
+      "category": "ai_operator_runtime",
+      "size_bytes": 28953,
+      "reason": "dormant, no active process, no dependency reference"
+    },
+    {
+      "path": "/Users/andy/.chatgpt-copilot",
+      "category": "ai_operator_runtime",
+      "size_bytes": 13197,
+      "reason": "dormant, no active process, no dependency reference"
+    },
+    {
+      "path": "/Users/andy/.codegeex",
+      "category": "ai_operator_runtime",
+      "size_bytes": 13197,
+      "reason": "dormant, no active process, no dependency reference"
+    },
+    {
+      "path": "/Users/andy/apo_topology_logs_20260424_083728",
+      "category": "data_backup_cache",
+      "size_bytes": 0,
+      "reason": "dormant, no active process, no dependency reference"
+    },
+    {
+      "path": "/Users/andy/failed",
+      "category": "data_backup_cache",
+      "size_bytes": 0,
+      "reason": "dormant, no active process, no dependency reference"
+    },
+    {
+      "path": "/Users/andy/Caches",
+      "category": "data_backup_cache",
+      "size_bytes": 30740,
+      "reason": "dormant, no active process, no dependency reference"
+    },
+    {
+      "path": "/Users/andy/docker_diagnostics",
+      "category": "data_backup_cache",
+      "size_bytes": 3459614,
+      "reason": "dormant, no active process, no dependency reference"
+    },
+    {
+      "path": "/Users/andy/cloud_ecosystem_storage",
+      "category": "data_backup_cache",
+      "size_bytes": 1367566,
+      "reason": "dormant, no active process, no dependency reference"
+    },
+    {
+      "path": "/Users/andy/backup",
+      "category": "data_backup_cache",
+      "size_bytes": 8196,
+      "reason": "dormant, no active process, no dependency reference"
+    }
+  ],
+  "held": [],
+  "total_reclaimed_bytes": 1248737013
+}

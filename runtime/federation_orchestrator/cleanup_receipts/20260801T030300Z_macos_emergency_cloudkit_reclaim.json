@@ -1,0 +1,12 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "macos_emergency",
+  "trigger": "disk_low",
+  "path": "/Users/andy/Library/Caches/CloudKit",
+  "started_at": "2026-07-31T21:43:00Z",
+  "completed_at": "2026-07-31T21:43:00Z",
+  "disk_before_mb": 107,
+  "disk_after_mb": 721,
+  "freed_mb": 613,
+  "note": "Second CloudKit reclaim during APΩ build/test cycle. Cache regrows due to cloudd/icloud sync."
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "docker",
+  "started_at": "2026-07-30T18:17:54Z",
+  "completed_at": "2026-07-30T18:17:55Z",
+  "dry_run": false,
+  "include_recyclable": false,
+  "disk_before_mb": 8165,
+  "disk_after_mb": 8164,
+  "freed_mb": 0,
+  "action_count": 2,
+  "error_count": 0,
+  "actions": [
+    {
+      "command": "docker system prune -f",
+      "rc": 0,
+      "stdout": "Deleted Containers:\nc817eed1f7999d62b4a3a2c3178c1fb90a8e9885033e294e965427b29b01c6b2\n\nDeleted Networks:\nhyperai-sync_default\n\nDeleted build cache objects:\nyot0v9qj7vq5hzk29ps0idsr2\nhbs24rvm655ha8xfs7pj61q2g\n70i257hk7ehp2fjdwesn3w7pw\n\nTotal reclaimed space: 913.4kB\n",
+      "stderr": ""
+    },
+    {
+      "command": "docker builder prune -f",
+      "rc": 0,
+      "stdout": "Total:\t0B\n",
+      "stderr": ""
+    }
+  ],
+  "status": "ok"
+}

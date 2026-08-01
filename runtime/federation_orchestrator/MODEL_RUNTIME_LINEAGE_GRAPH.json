@@ -1,0 +1,300 @@
+{
+  "execution_id": "model-runtime-lineage-20260731",
+  "timestamp": "2026-07-31T14:05:00Z",
+  "principle": "A model is not an application. A model is a capability asset with source, format, runtime, mission, and lineage.",
+  "model_fabric_stores": {
+    "ollama": {
+      "path": "/Users/andy/.ollama",
+      "store_type": "Ollama",
+      "physical_size_gb": 17,
+      "runtime": "ollama serve",
+      "active_models": [
+        {
+          "name": "llama3.1:8b",
+          "size_bytes": 4920738944,
+          "size_gb": 4.6,
+          "format": "GGUF",
+          "quantization": "Q4_K_M",
+          "parameter_size": "8B",
+          "source": "registry.ollama.ai",
+          "active": true,
+          "mission": "general inference",
+          "lineage": "registry.ollama.ai/library/llama3.1/8b -> local blob"
+        },
+        {
+          "name": "all-minilm:latest",
+          "size_bytes": 45949216,
+          "size_gb": 0.044,
+          "format": "GGUF",
+          "parameter_size": "22M/33M",
+          "source": "registry.ollama.ai",
+          "active": true,
+          "mission": "embedding",
+          "lineage": "registry.ollama.ai/library/all-minilm/latest -> local blob"
+        },
+        {
+          "name": "chatgpt:latest",
+          "size_bytes": 5225374496,
+          "size_gb": 4.9,
+          "format": "GGUF",
+          "parameter_size": "8B",
+          "source": "registry.ollama.ai",
+          "is_alias": true,
+          "base_model": "qwen3:8b",
+          "active": true,
+          "mission": "alias for qwen3 agent model"
+        },
+        {
+          "name": "gpt-5.5:latest",
+          "size_bytes": 2019377376,
+          "size_gb": 1.9,
+          "format": "GGUF",
+          "parameter_size": "3B",
+          "source": "registry.ollama.ai",
+          "is_alias": true,
+          "base_model": "llama3.2:latest",
+          "active": false,
+          "mission": "dormant alias"
+        }
+      ],
+      "cloud_references": [
+        "deepseek-v4-flash:cloud",
+        "gemini-3-flash-preview:cloud",
+        "kimi-k2.6:cloud",
+        "kimi-k2.7-code:cloud"
+      ],
+      "dormant_or_alias_models": ["gpt-5.5:latest"],
+      "unknown_unbound_surface": "/Users/andy/.ollama/backup (27 backup config files, <10 MB)"
+    },
+    "lmstudio": {
+      "path": "/Users/andy/.lmstudio",
+      "store_type": "LM Studio",
+      "physical_size_gb": 26,
+      "runtime": "LM Studio.app",
+      "active_models": [
+        {
+          "name": "nomic-embed-text-v1.5.Q4_K_M.gguf",
+          "size_gb_estimated": 0.276,
+          "format": "GGUF",
+          "quantization": "Q4_K_M",
+          "parameter_size": "138M",
+          "source": "nomic-ai (bundled)",
+          "duplicate_locations": 4,
+          "active": true,
+          "mission": "embedding"
+        },
+        {
+          "name": "Mistral-7B-Instruct-v0.3-IQ3_M.gguf",
+          "size_gb_estimated": 3.2,
+          "format": "GGUF",
+          "quantization": "IQ3_M",
+          "parameter_size": "7B",
+          "source": "lmstudio-community",
+          "active": true,
+          "mission": "chat/instruct"
+        },
+        {
+          "name": "gemma-4-12B-it-QAT-Q4_0.gguf",
+          "size_gb_estimated": 7.2,
+          "format": "GGUF",
+          "quantization": "Q4_0",
+          "parameter_size": "12B",
+          "source": "lmstudio-community",
+          "active": true,
+          "mission": "long-context chat"
+        },
+        {
+          "name": "DeepSeek-R1-0528-Qwen3-8B-MLX-4bit",
+          "size_gb_estimated": 4.8,
+          "format": "MLX Safetensors",
+          "quantization": "4-bit",
+          "parameter_size": "8B",
+          "source": "lmstudio-community",
+          "active": true,
+          "mission": "reasoning"
+        },
+        {
+          "name": "Qwen2.5-0.5B-Instruct-MLX-4bit",
+          "size_gb_estimated": 0.4,
+          "format": "MLX Safetensors",
+          "quantization": "4-bit",
+          "parameter_size": "0.5B",
+          "source": "lmstudio-community",
+          "active": true,
+          "pinned": true,
+          "mission": "lightweight inference"
+        }
+      ],
+      "dormant_models": ["LFM2.5-1.2B-Instruct-MLX-8bit (virtual)"],
+      "duplicate_candidates": [
+        {
+          "name": "nomic-embed-text-v1.5.Q4_K_M.gguf",
+          "occurrences": 4,
+          "locations": [
+            ".internal/bundled-models",
+            "apps/bionic/.internal/bundled-models",
+            "llmster/0.0.19-2/.bundle/bin/bundled-models",
+            "llmster/0.0.20-1/.bundle/bin/bundled-models"
+          ],
+          "potential_saving_gb": 0.8
+        }
+      ],
+      "unknown_unbound_surface": [
+        "staged Bionic app update ~500 MB",
+        "multiple llmster version bundles (0.0.19-2, 0.0.20-1)"
+      ]
+    },
+    "aitk": {
+      "path": "/Users/andy/.aitk",
+      "store_type": "AI Toolkit (Azure AI)",
+      "physical_size_gb": 2.3,
+      "runtime": "aitk model runtime (CPU/CUDA)",
+      "active_models": [],
+      "dormant_models": [
+        {
+          "name": "deepseek-r1-distill-qwen-1.5b-cpu-int4-rtn-block-32-acc-level-4",
+          "size_gb": 1.2,
+          "format": "ONNX",
+          "quantization": "INT4 RTN block-32 acc-level-4",
+          "parameter_size": "1.5B",
+          "source": "DeepSeek",
+          "active": false,
+          "runtime_target": "CPU"
+        },
+        {
+          "name": "deepseek-r1-distill-qwen-1.5b-cuda-int4-awq-block-128-acc-level-4",
+          "size_gb": 1.2,
+          "format": "ONNX",
+          "quantization": "INT4 AWQ block-128 acc-level-4",
+          "parameter_size": "1.5B",
+          "source": "DeepSeek",
+          "active": false,
+          "runtime_target": "CUDA"
+        },
+        {
+          "name": "deepseek-r1-distill-qwen-1.5b-cuda-int4-rtn-block-32-acc-level-4",
+          "size_gb": 1.2,
+          "format": "ONNX",
+          "quantization": "INT4 RTN block-32 acc-level-4",
+          "parameter_size": "1.5B",
+          "source": "DeepSeek",
+          "active": false,
+          "runtime_target": "CUDA"
+        },
+        {
+          "name": "deepseek-r1-distill-qwen-1.5b-cuda-int4-rtn-block-32",
+          "size_gb": 1.2,
+          "format": "ONNX",
+          "quantization": "INT4 RTN block-32",
+          "parameter_size": "1.5B",
+          "source": "DeepSeek",
+          "active": false,
+          "runtime_target": "CUDA"
+        },
+        {
+          "name": "deepseek-r1-distill-qwen-14b-generic-cpu-3",
+          "size_gb_estimated": 14,
+          "format": "ONNX",
+          "quantization": "generic-cpu",
+          "parameter_size": "14B",
+          "source": "Microsoft",
+          "active": false,
+          "status": "INCOMPLETE_DOWNLOAD",
+          "runtime_target": "CPU"
+        },
+        {
+          "name": "qwen2.5-0.5b-instruct-generic-cpu-3",
+          "size_gb": 0.822,
+          "format": "ONNX",
+          "quantization": "generic-cpu",
+          "parameter_size": "0.5B",
+          "source": "Microsoft",
+          "active": false,
+          "runtime_target": "CPU"
+        }
+      ],
+      "duplicate_candidates": [
+        {
+          "name": "DeepSeek R1 Distill Qwen 1.5B",
+          "occurrences": 4,
+          "variants": [
+            "cpu-int4-rtn-block-32-acc-level-4",
+            "cuda-int4-awq-block-128-acc-level-4",
+            "cuda-int4-rtn-block-32-acc-level-4",
+            "cuda-int4-rtn-block-32"
+          ],
+          "potential_saving_gb": 2.4
+        },
+        {
+          "name": "Qwen 0.5B",
+          "cross_store_with": "LM Studio Qwen2.5-0.5B-Instruct-MLX-4bit",
+          "note": "Same parameter size, different formats (ONNX vs MLX)"
+        }
+      ],
+      "unknown_unbound_surface": ["/Users/andy/.aitk/chats (38 files)", "/Users/andy/.aitk/prompts", "/Users/andy/.aitk/evals"]
+    },
+    "pieces_os": {
+      "path": "/Users/andy/Library/com.pieces.os",
+      "store_type": "Pieces OS",
+      "physical_size_gb": 14,
+      "runtime": "Pieces OS.app (127.0.0.1:39300)",
+      "note": "Does not store model weights locally. Stores code snippets, chat history, agentic engine traces, snapshots. Uses cloud APIs for model inference.",
+      "model_entries": [],
+      "dormant_models": [],
+      "unknown_unbound_surface": [
+        "production/Backups/Snapshots",
+        "production/agentic_engine"
+      ]
+    }
+  },
+  "lineage_graph": {
+    "nodes": [
+      { "id": "llama3.1", "family": "Llama 3.1", "parameter_size": "8B", "stores": ["ollama"], "format": "GGUF", "active_in_mission": true },
+      { "id": "qwen3", "family": "Qwen3", "parameter_size": "8B", "stores": ["ollama (as chatgpt alias)"], "format": "GGUF", "active_in_mission": true },
+      { "id": "deepseek-r1-qwen-8b", "family": "DeepSeek R1", "parameter_size": "8B", "stores": ["lmstudio"], "format": "MLX Safetensors", "active_in_mission": true },
+      { "id": "deepseek-r1-qwen-1.5b", "family": "DeepSeek R1", "parameter_size": "1.5B", "stores": ["aitk"], "format": "ONNX", "active_in_mission": false },
+      { "id": "deepseek-r1-qwen-14b", "family": "DeepSeek R1", "parameter_size": "14B", "stores": ["aitk"], "format": "ONNX", "active_in_mission": false },
+      { "id": "qwen2.5-0.5b", "family": "Qwen2.5", "parameter_size": "0.5B", "stores": ["lmstudio", "aitk"], "format": "MLX / ONNX", "active_in_mission": true },
+      { "id": "gemma-3-4b", "family": "Gemma 3", "parameter_size": "4B", "stores": ["lmstudio"], "format": "MLX Safetensors", "active_in_mission": true },
+      { "id": "gemma-4-12b", "family": "Gemma 4", "parameter_size": "12B", "stores": ["lmstudio"], "format": "GGUF", "active_in_mission": true },
+      { "id": "nomic-embed-v1.5", "family": "Nomic Embed", "parameter_size": "138M", "stores": ["lmstudio"], "format": "GGUF", "active_in_mission": true },
+      { "id": "mistral-7b", "family": "Mistral", "parameter_size": "7B", "stores": ["lmstudio"], "format": "GGUF", "active_in_mission": true },
+      { "id": "granite-3.8b", "family": "Granite", "parameter_size": "3.8B", "stores": ["lmstudio"], "format": "GGUF", "active_in_mission": true },
+      { "id": "all-minilm", "family": "MiniLM", "parameter_size": "22M/33M", "stores": ["ollama"], "format": "GGUF", "active_in_mission": true }
+    ]
+  },
+  "runtime_binding": [
+    { "runtime": "ollama", "bound_models": ["llama3.1:8b", "all-minilm:latest", "chatgpt:latest"], "value": "primary local inference for Devin and OpenAI-compatible calls" },
+    { "runtime": "lmstudio", "bound_models": ["nomic-embed-v1.5", "Mistral-7B", "Gemma-4-12B", "DeepSeek-R1-8B", "Qwen2.5-0.5B", "Gemma-3-4B", "Granite-3.8B", "Llama-3.2-1B"], "value": "GUI-driven local inference with MLX/GGUF" },
+    { "runtime": "aitk", "bound_models": ["DeepSeek-R1-1.5B variants", "DeepSeek-R1-14B (incomplete)", "Qwen2.5-0.5B"], "value": "dormant; Azure AI Toolkit model zoo" },
+    { "runtime": "pieces_os", "bound_models": [], "value": "cloud model API; snippet/index memory" }
+  ],
+  "debt_reclamation_candidates": [
+    {
+      "candidate": "duplicate nomic-embed bundles (LM Studio)",
+      "saving_gb": 0.8,
+      "rationale": "same file in 4 app/bundle versions",
+      "risk": "low"
+    },
+    {
+      "candidate": "AITK DeepSeek-R1-1.5B 3x CUDA variants",
+      "saving_gb": 2.4,
+      "rationale": "4 quantizations of same 1.5B CPU/CUDA model; no GPU on Mac M2",
+      "risk": "low"
+    },
+    {
+      "candidate": "AITK incomplete 14B download",
+      "saving_gb": "variable",
+      "rationale": "incomplete; no continuation evidence",
+      "risk": "low"
+    },
+    {
+      "candidate": "lmstudio old llmster version bundles",
+      "saving_gb": "~1-2",
+      "rationale": "staged app update and old version bundles",
+      "risk": "medium (verify not active)"
+    }
+  ],
+  "verdict": "MODEL_FABRIC_BOUND_BUT_DUPLICATE_DEBT_FOUND",
+  "verdict_reasoning": "Four distinct model stores exist, each with different format/runtime philosophy. Ollama is active for qwen3/llama3.1. LM Studio has the largest active model set with duplicate nomic-embed bundles. AITK contains large dormant/incomplete variants. Pieces is not a weight store. Safe reclamation of 3-6GB is possible after verifying no active runtime uses AITK/LM Studio old bundles."
+}

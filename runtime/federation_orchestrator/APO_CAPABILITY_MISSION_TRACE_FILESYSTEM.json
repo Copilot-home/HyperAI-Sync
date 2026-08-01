@@ -1,0 +1,103 @@
+{
+  "execution_id": "apo-capability-mission-trace-filesystem-20260731",
+  "timestamp": "2026-07-31T14:55:00Z",
+  "mission_text": "Write a test file to /Users/andy/tmp and read it back through APO Gateway filesystem capability",
+  "value_verified": true,
+  "stages": [
+    {
+      "stage": "WRITE",
+      "actor": "APO Gateway",
+      "surface": "http://127.0.0.1:9011/tools/filesystem/write_file",
+      "request": {
+        "method": "POST",
+        "body": {
+          "path": "/Users/andy/tmp/apo-filesystem-test.txt",
+          "content": "APO filesystem mission trace: Devin wrote this through APO Gateway -> filesystem OpenAPI server."
+        }
+      },
+      "response": {
+        "status_code": 200,
+        "message": "Successfully wrote to /Users/andy/tmp/apo-filesystem-test.txt"
+      },
+      "transport": "HTTP_OPENAPI",
+      "auth": "none (path restricted to allowlist)",
+      "state": "WRITTEN"
+    },
+    {
+      "stage": "EXECUTE",
+      "actor": "filesystem OpenAPI server",
+      "surface": "http://127.0.0.1:8903",
+      "runtime_type": "host uvicorn",
+      "docker": false,
+      "state": "EXECUTED"
+    },
+    {
+      "stage": "READ",
+      "actor": "APO Gateway",
+      "surface": "http://127.0.0.1:9011/tools/filesystem/read_file",
+      "request": {
+        "method": "POST",
+        "body": {"path": "/Users/andy/tmp/apo-filesystem-test.txt"}
+      },
+      "response": {
+        "status_code": 200,
+        "content": "APO filesystem mission trace: Devin wrote this through APO Gateway -> filesystem OpenAPI server."
+      },
+      "state": "VALUE_VERIFIED"
+    },
+    {
+      "stage": "CLEANUP",
+      "actor": "Devin",
+      "action": "delete test file (optional, not yet executed)",
+      "state": "PENDING"
+    }
+  ],
+  "network_edges": [
+    {
+      "source_actor": "Devin",
+      "destination_actor": "APO Gateway",
+      "transport": "HTTP",
+      "address": "127.0.0.1:9011",
+      "request_type": "POST /tools/filesystem/write_file",
+      "response_type": "status JSON",
+      "auth": "none",
+      "verified": true,
+      "value": "write file"
+    },
+    {
+      "source_actor": "APO Gateway",
+      "destination_actor": "filesystem OpenAPI server",
+      "transport": "HTTP",
+      "address": "127.0.0.1:8903",
+      "request_type": "POST /write_file",
+      "response_type": "status JSON",
+      "auth": "none",
+      "verified": true,
+      "value": "file write"
+    },
+    {
+      "source_actor": "Devin",
+      "destination_actor": "APO Gateway",
+      "transport": "HTTP",
+      "address": "127.0.0.1:9011",
+      "request_type": "POST /tools/filesystem/read_file",
+      "response_type": "content JSON",
+      "auth": "none",
+      "verified": true,
+      "value": "read file"
+    }
+  ],
+  "consumed_capability": "filesystem",
+  "produced_value": "verified APO filesystem write/read path with sandbox /Users/andy/tmp",
+  "gross_value_formula": {
+    "VerifiedMissionValue": "file write + file read",
+    "CoordinationGain": "APO abstracts filesystem path sandbox",
+    "DependencyUnlock": "proves EXECUTION capability through OpenAPI",
+    "FutureComputeSaved": "Devin can use APO filesystem instead of direct shell",
+    "RuntimeCost": "2 HTTP calls",
+    "NetworkFriction": "low",
+    "HumanMicromanagement": "none"
+  },
+  "verdict": "VALUE_VERIFIED",
+  "verdict_reasoning": "A full write/read cycle was executed through APO Gateway to the filesystem server. The server enforced its allowlist (only /Users/andy/tmp). This proves an EXECUTION capability edge."
+}

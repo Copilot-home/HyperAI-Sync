@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-07-31T10:58:04Z",
+  "F0": {
+    "source": "launchd environment variables",
+    "class": "ENVIRONMENT_INHERITED",
+    "ax_vars": {
+      "AX_REASONING_METHOD": "d+r",
+      "AX_APO_IDENTITY": "alpha_prime_omega",
+      "AX_CANON_MEMORY": "/Users/andy/.axcanon/memory",
+      "AX_CANON_POLICY": "/Users/andy/axcontrol/docs/OPS_GLOBAL_CANON.md",
+      "AX_CANON_LAW": "/Users/andy/axcontrol/CANONICAL_CODEGEN_LAW.md",
+      "AX_CANON_ROOT": "/Users/andy/axcontrol"
+    },
+    "policy_enforced": false,
+    "note": "variables present in launchd; no runtime interpreted them in F0"
+  },
+  "F1": {
+    "source": "AIOS_CREATOR_JOURNEY_TRACE_20260415.md and canon memory",
+    "class": "DOCUMENT_REFERENCE_ONLY",
+    "policy_enforced": false,
+    "note": "invariants documented but not yet bound to runtime"
+  },
+  "F2": {
+    "source": "runtime_registry.json, apo_config.yaml, credentials.env",
+    "class": "CONFIG_LOADED",
+    "policy_enforced": false,
+    "note": "qualifier loads registry and config; does not verify against AX canon"
+  },
+  "F3": {
+    "source": "aios_living_loop.py, aios_auth_mission.py",
+    "class": "CONFIG_LOADED",
+    "surfaces": {
+      "APO_CONFIG": "CONFIG_LOADED",
+      "runtime_registry.json": "CONFIG_LOADED",
+      "credentials.env": "ENVIRONMENT_INHERITED",
+      "AX_* launchd env": "ENVIRONMENT_INHERITED_NOT_CONSUMED",
+      "canon_memory": "NOT_CONSUMED"
+    },
+    "policy_enforced": false,
+    "note": "scripts load APO config and registry; do not enforce AX canon policy"
+  },
+  "conclusion": "policy-to-runtime propagation reaches CONFIG_LOADED in F3; POLICY_ENFORCED not yet proven"
+}

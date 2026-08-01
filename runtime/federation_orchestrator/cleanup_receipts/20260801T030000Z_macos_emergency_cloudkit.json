@@ -1,0 +1,28 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "macos_emergency",
+  "trigger": "disk_low",
+  "dry_run": false,
+  "started_at": "2026-07-31T21:28:30Z",
+  "actions": [
+    {
+      "path": "/Users/andy/Library/Caches/CloudKit",
+      "status": "ok",
+      "freed_mb": 13231.45
+    },
+    {
+      "path": "/Users/andy/Library/Developer/DVTDownloads",
+      "status": "error",
+      "error": "[Errno 30] Read-only file system: '/Users/andy/Library/Developer/DVTDownloads/MetalToolchain/mounts/5f4a441a6d0a11f2e9b28c67384263afe92320f7'"
+    },
+    {
+      "path": "/Users/andy/Library/Caches/Homebrew",
+      "status": "ok",
+      "freed_mb": 90.46
+    }
+  ],
+  "disk_before_mb": 108,
+  "disk_after_mb": 561,
+  "freed_mb": 13321.91,
+  "completed_at": "2026-07-31T21:28:37Z"
+}

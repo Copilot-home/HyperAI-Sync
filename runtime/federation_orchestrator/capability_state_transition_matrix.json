@@ -1,0 +1,676 @@
+{
+  "generated_at": "2026-07-31T00:00:27Z",
+  "version": 2,
+  "nodes": [
+    {
+      "node": "apo_upstream_macbook_ollama",
+      "four_state": {
+        "Active": true,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": false
+      },
+      "operational_overlay": {
+        "Qualified": true,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": true
+      },
+      "host_state": "ACTIVE",
+      "assigned_lanes": [
+        "KNOWLEDGE"
+      ]
+    },
+    {
+      "node": "apo_upstream_titan_ollama",
+      "four_state": {
+        "Active": false,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": false
+      },
+      "operational_overlay": {
+        "Qualified": false,
+        "Bound": false,
+        "MissionAssigned": true,
+        "ValueVerified": false
+      },
+      "host_state": "STANDBY_UNREACHABLE",
+      "assigned_lanes": [
+        "KNOWLEDGE"
+      ]
+    },
+    {
+      "node": "apo_upstream_macmini_ollama",
+      "four_state": {
+        "Active": false,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": false
+      },
+      "operational_overlay": {
+        "Qualified": false,
+        "Bound": false,
+        "MissionAssigned": true,
+        "ValueVerified": false
+      },
+      "host_state": "STANDBY_UNREACHABLE",
+      "assigned_lanes": [
+        "KNOWLEDGE"
+      ]
+    },
+    {
+      "node": "apo_upstream_lmstudio",
+      "four_state": {
+        "Active": true,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": false
+      },
+      "operational_overlay": {
+        "Qualified": true,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": true
+      },
+      "host_state": "ACTIVE",
+      "assigned_lanes": [
+        "KNOWLEDGE"
+      ]
+    },
+    {
+      "node": "openapi_tool_time",
+      "four_state": {
+        "Active": true,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": false
+      },
+      "operational_overlay": {
+        "Qualified": true,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": true
+      },
+      "host_state": "ACTIVE",
+      "assigned_lanes": [
+        "EXECUTION"
+      ]
+    },
+    {
+      "node": "openapi_tool_weather",
+      "four_state": {
+        "Active": true,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": false
+      },
+      "operational_overlay": {
+        "Qualified": true,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": true
+      },
+      "host_state": "ACTIVE",
+      "assigned_lanes": [
+        "EXECUTION"
+      ]
+    },
+    {
+      "node": "openapi_tool_filesystem",
+      "four_state": {
+        "Active": true,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": false
+      },
+      "operational_overlay": {
+        "Qualified": true,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": true
+      },
+      "host_state": "ACTIVE",
+      "assigned_lanes": [
+        "EXECUTION"
+      ]
+    },
+    {
+      "node": "openapi_tool_git",
+      "four_state": {
+        "Active": true,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": false
+      },
+      "operational_overlay": {
+        "Qualified": true,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": true
+      },
+      "host_state": "ACTIVE",
+      "assigned_lanes": [
+        "EXECUTION"
+      ]
+    },
+    {
+      "node": "openapi_tool_memory",
+      "four_state": {
+        "Active": true,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": false
+      },
+      "operational_overlay": {
+        "Qualified": true,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": true
+      },
+      "host_state": "ACTIVE",
+      "assigned_lanes": [
+        "EXECUTION"
+      ]
+    },
+    {
+      "node": "openapi_tool_quotes",
+      "four_state": {
+        "Active": true,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": false
+      },
+      "operational_overlay": {
+        "Qualified": true,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": true
+      },
+      "host_state": "ACTIVE",
+      "assigned_lanes": [
+        "EXECUTION"
+      ]
+    },
+    {
+      "node": "openapi_tool_flashcards",
+      "four_state": {
+        "Active": true,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": false
+      },
+      "operational_overlay": {
+        "Qualified": true,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": true
+      },
+      "host_state": "ACTIVE",
+      "assigned_lanes": [
+        "EXECUTION"
+      ]
+    },
+    {
+      "node": "openapi_tool_time_ui",
+      "four_state": {
+        "Active": true,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": false
+      },
+      "operational_overlay": {
+        "Qualified": true,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": true
+      },
+      "host_state": "ACTIVE",
+      "assigned_lanes": [
+        "EXECUTION"
+      ]
+    },
+    {
+      "node": "openapi_tool_summarizer",
+      "four_state": {
+        "Active": true,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": false
+      },
+      "operational_overlay": {
+        "Qualified": true,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": true
+      },
+      "host_state": "ACTIVE",
+      "assigned_lanes": [
+        "EXECUTION"
+      ]
+    },
+    {
+      "node": "openapi_tool_bitcoin",
+      "four_state": {
+        "Active": true,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": false
+      },
+      "operational_overlay": {
+        "Qualified": true,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": true
+      },
+      "host_state": "ACTIVE",
+      "assigned_lanes": [
+        "EXECUTION"
+      ]
+    },
+    {
+      "node": "openapi_tool_sql",
+      "four_state": {
+        "Active": true,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": false
+      },
+      "operational_overlay": {
+        "Qualified": true,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": true
+      },
+      "host_state": "ACTIVE",
+      "assigned_lanes": [
+        "EXECUTION"
+      ]
+    },
+    {
+      "node": "openapi_tool_external_rag",
+      "four_state": {
+        "Active": true,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": false
+      },
+      "operational_overlay": {
+        "Qualified": true,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": true
+      },
+      "host_state": "ACTIVE",
+      "assigned_lanes": [
+        "EXECUTION"
+      ]
+    },
+    {
+      "node": "openapi_tool_slack",
+      "four_state": {
+        "Active": false,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": false
+      },
+      "operational_overlay": {
+        "Qualified": false,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": false
+      },
+      "host_state": "ACTIVE",
+      "assigned_lanes": [
+        "COMMUNICATION",
+        "EXECUTION",
+        "KNOWLEDGE"
+      ]
+    },
+    {
+      "node": "openapi_tool_google_pse",
+      "four_state": {
+        "Active": false,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": false
+      },
+      "operational_overlay": {
+        "Qualified": false,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": false
+      },
+      "host_state": "ACTIVE",
+      "assigned_lanes": [
+        "KNOWLEDGE",
+        "EXECUTION"
+      ]
+    },
+    {
+      "node": "mcp_pieces",
+      "four_state": {
+        "Active": true,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": false
+      },
+      "operational_overlay": {
+        "Qualified": true,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": true
+      },
+      "host_state": "ACTIVE",
+      "assigned_lanes": [
+        "EXECUTION"
+      ]
+    },
+    {
+      "node": "mcp_docker_mcp",
+      "four_state": {
+        "Active": false,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": true
+      },
+      "operational_overlay": {
+        "Qualified": false,
+        "Bound": false,
+        "MissionAssigned": true,
+        "ValueVerified": false
+      },
+      "host_state": "ACTIVE",
+      "assigned_lanes": [
+        "EXECUTION"
+      ]
+    },
+    {
+      "node": "credential_broker",
+      "four_state": {
+        "Active": true,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": false
+      },
+      "operational_overlay": {
+        "Qualified": true,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": true
+      },
+      "host_state": "ACTIVE",
+      "assigned_lanes": [
+        "AUTH"
+      ]
+    },
+    {
+      "node": "apo_gateway",
+      "four_state": {
+        "Active": true,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": true
+      },
+      "operational_overlay": {
+        "Qualified": true,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": true
+      },
+      "host_state": "ACTIVE",
+      "assigned_lanes": [
+        "ROUTING"
+      ]
+    },
+    {
+      "node": "agent_os_dashboard",
+      "four_state": {
+        "Active": true,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": false
+      },
+      "operational_overlay": {
+        "Qualified": true,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": true
+      },
+      "host_state": "ACTIVE",
+      "assigned_lanes": [
+        "PLANNING",
+        "EXECUTION"
+      ]
+    },
+    {
+      "node": "lmstudio_bionic_api",
+      "four_state": {
+        "Active": true,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": false
+      },
+      "operational_overlay": {
+        "Qualified": true,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": true
+      },
+      "host_state": "ACTIVE",
+      "assigned_lanes": [
+        "KNOWLEDGE"
+      ]
+    },
+    {
+      "node": "bionic_app",
+      "four_state": {
+        "Active": true,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": false
+      },
+      "operational_overlay": {
+        "Qualified": true,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": true
+      },
+      "host_state": "ACTIVE",
+      "assigned_lanes": [
+        "EXECUTION"
+      ]
+    },
+    {
+      "node": "ollama_macbook",
+      "four_state": {
+        "Active": true,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": false
+      },
+      "operational_overlay": {
+        "Qualified": true,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": true
+      },
+      "host_state": "ACTIVE",
+      "assigned_lanes": [
+        "KNOWLEDGE"
+      ]
+    },
+    {
+      "node": "pieces_mcp",
+      "four_state": {
+        "Active": true,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": false
+      },
+      "operational_overlay": {
+        "Qualified": true,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": true
+      },
+      "host_state": "ACTIVE",
+      "assigned_lanes": [
+        "EXECUTION"
+      ]
+    },
+    {
+      "node": "finalai",
+      "four_state": {
+        "Active": true,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": true
+      },
+      "operational_overlay": {
+        "Qualified": true,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": true
+      },
+      "host_state": "ACTIVE",
+      "assigned_lanes": [
+        "KNOWLEDGE"
+      ]
+    },
+    {
+      "node": "redis_local",
+      "four_state": {
+        "Active": true,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": false
+      },
+      "operational_overlay": {
+        "Qualified": true,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": true
+      },
+      "host_state": "ACTIVE",
+      "assigned_lanes": [
+        "MEMORY"
+      ]
+    },
+    {
+      "node": "hyperai_product_runtime",
+      "four_state": {
+        "Active": false,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": true
+      },
+      "operational_overlay": {
+        "Qualified": false,
+        "Bound": false,
+        "MissionAssigned": true,
+        "ValueVerified": false
+      },
+      "host_state": "STALE",
+      "assigned_lanes": [
+        "PRODUCT"
+      ]
+    },
+    {
+      "node": "docker_desktop",
+      "four_state": {
+        "Active": true,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": false
+      },
+      "operational_overlay": {
+        "Qualified": true,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": true
+      },
+      "host_state": "ACTIVE",
+      "assigned_lanes": [
+        "INFRASTRUCTURE"
+      ]
+    },
+    {
+      "node": "federation_orchestrator",
+      "four_state": {
+        "Active": true,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": true
+      },
+      "operational_overlay": {
+        "Qualified": true,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": true
+      },
+      "host_state": "UNKNOWN_UNBOUND",
+      "assigned_lanes": [
+        "ROUTING",
+        "PLANNING"
+      ]
+    },
+    {
+      "node": "memory_writer",
+      "four_state": {
+        "Active": false,
+        "Configured": false,
+        "Registered/Cached": true,
+        "Historical": true
+      },
+      "operational_overlay": {
+        "Qualified": false,
+        "Bound": false,
+        "MissionAssigned": true,
+        "ValueVerified": false
+      },
+      "host_state": "UNKNOWN_UNBOUND",
+      "assigned_lanes": [
+        "MEMORY"
+      ]
+    },
+    {
+      "node": "codex_operator_runtime",
+      "four_state": {
+        "Active": true,
+        "Configured": false,
+        "Registered/Cached": true,
+        "Historical": true
+      },
+      "operational_overlay": {
+        "Qualified": true,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": true
+      },
+      "host_state": "UNKNOWN_UNBOUND",
+      "assigned_lanes": [
+        "EXECUTION"
+      ]
+    },
+    {
+      "node": "aios_mission_router",
+      "four_state": {
+        "Active": true,
+        "Configured": true,
+        "Registered/Cached": true,
+        "Historical": true
+      },
+      "operational_overlay": {
+        "Qualified": true,
+        "Bound": true,
+        "MissionAssigned": true,
+        "ValueVerified": true
+      },
+      "host_state": "ACTIVE",
+      "assigned_lanes": [
+        "ROUTING"
+      ]
+    }
+  ]
+}

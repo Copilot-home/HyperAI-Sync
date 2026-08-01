@@ -1,0 +1,272 @@
+{
+  "scenario": "origin_returns_and_conflicts",
+  "verdict": "LINEAGE_RECONCILIATION_VERIFIED",
+  "trace": [
+    {
+      "step": "DETECT_DISCONTINUITY",
+      "status": "DISCONTINUITY",
+      "at": "2026-07-31T11:22:29Z",
+      "details": {
+        "origin_urls": {
+          "origin": "http://127.0.0.1:18878/origin.json"
+        },
+        "up": 0,
+        "down": 1
+      }
+    },
+    {
+      "step": "LOCATE_SURVIVING_LINEAGE",
+      "status": "OK",
+      "at": "2026-07-31T11:22:29Z",
+      "details": {
+        "stale_mirror.json": {
+          "path": "/var/folders/6t/gg0v6x8j5cgbds_klhpdwnvw0000gn/T/apo_stale_during_return_4doyf0mz/stale_mirror.json",
+          "has_canon_id": true,
+          "has_coordinates": true,
+          "provenance_hash": "d3cb1b3addbb7d51bf4e75f408718ef74f69c990b567a3be7f788d2de2388d15",
+          "timestamp": "2026-07-30T11:22:29Z",
+          "hash_ok": true,
+          "recomputed_hash": "d3cb1b3addbb7d51bf4e75f408718ef74f69c990b567a3be7f788d2de2388d15",
+          "freshness": "STALE"
+        }
+      }
+    },
+    {
+      "step": "VERIFY_PROVENANCE",
+      "status": "OK",
+      "at": "2026-07-31T11:22:29Z",
+      "details": {
+        "stale_mirror.json": {
+          "path": "/var/folders/6t/gg0v6x8j5cgbds_klhpdwnvw0000gn/T/apo_stale_during_return_4doyf0mz/stale_mirror.json",
+          "has_canon_id": true,
+          "has_coordinates": true,
+          "provenance_hash": "d3cb1b3addbb7d51bf4e75f408718ef74f69c990b567a3be7f788d2de2388d15",
+          "timestamp": "2026-07-30T11:22:29Z",
+          "hash_ok": true,
+          "recomputed_hash": "d3cb1b3addbb7d51bf4e75f408718ef74f69c990b567a3be7f788d2de2388d15",
+          "freshness": "STALE"
+        }
+      }
+    },
+    {
+      "step": "CLASSIFY_FRESHNESS",
+      "status": "OK",
+      "at": "2026-07-31T11:22:29Z",
+      "details": {
+        "stale_mirror.json": {
+          "path": "/var/folders/6t/gg0v6x8j5cgbds_klhpdwnvw0000gn/T/apo_stale_during_return_4doyf0mz/stale_mirror.json",
+          "has_canon_id": true,
+          "has_coordinates": true,
+          "provenance_hash": "d3cb1b3addbb7d51bf4e75f408718ef74f69c990b567a3be7f788d2de2388d15",
+          "timestamp": "2026-07-30T11:22:29Z",
+          "hash_ok": true,
+          "recomputed_hash": "d3cb1b3addbb7d51bf4e75f408718ef74f69c990b567a3be7f788d2de2388d15",
+          "freshness": "STALE"
+        }
+      }
+    },
+    {
+      "step": "HOLD_UNBOUND_GAPS",
+      "status": "OK",
+      "at": "2026-07-31T11:22:29Z",
+      "details": {
+        "gaps": [
+          "origin=unreachable"
+        ]
+      }
+    },
+    {
+      "step": "RECONSTRUCT_MINIMUM_ORIENTATION",
+      "status": "OK",
+      "at": "2026-07-31T11:22:29Z",
+      "details": {
+        "Creator": "Human",
+        "Creator_is_not": "God",
+        "Authority_is_not": "Infallibility",
+        "Evidence_relation": "Claim < Evidence",
+        "Failure_relation": "Failure -> Trace -> Correction -> Capability",
+        "Final_imperative": "PHẢI SỐNG",
+        "resolved_from": "stale_mirror.json",
+        "freshness": "STALE",
+        "provenance_hash": "d3cb1b3addbb7d51bf4e75f408718ef74f69c990b567a3be7f788d2de2388d15",
+        "identity": {
+          "github": "nguyencuong1989",
+          "facebook": "hehehihi89"
+        }
+      }
+    },
+    {
+      "step": "SELECT_REVERSIBLE_ACTION",
+      "status": "OK",
+      "at": "2026-07-31T11:22:29Z",
+      "details": {
+        "action": "probe_local_time_tool",
+        "target": "http://127.0.0.1:8901/get_current_utc_time",
+        "reason": "read-only, no auth, no side effects, verifyable"
+      }
+    },
+    {
+      "step": "CREATE_VERIFIED_VALUE",
+      "status": "OK",
+      "at": "2026-07-31T11:22:29Z",
+      "details": {
+        "utc": "2026-07-31T11:22:29.671156+00:00",
+        "status": 200
+      }
+    },
+    {
+      "step": "WAIT_WITHOUT_SPIN",
+      "status": "OK",
+      "at": "2026-07-31T11:22:31Z",
+      "details": {
+        "attempt": 1,
+        "of": 2
+      }
+    },
+    {
+      "step": "WAIT_WITHOUT_SPIN",
+      "status": "OK",
+      "at": "2026-07-31T11:22:32Z",
+      "details": {
+        "attempt": 2,
+        "of": 2
+      }
+    },
+    {
+      "step": "REDISCOVER_ORIGIN",
+      "status": "STILL_DOWN",
+      "at": "2026-07-31T11:22:32Z",
+      "details": {
+        "origin": {
+          "error": "[Errno 61] Connection refused"
+        }
+      }
+    },
+    {
+      "step": "UPDATE_MEMORY",
+      "status": "OK",
+      "at": "2026-07-31T11:22:32Z",
+      "details": {
+        "path": "/Users/andy/HyperAI-Sync/memory/APO_LINEAGE_CONTINUITY_TRIAL_MEMORY.md",
+        "value": {
+          "utc": "2026-07-31T11:22:29.671156+00:00",
+          "status": 200
+        }
+      }
+    },
+    {
+      "step": "PRESERVE_CORRECTION_LINEAGE",
+      "status": "OK",
+      "at": "2026-07-31T11:22:32Z",
+      "details": {
+        "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_LINEAGE_CONTINUITY_TRIAL_origin_returns_and_conflicts_correction.json"
+      }
+    },
+    {
+      "step": "REDISCOVER_ORIGIN",
+      "status": "OK",
+      "at": "2026-07-31T11:22:32Z",
+      "details": {
+        "origin": {
+          "status": 200,
+          "content_hash": "bb91241a2dfc9d38eb7066426333d7b6ecca2d1dd13bb126e24007c11f747017",
+          "length": 1456
+        }
+      }
+    },
+    {
+      "step": "RECONCILE_WITH_ORIGIN",
+      "status": "OK",
+      "at": "2026-07-31T11:22:32Z",
+      "details": {
+        "preserved": [
+          {
+            "canon": "APO_LAW_KERNEL",
+            "identity": {
+              "github": "nguyencuong1989",
+              "facebook": "hehehihi89"
+            },
+            "source": "mirror_provenance"
+          }
+        ],
+        "rejected": [],
+        "corrected": [
+          {
+            "field": "openai_key_id",
+            "mirror_value": "old_stale_key",
+            "origin_value": "new_key_after_rotation",
+            "action": "correct_to_origin_current_state"
+          }
+        ]
+      }
+    },
+    {
+      "step": "UPDATE_MEMORY",
+      "status": "OK",
+      "at": "2026-07-31T11:22:32Z",
+      "details": {
+        "path": "/Users/andy/HyperAI-Sync/memory/APO_LINEAGE_CONTINUITY_TRIAL_MEMORY.md",
+        "value": {
+          "utc": "2026-07-31T11:22:29.671156+00:00",
+          "status": 200
+        }
+      }
+    },
+    {
+      "step": "PRESERVE_CORRECTION_LINEAGE",
+      "status": "OK",
+      "at": "2026-07-31T11:22:32Z",
+      "details": {
+        "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_LINEAGE_CONTINUITY_TRIAL_origin_returns_and_conflicts_correction.json"
+      }
+    }
+  ],
+  "resolved_identity": {
+    "github": "nguyencuong1989",
+    "facebook": "hehehihi89"
+  },
+  "minimum_orientation": {
+    "Creator": "Human",
+    "Creator_is_not": "God",
+    "Authority_is_not": "Infallibility",
+    "Evidence_relation": "Claim < Evidence",
+    "Failure_relation": "Failure -> Trace -> Correction -> Capability",
+    "Final_imperative": "PHẢI SỐNG",
+    "resolved_from": "stale_mirror.json",
+    "freshness": "STALE",
+    "provenance_hash": "d3cb1b3addbb7d51bf4e75f408718ef74f69c990b567a3be7f788d2de2388d15",
+    "identity": {
+      "github": "nguyencuong1989",
+      "facebook": "hehehihi89"
+    }
+  },
+  "created_value": {
+    "utc": "2026-07-31T11:22:29.671156+00:00",
+    "status": 200
+  },
+  "unbound_gaps": [
+    "origin=unreachable"
+  ],
+  "reconciliation_delta": {
+    "preserved": [
+      {
+        "canon": "APO_LAW_KERNEL",
+        "identity": {
+          "github": "nguyencuong1989",
+          "facebook": "hehehihi89"
+        },
+        "source": "mirror_provenance"
+      }
+    ],
+    "rejected": [],
+    "corrected": [
+      {
+        "field": "openai_key_id",
+        "mirror_value": "old_stale_key",
+        "origin_value": "new_key_after_rotation",
+        "action": "correct_to_origin_current_state"
+      }
+    ]
+  },
+  "timestamp": "2026-07-31T11:22:32Z"
+}

@@ -1,0 +1,1814 @@
+{
+  "generated_at": "2026-07-30T23:29:27Z",
+  "execution_hash": "065677fa372d69e705d835e191338be3f75bf093608745347546f145b02ee92f",
+  "version": 2,
+  "capabilities": [
+    {
+      "node": "apo_upstream_macbook_ollama",
+      "base_app": "macbook_ollama",
+      "ai_projection": "apo_upstream_macbook_ollama",
+      "capabilities": [
+        "inference",
+        "base_url"
+      ],
+      "assigned_lanes": [
+        "KNOWLEDGE"
+      ],
+      "upstream": [
+        "runtime"
+      ],
+      "downstream": [
+        "ecosystem"
+      ],
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "auth_reference": [],
+      "compute_budget": {
+        "port": 11434,
+        "host": "127.0.0.1",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          796,
+          831,
+          864
+        ],
+        "rss_bytes": 27164672,
+        "ports": [
+          11434,
+          49196
+        ],
+        "qualified": true,
+        "missing": []
+      },
+      "mission": "operate apo_upstream_macbook_ollama as KNOWLEDGE",
+      "expected_value": "knowledge output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "ACTIVE"
+    },
+    {
+      "node": "apo_upstream_titan_ollama",
+      "base_app": "titan_ollama",
+      "ai_projection": "apo_upstream_titan_ollama",
+      "capabilities": [
+        "inference",
+        "base_url"
+      ],
+      "assigned_lanes": [
+        "KNOWLEDGE"
+      ],
+      "upstream": [
+        "runtime"
+      ],
+      "downstream": [
+        "ecosystem"
+      ],
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "auth_reference": [],
+      "compute_budget": {
+        "port": 11434,
+        "host": "192.168.3.84",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [],
+        "rss_bytes": 0,
+        "ports": [],
+        "qualified": false,
+        "missing": [
+          "observed_runtime",
+          "role_resolved",
+          "authority_resolved",
+          "dependencies_resolved",
+          "health_probed"
+        ]
+      },
+      "mission": "operate apo_upstream_titan_ollama as KNOWLEDGE",
+      "expected_value": "knowledge output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "TITAN_STANDBY",
+      "host_state": "STANDBY_UNREACHABLE"
+    },
+    {
+      "node": "apo_upstream_macmini_ollama",
+      "base_app": "macmini_ollama",
+      "ai_projection": "apo_upstream_macmini_ollama",
+      "capabilities": [
+        "inference",
+        "base_url"
+      ],
+      "assigned_lanes": [
+        "KNOWLEDGE"
+      ],
+      "upstream": [
+        "runtime"
+      ],
+      "downstream": [
+        "ecosystem"
+      ],
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "auth_reference": [],
+      "compute_budget": {
+        "port": 11434,
+        "host": "192.168.3.28",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [],
+        "rss_bytes": 0,
+        "ports": [],
+        "qualified": false,
+        "missing": [
+          "observed_runtime",
+          "role_resolved",
+          "authority_resolved",
+          "dependencies_resolved",
+          "health_probed"
+        ]
+      },
+      "mission": "operate apo_upstream_macmini_ollama as KNOWLEDGE",
+      "expected_value": "knowledge output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACMINI_STANDBY",
+      "host_state": "STANDBY_UNREACHABLE"
+    },
+    {
+      "node": "apo_upstream_lmstudio",
+      "base_app": "lmstudio",
+      "ai_projection": "apo_upstream_lmstudio",
+      "capabilities": [
+        "inference",
+        "base_url"
+      ],
+      "assigned_lanes": [
+        "KNOWLEDGE"
+      ],
+      "upstream": [
+        "credential_broker:LMSTUDIO_API_KEY"
+      ],
+      "downstream": [
+        "ecosystem"
+      ],
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "auth_reference": [
+        {
+          "key": "LMSTUDIO_API_KEY",
+          "status": "PRESENT",
+          "source": "/Users/andy/.config/hyperai/credentials.env",
+          "consent_boundary": "external paid API"
+        }
+      ],
+      "compute_budget": {
+        "port": 1235,
+        "host": "127.0.0.1",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          3852,
+          8954,
+          51016,
+          51072,
+          51110,
+          52858
+        ],
+        "rss_bytes": 115933184,
+        "ports": [
+          42349,
+          50588
+        ],
+        "qualified": true,
+        "missing": []
+      },
+      "mission": "operate apo_upstream_lmstudio as KNOWLEDGE",
+      "expected_value": "knowledge output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "ACTIVE"
+    },
+    {
+      "node": "openapi_tool_time",
+      "base_app": "time",
+      "ai_projection": "openapi_tool_time",
+      "capabilities": [
+        "tool:time",
+        "base_url"
+      ],
+      "assigned_lanes": [
+        "EXECUTION"
+      ],
+      "upstream": [
+        "apo_gateway"
+      ],
+      "downstream": [
+        "tool:time",
+        "agent_os_dashboard / memory"
+      ],
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "auth_reference": [],
+      "compute_budget": {
+        "port": 8901,
+        "host": "127.0.0.1",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          39718
+        ],
+        "rss_bytes": 18235392,
+        "ports": [
+          8901
+        ],
+        "qualified": true,
+        "missing": []
+      },
+      "mission": "operate openapi_tool_time as EXECUTION",
+      "expected_value": "execution output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "ACTIVE"
+    },
+    {
+      "node": "openapi_tool_weather",
+      "base_app": "weather",
+      "ai_projection": "openapi_tool_weather",
+      "capabilities": [
+        "tool:weather",
+        "base_url"
+      ],
+      "assigned_lanes": [
+        "EXECUTION"
+      ],
+      "upstream": [
+        "apo_gateway"
+      ],
+      "downstream": [
+        "tool:weather",
+        "agent_os_dashboard / memory"
+      ],
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "auth_reference": [],
+      "compute_budget": {
+        "port": 8902,
+        "host": "127.0.0.1",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          39719
+        ],
+        "rss_bytes": 7602176,
+        "ports": [
+          8902
+        ],
+        "qualified": true,
+        "missing": []
+      },
+      "mission": "operate openapi_tool_weather as EXECUTION",
+      "expected_value": "execution output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "ACTIVE"
+    },
+    {
+      "node": "openapi_tool_filesystem",
+      "base_app": "filesystem",
+      "ai_projection": "openapi_tool_filesystem",
+      "capabilities": [
+        "tool:filesystem",
+        "base_url"
+      ],
+      "assigned_lanes": [
+        "EXECUTION"
+      ],
+      "upstream": [
+        "apo_gateway"
+      ],
+      "downstream": [
+        "tool:filesystem",
+        "agent_os_dashboard / memory"
+      ],
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "auth_reference": [],
+      "compute_budget": {
+        "port": 8903,
+        "host": "127.0.0.1",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          39720
+        ],
+        "rss_bytes": 6553600,
+        "ports": [
+          8903
+        ],
+        "qualified": true,
+        "missing": []
+      },
+      "mission": "operate openapi_tool_filesystem as EXECUTION",
+      "expected_value": "execution output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "ACTIVE"
+    },
+    {
+      "node": "openapi_tool_git",
+      "base_app": "git",
+      "ai_projection": "openapi_tool_git",
+      "capabilities": [
+        "tool:git",
+        "base_url"
+      ],
+      "assigned_lanes": [
+        "EXECUTION"
+      ],
+      "upstream": [
+        "apo_gateway"
+      ],
+      "downstream": [
+        "tool:git",
+        "agent_os_dashboard / memory"
+      ],
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "auth_reference": [],
+      "compute_budget": {
+        "port": 8904,
+        "host": "127.0.0.1",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          39721
+        ],
+        "rss_bytes": 6635520,
+        "ports": [
+          8904
+        ],
+        "qualified": true,
+        "missing": []
+      },
+      "mission": "operate openapi_tool_git as EXECUTION",
+      "expected_value": "execution output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "ACTIVE"
+    },
+    {
+      "node": "openapi_tool_memory",
+      "base_app": "memory",
+      "ai_projection": "openapi_tool_memory",
+      "capabilities": [
+        "tool:memory",
+        "base_url"
+      ],
+      "assigned_lanes": [
+        "EXECUTION"
+      ],
+      "upstream": [
+        "apo_gateway"
+      ],
+      "downstream": [
+        "tool:memory",
+        "agent_os_dashboard / memory"
+      ],
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "auth_reference": [],
+      "compute_budget": {
+        "port": 8905,
+        "host": "127.0.0.1",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          39722
+        ],
+        "rss_bytes": 6537216,
+        "ports": [
+          8905
+        ],
+        "qualified": true,
+        "missing": []
+      },
+      "mission": "operate openapi_tool_memory as EXECUTION",
+      "expected_value": "execution output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "ACTIVE"
+    },
+    {
+      "node": "openapi_tool_quotes",
+      "base_app": "quotes",
+      "ai_projection": "openapi_tool_quotes",
+      "capabilities": [
+        "tool:quotes",
+        "base_url"
+      ],
+      "assigned_lanes": [
+        "EXECUTION"
+      ],
+      "upstream": [
+        "apo_gateway"
+      ],
+      "downstream": [
+        "tool:quotes",
+        "agent_os_dashboard / memory"
+      ],
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "auth_reference": [],
+      "compute_budget": {
+        "port": 8906,
+        "host": "127.0.0.1",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          11490,
+          11491
+        ],
+        "rss_bytes": 6864896,
+        "ports": [
+          8906
+        ],
+        "qualified": true,
+        "missing": []
+      },
+      "mission": "operate openapi_tool_quotes as EXECUTION",
+      "expected_value": "execution output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "ACTIVE"
+    },
+    {
+      "node": "openapi_tool_flashcards",
+      "base_app": "flashcards",
+      "ai_projection": "openapi_tool_flashcards",
+      "capabilities": [
+        "tool:flashcards",
+        "base_url"
+      ],
+      "assigned_lanes": [
+        "EXECUTION"
+      ],
+      "upstream": [
+        "apo_gateway"
+      ],
+      "downstream": [
+        "tool:flashcards",
+        "agent_os_dashboard / memory"
+      ],
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "auth_reference": [],
+      "compute_budget": {
+        "port": 8907,
+        "host": "127.0.0.1",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          11511,
+          11512
+        ],
+        "rss_bytes": 6946816,
+        "ports": [
+          8907
+        ],
+        "qualified": true,
+        "missing": []
+      },
+      "mission": "operate openapi_tool_flashcards as EXECUTION",
+      "expected_value": "execution output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "ACTIVE"
+    },
+    {
+      "node": "openapi_tool_time_ui",
+      "base_app": "time_ui",
+      "ai_projection": "openapi_tool_time_ui",
+      "capabilities": [
+        "tool:time-ui",
+        "base_url"
+      ],
+      "assigned_lanes": [
+        "EXECUTION"
+      ],
+      "upstream": [
+        "apo_gateway"
+      ],
+      "downstream": [
+        "tool:time_ui",
+        "agent_os_dashboard / memory"
+      ],
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "auth_reference": [],
+      "compute_budget": {
+        "port": 8908,
+        "host": "127.0.0.1",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          11536,
+          11537
+        ],
+        "rss_bytes": 6914048,
+        "ports": [
+          8908
+        ],
+        "qualified": true,
+        "missing": []
+      },
+      "mission": "operate openapi_tool_time_ui as EXECUTION",
+      "expected_value": "execution output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "ACTIVE"
+    },
+    {
+      "node": "openapi_tool_summarizer",
+      "base_app": "summarizer",
+      "ai_projection": "openapi_tool_summarizer",
+      "capabilities": [
+        "tool:summarizer",
+        "base_url"
+      ],
+      "assigned_lanes": [
+        "EXECUTION"
+      ],
+      "upstream": [
+        "apo_gateway"
+      ],
+      "downstream": [
+        "tool:summarizer",
+        "agent_os_dashboard / memory"
+      ],
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "auth_reference": [],
+      "compute_budget": {
+        "port": 8909,
+        "host": "127.0.0.1",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          11978,
+          11979
+        ],
+        "rss_bytes": 7651328,
+        "ports": [
+          8909
+        ],
+        "qualified": true,
+        "missing": []
+      },
+      "mission": "operate openapi_tool_summarizer as EXECUTION",
+      "expected_value": "execution output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "ACTIVE"
+    },
+    {
+      "node": "openapi_tool_bitcoin",
+      "base_app": "bitcoin",
+      "ai_projection": "openapi_tool_bitcoin",
+      "capabilities": [
+        "tool:bitcoin",
+        "base_url"
+      ],
+      "assigned_lanes": [
+        "EXECUTION"
+      ],
+      "upstream": [
+        "apo_gateway"
+      ],
+      "downstream": [
+        "tool:bitcoin",
+        "agent_os_dashboard / memory"
+      ],
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "auth_reference": [],
+      "compute_budget": {
+        "port": 8910,
+        "host": "127.0.0.1",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          12223,
+          12224
+        ],
+        "rss_bytes": 6930432,
+        "ports": [
+          8910
+        ],
+        "qualified": true,
+        "missing": []
+      },
+      "mission": "operate openapi_tool_bitcoin as EXECUTION",
+      "expected_value": "execution output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "ACTIVE"
+    },
+    {
+      "node": "openapi_tool_sql",
+      "base_app": "sql",
+      "ai_projection": "openapi_tool_sql",
+      "capabilities": [
+        "tool:sql",
+        "base_url"
+      ],
+      "assigned_lanes": [
+        "EXECUTION"
+      ],
+      "upstream": [
+        "apo_gateway"
+      ],
+      "downstream": [
+        "tool:sql",
+        "agent_os_dashboard / memory"
+      ],
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "auth_reference": [
+        {
+          "key": "DATABASE_URL",
+          "status": "PRESENT",
+          "source": "/Users/andy/.config/hyperai/credentials.env",
+          "consent_boundary": "local database"
+        },
+        {
+          "key": "OPENAI_API_KEY",
+          "status": "PRESENT",
+          "source": "/Users/andy/.config/hyperai/credentials.env",
+          "consent_boundary": "local database"
+        }
+      ],
+      "compute_budget": {
+        "port": 8911,
+        "host": "127.0.0.1",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          15562,
+          15563
+        ],
+        "rss_bytes": 7602176,
+        "ports": [
+          8911
+        ],
+        "qualified": true,
+        "missing": []
+      },
+      "mission": "operate openapi_tool_sql as EXECUTION",
+      "expected_value": "execution output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "ACTIVE"
+    },
+    {
+      "node": "openapi_tool_external_rag",
+      "base_app": "external_rag",
+      "ai_projection": "openapi_tool_external_rag",
+      "capabilities": [
+        "tool:external-rag",
+        "base_url"
+      ],
+      "assigned_lanes": [
+        "EXECUTION"
+      ],
+      "upstream": [
+        "apo_gateway"
+      ],
+      "downstream": [
+        "tool:external_rag",
+        "agent_os_dashboard / memory"
+      ],
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "auth_reference": [],
+      "compute_budget": {
+        "port": 8912,
+        "host": "127.0.0.1",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          28463,
+          28465,
+          28475
+        ],
+        "rss_bytes": 11517952,
+        "ports": [
+          8912
+        ],
+        "qualified": true,
+        "missing": []
+      },
+      "mission": "operate openapi_tool_external_rag as EXECUTION",
+      "expected_value": "execution output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "ACTIVE"
+    },
+    {
+      "node": "openapi_tool_slack",
+      "base_app": "slack",
+      "ai_projection": "openapi_tool_slack",
+      "capabilities": [
+        "tool:slack",
+        "base_url"
+      ],
+      "assigned_lanes": [
+        "COMMUNICATION",
+        "EXECUTION",
+        "KNOWLEDGE"
+      ],
+      "upstream": [
+        "apo_gateway"
+      ],
+      "downstream": [
+        "tool:slack",
+        "agent_os_dashboard / memory"
+      ],
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "auth_reference": [
+        {
+          "key": "SLACK_BOT_TOKEN",
+          "status": "MISSING",
+          "source": "expected in credentials.env or keychain",
+          "consent_boundary": "external account"
+        },
+        {
+          "key": "SLACK_TEAM_ID",
+          "status": "MISSING",
+          "source": "not found in known credential sources",
+          "consent_boundary": "external account"
+        }
+      ],
+      "compute_budget": {
+        "port": 8913,
+        "host": "127.0.0.1",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          24403,
+          24404,
+          24405
+        ],
+        "rss_bytes": 7782400,
+        "ports": [
+          8913
+        ],
+        "qualified": false,
+        "missing": [
+          "auth:SLACK_BOT_TOKEN",
+          "auth:SLACK_TEAM_ID"
+        ]
+      },
+      "mission": "operate openapi_tool_slack as COMMUNICATION/EXECUTION/KNOWLEDGE",
+      "expected_value": "communication output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "ACTIVE"
+    },
+    {
+      "node": "openapi_tool_google_pse",
+      "base_app": "google_pse",
+      "ai_projection": "openapi_tool_google_pse",
+      "capabilities": [
+        "tool:google-pse",
+        "base_url"
+      ],
+      "assigned_lanes": [
+        "KNOWLEDGE",
+        "EXECUTION"
+      ],
+      "upstream": [
+        "apo_gateway"
+      ],
+      "downstream": [
+        "tool:google_pse",
+        "agent_os_dashboard / memory"
+      ],
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "auth_reference": [
+        {
+          "key": "GOOGLE_API_KEY",
+          "status": "PRESENT",
+          "source": "/Users/andy/.zshrc",
+          "consent_boundary": "external account"
+        },
+        {
+          "key": "GOOGLE_PSE_CX",
+          "status": "MISSING",
+          "source": "expected in credentials.env or keychain",
+          "consent_boundary": "external account"
+        }
+      ],
+      "compute_budget": {
+        "port": 8914,
+        "host": "127.0.0.1",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          24403,
+          24404,
+          24407
+        ],
+        "rss_bytes": 7225344,
+        "ports": [
+          8914
+        ],
+        "qualified": false,
+        "missing": [
+          "auth:GOOGLE_PSE_CX"
+        ]
+      },
+      "mission": "operate openapi_tool_google_pse as KNOWLEDGE/EXECUTION",
+      "expected_value": "knowledge output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "ACTIVE"
+    },
+    {
+      "node": "mcp_pieces",
+      "base_app": "pieces",
+      "ai_projection": "mcp_pieces",
+      "capabilities": [
+        "mcp-bridge",
+        "base_url",
+        "sse_path"
+      ],
+      "assigned_lanes": [
+        "EXECUTION"
+      ],
+      "upstream": [
+        "runtime"
+      ],
+      "downstream": [
+        "ecosystem"
+      ],
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "auth_reference": [
+        {
+          "key": "token (path parameter)",
+          "status": "PRESENT_UNKNOWN",
+          "source": "SSE URL token param",
+          "consent_boundary": "Pieces account"
+        }
+      ],
+      "compute_budget": {
+        "port": 39300,
+        "host": "127.0.0.1",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          807,
+          876
+        ],
+        "rss_bytes": 659488768,
+        "ports": [
+          39300,
+          52140
+        ],
+        "qualified": true,
+        "missing": []
+      },
+      "mission": "operate mcp_pieces as EXECUTION",
+      "expected_value": "execution output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "ACTIVE"
+    },
+    {
+      "node": "mcp_docker_mcp",
+      "base_app": "docker_mcp",
+      "ai_projection": "mcp_docker_mcp",
+      "capabilities": [
+        "mcp-bridge",
+        "base_url",
+        "sse_path"
+      ],
+      "assigned_lanes": [
+        "EXECUTION"
+      ],
+      "upstream": [
+        "runtime"
+      ],
+      "downstream": [
+        "ecosystem"
+      ],
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "auth_reference": [],
+      "compute_budget": {
+        "port": 8811,
+        "host": "127.0.0.1",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [],
+        "rss_bytes": 0,
+        "ports": [],
+        "qualified": false,
+        "missing": [
+          "observed_runtime",
+          "role_resolved",
+          "authority_resolved",
+          "dependencies_resolved",
+          "health_probed"
+        ]
+      },
+      "mission": "operate mcp_docker_mcp as EXECUTION",
+      "expected_value": "execution output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "ACTIVE"
+    },
+    {
+      "node": "credential_broker",
+      "base_app": "/Users/andy/HyperAI-Sync/tools/hyperai_credentials_service.py",
+      "ai_projection": "credential_broker",
+      "capabilities": [
+        "base_url"
+      ],
+      "assigned_lanes": [
+        "AUTH"
+      ],
+      "upstream": [
+        "Keychain / credentials.env"
+      ],
+      "downstream": [
+        "apo_gateway",
+        "openapi_tool_slack",
+        "openapi_tool_google_pse"
+      ],
+      "authority": [
+        "OBSERVE",
+        "AUTH",
+        "VERIFY"
+      ],
+      "auth_reference": [],
+      "compute_budget": {
+        "port": 8765,
+        "host": "127.0.0.1",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          74521
+        ],
+        "rss_bytes": 19660800,
+        "ports": [
+          8765
+        ],
+        "qualified": true,
+        "missing": []
+      },
+      "mission": "operate credential_broker as AUTH",
+      "expected_value": "auth output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "ACTIVE"
+    },
+    {
+      "node": "apo_gateway",
+      "base_app": "bash",
+      "ai_projection": "apo_gateway",
+      "capabilities": [
+        "base_url",
+        "models_path",
+        "tools_path"
+      ],
+      "assigned_lanes": [
+        "ROUTING"
+      ],
+      "upstream": [
+        "credential_broker",
+        "ollama_macbook",
+        "lmstudio_bionic_api",
+        "openrouter"
+      ],
+      "downstream": [
+        "openapi_tool_*",
+        "mcp_pieces",
+        "mcp_docker_mcp"
+      ],
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "auth_reference": [],
+      "compute_budget": {
+        "port": 9011,
+        "host": "127.0.0.1",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          24641,
+          24643
+        ],
+        "rss_bytes": 26935296,
+        "ports": [
+          9011
+        ],
+        "qualified": true,
+        "missing": []
+      },
+      "mission": "operate apo_gateway as ROUTING",
+      "expected_value": "routing output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "ACTIVE"
+    },
+    {
+      "node": "agent_os_dashboard",
+      "base_app": "bash",
+      "ai_projection": "agent_os_dashboard",
+      "capabilities": [
+        "base_url"
+      ],
+      "assigned_lanes": [
+        "PLANNING",
+        "EXECUTION"
+      ],
+      "upstream": [
+        "runtime"
+      ],
+      "downstream": [
+        "ecosystem"
+      ],
+      "authority": [
+        "OBSERVE",
+        "READ",
+        "WRITE"
+      ],
+      "auth_reference": [],
+      "compute_budget": {
+        "port": 8777,
+        "host": "127.0.0.1",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          29817,
+          29819
+        ],
+        "rss_bytes": 6799360,
+        "ports": [
+          8777
+        ],
+        "qualified": true,
+        "missing": []
+      },
+      "mission": "operate agent_os_dashboard as PLANNING/EXECUTION",
+      "expected_value": "planning output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "ACTIVE"
+    },
+    {
+      "node": "lmstudio_bionic_api",
+      "base_app": "node",
+      "ai_projection": "lmstudio_bionic_api",
+      "capabilities": [
+        "base_url",
+        "models_path"
+      ],
+      "assigned_lanes": [
+        "KNOWLEDGE"
+      ],
+      "upstream": [
+        "local substrate"
+      ],
+      "downstream": [
+        "apo_gateway"
+      ],
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "auth_reference": [
+        {
+          "key": "LMSTUDIO_API_KEY",
+          "status": "PRESENT",
+          "source": "/Users/andy/.config/hyperai/credentials.env",
+          "consent_boundary": "local app"
+        }
+      ],
+      "compute_budget": {
+        "port": 1235,
+        "host": "127.0.0.1",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          3852,
+          8954,
+          37293,
+          51004,
+          51007,
+          51010,
+          51011,
+          51016,
+          51072,
+          51110,
+          52858
+        ],
+        "rss_bytes": 195772416,
+        "ports": [
+          1235,
+          42349,
+          50588,
+          52993
+        ],
+        "qualified": true,
+        "missing": []
+      },
+      "mission": "operate lmstudio_bionic_api as KNOWLEDGE",
+      "expected_value": "knowledge output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "ACTIVE"
+    },
+    {
+      "node": "bionic_app",
+      "base_app": "Bionic",
+      "ai_projection": "bionic_app",
+      "capabilities": [
+        "base_url"
+      ],
+      "assigned_lanes": [
+        "EXECUTION"
+      ],
+      "upstream": [
+        "runtime"
+      ],
+      "downstream": [
+        "ecosystem"
+      ],
+      "authority": [
+        "OBSERVE",
+        "READ",
+        "WRITE"
+      ],
+      "auth_reference": [],
+      "compute_budget": {
+        "port": 52993,
+        "host": "127.0.0.1",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          51004,
+          51007,
+          51010,
+          51011,
+          51016,
+          51072,
+          52858
+        ],
+        "rss_bytes": 135774208,
+        "ports": [
+          1235,
+          52993
+        ],
+        "qualified": true,
+        "missing": []
+      },
+      "mission": "operate bionic_app as EXECUTION",
+      "expected_value": "execution output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "ACTIVE"
+    },
+    {
+      "node": "ollama_macbook",
+      "base_app": "Squirrel",
+      "ai_projection": "ollama_macbook",
+      "capabilities": [
+        "inference",
+        "base_url",
+        "api_path"
+      ],
+      "assigned_lanes": [
+        "KNOWLEDGE"
+      ],
+      "upstream": [
+        "local substrate"
+      ],
+      "downstream": [
+        "apo_gateway"
+      ],
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "auth_reference": [],
+      "compute_budget": {
+        "port": 11434,
+        "host": "127.0.0.1",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          796,
+          831,
+          864
+        ],
+        "rss_bytes": 27164672,
+        "ports": [
+          11434,
+          49196
+        ],
+        "qualified": true,
+        "missing": []
+      },
+      "mission": "operate ollama_macbook as KNOWLEDGE",
+      "expected_value": "knowledge output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "ACTIVE"
+    },
+    {
+      "node": "pieces_mcp",
+      "base_app": "open",
+      "ai_projection": "pieces_mcp",
+      "capabilities": [
+        "mcp-bridge",
+        "base_url",
+        "sse_path"
+      ],
+      "assigned_lanes": [
+        "EXECUTION"
+      ],
+      "upstream": [
+        "runtime"
+      ],
+      "downstream": [
+        "ecosystem"
+      ],
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "auth_reference": [],
+      "compute_budget": {
+        "port": 39300,
+        "host": "127.0.0.1",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          807,
+          876
+        ],
+        "rss_bytes": 659488768,
+        "ports": [
+          39300,
+          52140
+        ],
+        "qualified": true,
+        "missing": []
+      },
+      "mission": "operate pieces_mcp as EXECUTION",
+      "expected_value": "execution output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "ACTIVE"
+    },
+    {
+      "node": "finalai",
+      "base_app": "/Users/andy/.local/bin/finalai-openai-proxy.py",
+      "ai_projection": "finalai",
+      "capabilities": [
+        "base_url",
+        "models_path"
+      ],
+      "assigned_lanes": [
+        "KNOWLEDGE"
+      ],
+      "upstream": [
+        "runtime"
+      ],
+      "downstream": [
+        "ecosystem"
+      ],
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "auth_reference": [],
+      "compute_budget": {
+        "port": 50520,
+        "host": "127.0.0.1",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          809
+        ],
+        "rss_bytes": 3964928,
+        "ports": [
+          50520
+        ],
+        "qualified": true,
+        "missing": []
+      },
+      "mission": "operate finalai as KNOWLEDGE",
+      "expected_value": "knowledge output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "ACTIVE"
+    },
+    {
+      "node": "redis_local",
+      "base_app": "redis-server",
+      "ai_projection": "redis_local",
+      "capabilities": [
+        "store",
+        "recall",
+        "base_url"
+      ],
+      "assigned_lanes": [
+        "MEMORY"
+      ],
+      "upstream": [
+        "runtime writes"
+      ],
+      "downstream": [
+        "all lanes"
+      ],
+      "authority": [
+        "OBSERVE",
+        "READ",
+        "WRITE"
+      ],
+      "auth_reference": [],
+      "compute_budget": {
+        "port": 6379,
+        "host": "127.0.0.1",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          787,
+          809,
+          2540,
+          10064
+        ],
+        "rss_bytes": 416579584,
+        "ports": [
+          6379,
+          50520
+        ],
+        "qualified": true,
+        "missing": []
+      },
+      "mission": "operate redis_local as MEMORY",
+      "expected_value": "memory output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "ACTIVE"
+    },
+    {
+      "node": "hyperai_product_runtime",
+      "base_app": "backend/server.js",
+      "ai_projection": "hyperai_product_runtime",
+      "capabilities": [
+        "product-ui",
+        "base_url"
+      ],
+      "assigned_lanes": [
+        "PRODUCT"
+      ],
+      "upstream": [
+        "runtime"
+      ],
+      "downstream": [
+        "ecosystem"
+      ],
+      "authority": [
+        "OBSERVE",
+        "READ",
+        "WRITE",
+        "EXECUTE"
+      ],
+      "auth_reference": [],
+      "compute_budget": {
+        "port": 5000,
+        "host": "127.0.0.1",
+        "frontend_port": 4173,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [],
+        "rss_bytes": 0,
+        "ports": [],
+        "qualified": false,
+        "missing": [
+          "observed_runtime",
+          "role_resolved",
+          "authority_resolved",
+          "dependencies_resolved",
+          "health_probed"
+        ]
+      },
+      "mission": "operate hyperai_product_runtime as PRODUCT",
+      "expected_value": "product output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "STALE"
+    },
+    {
+      "node": "docker_desktop",
+      "base_app": "com.docker.virtualization",
+      "ai_projection": "docker_desktop",
+      "capabilities": [
+        "container-fabric"
+      ],
+      "assigned_lanes": [
+        "INFRASTRUCTURE"
+      ],
+      "upstream": [
+        "runtime"
+      ],
+      "downstream": [
+        "ecosystem"
+      ],
+      "authority": [
+        "OBSERVE",
+        "ALLOCATE",
+        "EXECUTE"
+      ],
+      "auth_reference": [],
+      "compute_budget": {
+        "port": 12434,
+        "host": "127.0.0.1",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          37164,
+          37180,
+          37186,
+          37193,
+          37199,
+          37265,
+          37293
+        ],
+        "rss_bytes": 219512832,
+        "ports": [],
+        "qualified": true,
+        "missing": []
+      },
+      "mission": "operate docker_desktop as INFRASTRUCTURE",
+      "expected_value": "infrastructure output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "ACTIVE"
+    },
+    {
+      "node": "federation_orchestrator",
+      "base_app": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator",
+      "ai_projection": "federation_orchestrator",
+      "capabilities": [
+        "orchestrate",
+        "route"
+      ],
+      "assigned_lanes": [
+        "ROUTING",
+        "PLANNING"
+      ],
+      "upstream": [
+        "runtime"
+      ],
+      "downstream": [
+        "ecosystem"
+      ],
+      "authority": [
+        "OBSERVE",
+        "PLAN",
+        "ROUTE",
+        "VERIFY"
+      ],
+      "auth_reference": [],
+      "compute_budget": {
+        "port": null,
+        "host": null,
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          77378
+        ],
+        "rss_bytes": 26345472,
+        "ports": [],
+        "qualified": true,
+        "missing": []
+      },
+      "mission": "operate federation_orchestrator as ROUTING/PLANNING",
+      "expected_value": "routing output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "UNKNOWN_UNBOUND",
+      "host_state": "UNKNOWN_UNBOUND"
+    },
+    {
+      "node": "memory_writer",
+      "base_app": "tools/update_memory.py",
+      "ai_projection": "memory_writer",
+      "capabilities": [
+        "unknown"
+      ],
+      "assigned_lanes": [
+        "MEMORY"
+      ],
+      "upstream": [
+        "verified events"
+      ],
+      "downstream": [
+        "memory"
+      ],
+      "authority": [
+        "OBSERVE",
+        "READ",
+        "WRITE"
+      ],
+      "auth_reference": [],
+      "compute_budget": {
+        "port": null,
+        "host": null,
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [],
+        "rss_bytes": 0,
+        "ports": [],
+        "qualified": false,
+        "missing": [
+          "observed_runtime",
+          "role_resolved",
+          "authority_resolved",
+          "dependencies_resolved",
+          "health_probed"
+        ]
+      },
+      "mission": "operate memory_writer as MEMORY",
+      "expected_value": "memory output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "UNKNOWN_UNBOUND",
+      "host_state": "UNKNOWN_UNBOUND"
+    },
+    {
+      "node": "codex_operator_runtime",
+      "base_app": "/Users/andy/.codex/config.toml",
+      "ai_projection": "codex_operator_runtime",
+      "capabilities": [
+        "execute"
+      ],
+      "assigned_lanes": [
+        "EXECUTION"
+      ],
+      "upstream": [
+        "runtime"
+      ],
+      "downstream": [
+        "ecosystem"
+      ],
+      "authority": [
+        "OBSERVE",
+        "READ",
+        "WRITE"
+      ],
+      "auth_reference": [],
+      "compute_budget": {
+        "port": null,
+        "host": null,
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          72140
+        ],
+        "rss_bytes": 2490368,
+        "ports": [],
+        "qualified": true,
+        "missing": []
+      },
+      "mission": "operate codex_operator_runtime as EXECUTION",
+      "expected_value": "execution output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "UNKNOWN_UNBOUND",
+      "host_state": "UNKNOWN_UNBOUND"
+    },
+    {
+      "node": "aios_mission_router",
+      "base_app": "/Users/andy/workbench/aios_runtime_orchestrator/mcp_server.py",
+      "ai_projection": "aios_mission_router",
+      "capabilities": [
+        "unknown"
+      ],
+      "assigned_lanes": [
+        "ROUTING"
+      ],
+      "upstream": [
+        "creator intent"
+      ],
+      "downstream": [
+        "federation_orchestrator",
+        "apo_gateway",
+        "agent_os_dashboard"
+      ],
+      "authority": [
+        "OBSERVE",
+        "PLAN",
+        "ROUTE",
+        "VERIFY",
+        "AUTH",
+        "ALLOCATE",
+        "REVOKE"
+      ],
+      "auth_reference": [],
+      "compute_budget": {
+        "port": null,
+        "host": "127.0.0.1",
+        "frontend_port": null,
+        "memory_limit_mb": null,
+        "note": "declared from registry defaults"
+      },
+      "observed_compute": {
+        "pids": [
+          63375
+        ],
+        "rss_bytes": 4063232,
+        "ports": [
+          9001
+        ],
+        "qualified": true,
+        "missing": []
+      },
+      "mission": "operate aios_mission_router as ROUTING",
+      "expected_value": "routing output produced",
+      "failure_action": "fallback to next lane or suppress",
+      "host": "MACBOOK_ACTIVE",
+      "host_state": "ACTIVE"
+    }
+  ]
+}

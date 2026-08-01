@@ -1,0 +1,34 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "npm",
+  "started_at": "2026-07-30T12:00:16Z",
+  "completed_at": "2026-07-30T12:00:19Z",
+  "dry_run": true,
+  "include_recyclable": false,
+  "disk_before_mb": 9773,
+  "disk_after_mb": 9773,
+  "freed_mb": 937.44,
+  "action_count": 3,
+  "error_count": 0,
+  "actions": [
+    {
+      "command": "npm cache clean/purge (estimated)",
+      "status": "dry_run",
+      "estimated_mb": 774.6015625,
+      "path": "/Users/andy/.npm"
+    },
+    {
+      "command": "pnpm cache clean/purge (estimated)",
+      "status": "dry_run",
+      "estimated_mb": 81.41796875,
+      "path": "/Users/andy/Library/pnpm/store/v11"
+    },
+    {
+      "command": "pnpm store prune (estimated) cache clean/purge (estimated)",
+      "status": "dry_run",
+      "estimated_mb": 81.41796875,
+      "path": "/Users/andy/Library/pnpm/store/v11"
+    }
+  ],
+  "status": "ok"
+}

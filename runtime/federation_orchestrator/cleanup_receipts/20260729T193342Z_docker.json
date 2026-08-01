@@ -1,0 +1,28 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "docker",
+  "started_at": "2026-07-29T19:33:40Z",
+  "completed_at": "2026-07-29T19:33:42Z",
+  "dry_run": false,
+  "include_recyclable": false,
+  "disk_before_mb": 9322,
+  "disk_after_mb": 9323,
+  "freed_mb": 1,
+  "action_count": 2,
+  "error_count": 0,
+  "actions": [
+    {
+      "command": "docker system prune -f",
+      "rc": 0,
+      "stdout": "Deleted Containers:\nc37f07701c6e1386db7909c7f245db554be1dc8e6cbcd4a8e87de8836db5fce5\n\nDeleted Networks:\ntenure_internal\negekocabas_mailhog-desktop-extension_default\n\nTotal reclaimed space: 794.6kB\n",
+      "stderr": ""
+    },
+    {
+      "command": "docker builder prune -f",
+      "rc": 0,
+      "stdout": "Total:\t0B\n",
+      "stderr": ""
+    }
+  ],
+  "status": "ok"
+}

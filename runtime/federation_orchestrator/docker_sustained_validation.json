@@ -1,0 +1,241 @@
+{
+  "start_time": "2026-07-31T12:48:12.291084Z",
+  "end_time": "2026-07-31T12:51:21Z",
+  "duration_sec": 180,
+  "interval_sec": 30,
+  "sample_count": 6,
+  "all_socket_responsive": true,
+  "all_docker_ps_ok": true,
+  "all_host_port_forward_ok": true,
+  "total_new_io_errors": 0,
+  "samples": [
+    {
+      "at": "2026-07-31T12:48:12Z",
+      "socket_ping": {
+        "responsive": true,
+        "code": "200",
+        "exit_code": 0,
+        "stdout": "200 0.003543",
+        "stderr": "",
+        "elapsed_sec": 0.023
+      },
+      "docker_ps": {
+        "exit_code": 0,
+        "stdout": "CONTAINER ID   IMAGE                                              COMMAND                  CREATED       STATUS                        PORTS                       NAMES\n35a145fdc08f   docker/desktop-cloud-provider-kind:v0.6.0          \"/bin/cloud-provider…\"   4 days ago    Up About a minute             2375-2376/tcp               kind-cloud-provider\nc2297c91a7cc   docker/desktop-containerd-registry-mirror:v0.0.4   \"/bin/registry\"          4 days ago    Up About a minute (healthy)                               kind-registry-mirror\n8e24611954af   kindest/node:v1.36.1                               \"/usr/local/bin/entr…\"   4 days ago    Up About a minute             127.0.0.1:62056->6443/tcp   desktop-control-plane\n1c74c307a859   9b50c0a0c9a0                                       \"/usr/local/bin/runt…\"   4 weeks ago   Up About a minute                                         prizz_deep-dive-desktop-extension-service\n",
+        "stderr": "",
+        "elapsed_sec": 0.048
+      },
+      "host_port_forward": {
+        "run": {
+          "exit_code": 0,
+          "stdout": "b559c40ceeb8426ffd53d11f71451d10c329334d9d5c58300828261afc92d67b\n",
+          "stderr": "",
+          "elapsed_sec": 0.191
+        },
+        "probe": {
+          "exit_code": 0,
+          "stdout": "200",
+          "stderr": "",
+          "elapsed_sec": 0.04
+        },
+        "cleanup": {
+          "exit_code": 0,
+          "stdout": "sustained_porttest\n",
+          "stderr": "",
+          "elapsed_sec": 0.235
+        }
+      },
+      "io_errors_since_start": []
+    },
+    {
+      "at": "2026-07-31T12:48:43Z",
+      "socket_ping": {
+        "responsive": true,
+        "code": "200",
+        "exit_code": 0,
+        "stdout": "200 0.003072",
+        "stderr": "",
+        "elapsed_sec": 0.033
+      },
+      "docker_ps": {
+        "exit_code": 0,
+        "stdout": "CONTAINER ID   IMAGE                                              COMMAND                  CREATED       STATUS                   PORTS                       NAMES\n35a145fdc08f   docker/desktop-cloud-provider-kind:v0.6.0          \"/bin/cloud-provider…\"   4 days ago    Up 2 minutes             2375-2376/tcp               kind-cloud-provider\nc2297c91a7cc   docker/desktop-containerd-registry-mirror:v0.0.4   \"/bin/registry\"          4 days ago    Up 2 minutes (healthy)                               kind-registry-mirror\n8e24611954af   kindest/node:v1.36.1                               \"/usr/local/bin/entr…\"   4 days ago    Up 2 minutes             127.0.0.1:62056->6443/tcp   desktop-control-plane\n1c74c307a859   9b50c0a0c9a0                                       \"/usr/local/bin/runt…\"   4 weeks ago   Up 2 minutes                                         prizz_deep-dive-desktop-extension-service\n",
+        "stderr": "",
+        "elapsed_sec": 0.049
+      },
+      "host_port_forward": {
+        "run": {
+          "exit_code": 0,
+          "stdout": "b601379fb67052306fbb324145dd90350896c665eabc869a46520e029e035385\n",
+          "stderr": "",
+          "elapsed_sec": 0.169
+        },
+        "probe": {
+          "exit_code": 0,
+          "stdout": "200",
+          "stderr": "",
+          "elapsed_sec": 0.022
+        },
+        "cleanup": {
+          "exit_code": 0,
+          "stdout": "sustained_porttest\n",
+          "stderr": "",
+          "elapsed_sec": 0.211
+        }
+      },
+      "io_errors_since_start": []
+    },
+    {
+      "at": "2026-07-31T12:49:15Z",
+      "socket_ping": {
+        "responsive": true,
+        "code": "200",
+        "exit_code": 0,
+        "stdout": "200 0.003588",
+        "stderr": "",
+        "elapsed_sec": 0.086
+      },
+      "docker_ps": {
+        "exit_code": 0,
+        "stdout": "CONTAINER ID   IMAGE                                              COMMAND                  CREATED       STATUS                   PORTS                       NAMES\n35a145fdc08f   docker/desktop-cloud-provider-kind:v0.6.0          \"/bin/cloud-provider…\"   4 days ago    Up 2 minutes             2375-2376/tcp               kind-cloud-provider\nc2297c91a7cc   docker/desktop-containerd-registry-mirror:v0.0.4   \"/bin/registry\"          4 days ago    Up 2 minutes (healthy)                               kind-registry-mirror\n8e24611954af   kindest/node:v1.36.1                               \"/usr/local/bin/entr…\"   4 days ago    Up 2 minutes             127.0.0.1:62056->6443/tcp   desktop-control-plane\n1c74c307a859   9b50c0a0c9a0                                       \"/usr/local/bin/runt…\"   4 weeks ago   Up 2 minutes                                         prizz_deep-dive-desktop-extension-service\n",
+        "stderr": "",
+        "elapsed_sec": 0.09
+      },
+      "host_port_forward": {
+        "run": {
+          "exit_code": 0,
+          "stdout": "23b1300ced51857e863df7e951e0647e5dba18f299ee351b284c21c68677a387\n",
+          "stderr": "",
+          "elapsed_sec": 0.262
+        },
+        "probe": {
+          "exit_code": 0,
+          "stdout": "200",
+          "stderr": "",
+          "elapsed_sec": 0.035
+        },
+        "cleanup": {
+          "exit_code": 0,
+          "stdout": "sustained_porttest\n",
+          "stderr": "",
+          "elapsed_sec": 0.274
+        }
+      },
+      "io_errors_since_start": []
+    },
+    {
+      "at": "2026-07-31T12:49:47Z",
+      "socket_ping": {
+        "responsive": true,
+        "code": "200",
+        "exit_code": 0,
+        "stdout": "200 0.002814",
+        "stderr": "",
+        "elapsed_sec": 0.085
+      },
+      "docker_ps": {
+        "exit_code": 0,
+        "stdout": "CONTAINER ID   IMAGE                                              COMMAND                  CREATED       STATUS                   PORTS                       NAMES\n35a145fdc08f   docker/desktop-cloud-provider-kind:v0.6.0          \"/bin/cloud-provider…\"   4 days ago    Up 3 minutes             2375-2376/tcp               kind-cloud-provider\nc2297c91a7cc   docker/desktop-containerd-registry-mirror:v0.0.4   \"/bin/registry\"          4 days ago    Up 3 minutes (healthy)                               kind-registry-mirror\n8e24611954af   kindest/node:v1.36.1                               \"/usr/local/bin/entr…\"   4 days ago    Up 3 minutes             127.0.0.1:62056->6443/tcp   desktop-control-plane\n1c74c307a859   9b50c0a0c9a0                                       \"/usr/local/bin/runt…\"   4 weeks ago   Up 3 minutes                                         prizz_deep-dive-desktop-extension-service\n",
+        "stderr": "",
+        "elapsed_sec": 0.042
+      },
+      "host_port_forward": {
+        "run": {
+          "exit_code": 0,
+          "stdout": "06db7116343dfafeda1481ff72ab661e7658ea0f762281254206c0c2148b2d7f\n",
+          "stderr": "",
+          "elapsed_sec": 0.236
+        },
+        "probe": {
+          "exit_code": 0,
+          "stdout": "200",
+          "stderr": "",
+          "elapsed_sec": 0.039
+        },
+        "cleanup": {
+          "exit_code": 0,
+          "stdout": "sustained_porttest\n",
+          "stderr": "",
+          "elapsed_sec": 0.252
+        }
+      },
+      "io_errors_since_start": []
+    },
+    {
+      "at": "2026-07-31T12:50:18Z",
+      "socket_ping": {
+        "responsive": true,
+        "code": "200",
+        "exit_code": 0,
+        "stdout": "200 0.006421",
+        "stderr": "",
+        "elapsed_sec": 0.077
+      },
+      "docker_ps": {
+        "exit_code": 0,
+        "stdout": "CONTAINER ID   IMAGE                                              COMMAND                  CREATED       STATUS                   PORTS                       NAMES\n35a145fdc08f   docker/desktop-cloud-provider-kind:v0.6.0          \"/bin/cloud-provider…\"   4 days ago    Up 3 minutes             2375-2376/tcp               kind-cloud-provider\nc2297c91a7cc   docker/desktop-containerd-registry-mirror:v0.0.4   \"/bin/registry\"          4 days ago    Up 3 minutes (healthy)                               kind-registry-mirror\n8e24611954af   kindest/node:v1.36.1                               \"/usr/local/bin/entr…\"   4 days ago    Up 3 minutes             127.0.0.1:62056->6443/tcp   desktop-control-plane\n1c74c307a859   9b50c0a0c9a0                                       \"/usr/local/bin/runt…\"   4 weeks ago   Up 3 minutes                                         prizz_deep-dive-desktop-extension-service\n",
+        "stderr": "",
+        "elapsed_sec": 0.06
+      },
+      "host_port_forward": {
+        "run": {
+          "exit_code": 0,
+          "stdout": "2945e52465129a4e6e8d74a01f2685d578a08bcebdba17e04b79b943eb058270\n",
+          "stderr": "",
+          "elapsed_sec": 0.186
+        },
+        "probe": {
+          "exit_code": 0,
+          "stdout": "200",
+          "stderr": "",
+          "elapsed_sec": 0.038
+        },
+        "cleanup": {
+          "exit_code": 0,
+          "stdout": "sustained_porttest\n",
+          "stderr": "",
+          "elapsed_sec": 0.259
+        }
+      },
+      "io_errors_since_start": []
+    },
+    {
+      "at": "2026-07-31T12:50:50Z",
+      "socket_ping": {
+        "responsive": true,
+        "code": "200",
+        "exit_code": 0,
+        "stdout": "200 0.004087",
+        "stderr": "",
+        "elapsed_sec": 0.029
+      },
+      "docker_ps": {
+        "exit_code": 0,
+        "stdout": "CONTAINER ID   IMAGE                                              COMMAND                  CREATED       STATUS                   PORTS                       NAMES\n35a145fdc08f   docker/desktop-cloud-provider-kind:v0.6.0          \"/bin/cloud-provider…\"   4 days ago    Up 4 minutes             2375-2376/tcp               kind-cloud-provider\nc2297c91a7cc   docker/desktop-containerd-registry-mirror:v0.0.4   \"/bin/registry\"          4 days ago    Up 4 minutes (healthy)                               kind-registry-mirror\n8e24611954af   kindest/node:v1.36.1                               \"/usr/local/bin/entr…\"   4 days ago    Up 4 minutes             127.0.0.1:62056->6443/tcp   desktop-control-plane\n1c74c307a859   9b50c0a0c9a0                                       \"/usr/local/bin/runt…\"   4 weeks ago   Up 4 minutes                                         prizz_deep-dive-desktop-extension-service\n",
+        "stderr": "",
+        "elapsed_sec": 0.038
+      },
+      "host_port_forward": {
+        "run": {
+          "exit_code": 0,
+          "stdout": "6ca9ab19206352c67990d0789538e0345f31339fbb67395276ba8bf56fd2f365\n",
+          "stderr": "",
+          "elapsed_sec": 0.161
+        },
+        "probe": {
+          "exit_code": 0,
+          "stdout": "200",
+          "stderr": "",
+          "elapsed_sec": 0.022
+        },
+        "cleanup": {
+          "exit_code": 0,
+          "stdout": "sustained_porttest\n",
+          "stderr": "",
+          "elapsed_sec": 0.202
+        }
+      },
+      "io_errors_since_start": []
+    }
+  ]
+}

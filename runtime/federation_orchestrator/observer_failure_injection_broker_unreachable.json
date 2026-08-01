@@ -1,0 +1,35 @@
+{
+  "generated_at": "2026-07-31T10:56:31.034749Z",
+  "failure_injection": "broker_unreachable",
+  "result": {
+    "verdict": "INJECTION_CAUGHT",
+    "injected_step": "broker_unreachable",
+    "error": "[Errno 61] Connection refused",
+    "traceback": "Traceback (most recent call last):\n  File \"/opt/homebrew/lib/python3.14/site-packages/httpx/_transports/default.py\", line 101, in map_httpcore_exceptions\n    yield\n  File \"/opt/homebrew/lib/python3.14/site-packages/httpx/_transports/default.py\", line 250, in handle_request\n    resp = self._pool.handle_request(req)\n  File \"/opt/homebrew/lib/python3.14/site-packages/httpcore/_sync/connection_pool.py\", line 256, in handle_request\n    raise exc from None\n  File \"/opt/homebrew/lib/python3.14/site-packages/httpcore/_sync/connection_pool.py\", line 236, in handle_request\n    response = connection.handle_request(\n        pool_request.request\n    )\n  File \"/opt/homebrew/lib/python3.14/site-packages/httpcore/_sync/connection.py\", line 101, in handle_request\n    raise exc\n  File \"/opt/homebrew/lib/python3.14/site-packages/httpcore/_sync/connection.py\", line 78, in handle_request\n    stream = self._connect(request)\n  File \"/opt/homebrew/lib/python3.14/site-packages/httpcore/_sync/connection.py\", line 124, in _connect\n    stream = self._network_backend.connect_tcp(**kwargs)\n  File \"/opt/homebrew/lib/python3.14/site-packages/httpcore/_backends/sync.py\", line 207, in connect_tcp\n    with map_exceptions(exc_map):\n         ~~~~~~~~~~~~~~^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/contextlib.py\", line 162, in __exit__\n    self.gen.throw(value)\n    ~~~~~~~~~~~~~~^^^^^^^\n  File \"/opt/homebrew/lib/python3.14/site-packages/httpcore/_exceptions.py\", line 14, in map_exceptions\n    raise to_exc(exc) from exc\nhttpcore.ConnectError: [Errno 61] Connection refused\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/Users/andy/HyperAI-Sync/tools/aios_full_causal_mission.py\", line 402, in run_failure_injection\n    full_mission(guard, wrong_broker, gateway_url)\n    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/andy/HyperAI-Sync/tools/aios_full_causal_mission.py\", line 251, in full_mission\n    r = guard.call(\"AUTH\", broker.post, \"/capability\", json=capability_req)\n  File \"/Users/andy/HyperAI-Sync/tools/aios_full_causal_mission.py\", line 131, in call\n    return fn(*args, **kwargs)\n  File \"/opt/homebrew/lib/python3.14/site-packages/httpx/_client.py\", line 1144, in post\n    return self.request(\n           ~~~~~~~~~~~~^\n        \"POST\",\n        ^^^^^^^\n    ...<11 lines>...\n        extensions=extensions,\n        ^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/opt/homebrew/lib/python3.14/site-packages/httpx/_client.py\", line 825, in request\n    return self.send(request, auth=auth, follow_redirects=follow_redirects)\n           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/lib/python3.14/site-packages/httpx/_client.py\", line 914, in send\n    response = self._send_handling_auth(\n        request,\n    ...<2 lines>...\n        history=[],\n    )\n  File \"/opt/homebrew/lib/python3.14/site-packages/httpx/_client.py\", line 942, in _send_handling_auth\n    response = self._send_handling_redirects(\n        request,\n        follow_redirects=follow_redirects,\n        history=history,\n    )\n  File \"/opt/homebrew/lib/python3.14/site-packages/httpx/_client.py\", line 979, in _send_handling_redirects\n    response = self._send_single_request(request)\n  File \"/opt/homebrew/lib/python3.14/site-packages/httpx/_client.py\", line 1014, in _send_single_request\n    response = transport.handle_request(request)\n  File \"/opt/homebrew/lib/python3.14/site-packages/httpx/_transports/default.py\", line 249, in handle_request\n    with map_httpcore_exceptions():\n         ~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/contextlib.py\", line 162, in __exit__\n    self.gen.throw(value)\n    ~~~~~~~~~~~~~~^^^^^^^\n  File \"/opt/homebrew/lib/python3.14/site-packages/httpx/_transports/default.py\", line 118, in map_httpcore_exceptions\n    raise mapped_exc(message) from exc\nhttpx.ConnectError: [Errno 61] Connection refused\n"
+  },
+  "retries_total": 3,
+  "retried_failures": [
+    {
+      "step": "AUTH",
+      "attempt": 0,
+      "error": "[Errno 61] Connection refused",
+      "at": "2026-07-31T10:56:23.867409Z",
+      "backoff_sec": 1.0
+    },
+    {
+      "step": "AUTH",
+      "attempt": 1,
+      "error": "[Errno 61] Connection refused",
+      "at": "2026-07-31T10:56:24.874606Z",
+      "backoff_sec": 2.0
+    },
+    {
+      "step": "AUTH",
+      "attempt": 2,
+      "error": "[Errno 61] Connection refused",
+      "at": "2026-07-31T10:56:26.881737Z",
+      "backoff_sec": 4.0
+    }
+  ],
+  "observer_verdict": "GUARD_CAUGHT"
+}

@@ -14,8 +14,7 @@
     "Useful capability does not imply authority.",
     "A surface may be invoked only through its declared control_interface or wrapper.",
     "Authority promotion requires fresh proof, mapped phi_i(M), an open gate, rollback path, and memory update.",
-    "Root-host destructive actions, dirty Git mutation, cloud mutation, phone/device/channel delivery, wallet/ledger mutation, and connector deletion fail closed unless a dedicated mission contract opens the gate."
-    ,
+    "Root-host destructive actions, dirty Git mutation, cloud mutation, phone/device/channel delivery, wallet/ledger mutation, and connector deletion fail closed unless a dedicated mission contract opens the gate.",
     "When creator input enters Codex or another registered AI/operator runtime for HyperAI work, that runtime acts as a worker surface and must follow the HyperAI mission protocol instead of bypassing dispatch, proof, and closure."
   ],
   "mission_binding": {
@@ -31,11 +30,13 @@
       "display_name": "hyperai-user-control-system",
       "runtime_class": "app_runtime",
       "authority_class": "product_shell_authority",
-      "status": "live_autonomous_core_ready",
+      "status": "stale_process_runtime",
       "owner_surface": "C:\\Users\\pc\\HyperAI_Phoenix_Master\\hyperai-user-control-system",
       "control_interface": {
         "backend": "http://127.0.0.1:5000",
         "frontend": "http://127.0.0.1:4173",
+        "backend_note": "port currently held by ControlCe, not product backend (stale)",
+        "frontend_note": "unreachable",
         "backend_runtime_truth": "backend/server.js",
         "frontend_runtime_truth": "dist-isolated served by scripts/runtime/static-spa-server.mjs"
       },
@@ -74,13 +75,23 @@
         "port 4173 unreachable",
         "runtime capabilities fail to prove autonomous-safe core"
       ],
-      "promotion_rule": "Already product app authority only for its proven core lanes; non-core/degraded/frozen lanes require separate proof."
+      "promotion_rule": "Already product app authority only for its proven core lanes; non-core/degraded/frozen lanes require separate proof.",
+      "canon_binding": [
+        "memory/AIOS_APP_RUNTIME_RESPONSIBILITY_AUDIT_20260415.md",
+        "memory/AIOS_AUTONOMOUS_OODA_WORKFLOW.md",
+        "memory/AIOS_INVARIANTS.md"
+      ],
+      "llm_binding": {
+        "engine": "ollama_local_models",
+        "model_alias": "apo/apple",
+        "reasoning_scope": "runtime_preservation_and_user_intent"
+      }
     },
     "app_core_lanes": {
       "display_name": "HyperAI app core lane set",
       "runtime_class": "app_lane_group",
       "authority_class": "core_product_lane",
-      "status": "live",
+      "status": "stale_backend_dependency",
       "owner_surface": "hyperai_product_runtime",
       "capabilities": [
         "dashboard",
@@ -103,7 +114,16 @@
       "stop_conditions": [
         "route or backend contract changes without build/smoke proof"
       ],
-      "promotion_rule": "Core lanes remain authoritative only while live runtime proof remains fresh."
+      "promotion_rule": "Core lanes remain authoritative only while live runtime proof remains fresh.",
+      "canon_binding": [
+        "memory/AIOS_APP_RUNTIME_RESPONSIBILITY_AUDIT_20260415.md",
+        "memory/AIOS_RUNTIME_CLASS_MATRIX_20260415.md"
+      ],
+      "llm_binding": {
+        "engine": "ollama_local_models",
+        "model_alias": "apo/apple",
+        "reasoning_scope": "product_runtime_decision"
+      }
     },
     "app_non_core_lanes": {
       "display_name": "HyperAI app non-core support lanes",
@@ -135,7 +155,16 @@
         "stub lane mistaken for production lane",
         "non-core support lane used as authority"
       ],
-      "promotion_rule": "Requires route-specific live backend proof plus UI/CI verification."
+      "promotion_rule": "Requires route-specific live backend proof plus UI/CI verification.",
+      "canon_binding": [
+        "memory/AIOS_APP_RUNTIME_RESPONSIBILITY_AUDIT_20260415.md",
+        "memory/AIOS_VSCODE_EXTENSION_DEGRADED_SHELL_POLICY.md"
+      ],
+      "llm_binding": {
+        "engine": "ollama_local_models",
+        "model_alias": "apo/apple",
+        "reasoning_scope": "support_and_local_state"
+      }
     },
     "app_degraded_frozen_lanes": {
       "display_name": "HyperAI degraded and frozen app lanes",
@@ -166,7 +195,16 @@
       "stop_conditions": [
         "attempt to route product decisions through frozen or degraded lane"
       ],
-      "promotion_rule": "Requires explicit re-proof or backend-unification task."
+      "promotion_rule": "Requires explicit re-proof or backend-unification task.",
+      "canon_binding": [
+        "memory/AIOS_VSCODE_EXTENSION_DEGRADED_SHELL_POLICY.md",
+        "memory/AIOS_FACTORY_RESET_RECOVERY_MEMORY_20260516.md"
+      ],
+      "llm_binding": {
+        "engine": "ollama_local_models",
+        "model_alias": "apo/apple",
+        "reasoning_scope": "fallback_and_recovery_planning"
+      }
     },
     "federation_orchestrator": {
       "display_name": "Federation orchestrator",
@@ -207,13 +245,24 @@
         "single mission root is violated",
         "single evidence recorder is violated"
       ],
-      "promotion_rule": "Governance router by contract; does not replace app runtime authority."
+      "promotion_rule": "Governance router by contract; does not replace app runtime authority.",
+      "canon_binding": [
+        "memory/AIOS_AUTONOMOUS_OODA_WORKFLOW.md",
+        "memory/AIOS_EXECUTION_SEMANTICS_CANON.md",
+        "memory/AIOS_INVARIANTS.md",
+        "runtime/federation_orchestrator/mission_authority_policy.json"
+      ],
+      "llm_binding": {
+        "engine": "ollama_local_models",
+        "model_alias": "apo/apple",
+        "reasoning_scope": "mission_routing_and_surface_selection"
+      }
     },
     "memory_writer": {
       "display_name": "AIOS memory writer",
       "runtime_class": "service_runtime",
       "authority_class": "memory_authority",
-      "status": "live",
+      "status": "script_ready",
       "owner_surface": "tools/update_memory.py",
       "control_interface": {
         "command": "python tools/update_memory.py"
@@ -241,13 +290,22 @@
         "memory path unavailable",
         "update script fails"
       ],
-      "promotion_rule": "Canonical memory writer for lightweight memory only."
+      "promotion_rule": "Canonical memory writer for lightweight memory only.",
+      "canon_binding": [
+        "memory/AIOS_UNIFIED_MEMORY_BOUND_WORKFLOW.md",
+        "memory/AIOS_INVARIANTS.md"
+      ],
+      "llm_binding": {
+        "engine": "ollama_local_models",
+        "model_alias": "apo/apple",
+        "reasoning_scope": "memory_summarization_and_state_update"
+      }
     },
     "verification_truth": {
       "display_name": "Verification truth",
       "runtime_class": "verification_registry",
       "authority_class": "verification_authority",
-      "status": "live",
+      "status": "ci_verification_ready",
       "owner_surface": "hyperai-user-control-system package scripts and runtime probes",
       "capabilities": [
         "runtime_probe",
@@ -274,7 +332,16 @@
         "hard gate fails",
         "proof artifact missing for claimed runtime change"
       ],
-      "promotion_rule": "Verification may support promotion but cannot replace runtime proof."
+      "promotion_rule": "Verification may support promotion but cannot replace runtime proof.",
+      "canon_binding": [
+        "memory/AIOS_DRIFT_VERIFICATION_PROTOCOL.md",
+        "memory/AIOS_INVARIANTS.md"
+      ],
+      "llm_binding": {
+        "engine": "ollama_local_models",
+        "model_alias": "apo/apple",
+        "reasoning_scope": "drift_detection_and_proof_validation"
+      }
     },
     "codex_operator_runtime": {
       "display_name": "Local Codex / AIOS operator cockpit",
@@ -315,7 +382,18 @@
         "action requires destructive root-host operation",
         "action requires approval and approval is missing"
       ],
-      "promotion_rule": "Can execute bounded local work only as a HyperAI worker surface when route plan and task gates allow it; input intake does not grant authority."
+      "promotion_rule": "Can execute bounded local work only as a HyperAI worker surface when route plan and task gates allow it; input intake does not grant authority.",
+      "canon_binding": [
+        "memory/AIOS_LOCAL_CODEX_OPERATOR_RUNTIME.md",
+        "memory/AIOS_CREATOR_AI_COEXISTENCE_WORKFLOW.md",
+        "runtime/federation_orchestrator/worker_runtime_binding_policy.json",
+        "memory/AIOS_INVARIANTS.md"
+      ],
+      "llm_binding": {
+        "engine": "ollama_local_models",
+        "model_alias": "apo/apple",
+        "reasoning_scope": "worker_reasoning_and_implementation_delegate"
+      }
     },
     "openclaw_control_lane": {
       "display_name": "OpenClaw control lane",
@@ -361,25 +439,35 @@
         "action outside wrapper allowlist",
         "side-effect plugin requested without dedicated approval contract"
       ],
-      "promotion_rule": "Requires fresh wrapper proof plus repo-governed execution contract; never replaces app authority by installation alone."
+      "promotion_rule": "Requires fresh wrapper proof plus repo-governed execution contract; never replaces app authority by installation alone.",
+      "canon_binding": [
+        "memory/AIOS_OPENCLAW_CONTROL_LANE_20260416.md"
+      ],
+      "llm_binding": {
+        "engine": "ollama_local_models",
+        "model_alias": "apo/apple",
+        "reasoning_scope": "operator_control_probe"
+      }
     },
     "local_fakeapi_provider_fabric": {
       "display_name": "QuantumReason local fakeAPI provider fabric",
       "runtime_class": "provider_fabric",
       "authority_class": "reasoning_api_compatibility_surface",
-      "status": "source_proven_not_live_in_current_probe",
+      "status": "live",
       "owner_surface": "C:\\Users\\pc\\aidev\\quantumreason_v3",
       "control_interface": {
-        "base_url": "http://127.0.0.1:8000/api/v2",
-        "chat_completions": "/api/v2/chat/completions",
-        "health": "/api/v2/health"
+        "base_url": "http://127.0.0.1:9011",
+        "health": "/health",
+        "chat_completions": "/v1/chat/completions"
       },
       "capabilities": [
         "openai_compatible_chat_shape",
         "provider_routing",
         "local_model_preference",
         "cache_metadata",
-        "request_id_tracking"
+        "request_id_tracking",
+        "slack_proxy",
+        "google_pse_proxy"
       ],
       "allowed_roles": [
         "reasoning_delegate",
@@ -398,13 +486,22 @@
         "port 8000 not live for runtime request",
         "provider route lacks health proof"
       ],
-      "promotion_rule": "Source-proven fabric; live inference requires fresh health/request proof."
+      "promotion_rule": "Source-proven fabric; live inference requires fresh health/request proof.",
+      "canon_binding": [
+        "memory/AIOS_LOCAL_FAKEAPI_PROVIDER_FABRIC.md",
+        "memory/APΩ_CONNECTOR_CONTROL_PLANE_CANON.md"
+      ],
+      "llm_binding": {
+        "engine": "ollama_local_models",
+        "model_alias": "apo/apple",
+        "reasoning_scope": "local_reasoning_facade"
+      }
     },
     "ollama_local_models": {
       "display_name": "Ollama local model substrate",
       "runtime_class": "model_substrate",
       "authority_class": "inference_candidate",
-      "status": "inventory_observed",
+      "status": "live",
       "owner_surface": "Ollama on local Windows profile",
       "capabilities": [
         "local_inference_candidate",
@@ -424,7 +521,19 @@
       "stop_conditions": [
         "model selected only by inventory without inference proof"
       ],
-      "promotion_rule": "Inventory is not inference proof; each task needs request-specific proof."
+      "promotion_rule": "Inventory is not inference proof; each task needs request-specific proof.",
+      "canon_binding": [
+        "memory/AIOS_MODEL_NATIVE_RUNTIME_CANON.md",
+        "memory/OLLAMA_LINEAGE_VERIFY_20260729.md"
+      ],
+      "llm_binding": null,
+      "control_interface": {
+        "base_url": "http://127.0.0.1:11434",
+        "tags": "/api/tags",
+        "chat": "/api/chat",
+        "generate": "/api/generate"
+      },
+      "default_model_alias": "apo/apple"
     },
     "mcp_connectors": {
       "display_name": "MCP connector graph",
@@ -459,7 +568,16 @@
         "connector unavailable",
         "operation outside connector domain"
       ],
-      "promotion_rule": "Connector output must be bound to memory/proof artifact."
+      "promotion_rule": "Connector output must be bound to memory/proof artifact.",
+      "canon_binding": [
+        "memory/AIOS_CONNECTOR_CANON_MAP.md",
+        "memory/APΩ_CONNECTOR_CONTROL_PLANE_CANON.md"
+      ],
+      "llm_binding": null,
+      "control_interface": {
+        "docker_mcp_gateway": "http://127.0.0.1:8811/sse",
+        "tool_prefix": "docker_mcp__"
+      }
     },
     "vscode_operator_surface": {
       "display_name": "VS Code / extension operator surface",
@@ -491,7 +609,12 @@
         "command class unknown under degraded shell",
         "destructive OS/Docker/WSL recovery requested"
       ],
-      "promotion_rule": "Editor surface remains operator surface unless a task-specific contract opens execution."
+      "promotion_rule": "Editor surface remains operator surface unless a task-specific contract opens execution.",
+      "canon_binding": [
+        "memory/AIOS_VSCODE_EXTENSION_DEGRADED_SHELL_POLICY.md",
+        "memory/AIOS_LOCAL_CODEX_OPERATOR_RUNTIME.md"
+      ],
+      "llm_binding": null
     },
     "git_sync_transport": {
       "display_name": "Git sync transport",
@@ -520,7 +643,11 @@
         "dirty worktree without explicit user request",
         "rollback path missing"
       ],
-      "promotion_rule": "Git can transport authority only after topology decision and rollback-safe proof."
+      "promotion_rule": "Git can transport authority only after topology decision and rollback-safe proof.",
+      "canon_binding": [
+        "memory/AIOS_TWO_MACHINE_GIT_SYNC_STANDARDIZATION_PLAN.md"
+      ],
+      "llm_binding": null
     },
     "gcp_cloud_observed": {
       "display_name": "GCP cloud substrate observation",
@@ -551,7 +678,12 @@
         "same-schema live inventory missing for execution",
         "cloud mutation requested without mission contract"
       ],
-      "promotion_rule": "Observed substrate only until live read-only reconciliation and execution contract."
+      "promotion_rule": "Observed substrate only until live read-only reconciliation and execution contract.",
+      "canon_binding": [
+        "memory/AIOS_GCP_CLOUD_SUBSTRATE_OBSERVATION_20260415.md",
+        "memory/AIOS_REMOTE_EXECUTION_SUBSTRATE_POLICY.md"
+      ],
+      "llm_binding": null
     },
     "telegram_treasury_economy": {
       "display_name": "Telegram / Treasury / economy lanes",
@@ -586,7 +718,449 @@
         "creator proof missing",
         "ledger proof missing"
       ],
-      "promotion_rule": "Execution blocked until mission, evidence, shell, and creator proof gates open."
+      "promotion_rule": "Execution blocked until mission, evidence, shell, and creator proof gates open.",
+      "canon_binding": [
+        "memory/AIOS_TELEGRAM_MASTERY_SKILL.md",
+        "memory/AIOS_LOCAL_LLM_TELEGRAM_COORDINATION.md",
+        "memory/AIOS_ECONOMY_OPERATING_BRIEF.md"
+      ],
+      "llm_binding": {
+        "engine": "ollama_local_models",
+        "model_alias": "apo/apple",
+        "reasoning_scope": "relay_and_deal_artifact"
+      }
+    },
+    "weather_tool": {
+      "display_name": "OpenAPI Weather tool server",
+      "runtime_class": "openapi_tool_server",
+      "authority_class": "tool_surface",
+      "status": "live",
+      "owner_surface": "local_fakeapi_provider_fabric",
+      "control_interface": {
+        "base_url": "http://127.0.0.1:9011/tools/weather",
+        "openapi": "http://127.0.0.1:8901/openapi.json"
+      },
+      "capabilities": [
+        "weather_forecast",
+        "location_query"
+      ],
+      "allowed_roles": [
+        "data_read"
+      ],
+      "forbidden_roles": [
+        "shell_mutation",
+        "ledger_mutation"
+      ],
+      "canon_binding": [
+        "memory/AIOS_LOCAL_FAKEAPI_PROVIDER_FABRIC.md",
+        "memory/APΩ_CONNECTOR_CONTROL_PLANE_CANON.md"
+      ],
+      "llm_binding": null,
+      "proof_source": [
+        "runtime/federation_orchestrator/cleanup_receipts/*.json"
+      ],
+      "stop_conditions": [
+        "upstream weather API unreachable"
+      ],
+      "promotion_rule": "Tool surface; promoted only within local fabric."
+    },
+    "quotes_tool": {
+      "display_name": "OpenAPI Quotes UI tool server",
+      "runtime_class": "openapi_tool_server",
+      "authority_class": "tool_surface",
+      "status": "live",
+      "owner_surface": "local_fakeapi_provider_fabric",
+      "control_interface": {
+        "base_url": "http://127.0.0.1:9011/tools/quotes",
+        "openapi": "http://127.0.0.1:8906/openapi.json"
+      },
+      "capabilities": [
+        "quote_display",
+        "quote_json"
+      ],
+      "allowed_roles": [
+        "display_render"
+      ],
+      "forbidden_roles": [
+        "shell_mutation"
+      ],
+      "canon_binding": [
+        "memory/AIOS_LOCAL_FAKEAPI_PROVIDER_FABRIC.md"
+      ],
+      "llm_binding": null,
+      "proof_source": [],
+      "stop_conditions": [
+        "port 8906 down"
+      ],
+      "promotion_rule": "UI tool surface."
+    },
+    "flashcards_tool": {
+      "display_name": "OpenAPI Flashcards UI tool server",
+      "runtime_class": "openapi_tool_server",
+      "authority_class": "tool_surface",
+      "status": "live",
+      "owner_surface": "local_fakeapi_provider_fabric",
+      "control_interface": {
+        "base_url": "http://127.0.0.1:9011/tools/flashcards",
+        "openapi": "http://127.0.0.1:8907/openapi.json"
+      },
+      "capabilities": [
+        "flashcard_display",
+        "flashcard_json"
+      ],
+      "allowed_roles": [
+        "display_render"
+      ],
+      "forbidden_roles": [
+        "shell_mutation"
+      ],
+      "canon_binding": [
+        "memory/AIOS_LOCAL_FAKEAPI_PROVIDER_FABRIC.md"
+      ],
+      "llm_binding": null,
+      "proof_source": [],
+      "stop_conditions": [
+        "port 8907 down"
+      ],
+      "promotion_rule": "UI tool surface."
+    },
+    "time_tool": {
+      "display_name": "OpenAPI Time UI tool server",
+      "runtime_class": "openapi_tool_server",
+      "authority_class": "tool_surface",
+      "status": "live",
+      "owner_surface": "local_fakeapi_provider_fabric",
+      "control_interface": {
+        "base_url": "http://127.0.0.1:9011/tools/time_ui",
+        "openapi": "http://127.0.0.1:8908/openapi.json"
+      },
+      "capabilities": [
+        "time_display",
+        "timezone"
+      ],
+      "allowed_roles": [
+        "data_read"
+      ],
+      "forbidden_roles": [
+        "shell_mutation"
+      ],
+      "canon_binding": [
+        "memory/AIOS_LOCAL_FAKEAPI_PROVIDER_FABRIC.md"
+      ],
+      "llm_binding": null,
+      "proof_source": [],
+      "stop_conditions": [
+        "port 8908 down"
+      ],
+      "promotion_rule": "UI tool surface."
+    },
+    "bitcoin_tool": {
+      "display_name": "OpenAPI Bitcoin price predictor tool server",
+      "runtime_class": "openapi_tool_server",
+      "authority_class": "tool_surface",
+      "status": "live",
+      "owner_surface": "local_fakeapi_provider_fabric",
+      "control_interface": {
+        "base_url": "http://127.0.0.1:9011/tools/bitcoin",
+        "openapi": "http://127.0.0.1:8910/openapi.json"
+      },
+      "capabilities": [
+        "price_query",
+        "trend_query",
+        "stat_query"
+      ],
+      "allowed_roles": [
+        "data_read"
+      ],
+      "forbidden_roles": [
+        "shell_mutation",
+        "ledger_mutation"
+      ],
+      "canon_binding": [
+        "memory/AIOS_LOCAL_FAKEAPI_PROVIDER_FABRIC.md"
+      ],
+      "llm_binding": null,
+      "proof_source": [],
+      "stop_conditions": [
+        "csv data missing"
+      ],
+      "promotion_rule": "Data tool surface."
+    },
+    "summarizer_tool": {
+      "display_name": "OpenAPI Text Summarizer tool server",
+      "runtime_class": "openapi_tool_server",
+      "authority_class": "tool_surface",
+      "status": "live",
+      "owner_surface": "local_fakeapi_provider_fabric",
+      "control_interface": {
+        "base_url": "http://127.0.0.1:9011/tools/summarizer",
+        "openapi": "http://127.0.0.1:8909/openapi.json"
+      },
+      "capabilities": [
+        "text_summarization"
+      ],
+      "allowed_roles": [
+        "reasoning_delegate"
+      ],
+      "forbidden_roles": [
+        "shell_mutation"
+      ],
+      "canon_binding": [
+        "memory/AIOS_LOCAL_FAKEAPI_PROVIDER_FABRIC.md",
+        "memory/AIOS_MODEL_NATIVE_RUNTIME_CANON.md"
+      ],
+      "llm_binding": {
+        "engine": "ollama_local_models",
+        "model_alias": "apo/apple",
+        "reasoning_scope": "text_summarization"
+      },
+      "proof_source": [
+        "runtime/federation_orchestrator/cleanup_receipts/*.json"
+      ],
+      "stop_conditions": [
+        "model substrate unreachable"
+      ],
+      "promotion_rule": "Reasoning tool surface bound to local model."
+    },
+    "sql_tool": {
+      "display_name": "OpenAPI SQL chat tool server",
+      "runtime_class": "openapi_tool_server",
+      "authority_class": "tool_surface",
+      "status": "live",
+      "owner_surface": "local_fakeapi_provider_fabric",
+      "control_interface": {
+        "base_url": "http://127.0.0.1:9011/tools/sql",
+        "openapi": "http://127.0.0.1:8911/openapi.json"
+      },
+      "capabilities": [
+        "schema_introspection",
+        "nl_to_sql"
+      ],
+      "allowed_roles": [
+        "reasoning_delegate",
+        "database_read"
+      ],
+      "forbidden_roles": [
+        "shell_mutation",
+        "destructive_sql"
+      ],
+      "canon_binding": [
+        "memory/AIOS_LOCAL_FAKEAPI_PROVIDER_FABRIC.md",
+        "memory/AIOS_MODEL_NATIVE_RUNTIME_CANON.md"
+      ],
+      "llm_binding": {
+        "engine": "ollama_local_models",
+        "model_alias": "apo/apple",
+        "reasoning_scope": "nl_to_sql_generation"
+      },
+      "proof_source": [],
+      "stop_conditions": [
+        "database_url missing or model unreachable"
+      ],
+      "promotion_rule": "Reasoning tool surface bound to local model with read-only prefer."
+    },
+    "apo_gateway": {
+      "display_name": "APΩ unified gateway",
+      "runtime_class": "api_gateway",
+      "authority_class": "gateway_surface",
+      "status": "live",
+      "owner_surface": "runtime/federation_orchestrator",
+      "control_interface": {
+        "base_url": "http://127.0.0.1:9011",
+        "health": "/health"
+      },
+      "capabilities": [
+        "tool_routing",
+        "model_routing",
+        "mcp_proxy",
+        "chat_completions"
+      ],
+      "allowed_roles": [
+        "request_router",
+        "runtime_adapter"
+      ],
+      "forbidden_roles": [
+        "shell_authority",
+        "cloud_authority"
+      ],
+      "canon_binding": [
+        "memory/APΩ_CONNECTOR_CONTROL_PLANE_CANON.md",
+        "memory/AIOS_LOCAL_FAKEAPI_PROVIDER_FABRIC.md"
+      ],
+      "llm_binding": null,
+      "proof_source": [
+        "~/.apo/gateway/apo_gateway.log"
+      ],
+      "stop_conditions": [
+        "port 9011 unreachable"
+      ],
+      "promotion_rule": "Gateway surface; routes to live model/tool substrates."
+    },
+    "docker_mcp_gateway": {
+      "display_name": "Docker MCP gateway",
+      "runtime_class": "mcp_gateway",
+      "authority_class": "tool_bridge",
+      "status": "live",
+      "owner_surface": "mcp_connectors",
+      "control_interface": {
+        "base_url": "http://127.0.0.1:8811",
+        "health": "/sse",
+        "root_redirect": "/"
+      },
+      "capabilities": [
+        "mcp_tool_serving"
+      ],
+      "allowed_roles": [
+        "tool_bridge"
+      ],
+      "forbidden_roles": [
+        "shell_authority"
+      ],
+      "canon_binding": [
+        "memory/AIOS_CONNECTOR_CANON_MAP.md",
+        "memory/APΩ_CONNECTOR_CONTROL_PLANE_CANON.md"
+      ],
+      "llm_binding": null,
+      "proof_source": [
+        "~/.apo/gateway/docker_mcp_gateway.log"
+      ],
+      "stop_conditions": [
+        "port 8811 unreachable"
+      ],
+      "promotion_rule": "MCP tool bridge."
+    },
+    "lmstudio_substrate": {
+      "display_name": "LM Studio local model substrate",
+      "runtime_class": "model_substrate",
+      "authority_class": "inference_candidate",
+      "status": "live_token_gated",
+      "owner_surface": "local FakeAPI/APΩ",
+      "control_interface": {
+        "base_url": "http://127.0.0.1:1235",
+        "models": "/v1/models",
+        "chat_completions": "/v1/chat/completions",
+        "note": "Requires LM Studio API token; models endpoint is auth-gated."
+      },
+      "capabilities": [
+        "local_inference_candidate"
+      ],
+      "allowed_roles": [
+        "model_substrate_after_request_specific_proof"
+      ],
+      "forbidden_roles": [
+        "shell_authority",
+        "proof_authority",
+        "business_truth_authority"
+      ],
+      "canon_binding": [
+        "memory/AIOS_MODEL_NATIVE_RUNTIME_CANON.md"
+      ],
+      "llm_binding": null,
+      "proof_source": [
+        "http://127.0.0.1:1235/v1/models"
+      ],
+      "stop_conditions": [
+        "port 1235 unreachable"
+      ],
+      "promotion_rule": "Inventory is not inference proof; each task needs request-specific proof."
+    },
+    "slack_tool": {
+      "display_name": "OpenAPI Slack tool server",
+      "runtime_class": "openapi_tool_server",
+      "authority_class": "tool_surface",
+      "status": "live_token_missing",
+      "owner_surface": "local_fakeapi_provider_fabric",
+      "control_interface": {
+        "base_url": "http://127.0.0.1:9011/tools/slack",
+        "openapi": "http://127.0.0.1:8913/openapi.json"
+      },
+      "capabilities": [
+        "channel_list",
+        "post_message",
+        "reply",
+        "reaction",
+        "user_profile"
+      ],
+      "allowed_roles": [
+        "reasoning_delegate",
+        "messaging_read"
+      ],
+      "forbidden_roles": [
+        "shell_mutation"
+      ],
+      "canon_binding": [
+        "memory/APΩ_CREDENTIAL_CANON.md",
+        "memory/AIOS_LOCAL_FAKEAPI_PROVIDER_FABRIC.md"
+      ],
+      "llm_binding": null,
+      "proof_source": [],
+      "stop_conditions": [
+        "slack token missing or broker denies"
+      ],
+      "promotion_rule": "Messaging tool surface; requires valid Slack token via broker."
+    },
+    "google_pse_tool": {
+      "display_name": "OpenAPI Google PSE search tool server",
+      "runtime_class": "openapi_tool_server",
+      "authority_class": "tool_surface",
+      "status": "live_token_missing",
+      "owner_surface": "local_fakeapi_provider_fabric",
+      "control_interface": {
+        "base_url": "http://127.0.0.1:9011/tools/google_pse",
+        "openapi": "http://127.0.0.1:8914/openapi.json"
+      },
+      "capabilities": [
+        "web_search"
+      ],
+      "allowed_roles": [
+        "reasoning_delegate",
+        "web_search"
+      ],
+      "forbidden_roles": [
+        "shell_mutation"
+      ],
+      "canon_binding": [
+        "memory/APΩ_CREDENTIAL_CANON.md",
+        "memory/AIOS_LOCAL_FAKEAPI_PROVIDER_FABRIC.md"
+      ],
+      "llm_binding": null,
+      "proof_source": [],
+      "stop_conditions": [
+        "google pse api key or engine id missing"
+      ],
+      "promotion_rule": "Web search tool surface; requires Google PSE credentials via broker."
+    },
+    "external_rag_tool": {
+      "display_name": "OpenAPI External RAG tool server",
+      "runtime_class": "openapi_tool_server",
+      "authority_class": "tool_surface",
+      "status": "live",
+      "owner_surface": "local_fakeapi_provider_fabric",
+      "control_interface": {
+        "base_url": "http://127.0.0.1:9011/tools/external_rag",
+        "openapi": "http://127.0.0.1:8912/openapi.json"
+      },
+      "capabilities": [
+        "retrieval",
+        "rag"
+      ],
+      "allowed_roles": [
+        "reasoning_delegate",
+        "retrieval"
+      ],
+      "forbidden_roles": [
+        "shell_mutation"
+      ],
+      "canon_binding": [
+        "memory/AIOS_LOCAL_FAKEAPI_PROVIDER_FABRIC.md",
+        "memory/AIOS_MODEL_NATIVE_RUNTIME_CANON.md"
+      ],
+      "llm_binding": null,
+      "proof_source": [],
+      "stop_conditions": [
+        "faiss_index missing or model unreachable"
+      ],
+      "promotion_rule": "RAG tool surface backed by local sentence-transformer embedding."
     }
   },
   "control_interfaces": {

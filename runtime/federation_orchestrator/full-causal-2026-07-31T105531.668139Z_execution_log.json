@@ -1,0 +1,111 @@
+{
+  "mission_id": "full-causal-2026-07-31T105531.668139Z",
+  "mission_class": "AUTH_ROUTING_EXECUTION_VERIFICATION_MEMORY",
+  "started_at": "2026-07-31T10:55:31.668143Z",
+  "stages": {
+    "AUTH": {
+      "status_code": 200,
+      "decision": "ALLOW",
+      "lease_id": "lease-ec48e21cb95b44ad",
+      "active_key_ref": "OPENAI_API_KEY_3",
+      "started_at": "2026-07-31T10:55:32.025202Z",
+      "completed_at": "2026-07-31T10:55:32.035359Z",
+      "request_hash": "dce8d409aca3aa797d4635672959ad2a46f7420156129e387e72b587587515f7",
+      "response_hash": "cf224738653419021c196faac34b1e657e0f3f3387dceb91ccb6c7723c6a9287"
+    },
+    "ROUTING": {
+      "status_code": 200,
+      "url": "http://127.0.0.1:9011/tools/time/get_current_utc_time",
+      "started_at": "2026-07-31T10:55:32.040236Z",
+      "completed_at": "2026-07-31T10:55:32.114348Z",
+      "request_hash": "544124a4ffb924c7a3f6f77ed47e9e04d82ef60acea7806d37f9d960587ead09",
+      "response_hash": "f9e7790aafe6b11055e1f3d49ac9f0da37d70c8d0cf88745b7d6cc0c023e3132"
+    },
+    "EXECUTION": {
+      "raw_response": {
+        "utc": "2026-07-31T10:55:32.092375+00:00"
+      },
+      "started_at": "2026-07-31T10:55:32.114399Z",
+      "completed_at": "2026-07-31T10:55:32.114412Z",
+      "response_hash": "f9e7790aafe6b11055e1f3d49ac9f0da37d70c8d0cf88745b7d6cc0c023e3132"
+    },
+    "VERIFICATION": {
+      "utc": "2026-07-31T10:55:32.092375+00:00",
+      "verified": true,
+      "started_at": "2026-07-31T10:55:32.114427Z",
+      "completed_at": "2026-07-31T10:55:32.114486Z"
+    }
+  },
+  "edges": [
+    {
+      "source_actor": "CREATOR",
+      "destination_actor": "AUTH",
+      "method": "INTENT",
+      "url": "canon://full_causal_mission",
+      "request_hash": "ee527ef2a93151443ae7ac4cc52bf006f0113200d0a459e965eeb15a129819f0",
+      "response_hash": "4dbdbddb08e7c336bb03163391c8636ffcf90a25e38169e78aeb3b0a94fc656c",
+      "started_at": "2026-07-31T10:55:31.668177Z",
+      "completed_at": "2026-07-31T10:55:31.668179Z",
+      "authority": "CREATOR",
+      "lease_id_or_fingerprint": "none",
+      "verification_result": "PASS",
+      "note": "canonical root authority for AUTH lane"
+    },
+    {
+      "source_actor": "AUTH",
+      "destination_actor": "ROUTING",
+      "method": "POST",
+      "url": "http://127.0.0.1:8765/capability",
+      "request_hash": "dce8d409aca3aa797d4635672959ad2a46f7420156129e387e72b587587515f7",
+      "response_hash": "cf224738653419021c196faac34b1e657e0f3f3387dceb91ccb6c7723c6a9287",
+      "started_at": "2026-07-31T10:55:32.025202Z",
+      "completed_at": "2026-07-31T10:55:32.035359Z",
+      "authority": "broker",
+      "lease_id_or_fingerprint": "lease-ec48e21cb95b44ad",
+      "verification_result": "PASS",
+      "note": "lease issued; next hop apo_gateway with X-Lease-Id"
+    },
+    {
+      "source_actor": "ROUTING",
+      "destination_actor": "EXECUTION",
+      "method": "GET",
+      "url": "http://127.0.0.1:9011/tools/time/get_current_utc_time",
+      "request_hash": "544124a4ffb924c7a3f6f77ed47e9e04d82ef60acea7806d37f9d960587ead09",
+      "response_hash": "f9e7790aafe6b11055e1f3d49ac9f0da37d70c8d0cf88745b7d6cc0c023e3132",
+      "started_at": "2026-07-31T10:55:32.040236Z",
+      "completed_at": "2026-07-31T10:55:32.114348Z",
+      "authority": "apo_gateway",
+      "lease_id_or_fingerprint": "lease-ec48e21cb95b44ad",
+      "verification_result": "PASS",
+      "note": "gateway verified lease then proxied to openapi_tool_time"
+    },
+    {
+      "source_actor": "EXECUTION",
+      "destination_actor": "VERIFICATION",
+      "method": "INTERNAL",
+      "url": "parse/verify",
+      "request_hash": "f9e7790aafe6b11055e1f3d49ac9f0da37d70c8d0cf88745b7d6cc0c023e3132",
+      "response_hash": "2ac8962073232348d4e3d69621ff199aef3eeac4e5e5576679de4f4ed8009a6e",
+      "started_at": "2026-07-31T10:55:32.114399Z",
+      "completed_at": "2026-07-31T10:55:32.114412Z",
+      "authority": "openapi_tool_time",
+      "lease_id_or_fingerprint": "lease-ec48e21cb95b44ad",
+      "verification_result": "PASS",
+      "note": "value handed to verification layer"
+    },
+    {
+      "source_actor": "VERIFICATION",
+      "destination_actor": "MEMORY",
+      "method": "INTERNAL",
+      "url": "write_receipt",
+      "request_hash": "2ac8962073232348d4e3d69621ff199aef3eeac4e5e5576679de4f4ed8009a6e",
+      "response_hash": "cb349debc83348cdc6b3c6a000645efadfe4200a4f8fae289bdef69c9a8a789a",
+      "started_at": "2026-07-31T10:55:32.114427Z",
+      "completed_at": "2026-07-31T10:55:32.114486Z",
+      "authority": "local_verifier",
+      "lease_id_or_fingerprint": "lease-ec48e21cb95b44ad",
+      "verification_result": "PASS",
+      "note": "verification passed -> memory write"
+    }
+  ]
+}

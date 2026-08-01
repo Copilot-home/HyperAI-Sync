@@ -1,0 +1,168 @@
+{
+  "generated_at": "2026-07-31T10:58:04Z",
+  "F0_F1_binding_receipt": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/external_frame_binding_receipt.json",
+  "F0_F1_verdict": "F2\u2192F3 local lineage is bound; F0\u2192F1 file lineage remains UNBOUND and is treated as external historical reference only",
+  "artifacts": [
+    {
+      "file_id": "runtime/federation_orchestrator/capability_to_mission_map.json",
+      "exact_title": "capability_to_mission_map.json",
+      "frame_id": "F2/F3",
+      "content_hash": "429761d90c4138a036ac0797cb7df69960df662252d4713c6fd4b2745b1a24b3",
+      "producer": "/Users/andy/HyperAI-Sync/tools/aios_living_loop.py",
+      "inputs": [
+        "runtime_registry.json",
+        "apo_config.yaml",
+        "binding_plan.json"
+      ],
+      "outputs": [
+        "active_dispatch_report.md"
+      ]
+    },
+    {
+      "file_id": "runtime/federation_orchestrator/ecosystem_value_flow.json",
+      "exact_title": "ecosystem_value_flow.json",
+      "frame_id": "F2/F3",
+      "content_hash": "b2ca53cdb247354ab01946d6de0e556538803f653c874ccbb3a19ede1b3ee5d2",
+      "producer": "/Users/andy/HyperAI-Sync/tools/aios_living_loop.py",
+      "inputs": [
+        "runtime_registry.json",
+        "apo_config.yaml",
+        "binding_plan.json"
+      ],
+      "outputs": [
+        "active_dispatch_report.md"
+      ]
+    },
+    {
+      "file_id": "runtime/federation_orchestrator/auth_recovery_execution.json",
+      "exact_title": "auth_recovery_execution.json",
+      "frame_id": "F2/F3",
+      "content_hash": "913c9517942be51b639e88647399d4ea98b7de5998ad7e2ecd81b3b1f50eaefc",
+      "producer": "/Users/andy/HyperAI-Sync/tools/aios_living_loop.py",
+      "inputs": [
+        "runtime_registry.json",
+        "apo_config.yaml",
+        "binding_plan.json"
+      ],
+      "outputs": [
+        "active_dispatch_report.md"
+      ]
+    },
+    {
+      "file_id": "runtime/federation_orchestrator/host_runtime_topology.json",
+      "exact_title": "host_runtime_topology.json",
+      "frame_id": "F2/F3",
+      "content_hash": "fc61edf54484975ca1ba3967ef468065d6177a6ff6f962b50d429b6cec15727a",
+      "producer": "/Users/andy/HyperAI-Sync/tools/aios_living_loop.py",
+      "inputs": [
+        "runtime_registry.json",
+        "apo_config.yaml",
+        "binding_plan.json"
+      ],
+      "outputs": [
+        "active_dispatch_report.md"
+      ]
+    },
+    {
+      "file_id": "runtime/federation_orchestrator/process_compute_ledger.json",
+      "exact_title": "process_compute_ledger.json",
+      "frame_id": "F2/F3",
+      "content_hash": "466db15f9face5e66be1ec2d1da62ce201a6d8b79b63ae51f02a50a59103fd1c",
+      "producer": "/Users/andy/HyperAI-Sync/tools/aios_living_loop.py",
+      "inputs": [
+        "runtime_registry.json",
+        "apo_config.yaml",
+        "binding_plan.json"
+      ],
+      "outputs": [
+        "active_dispatch_report.md"
+      ]
+    },
+    {
+      "file_id": "runtime/federation_orchestrator/active_dispatch_report.md",
+      "exact_title": "active_dispatch_report.md",
+      "frame_id": "F2/F3",
+      "content_hash": "5d7558497385fa53196752934021328d9636a8aa7f56dc88fdb7531aaeb5c858",
+      "producer": "/Users/andy/HyperAI-Sync/tools/aios_living_loop.py",
+      "inputs": [
+        "runtime_registry.json",
+        "apo_config.yaml",
+        "binding_plan.json"
+      ],
+      "outputs": [
+        "active_dispatch_report.md"
+      ]
+    },
+    {
+      "file_id": "runtime/federation_orchestrator/mission_execution_log.json",
+      "exact_title": "mission_execution_log.json",
+      "frame_id": "F3",
+      "content_hash": "64da08bc2638bbc56fcbdee5f18187d1350cc18408bba6318a989456f1b3b7ba",
+      "producer": "/Users/andy/HyperAI-Sync/tools/aios_convergence_closure_v2.py",
+      "inputs": [
+        "mission logs",
+        "binding_plan.json"
+      ],
+      "outputs": [
+        "LIVING_CYCLE_LINEAGE_CONVERGENCE_REPORT.md"
+      ]
+    },
+    {
+      "file_id": "runtime/federation_orchestrator/auth_mission_execution_log.json",
+      "exact_title": "auth_mission_execution_log.json",
+      "frame_id": "F3",
+      "content_hash": "d5141be0fd743895010f3e23407ed9845ecbdfc043b65785508680cd7bc43e15",
+      "producer": "/Users/andy/HyperAI-Sync/tools/aios_convergence_closure_v2.py",
+      "inputs": [
+        "mission logs",
+        "binding_plan.json"
+      ],
+      "outputs": [
+        "LIVING_CYCLE_LINEAGE_CONVERGENCE_REPORT.md"
+      ]
+    },
+    {
+      "file_id": "runtime/federation_orchestrator/living_cycle_validation_receipt.json",
+      "exact_title": "living_cycle_validation_receipt.json",
+      "frame_id": "F3",
+      "content_hash": "7ea5d6ae2bb9f65e5cf6a61b5e0ebc9f5fcde9e3a166f52bcccee8f31d285aa0",
+      "producer": "/Users/andy/HyperAI-Sync/tools/aios_convergence_closure_v2.py",
+      "inputs": [
+        "mission logs",
+        "binding_plan.json"
+      ],
+      "outputs": [
+        "LIVING_CYCLE_LINEAGE_CONVERGENCE_REPORT.md"
+      ]
+    },
+    {
+      "file_id": "runtime/federation_orchestrator/frame_convergence_matrix.json",
+      "exact_title": "frame_convergence_matrix.json",
+      "frame_id": "F3",
+      "content_hash": "e1abcd2b9d5ff8437af1d2393dd2a5d752c3e2874384f39371282ec61d71971c",
+      "producer": "/Users/andy/HyperAI-Sync/tools/aios_convergence_closure_v2.py",
+      "inputs": [
+        "mission logs",
+        "binding_plan.json"
+      ],
+      "outputs": [
+        "LIVING_CYCLE_LINEAGE_CONVERGENCE_REPORT.md"
+      ]
+    },
+    {
+      "file_id": "runtime/federation_orchestrator/LIVING_CYCLE_LINEAGE_CONVERGENCE_REPORT.md",
+      "exact_title": "LIVING_CYCLE_LINEAGE_CONVERGENCE_REPORT.md",
+      "frame_id": "F3",
+      "content_hash": "3adddcc1082d48aaa57420ffbc3277261f6534fb3d243fe72a6ba082dd8bd019",
+      "producer": "/Users/andy/HyperAI-Sync/tools/aios_convergence_closure_v2.py",
+      "inputs": [
+        "mission logs",
+        "binding_plan.json"
+      ],
+      "outputs": [
+        "LIVING_CYCLE_LINEAGE_CONVERGENCE_REPORT.md"
+      ]
+    }
+  ],
+  "transformations": []
+}

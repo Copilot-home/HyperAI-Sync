@@ -1,0 +1,166 @@
+flowchart TB
+    %% styles
+    classDef healthy fill:#9f9,stroke:#333,stroke-width:1px
+    classDef degraded fill:#f99,stroke:#333,stroke-width:1px
+    classDef missing fill:#faa,stroke:#333,stroke-width:2px,stroke-dasharray: 5 5
+    classDef core fill:#bfb,stroke:#333,stroke-width:2px
+    classDef client fill:#ff9,stroke:#333,stroke-width:1px
+    classDef native fill:#bbf,stroke:#333,stroke-width:1px
+    classDef docker fill:#9ff,stroke:#333,stroke-width:1px
+    classDef data fill:#fbf,stroke:#333,stroke-width:1px
+    classDef external fill:#fa9,stroke:#333,stroke-width:1px
+
+    %% Creator
+    creator["Andy / Creator / Canon Authority"]
+    class creator core
+
+    %% AI Client Surfaces
+    subgraph AI_CLIENTS["AI Client Surfaces"]
+        direction LR
+        claude["Claude Desktop<br/>MCP clients"]:::client
+        chatgpt["ChatGPT app"]:::client
+        codex["Codex / VS Code"]:::client
+        devin["Devin CLI"]:::client
+        cursor["Cursor IDE"]:::client
+        vscode["VS Code"]:::client
+        lmstudio["LM Studio<br/>127.0.0.1:1234"]:::native
+        antigravity["Antigravity<br/>127.0.0.1:3001/23333/7779"]:::native
+        pieces["Pieces OS<br/>127.0.0.1:39300"]:::native
+    end
+
+    %% HyperAI Core / APΩ
+    subgraph HYPERAI_CORE["HyperAI Core / APΩ"]
+        direction LR
+        pmp["PMP Router<br/>TLOnlyByDefault"]:::core
+        axcontrol["axcontrol / Canon"]:::core
+        phoenix["Phoenix Bridge<br/>0.0.0.0:9001"]:::healthy
+        apo["APΩ Gateway<br/>0.0.0.0:9011"]:::healthy
+        finalai["FinalAI OpenAI Proxy<br/>127.0.0.1:50520"]:::healthy
+        creds["Credential Broker<br/>127.0.0.1:8765<br/>77 keys"]:::healthy
+        orchestrator["Orchestrator<br/>doc_index/todos"]:::healthy
+        nightwatch["Nightwatch"]:::healthy
+        telemetry["Telemetry Router"]:::healthy
+    end
+
+    %% Model / Inference Runtime
+    subgraph INFERENCE["Local Model / Inference Runtime"]
+        direction LR
+        ollama["Ollama<br/>127.0.0.1:11434"]:::healthy
+        redis["Redis<br/>127.0.0.1:6379"]:::healthy
+        os_master["os.master LaunchAgent<br/>PID 61300"]:::healthy
+    end
+
+    %% OpenAPI Tool Servers (5 servers on 8901-8905)
+    subgraph OPENAPI_SERVERS["OpenAPI Tool Servers"]
+        direction LR
+        time_s["time<br/>127.0.0.1:8901"]:::healthy
+        weather["weather<br/>127.0.0.1:8902"]:::healthy
+        filesystem["filesystem<br/>127.0.0.1:8903"]:::healthy
+        git_s["git<br/>127.0.0.1:8904"]:::healthy
+        memory_s["memory<br/>127.0.0.1:8905"]:::healthy
+    end
+
+    %% Docker / Container Fabric
+    subgraph DOCKER_FABRIC["Docker Container Fabric"]
+        direction LR
+        dockerd["Docker Desktop<br/>context: desktop-linux"]:::docker
+        hycred["hyperai-credentials<br/>127.0.0.1:8765"]:::docker
+        kindcp["kind-cloud-provider"]:::docker
+        kindreg["kind-registry-mirror"]:::docker
+        dcp["kindest/node<br/>desktop-control-plane<br/>127.0.0.1:62056"]:::docker
+        prizz["prizz/deep-dive<br/>Docker Extension"]:::docker
+        mcpgw["Docker MCP Gateway<br/>(not yet started)"]:::degraded
+    end
+
+    %% Docker MCP Ecosystem
+    subgraph DOCKER_MCP["Docker MCP Ecosystem"]
+        direction LR
+        mcpcatalog["Docker MCP Catalog<br/>313 verified servers"]:::docker
+        mcpprofile["Docker MCP Profiles<br/>7 working sets"]:::docker
+        dockerhub["Docker Hub<br/>registry"]:::external
+    end
+
+    %% Data / Memory Plane
+    subgraph DATA["Data / Memory / Metadata Plane"]
+        direction LR
+        sync["HyperAI-Sync / memory"]:::data
+        regdb["ai_application_registry.db<br/>397 rows, DID"]:::data
+        mcpdb["mcp-toolkit.db"]:::data
+        ollamadb["Ollama DB"]:::data
+        apocfg["apo_config.yaml"]:::data
+    end
+
+    %% macOS Native Helpers
+    subgraph MACOS_HELPERS["macOS Native AI Helper Processes"]
+        direction LR
+        electron["Electron 1155<br/>51017/51018"]:::native
+        appinkwe["app_inkwe 2015<br/>50970"]:::native
+        language["language_model<br/>51035/36 51172/73"]:::native
+        node4624["node 4624<br/>127.0.0.1:8080"]:::native
+        music["Music 82705<br/>*:61382"]:::native
+    end
+
+    %% External / Missing / Drift
+    subgraph EXTERNAL["External / Missing / Drift"]
+        direction LR
+        titan["Titan GT77<br/>192.168.3.158:5052"]:::missing
+        macmini["MacMini Ollama<br/>192.168.3.28:11434"]:::missing
+        external_vol["/Volumes/External"]:::missing
+        product["hyperai-user-control-system"]:::missing
+        cloudb["Docker Buildx Cloud<br/>sowhat1989/kkk"]:::external
+    end
+
+    %% Top-level relationships
+    creator --> claude & codex & devin & vscode & lmstudio & antigravity
+
+    claude -->|MCP_DOCKER profile| mcpgw
+    claude -->|mcp-remote pieces| pieces
+    codex -->|native tools + chat| apo
+    devin -->|shell + PMP| pmp & axcontrol
+    vscode -->|MCP + extensions| apo & codex
+    cursor -->|MCP| apo
+    chatgpt -->|native| apo
+    lmstudio -.->|API 1234<br/>closed to curl| apo
+    antigravity -->|local ports| apo
+    pieces -->|MCP SSE| claude
+
+    pmp -->|gates| axcontrol
+    axcontrol -->|canon| sync & regdb
+
+    apo -->|/v1/*| ollama & finalai
+    apo -->|/tools/*| time_s & weather & filesystem & git_s & memory_s
+    apo -->|/health| phoenix
+    apo -->|lease/proxy| creds
+    apo -->|mcp/*| mcpgw
+    apo -->|writes| sync
+
+    finalai -->|forward| titan
+
+    ollama -->|selected model| ollamadb
+    redis -->|cache/state| apo
+    os_master -->|macos control| pmp
+
+    phoenix -->|health check| hycred
+    orchestrator -->|index| sync
+    nightwatch -->|patrol logs| sync
+    telemetry -->|metrics| sync
+
+    time_s & weather & filesystem & git_s & memory_s -->|mounted in| sync
+
+    dockerd -->|runs| hycred & kindcp & kindreg & dcp & prizz
+    kindcp -->|provisions| dcp
+    hycred -->|same port| creds
+    mcpgw -->|pull from| mcpcatalog
+    mcpcatalog -->|images from| dockerhub
+    mcpprofile -->|selects from| mcpcatalog
+
+    sync -->|contains| regdb
+    regdb -->|aggregates| mcpdb & ollamadb & apocfg
+
+    mcpgw -.->|cloud builder| cloudb
+    apo -.->|unreachable| macmini
+    sync -.->|missing path| external_vol
+    product -.->|missing source| apo
+
+    %% macOS helpers side note
+    electron & appinkwe & language & node4624 & music -.->|parallel AI/native processes| AI_CLIENTS

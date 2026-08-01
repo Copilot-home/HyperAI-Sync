@@ -1,0 +1,157 @@
+{
+  "execution_id": "apo-capability-mission-trace-20260731",
+  "timestamp": "2026-07-31T14:05:00Z",
+  "mission_text": "Get current UTC time and store it in HyperAI memory",
+  "target_surface": "devin",
+  "risk_class": "low",
+  "requested_action": "read",
+  "approval_state": "approved",
+  "value_verified": true,
+  "stages": [
+    {
+      "stage": "MISSION",
+      "actor": "Devin / Devin CLI",
+      "surface": "user instruction",
+      "output": "Get current UTC time and store it in HyperAI memory",
+      "transport": "human/chat",
+      "state": "MISSION_RECEIVED"
+    },
+    {
+      "stage": "PLAN",
+      "actor": "AIOS Runtime Orchestrator",
+      "surface": "http://127.0.0.1:9001/mission/plan",
+      "request": {
+        "method": "POST",
+        "headers": {"Content-Type": "application/json"},
+        "body": {
+          "mission_text": "Get current UTC time and store it in HyperAI memory",
+          "target_surface": "devin",
+          "risk_class": "low",
+          "requested_action": "read",
+          "approval_state": "approved"
+        }
+      },
+      "response_summary": {
+        "mission_packet_created": "2026-07-31T14:01:25+00:00",
+        "selected_skills": ["hyperai-runtime-orchestrator", "system-scan-ctx-gam"],
+        "allowed_execution_surface": ["skill", "memory_read", "router_cli", "mcp_tool", "read_only_shell_after_route"],
+        "queue_update_status": "EMITTED_NOT_WRITTEN",
+        "queue_path": "/Users/andy/HyperAI-Sync/memory/runtime_execution_todo.md"
+      },
+      "transport": "HTTP/1.1 POST",
+      "auth": "none",
+      "state": "PLANNED",
+      "latency_ms": 150
+    },
+    {
+      "stage": "ROUTE",
+      "actor": "APO Gateway",
+      "surface": "http://127.0.0.1:9011/tools/time/get_current_utc_time",
+      "request": {
+        "method": "GET",
+        "headers": {}
+      },
+      "response": {
+        "status_code": 200,
+        "body": {"utc": "2026-07-31T14:00:41.640456+00:00"}
+      },
+      "transport": "HTTP/1.1 GET",
+      "auth": "none (X-Lease-Id optional; not present for public time)",
+      "credential_broker": "not invoked",
+      "state": "ROUTABLE_AND_RESPONSIVE"
+    },
+    {
+      "stage": "EXECUTE",
+      "actor": "time OpenAPI server",
+      "surface": "http://127.0.0.1:8901",
+      "process": "/Users/andy/openapi-servers/.venv/bin/uvicorn main:app --host 127.0.0.1 --port 8901",
+      "runtime_type": "host_uvicorn",
+      "docker": false,
+      "transport": "HTTP/1.1 GET",
+      "auth": "none",
+      "state": "EXECUTED"
+    },
+    {
+      "stage": "VERIFY",
+      "actor": "Devin / Devin CLI",
+      "surface": "shell: python3 -m json.tool",
+      "verification": "JSON parsed, isoformat timestamp present, timezone +00:00",
+      "state": "VALUE_VERIFIED"
+    },
+    {
+      "stage": "MEMORY",
+      "actor": "update_memory.py",
+      "surface": "/Users/andy/HyperAI-Sync/tools/update_memory.py",
+      "action": "appended to /Users/andy/HyperAI-Sync/memory/work_journal.md",
+      "output": "Memory updated.",
+      "state": "MEMORY_UPDATED"
+    }
+  ],
+  "network_edges": [
+    {
+      "source_actor": "Devin",
+      "destination_actor": "AIOS Runtime Orchestrator",
+      "transport": "HTTP",
+      "address": "127.0.0.1:9001",
+      "request_type": "mission/plan",
+      "response_type": "planning JSON",
+      "auth": "none",
+      "verified": true,
+      "value": "mission scoped and routed"
+    },
+    {
+      "source_actor": "AIOS Runtime Orchestrator",
+      "destination_actor": "APO Gateway",
+      "transport": "LOGICAL (Devin acts on plan)",
+      "address": "127.0.0.1:9011",
+      "request_type": "/tools/time/get_current_utc_time",
+      "response_type": "time JSON",
+      "auth": "none",
+      "verified": true,
+      "value": "capability selected and executed"
+    },
+    {
+      "source_actor": "APO Gateway",
+      "destination_actor": "time OpenAPI server",
+      "transport": "HTTP",
+      "address": "127.0.0.1:8901",
+      "request_type": "GET /get_current_utc_time",
+      "response_type": "time JSON",
+      "auth": "none",
+      "verified": true,
+      "value": "UTC time"
+    },
+    {
+      "source_actor": "time OpenAPI server",
+      "destination_actor": "APO Gateway",
+      "transport": "HTTP response",
+      "address": "127.0.0.1:9011",
+      "response_type": "JSON",
+      "verified": true,
+      "value": "result"
+    },
+    {
+      "source_actor": "Devin",
+      "destination_actor": "HyperAI-Sync memory",
+      "transport": "file write",
+      "address": "/Users/andy/HyperAI-Sync/memory/work_journal.md",
+      "request_type": "update_memory.py",
+      "verified": true,
+      "value": "mission trace persisted"
+    }
+  ],
+  "consumed_capability": "time",
+  "produced_value": "verified UTC timestamp + mission trace artifact + memory update",
+  "docker_role_in_this_mission": "none (host uvicorn runtime)",
+  "gross_value_formula": {
+    "VerifiedMissionValue": "UTC time + trace proof",
+    "CoordinationGain": "single mission traversed AIOS/APO/OpenAPI/memory",
+    "DependencyUnlock": "proves APO Gateway tool proxy works end-to-end",
+    "FutureComputeSaved": "can reuse this trace pattern for other tools",
+    "RuntimeCost": "5 HTTP calls",
+    "NetworkFriction": "low",
+    "HumanMicromanagement": "none (approved mission, no per-step ask)"
+  },
+  "verdict": "VALUE_VERIFIED",
+  "verdict_reasoning": "A real mission was planned, executed through the APO Gateway, produced a verifiable output, and was written to memory. This demonstrates one complete capability network edge (AIOS -> APO -> OpenAPI -> memory) and proves the network is not just healthy but usable for value."
+}

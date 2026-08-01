@@ -50,6 +50,7 @@ import json
 import os
 import re
 import time
+import urllib.parse
 import urllib.request
 import uuid
 from collections import defaultdict
@@ -93,7 +94,6 @@ class Lease:
         action: str,
         scope: list[str],
         active_key_ref: str,
-        masked_key: str,
         ttl: int,
         calls_limit: int,
     ) -> None:
@@ -105,7 +105,6 @@ class Lease:
         self.action = action
         self.scope = scope
         self.active_key_ref = active_key_ref
-        self.masked_key = masked_key
         self.issued_at = time.time()
         self.expires_at = self.issued_at + ttl
         self.state = "ACTIVE"
@@ -124,7 +123,6 @@ class Lease:
             "action": self.action,
             "scope": self.scope,
             "active_key_ref": self.active_key_ref,
-            "masked_key": self.masked_key,
             "issued_at": _ts(self.issued_at),
             "expires_at": _ts(self.expires_at),
             "state": self.state,
@@ -162,6 +160,8 @@ PROVIDER_POLICY: dict[str, dict[str, Any]] = {
     "docker": {"actions": {"read"}, "resources": {"self"}, "default_ttl": 600, "max_ttl": 3600, "calls_per_min": 30},
     "anthropic": {"actions": {"read"}, "resources": {"models"}, "default_ttl": 600, "max_ttl": 3600, "calls_per_min": 60},
     "context7": {"actions": {"read"}, "resources": {"status"}, "default_ttl": 600, "max_ttl": 3600, "calls_per_min": 60},
+    "slack": {"actions": {"read", "post"}, "resources": {"api"}, "default_ttl": 600, "max_ttl": 3600, "calls_per_min": 60},
+    "google_pse": {"actions": {"read"}, "resources": {"search"}, "default_ttl": 600, "max_ttl": 3600, "calls_per_min": 60},
 }
 
 KNOWN_NODES = {
@@ -232,6 +232,8 @@ class CredentialManager:
             "docker": ["DOCKER_ORG_ACCESS_TOKEN"],
             "anthropic": ["CLAUDE_ADMIN_KEY"],
             "context7": ["CONTEXT7_API_KEY"],
+            "slack": ["SLACK_BOT_TOKEN", "SLACK_TOKEN"],
+            "google_pse": ["GOOGLE_PSE_API_KEY", "GOOGLE_PSE_API", "GOOGLE_API_KEY", "PSE_ENGINE_ID", "GOOGLE_PSE_CX", "PSE_CX"],
         }
         noise_suffixes = ("DESCRIPTION", "LABEL", "EXPIRES", "EXPIRY", "URL", "LINK")
         base = patterns.get(provider, [])
@@ -363,6 +365,18 @@ class CredentialManager:
                 "https://context7.com/api/v1/status",
                 {"Authorization": f"Bearer {token}"},
             )
+        if provider == "slack":
+            return await self._http_get(
+                "https://slack.com/api/auth.test",
+                {"Authorization": f"Bearer {token}"},
+            )
+        if provider == "google_pse":
+            api_key = self.creds.get("GOOGLE_PSE_API_KEY") or self.creds.get("GOOGLE_PSE_API") or self.creds.get("GOOGLE_API_KEY")
+            cx = self.creds.get("PSE_ENGINE_ID") or self.creds.get("GOOGLE_PSE_CX") or self.creds.get("PSE_CX")
+            if not api_key or not cx:
+                return 0, "missing_google_pse_key_or_cx"
+            url = f"https://customsearch.googleapis.com/customsearch/v1?key={api_key}&cx={cx}&q=test&num=1"
+            return await self._http_get(url)
         return 0, "unsupported_provider"
 
     async def validate_all(self, providers: list[str] | None = None) -> dict[str, dict[str, Any]]:
@@ -469,7 +483,6 @@ class CredentialManager:
                 action=req.action,
                 scope=list(req.scope_req),
                 active_key_ref=active_key_ref,
-                masked_key=self.mask(active_value),
                 ttl=ttl,
                 calls_limit=calls_limit,
             )
@@ -533,14 +546,14 @@ class CredentialManager:
 
     def status(self) -> dict[str, Any]:
         active_summary = {
-            p: {"key": k, "masked": self.mask(self.active.get(p))}
+            p: {"active_key_ref": k, "healthy": bool(self.active.get(p))}
             for p, k in self.active_key_ref.items()
         }
         return {
             "timestamp": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
             "env_source": str(self.env_path),
             "total_keys": len(self.creds),
-            "active_keys": {k: v["masked"] for k, v in active_summary.items()},
+            "active_keys": {k: v for k, v in active_summary.items()},
             "validation": {
                 p: {
                     "valid_key": info.get("valid_key"),
@@ -659,12 +672,14 @@ def _consume_lease(lease: Lease) -> None:
     lease.calls_remaining -= 1
 
 
-async def _proxy_and_proof(lease: Lease, endpoint: str, call) -> dict[str, Any]:
+async def _proxy_and_proof(lease: Lease, endpoint: str, call, raw: bool = False):
     status, body = await call()
     _consume_lease(lease)
     proof = manager.record_proof(lease, status, endpoint, body)
     if status != 200:
         raise HTTPException(status, {"detail": "upstream_error", "proof": proof, "body": body})
+    if raw:
+        return body
     return {"lease_id": lease.lease_id, "proof": proof, "data": body}
 
 
@@ -763,6 +778,61 @@ async def vercel_user(x_lease_id: str | None = Header(None, alias="X-Lease-Id"))
         "/v2/user",
         lambda: manager._http_get("https://api.vercel.com/v2/user", {"Authorization": f"Bearer {token}"}),
     )
+
+
+@app.api_route("/proxy/slack/{path:path}", methods=["GET", "POST"])
+async def slack_proxy(
+    request: Request,
+    path: str,
+    x_lease_id: str | None = Header(None, alias="X-Lease-Id"),
+    x_raw_response: str | None = Header(None, alias="X-Raw-Response"),
+):
+    lease = _require_lease(x_lease_id, "slack", "api", "post")
+    token = manager.get_active("slack")
+    if not token:
+        raise HTTPException(403, "no_active_slack_key")
+    url = f"https://slack.com/api/{path}"
+    body = await request.body()
+    content_type = request.headers.get("content-type", "application/json")
+    headers = {"Authorization": f"Bearer {token}", "Content-Type": content_type}
+
+    def _call():
+        req = urllib.request.Request(url, method=request.method, data=body or None, headers=headers)
+        try:
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                return resp.status, resp.read().decode("utf-8", errors="replace")
+        except urllib.error.HTTPError as e:
+            return e.code, e.read().decode("utf-8", errors="replace")
+        except Exception as exc:
+            return 0, str(exc)
+
+    return await _proxy_and_proof(lease, f"/{path}", _call, raw=x_raw_response == "true")
+
+
+@app.get("/proxy/google_pse/search")
+async def google_pse_search(
+    request: Request,
+    x_lease_id: str | None = Header(None, alias="X-Lease-Id"),
+    x_raw_response: str | None = Header(None, alias="X-Raw-Response"),
+):
+    lease = _require_lease(x_lease_id, "google_pse", "search", "read")
+    api_key = (
+        manager.creds.get("GOOGLE_PSE_API_KEY")
+        or manager.creds.get("GOOGLE_PSE_API")
+        or manager.creds.get("GOOGLE_API_KEY")
+    )
+    cx = (
+        manager.creds.get("PSE_ENGINE_ID")
+        or manager.creds.get("GOOGLE_PSE_CX")
+        or manager.creds.get("PSE_CX")
+    )
+    if not api_key or not cx:
+        raise HTTPException(400, "missing_google_pse_key_or_cx")
+    params = dict(request.query_params)
+    params["key"] = api_key
+    params["cx"] = cx
+    url = f"https://customsearch.googleapis.com/customsearch/v1?{urllib.parse.urlencode(params)}"
+    return await _proxy_and_proof(lease, "/customsearch/v1", lambda: manager._http_get(url), raw=x_raw_response == "true")
 
 
 if __name__ == "__main__":

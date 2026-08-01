@@ -1,6 +1,6 @@
 ## Latest Browser Cockpit Proof
 
-- last checked: 2026-07-29T12:01:14Z
+- last checked: 2026-08-01T18:24:26Z
 - boundary state: projection_missing
 - selected action: runtime_cleanup
 - backend classification: offline

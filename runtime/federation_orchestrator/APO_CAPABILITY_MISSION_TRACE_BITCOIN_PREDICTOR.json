@@ -1,0 +1,113 @@
+{
+  "execution_id": "apo-capability-mission-trace-bitcoin-predictor-20260731",
+  "timestamp": "2026-07-31T15:35:00Z",
+  "mission_text": "Get Bitcoin price by date through APO and verify prediction path",
+  "value_verified": false,
+  "stages": [
+    {
+      "stage": "ROUTE",
+      "actor": "APO Gateway",
+      "surface": "http://127.0.0.1:9011/tools/bitcoin/get_price_by_date",
+      "request": {
+        "method": "POST",
+        "body": {"date": "2024-01-01"}
+      },
+      "response": {
+        "status_code": 200,
+        "Open": 42000.0,
+        "High": 42100.0,
+        "Low": 41900.0,
+        "Close": 42050.0,
+        "Volume": 100.0
+      },
+      "state": "ROUTABLE_AND_RESPONSIVE"
+    },
+    {
+      "stage": "EXECUTE",
+      "actor": "bitcoin OpenAPI server",
+      "surface": "http://127.0.0.1:8910",
+      "runtime_type": "host uvicorn",
+      "docker": false,
+      "state": "EXECUTED"
+    },
+    {
+      "stage": "DATA_DEP_READ",
+      "actor": "bitcoin OpenAPI server",
+      "surface": "btcusd_1-min_data.csv",
+      "observation": "server reads local CSV at startup; file has header + 2 daily rows (133 bytes), synthetic data",
+      "data_source_type": "local synthetic CSV",
+      "external_dependency_reachable": false,
+      "state": "LOCAL_DATA_ONLY"
+    },
+    {
+      "stage": "PREDICTION_VERIFY",
+      "actor": "Devin",
+      "surface": "semantic + evidence",
+      "verification": "returned values are numeric means from CSV; sample is only 2 rows; not real market data",
+      "state": "PREDICTION_RETURNED_NOT_VERIFIED"
+    },
+    {
+      "stage": "STAT_ENDPOINT_PROBE",
+      "actor": "APO Gateway",
+      "surface": "http://127.0.0.1:9011/tools/bitcoin/get_stat_by_date_range",
+      "request": {
+        "method": "POST",
+        "body": {"start_date": "2024-01-01", "end_date": "2024-01-03"}
+      },
+      "response": {
+        "status_code": 500,
+        "detail": "Internal Server Error"
+      },
+      "failure_reason": "FastAPI JSON encoder cannot serialize numpy.int64/numpy.float64 from pandas",
+      "state": "ENDPOINT_DEGRADED"
+    }
+  ],
+  "network_edges": [
+    {
+      "source_actor": "Devin",
+      "destination_actor": "APO Gateway",
+      "transport": "HTTP",
+      "address": "127.0.0.1:9011",
+      "request_type": "POST /tools/bitcoin/get_price_by_date",
+      "response_type": "price JSON",
+      "auth": "none",
+      "verified": true,
+      "value": "price request"
+    },
+    {
+      "source_actor": "APO Gateway",
+      "destination_actor": "bitcoin OpenAPI server",
+      "transport": "HTTP",
+      "address": "127.0.0.1:8910",
+      "request_type": "POST /get_price_by_date",
+      "response_type": "price JSON",
+      "auth": "none",
+      "verified": true,
+      "value": "price computation"
+    },
+    {
+      "source_actor": "bitcoin OpenAPI server",
+      "destination_actor": "local CSV",
+      "transport": "file",
+      "address": "/Users/andy/openapi-servers/servers/bitcoin-price-predictor/btcusd_1-min_data.csv",
+      "request_type": "read_csv",
+      "response_type": "DataFrame",
+      "auth": "none",
+      "verified": true,
+      "value": "synthetic price data"
+    }
+  ],
+  "consumed_capabilities": ["bitcoin"],
+  "produced_value": "verified APO bitcoin route and endpoint healthy; identified prediction depends on synthetic local CSV and stat endpoint has numpy serialization bug",
+  "gross_value_formula": {
+    "VerifiedMissionValue": "none (synthetic data)",
+    "CoordinationGain": "APO routes to bitcoin predictor",
+    "DependencyUnlock": "proves DATA/LOGIC axis with local file",
+    "FutureComputeSaved": "after real data or serialization fix, can return stats",
+    "RuntimeCost": "2 calls",
+    "NetworkFriction": "low",
+    "HumanBurden": "none"
+  },
+  "verdict": "ENDPOINT_HEALTHY_ROUTE_PROVEN_VALUE_NOT_VERIFIED",
+  "verdict_reasoning": "The mission proved the full APO -> bitcoin server -> local CSV path. The /get_price_by_date endpoint is healthy and returns a prediction. However, the underlying data is a 2-row synthetic CSV, so the prediction value is not verified as real market truth. The /get_stat_by_date_range endpoint fails with a numpy serialization error (numpy.int64 not JSON serializable). This is a capability edge with local data, not an external API dependency, and the prediction is not verified."
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "xcode_codingassistant",
+  "trigger": "disk_low",
+  "dry_run": false,
+  "started_at": "2026-08-01T03:02:00Z",
+  "completed_at": "2026-08-01T03:02:00Z",
+  "actions": [
+    {
+      "path": "/Users/andy/Library/Developer/Xcode/CodingAssistant",
+      "status": "ok",
+      "freed_mb": 1120.46
+    }
+  ],
+  "disk_before_mb": 102,
+  "disk_after_mb": 1228,
+  "freed_mb": 1120.46,
+  "note": "Cache directory for Xcode AI coding assistant (Codex/Gemini/Agents). Safe to regenerate; not source or canon."
+}

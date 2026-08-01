@@ -1,0 +1,30 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "npm",
+  "started_at": "2026-08-01T14:49:35Z",
+  "completed_at": "2026-08-01T14:49:40Z",
+  "dry_run": false,
+  "include_recyclable": true,
+  "disk_before_mb": 214,
+  "disk_after_mb": 210,
+  "freed_mb": 0,
+  "action_count": 2,
+  "error_count": 0,
+  "actions": [
+    {
+      "command": "npm cache clean --force",
+      "tool": "npm",
+      "rc": 0,
+      "stdout": "",
+      "stderr": "npm warn using --force Recommended protections disabled.\n"
+    },
+    {
+      "command": "pnpm store prune",
+      "tool": "pnpm",
+      "rc": 226,
+      "stdout": "[EROFS] EROFS: read-only file system, open '/_tmp_26334_cf6a15ad5e427a9da0f2a7cdc32edf10'\n\n\n\n",
+      "stderr": ""
+    }
+  ],
+  "status": "ok"
+}

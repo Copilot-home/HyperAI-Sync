@@ -1,0 +1,41 @@
+{
+  "verified_at": "2026-07-31T10:58:44.504004+00:00",
+  "files": {
+    "runtime_discovery_snapshot.json": {
+      "exists": true,
+      "valid": true
+    },
+    "role_registry.json": {
+      "exists": true,
+      "valid": true
+    },
+    "authority_matrix.json": {
+      "exists": true,
+      "valid": true
+    },
+    "auth_topology.json": {
+      "exists": true,
+      "valid": true
+    },
+    "dependency_graph.json": {
+      "exists": true,
+      "valid": true
+    },
+    "binding_plan.json": {
+      "exists": true,
+      "valid": true
+    },
+    "operational_qualification_report.md": {
+      "exists": true,
+      "valid": true
+    }
+  },
+  "no_plaintext_secrets": true,
+  "mcp_docker_mcp_8811_started": false,
+  "invariants_preserved": true,
+  "qualified_count": 27,
+  "total_count": 35,
+  "secret_leaks": [],
+  "missing_invariants": [],
+  "overall": true
+}

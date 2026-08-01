@@ -1,0 +1,23 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "downloads",
+  "started_at": "2026-07-31T23:01:24Z",
+  "completed_at": "2026-07-31T23:01:24Z",
+  "dry_run": false,
+  "include_recyclable": true,
+  "disk_before_mb": 179,
+  "disk_after_mb": 179,
+  "freed_mb": 0,
+  "action_count": 1,
+  "error_count": 0,
+  "actions": [
+    {
+      "path": "/Users/andy/Downloads/ed25519_private_key.dmg",
+      "status": "protected",
+      "reason": "DO_NOT_DELETE",
+      "dry_run": false,
+      "estimated_mb": 272.5859375
+    }
+  ],
+  "status": "ok"
+}

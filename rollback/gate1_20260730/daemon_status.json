@@ -1,0 +1,19 @@
+{
+	"StandardOutPath" = "/Users/andy/Library/Logs/aios_mission_router.stdout.log";
+	"LimitLoadToSessionType" = "Aqua";
+	"StandardErrorPath" = "/Users/andy/Library/Logs/aios_mission_router.stderr.log";
+	"Label" = "com.aios.mission.router";
+	"OnDemand" = false;
+	"LastExitStatus" = 0;
+	"PID" = 63375;
+	"Program" = "/opt/homebrew/bin/python3";
+	"ProgramArguments" = (
+		"/opt/homebrew/bin/python3";
+		"/Users/andy/workbench/aios_runtime_orchestrator/aios_mission_router.py";
+		"daemon";
+		"--host";
+		"127.0.0.1";
+		"--port";
+		"9001";
+	);
+};

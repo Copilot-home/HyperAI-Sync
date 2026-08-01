@@ -1,0 +1,35 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "xcode",
+  "started_at": "2026-07-29T21:47:53Z",
+  "completed_at": "2026-07-29T21:47:56Z",
+  "dry_run": false,
+  "include_recyclable": true,
+  "disk_before_mb": 753,
+  "disk_after_mb": 563,
+  "freed_mb": 0,
+  "action_count": 3,
+  "error_count": 0,
+  "actions": [
+    {
+      "path": "/Users/andy/Library/Developer/Xcode/DerivedData",
+      "status": "missing",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.0
+    },
+    {
+      "command": "xcrun simctl delete unavailable",
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "xcrun simctl erase all",
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "status": "ok"
+}

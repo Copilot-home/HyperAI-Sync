@@ -1,0 +1,122 @@
+{
+  "H1_HOST_RESOURCE_PRESSURE": {
+    "supporting": [
+      "Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on\n/dev/disk3s3s1   460Gi    15Gi   2.1Gi    88%    459k   22M    2%   /\n",
+      "Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on\n/dev/disk3s1   460Gi   413Gi   2.1Gi   100%    5.4M   22M   19%   /System/Volumes/Data\n",
+      "7.1G\t/Users/andy/Library/Containers/com.docker.docker/Data/vms/0/data/Docker.raw"
+    ],
+    "contradicting": [],
+    "missing": [
+      "sustained write rate",
+      "Docker.raw physical blocks"
+    ],
+    "causal_confidence": "HIGH",
+    "next_observation": "measure Docker.raw growth and host APFS free space during VM write"
+  },
+  "H2_VM_INTERNAL_STATE_FAILURE": {
+    "supporting": [
+      [
+        {
+          "source": "vm/init.log",
+          "line": "{\"component\":\"kmsg\",\"level\":\"info\",\"msg\":\"I/O error, dev vda, sector 483789968 op 0x1:(WRITE) flags 0x9800 phys_seg 1 prio class 2\",\"time\":\"2026-07-31T10:24:10.778777958Z\"}"
+        },
+        {
+          "source": "vm/init.log",
+          "line": "{\"component\":\"kmsg\",\"level\":\"info\",\"msg\":\"I/O error, dev vda, sector 482347008 op 0x1:(WRITE) flags 0x9800 phys_seg 1 prio class 2\",\"time\":\"2026-07-31T10:24:10.778871833Z\"}"
+        },
+        {
+          "source": "vm/init.log",
+          "line": "{\"component\":\"kmsg\",\"level\":\"info\",\"msg\":\"Buffer I/O error on dev vda1, logical block 60293120, lost sync page write\",\"time\":\"2026-07-31T10:24:10.778902792Z\"}"
+        },
+        {
+          "source": "vm/init.log",
+          "line": "{\"component\":\"kmsg\",\"level\":\"info\",\"msg\":\"JBD2: I/O error when updating journal superblock for vda1-8.\",\"time\":\"2026-07-31T10:24:10.778916417Z\"}"
+        },
+        {
+          "source": "vm/init.log",
+          "line": "{\"component\":\"kmsg\",\"level\":\"info\",\"msg\":\"I/O error, dev vda, sector 2048 op 0x1:(WRITE) flags 0x3800 phys_seg 1 prio class 2\",\"time\":\"2026-07-31T10:24:10.972010958Z\"}"
+        },
+        {
+          "source": "vm/init.log",
+          "line": "{\"component\":\"kmsg\",\"level\":\"info\",\"msg\":\"Buffer I/O error on dev vda1, logical block 0, lost sync page write\",\"time\":\"2026-07-31T10:24:10.972041625Z\"}"
+        },
+        {
+          "source": "vm/init.log",
+          "line": "{\"component\":\"kmsg\",\"level\":\"info\",\"msg\":\"EXT4-fs (vda1): I/O error while writing superblock\",\"time\":\"2026-07-31T10:24:10.972087333Z\"}"
+        },
+        {
+          "source": "vm/init.log",
+          "line": "{\"component\":\"kmsg\",\"level\":\"info\",\"msg\":\"EXT4-fs (vda1): Remounting filesystem read-only\",\"time\":\"2026-07-31T10:24:10.972804417Z\"}"
+        },
+        {
+          "source": "vm/init.log",
+          "line": "{\"component\":\"command\",\"driver\":\"json-file\",\"error\":\"error writing log entry: write /var/lib/docker/containers/35a145fdc08f79f0d24eeabee98ea443f89bd70c4889302852dfc7908c2ab492/35a145fdc08f79f0d24eeabe"
+        },
+        {
+          "source": "vm/init.log",
+          "line": "{\"component\":\"command\",\"driver\":\"json-file\",\"error\":\"error writing log entry: write /var/lib/docker/containers/35a145fdc08f79f0d24eeabee98ea443f89bd70c4889302852dfc7908c2ab492/35a145fdc08f79f0d24eeabe"
+        },
+        {
+          "source": "vm/init.log",
+          "line": "{\"component\":\"command\",\"driver\":\"json-file\",\"error\":\"error writing log entry: write /var/lib/docker/containers/35a145fdc08f79f0d24eeabee98ea443f89bd70c4889302852dfc7908c2ab492/35a145fdc08f79f0d24eeabe"
+        },
+        {
+          "source": "vm/init.log",
+          "line": "{\"component\":\"command\",\"containerID\":\"c2297c91a7cc13c99e5f08e49397d54c0c32d25831eda28b1b52d224025fe23c\",\"error\":\"rpc error: code = Unknown desc = blob sha256:1de142695bb068e49b4c8abb7f1eab5b215f23ba93"
+        },
+        {
+          "source": "vm/init.log",
+          "line": "{\"component\":\"command\",\"containerID\":\"35a145fdc08f79f0d24eeabee98ea443f89bd70c4889302852dfc7908c2ab492\",\"error\":\"rpc error: code = Unknown desc = blob sha256:46d51b990e97493119aac0907bcf50fd69660dc863"
+        }
+      ],
+      true
+    ],
+    "contradicting": [],
+    "missing": [
+      "full vm console log"
+    ],
+    "causal_confidence": "HIGH",
+    "next_observation": "tail vm/init.log for 'I/O error' and 'Internal Virtualization Error' around time daemon stopped"
+  },
+  "H3_SERVICE_PLANE_BOOT_AMPLIFICATION": {
+    "supporting": [
+      [
+        "323",
+        "37050",
+        "37054",
+        "37055",
+        "37163",
+        "37164",
+        "37180",
+        "37186",
+        "37193",
+        "37199",
+        "37265",
+        "37293",
+        "40459",
+        "40573",
+        "40720"
+      ],
+      null
+    ],
+    "contradicting": [],
+    "missing": [
+      "CPU/RSS time series",
+      "container churn"
+    ],
+    "causal_confidence": "MEDIUM",
+    "next_observation": "profile process tree CPU/RSS at startup and extension load"
+  },
+  "H4_NETWORK_OR_FORWARDING_FAILURE": {
+    "supporting": [
+      "000 0.000207"
+    ],
+    "contradicting": [],
+    "missing": [
+      "container-to-container ping",
+      "host-to-container HTTP round-trip"
+    ],
+    "causal_confidence": "LOW",
+    "next_observation": "run disposable container with ping/curl once engine responds"
+  }
+}

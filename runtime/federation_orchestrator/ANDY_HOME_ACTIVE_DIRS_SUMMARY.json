@@ -1,0 +1,439 @@
+[
+  {
+    "dir": "/Users/andy/Library",
+    "active_process_count": 193,
+    "sample_processes": [
+      {
+        "pid": 466,
+        "name": "UserEventAgent",
+        "ports": [],
+        "cmdline": "/usr/libexec/UserEventAgent (Aqua)"
+      },
+      {
+        "pid": 473,
+        "name": "WindowManager",
+        "ports": [],
+        "cmdline": "/System/Library/CoreServices/WindowManager.app/Contents/MacOS/WindowManager"
+      },
+      {
+        "pid": 477,
+        "name": "pboard",
+        "ports": [],
+        "cmdline": "/usr/libexec/pboard"
+      }
+    ]
+  },
+  {
+    "dir": "/Users/andy/openapi-servers",
+    "active_process_count": 24,
+    "sample_processes": [
+      {
+        "pid": 11490,
+        "name": "bash",
+        "ports": [],
+        "cmdline": "bash -c cd /Users/andy/openapi-servers/servers/quotes-ui && nohup /Users/andy/openapi-servers/.venv/bin/uvicorn main:app"
+      },
+      {
+        "pid": 11491,
+        "name": "Python",
+        "ports": [
+          "127.0.0.1:8906"
+        ],
+        "cmdline": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Py"
+      },
+      {
+        "pid": 11511,
+        "name": "bash",
+        "ports": [],
+        "cmdline": "bash -c cd /Users/andy/openapi-servers/servers/flashcards && nohup /Users/andy/openapi-servers/.venv/bin/uvicorn main:ap"
+      }
+    ]
+  },
+  {
+    "dir": "/Users/andy/",
+    "active_process_count": 20,
+    "sample_processes": [
+      {
+        "pid": 683,
+        "name": "zsh (kiro-cli-term)",
+        "ports": [],
+        "cmdline": "zsh (kiro-cli-term)"
+      },
+      {
+        "pid": 765,
+        "name": "zsh (kiro-cli-term)",
+        "ports": [],
+        "cmdline": "zsh (kiro-cli-term)"
+      },
+      {
+        "pid": 853,
+        "name": "zsh (kiro-cli-term)",
+        "ports": [],
+        "cmdline": "zsh (kiro-cli-term)"
+      }
+    ]
+  },
+  {
+    "dir": "/Users/andy/.apo",
+    "active_process_count": 13,
+    "sample_processes": [
+      {
+        "pid": 11491,
+        "name": "Python",
+        "ports": [
+          "127.0.0.1:8906"
+        ],
+        "cmdline": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Py"
+      },
+      {
+        "pid": 11512,
+        "name": "Python",
+        "ports": [
+          "127.0.0.1:8907"
+        ],
+        "cmdline": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Py"
+      },
+      {
+        "pid": 11537,
+        "name": "Python",
+        "ports": [
+          "127.0.0.1:8908"
+        ],
+        "cmdline": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Py"
+      }
+    ]
+  },
+  {
+    "dir": "/Users/andy/HyperAI-Sync",
+    "active_process_count": 4,
+    "sample_processes": [
+      {
+        "pid": 10344,
+        "name": "bash",
+        "ports": [],
+        "cmdline": "bash -c kill 74521; sleep 2; cd /Users/andy/HyperAI-Sync && python3 tools/hyperai_credentials_service.py"
+      },
+      {
+        "pid": 10357,
+        "name": "Python",
+        "ports": [
+          "127.0.0.1:8765"
+        ],
+        "cmdline": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Py"
+      },
+      {
+        "pid": 39609,
+        "name": "com.docker.backend",
+        "ports": [
+          "127.0.0.1:12434",
+          "127.0.0.1:62056"
+        ],
+        "cmdline": "/Applications/Docker.app/Contents/MacOS/com.docker.backend services"
+      }
+    ]
+  },
+  {
+    "dir": "/Users/andy/Pictures",
+    "active_process_count": 4,
+    "sample_processes": [
+      {
+        "pid": 640,
+        "name": "Spotlight",
+        "ports": [],
+        "cmdline": "/System/Library/CoreServices/Spotlight.app/Contents/MacOS/Spotlight"
+      },
+      {
+        "pid": 54367,
+        "name": "mediaanalysisd",
+        "ports": [],
+        "cmdline": "/System/Library/PrivateFrameworks/MediaAnalysis.framework/Versions/A/mediaanalysisd"
+      },
+      {
+        "pid": 56016,
+        "name": "photolibraryd",
+        "ports": [],
+        "cmdline": "/System/Library/PrivateFrameworks/PhotoLibraryServices.framework/Versions/A/Support/photolibraryd"
+      }
+    ]
+  },
+  {
+    "dir": "/Users/andy/.hyperai",
+    "active_process_count": 3,
+    "sample_processes": [
+      {
+        "pid": 4812,
+        "name": "Python",
+        "ports": [],
+        "cmdline": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Conten"
+      },
+      {
+        "pid": 4813,
+        "name": "Python",
+        "ports": [],
+        "cmdline": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Conten"
+      },
+      {
+        "pid": 30502,
+        "name": "Python",
+        "ports": [],
+        "cmdline": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Py"
+      }
+    ]
+  },
+  {
+    "dir": "/Users/andy/.lmstudio",
+    "active_process_count": 3,
+    "sample_processes": [
+      {
+        "pid": 1169,
+        "name": "LM Studio",
+        "ports": [
+          "127.0.0.1:41343",
+          "127.0.0.1:1234"
+        ],
+        "cmdline": "/Applications/LM Studio.app/Contents/MacOS/LM Studio"
+      },
+      {
+        "pid": 51004,
+        "name": "Bionic",
+        "ports": [
+          "127.0.0.1:52993",
+          "127.0.0.1:1235"
+        ],
+        "cmdline": "/Applications/Bionic.app/Contents/MacOS/Bionic"
+      },
+      {
+        "pid": 52858,
+        "name": "node",
+        "ports": [],
+        "cmdline": "/Users/andy/.lmstudio/.internal/utils/node -e \nfunction connectPort(port) {\n  const handlersMap = new Map();\n  return {\n"
+      }
+    ]
+  },
+  {
+    "dir": "/Users/andy/.local",
+    "active_process_count": 3,
+    "sample_processes": [
+      {
+        "pid": 809,
+        "name": "Python",
+        "ports": [
+          "127.0.0.1:50520"
+        ],
+        "cmdline": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Conten"
+      },
+      {
+        "pid": 4594,
+        "name": "node",
+        "ports": [],
+        "cmdline": "/opt/homebrew/opt/node@22/bin/node /opt/homebrew/opt/code-server/bin/code-server"
+      },
+      {
+        "pid": 10064,
+        "name": "devin",
+        "ports": [],
+        "cmdline": "devin --permission-mode bypass"
+      }
+    ]
+  },
+  {
+    "dir": "/Users/andy/.axcanon",
+    "active_process_count": 2,
+    "sample_processes": [
+      {
+        "pid": 39609,
+        "name": "com.docker.backend",
+        "ports": [
+          "127.0.0.1:12434",
+          "127.0.0.1:62056"
+        ],
+        "cmdline": "/Applications/Docker.app/Contents/MacOS/com.docker.backend services"
+      },
+      {
+        "pid": 39646,
+        "name": "com.docker.build",
+        "ports": [],
+        "cmdline": "/Applications/Docker.app/Contents/MacOS/com.docker.build --log-no-timestamp"
+      }
+    ]
+  },
+  {
+    "dir": "/Users/andy/.config",
+    "active_process_count": 2,
+    "sample_processes": [
+      {
+        "pid": 39609,
+        "name": "com.docker.backend",
+        "ports": [
+          "127.0.0.1:12434",
+          "127.0.0.1:62056"
+        ],
+        "cmdline": "/Applications/Docker.app/Contents/MacOS/com.docker.backend services"
+      },
+      {
+        "pid": 39646,
+        "name": "com.docker.build",
+        "ports": [],
+        "cmdline": "/Applications/Docker.app/Contents/MacOS/com.docker.build --log-no-timestamp"
+      }
+    ]
+  },
+  {
+    "dir": "/Users/andy/.docker",
+    "active_process_count": 2,
+    "sample_processes": [
+      {
+        "pid": 39609,
+        "name": "com.docker.backend",
+        "ports": [
+          "127.0.0.1:12434",
+          "127.0.0.1:62056"
+        ],
+        "cmdline": "/Applications/Docker.app/Contents/MacOS/com.docker.backend services"
+      },
+      {
+        "pid": 39646,
+        "name": "com.docker.build",
+        "ports": [],
+        "cmdline": "/Applications/Docker.app/Contents/MacOS/com.docker.build --log-no-timestamp"
+      }
+    ]
+  },
+  {
+    "dir": "/Users/andy/.ollama",
+    "active_process_count": 2,
+    "sample_processes": [
+      {
+        "pid": 831,
+        "name": "Ollama",
+        "ports": [
+          "127.0.0.1:49196"
+        ],
+        "cmdline": "/Applications/Ollama.app/Contents/MacOS/Ollama hidden"
+      },
+      {
+        "pid": 864,
+        "name": "ollama",
+        "ports": [
+          ":::11434"
+        ],
+        "cmdline": "/Applications/Ollama.app/Contents/Resources/ollama serve"
+      }
+    ]
+  },
+  {
+    "dir": "/Users/andy/HyperAI",
+    "active_process_count": 2,
+    "sample_processes": [
+      {
+        "pid": 29817,
+        "name": "bash",
+        "ports": [],
+        "cmdline": "bash -c cd /Users/andy/HyperAI && nohup python3 agent_os.py > /Users/andy/.apo/gateway/agent_os.log 2>&1 &\nsleep 2 && cu"
+      },
+      {
+        "pid": 29819,
+        "name": "Python",
+        "ports": [
+          "127.0.0.1:8777"
+        ],
+        "cmdline": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Py"
+      }
+    ]
+  },
+  {
+    "dir": "/Users/andy/Music",
+    "active_process_count": 2,
+    "sample_processes": [
+      {
+        "pid": 82705,
+        "name": "Music",
+        "ports": [
+          "0.0.0.0:61382",
+          ":::61382"
+        ],
+        "cmdline": "/System/Applications/Music.app/Contents/MacOS/Music"
+      },
+      {
+        "pid": 82713,
+        "name": "AMPLibraryAgent",
+        "ports": [],
+        "cmdline": "/System/Library/PrivateFrameworks/AMPLibrary.framework/Versions/A/Support/AMPLibraryAgent --launchd"
+      }
+    ]
+  },
+  {
+    "dir": "/Users/andy/axcontrol",
+    "active_process_count": 2,
+    "sample_processes": [
+      {
+        "pid": 39609,
+        "name": "com.docker.backend",
+        "ports": [
+          "127.0.0.1:12434",
+          "127.0.0.1:62056"
+        ],
+        "cmdline": "/Applications/Docker.app/Contents/MacOS/com.docker.backend services"
+      },
+      {
+        "pid": 39646,
+        "name": "com.docker.build",
+        "ports": [],
+        "cmdline": "/Applications/Docker.app/Contents/MacOS/com.docker.build --log-no-timestamp"
+      }
+    ]
+  },
+  {
+    "dir": "/Users/andy/.cache",
+    "active_process_count": 1,
+    "sample_processes": [
+      {
+        "pid": 52858,
+        "name": "node",
+        "ports": [],
+        "cmdline": "/Users/andy/.lmstudio/.internal/utils/node -e \nfunction connectPort(port) {\n  const handlersMap = new Map();\n  return {\n"
+      }
+    ]
+  },
+  {
+    "dir": "/Users/andy/.codex",
+    "active_process_count": 1,
+    "sample_processes": [
+      {
+        "pid": 72140,
+        "name": "ChatGPT for Chrome",
+        "ports": [],
+        "cmdline": "/Users/andy/.codex/plugins/cache/openai-bundled/chrome/latest/extension-host/macos/arm64/ChatGPT for Chrome chrome-exten"
+      }
+    ]
+  },
+  {
+    "dir": "/Users/andy/.gemini",
+    "active_process_count": 1,
+    "sample_processes": [
+      {
+        "pid": 2168,
+        "name": "language_server_macos_arm",
+        "ports": [
+          "127.0.0.1:51035",
+          "127.0.0.1:51036"
+        ],
+        "cmdline": "/Applications/Antigravity IDE.app/Contents/Resources/app/extensions/antigravity/bin/language_server_macos_arm --csrf_tok"
+      }
+    ]
+  },
+  {
+    "dir": "/Users/andy/workbench",
+    "active_process_count": 1,
+    "sample_processes": [
+      {
+        "pid": 63375,
+        "name": "Python",
+        "ports": [
+          "127.0.0.1:9001"
+        ],
+        "cmdline": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Py"
+      }
+    ]
+  }
+]

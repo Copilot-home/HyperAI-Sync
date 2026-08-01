@@ -1,0 +1,28 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "docker",
+  "started_at": "2026-07-31T16:20:51Z",
+  "completed_at": "2026-07-31T16:20:52Z",
+  "dry_run": false,
+  "include_recyclable": false,
+  "disk_before_mb": 8753,
+  "disk_after_mb": 8751,
+  "freed_mb": 0,
+  "action_count": 2,
+  "error_count": 0,
+  "actions": [
+    {
+      "command": "docker system prune -f",
+      "rc": 0,
+      "stdout": "Deleted Containers:\n2dacc87a73b1b20595ec8ba168fec62cbbf3855f9b0de9a5afcc65968892b32c\nec936108af55fd211c3f233da8cc07fb94c53ef3107ebbfd43e94460c41556bf\ne04c4047cab70e5653859f67392c19aaf5ee7c357f34c2fc7944fed25399eb0b\n\nTotal reclaimed space: 12.29kB\n",
+      "stderr": ""
+    },
+    {
+      "command": "docker builder prune -f",
+      "rc": 0,
+      "stdout": "Total:\t0B\n",
+      "stderr": ""
+    }
+  ],
+  "status": "ok"
+}

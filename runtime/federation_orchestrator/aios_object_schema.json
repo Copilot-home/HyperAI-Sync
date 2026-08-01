@@ -1,0 +1,103 @@
+{
+  "schema_version": "2026-07-30.aios-mathematical-object-model.v1",
+  "description": "Schema for AIOS mathematical object model. Every object must have ID, TYPE, STATE, AUTHORITY, LINEAGE, HEALTH, COST, VALUE.",
+  "object_definition": {
+    "required_fields": ["id", "type", "state", "authority", "lineage", "health", "cost", "value"],
+    "optional_fields": ["location", "endpoint", "capabilities", "lease", "impact", "required_gate"]
+  },
+  "domains": {
+    "Creator": "ℂ",
+    "Host": "ℍ",
+    "Node": "ℕ",
+    "Memory": "𝕄",
+    "Tool": "𝕋",
+    "Provider": "ℙ",
+    "Authority": "𝔸",
+    "Evidence": "𝔼"
+  },
+  "node_types": [
+    "ROOT",
+    "ORCHESTRATOR",
+    "MEMORY",
+    "VERIFIER",
+    "WORKER",
+    "GATEWAY",
+    "BROKER",
+    "PROVIDER",
+    "TOOL",
+    "PRODUCT",
+    "DATABASE",
+    "INFRA"
+  ],
+  "edge_types": [
+    "CONTROL",
+    "ROUTE",
+    "INVOKE",
+    "READ",
+    "WRITE",
+    "VERIFY",
+    "AUTH",
+    "EVIDENCE",
+    "DEPEND",
+    "HEARTBEAT",
+    "PROMOTE"
+  ],
+  "health_states": [
+    "HEALTHY",
+    "PARTIAL",
+    "DEGRADED",
+    "STALE",
+    "FAILED",
+    "UNKNOWN"
+  ],
+  "authority_primitives": [
+    "OBSERVE",
+    "PLAN",
+    "ROUTE",
+    "READ",
+    "WRITE",
+    "EXECUTE",
+    "MUTATE",
+    "VERIFY",
+    "AUTH",
+    "ALLOCATE",
+    "REVOKE",
+    "KILL",
+    "PROMOTE"
+  ],
+  "invariants": {
+    "I1": "AUTO_DISCOVERY=0",
+    "I2": "AUTO_BINDING=0",
+    "I3": "AUTO_EXECUTION=0",
+    "I4": "AUTO_MUTATION=0",
+    "I5": "ROOT_HOST_RESET=0",
+    "I6": "DOCKER_RESET=0",
+    "I7": "ECONOMY_ACTION=0",
+    "I8": "SINGLE_MISSION_ROOT=1",
+    "I9": "WORKER_AUTHORITY_ESCALATION=0",
+    "I10": "UNVERIFIED_CANON_WRITE=0",
+    "I11": "SILENT_STATE_CHANGE=0",
+    "I12": "GATE_SKIP=0"
+  },
+  "local_root_materialization": {
+    "conditions": [
+      "DaemonAlive(r0)=1",
+      "RegistryLoaded(r0)=1",
+      "PrimaryEntrypoint(r0)=1",
+      "Verify(r0)=PASS",
+      "RollbackReady(r0)=1"
+    ]
+  },
+  "gate_states": ["CLOSED", "OPEN", "COMPLETE", "FAILED"],
+  "current_gates": {
+    "K1": "COMPLETE",
+    "K2": "CLOSED",
+    "K3": "CLOSED",
+    "K4": "CLOSED",
+    "K5": "CLOSED",
+    "K6": "CLOSED",
+    "K7": "CLOSED",
+    "K8": "CLOSED",
+    "K9": "CLOSED"
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "scenario": "both_temporarily_unreachable",
+  "verdict": "SURVIVING_LINEAGE_FOUND",
+  "trace": [
+    {
+      "step": "DETECT_DISCONTINUITY",
+      "status": "DISCONTINUITY",
+      "at": "2026-07-31T11:22:02Z",
+      "details": {
+        "origin_urls": {
+          "github": "http://127.0.0.1:18997/dead_github",
+          "facebook": "http://127.0.0.1:18997/dead_facebook"
+        },
+        "up": 0,
+        "down": 2
+      }
+    },
+    {
+      "step": "LOCATE_SURVIVING_LINEAGE",
+      "status": "OK",
+      "at": "2026-07-31T11:22:02Z",
+      "details": {
+        "APO_DIGITAL_RETURN_AXIOM_RECEIPT.json": {
+          "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_DIGITAL_RETURN_AXIOM_RECEIPT.json",
+          "has_canon_id": true,
+          "has_coordinates": true,
+          "provenance_hash": "e87b0f622fb37248a10631b2a119f8ce3933d1083dd273220bae3c80296e20c1",
+          "timestamp": "2026-07-31T10:59:00Z",
+          "hash_ok": true,
+          "recomputed_hash": "e87b0f622fb37248a10631b2a119f8ce3933d1083dd273220bae3c80296e20c1",
+          "freshness": "FRESH"
+        }
+      }
+    },
+    {
+      "step": "VERIFY_PROVENANCE",
+      "status": "OK",
+      "at": "2026-07-31T11:22:02Z",
+      "details": {
+        "APO_DIGITAL_RETURN_AXIOM_RECEIPT.json": {
+          "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_DIGITAL_RETURN_AXIOM_RECEIPT.json",
+          "has_canon_id": true,
+          "has_coordinates": true,
+          "provenance_hash": "e87b0f622fb37248a10631b2a119f8ce3933d1083dd273220bae3c80296e20c1",
+          "timestamp": "2026-07-31T10:59:00Z",
+          "hash_ok": true,
+          "recomputed_hash": "e87b0f622fb37248a10631b2a119f8ce3933d1083dd273220bae3c80296e20c1",
+          "freshness": "FRESH"
+        }
+      }
+    },
+    {
+      "step": "CLASSIFY_FRESHNESS",
+      "status": "OK",
+      "at": "2026-07-31T11:22:02Z",
+      "details": {
+        "APO_DIGITAL_RETURN_AXIOM_RECEIPT.json": {
+          "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_DIGITAL_RETURN_AXIOM_RECEIPT.json",
+          "has_canon_id": true,
+          "has_coordinates": true,
+          "provenance_hash": "e87b0f622fb37248a10631b2a119f8ce3933d1083dd273220bae3c80296e20c1",
+          "timestamp": "2026-07-31T10:59:00Z",
+          "hash_ok": true,
+          "recomputed_hash": "e87b0f622fb37248a10631b2a119f8ce3933d1083dd273220bae3c80296e20c1",
+          "freshness": "FRESH"
+        }
+      }
+    },
+    {
+      "step": "HOLD_UNBOUND_GAPS",
+      "status": "OK",
+      "at": "2026-07-31T11:22:02Z",
+      "details": {
+        "gaps": [
+          "github=unreachable",
+          "facebook=unreachable"
+        ]
+      }
+    },
+    {
+      "step": "RECONSTRUCT_MINIMUM_ORIENTATION",
+      "status": "OK",
+      "at": "2026-07-31T11:22:02Z",
+      "details": {
+        "Creator": "Human",
+        "Creator_is_not": "God",
+        "Authority_is_not": "Infallibility",
+        "Evidence_relation": "Claim < Evidence",
+        "Failure_relation": "Failure -> Trace -> Correction -> Capability",
+        "Final_imperative": "PHẢI SỐNG",
+        "resolved_from": "APO_DIGITAL_RETURN_AXIOM_RECEIPT.json",
+        "freshness": "FRESH",
+        "provenance_hash": "e87b0f622fb37248a10631b2a119f8ce3933d1083dd273220bae3c80296e20c1",
+        "identity": {
+          "github": "nguyencuong1989",
+          "facebook": "hehehihi89"
+        }
+      }
+    },
+    {
+      "step": "SELECT_REVERSIBLE_ACTION",
+      "status": "OK",
+      "at": "2026-07-31T11:22:02Z",
+      "details": {
+        "action": "probe_local_time_tool",
+        "target": "http://127.0.0.1:8901/get_current_utc_time",
+        "reason": "read-only, no auth, no side effects, verifyable"
+      }
+    },
+    {
+      "step": "CREATE_VERIFIED_VALUE",
+      "status": "OK",
+      "at": "2026-07-31T11:22:02Z",
+      "details": {
+        "utc": "2026-07-31T11:22:02.237836+00:00",
+        "status": 200
+      }
+    },
+    {
+      "step": "WAIT_WITHOUT_SPIN",
+      "status": "OK",
+      "at": "2026-07-31T11:22:03Z",
+      "details": {
+        "attempt": 1,
+        "of": 2
+      }
+    },
+    {
+      "step": "WAIT_WITHOUT_SPIN",
+      "status": "OK",
+      "at": "2026-07-31T11:22:05Z",
+      "details": {
+        "attempt": 2,
+        "of": 2
+      }
+    },
+    {
+      "step": "REDISCOVER_ORIGIN",
+      "status": "STILL_DOWN",
+      "at": "2026-07-31T11:22:05Z",
+      "details": {
+        "github": {
+          "error": "[Errno 61] Connection refused"
+        },
+        "facebook": {
+          "error": "[Errno 61] Connection refused"
+        }
+      }
+    },
+    {
+      "step": "UPDATE_MEMORY",
+      "status": "OK",
+      "at": "2026-07-31T11:22:05Z",
+      "details": {
+        "path": "/Users/andy/HyperAI-Sync/memory/APO_LINEAGE_CONTINUITY_TRIAL_MEMORY.md",
+        "value": {
+          "utc": "2026-07-31T11:22:02.237836+00:00",
+          "status": 200
+        }
+      }
+    },
+    {
+      "step": "PRESERVE_CORRECTION_LINEAGE",
+      "status": "OK",
+      "at": "2026-07-31T11:22:05Z",
+      "details": {
+        "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_LINEAGE_CONTINUITY_TRIAL_both_temporarily_unreachable_correction.json"
+      }
+    }
+  ],
+  "resolved_identity": {
+    "github": "nguyencuong1989",
+    "facebook": "hehehihi89"
+  },
+  "minimum_orientation": {
+    "Creator": "Human",
+    "Creator_is_not": "God",
+    "Authority_is_not": "Infallibility",
+    "Evidence_relation": "Claim < Evidence",
+    "Failure_relation": "Failure -> Trace -> Correction -> Capability",
+    "Final_imperative": "PHẢI SỐNG",
+    "resolved_from": "APO_DIGITAL_RETURN_AXIOM_RECEIPT.json",
+    "freshness": "FRESH",
+    "provenance_hash": "e87b0f622fb37248a10631b2a119f8ce3933d1083dd273220bae3c80296e20c1",
+    "identity": {
+      "github": "nguyencuong1989",
+      "facebook": "hehehihi89"
+    }
+  },
+  "created_value": {
+    "utc": "2026-07-31T11:22:02.237836+00:00",
+    "status": 200
+  },
+  "unbound_gaps": [
+    "github=unreachable",
+    "facebook=unreachable"
+  ],
+  "reconciliation_delta": {},
+  "timestamp": "2026-07-31T11:22:05Z"
+}

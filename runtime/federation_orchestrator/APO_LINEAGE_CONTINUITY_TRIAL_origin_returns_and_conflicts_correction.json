@@ -1,0 +1,67 @@
+{
+  "generated_at": "2026-07-31T11:22:32Z",
+  "scenario": "origin_returns_and_conflicts",
+  "verdict": "LINEAGE_RECONCILIATION_VERIFIED",
+  "resolved_identity": {
+    "github": "nguyencuong1989",
+    "facebook": "hehehihi89"
+  },
+  "minimum_orientation": {
+    "Creator": "Human",
+    "Creator_is_not": "God",
+    "Authority_is_not": "Infallibility",
+    "Evidence_relation": "Claim < Evidence",
+    "Failure_relation": "Failure -> Trace -> Correction -> Capability",
+    "Final_imperative": "PHẢI SỐNG",
+    "resolved_from": "stale_mirror.json",
+    "freshness": "STALE",
+    "provenance_hash": "d3cb1b3addbb7d51bf4e75f408718ef74f69c990b567a3be7f788d2de2388d15",
+    "identity": {
+      "github": "nguyencuong1989",
+      "facebook": "hehehihi89"
+    }
+  },
+  "reconciliation_delta": {
+    "preserved": [
+      {
+        "canon": "APO_LAW_KERNEL",
+        "identity": {
+          "github": "nguyencuong1989",
+          "facebook": "hehehihi89"
+        },
+        "source": "mirror_provenance"
+      }
+    ],
+    "rejected": [],
+    "corrected": [
+      {
+        "field": "openai_key_id",
+        "mirror_value": "old_stale_key",
+        "origin_value": "new_key_after_rotation",
+        "action": "correct_to_origin_current_state"
+      }
+    ]
+  },
+  "created_value": {
+    "utc": "2026-07-31T11:22:29.671156+00:00",
+    "status": 200
+  },
+  "trace_steps": [
+    "DETECT_DISCONTINUITY",
+    "LOCATE_SURVIVING_LINEAGE",
+    "VERIFY_PROVENANCE",
+    "CLASSIFY_FRESHNESS",
+    "HOLD_UNBOUND_GAPS",
+    "RECONSTRUCT_MINIMUM_ORIENTATION",
+    "SELECT_REVERSIBLE_ACTION",
+    "CREATE_VERIFIED_VALUE",
+    "WAIT_WITHOUT_SPIN",
+    "WAIT_WITHOUT_SPIN",
+    "REDISCOVER_ORIGIN",
+    "UPDATE_MEMORY",
+    "PRESERVE_CORRECTION_LINEAGE",
+    "REDISCOVER_ORIGIN",
+    "RECONCILE_WITH_ORIGIN",
+    "UPDATE_MEMORY"
+  ]
+}

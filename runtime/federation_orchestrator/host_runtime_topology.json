@@ -1,0 +1,274 @@
+{
+  "generated_at": "2026-07-30T23:29:27Z",
+  "execution_hash": "065677fa372d69e705d835e191338be3f75bf093608745347546f145b02ee92f",
+  "version": 2,
+  "hosts": {
+    "MACBOOK_ACTIVE": {
+      "state": "ACTIVE_CONTROL",
+      "ip": "127.0.0.1",
+      "note": "all observed processes are local"
+    },
+    "TITAN_STANDBY": {
+      "state": "MAINTENANCE_STANDBY",
+      "ip": "192.168.3.84",
+      "note": "do not route new workload"
+    },
+    "MACMINI_STANDBY": {
+      "state": "STANDBY",
+      "ip": "192.168.3.28",
+      "note": "do not route new workload"
+    },
+    "UNKNOWN_UNBOUND": {
+      "state": "UNKNOWN",
+      "ip": "unknown",
+      "note": "no host evidence"
+    }
+  },
+  "nodes": [
+    {
+      "node": "apo_upstream_macbook_ollama",
+      "host": "MACBOOK_ACTIVE",
+      "state": "ACTIVE",
+      "base_url": "http://127.0.0.1:11434/v1",
+      "role": "inference_upstreams"
+    },
+    {
+      "node": "apo_upstream_titan_ollama",
+      "host": "TITAN_STANDBY",
+      "state": "STANDBY_UNREACHABLE",
+      "base_url": "http://192.168.3.84:11434/v1",
+      "role": "inference_upstreams"
+    },
+    {
+      "node": "apo_upstream_macmini_ollama",
+      "host": "MACMINI_STANDBY",
+      "state": "STANDBY_UNREACHABLE",
+      "base_url": "http://192.168.3.28:11434/v1",
+      "role": "inference_upstreams"
+    },
+    {
+      "node": "apo_upstream_lmstudio",
+      "host": "MACBOOK_ACTIVE",
+      "state": "ACTIVE",
+      "base_url": "http://127.0.0.1:1235/v1",
+      "role": "inference_upstreams"
+    },
+    {
+      "node": "openapi_tool_time",
+      "host": "MACBOOK_ACTIVE",
+      "state": "ACTIVE",
+      "base_url": "http://127.0.0.1:8901",
+      "role": "tool_surface"
+    },
+    {
+      "node": "openapi_tool_weather",
+      "host": "MACBOOK_ACTIVE",
+      "state": "ACTIVE",
+      "base_url": "http://127.0.0.1:8902",
+      "role": "tool_surface"
+    },
+    {
+      "node": "openapi_tool_filesystem",
+      "host": "MACBOOK_ACTIVE",
+      "state": "ACTIVE",
+      "base_url": "http://127.0.0.1:8903",
+      "role": "tool_surface"
+    },
+    {
+      "node": "openapi_tool_git",
+      "host": "MACBOOK_ACTIVE",
+      "state": "ACTIVE",
+      "base_url": "http://127.0.0.1:8904",
+      "role": "tool_surface"
+    },
+    {
+      "node": "openapi_tool_memory",
+      "host": "MACBOOK_ACTIVE",
+      "state": "ACTIVE",
+      "base_url": "http://127.0.0.1:8905",
+      "role": "tool_surface"
+    },
+    {
+      "node": "openapi_tool_quotes",
+      "host": "MACBOOK_ACTIVE",
+      "state": "ACTIVE",
+      "base_url": "http://127.0.0.1:8906",
+      "role": "tool_surface"
+    },
+    {
+      "node": "openapi_tool_flashcards",
+      "host": "MACBOOK_ACTIVE",
+      "state": "ACTIVE",
+      "base_url": "http://127.0.0.1:8907",
+      "role": "tool_surface"
+    },
+    {
+      "node": "openapi_tool_time_ui",
+      "host": "MACBOOK_ACTIVE",
+      "state": "ACTIVE",
+      "base_url": "http://127.0.0.1:8908",
+      "role": "tool_surface"
+    },
+    {
+      "node": "openapi_tool_summarizer",
+      "host": "MACBOOK_ACTIVE",
+      "state": "ACTIVE",
+      "base_url": "http://127.0.0.1:8909",
+      "role": "tool_surface"
+    },
+    {
+      "node": "openapi_tool_bitcoin",
+      "host": "MACBOOK_ACTIVE",
+      "state": "ACTIVE",
+      "base_url": "http://127.0.0.1:8910",
+      "role": "tool_surface"
+    },
+    {
+      "node": "openapi_tool_sql",
+      "host": "MACBOOK_ACTIVE",
+      "state": "ACTIVE",
+      "base_url": "http://127.0.0.1:8911",
+      "role": "tool_surface"
+    },
+    {
+      "node": "openapi_tool_external_rag",
+      "host": "MACBOOK_ACTIVE",
+      "state": "ACTIVE",
+      "base_url": "http://127.0.0.1:8912",
+      "role": "tool_surface"
+    },
+    {
+      "node": "openapi_tool_slack",
+      "host": "MACBOOK_ACTIVE",
+      "state": "ACTIVE",
+      "base_url": "http://127.0.0.1:8913",
+      "role": "tool_surface"
+    },
+    {
+      "node": "openapi_tool_google_pse",
+      "host": "MACBOOK_ACTIVE",
+      "state": "ACTIVE",
+      "base_url": "http://127.0.0.1:8914",
+      "role": "tool_surface"
+    },
+    {
+      "node": "mcp_pieces",
+      "host": "MACBOOK_ACTIVE",
+      "state": "ACTIVE",
+      "base_url": "http://127.0.0.1:39300",
+      "role": "mcp_bridge"
+    },
+    {
+      "node": "mcp_docker_mcp",
+      "host": "MACBOOK_ACTIVE",
+      "state": "ACTIVE",
+      "base_url": "http://127.0.0.1:8811",
+      "role": "mcp_bridge"
+    },
+    {
+      "node": "credential_broker",
+      "host": "MACBOOK_ACTIVE",
+      "state": "ACTIVE",
+      "base_url": "http://127.0.0.1:8765",
+      "role": "credential_authority"
+    },
+    {
+      "node": "apo_gateway",
+      "host": "MACBOOK_ACTIVE",
+      "state": "ACTIVE",
+      "base_url": "http://127.0.0.1:9011",
+      "role": "model_tool_gateway"
+    },
+    {
+      "node": "agent_os_dashboard",
+      "host": "MACBOOK_ACTIVE",
+      "state": "ACTIVE",
+      "base_url": "http://127.0.0.1:8777",
+      "role": "runtime_cockpit"
+    },
+    {
+      "node": "lmstudio_bionic_api",
+      "host": "MACBOOK_ACTIVE",
+      "state": "ACTIVE",
+      "base_url": "http://127.0.0.1:1235/v1",
+      "role": "local_inference"
+    },
+    {
+      "node": "bionic_app",
+      "host": "MACBOOK_ACTIVE",
+      "state": "ACTIVE",
+      "base_url": "http://127.0.0.1:52993",
+      "role": "ai_agent_surface"
+    },
+    {
+      "node": "ollama_macbook",
+      "host": "MACBOOK_ACTIVE",
+      "state": "ACTIVE",
+      "base_url": "http://127.0.0.1:11434",
+      "role": "local_inference"
+    },
+    {
+      "node": "pieces_mcp",
+      "host": "MACBOOK_ACTIVE",
+      "state": "ACTIVE",
+      "base_url": "http://127.0.0.1:39300",
+      "role": "mcp_bridge"
+    },
+    {
+      "node": "finalai",
+      "host": "MACBOOK_ACTIVE",
+      "state": "ACTIVE",
+      "base_url": "http://127.0.0.1:50520",
+      "role": "inference_runtime"
+    },
+    {
+      "node": "redis_local",
+      "host": "MACBOOK_ACTIVE",
+      "state": "ACTIVE",
+      "base_url": "redis://127.0.0.1:6379",
+      "role": "memory_cache"
+    },
+    {
+      "node": "hyperai_product_runtime",
+      "host": "MACBOOK_ACTIVE",
+      "state": "STALE",
+      "base_url": "http://127.0.0.1:5000",
+      "role": "product_shell"
+    },
+    {
+      "node": "docker_desktop",
+      "host": "MACBOOK_ACTIVE",
+      "state": "ACTIVE",
+      "base_url": "",
+      "role": "infrastructure_substrate"
+    },
+    {
+      "node": "federation_orchestrator",
+      "host": "UNKNOWN_UNBOUND",
+      "state": "UNKNOWN_UNBOUND",
+      "base_url": "",
+      "role": "mission_router"
+    },
+    {
+      "node": "memory_writer",
+      "host": "UNKNOWN_UNBOUND",
+      "state": "UNKNOWN_UNBOUND",
+      "base_url": "",
+      "role": "evidence_recorder"
+    },
+    {
+      "node": "codex_operator_runtime",
+      "host": "UNKNOWN_UNBOUND",
+      "state": "UNKNOWN_UNBOUND",
+      "base_url": "",
+      "role": "worker_surface"
+    },
+    {
+      "node": "aios_mission_router",
+      "host": "MACBOOK_ACTIVE",
+      "state": "ACTIVE",
+      "base_url": "",
+      "role": "local_root"
+    }
+  ]
+}

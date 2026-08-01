@@ -1,0 +1,36 @@
+{
+  "execution_id": "docker-recovery-76019c05",
+  "timestamp": "2026-07-31T12:44:59Z",
+  "docker_raw_metadata": {
+    "path": "/Users/andy/Library/Containers/com.docker.docker/Data/vms/0/data/Docker.raw",
+    "size_bytes": 494384709632,
+    "sha256_partial": "9e698bdea7afbb188d24951dc19af8f3e61e93a13d0fba2b05e5a0cd30aa07d1"
+  },
+  "preserved_artifacts": [
+    {
+      "name": "docker_current_frame_manifest.json",
+      "sha256": "5244f714a18e162df3f5397be527be0135885641cc83aab2486bff57814ab881",
+      "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/docker_recovery_preserved_frame_docker-recovery-76019c05/docker_current_frame_manifest.json"
+    },
+    {
+      "name": "docker_plane_state_matrix.json",
+      "sha256": "9bdd885d4223d208d396837d73d7978d132a1dcc9b42bd8c4c326b8fccd7be2a",
+      "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/docker_recovery_preserved_frame_docker-recovery-76019c05/docker_plane_state_matrix.json"
+    },
+    {
+      "name": "docker_same_frame_evidence_ledger.json",
+      "sha256": "ef5896dff3e9bcd3be3479065d0e83808ebfc3102cf870fbe0ba5d11d3a4ec84",
+      "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/docker_recovery_preserved_frame_docker-recovery-76019c05/docker_same_frame_evidence_ledger.json"
+    },
+    {
+      "name": "docker_hypothesis_discrimination_matrix.json",
+      "sha256": "0d87fd4de7af8ee48bf6330854418ac70a5e060cdfff8538ad6c81955aa34bf1",
+      "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/docker_recovery_preserved_frame_docker-recovery-76019c05/docker_hypothesis_discrimination_matrix.json"
+    },
+    {
+      "name": "docker_incident_sequence.json",
+      "sha256": "13240dddd7830f72ab4c428fcc52f7e85ba4a7badf3a4a9a86fabcd41ac9056a",
+      "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/docker_recovery_preserved_frame_docker-recovery-76019c05/docker_incident_sequence.json"
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "execution_id": "apo-axis-matrix-20260731",
+  "timestamp": "2026-07-31T13:55:00Z",
+  "principle": "AxisPower(A, k) > 0 implies AxisResponsibility(A, k) >= AxisPower(A, k).",
+  "axes": [
+    {
+      "axis_id": "axis_1",
+      "name": "LANGUAGE",
+      "meaning": "Semantics, conversation, translation, interpretation.",
+      "actors": [
+        { "actor": "Ollama", "capability": "qwen3, siri, chatgpt, gpt-5.5, minimax model inference", "power": "high", "responsibility": "high", "verified": true },
+        { "actor": "Pieces OS", "capability": "snippet language understanding", "power": "medium", "responsibility": "high", "verified": true },
+        { "actor": "Antigravity IDE", "capability": "editor language services", "power": "medium", "responsibility": "medium", "verified": true },
+        { "actor": "VS Code / Insiders / VSCodium", "capability": "editor language services", "power": "medium", "responsibility": "low", "verified": true }
+      ],
+      "holder": "Ollama (primary)",
+      "co_holders": ["Pieces OS", "Antigravity IDE"],
+      "understaffed": false,
+      "responsibility_gap": "VS Code family has language capability but is not actively maintained for HyperAI missions."
+    },
+    {
+      "axis_id": "axis_2",
+      "name": "LOGIC",
+      "meaning": "Reasoning, causal analysis, consistency.",
+      "actors": [
+        { "actor": "OpenAPI Home Fabric", "capability": "summarizer, filesystem, git, sql, external-rag primitives", "power": "medium", "responsibility": "medium", "verified": false },
+        { "actor": "DAIOF-Framework", "capability": "D&R reasoning, Socratic evidence reconciliation", "power": "high", "responsibility": "low", "verified": false },
+        { "actor": "D&R Protocol", "capability": "deconstruct & reconstruct, metadata optimization, root cause analysis", "power": "high", "responsibility": "low", "verified": false }
+      ],
+      "holder": null,
+      "co_holders": [],
+      "understaffed": true,
+      "responsibility_gap": "DAIOF-Framework and D&R Protocol have logic capability but are dormant; OpenAPI fabric has primitives but no verified reasoning orchestration."
+    },
+    {
+      "axis_id": "axis_2b",
+      "name": "FORMAL_LOGIC",
+      "meaning": "Mathematics, proof, invariant, counterexample.",
+      "actors": [
+        { "actor": "DAIOF-Framework", "capability": "formal logic, specification, proof", "power": "high", "responsibility": "low", "verified": false },
+        { "actor": "D&R Protocol", "capability": "deconstruct & reconstruct, 6-phase root cause", "power": "high", "responsibility": "low", "verified": false }
+      ],
+      "holder": null,
+      "co_holders": [],
+      "understaffed": true,
+      "responsibility_gap": "No active formal-logic runtime. DAIOF-Framework and D&R Protocol are present but dormant."
+    },
+    {
+      "axis_id": "axis_3",
+      "name": "VISION",
+      "meaning": "Planning, system view, future-state simulation.",
+      "actors": [
+        { "actor": "HyperAI-Sync", "capability": "Canon, planning, governance documents", "power": "high", "responsibility": "high", "verified": true },
+        { "actor": "LM Studio", "capability": "model inference for planning assistance", "power": "medium", "responsibility": "low", "verified": true },
+        { "actor": "Antigravity IDE", "capability": "visual planning / project UI", "power": "low", "responsibility": "low", "verified": true }
+      ],
+      "holder": "HyperAI-Sync",
+      "co_holders": [],
+      "understaffed": false,
+      "responsibility_gap": "Vision planning is mostly in static Canon; no dynamic simulation runtime."
+    },
+    {
+      "axis_id": "axis_4",
+      "name": "DATA",
+      "meaning": "Memory, evidence, retrieval, lineage, state.",
+      "actors": [
+        { "actor": "HyperAI-Sync", "capability": "Canon, memory/, evidence ledgers", "power": "high", "responsibility": "high", "verified": true },
+        { "actor": "Pieces OS", "capability": "snippet index, on-device retrieval", "power": "high", "responsibility": "high", "verified": true },
+        { "actor": "Ollama", "capability": "model state", "power": "medium", "responsibility": "high", "verified": true },
+        { "actor": "Redis", "capability": "in-memory state", "power": "medium", "responsibility": "medium", "verified": true },
+        { "actor": "Notion", "capability": "notes/knowledge base", "power": "medium", "responsibility": "low", "verified": true },
+        { "actor": "Pictures", "capability": "media archive", "power": "low", "responsibility": "high", "verified": true },
+        { "actor": "Agent Data System", "capability": "local inference outputs, short task queues, audit JSONL", "power": "low", "responsibility": "low", "verified": false }
+      ],
+      "holder": "HyperAI-Sync (governance memory) + Pieces OS (snippet index)",
+      "co_holders": ["Ollama", "Redis", "Notion", "Agent Data System"],
+      "understaffed": false,
+      "responsibility_gap": "No unified vector/semantic memory across all actors. Pieces is local snippet; HyperAI-Sync is file Canon; Redis is transient."
+    },
+    {
+      "axis_id": "axis_5",
+      "name": "EXECUTION",
+      "meaning": "Tools, APIs, OpenAPI servers, Docker, filesystem action.",
+      "actors": [
+        { "actor": "Docker Desktop", "capability": "container runtime, build, networking", "power": "high", "responsibility": "high", "verified": true },
+        { "actor": "OpenAPI Home Fabric", "capability": "10+ uvicorn capability servers", "power": "high", "responsibility": "medium", "verified": true },
+        { "actor": "Ollama", "capability": "model inference execution", "power": "high", "responsibility": "high", "verified": true },
+        { "actor": "LM Studio", "capability": "local model inference execution", "power": "medium", "responsibility": "medium", "verified": true },
+        { "actor": "Antigravity IDE", "capability": "MCP host, extension execution", "power": "medium", "responsibility": "medium", "verified": true },
+        { "actor": "FinalAI Proxy", "capability": "OpenAI-compatible API bridge", "power": "medium", "responsibility": "high", "verified": true },
+        { "actor": "AIOS Runtime Orchestrator (Phoenix)", "capability": "mission routing, skill discovery, health audit bridge", "power": "high", "responsibility": "high", "verified": true },
+        { "actor": "HyperAI Copilot Electron", "capability": "desktop UI, Vietnamese AI copilot", "power": "low", "responsibility": "low", "verified": false },
+        { "actor": "Workbench Agent Orchestrator", "capability": "doc scanning, todo building, scheduled agents", "power": "low", "responsibility": "low", "verified": false }
+      ],
+      "holder": "Docker Desktop (primary runtime substrate) + OpenAPI Home Fabric (capability primitives)",
+      "co_holders": ["Ollama", "FinalAI Proxy", "AIOS Runtime Orchestrator (Phoenix)"],
+      "understaffed": false,
+      "responsibility_gap": "OpenAPI servers are registered in apo_config.yaml and proxied through APO Gateway, but runtime health/lease enforcement per tool is not verified. Port 5000 is OS-reserved; HyperAI backend route is ambiguous. GKE MCP Server may conflict with code-server on 8080."
+    },
+    {
+      "axis_id": "axis_6",
+      "name": "SECURITY",
+      "meaning": "Identity, secrets, integrity, boundary, recovery.",
+      "actors": [
+        { "actor": "APO Gateway", "capability": "routing, boundary enforcement", "power": "high", "responsibility": "medium", "verified": false },
+        { "actor": "Docker Desktop", "capability": "isolation, VM boundary", "power": "high", "responsibility": "high", "verified": true },
+        { "actor": "FinalAI Proxy", "capability": "token/credential management", "power": "medium", "responsibility": "medium", "verified": false },
+        { "actor": "HyperAI-Sync", "capability": "Canon/IP/provenance records", "power": "high", "responsibility": "high", "verified": true },
+        { "actor": "Agent Broker", "capability": "agent registration, execution verification", "power": "medium", "responsibility": "medium", "verified": false }
+      ],
+      "holder": "Docker Desktop (isolation) + HyperAI-Sync (Canon/provenance)",
+      "co_holders": ["APO Gateway", "Agent Broker"],
+      "understaffed": false,
+      "responsibility_gap": "APO Gateway has authority but not fully verified in active missions. Credential service on 8765 returns 404; endpoint contract unclear."
+    },
+    {
+      "axis_id": "axis_7",
+      "name": "ECONOMICS",
+      "meaning": "Compute, storage, value, debt, admission, redistribution.",
+      "actors": [
+        { "actor": "Docker Desktop", "capability": "resource accounting", "power": "medium", "responsibility": "medium", "verified": true },
+        { "actor": "Ollama", "capability": "model storage cost", "power": "high", "responsibility": "low", "verified": true },
+        { "actor": "LM Studio", "capability": "model storage cost", "power": "high", "responsibility": "low", "verified": true },
+        { "actor": "Pieces OS", "capability": "index/model storage cost", "power": "high", "responsibility": "low", "verified": true }
+      ],
+      "holder": null,
+      "co_holders": [],
+      "understaffed": true,
+      "responsibility_gap": "No actor owns the ECONOMICS axis. Each model store claims capability but not responsibility for the gross storage debt. Docker recovery created a policy, but no central controller enforces it."
+    },
+    {
+      "axis_id": "axis_8",
+      "name": "GOVERNANCE",
+      "meaning": "Authority, IAM, Canon, role assignment, acceptance gates.",
+      "actors": [
+        { "actor": "HyperAI OS Master", "capability": "A0 survival governor", "power": "high", "responsibility": "high", "verified": true },
+        { "actor": "HyperAI-Sync", "capability": "Canon, policy, memory", "power": "high", "responsibility": "high", "verified": true },
+        { "actor": "Agent OS", "capability": "agent/mission dispatch", "power": "medium", "responsibility": "medium", "verified": false },
+        { "actor": "APO Gateway", "capability": "service routing/bridge", "power": "medium", "responsibility": "medium", "verified": false },
+        { "actor": "AIOS Runtime Orchestrator (Phoenix)", "capability": "mission routing, skill discovery, health/audit", "power": "high", "responsibility": "high", "verified": true },
+        { "actor": "Devin / Devin CLI", "capability": "tool execution under creator direction", "power": "high", "responsibility": "high", "verified": true },
+        { "actor": "FinalAI Proxy", "capability": "model access governance", "power": "medium", "responsibility": "medium", "verified": true }
+      ],
+      "holder": "HyperAI OS Master (survival) + AIOS Runtime Orchestrator (Phoenix) (mission router) + HyperAI-Sync (Canon) + Devin (current session)",
+      "co_holders": ["Agent OS", "APO Gateway", "FinalAI Proxy"],
+      "understaffed": false,
+      "responsibility_gap": "Agent OS and APO Gateway have authority claims but not verified as primary governance holders in recent missions. Devin is active operator but not policy setter."
+    }
+  ],
+  "authority_overclaim": [
+    { "actor": "VS Code family", "axis": "EXECUTION", "reason": "Holds 17G+ IDE state but is not the active creator surface (Antigravity IDE is active)." },
+    { "actor": "LM Studio", "axis": "EXECUTION", "reason": "26G model storage but no recent mission evidence of unique capability not served by Ollama." },
+    { "actor": "OpenAPI Home Fabric", "axis": "GOVERNANCE", "reason": "Multiple ports suggest authority but no unified registry or dispatch." }
+  ],
+  "understaffed_axes": ["LOGIC", "FORMAL_LOGIC", "ECONOMICS"],
+  "verdict": "AXIS_ASSIGNMENT_PARTIAL",
+  "verdict_reasoning": "EXECUTION, DATA, LANGUAGE, VISION, GOVERNANCE have verified holders. LOGIC/FORMAL_LOGIC and ECONOMICS are understaffed. Several actors have storage overclaim."
+}

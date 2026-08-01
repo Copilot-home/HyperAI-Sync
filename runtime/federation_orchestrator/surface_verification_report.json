@@ -1,0 +1,101 @@
+{
+  "timestamp": "2026-07-30T17:26:44Z",
+  "probe_summary": {
+    "apo_gateway": {
+      "status": 200,
+      "url": "http://127.0.0.1:9011/health",
+      "ok": true
+    },
+    "local_fakeapi_provider_fabric": {
+      "status": 200,
+      "url": "http://127.0.0.1:9011/health",
+      "ok": true
+    },
+    "lmstudio_substrate": {
+      "status": 401,
+      "url": "http://127.0.0.1:1235/v1/models",
+      "ok": true
+    },
+    "docker_mcp_gateway": {
+      "status": 200,
+      "url": "http://127.0.0.1:8811/sse",
+      "ok": true
+    },
+    "hyperai_credentials_broker": {
+      "status": 200,
+      "url": "http://127.0.0.1:8765/status",
+      "ok": true
+    },
+    "time_tool": {
+      "status": 200,
+      "url": "http://127.0.0.1:8901/openapi.json",
+      "ok": true
+    },
+    "weather_tool": {
+      "status": 200,
+      "url": "http://127.0.0.1:8902/openapi.json",
+      "ok": true
+    },
+    "filesystem_tool": {
+      "status": 200,
+      "url": "http://127.0.0.1:8903/openapi.json",
+      "ok": true
+    },
+    "git_tool": {
+      "status": 200,
+      "url": "http://127.0.0.1:8904/openapi.json",
+      "ok": true
+    },
+    "memory_tool": {
+      "status": 200,
+      "url": "http://127.0.0.1:8905/openapi.json",
+      "ok": true
+    },
+    "quotes_tool": {
+      "status": 200,
+      "url": "http://127.0.0.1:8906/openapi.json",
+      "ok": true
+    },
+    "flashcards_tool": {
+      "status": 200,
+      "url": "http://127.0.0.1:8907/openapi.json",
+      "ok": true
+    },
+    "time_ui_tool": {
+      "status": 200,
+      "url": "http://127.0.0.1:8908/openapi.json",
+      "ok": true
+    },
+    "summarizer_tool": {
+      "status": 200,
+      "url": "http://127.0.0.1:8909/openapi.json",
+      "ok": true
+    },
+    "bitcoin_tool": {
+      "status": 200,
+      "url": "http://127.0.0.1:8910/openapi.json",
+      "ok": true
+    },
+    "sql_tool": {
+      "status": 200,
+      "url": "http://127.0.0.1:8911/openapi.json",
+      "ok": true
+    },
+    "external_rag_tool": {
+      "status": 200,
+      "url": "http://127.0.0.1:8912/openapi.json",
+      "ok": true
+    },
+    "slack_tool": {
+      "status": 200,
+      "url": "http://127.0.0.1:8913/openapi.json",
+      "ok": true
+    },
+    "google_pse_tool": {
+      "status": 200,
+      "url": "http://127.0.0.1:8914/openapi.json",
+      "ok": true
+    }
+  },
+  "overall_ok": true
+}

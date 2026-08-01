@@ -1,0 +1,1334 @@
+{
+  "generated_at": "2026-07-30T23:29:27Z",
+  "execution_hash": "065677fa372d69e705d835e191338be3f75bf093608745347546f145b02ee92f",
+  "version": 2,
+  "total_processes": 100,
+  "total_rss_bytes": 3782475776,
+  "unknown_pids": [],
+  "system_totals": {
+    "DAIOF": {
+      "count": 100,
+      "rss": 3782475776
+    }
+  },
+  "processes": [
+    {
+      "pid": 323,
+      "name": "com.docker.vmnet",
+      "exe": "/Library/PrivilegedHelperTools/com.docker.vmnetd",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_323",
+      "rss_bytes": 0,
+      "listening_ports": []
+    },
+    {
+      "pid": 526,
+      "name": "ControlCenter",
+      "exe": "/System/Library/CoreServices/ControlCenter.app/Contents/MacOS/ControlCenter",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_526",
+      "rss_bytes": 39157760,
+      "listening_ports": [
+        7000,
+        7000,
+        5000,
+        5000
+      ]
+    },
+    {
+      "pid": 787,
+      "name": "redis-server",
+      "exe": "/opt/homebrew/Cellar/redis/8.8.1/bin/redis-server",
+      "system": "DAIOF",
+      "lanes": [
+        "MEMORY"
+      ],
+      "mission": "operate redis_local",
+      "rss_bytes": 1196032,
+      "listening_ports": [
+        6379,
+        6379
+      ]
+    },
+    {
+      "pid": 796,
+      "name": "Squirrel",
+      "exe": "/Applications/Ollama.app/Contents/Frameworks/Squirrel.framework/Versions/A/Squirrel",
+      "system": "DAIOF",
+      "lanes": [
+        "KNOWLEDGE",
+        "KNOWLEDGE"
+      ],
+      "mission": "operate apo_upstream_macbook_ollama / operate ollama_macbook",
+      "rss_bytes": 2555904,
+      "listening_ports": []
+    },
+    {
+      "pid": 807,
+      "name": "open",
+      "exe": "/usr/bin/open",
+      "system": "DAIOF",
+      "lanes": [
+        "EXECUTION",
+        "EXECUTION"
+      ],
+      "mission": "operate mcp_pieces / operate pieces_mcp",
+      "rss_bytes": 3538944,
+      "listening_ports": []
+    },
+    {
+      "pid": 809,
+      "name": "Python",
+      "exe": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python",
+      "system": "DAIOF",
+      "lanes": [
+        "KNOWLEDGE",
+        "MEMORY"
+      ],
+      "mission": "operate finalai / operate redis_local",
+      "rss_bytes": 3964928,
+      "listening_ports": [
+        50520
+      ]
+    },
+    {
+      "pid": 831,
+      "name": "Ollama",
+      "exe": "/Applications/Ollama.app/Contents/MacOS/Ollama",
+      "system": "DAIOF",
+      "lanes": [
+        "KNOWLEDGE",
+        "KNOWLEDGE"
+      ],
+      "mission": "operate apo_upstream_macbook_ollama / operate ollama_macbook",
+      "rss_bytes": 15908864,
+      "listening_ports": [
+        49196
+      ]
+    },
+    {
+      "pid": 864,
+      "name": "ollama",
+      "exe": "/Applications/Ollama.app/Contents/Resources/ollama",
+      "system": "DAIOF",
+      "lanes": [
+        "KNOWLEDGE",
+        "KNOWLEDGE"
+      ],
+      "mission": "operate apo_upstream_macbook_ollama / operate ollama_macbook",
+      "rss_bytes": 8699904,
+      "listening_ports": [
+        11434
+      ]
+    },
+    {
+      "pid": 876,
+      "name": "Pieces OS",
+      "exe": "/Applications/Pieces OS.app/Contents/MacOS/Pieces OS",
+      "system": "DAIOF",
+      "lanes": [
+        "EXECUTION",
+        "EXECUTION"
+      ],
+      "mission": "operate mcp_pieces / operate pieces_mcp",
+      "rss_bytes": 655949824,
+      "listening_ports": [
+        39300,
+        52140
+      ]
+    },
+    {
+      "pid": 2540,
+      "name": "zsh (kiro-cli-term)",
+      "exe": "/Users/andy/.local/bin/zsh (kiro-cli-term)",
+      "system": "DAIOF",
+      "lanes": [
+        "MEMORY"
+      ],
+      "mission": "operate redis_local",
+      "rss_bytes": 3325952,
+      "listening_ports": []
+    },
+    {
+      "pid": 2617,
+      "name": "zsh",
+      "exe": "/bin/zsh",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_2617",
+      "rss_bytes": 606208,
+      "listening_ports": []
+    },
+    {
+      "pid": 2700,
+      "name": "node",
+      "exe": "/opt/homebrew/Cellar/node/26.4.0/bin/node",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_2700",
+      "rss_bytes": 3735552,
+      "listening_ports": []
+    },
+    {
+      "pid": 2707,
+      "name": "node",
+      "exe": "/opt/homebrew/Cellar/node/26.4.0/bin/node",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_2707",
+      "rss_bytes": 3735552,
+      "listening_ports": []
+    },
+    {
+      "pid": 2708,
+      "name": "node",
+      "exe": "/opt/homebrew/Cellar/node/26.4.0/bin/node",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_2708",
+      "rss_bytes": 3735552,
+      "listening_ports": []
+    },
+    {
+      "pid": 2779,
+      "name": "Antigravity IDE Helper (Plugin)",
+      "exe": "/Applications/Antigravity IDE.app/Contents/Frameworks/Antigravity IDE Helper (Plugin).app/Contents/MacOS/Antigravity IDE Helper (Plugin)",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_2779",
+      "rss_bytes": 7880704,
+      "listening_ports": []
+    },
+    {
+      "pid": 3557,
+      "name": "Antigravity IDE Helper (Plugin)",
+      "exe": "/Applications/Antigravity IDE.app/Contents/Frameworks/Antigravity IDE Helper (Plugin).app/Contents/MacOS/Antigravity IDE Helper (Plugin)",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_3557",
+      "rss_bytes": 7962624,
+      "listening_ports": []
+    },
+    {
+      "pid": 3612,
+      "name": "Python",
+      "exe": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_3612",
+      "rss_bytes": 1015808,
+      "listening_ports": [
+        51499
+      ]
+    },
+    {
+      "pid": 3852,
+      "name": "node",
+      "exe": "/Users/andy/.lmstudio/.internal/utils/node",
+      "system": "DAIOF",
+      "lanes": [
+        "KNOWLEDGE",
+        "KNOWLEDGE"
+      ],
+      "mission": "operate apo_upstream_lmstudio / operate lmstudio_bionic_api",
+      "rss_bytes": 11272192,
+      "listening_ports": []
+    },
+    {
+      "pid": 4812,
+      "name": "Python",
+      "exe": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_4812",
+      "rss_bytes": 1966080,
+      "listening_ports": []
+    },
+    {
+      "pid": 4813,
+      "name": "Python",
+      "exe": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_4813",
+      "rss_bytes": 2736128,
+      "listening_ports": []
+    },
+    {
+      "pid": 8954,
+      "name": "lmlink-connector",
+      "exe": "/Users/andy/.lmstudio/extensions/frameworks/lmlink-connector-mac-arm64-apple-metal-advsimd-0.1.0/lmlink-connector",
+      "system": "DAIOF",
+      "lanes": [
+        "KNOWLEDGE",
+        "KNOWLEDGE"
+      ],
+      "mission": "operate apo_upstream_lmstudio / operate lmstudio_bionic_api",
+      "rss_bytes": 22593536,
+      "listening_ports": [
+        50588
+      ]
+    },
+    {
+      "pid": 10069,
+      "name": "node",
+      "exe": "/opt/homebrew/Cellar/node/26.4.0/bin/node",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_10069",
+      "rss_bytes": 5767168,
+      "listening_ports": []
+    },
+    {
+      "pid": 10079,
+      "name": "node",
+      "exe": "/opt/homebrew/Cellar/node/26.4.0/bin/node",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_10079",
+      "rss_bytes": 5767168,
+      "listening_ports": []
+    },
+    {
+      "pid": 10177,
+      "name": "node",
+      "exe": "/opt/homebrew/Cellar/node/26.4.0/bin/node",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_10177",
+      "rss_bytes": 3735552,
+      "listening_ports": []
+    },
+    {
+      "pid": 10195,
+      "name": "node",
+      "exe": "/opt/homebrew/Cellar/node/26.4.0/bin/node",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_10195",
+      "rss_bytes": 3735552,
+      "listening_ports": []
+    },
+    {
+      "pid": 10207,
+      "name": "node",
+      "exe": "/opt/homebrew/Cellar/node/26.4.0/bin/node",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_10207",
+      "rss_bytes": 3735552,
+      "listening_ports": []
+    },
+    {
+      "pid": 11490,
+      "name": "bash",
+      "exe": "/opt/homebrew/Cellar/bash/5.3.9/bin/bash",
+      "system": "DAIOF",
+      "lanes": [
+        "EXECUTION"
+      ],
+      "mission": "operate openapi_tool_quotes",
+      "rss_bytes": 278528,
+      "listening_ports": []
+    },
+    {
+      "pid": 11491,
+      "name": "Python",
+      "exe": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+      "system": "DAIOF",
+      "lanes": [
+        "EXECUTION"
+      ],
+      "mission": "operate openapi_tool_quotes",
+      "rss_bytes": 6586368,
+      "listening_ports": [
+        8906
+      ]
+    },
+    {
+      "pid": 11511,
+      "name": "bash",
+      "exe": "/opt/homebrew/Cellar/bash/5.3.9/bin/bash",
+      "system": "DAIOF",
+      "lanes": [
+        "EXECUTION"
+      ],
+      "mission": "operate openapi_tool_flashcards",
+      "rss_bytes": 278528,
+      "listening_ports": []
+    },
+    {
+      "pid": 11512,
+      "name": "Python",
+      "exe": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+      "system": "DAIOF",
+      "lanes": [
+        "EXECUTION"
+      ],
+      "mission": "operate openapi_tool_flashcards",
+      "rss_bytes": 6668288,
+      "listening_ports": [
+        8907
+      ]
+    },
+    {
+      "pid": 11536,
+      "name": "bash",
+      "exe": "/opt/homebrew/Cellar/bash/5.3.9/bin/bash",
+      "system": "DAIOF",
+      "lanes": [
+        "EXECUTION"
+      ],
+      "mission": "operate openapi_tool_time_ui",
+      "rss_bytes": 278528,
+      "listening_ports": []
+    },
+    {
+      "pid": 11537,
+      "name": "Python",
+      "exe": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+      "system": "DAIOF",
+      "lanes": [
+        "EXECUTION"
+      ],
+      "mission": "operate openapi_tool_time_ui",
+      "rss_bytes": 6635520,
+      "listening_ports": [
+        8908
+      ]
+    },
+    {
+      "pid": 11978,
+      "name": "bash",
+      "exe": "/opt/homebrew/Cellar/bash/5.3.9/bin/bash",
+      "system": "DAIOF",
+      "lanes": [
+        "EXECUTION"
+      ],
+      "mission": "operate openapi_tool_summarizer",
+      "rss_bytes": 278528,
+      "listening_ports": []
+    },
+    {
+      "pid": 11979,
+      "name": "Python",
+      "exe": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+      "system": "DAIOF",
+      "lanes": [
+        "EXECUTION"
+      ],
+      "mission": "operate openapi_tool_summarizer",
+      "rss_bytes": 7372800,
+      "listening_ports": [
+        8909
+      ]
+    },
+    {
+      "pid": 12223,
+      "name": "bash",
+      "exe": "/opt/homebrew/Cellar/bash/5.3.9/bin/bash",
+      "system": "DAIOF",
+      "lanes": [
+        "EXECUTION"
+      ],
+      "mission": "operate openapi_tool_bitcoin",
+      "rss_bytes": 278528,
+      "listening_ports": []
+    },
+    {
+      "pid": 12224,
+      "name": "Python",
+      "exe": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+      "system": "DAIOF",
+      "lanes": [
+        "EXECUTION"
+      ],
+      "mission": "operate openapi_tool_bitcoin",
+      "rss_bytes": 6651904,
+      "listening_ports": [
+        8910
+      ]
+    },
+    {
+      "pid": 15562,
+      "name": "bash",
+      "exe": "/opt/homebrew/Cellar/bash/5.3.9/bin/bash",
+      "system": "DAIOF",
+      "lanes": [
+        "EXECUTION"
+      ],
+      "mission": "operate openapi_tool_sql",
+      "rss_bytes": 278528,
+      "listening_ports": []
+    },
+    {
+      "pid": 15563,
+      "name": "Python",
+      "exe": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+      "system": "DAIOF",
+      "lanes": [
+        "EXECUTION"
+      ],
+      "mission": "operate openapi_tool_sql",
+      "rss_bytes": 7323648,
+      "listening_ports": [
+        8911
+      ]
+    },
+    {
+      "pid": 24403,
+      "name": "bash",
+      "exe": "/opt/homebrew/Cellar/bash/5.3.9/bin/bash",
+      "system": "DAIOF",
+      "lanes": [
+        "COMMUNICATION",
+        "EXECUTION",
+        "KNOWLEDGE",
+        "KNOWLEDGE",
+        "EXECUTION"
+      ],
+      "mission": "operate openapi_tool_slack / operate openapi_tool_google_pse",
+      "rss_bytes": 262144,
+      "listening_ports": []
+    },
+    {
+      "pid": 24404,
+      "name": "bash",
+      "exe": "/opt/homebrew/Cellar/bash/5.3.9/bin/bash",
+      "system": "DAIOF",
+      "lanes": [
+        "COMMUNICATION",
+        "EXECUTION",
+        "KNOWLEDGE",
+        "KNOWLEDGE",
+        "EXECUTION"
+      ],
+      "mission": "operate openapi_tool_slack / operate openapi_tool_google_pse",
+      "rss_bytes": 262144,
+      "listening_ports": []
+    },
+    {
+      "pid": 24405,
+      "name": "Python",
+      "exe": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+      "system": "DAIOF",
+      "lanes": [
+        "COMMUNICATION",
+        "EXECUTION",
+        "KNOWLEDGE"
+      ],
+      "mission": "operate openapi_tool_slack",
+      "rss_bytes": 7258112,
+      "listening_ports": [
+        8913
+      ]
+    },
+    {
+      "pid": 24407,
+      "name": "Python",
+      "exe": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+      "system": "DAIOF",
+      "lanes": [
+        "KNOWLEDGE",
+        "EXECUTION"
+      ],
+      "mission": "operate openapi_tool_google_pse",
+      "rss_bytes": 6701056,
+      "listening_ports": [
+        8914
+      ]
+    },
+    {
+      "pid": 24641,
+      "name": "bash",
+      "exe": "/opt/homebrew/Cellar/bash/5.3.9/bin/bash",
+      "system": "DAIOF",
+      "lanes": [
+        "ROUTING"
+      ],
+      "mission": "operate apo_gateway",
+      "rss_bytes": 278528,
+      "listening_ports": []
+    },
+    {
+      "pid": 24643,
+      "name": "Python",
+      "exe": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+      "system": "DAIOF",
+      "lanes": [
+        "ROUTING"
+      ],
+      "mission": "operate apo_gateway",
+      "rss_bytes": 26656768,
+      "listening_ports": [
+        9011
+      ]
+    },
+    {
+      "pid": 28463,
+      "name": "bash",
+      "exe": "/opt/homebrew/Cellar/bash/5.3.9/bin/bash",
+      "system": "DAIOF",
+      "lanes": [
+        "EXECUTION"
+      ],
+      "mission": "operate openapi_tool_external_rag",
+      "rss_bytes": 278528,
+      "listening_ports": []
+    },
+    {
+      "pid": 28465,
+      "name": "Python",
+      "exe": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+      "system": "DAIOF",
+      "lanes": [
+        "EXECUTION"
+      ],
+      "mission": "operate openapi_tool_external_rag",
+      "rss_bytes": 10125312,
+      "listening_ports": [
+        8912
+      ]
+    },
+    {
+      "pid": 28475,
+      "name": "Python",
+      "exe": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+      "system": "DAIOF",
+      "lanes": [
+        "EXECUTION"
+      ],
+      "mission": "operate openapi_tool_external_rag",
+      "rss_bytes": 1114112,
+      "listening_ports": []
+    },
+    {
+      "pid": 29817,
+      "name": "bash",
+      "exe": "/opt/homebrew/Cellar/bash/5.3.9/bin/bash",
+      "system": "DAIOF",
+      "lanes": [
+        "PLANNING",
+        "EXECUTION"
+      ],
+      "mission": "operate agent_os_dashboard",
+      "rss_bytes": 278528,
+      "listening_ports": []
+    },
+    {
+      "pid": 29819,
+      "name": "Python",
+      "exe": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+      "system": "DAIOF",
+      "lanes": [
+        "PLANNING",
+        "EXECUTION"
+      ],
+      "mission": "operate agent_os_dashboard",
+      "rss_bytes": 6520832,
+      "listening_ports": [
+        8777
+      ]
+    },
+    {
+      "pid": 32831,
+      "name": "Python",
+      "exe": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_32831",
+      "rss_bytes": 3489792,
+      "listening_ports": []
+    },
+    {
+      "pid": 37050,
+      "name": "com.docker.backend",
+      "exe": "/Applications/Docker.app/Contents/MacOS/com.docker.backend",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_37050",
+      "rss_bytes": 28868608,
+      "listening_ports": []
+    },
+    {
+      "pid": 37054,
+      "name": "com.docker.backend",
+      "exe": "/Applications/Docker.app/Contents/MacOS/com.docker.backend",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_37054",
+      "rss_bytes": 91209728,
+      "listening_ports": [
+        12434,
+        62056
+      ]
+    },
+    {
+      "pid": 37055,
+      "name": "com.docker.backend",
+      "exe": "/Applications/Docker.app/Contents/MacOS/com.docker.backend",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_37055",
+      "rss_bytes": 6668288,
+      "listening_ports": []
+    },
+    {
+      "pid": 37163,
+      "name": "com.docker.build",
+      "exe": "/Applications/Docker.app/Contents/MacOS/com.docker.build",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_37163",
+      "rss_bytes": 23527424,
+      "listening_ports": []
+    },
+    {
+      "pid": 37164,
+      "name": "com.docker.virtualization",
+      "exe": "/Applications/Docker.app/Contents/MacOS/com.docker.virtualization",
+      "system": "DAIOF",
+      "lanes": [
+        "INFRASTRUCTURE"
+      ],
+      "mission": "operate docker_desktop",
+      "rss_bytes": 9535488,
+      "listening_ports": []
+    },
+    {
+      "pid": 37180,
+      "name": "Docker Desktop",
+      "exe": "/Applications/Docker.app/Contents/MacOS/Docker Desktop.app/Contents/MacOS/Docker Desktop",
+      "system": "DAIOF",
+      "lanes": [
+        "INFRASTRUCTURE"
+      ],
+      "mission": "operate docker_desktop",
+      "rss_bytes": 73138176,
+      "listening_ports": []
+    },
+    {
+      "pid": 37186,
+      "name": "chrome_crashpad_handler",
+      "exe": "/Applications/Docker.app/Contents/MacOS/Docker Desktop.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Helpers/chrome_crashpad_handler",
+      "system": "DAIOF",
+      "lanes": [
+        "INFRASTRUCTURE"
+      ],
+      "mission": "operate docker_desktop",
+      "rss_bytes": 1736704,
+      "listening_ports": []
+    },
+    {
+      "pid": 37193,
+      "name": "Docker Desktop Helper",
+      "exe": "/Applications/Docker.app/Contents/MacOS/Docker Desktop.app/Contents/Frameworks/Docker Desktop Helper.app/Contents/MacOS/Docker Desktop Helper",
+      "system": "DAIOF",
+      "lanes": [
+        "INFRASTRUCTURE"
+      ],
+      "mission": "operate docker_desktop",
+      "rss_bytes": 11436032,
+      "listening_ports": []
+    },
+    {
+      "pid": 37199,
+      "name": "Docker Desktop Helper",
+      "exe": "/Applications/Docker.app/Contents/MacOS/Docker Desktop.app/Contents/Frameworks/Docker Desktop Helper.app/Contents/MacOS/Docker Desktop Helper",
+      "system": "DAIOF",
+      "lanes": [
+        "INFRASTRUCTURE"
+      ],
+      "mission": "operate docker_desktop",
+      "rss_bytes": 8273920,
+      "listening_ports": []
+    },
+    {
+      "pid": 37265,
+      "name": "Docker Desktop Helper (Renderer)",
+      "exe": "/Applications/Docker.app/Contents/MacOS/Docker Desktop.app/Contents/Frameworks/Docker Desktop Helper (Renderer).app/Contents/MacOS/Docker Desktop Helper (Renderer)",
+      "system": "DAIOF",
+      "lanes": [
+        "INFRASTRUCTURE"
+      ],
+      "mission": "operate docker_desktop",
+      "rss_bytes": 110379008,
+      "listening_ports": []
+    },
+    {
+      "pid": 37293,
+      "name": "docker-agent",
+      "exe": "/Applications/Docker.app/Contents/Resources/cli-plugins/docker-agent",
+      "system": "DAIOF",
+      "lanes": [
+        "KNOWLEDGE",
+        "INFRASTRUCTURE"
+      ],
+      "mission": "operate lmstudio_bionic_api / operate docker_desktop",
+      "rss_bytes": 5013504,
+      "listening_ports": []
+    },
+    {
+      "pid": 39718,
+      "name": "Python",
+      "exe": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+      "system": "DAIOF",
+      "lanes": [
+        "EXECUTION"
+      ],
+      "mission": "operate openapi_tool_time",
+      "rss_bytes": 18235392,
+      "listening_ports": [
+        8901
+      ]
+    },
+    {
+      "pid": 39719,
+      "name": "Python",
+      "exe": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+      "system": "DAIOF",
+      "lanes": [
+        "EXECUTION"
+      ],
+      "mission": "operate openapi_tool_weather",
+      "rss_bytes": 7602176,
+      "listening_ports": [
+        8902
+      ]
+    },
+    {
+      "pid": 39720,
+      "name": "Python",
+      "exe": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+      "system": "DAIOF",
+      "lanes": [
+        "EXECUTION"
+      ],
+      "mission": "operate openapi_tool_filesystem",
+      "rss_bytes": 6553600,
+      "listening_ports": [
+        8903
+      ]
+    },
+    {
+      "pid": 39721,
+      "name": "Python",
+      "exe": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+      "system": "DAIOF",
+      "lanes": [
+        "EXECUTION"
+      ],
+      "mission": "operate openapi_tool_git",
+      "rss_bytes": 6635520,
+      "listening_ports": [
+        8904
+      ]
+    },
+    {
+      "pid": 39722,
+      "name": "Python",
+      "exe": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+      "system": "DAIOF",
+      "lanes": [
+        "EXECUTION"
+      ],
+      "mission": "operate openapi_tool_memory",
+      "rss_bytes": 6537216,
+      "listening_ports": [
+        8905
+      ]
+    },
+    {
+      "pid": 51004,
+      "name": "Bionic",
+      "exe": "/Applications/Bionic.app/Contents/MacOS/Bionic",
+      "system": "DAIOF",
+      "lanes": [
+        "KNOWLEDGE",
+        "EXECUTION"
+      ],
+      "mission": "operate lmstudio_bionic_api / operate bionic_app",
+      "rss_bytes": 54067200,
+      "listening_ports": [
+        52993,
+        1235
+      ]
+    },
+    {
+      "pid": 51007,
+      "name": "chrome_crashpad_handler",
+      "exe": "/Applications/Bionic.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Helpers/chrome_crashpad_handler",
+      "system": "DAIOF",
+      "lanes": [
+        "KNOWLEDGE",
+        "EXECUTION"
+      ],
+      "mission": "operate lmstudio_bionic_api / operate bionic_app",
+      "rss_bytes": 1802240,
+      "listening_ports": []
+    },
+    {
+      "pid": 51010,
+      "name": "Bionic Helper",
+      "exe": "/Applications/Bionic.app/Contents/Frameworks/Bionic Helper.app/Contents/MacOS/Bionic Helper",
+      "system": "DAIOF",
+      "lanes": [
+        "KNOWLEDGE",
+        "EXECUTION"
+      ],
+      "mission": "operate lmstudio_bionic_api / operate bionic_app",
+      "rss_bytes": 11616256,
+      "listening_ports": []
+    },
+    {
+      "pid": 51011,
+      "name": "Bionic Helper",
+      "exe": "/Applications/Bionic.app/Contents/Frameworks/Bionic Helper.app/Contents/MacOS/Bionic Helper",
+      "system": "DAIOF",
+      "lanes": [
+        "KNOWLEDGE",
+        "EXECUTION"
+      ],
+      "mission": "operate lmstudio_bionic_api / operate bionic_app",
+      "rss_bytes": 7340032,
+      "listening_ports": []
+    },
+    {
+      "pid": 51016,
+      "name": "node",
+      "exe": "/Users/andy/.lmstudio/.internal/utils/node",
+      "system": "DAIOF",
+      "lanes": [
+        "KNOWLEDGE",
+        "KNOWLEDGE",
+        "EXECUTION"
+      ],
+      "mission": "operate apo_upstream_lmstudio / operate lmstudio_bionic_api / operate bionic_app",
+      "rss_bytes": 30949376,
+      "listening_ports": []
+    },
+    {
+      "pid": 51072,
+      "name": "Bionic Helper (Renderer)",
+      "exe": "/Applications/Bionic.app/Contents/Frameworks/Bionic Helper (Renderer).app/Contents/MacOS/Bionic Helper (Renderer)",
+      "system": "DAIOF",
+      "lanes": [
+        "KNOWLEDGE",
+        "KNOWLEDGE",
+        "EXECUTION"
+      ],
+      "mission": "operate apo_upstream_lmstudio / operate lmstudio_bionic_api / operate bionic_app",
+      "rss_bytes": 10141696,
+      "listening_ports": []
+    },
+    {
+      "pid": 51110,
+      "name": "lmlink-connector",
+      "exe": "/Users/andy/.lmstudio/extensions/frameworks/lmlink-connector-mac-arm64-apple-metal-advsimd-0.1.0/lmlink-connector",
+      "system": "DAIOF",
+      "lanes": [
+        "KNOWLEDGE",
+        "KNOWLEDGE"
+      ],
+      "mission": "operate apo_upstream_lmstudio / operate lmstudio_bionic_api",
+      "rss_bytes": 21118976,
+      "listening_ports": [
+        42349
+      ]
+    },
+    {
+      "pid": 52858,
+      "name": "node",
+      "exe": "/Users/andy/.lmstudio/.internal/utils/node",
+      "system": "DAIOF",
+      "lanes": [
+        "KNOWLEDGE",
+        "KNOWLEDGE",
+        "EXECUTION"
+      ],
+      "mission": "operate apo_upstream_lmstudio / operate lmstudio_bionic_api / operate bionic_app",
+      "rss_bytes": 19857408,
+      "listening_ports": []
+    },
+    {
+      "pid": 61565,
+      "name": "intelligencecontextd",
+      "exe": "/System/Library/PrivateFrameworks/IntelligenceFlowContextRuntime.framework/Versions/A/intelligencecontextd",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_61565",
+      "rss_bytes": 18661376,
+      "listening_ports": []
+    },
+    {
+      "pid": 63375,
+      "name": "Python",
+      "exe": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+      "system": "DAIOF",
+      "lanes": [
+        "ROUTING"
+      ],
+      "mission": "operate aios_mission_router",
+      "rss_bytes": 4063232,
+      "listening_ports": [
+        9001
+      ]
+    },
+    {
+      "pid": 72140,
+      "name": "ChatGPT for Chrome",
+      "exe": "/Users/andy/.codex/plugins/cache/openai-bundled/chrome/26.721.81911/extension-host/macos/arm64/ChatGPT for Chrome",
+      "system": "DAIOF",
+      "lanes": [
+        "EXECUTION"
+      ],
+      "mission": "operate codex_operator_runtime",
+      "rss_bytes": 2490368,
+      "listening_ports": []
+    },
+    {
+      "pid": 74521,
+      "name": "Python",
+      "exe": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+      "system": "DAIOF",
+      "lanes": [
+        "AUTH"
+      ],
+      "mission": "operate credential_broker",
+      "rss_bytes": 19660800,
+      "listening_ports": [
+        8765
+      ]
+    },
+    {
+      "pid": 77372,
+      "name": "Python",
+      "exe": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_77372",
+      "rss_bytes": 47398912,
+      "listening_ports": []
+    },
+    {
+      "pid": 77373,
+      "name": null,
+      "exe": null,
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_77373",
+      "rss_bytes": 0,
+      "listening_ports": []
+    },
+    {
+      "pid": 77378,
+      "name": "Python",
+      "exe": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+      "system": "DAIOF",
+      "lanes": [
+        "ROUTING",
+        "PLANNING"
+      ],
+      "mission": "operate federation_orchestrator",
+      "rss_bytes": 26345472,
+      "listening_ports": []
+    },
+    {
+      "pid": 1,
+      "name": "launchd",
+      "exe": "/sbin/launchd",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_1",
+      "rss_bytes": 0,
+      "listening_ports": []
+    },
+    {
+      "pid": 640,
+      "name": "Spotlight",
+      "exe": "/System/Library/CoreServices/Spotlight.app/Contents/MacOS/Spotlight",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_640",
+      "rss_bytes": 37240832,
+      "listening_ports": []
+    },
+    {
+      "pid": 1155,
+      "name": "Electron",
+      "exe": "/Applications/Antigravity IDE.app/Contents/MacOS/Electron",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_1155",
+      "rss_bytes": 95895552,
+      "listening_ports": [
+        51017,
+        51018
+      ]
+    },
+    {
+      "pid": 1169,
+      "name": "LM Studio",
+      "exe": "/Applications/LM Studio.app/Contents/MacOS/LM Studio",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_1169",
+      "rss_bytes": 3932160,
+      "listening_ports": [
+        41343,
+        1234
+      ]
+    },
+    {
+      "pid": 2156,
+      "name": "LM Studio Helper (GPU)",
+      "exe": "/Applications/LM Studio.app/Contents/Frameworks/LM Studio Helper (GPU).app/Contents/MacOS/LM Studio Helper (GPU)",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_2156",
+      "rss_bytes": 10567680,
+      "listening_ports": []
+    },
+    {
+      "pid": 2183,
+      "name": "Antigravity IDE Helper (Plugin)",
+      "exe": "/Applications/Antigravity IDE.app/Contents/Frameworks/Antigravity IDE Helper (Plugin).app/Contents/MacOS/Antigravity IDE Helper (Plugin)",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_2183",
+      "rss_bytes": 130940928,
+      "listening_ports": [
+        3001,
+        51283,
+        63434,
+        51221,
+        23333,
+        7779,
+        51161,
+        3001
+      ]
+    },
+    {
+      "pid": 2206,
+      "name": "Antigravity IDE Helper",
+      "exe": "/Applications/Antigravity IDE.app/Contents/Frameworks/Antigravity IDE Helper.app/Contents/MacOS/Antigravity IDE Helper",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_2206",
+      "rss_bytes": 55541760,
+      "listening_ports": []
+    },
+    {
+      "pid": 2359,
+      "name": "Antigravity IDE Helper",
+      "exe": "/Applications/Antigravity IDE.app/Contents/Frameworks/Antigravity IDE Helper.app/Contents/MacOS/Antigravity IDE Helper",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_2359",
+      "rss_bytes": 20938752,
+      "listening_ports": []
+    },
+    {
+      "pid": 2582,
+      "name": "language_server_macos_arm",
+      "exe": "/Applications/Antigravity IDE.app/Contents/Resources/app/extensions/antigravity/bin/language_server_macos_arm",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_2582",
+      "rss_bytes": 32374784,
+      "listening_ports": [
+        51172,
+        51173,
+        51213
+      ]
+    },
+    {
+      "pid": 2691,
+      "name": "remoting_me2me_host",
+      "exe": "/Library/PrivilegedHelperTools/ChromeRemoteDesktopHost.app/Contents/MacOS/remoting_me2me_host",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_2691",
+      "rss_bytes": 13205504,
+      "listening_ports": []
+    },
+    {
+      "pid": 3642,
+      "name": "Python",
+      "exe": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_3642",
+      "rss_bytes": 1015808,
+      "listening_ports": []
+    },
+    {
+      "pid": 3704,
+      "name": "LM Studio Helper",
+      "exe": "/Applications/LM Studio.app/Contents/Frameworks/LM Studio Helper.app/Contents/MacOS/LM Studio Helper",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_3704",
+      "rss_bytes": 4882432,
+      "listening_ports": []
+    },
+    {
+      "pid": 4594,
+      "name": "node",
+      "exe": "/opt/homebrew/Cellar/node@22/22.23.1/bin/node",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_4594",
+      "rss_bytes": 1032192,
+      "listening_ports": []
+    },
+    {
+      "pid": 10064,
+      "name": "devin",
+      "exe": "/Users/andy/.local/share/devin/cli/_versions/3000.2.17/bin/devin",
+      "system": "DAIOF",
+      "lanes": [
+        "MEMORY"
+      ],
+      "mission": "operate redis_local",
+      "rss_bytes": 408092672,
+      "listening_ports": []
+    },
+    {
+      "pid": 10078,
+      "name": "node",
+      "exe": "/opt/homebrew/Cellar/node/26.4.0/bin/node",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_10078",
+      "rss_bytes": 5767168,
+      "listening_ports": []
+    },
+    {
+      "pid": 35803,
+      "name": "Google Chrome",
+      "exe": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_35803",
+      "rss_bytes": 185827328,
+      "listening_ports": []
+    },
+    {
+      "pid": 37183,
+      "name": "com.apple.Virtualization.VirtualMachine",
+      "exe": "/System/Library/Frameworks/Virtualization.framework/Versions/A/XPCServices/com.apple.Virtualization.VirtualMachine.xpc/Contents/MacOS/com.apple.Virtualization.VirtualMachine",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_37183",
+      "rss_bytes": 1118617600,
+      "listening_ports": []
+    },
+    {
+      "pid": 51166,
+      "name": "com.apple.appkit.xpc.openAndSavePanelService",
+      "exe": "/System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_51166",
+      "rss_bytes": 20414464,
+      "listening_ports": []
+    },
+    {
+      "pid": 70972,
+      "name": "siriactionsd",
+      "exe": "/System/Library/PrivateFrameworks/VoiceShortcuts.framework/Versions/A/Support/siriactionsd",
+      "system": "DAIOF",
+      "lanes": [
+        "UNKNOWN"
+      ],
+      "mission": "operate discovered_pid_70972",
+      "rss_bytes": 14909440,
+      "listening_ports": []
+    }
+  ]
+}

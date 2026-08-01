@@ -1,0 +1,15 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "downloads",
+  "started_at": "2026-07-30T08:41:24Z",
+  "completed_at": "2026-07-30T08:41:24Z",
+  "dry_run": false,
+  "include_recyclable": false,
+  "disk_before_mb": 4647,
+  "disk_after_mb": 4647,
+  "freed_mb": 0,
+  "action_count": 0,
+  "error_count": 0,
+  "actions": [],
+  "status": "ok"
+}

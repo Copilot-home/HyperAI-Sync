@@ -1,0 +1,168 @@
+[
+  {
+    "name": "openapi_json_time",
+    "url": "http://127.0.0.1:9011/tools/time/openapi.json",
+    "status": 200,
+    "ok": true
+  },
+  {
+    "name": "openapi_json_weather",
+    "url": "http://127.0.0.1:9011/tools/weather/openapi.json",
+    "status": 200,
+    "ok": true
+  },
+  {
+    "name": "openapi_json_filesystem",
+    "url": "http://127.0.0.1:9011/tools/filesystem/openapi.json",
+    "status": 200,
+    "ok": true
+  },
+  {
+    "name": "openapi_json_git",
+    "url": "http://127.0.0.1:9011/tools/git/openapi.json",
+    "status": 200,
+    "ok": true
+  },
+  {
+    "name": "openapi_json_memory",
+    "url": "http://127.0.0.1:9011/tools/memory/openapi.json",
+    "status": 200,
+    "ok": true
+  },
+  {
+    "name": "openapi_json_quotes",
+    "url": "http://127.0.0.1:9011/tools/quotes/openapi.json",
+    "status": 200,
+    "ok": true
+  },
+  {
+    "name": "openapi_json_flashcards",
+    "url": "http://127.0.0.1:9011/tools/flashcards/openapi.json",
+    "status": 200,
+    "ok": true
+  },
+  {
+    "name": "openapi_json_time_ui",
+    "url": "http://127.0.0.1:9011/tools/time_ui/openapi.json",
+    "status": 200,
+    "ok": true
+  },
+  {
+    "name": "openapi_json_summarizer",
+    "url": "http://127.0.0.1:9011/tools/summarizer/openapi.json",
+    "status": 200,
+    "ok": true
+  },
+  {
+    "name": "openapi_json_bitcoin",
+    "url": "http://127.0.0.1:9011/tools/bitcoin/openapi.json",
+    "status": 200,
+    "ok": true
+  },
+  {
+    "name": "openapi_json_sql",
+    "url": "http://127.0.0.1:9011/tools/sql/openapi.json",
+    "status": 200,
+    "ok": true
+  },
+  {
+    "name": "openapi_json_external_rag",
+    "url": "http://127.0.0.1:9011/tools/external_rag/openapi.json",
+    "status": 200,
+    "ok": true
+  },
+  {
+    "name": "openapi_json_slack",
+    "url": "http://127.0.0.1:9011/tools/slack/openapi.json",
+    "status": 200,
+    "ok": true
+  },
+  {
+    "name": "openapi_json_google_pse",
+    "url": "http://127.0.0.1:9011/tools/google_pse/openapi.json",
+    "status": 200,
+    "ok": true
+  },
+  {
+    "name": "apo_gateway",
+    "url": "http://127.0.0.1:9011/health",
+    "status": 200,
+    "ok": true,
+    "sample": "{\"status\":\"ok\",\"apo\":\"personal\",\"node\":\"Andy-2.local\"}"
+  },
+  {
+    "name": "credential_broker",
+    "url": "http://127.0.0.1:8765/status",
+    "status": 200,
+    "ok": true,
+    "sample": "{\"timestamp\":\"...\",\"env_source\":\"...credentials.env\",\"total_keys\":76,...}"
+  },
+  {
+    "name": "ollama_macbook",
+    "url": "http://127.0.0.1:11434/api/tags",
+    "status": 200,
+    "ok": true
+  },
+  {
+    "name": "lmstudio_bionic_api",
+    "url": "http://127.0.0.1:1235/v1/models",
+    "status": 200,
+    "ok": true,
+    "note": "Bearer token from LMSTUDIO_API_KEY"
+  },
+  {
+    "name": "bionic_app",
+    "url": "http://127.0.0.1:52993",
+    "status": 404,
+    "ok": false,
+    "note": "Bionic Electron app responds on / but returns 404 on unknown paths; app process is alive"
+  },
+  {
+    "name": "pieces_mcp",
+    "url": "http://127.0.0.1:39300",
+    "status": 404,
+    "ok": false,
+    "note": "Pieces server alive but root path 404; SSE at /mcp/sse needs token"
+  },
+  {
+    "name": "finalai",
+    "url": "http://127.0.0.1:50520/v1/models",
+    "status": 200,
+    "ok": true,
+    "note": "Lists finalai-titan; chat backend reachability unknown"
+  },
+  {
+    "name": "agent_os_dashboard",
+    "url": "http://127.0.0.1:8777",
+    "status": 200,
+    "ok": true
+  },
+  {
+    "name": "docker_desktop",
+    "url": "http://127.0.0.1:12434",
+    "status": 200,
+    "ok": true,
+    "note": "Docker Model Runner service running; Docker daemon functional"
+  },
+  {
+    "name": "product_runtime_5000",
+    "url": "http://127.0.0.1:5000",
+    "status": 403,
+    "ok": false,
+    "note": "Port held by ControlCe (stale); hyperai-user-control-system backend not running"
+  },
+  {
+    "name": "product_runtime_4173",
+    "url": "http://127.0.0.1:4173",
+    "status": null,
+    "ok": false,
+    "note": "Connection refused; product frontend unreachable"
+  },
+  {
+    "name": "aios_mission_router_daemon",
+    "url": "http://127.0.0.1:9001/health",
+    "status": 200,
+    "ok": true,
+    "note": "Local root verify.run returns PASS 16/16"
+  }
+]

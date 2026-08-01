@@ -1,0 +1,53 @@
+{
+  "state_name": "LineageBreak",
+  "verdict": "ORIGIN_COORDINATES_UNREACHABLE",
+  "trace": [
+    {
+      "step": "DETECT_DISORIENTATION",
+      "status": "OK",
+      "at": "2026-07-31T11:11:10Z",
+      "details": {
+        "state": "LineageBreak"
+      }
+    },
+    {
+      "step": "SEARCH_FOR_ORIGIN",
+      "status": "OK",
+      "at": "2026-07-31T11:11:10Z",
+      "details": {
+        "hint_keys": [
+          "coordinates",
+          "expected_github_user",
+          "expected_facebook_user"
+        ]
+      }
+    },
+    {
+      "step": "DISCOVER_H_DIGITAL",
+      "status": "UNREACHABLE",
+      "at": "2026-07-31T11:11:10Z",
+      "details": {
+        "github": {
+          "url": "http://127.0.0.1:9999/unreachable",
+          "reachable": false,
+          "error": "ConnectError",
+          "message": "[Errno 61] Connection refused"
+        },
+        "facebook": {
+          "url": "http://127.0.0.1:9999/unreachable",
+          "reachable": false,
+          "error": "ConnectError",
+          "message": "[Errno 61] Connection refused"
+        }
+      }
+    }
+  ],
+  "resolved_identity": {},
+  "minimum_canon": {},
+  "created_value": null,
+  "safe_action": null,
+  "operational_orientation": false,
+  "runtime_verified": false,
+  "conflict": {},
+  "timestamp": "2026-07-31T11:11:10Z"
+}

@@ -1,0 +1,13 @@
+{
+  "generated_at": "2026-07-31T10:56:35.143456Z",
+  "failure_injection": "invalid_lease_id",
+  "result": {
+    "verdict": "INJECTION_DETECTED",
+    "injected_step": "ROUTING",
+    "status_code": 403,
+    "note": "fake lease rejected by gateway"
+  },
+  "retries_total": 0,
+  "retried_failures": [],
+  "observer_verdict": "GUARD_CAUGHT"
+}

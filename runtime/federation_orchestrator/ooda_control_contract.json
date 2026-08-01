@@ -1,14 +1,16 @@
 {
   "schema_version": "2026-04-18.ooda-control-contract.v1",
   "generated_at": "2026-04-18T11:59:47Z",
-  "phase": "telegram_mastery_first",
-  "ooda_mode": "strict_single_packet",
-  "mastery_equation": "locked",
-  "wedge": "giftcard/deal_alert_to_telegram_to_ton",
-  "expansion_allowed": false,
-  "claim_policy": "proof_only",
-  "current_variable": "target_proof",
-  "current_packet": "target_discovery_packet",
-  "blocking_factor": "No proven Telegram target yet; inbound /start or valid send snapshot is still missing.",
-  "success_condition": "counts.proven >= 1 and canonical_target != null"
+  "amended_at": "2026-07-30T17:36:00Z",
+  "amended_by": "creator_instruction_wake_system",
+  "phase": "runtime_surface_expansion",
+  "ooda_mode": "bounded",
+  "mastery_equation": "open",
+  "wedge": "local_tool_surface_completion",
+  "expansion_allowed": true,
+  "claim_policy": "bounded",
+  "current_variable": "tool_surface_proof",
+  "current_packet": "tool_surface_verification_packet",
+  "blocking_factor": "slack and google_pse credentials missing; product runtime is Windows-only and not present on Mac",
+  "success_condition": "all_local_tool_surfaces_return_200 and apo_gateway_healthy"
 }

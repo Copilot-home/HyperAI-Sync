@@ -1,0 +1,34 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "xcode",
+  "started_at": "2026-07-30T16:44:28Z",
+  "completed_at": "2026-07-30T16:44:28Z",
+  "dry_run": true,
+  "include_recyclable": true,
+  "disk_before_mb": 7058,
+  "disk_after_mb": 7058,
+  "freed_mb": 0.0,
+  "action_count": 3,
+  "error_count": 0,
+  "actions": [
+    {
+      "path": "/Users/andy/Library/Developer/Xcode/DerivedData",
+      "status": "missing",
+      "reason": null,
+      "dry_run": true,
+      "estimated_mb": 0.0
+    },
+    {
+      "command": "xcrun simctl list devices unavailable",
+      "rc": 0,
+      "stdout": "== Devices ==\n-- iOS 26.5 --\n",
+      "stderr": "",
+      "status": "dry_run"
+    },
+    {
+      "command": "xcrun simctl erase all",
+      "status": "dry_run"
+    }
+  ],
+  "status": "ok"
+}

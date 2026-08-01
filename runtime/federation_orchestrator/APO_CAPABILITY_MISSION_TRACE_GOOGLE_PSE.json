@@ -1,0 +1,125 @@
+{
+  "execution_id": "apo-capability-mission-trace-google-pse-20260731",
+  "timestamp": "2026-07-31T15:30:00Z",
+  "mission_text": "Query Google PSE through APO Gateway and verify credential-broker lease path",
+  "value_verified": false,
+  "stages": [
+    {
+      "stage": "ROUTE",
+      "actor": "APO Gateway",
+      "surface": "http://127.0.0.1:9011/tools/google_pse/search?q=OpenAI&num=2",
+      "request": {
+        "method": "GET"
+      },
+      "response": {
+        "status_code": 403,
+        "detail": "No Google PSE API key or active broker lease available."
+      },
+      "state": "ROUTABLE_BUT_DENIED"
+    },
+    {
+      "stage": "CREDENTIAL_SELECT",
+      "actor": "google-pse OpenAPI server",
+      "surface": "http://127.0.0.1:8914",
+      "runtime_type": "host uvicorn",
+      "docker": false,
+      "observation": "server finds GOOGLE_API_KEY env unset; falls back to APΩ credential broker",
+      "state": "BROKER_PATH_SELECTED"
+    },
+    {
+      "stage": "LEASE_REQUEST",
+      "actor": "APΩ Credential Broker",
+      "surface": "http://127.0.0.1:8765/capability",
+      "request": {
+        "method": "POST",
+        "body": {
+          "node": "openapi-google-pse-server",
+          "task": "google-pse-search",
+          "provider": "google_pse",
+          "resource": "search",
+          "action": "read",
+          "scope_req": ["read"],
+          "ttl_req": 3600
+        }
+      },
+      "response": {
+        "status_code": 403,
+        "decision": "DENY",
+        "reason": "checks_failed: identity,proof,drift",
+        "checks": {
+          "identity": false,
+          "canon": true,
+          "proof": false,
+          "policy": true,
+          "scope": true,
+          "ttl": true,
+          "rate": true,
+          "drift": false
+        }
+      },
+      "state": "LEASE_DENIED"
+    },
+    {
+      "stage": "AUTHORITY_SCOPE",
+      "actor": "APΩ Credential Broker",
+      "surface": "http://127.0.0.1:8765/status",
+      "observation": "broker has 9 active providers; google_pse is in PRESENT_UNVERIFIED/VALIDATION with valid_key: null, healthy: false, tried: 0",
+      "state": "NO_ACTIVE_KEY_FOR_PROVIDER"
+    },
+    {
+      "stage": "FAILURE_MODE",
+      "actor": "google-pse OpenAPI server",
+      "surface": "http://127.0.0.1:8914/search",
+      "observation": "server translates broker DENY into HTTP 403 to APO Gateway; no external Google API call made",
+      "state": "FAILURE_ISOLATED"
+    }
+  ],
+  "network_edges": [
+    {
+      "source_actor": "Devin",
+      "destination_actor": "APO Gateway",
+      "transport": "HTTP",
+      "address": "127.0.0.1:9011",
+      "request_type": "GET /tools/google_pse/search",
+      "response_type": "403 error",
+      "auth": "none",
+      "verified": true,
+      "value": "route proven; value denied"
+    },
+    {
+      "source_actor": "APO Gateway",
+      "destination_actor": "google-pse OpenAPI server",
+      "transport": "HTTP",
+      "address": "127.0.0.1:8914",
+      "request_type": "GET /search",
+      "response_type": "403 error",
+      "auth": "none",
+      "verified": true,
+      "value": "no lease"
+    },
+    {
+      "source_actor": "google-pse OpenAPI server",
+      "destination_actor": "APΩ Credential Broker",
+      "transport": "HTTP",
+      "address": "127.0.0.1:8765/capability",
+      "request_type": "POST capability lease",
+      "response_type": "DENY",
+      "auth": "none",
+      "verified": true,
+      "value": "authority boundary"
+    }
+  ],
+  "consumed_capabilities": ["google_pse", "credential_broker"],
+  "produced_value": "verified LEASE_GATED_PROXY and AUTHORITY_SCOPE for google_pse; identified broker requires identity/proof/drift and no active key exists for provider",
+  "gross_value_formula": {
+    "VerifiedMissionValue": "none (denied)",
+    "CoordinationGain": "APO route and broker path are wired",
+    "DependencyUnlock": "proves credential broker is gate, not bypass",
+    "FutureComputeSaved": "when key is added, path already verified",
+    "RuntimeCost": "2 HTTP calls",
+    "NetworkFriction": "low",
+    "HumanMicromanagement": "none"
+  },
+  "verdict": "FAILURE_EDGE_VERIFIED",
+  "verdict_reasoning": "The mission did not return Google search results, but it proved the complete lease-gated authority path. APO -> google-pse -> broker -> DENY. The broker has no active key for google_pse and the server's lease request lacks identity/proof/drift evidence. This is a valid failure edge, not a network fault. No credentials appear in this artifact."
+}

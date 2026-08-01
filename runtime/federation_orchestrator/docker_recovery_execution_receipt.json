@@ -1,0 +1,231 @@
+{
+  "execution_id": "docker-recovery-76019c05",
+  "timestamp": "2026-07-31T12:44:59Z",
+  "preserve": {
+    "execution_id": "docker-recovery-76019c05",
+    "timestamp": "2026-07-31T12:44:59Z",
+    "docker_raw_metadata": {
+      "path": "/Users/andy/Library/Containers/com.docker.docker/Data/vms/0/data/Docker.raw",
+      "size_bytes": 494384709632,
+      "sha256_partial": "9e698bdea7afbb188d24951dc19af8f3e61e93a13d0fba2b05e5a0cd30aa07d1"
+    },
+    "preserved_artifacts": [
+      {
+        "name": "docker_current_frame_manifest.json",
+        "sha256": "5244f714a18e162df3f5397be527be0135885641cc83aab2486bff57814ab881",
+        "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/docker_recovery_preserved_frame_docker-recovery-76019c05/docker_current_frame_manifest.json"
+      },
+      {
+        "name": "docker_plane_state_matrix.json",
+        "sha256": "9bdd885d4223d208d396837d73d7978d132a1dcc9b42bd8c4c326b8fccd7be2a",
+        "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/docker_recovery_preserved_frame_docker-recovery-76019c05/docker_plane_state_matrix.json"
+      },
+      {
+        "name": "docker_same_frame_evidence_ledger.json",
+        "sha256": "ef5896dff3e9bcd3be3479065d0e83808ebfc3102cf870fbe0ba5d11d3a4ec84",
+        "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/docker_recovery_preserved_frame_docker-recovery-76019c05/docker_same_frame_evidence_ledger.json"
+      },
+      {
+        "name": "docker_hypothesis_discrimination_matrix.json",
+        "sha256": "0d87fd4de7af8ee48bf6330854418ac70a5e060cdfff8538ad6c81955aa34bf1",
+        "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/docker_recovery_preserved_frame_docker-recovery-76019c05/docker_hypothesis_discrimination_matrix.json"
+      },
+      {
+        "name": "docker_incident_sequence.json",
+        "sha256": "13240dddd7830f72ab4c428fcc52f7e85ba4a7badf3a4a9a86fabcd41ac9056a",
+        "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/docker_recovery_preserved_frame_docker-recovery-76019c05/docker_incident_sequence.json"
+      }
+    ]
+  },
+  "reclaim": {
+    "free_before_mb": 2484.7,
+    "free_after_mb": 2511.7,
+    "freed_mb": 27.0,
+    "ledger": [
+      {
+        "path": "/Users/andy/Library/Caches/CloudKit",
+        "kind": "CloudKit cache",
+        "classification": "rebuildable",
+        "size_before": "4.9M",
+        "deleted": true,
+        "timestamp": "2026-07-31T12:44:59Z"
+      },
+      {
+        "path": "/Users/andy/Library/Caches/Google",
+        "kind": "Google app cache",
+        "classification": "rebuildable",
+        "size_before": "560K",
+        "deleted": true,
+        "timestamp": "2026-07-31T12:44:59Z"
+      },
+      {
+        "path": "/Users/andy/Library/Caches/Homebrew",
+        "kind": "Homebrew cache",
+        "classification": "rebuildable",
+        "size_before": "22M",
+        "deleted": true,
+        "timestamp": "2026-07-31T12:44:59Z"
+      },
+      {
+        "path": "/Users/andy/Library/Caches/com.apple.SpeechRecognitionCore",
+        "kind": "Speech recognition cache",
+        "classification": "rebuildable",
+        "size_before": "3.6M",
+        "deleted": true,
+        "timestamp": "2026-07-31T12:44:59Z"
+      }
+    ]
+  },
+  "restart": {
+    "trace": [
+      {
+        "step": "PRE_KILL_STALE_DOCKER",
+        "pids": [
+          37050
+        ],
+        "at": "2026-07-31T12:44:59Z"
+      },
+      {
+        "step": "PRE_QUIT_PROCESS_COUNT",
+        "count": 2,
+        "at": "2026-07-31T12:44:59Z"
+      },
+      {
+        "step": "QUIT_DOCKER",
+        "result": {
+          "exit_code": null,
+          "stdout": "",
+          "stderr": "TIMEOUT",
+          "timeout": true,
+          "elapsed_sec": 19.985
+        },
+        "at": "2026-07-31T12:45:19Z"
+      },
+      {
+        "step": "SIGTERM_STALE_DOCKER",
+        "count": 1,
+        "at": "2026-07-31T12:45:40Z"
+      },
+      {
+        "step": "SIGKILL_STALE_DOCKER",
+        "pids": [
+          37050
+        ],
+        "at": "2026-07-31T12:46:21Z"
+      },
+      {
+        "step": "POST_QUIT_PROCESS_COUNT",
+        "count": 1,
+        "at": "2026-07-31T12:46:24Z"
+      },
+      {
+        "step": "START_DOCKER",
+        "result": {
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "timeout": false,
+          "elapsed_sec": 0.106
+        },
+        "at": "2026-07-31T12:46:25Z"
+      },
+      {
+        "step": "BOOT_WAIT",
+        "backend": true,
+        "virtualization": true,
+        "waited_sec": 3.0,
+        "at": "2026-07-31T12:46:28Z"
+      }
+    ],
+    "backend": true,
+    "virtualization": true
+  },
+  "validation": {
+    "socket_ping": {
+      "responsive": true,
+      "code": "200",
+      "evidence": {
+        "exit_code": 0,
+        "stdout": "200 0.007835",
+        "stderr": "",
+        "timeout": false,
+        "elapsed_sec": 0.07
+      }
+    },
+    "docker_version": {
+      "exit_code": 0,
+      "stdout": "Client:\n Version:           29.6.2\n API version:       1.55\n Go version:        go1.26.5\n Git commit:        dfc4efb\n Built:             Thu Jul 16 16:11:17 2026\n OS/Arch:           darwin/arm64\n Context:           desktop-linux\n\nServer: Docker Desktop 4.84.0 (234817)\n Engine:\n  Version:          29.6.2\n  API version:      1.55 (minimum version 1.40)\n  Go version:       go1.26.5\n  Git commit:       3d80467\n  Built:            Thu Jul 16 16:13:03 2026\n  OS/Arch:          linux/arm64\n  Experimental:     false\n containerd:\n  Version:          v2.2.5\n  GitCommit:        e53c7c1516c3b2bff98eb76f1f4117477e6f4e66\n runc:\n  Version:          1.3.6\n  GitCommit:        v1.3.6-0-g491b69ba\n docker-init:\n  Version:          0.19.0\n  GitCommit:        de40ad0\n",
+      "stderr": "",
+      "timeout": false,
+      "elapsed_sec": 0.065
+    },
+    "docker_info": {
+      "exit_code": 0,
+      "stdout": "Client:\n Version:    29.6.2\n Context:    desktop-linux\n Debug Mode: false\n Plugins:\n  agent: Docker AI Agent Runner (Docker Inc.)\n    Version:  v1.111.0\n    Path:     /Users/andy/.docker/cli-plugins/docker-agent\n  ai: Docker AI Agent - Ask Gordon (Docker Inc.)\n    Version:  v1.27.0\n    Path:     /Users/andy/.docker/cli-plugins/docker-ai\n  buildx: Docker Buildx (Docker Inc.)\n    Version:  v0.35.0-desktop.2\n    Path:     /Users/andy/.docker/cli-plugins/docker-buildx\n  compose: Docker Compose (Docker Inc.)\n    Version:  v5.3.1\n    Path:     /Users/andy/.docker/cli-plugins/docker-compose\n  debug: Get a shell into any image or container (Docker Inc.)\n    Version:  0.0.47\n    Path:     /Users/andy/.docker/cli-plugins/docker-debug\n  desktop: Docker Desktop commands (Docker Inc.)\n    Version:  v0.4.3\n    Path:     /Users/andy/.docker/cli-plugins/docker-desktop\n  dhi: CLI for managing Docker Hardened Images (Docker Inc.)\n    Version:  v0.0.7\n    Path:     /Users/andy/.docker/cli-plugins/docker-dhi\n  extension: Manages Docker extensions (Docker Inc.)\n    Version:  v0.2.31\n    Path:     /Users/andy/.docker/cli-plugins/docker-extension\n  init: Creates Docker-related starter files for your project (Docker Inc.)\n    Version:  v1.4.0\n    Path:     /Users/andy/.docker/cli-plugins/docker-init\n  mcp: Docker MCP Plugin (Docker Inc.)\n    Version:  v0.43.3\n    Path:     /Users/andy/.docker/cli-plugins/docker-mcp\n  model: Docker Model Runner (Docker Inc.)\n    Version:  v1.2.6\n    Path:     /Users/andy/.docker/cli-plugins/docker-model\n  offload: Docker Offload (Docker Inc.)\n    Version:  v0.6.9\n    Path:     /Users/andy/.docker/cli-plugins/docker-offload\n  pass: Docker Pass Secrets Manager Plugin (beta) (Docker Inc.)\n    Version:  v0.2.0\n    Path:     /Users/andy/.docker/cli-plugins/docker-pass\n  sandbox: \"docker sandbox\" is deprecated, use Docker Sandboxes instead (Docker Inc.)\n    Version:  v0.13.0\n    Path:     /Users/andy/.docker/cli-plugins/docker-sandbox\n  scout: Docker Scout (Docker Inc.)\n    Version:  v1.23.1\n    Path:     /Users/andy/.docker/cli-plugins/docker-scout\n\nServer:\n Containers: 4\n  Running: 4\n  Paused: 0\n  Stopped: 0\n Images: 4\n Server Version: 29.6.2\n Storage Driver: overlayfs\n  driver-type: io.containerd.snapshotter.v1\n Logging Driver: json-file\n Cgroup Driver: cgroupfs\n Cgroup Version: 2\n Plugins:\n  Volume: local\n  Network: bridge host ipvlan macvlan null overlay\n  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog\n CDI spec directories:\n  /etc/cdi\n  /var/run/cdi\n Discovered Devices:\n  cdi: docker.com/gpu=webgpu\n Swarm: inactive\n Runtimes: io.containerd.runc.v2 runc\n Default Runtime: runc\n Init Binary: docker-init\n containerd version: e53c7c1516c3b2bff98eb76f1f4117477e6f4e66\n runc version: v1.3.6-0-g491b69ba\n init version: de40ad0\n Security Options:\n  seccomp\n   Profile: builtin\n  cgroupns\n Kernel Version: 6.12.76-linuxkit\n Operating System: Docker Desktop\n OSType: linux\n Architecture: aarch64\n CPUs: 10\n Total Memory: 7.75GiB\n Name: docker-desktop\n ID: b3f637da-a758-4a55-a02d-e42d80a4cd42\n Docker Root Dir: /var/lib/docker\n Debug Mode: false\n HTTP Proxy: http.docker.internal:3128\n HTTPS Proxy: http.docker.internal:3128\n No Proxy: hubproxy.docker.internal\n Labels:\n  com.docker.desktop.address=unix:///Users/andy/Library/Containers/com.docker.docker/Data/docker-cli.sock\n Experimental: false\n Insecure Registries:\n  hubproxy.docker.internal:5555\n  127.0.0.0/8\n  ::1/128\n Live Restore Enabled: false\n Firewall Backend: iptables\n\n",
+      "stderr": "",
+      "timeout": false,
+      "elapsed_sec": 0.893
+    },
+    "docker_ps": {
+      "exit_code": 0,
+      "stdout": "CONTAINER ID   IMAGE                                              COMMAND                  CREATED       STATUS                   PORTS                       NAMES\n35a145fdc08f   docker/desktop-cloud-provider-kind:v0.6.0          \"/bin/cloud-provider…\"   4 days ago    Up 5 seconds             2375-2376/tcp               kind-cloud-provider\nc2297c91a7cc   docker/desktop-containerd-registry-mirror:v0.0.4   \"/bin/registry\"          4 days ago    Up 5 seconds (healthy)                               kind-registry-mirror\n8e24611954af   kindest/node:v1.36.1                               \"/usr/local/bin/entr…\"   4 days ago    Up 5 seconds             127.0.0.1:62056->6443/tcp   desktop-control-plane\n1c74c307a859   9b50c0a0c9a0                                       \"/usr/local/bin/runt…\"   4 weeks ago   Up 5 seconds                                         prizz_deep-dive-desktop-extension-service\n",
+      "stderr": "",
+      "timeout": false,
+      "elapsed_sec": 0.037
+    },
+    "container_run": {
+      "exit_code": 0,
+      "stdout": "container-runtime-ok\n",
+      "stderr": "Unable to find image 'alpine:latest' locally\nlatest: Pulling from library/alpine\ndf8ce8557afe: Download complete\naa3ec251a2db: Download complete\nDigest: sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b\nStatus: Downloaded newer image for alpine:latest\n",
+      "timeout": false,
+      "elapsed_sec": 8.912
+    },
+    "container_write": {
+      "exit_code": 0,
+      "stdout": "test\n",
+      "stderr": "",
+      "timeout": false,
+      "elapsed_sec": 0.218
+    },
+    "container_network": {
+      "exit_code": 0,
+      "stdout": "PING 8.8.8.8 (8.8.8.8): 56 data bytes\n64 bytes from 8.8.8.8: seq=0 ttl=63 time=34.067 ms\n\n--- 8.8.8.8 ping statistics ---\n1 packets transmitted, 1 packets received, 0% packet loss\nround-trip min/avg/max = 34.067/34.067/34.067 ms\n",
+      "stderr": "",
+      "timeout": false,
+      "elapsed_sec": 0.23
+    },
+    "buildx": {
+      "exit_code": 0,
+      "stdout": "NAME/NODE              DRIVER/ENDPOINT                          STATUS    BUILDKIT   PLATFORMS\ncloud-sowhat1989-kkk   cloud                                                         \n \\_ linux-arm64         \\_ cloud://sowhat1989/kkk_linux-arm64   running   v0.30.0    linux/arm64*, linux/arm (+2)\n \\_ linux-amd64         \\_ cloud://sowhat1989/kkk_linux-amd64   running   v0.30.0    linux/amd64* (+4), linux/386\ndefault                docker                                                        \n \\_ default             \\_ default                              running   v0.31.2    linux/amd64 (+2), linux/arm64, linux/ppc64le, linux/s390x, (2 more)\ndesktop-linux*         docker                                                        \n \\_ desktop-linux       \\_ desktop-linux                        running   v0.31.2    linux/amd64 (+2), linux/arm64, linux/ppc64le, linux/s390x, (2 more)\n",
+      "stderr": "",
+      "timeout": false,
+      "elapsed_sec": 2.517
+    },
+    "port_forward": {
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "nc: unrecognized option: q\nBusyBox v1.37.0 (2026-01-10 15:38:28 UTC) multi-call binary.\n\nUsage: nc [OPTIONS] HOST PORT  - connect\nnc [OPTIONS] -l -p PORT [HOST] [PORT]  - listen\n\n\t-e PROG\tRun PROG after connect (must be last)\n\t-l\tListen mode, for inbound connects\n\t-lk\tWith -e, provides persistent server\n\t-p PORT\tLocal port\n\t-s ADDR\tLocal address\n\t-w SEC\tTimeout for connects and final net reads\n\t-i SEC\tDelay interval for lines sent\n\t-n\tDon't do DNS resolution\n\t-u\tUDP mode\n\t-b\tAllow broadcasts\n\t-v\tVerbose\n\t-o FILE\tHex dump traffic\n\t-z\tZero-I/O mode (scanning)\n",
+      "timeout": false,
+      "elapsed_sec": 0.752
+    },
+    "port_probe": {
+      "exit_code": 7,
+      "stdout": "000",
+      "stderr": "",
+      "timeout": false,
+      "elapsed_sec": 0.055
+    },
+    "new_io_errors": []
+  },
+  "verdict": "DOCKER_DESKTOP_OPERATIONAL_VERIFIED",
+  "hypothesis_update": {
+    "H1_HOST_RESOURCE_PRESSURE": {
+      "confidence_after_reclaim": "PARTIAL",
+      "evidence": "reclaimed 27.0 MB; free after 2511.7 MB"
+    },
+    "H2_VM_INTERNAL_STATE_FAILURE": {
+      "confidence_after_restart": "RECOVERED_CONSEQUENCE",
+      "evidence": "no new I/O errors in current window"
+    }
+  }
+}

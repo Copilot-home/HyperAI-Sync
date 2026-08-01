@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-07-31T00:00:28Z",
+  "observer": "aios_auth_mission.py",
+  "keepalive": false,
+  "restarts_on_crash": false,
+  "timeout_seconds": 120,
+  "max_retries": 0,
+  "backoff": null,
+  "run_lock": null,
+  "measured_run": {
+    "pid": 82576,
+    "returncode": 0,
+    "wall_time_seconds": 1.166,
+    "sampling_note": "process exits on completion; only wall time and returncode sampled in one-shot mode",
+    "stdout": "auth mission verified=True",
+    "stderr": ""
+  },
+  "spin_risk_assessment": "LOW for one-shot; MEDIUM if run in tight loop without backoff",
+  "parasitic_workload_risk": "observer is a single Python process that calls external services; not a daemon; risk limited to execution window"
+}

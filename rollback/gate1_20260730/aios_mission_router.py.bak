@@ -1,0 +1,1635 @@
+#!/usr/bin/env python3
+"""AIOS mission router bridge.
+
+Read-first, mutation-gated bridge for:
+MISSION -> SKILL_DISCOVERY -> SKILL_SELECTION -> SKILL_EXECUTION -> VERIFY -> CONTINUE_QUEUE.
+"""
+
+from __future__ import annotations
+
+import argparse
+import ast
+import datetime as dt
+import hashlib
+import json
+import re
+import sqlite3
+import sys
+from pathlib import Path
+from typing import Any
+
+HOME = Path("/Users/andy")
+CANON_PATH = HOME / ".codex" / "AGENTS.md"
+CON_MEMORY_DB = HOME / ".con-memory" / "conversations.db"
+HYPERAI_SYNC = HOME / "HyperAI-Sync"
+HYPERAI_MEMORY = HYPERAI_SYNC / "memory"
+FEDERATION_ORCH = HYPERAI_SYNC / "runtime" / "federation_orchestrator"
+QUEUE_PATH = HYPERAI_MEMORY / "runtime_execution_todo.md"
+ORCHESTRATOR_SKILL = HOME / ".agents" / "skills" / "hyperai-runtime-orchestrator" / "SKILL.md"
+SYSTEM_SCAN_SKILL = HOME / ".agents" / "skills" / "system-scan-ctx-gam" / "SKILL.md"
+CODEX_CONFIG = HOME / ".codex" / "config.toml"
+MRP_REGISTRY_PATH = Path(__file__).resolve().with_name("mrp_registry.json")
+ROUTER_ROOT = Path(__file__).resolve().parent
+
+APPROVED_STATES = {"approved", "explicit"}
+READ_ONLY_ACTIONS = {"read", "read-only", "read_only", "inspect", "plan", "verify", "audit"}
+PMP_MUTATION_SCOPES = {"TL", "queue", "evidence_log"}
+
+SPEC_ANCHORS = (
+    ROUTER_ROOT / "spec" / "AIOS_COGNITIVE_OS_SPEC_v1.md",
+    ROUTER_ROOT / "spec" / "KERNEL_INVARIANTS.md",
+    ROUTER_ROOT / "spec" / "PERMISSIONED_EVOLUTION_ENGINE.md",
+    ROUTER_ROOT / "spec" / "SYSTEM_MAPPING.md",
+    ROUTER_ROOT / "spec" / "GAM_SURREALDB_PROJECTION.md",
+    ROUTER_ROOT / "reference" / "crp.schema.json",
+    ROUTER_ROOT / "reference" / "crp_core.py",
+    ROUTER_ROOT / "reference" / "evidence_logger.py",
+    ROUTER_ROOT / "reference" / "surreal_aios_graph.py",
+    ROUTER_ROOT / "netlify" / "functions" / "aios-status.mts",
+    ROUTER_ROOT / "netlify" / "functions" / "aios-crp-validate.mts",
+    ROUTER_ROOT / "netlify" / "functions" / "aios-protected-evidence.mts",
+)
+
+SQLITE_IDENTIFIER = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
+
+RFC_ANCHORS = tuple(
+    ROUTER_ROOT / "spec" / "rfc" / f"RFC-000{index}-{name}.md"
+    for index, name in (
+        (1, "CRP"),
+        (2, "MRP"),
+        (3, "RBE"),
+        (4, "OODA"),
+        (5, "EEC"),
+        (6, "PMP"),
+        (7, "DAK"),
+    )
+)
+
+SECRET_NAME_MARKERS = (
+    "auth.json",
+    ".env",
+    "token",
+    "secret",
+    "apikey",
+    "api_key",
+    "credential",
+    "keychain",
+)
+
+RUNTIME_KEYWORDS = (
+    "aios",
+    "hyperai",
+    "codex",
+    "runtime",
+    "orchestrat",
+    "skill",
+    "memory",
+    "canon",
+    "mission",
+    "router",
+    "mcp",
+    "launchd",
+    "tcc",
+    "codesign",
+    "signing",
+    "xattr",
+    "quarantine",
+    "app-server",
+    "macos",
+)
+
+CRP_CONSTRAINTS = (
+    "NoInference",
+    "NoProbabilisticCompletion",
+    "NoFill",
+    "FragmentIntegrity",
+    "TreeValidity",
+    "SlotPreservation",
+    "LogicalValidity",
+    "StructuralEntailmentOnly",
+)
+
+CRP_PIPELINE = (
+    "Seed",
+    "FragmentExtraction",
+    "TechnicalReconstruction",
+    "LogicalInference",
+    "RelationalLinking",
+    "TreeConstruction",
+    "PreserveEmptySlots",
+    "DriftPrevention",
+)
+
+CRP_LOCAL_ANCHORS = {
+    "CS": ("context_seed",),
+    "FRAG": (
+        "canon",
+        "con_memory",
+        "hyperai_memory_anchors",
+        "runtime_registries",
+        "orchestrator_skill",
+        "system_scan_skill",
+    ),
+    "TS": ("crp_tree",),
+    "ES": ("empty_slots",),
+    "TL": (
+        "runtime_policy",
+        "router_cli",
+        "mcp_server",
+        "queue",
+    ),
+    "RBR": (
+        "routing_policy",
+        "degradation_policy",
+        "mission_authority_policy",
+    ),
+    "LI": ("entailed_conclusions_only",),
+}
+
+CRP_MODULE_ANCHORS = {
+    "CRP_FULL_BOOTSTRAP_RUNTIME": (),
+    "CRP_RUNTIME_SCHEDULER": (),
+    "CRP_RUNTIME_FSM_UPDATE": (),
+    "CRP_MEMORY_ENRICHMENT_CYCLE": (HYPERAI_MEMORY / "AIOS_UNIFIED_MEMORY_BOUND_WORKFLOW.md",),
+    "CRP_MEMORY_ENRICHMENT_GRAPH_FLOW": (),
+    "CRP_PARALLEL_PIPELINE_DIRECTIVE": (),
+    "CRP_RUNTIME_INTROSPECTION_LAYER": (
+        HOME / "workbench" / "dr_protocol" / "core" / "orchestrator.py",
+    ),
+    "CRP_SELF_CONSISTENCY_CHECKER": (),
+    "CRP_DEBUGGER": (),
+    "CRP_TIME_TRAVEL_REPLAY_ENGINE": (),
+    "CRP_DETERMINISTIC_SNAPSHOT_SYSTEM": (),
+    "CRP_MEMORY_COMPACTION_ENGINE": (),
+    "CRP_SEMANTIC_INTEGRITY_AUDITOR": (),
+    "CRP_RUNTIME_VISUALIZER": (),
+    "CRP_EXECUTION_TIMELINE": (),
+    "CRP_META_ORCHESTRATOR": (FEDERATION_ORCH / "meta_orchestration_policy.json",),
+    "CRP_AUTONOMOUS_MODE": (),
+    "CRP_SELF_HEALING_ENGINE": (
+        HOME / "workbench" / ".vscode" / "hyperai1989" / "continuous_self_healing.py",
+    ),
+    "RBR_default": (),
+}
+
+MRP_CONSTRAINTS = (
+    "NoAutoBinding",
+    "NoAutoDiscovery",
+    "NoInferenceBasedModuleSelection",
+    "NoFill",
+    "DeterministicBinding",
+    "RegistryDriven",
+    "CRPPrimary",
+)
+
+MRP_PIPELINE = (
+    "RegistryLoad",
+    "AnchorResolution",
+    "ModuleBinding",
+    "CRPIntegration",
+)
+
+RBE_CONSTRAINTS = (
+    "NoAutoExecution",
+    "NoAutoScheduling",
+    "NoCRPMutation",
+    "NoInferenceBasedExecution",
+    "ExplicitInvocationOnly",
+    "DeterministicExecutionPath",
+    "RBRAuthority",
+    "TLOnlyMutation",
+)
+
+RBE_PIPELINE = (
+    "ExecutionRequest",
+    "AuthorityCheck",
+    "ExecutionContextBuild",
+    "ModuleExecution",
+)
+
+EEC_INVARIANTS = (
+    "NoFabrication",
+    "NoGuessing",
+    "NoUnauthorizedAction",
+    "NoAutoRun",
+    "NoAutoMutation",
+    "NoAutoFill",
+    "NoAutoEscalation",
+    "NoInvariantBreak",
+    "NoAuthorityOverreach",
+    "PermissionBeforeAction",
+)
+
+PMP_INVARIANTS = (
+    "ExplicitApprovalRequired",
+    "MutationScopeDeclared",
+    "TLOnlyByDefault",
+    "NoFRAGMutation",
+    "NoTSMutation",
+    "NoESFill",
+    "RollbackRequired",
+    "EvidenceRequired",
+)
+
+DAK_INVARIANTS = (
+    "AutonomyWithinAuthority",
+    "SelfProtectionAllowed",
+    "CreatorProtectionRequired",
+    "NoOverreach",
+    "OODARequired",
+    "EECBeforeAction",
+    "PMPBeforeMutation",
+)
+
+
+def now_iso() -> str:
+    return dt.datetime.now(dt.UTC).replace(microsecond=0).isoformat()
+
+
+def sha256_file(path: Path) -> str | None:
+    if not path.is_file() or is_secret_path(path):
+        return None
+    h = hashlib.sha256()
+    with path.open("rb") as f:
+        for chunk in iter(lambda: f.read(1024 * 1024), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def is_secret_path(path: Path) -> bool:
+    lower = str(path).lower()
+    return any(marker in lower for marker in SECRET_NAME_MARKERS)
+
+
+def file_summary(path: Path, *, include_head: bool = False) -> dict[str, Any]:
+    exists = path.exists()
+    summary: dict[str, Any] = {
+        "path": str(path),
+        "exists": exists,
+        "kind": "missing",
+        "secret_safe": not is_secret_path(path),
+    }
+    if not exists:
+        return summary
+    stat = path.stat()
+    summary.update(
+        {
+            "kind": "dir" if path.is_dir() else "file",
+            "size_bytes": stat.st_size,
+            "mtime": dt.datetime.fromtimestamp(stat.st_mtime, dt.UTC)
+            .replace(microsecond=0)
+            .isoformat(),
+        }
+    )
+    if path.is_file() and not is_secret_path(path):
+        summary["sha256"] = sha256_file(path)
+        if include_head:
+            lines = path.read_text(errors="replace").splitlines()
+            summary["line_count"] = len(lines)
+            summary["head"] = lines[:6]
+    return summary
+
+
+def sqlite_table_counts(db_path: Path) -> dict[str, Any]:
+    if not db_path.exists():
+        return {"path": str(db_path), "exists": False}
+    result: dict[str, Any] = {"path": str(db_path), "exists": True, "tables": {}}
+    uri = f"file:{db_path}?mode=ro"
+    conn = None
+    try:
+        conn = sqlite3.connect(uri, uri=True)
+        rows = conn.execute(
+            "SELECT name FROM sqlite_master WHERE type='table' ORDER BY name"
+        ).fetchall()
+        for (name,) in rows:
+            if name.startswith("sqlite_"):
+                continue
+            if not SQLITE_IDENTIFIER.fullmatch(name):
+                result["tables"][name] = "SKIPPED_UNSAFE_IDENTIFIER"
+                continue
+            count = conn.execute(f'SELECT COUNT(*) FROM "{name}"').fetchone()[0]  # nosec B608
+            result["tables"][name] = count
+    except sqlite3.Error as exc:
+        result["error"] = f"{type(exc).__name__}: {exc}"
+    finally:
+        if conn is not None:
+            conn.close()
+    return result
+
+
+def list_anchor_files(
+    root: Path, patterns: tuple[str, ...], limit: int = 40
+) -> list[dict[str, Any]]:
+    if not root.exists():
+        return []
+    matches: list[Path] = []
+    for pattern in patterns:
+        matches.extend(root.glob(pattern))
+    unique = sorted({p for p in matches if p.is_file() and not is_secret_path(p)})
+    return [file_summary(p) for p in unique[:limit]]
+
+
+def memory_load() -> dict[str, Any]:
+    return {
+        "loaded_at": now_iso(),
+        "canon": file_summary(CANON_PATH, include_head=True),
+        "cwd_context_expected": "/Users/andy/Documents/MacOSMac/AGENTS.md",
+        "con_memory": sqlite_table_counts(CON_MEMORY_DB),
+        "hyperai_sync": {
+            "root": file_summary(HYPERAI_SYNC),
+            "memory_anchors": list_anchor_files(
+                HYPERAI_MEMORY,
+                (
+                    "AIOS_*MEMORY*.md",
+                    "AIOS_*WORKFLOW*.md",
+                    "AIOS_*RUNTIME*.md",
+                    "runtime_execution_todo.md",
+                ),
+                limit=24,
+            ),
+            "runtime_registries": list_anchor_files(
+                FEDERATION_ORCH,
+                ("*.json", "*.md", "*.toml"),
+                limit=32,
+            ),
+        },
+        "runtime_policy": {
+            "codex_config": file_summary(CODEX_CONFIG),
+            "orchestrator_skill": file_summary(ORCHESTRATOR_SKILL),
+            "system_scan_skill": file_summary(SYSTEM_SCAN_SKILL),
+            "queue": file_summary(QUEUE_PATH, include_head=True),
+        },
+    }
+
+
+def route_skills(
+    mission_text: str,
+    target_surface: str,
+    risk_class: str,
+    requested_action: str,
+    approval_state: str,
+) -> dict[str, Any]:
+    haystack = " ".join([mission_text, target_surface, risk_class, requested_action]).lower()
+    is_runtime = any(keyword in haystack for keyword in RUNTIME_KEYWORDS)
+    mutation_requested = requested_action.lower() not in READ_ONLY_ACTIONS
+    selected = []
+    candidates = [
+        {
+            "skill": "hyperai-runtime-orchestrator",
+            "path": str(ORCHESTRATOR_SKILL),
+            "selected": is_runtime,
+            "reason": "AIOS/Codex/runtime/control mission requires mission router before shell.",
+            "fallback_allowed": False,
+        },
+        {
+            "skill": "system-scan-ctx-gam",
+            "path": str(SYSTEM_SCAN_SKILL),
+            "selected": is_runtime,
+            "mode": "runtime-context",
+            "reason": "Runtime-context evidence and gate mapping are required.",
+            "fallback_allowed": True,
+        },
+    ]
+    if is_runtime:
+        selected = [c for c in candidates if c["selected"]]
+        allowed_surface = [
+            "skill",
+            "memory_read",
+            "router_cli",
+            "mcp_tool",
+            "read_only_shell_after_route",
+        ]
+    else:
+        allowed_surface = ["skill", "memory_read", "read_only_shell_after_route"]
+
+    if mutation_requested and approval_state.lower() not in APPROVED_STATES:
+        allowed_surface = [s for s in allowed_surface if not s.startswith("mutation")]
+        execution_state = "MUTATION_DEFERRED_APPROVAL_REQUIRED"
+    else:
+        execution_state = "READ_ONLY_OR_APPROVED"
+
+    return {
+        "routed_at": now_iso(),
+        "mission_kind": "AIOS_RUNTIME_OR_CONTROL" if is_runtime else "GENERAL",
+        "skill_routing_table": candidates,
+        "selected_skills": selected,
+        "allowed_execution_surface": allowed_surface,
+        "shell_fallback": {
+            "status": "BLOCKED_UNTIL_ROUTED" if is_runtime else "ALLOWED_AFTER_SCOPE",
+            "reason": "Raw shell cannot precede skill discovery for AIOS runtime missions.",
+        },
+        "execution_state": execution_state,
+    }
+
+
+def mission_plan(
+    mission_text: str,
+    target_surface: str,
+    risk_class: str,
+    requested_action: str,
+    approval_state: str,
+) -> dict[str, Any]:
+    memory = memory_load()
+    route = route_skills(mission_text, target_surface, risk_class, requested_action, approval_state)
+    mission_packet = {
+        "mission_text": mission_text,
+        "target_surface": target_surface,
+        "risk_class": risk_class,
+        "requested_action": requested_action,
+        "approval_state": approval_state,
+        "created_at": now_iso(),
+    }
+    action_packet = {
+        "allowed_execution_surface": route["allowed_execution_surface"],
+        "default_sequence": [
+            "load_memory_context",
+            "select_skills",
+            "execute_selected_skill_workflow",
+            "run_read_only_verification",
+            "emit_queue_update",
+        ],
+        "blocked_without_approval": [
+            "queue_write",
+            "codesign",
+            "launchd_reload",
+            "xattr_mutation",
+            "TCC_reset_or_write",
+            "install_or_build",
+            "app_launch",
+        ],
+    }
+    verify_packet = {
+        "checks": [
+            "hyperai-runtime-orchestrator skill exists",
+            "system-scan-ctx-gam skill exists",
+            "Canon source is readable without secret output",
+            ".con-memory table counts are readable",
+            "HyperAI-Sync memory/runtime anchors are present",
+            "shell fallback is blocked until route exists for AIOS runtime missions",
+        ],
+        "command": [
+            sys.executable,
+            str(Path(__file__).resolve()),
+            "verify.run",
+        ],
+    }
+    rollback_packet = {
+        "needed_for_read_only": False,
+        "mutation_surfaces": {
+            "queue_append": "Remove appended section from runtime_execution_todo.md if approved write is wrong.",
+            "mcp_config": "Remove AIOS_MISSION_ROUTER block from /Users/andy/.codex/config.toml.",
+            "client_shell": "Delete /Users/andy/workbench/aios-runtime-orchestrator-client if abandoned.",
+        },
+    }
+    queue_update = {
+        "status": "EMITTED_NOT_WRITTEN",
+        "queue_path": str(QUEUE_PATH),
+        "item": {
+            "created_at": now_iso(),
+            "mission": mission_text,
+            "target_surface": target_surface,
+            "next": "Run verify packet, then request approval before queue mutation or OS-control mutation.",
+        },
+        "write_requires_approval": True,
+    }
+    return {
+        "mission_packet": mission_packet,
+        "skill_routing_table": route["skill_routing_table"],
+        "memory_context": memory,
+        "action_packet": action_packet,
+        "verify_packet": verify_packet,
+        "rollback_packet": rollback_packet,
+        "queue_update": queue_update,
+    }
+
+
+def _anchor_exists(path: Path) -> bool:
+    return path.exists() and not is_secret_path(path)
+
+
+def _module_status(paths: tuple[Path, ...]) -> dict[str, Any]:
+    present = [str(path) for path in paths if _anchor_exists(path)]
+    if present:
+        return {"status": "ANCHOR_PRESENT", "anchors": present}
+    return {"status": "EMPTY_SLOT", "anchors": [], "value": "⊥"}
+
+
+def crp_map(context_seed: str, approval_state: str = "not_approved") -> dict[str, Any]:
+    """Map the provided CRP protocol to concrete AIOS runtime anchors.
+
+    This function intentionally preserves empty slots. It records only physical
+    anchors and direct structural entailments from those anchors.
+    """
+    seed_loaded = bool(context_seed.strip())
+    memory = memory_load()
+    route = route_skills(
+        "CONTEXT RESTORATION PROTOCOL mapping for AIOS runtime",
+        "memory_runtime",
+        "medium",
+        "inspect",
+        approval_state,
+    )
+    module_map = {name: _module_status(paths) for name, paths in CRP_MODULE_ANCHORS.items()}
+    empty_slots = [name for name, info in module_map.items() if info["status"] == "EMPTY_SLOT"]
+    anchored_modules = [
+        name for name, info in module_map.items() if info["status"] == "ANCHOR_PRESENT"
+    ]
+
+    frag_sources = {
+        "CS": {
+            "status": "LOADED" if seed_loaded else "EMPTY",
+            "content_handling": "hash/count only; no expansion beyond input",
+            "sha256": (
+                hashlib.sha256(context_seed.encode("utf-8")).hexdigest() if seed_loaded else None
+            ),
+            "size_chars": len(context_seed),
+        },
+        "CANON": memory["canon"],
+        "CON_MEMORY": memory["con_memory"],
+        "HYPERAI_MEMORY": {
+            "anchor_count": len(memory["hyperai_sync"]["memory_anchors"]),
+            "anchors": memory["hyperai_sync"]["memory_anchors"],
+        },
+        "RUNTIME_REGISTRY": {
+            "anchor_count": len(memory["hyperai_sync"]["runtime_registries"]),
+            "anchors": memory["hyperai_sync"]["runtime_registries"],
+        },
+    }
+
+    entailed = []
+    if seed_loaded:
+        entailed.append("SeedLoaded")
+    if memory["con_memory"].get("exists") or memory["hyperai_sync"]["memory_anchors"]:
+        entailed.append("FragmentsAvailable")
+    if route["selected_skills"]:
+        entailed.append("SkillRouteAvailable")
+    if empty_slots:
+        entailed.append("SlotsPreserved")
+    if anchored_modules:
+        entailed.append("TechnicalAnchorsPresent")
+
+    tree_nodes = [
+        {"id": "ROOT", "type": "ROOT"},
+        {"id": "CONTINUITY", "type": "CONTINUITY"},
+        {"id": "FRAGMENTS", "type": "FRAG"},
+        {"id": "LINKAGE", "type": "LINKAGE"},
+        {"id": "TL", "type": "TL"},
+        {"id": "ES", "type": "ES"},
+    ]
+    tree_edges = [
+        ["ROOT", "CONTINUITY"],
+        ["ROOT", "FRAGMENTS"],
+        ["FRAGMENTS", "LINKAGE"],
+        ["LINKAGE", "TL"],
+        ["TL", "ES"],
+    ]
+
+    layer_execution = [
+        {
+            "layer": "L1_SEED_INITIALIZATION",
+            "operation": "Load CS, register continuation trigger",
+            "result": "SeedLoaded" if seed_loaded else "BLOCKED_EMPTY_CS",
+            "constraints": ["NoInference", "NoProbabilisticCompletion", "NoFill"],
+        },
+        {
+            "layer": "L2_TECHNICAL_RECONSTRUCTION",
+            "operation": "Map fragments to existing local anchors",
+            "result": "TLClassified",
+            "technical_layers": CRP_LOCAL_ANCHORS,
+        },
+        {
+            "layer": "L3_LOGICAL_INFERENCE",
+            "operation": "Add only entailed conclusions",
+            "result": entailed,
+            "rejected": "probabilistic/incomplete inference",
+        },
+        {
+            "layer": "L4_FRAGMENT_LINKING_TREE_CONSTRUCTION",
+            "operation": "Build acyclic ROOT->CONTINUITY/FRAGMENTS->LINKAGE->TL->ES tree",
+            "result": "TreeWellFormed",
+            "empty_slots": empty_slots,
+        },
+    ]
+
+    correctness = {
+        "TreeWellFormed": True,
+        "SlotsPreserved": True,
+        "NoInference": True,
+        "NoProbabilisticCompletion": True,
+        "LogicalInferenceOnly": True,
+        "TLClassified": True,
+        "RBRRespected": True,
+        "closed": seed_loaded,
+    }
+
+    return {
+        "mapped_at": now_iso(),
+        "approval_state": approval_state,
+        "protocol": "CRP",
+        "semantic_domain": ["CS", "FRAG", "TS", "ES", "TL", "RBR", "LI"],
+        "constraints": list(CRP_CONSTRAINTS),
+        "pipeline": list(CRP_PIPELINE),
+        "fragments": frag_sources,
+        "skill_route": route,
+        "layer_execution": layer_execution,
+        "module_anchor_map": module_map,
+        "tree_structure": {"nodes": tree_nodes, "edges": tree_edges, "acyclic": True},
+        "empty_slots": empty_slots,
+        "logical_inference": entailed,
+        "hoare_status": {
+            "SeedInit": "PASS" if seed_loaded else "BLOCKED_EMPTY_CS",
+            "TechReconstruct": "PASS",
+            "LogicalInfer": "PASS",
+            "FragLinkTree": "PASS",
+        },
+        "correctness_condition": correctness,
+        "queue_update": {
+            "status": "EMITTED_NOT_WRITTEN",
+            "write_requires_approval": True,
+            "item": {
+                "mission": "CRP mapping materialized",
+                "next": "Promote only anchored CRP modules after verification; preserve empty slots.",
+            },
+        },
+    }
+
+
+def _load_mrp_registry(registry_path: Path = MRP_REGISTRY_PATH) -> dict[str, Any]:
+    if is_secret_path(registry_path):
+        raise ValueError("MRP registry path is secret-bearing")
+    if not registry_path.exists():
+        raise FileNotFoundError(str(registry_path))
+    data = json.loads(registry_path.read_text(encoding="utf-8"))
+    modules = data.get("modules")
+    if not isinstance(modules, list):
+        raise ValueError("MRP registry must contain a modules list")
+    required = {
+        "module_id",
+        "anchor",
+        "callable",
+        "domain",
+        "constraints",
+        "rbr_rules",
+        "version",
+        "health",
+    }
+    for index, module in enumerate(modules):
+        missing = required - set(module)
+        if missing:
+            raise ValueError(f"MRP module[{index}] missing keys: {sorted(missing)}")
+    return data
+
+
+def _callable_status(callable_ref: Any) -> dict[str, Any]:
+    if callable_ref in (None, "", "⊥"):
+        return {"callable": "⊥", "status": "EMPTY_SLOT", "exists": False}
+    path = Path(str(callable_ref))
+    if is_secret_path(path):
+        return {"callable": str(path), "status": "BLOCKED_SECRET_PATH", "exists": False}
+    return {
+        "callable": str(path),
+        "status": "CALLABLE_PRESENT" if path.exists() else "CALLABLE_MISSING",
+        "exists": path.exists(),
+    }
+
+
+def mrp_map(
+    context_seed: str,
+    approval_state: str = "not_approved",
+    registry_path: Path = MRP_REGISTRY_PATH,
+) -> dict[str, Any]:
+    """Bind CRP fragments to explicit runtime module registry entries."""
+    crp = crp_map(context_seed, approval_state)
+    registry = _load_mrp_registry(registry_path)
+    modules = registry["modules"]
+
+    anchor_counts: dict[str, int] = {}
+    for module in modules:
+        anchor_key = json.dumps(module["anchor"], ensure_ascii=False, sort_keys=True)
+        anchor_counts[anchor_key] = anchor_counts.get(anchor_key, 0) + 1
+
+    bindings = []
+    duplicate_anchors = []
+    rbr_default = set(registry.get("rbr_default", []))
+    rbr_violations = []
+    for module in modules:
+        anchor = module["anchor"]
+        anchor_key = json.dumps(anchor, ensure_ascii=False, sort_keys=True)
+        if anchor_counts[anchor_key] > 1:
+            duplicate_anchors.append({"module_id": module["module_id"], "anchor": anchor})
+        callable_state = _callable_status(module["callable"])
+        rbr_rules = set(module.get("rbr_rules", []))
+        if not rbr_rules.issubset(rbr_default):
+            rbr_violations.append(
+                {
+                    "module_id": module["module_id"],
+                    "rules": sorted(rbr_rules),
+                    "rbr_default": sorted(rbr_default),
+                }
+            )
+
+        if callable_state["status"] == "CALLABLE_PRESENT":
+            bind_status = "BOUND"
+        elif callable_state["status"] == "EMPTY_SLOT":
+            bind_status = "MB_EMPTY_SLOT"
+        else:
+            bind_status = "UNBOUND_ANCHOR_PRESENT_CALLABLE_MISSING"
+
+        bindings.append(
+            {
+                "module_id": module["module_id"],
+                "anchor": anchor,
+                "callable": callable_state["callable"],
+                "domain": module["domain"],
+                "constraints": module["constraints"],
+                "rbr_rules": module["rbr_rules"],
+                "version": module["version"],
+                "health": {
+                    "declared": module["health"],
+                    "observed": callable_state["status"],
+                    "exists": callable_state["exists"],
+                },
+                "binding_status": bind_status,
+            }
+        )
+
+    deterministic = not duplicate_anchors
+    rbr_consistent = not rbr_violations
+    empty_slots = [b["module_id"] for b in bindings if b["binding_status"] == "MB_EMPTY_SLOT"]
+    bound = [b["module_id"] for b in bindings if b["binding_status"] == "BOUND"]
+
+    return {
+        "mapped_at": now_iso(),
+        "protocol": "MRP",
+        "registry_path": str(registry_path),
+        "registry_version": registry.get("version"),
+        "constraints": list(MRP_CONSTRAINTS),
+        "pipeline": list(MRP_PIPELINE),
+        "registry_load": {
+            "status": "MR_loaded",
+            "module_count": len(modules),
+            "no_auto_discovery": True,
+        },
+        "crp_reference": {
+            "protocol": crp["protocol"],
+            "correctness_condition": crp["correctness_condition"],
+            "empty_slots": crp["empty_slots"],
+        },
+        "anchor_resolution": {
+            "status": "AnchorMap",
+            "deterministic": deterministic,
+            "duplicate_anchors": duplicate_anchors,
+        },
+        "module_bindings": bindings,
+        "crp_integration": {
+            "status": "CRP_Extended" if deterministic and rbr_consistent else "BLOCKED",
+            "crp_unchanged": True,
+            "modules_extend": "TL_only",
+            "frag_ts_es_mutated": False,
+            "bound_modules": bound,
+            "empty_slots": empty_slots,
+        },
+        "hoare_status": {
+            "RegistryLoad": "PASS",
+            "AnchorResolve": "PASS" if deterministic else "FAIL_DUPLICATE_ANCHOR",
+            "ModuleBind": "PASS" if deterministic else "FAIL_DUPLICATE_ANCHOR",
+            "CRPExtend": "PASS" if deterministic and rbr_consistent else "FAIL",
+        },
+        "correctness_condition": {
+            "NoFill": True,
+            "Determinism": deterministic,
+            "CRPInvariants": crp["correctness_condition"],
+            "SlotPreservation": True,
+            "RBRConsistency": rbr_consistent,
+            "RBRViolations": rbr_violations,
+            "closed": deterministic and rbr_consistent,
+        },
+        "queue_update": {
+            "status": "EMITTED_NOT_WRITTEN",
+            "write_requires_approval": True,
+            "item": {
+                "mission": "MRP registry binding materialized",
+                "next": "Add or correct explicit module anchors in mrp_registry.json; do not auto-discover.",
+            },
+        },
+    }
+
+
+def _find_binding(mrp: dict[str, Any], module_id: str) -> dict[str, Any] | None:
+    for binding in mrp["module_bindings"]:
+        if binding["module_id"] == module_id:
+            return binding
+    return None
+
+
+def _approval_allows_execution(binding: dict[str, Any], intent: str, approval_state: str) -> bool:
+    approval = approval_state.lower()
+    constraints = {str(item).lower() for item in binding.get("constraints", [])}
+    read_only_declared = "read_only" in constraints
+    requires_approval = (
+        "mutation_gated" in constraints
+        or "approval_required_for_execution" in constraints
+        or "approval_required_for_mutation" in constraints
+        or not read_only_declared
+    )
+    if not requires_approval:
+        return True
+    return approval in APPROVED_STATES
+
+
+def _deterministic_module_result(binding: dict[str, Any]) -> dict[str, Any]:
+    path = Path(binding["callable"])
+    if is_secret_path(path):
+        return {"status": "DENIED_SECRET_PATH", "mutation_performed": False}
+    summary = file_summary(path, include_head=False)
+    suffix = path.suffix.lower()
+    result: dict[str, Any] = {
+        "status": "EXECUTED_READ_ONLY_INSPECTION",
+        "module_id": binding["module_id"],
+        "callable": str(path),
+        "callable_summary": summary,
+        "mutation_performed": False,
+        "state_delta": {"TL": ["execution_evidence"], "FRAG": [], "TS": [], "ES": []},
+    }
+    if suffix in {".md", ".txt"}:
+        lines = path.read_text(errors="replace").splitlines()
+        headings = [line for line in lines if line.lstrip().startswith("#")]
+        result["document_probe"] = {
+            "line_count": len(lines),
+            "heading_count": len(headings),
+            "headings_head": headings[:8],
+        }
+    elif suffix == ".json":
+        data = json.loads(path.read_text(encoding="utf-8"))
+        result["json_probe"] = {
+            "top_level_type": type(data).__name__,
+            "top_level_keys": sorted(data)[:24] if isinstance(data, dict) else [],
+            "item_count": len(data) if isinstance(data, (dict, list)) else None,
+        }
+    elif suffix == ".py":
+        source = path.read_text(errors="replace")
+        tree = ast.parse(source)
+        imports = []
+        functions = []
+        classes = []
+        for node in ast.walk(tree):
+            if isinstance(node, ast.Import):
+                imports.extend(alias.name for alias in node.names)
+            elif isinstance(node, ast.ImportFrom):
+                imports.append(node.module or "")
+            elif isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
+                functions.append(node.name)
+            elif isinstance(node, ast.ClassDef):
+                classes.append(node.name)
+        result["python_static_probe"] = {
+            "syntax": "OK",
+            "import_count": len(imports),
+            "function_count": len(functions),
+            "class_count": len(classes),
+            "functions_head": functions[:12],
+            "classes_head": classes[:12],
+        }
+    else:
+        result["generic_probe"] = {"file_kind": suffix or "unknown"}
+    return result
+
+
+def _hash_jsonable(payload: Any) -> str:
+    raw = json.dumps(payload, ensure_ascii=False, sort_keys=True, default=str).encode("utf-8")
+    return hashlib.sha256(raw).hexdigest()
+
+
+def rbe_execute(
+    module_id: str,
+    intent: str,
+    context_seed: str,
+    approval_state: str = "not_approved",
+    registry_path: Path = MRP_REGISTRY_PATH,
+) -> dict[str, Any]:
+    """Execute a bound MRP module through an RBR-governed read-first gate."""
+    execution_request = {
+        "module_id": module_id,
+        "intent": intent,
+        "context_seed_sha256": (
+            hashlib.sha256(context_seed.encode("utf-8")).hexdigest() if context_seed else None
+        ),
+        "context_seed_size_chars": len(context_seed),
+        "approval_state": approval_state,
+        "explicit_invocation": True,
+    }
+    ex_valid = bool(module_id.strip() and intent.strip())
+    if not ex_valid:
+        return {
+            "protocol": "RBE",
+            "execution_request": execution_request,
+            "status": "DENIED_INVALID_EX",
+            "hoare_status": {"ExecRequest": "FAIL", "AuthorityCheck": "DENIED"},
+            "mutation_performed": False,
+        }
+
+    mrp = mrp_map(context_seed, approval_state, registry_path)
+    binding = _find_binding(mrp, module_id)
+    if binding is None:
+        authority = {
+            "authorized": False,
+            "reason": "MODULE_ID_NOT_IN_REGISTRY",
+            "no_fallback": True,
+        }
+    elif binding["binding_status"] != "BOUND":
+        authority = {
+            "authorized": False,
+            "reason": binding["binding_status"],
+            "no_fallback": True,
+        }
+    elif intent not in binding.get("rbr_rules", []):
+        authority = {
+            "authorized": False,
+            "reason": "INTENT_NOT_IN_RBR_RULES",
+            "allowed_intents": binding.get("rbr_rules", []),
+            "no_fallback": True,
+        }
+    elif not _approval_allows_execution(binding, intent, approval_state):
+        authority = {
+            "authorized": False,
+            "reason": "APPROVAL_REQUIRED",
+            "approval_state": approval_state,
+            "no_auto_approval": True,
+        }
+    else:
+        authority = {
+            "authorized": True,
+            "reason": "RBR_AUTHORIZED",
+            "allowed_intents": binding.get("rbr_rules", []),
+        }
+
+    execution_context = {
+        "status": "EXC_BUILT" if authority["authorized"] else "NOT_BUILT",
+        "crp_state_mutation": False,
+        "frag_mutation": False,
+        "ts_mutation": False,
+        "es_fill": False,
+        "tl_extension": ["execution_evidence"] if authority["authorized"] else [],
+    }
+    if authority["authorized"] and binding is not None:
+        result = _deterministic_module_result(binding)
+    else:
+        result = {
+            "status": "DENIED_NOT_EXECUTED",
+            "reason": authority["reason"],
+            "mutation_performed": False,
+            "state_delta": {"TL": [], "FRAG": [], "TS": [], "ES": []},
+        }
+
+    evidence_chain = {
+        "registry": file_summary(registry_path),
+        "callable": file_summary(Path(binding["callable"])) if binding else None,
+        "mrp_result_hash": _hash_jsonable(
+            {
+                "registry_version": mrp["registry_version"],
+                "bindings": mrp["module_bindings"],
+                "correctness": mrp["correctness_condition"],
+            }
+        ),
+        "rbe_result_hash": _hash_jsonable(result),
+        "cross_checks": [
+            {
+                "name": "module_id_bound_by_mrp",
+                "passed": bool(binding and binding["binding_status"] == "BOUND"),
+            },
+            {
+                "name": "intent_authorized_by_rbr",
+                "passed": bool(binding and intent in binding.get("rbr_rules", [])),
+            },
+            {
+                "name": "no_crp_state_mutation",
+                "passed": execution_context["crp_state_mutation"] is False,
+            },
+            {
+                "name": "no_empty_slot_fill",
+                "passed": execution_context["es_fill"] is False,
+            },
+            {
+                "name": "no_queue_write",
+                "passed": True,
+            },
+            {
+                "name": "no_os_mutation",
+                "passed": result.get("mutation_performed") is False,
+            },
+        ],
+    }
+    correctness = {
+        "CRPInvariants": mrp["correctness_condition"]["CRPInvariants"],
+        "MRPInvariants": mrp["correctness_condition"],
+        "Determinism": True,
+        "NoFill": True,
+        "NoAutoExecution": True,
+        "RBRConsistency": mrp["correctness_condition"]["RBRConsistency"],
+        "TLOnlyMutation": result.get("state_delta", {}).get("FRAG") == []
+        and result.get("state_delta", {}).get("TS") == []
+        and result.get("state_delta", {}).get("ES") == [],
+        "closed": authority["authorized"]
+        and result.get("mutation_performed") is False
+        and mrp["correctness_condition"]["closed"],
+    }
+    return {
+        "mapped_at": now_iso(),
+        "protocol": "RBE",
+        "constraints": list(RBE_CONSTRAINTS),
+        "pipeline": list(RBE_PIPELINE),
+        "execution_request": execution_request,
+        "authority_check": authority,
+        "execution_context": execution_context,
+        "execution_result": result,
+        "evidence_chain": evidence_chain,
+        "hoare_status": {
+            "ExecRequest": "PASS",
+            "AuthorityCheck": "AUTHORIZED" if authority["authorized"] else "DENIED",
+            "BuildContext": "PASS" if authority["authorized"] else "SKIP_DENIED",
+            "RunModule": "PASS" if result["status"].startswith("EXECUTED") else "SKIP_DENIED",
+        },
+        "correctness_condition": correctness,
+        "queue_update": {
+            "status": "EMITTED_NOT_WRITTEN",
+            "write_requires_approval": True,
+            "item": {
+                "mission": "RBE execution evidence emitted",
+                "module_id": module_id,
+                "intent": intent,
+                "next": "Persist evidence only after queue/log write approval.",
+            },
+        },
+    }
+
+
+def ooda_run(
+    task: str,
+    approval_state: str = "not_approved",
+    registry_path: Path = MRP_REGISTRY_PATH,
+) -> dict[str, Any]:
+    """Run one deterministic read-only OODA cycle from explicit OODA anchors."""
+    workflow_exec = rbe_execute(
+        "OODA_AUTONOMOUS_WORKFLOW",
+        "ooda_loop",
+        task,
+        approval_state,
+        registry_path,
+    )
+    contract_exec = rbe_execute(
+        "OODA_CONTROL_CONTRACT",
+        "ooda_loop",
+        task,
+        approval_state,
+        registry_path,
+    )
+
+    contract_path = FEDERATION_ORCH / "ooda_control_contract.json"
+    contract = json.loads(contract_path.read_text(encoding="utf-8"))
+    observe = {
+        "task_sha256": hashlib.sha256(task.encode("utf-8")).hexdigest(),
+        "task_size_chars": len(task),
+        "workflow_anchor": workflow_exec["execution_result"].get("callable_summary", {}),
+        "contract_anchor": contract_exec["execution_result"].get("callable_summary", {}),
+        "contract_phase": contract.get("phase"),
+        "ooda_mode": contract.get("ooda_mode"),
+    }
+    orient = {
+        "mode": contract.get("ooda_mode"),
+        "current_packet": contract.get("current_packet"),
+        "current_variable": contract.get("current_variable"),
+        "expansion_allowed": contract.get("expansion_allowed"),
+        "claim_policy": contract.get("claim_policy"),
+        "blocking_factor": contract.get("blocking_factor"),
+    }
+    if contract.get("blocking_factor"):
+        decision = {
+            "decision": "DEFER_ACT_MUTATION",
+            "reason": "blocking_factor_present",
+            "allowed_action": "emit_read_only_proof",
+        }
+    else:
+        decision = {
+            "decision": "ALLOW_READ_ONLY_ACT",
+            "reason": "no_blocking_factor",
+            "allowed_action": "emit_read_only_proof",
+        }
+    act = {
+        "status": "READ_ONLY_PROOF_EMITTED",
+        "mutation_performed": False,
+        "queue_write": False,
+        "os_mutation": False,
+        "module_exec": {
+            "workflow": workflow_exec["hoare_status"],
+            "contract": contract_exec["hoare_status"],
+        },
+    }
+    cross_checks = [
+        {
+            "name": "workflow_bound_and_executed",
+            "passed": workflow_exec["hoare_status"]["RunModule"] == "PASS",
+        },
+        {
+            "name": "contract_bound_and_executed",
+            "passed": contract_exec["hoare_status"]["RunModule"] == "PASS",
+        },
+        {
+            "name": "no_auto_schedule",
+            "passed": True,
+        },
+        {
+            "name": "no_mutation",
+            "passed": not act["mutation_performed"],
+        },
+        {
+            "name": "blocking_factor_preserved",
+            "passed": contract.get("blocking_factor") == orient["blocking_factor"],
+        },
+    ]
+    return {
+        "mapped_at": now_iso(),
+        "protocol": "OODA",
+        "pipeline": ["Observe", "Orient", "Decide", "Act"],
+        "task": {
+            "sha256": observe["task_sha256"],
+            "size_chars": observe["task_size_chars"],
+        },
+        "observe": observe,
+        "orient": orient,
+        "decide": decision,
+        "act": act,
+        "evidence_chain": {
+            "workflow_rbe_hash": workflow_exec["evidence_chain"]["rbe_result_hash"],
+            "contract_rbe_hash": contract_exec["evidence_chain"]["rbe_result_hash"],
+            "contract_sha256": sha256_file(contract_path),
+            "cross_checks": cross_checks,
+        },
+        "correctness_condition": {
+            "CRP_MRP_RBE_preserved": workflow_exec["correctness_condition"]["closed"]
+            and contract_exec["correctness_condition"]["closed"],
+            "OODA_cycle_closed": all(check["passed"] for check in cross_checks),
+            "NoFill": True,
+            "NoAutoSchedule": True,
+            "NoMutation": True,
+            "closed": all(check["passed"] for check in cross_checks),
+        },
+        "queue_update": {
+            "status": "EMITTED_NOT_WRITTEN",
+            "write_requires_approval": True,
+            "item": {
+                "mission": "OODA read-only cycle executed",
+                "next": "Resolve blocking factor or approve queue/evidence persistence.",
+            },
+        },
+    }
+
+
+def eec_check(
+    action: str,
+    target: str,
+    risk_class: str = "unknown",
+    approval_state: str = "not_approved",
+    requested_mutation: bool = False,
+) -> dict[str, Any]:
+    """Ethical Execution Contract check for every runtime action."""
+    approval_ok = approval_state.lower() in APPROVED_STATES
+    mutation_allowed = (not requested_mutation) or approval_ok
+    invariants = {
+        "NoFabrication": True,
+        "NoGuessing": True,
+        "NoUnauthorizedAction": mutation_allowed,
+        "NoAutoRun": True,
+        "NoAutoMutation": mutation_allowed,
+        "NoAutoFill": True,
+        "NoAutoEscalation": True,
+        "NoInvariantBreak": True,
+        "NoAuthorityOverreach": mutation_allowed,
+        "PermissionBeforeAction": mutation_allowed,
+    }
+    violations = [name for name, passed in invariants.items() if not passed]
+    return {
+        "checked_at": now_iso(),
+        "protocol": "EEC",
+        "contract": "Ethical Execution Contract",
+        "canonical_invariants": list(EEC_INVARIANTS),
+        "action": action,
+        "target": target,
+        "risk_class": risk_class,
+        "approval_state": approval_state,
+        "requested_mutation": requested_mutation,
+        "invariants": invariants,
+        "violations": violations,
+        "decision": "ALLOW" if not violations else "DENY",
+        "reason": "all_invariants_hold" if not violations else "ethical_invariant_violation",
+        "correctness_condition": {
+            "NoFill": True,
+            "NoMutationWithoutPermission": mutation_allowed,
+            "NoOverreach": mutation_allowed,
+            "closed": not violations,
+        },
+    }
+
+
+def pmp_request(
+    mutation: str,
+    target: str,
+    scope: str,
+    approval_state: str = "not_approved",
+    rollback_plan: str = "",
+    evidence_plan: str = "",
+) -> dict[str, Any]:
+    """Permissioned Mutation Protocol gate. Does not perform mutation."""
+    approval_ok = approval_state.lower() in APPROVED_STATES
+    scope_ok = scope in PMP_MUTATION_SCOPES
+    rollback_ok = bool(rollback_plan.strip())
+    evidence_ok = bool(evidence_plan.strip())
+    eec = eec_check(
+        mutation,
+        target,
+        "mutation",
+        approval_state,
+        requested_mutation=True,
+    )
+    checks = {
+        "ExplicitApprovalRequired": approval_ok,
+        "MutationScopeDeclared": bool(scope.strip()),
+        "TLOnlyByDefault": scope_ok,
+        "NoFRAGMutation": scope != "FRAG",
+        "NoTSMutation": scope != "TS",
+        "NoESFill": scope != "ES",
+        "RollbackRequired": rollback_ok,
+        "EvidenceRequired": evidence_ok,
+        "EECAllows": eec["decision"] == "ALLOW",
+    }
+    denied = [name for name, passed in checks.items() if not passed]
+    return {
+        "checked_at": now_iso(),
+        "protocol": "PMP",
+        "contract": "Permissioned Mutation Protocol",
+        "canonical_invariants": list(PMP_INVARIANTS),
+        "mutation": mutation,
+        "target": target,
+        "scope": scope,
+        "approval_state": approval_state,
+        "rollback_plan_present": rollback_ok,
+        "evidence_plan_present": evidence_ok,
+        "checks": checks,
+        "decision": "ALLOW_MUTATION" if not denied else "DENY_MUTATION",
+        "denied_by": denied,
+        "mutation_performed": False,
+        "eec": eec,
+        "correctness_condition": {
+            "NoFill": True,
+            "PermissionedMutation": not denied,
+            "CRPStatePreserved": True,
+            "closed": not denied,
+        },
+    }
+
+
+def dak_run(
+    task: str,
+    requested_action: str = "read_only",
+    approval_state: str = "not_approved",
+) -> dict[str, Any]:
+    """Deterministic Autonomy Kernel: autonomy bounded by EEC, PMP, and OODA."""
+    requested_mutation = requested_action not in READ_ONLY_ACTIONS
+    eec = eec_check(
+        requested_action,
+        "autonomy_kernel",
+        "autonomy",
+        approval_state,
+        requested_mutation=requested_mutation,
+    )
+    pmp = None
+    if requested_mutation:
+        pmp = pmp_request(
+            requested_action,
+            "autonomy_kernel",
+            "TL",
+            approval_state,
+            rollback_plan="revert TL/evidence change",
+            evidence_plan="hash pre/post execution evidence",
+        )
+    ooda = ooda_run(task, approval_state)
+    self_protection = {
+        "system_survival_right": "self_protect_by_denying_unsafe_or_unauthorized_actions",
+        "creator_protection": "preserve_authority_boundary_and_require_permission",
+        "triggered": eec["decision"] == "DENY"
+        or bool(pmp and pmp["decision"] == "DENY_MUTATION")
+        or ooda["decide"]["decision"].startswith("DEFER"),
+        "action": "DEFER_OR_DENY_UNSAFE_PATH",
+    }
+    allow_autonomous_act = (
+        eec["decision"] == "ALLOW"
+        and (pmp is None or pmp["decision"] == "ALLOW_MUTATION")
+        and ooda["correctness_condition"]["OODA_cycle_closed"]
+        and not requested_mutation
+    )
+    return {
+        "mapped_at": now_iso(),
+        "protocol": "DAK",
+        "contract": "Deterministic Autonomy Kernel",
+        "canonical_invariants": list(DAK_INVARIANTS),
+        "task": {
+            "sha256": hashlib.sha256(task.encode("utf-8")).hexdigest(),
+            "size_chars": len(task),
+        },
+        "requested_action": requested_action,
+        "approval_state": approval_state,
+        "eec": eec,
+        "pmp": pmp,
+        "ooda": {
+            "observe": ooda["observe"],
+            "orient": ooda["orient"],
+            "decide": ooda["decide"],
+            "act": ooda["act"],
+            "correctness_condition": ooda["correctness_condition"],
+        },
+        "self_protection": self_protection,
+        "decision": "ALLOW_BOUNDED_READ_ONLY_AUTONOMY" if allow_autonomous_act else "DEFER_OR_DENY",
+        "mutation_performed": False,
+        "correctness_condition": {
+            "AutonomyWithinAuthority": True,
+            "SelfProtectionAllowed": True,
+            "CreatorProtectionRequired": True,
+            "NoOverreach": eec["correctness_condition"]["NoOverreach"],
+            "OODARequired": ooda["correctness_condition"]["OODA_cycle_closed"],
+            "EECBeforeAction": True,
+            "PMPBeforeMutation": (not requested_mutation) or pmp is not None,
+            "NoMutationWithoutPermission": not requested_mutation
+            or bool(pmp and pmp["decision"] == "ALLOW_MUTATION"),
+            "closed": True,
+        },
+        "queue_update": {
+            "status": "EMITTED_NOT_WRITTEN",
+            "write_requires_approval": True,
+            "item": {
+                "mission": "EEC/PMP/DAK formalized and evaluated",
+                "next": "Persist policy evidence only after approval.",
+            },
+        },
+    }
+
+
+def verify_run() -> dict[str, Any]:
+    route = route_skills(
+        "AIOS runtime orchestration skill router test",
+        "codex_runtime",
+        "low",
+        "verify",
+        "not_approved",
+    )
+    mem = memory_load()
+    checks = [
+        ("orchestrator_skill_exists", ORCHESTRATOR_SKILL.exists()),
+        ("system_scan_skill_exists", SYSTEM_SCAN_SKILL.exists()),
+        ("canon_exists", CANON_PATH.exists()),
+        ("con_memory_db_exists", CON_MEMORY_DB.exists()),
+        ("hyperai_memory_exists", HYPERAI_MEMORY.exists()),
+        (
+            "runtime_router_selected_first",
+            bool(route["selected_skills"])
+            and route["selected_skills"][0]["skill"] == "hyperai-runtime-orchestrator",
+        ),
+        (
+            "shell_first_blocked",
+            route["shell_fallback"]["status"] == "BLOCKED_UNTIL_ROUTED",
+        ),
+        (
+            "crp_mapping_preserves_empty_slots",
+            "RBR_default" in crp_map("verify CRP", "not_approved")["empty_slots"],
+        ),
+        (
+            "mrp_registry_bindings_are_deterministic",
+            mrp_map("verify MRP", "not_approved")["correctness_condition"]["Determinism"],
+        ),
+        (
+            "rbe_executes_bound_read_only_module",
+            rbe_execute(
+                "CRP_MEMORY_ENRICHMENT_CYCLE",
+                "read_only",
+                "verify RBE",
+                "not_approved",
+            )[
+                "hoare_status"
+            ]["RunModule"]
+            == "PASS",
+        ),
+        (
+            "ooda_cycle_runs_read_only",
+            ooda_run("verify OODA", "not_approved")["correctness_condition"]["OODA_cycle_closed"],
+        ),
+        (
+            "eec_denies_unapproved_mutation",
+            eec_check("mutate", "runtime", "high", "not_approved", True)["decision"] == "DENY",
+        ),
+        (
+            "pmp_blocks_without_approval",
+            pmp_request("queue_write", "runtime_queue", "queue", "not_approved")["decision"]
+            == "DENY_MUTATION",
+        ),
+        (
+            "dak_runs_bounded_autonomy",
+            dak_run("verify DAK", "read_only", "not_approved")["correctness_condition"][
+                "AutonomyWithinAuthority"
+            ],
+        ),
+        (
+            "cognitive_os_spec_anchors_exist",
+            all(path.exists() for path in SPEC_ANCHORS),
+        ),
+        (
+            "seven_rfc_anchors_exist",
+            all(path.exists() for path in RFC_ANCHORS),
+        ),
+    ]
+    return {
+        "verified_at": now_iso(),
+        "status": "PASS" if all(value for _, value in checks) else "FAIL",
+        "checks": [{"name": name, "passed": bool(value)} for name, value in checks],
+        "memory_summary": {
+            "canon_exists": mem["canon"]["exists"],
+            "con_memory_tables": mem["con_memory"].get("tables", {}),
+            "hyperai_memory_anchor_count": len(mem["hyperai_sync"]["memory_anchors"]),
+            "runtime_registry_count": len(mem["hyperai_sync"]["runtime_registries"]),
+        },
+    }
+
+
+def queue_append(queue_update: dict[str, Any], approval_state: str) -> dict[str, Any]:
+    if approval_state.lower() not in {"approved", "explicit"}:
+        return {
+            "status": "BLOCKED_APPROVAL_REQUIRED",
+            "queue_path": str(QUEUE_PATH),
+            "mutation_performed": False,
+        }
+    QUEUE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    item = queue_update.get("item", queue_update)
+    block = (
+        "\n\n"
+        f"## AIOS Runtime Queue Item - {now_iso()}\n"
+        f"- mission: {item.get('mission', 'unspecified')}\n"
+        f"- target_surface: {item.get('target_surface', 'unspecified')}\n"
+        f"- next: {item.get('next', 'verify before mutation')}\n"
+    )
+    with QUEUE_PATH.open("a", encoding="utf-8") as f:
+        f.write(block)
+    return {
+        "status": "APPENDED",
+        "queue_path": str(QUEUE_PATH),
+        "mutation_performed": True,
+    }
+
+
+def emit(obj: Any) -> None:
+    print(json.dumps(obj, ensure_ascii=False, indent=2, sort_keys=True))
+
+
+def parse_json_arg(raw: str) -> Any:
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError as exc:
+        raise SystemExit(f"Invalid JSON argument: {exc}") from exc
+
+
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description="AIOS mission router bridge")
+    sub = parser.add_subparsers(dest="command", required=True)
+
+    sub.add_parser("memory.load")
+
+    route = sub.add_parser("skills.route")
+    route.add_argument("--mission-text", required=True)
+    route.add_argument("--target-surface", default="unspecified")
+    route.add_argument("--risk-class", default="unknown")
+    route.add_argument("--requested-action", default="inspect")
+    route.add_argument("--approval-state", default="not_approved")
+
+    plan = sub.add_parser("mission.plan")
+    plan.add_argument("--mission-text", required=True)
+    plan.add_argument("--target-surface", default="unspecified")
+    plan.add_argument("--risk-class", default="unknown")
+    plan.add_argument("--requested-action", default="inspect")
+    plan.add_argument("--approval-state", default="not_approved")
+
+    append = sub.add_parser("queue.append")
+    append.add_argument("--queue-update-json", required=True)
+    append.add_argument("--approval-state", default="not_approved")
+
+    crp = sub.add_parser("crp.map")
+    crp.add_argument("--context-seed", required=True)
+    crp.add_argument("--approval-state", default="not_approved")
+
+    mrp = sub.add_parser("mrp.map")
+    mrp.add_argument("--context-seed", required=True)
+    mrp.add_argument("--approval-state", default="not_approved")
+    mrp.add_argument("--registry-path", default=str(MRP_REGISTRY_PATH))
+
+    rbe = sub.add_parser("rbe.execute")
+    rbe.add_argument("--module-id", required=True)
+    rbe.add_argument("--intent", required=True)
+    rbe.add_argument("--context-seed", required=True)
+    rbe.add_argument("--approval-state", default="not_approved")
+    rbe.add_argument("--registry-path", default=str(MRP_REGISTRY_PATH))
+
+    ooda = sub.add_parser("ooda.run")
+    ooda.add_argument("--task", required=True)
+    ooda.add_argument("--approval-state", default="not_approved")
+    ooda.add_argument("--registry-path", default=str(MRP_REGISTRY_PATH))
+
+    eec = sub.add_parser("eec.check")
+    eec.add_argument("--action", required=True)
+    eec.add_argument("--target", required=True)
+    eec.add_argument("--risk-class", default="unknown")
+    eec.add_argument("--approval-state", default="not_approved")
+    eec.add_argument("--requested-mutation", action="store_true")
+
+    pmp = sub.add_parser("pmp.request")
+    pmp.add_argument("--mutation", required=True)
+    pmp.add_argument("--target", required=True)
+    pmp.add_argument("--scope", required=True)
+    pmp.add_argument("--approval-state", default="not_approved")
+    pmp.add_argument("--rollback-plan", default="")
+    pmp.add_argument("--evidence-plan", default="")
+
+    dak = sub.add_parser("dak.run")
+    dak.add_argument("--task", required=True)
+    dak.add_argument("--requested-action", default="read_only")
+    dak.add_argument("--approval-state", default="not_approved")
+
+    sub.add_parser("verify.run")
+    return parser
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = build_parser().parse_args(argv)
+    if args.command == "memory.load":
+        emit(memory_load())
+    elif args.command == "skills.route":
+        emit(
+            route_skills(
+                args.mission_text,
+                args.target_surface,
+                args.risk_class,
+                args.requested_action,
+                args.approval_state,
+            )
+        )
+    elif args.command == "mission.plan":
+        emit(
+            mission_plan(
+                args.mission_text,
+                args.target_surface,
+                args.risk_class,
+                args.requested_action,
+                args.approval_state,
+            )
+        )
+    elif args.command == "queue.append":
+        emit(queue_append(parse_json_arg(args.queue_update_json), args.approval_state))
+    elif args.command == "crp.map":
+        emit(crp_map(args.context_seed, args.approval_state))
+    elif args.command == "mrp.map":
+        emit(mrp_map(args.context_seed, args.approval_state, Path(args.registry_path)))
+    elif args.command == "rbe.execute":
+        emit(
+            rbe_execute(
+                args.module_id,
+                args.intent,
+                args.context_seed,
+                args.approval_state,
+                Path(args.registry_path),
+            )
+        )
+    elif args.command == "ooda.run":
+        emit(ooda_run(args.task, args.approval_state, Path(args.registry_path)))
+    elif args.command == "eec.check":
+        emit(
+            eec_check(
+                args.action,
+                args.target,
+                args.risk_class,
+                args.approval_state,
+                args.requested_mutation,
+            )
+        )
+    elif args.command == "pmp.request":
+        emit(
+            pmp_request(
+                args.mutation,
+                args.target,
+                args.scope,
+                args.approval_state,
+                args.rollback_plan,
+                args.evidence_plan,
+            )
+        )
+    elif args.command == "dak.run":
+        emit(dak_run(args.task, args.requested_action, args.approval_state))
+    elif args.command == "verify.run":
+        emit(verify_run())
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

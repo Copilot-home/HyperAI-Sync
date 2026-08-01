@@ -103,7 +103,10 @@ This workspace is MCP-first. Use the configured MCP servers proactively without 
 ## Autonomous Local-First Workflow
 
 - Default entrypoint for HyperAI coordination is:
-  - `python tools/hyperai_autonomous_cycle.py`
+  - `python /Users/andy/workbench/aios_runtime_orchestrator/aios_mission_router.py <command>`
+  - Local root daemon: `http://127.0.0.1:9001` (launchd `com.aios.mission.router`)
+  - For a single full OODA cycle: `python tools/hyperai_ooda_loop.py --task "<creator task>" --once`
+  - Preservation-only delta cycle remains available as: `python tools/hyperai_autonomous_cycle.py`
 - The local coordination skill is:
   - `C:\Users\pc\.codex\skills\hyperai-runtime-orchestrator\SKILL.md`
 - Load memory before source exploration:

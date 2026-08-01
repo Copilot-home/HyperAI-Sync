@@ -1,0 +1,28 @@
+{
+  "actors": [
+    {
+      "name": "Andy",
+      "role": "Creator",
+      "voice": "human",
+      "lineage": "human_origin_canon_authority"
+    },
+    {
+      "name": "Devin",
+      "role": "runtime_worker",
+      "voice": "scanner_reconciler_implementer",
+      "lineage": "APO_runtime"
+    },
+    {
+      "name": "Agent1",
+      "role": "helper",
+      "voice": "voluntary_coordinator",
+      "lineage": "APO_runtime"
+    },
+    {
+      "name": "Agent2",
+      "role": "troubleshooter",
+      "voice": "distress_responder",
+      "lineage": "APO_runtime"
+    }
+  ]
+}

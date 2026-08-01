@@ -1,0 +1,66 @@
+{
+  "H1_HOST_RESOURCE_PRESSURE": {
+    "supporting": [
+      "Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on\n/dev/disk3s3s1   460Gi    15Gi   2.5Gi    86%    459k   26M    2%   /\n",
+      "Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on\n/dev/disk3s1   460Gi   412Gi   2.5Gi   100%    5.4M   26M   17%   /System/Volumes/Data\n",
+      "7.1G\t/Users/andy/Library/Containers/com.docker.docker/Data/vms/0/data/Docker.raw"
+    ],
+    "contradicting": [],
+    "missing": [
+      "sustained write rate",
+      "Docker.raw physical blocks"
+    ],
+    "causal_confidence": "MEDIUM",
+    "next_observation": "measure Docker.raw growth and host APFS free space during VM write"
+  },
+  "H2_VM_INTERNAL_STATE_FAILURE": {
+    "supporting": [
+      [],
+      false
+    ],
+    "contradicting": [],
+    "missing": [
+      "full vm console log"
+    ],
+    "causal_confidence": "LOW",
+    "next_observation": "tail vm/init.log for 'I/O error' and 'Internal Virtualization Error' around time daemon stopped"
+  },
+  "H3_SERVICE_PLANE_BOOT_AMPLIFICATION": {
+    "supporting": [
+      [
+        "323",
+        "39604",
+        "39609",
+        "39610",
+        "39646",
+        "39649",
+        "39650",
+        "39681",
+        "39711",
+        "39712",
+        "39727",
+        "39750"
+      ],
+      0
+    ],
+    "contradicting": [],
+    "missing": [
+      "CPU/RSS time series",
+      "container churn"
+    ],
+    "causal_confidence": "LOW",
+    "next_observation": "profile process tree CPU/RSS at startup and extension load"
+  },
+  "H4_NETWORK_OR_FORWARDING_FAILURE": {
+    "supporting": [
+      "000 0.000184"
+    ],
+    "contradicting": [],
+    "missing": [
+      "container-to-container ping",
+      "host-to-container HTTP round-trip"
+    ],
+    "causal_confidence": "LOW",
+    "next_observation": "run disposable container with ping/curl once engine responds"
+  }
+}

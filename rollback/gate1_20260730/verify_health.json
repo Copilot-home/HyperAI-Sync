@@ -1,0 +1,95 @@
+{
+  "verified_at": "2026-07-30T22:04:57+00:00",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "orchestrator_skill_exists",
+      "passed": true
+    },
+    {
+      "name": "system_scan_skill_exists",
+      "passed": true
+    },
+    {
+      "name": "canon_exists",
+      "passed": true
+    },
+    {
+      "name": "con_memory_db_exists",
+      "passed": true
+    },
+    {
+      "name": "hyperai_memory_exists",
+      "passed": true
+    },
+    {
+      "name": "runtime_router_selected_first",
+      "passed": true
+    },
+    {
+      "name": "shell_first_blocked",
+      "passed": true
+    },
+    {
+      "name": "crp_mapping_preserves_empty_slots",
+      "passed": true
+    },
+    {
+      "name": "mrp_registry_bindings_are_deterministic",
+      "passed": true
+    },
+    {
+      "name": "rbe_executes_bound_read_only_module",
+      "passed": true
+    },
+    {
+      "name": "ooda_cycle_runs_read_only",
+      "passed": true
+    },
+    {
+      "name": "eec_denies_unapproved_mutation",
+      "passed": true
+    },
+    {
+      "name": "pmp_blocks_without_approval",
+      "passed": true
+    },
+    {
+      "name": "dak_runs_bounded_autonomy",
+      "passed": true
+    },
+    {
+      "name": "cognitive_os_spec_anchors_exist",
+      "passed": true
+    },
+    {
+      "name": "seven_rfc_anchors_exist",
+      "passed": true
+    }
+  ],
+  "memory_summary": {
+    "canon_exists": true,
+    "con_memory_tables": {
+      "agent_memory": 1347487,
+      "agent_todos": 11799,
+      "auto_tickets": 1,
+      "bos_teachings": 9,
+      "bugs_fixed": 22,
+      "code_modules": 6,
+      "con_identity": 8,
+      "con_understanding": 3,
+      "conversations": 22,
+      "dr_protocol_sessions": 1,
+      "historical_files": 3885,
+      "learned_patterns": 6,
+      "learning_log": 4,
+      "memory_status": 1,
+      "resources": 0,
+      "sovereignty_metadata": 1,
+      "storage_knowledge": 3,
+      "system_operations": 8
+    },
+    "hyperai_memory_anchor_count": 16,
+    "runtime_registry_count": 32
+  }
+}

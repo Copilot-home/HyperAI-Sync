@@ -1,0 +1,30 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "npm",
+  "started_at": "2026-07-30T16:40:06Z",
+  "completed_at": "2026-07-30T16:40:07Z",
+  "dry_run": false,
+  "include_recyclable": false,
+  "disk_before_mb": 7121,
+  "disk_after_mb": 7119,
+  "freed_mb": 0,
+  "action_count": 2,
+  "error_count": 0,
+  "actions": [
+    {
+      "command": "npm cache clean --force",
+      "tool": "npm",
+      "rc": 0,
+      "stdout": "",
+      "stderr": "npm warn using --force Recommended protections disabled.\n"
+    },
+    {
+      "command": "pnpm store prune",
+      "tool": "pnpm",
+      "rc": 0,
+      "stdout": "Checking 2 registered project(s) for global virtual store usage\nNo unused packages found in global virtual store\nRemoved all cached metadata files\nRemoved 0 files (0 B)\nRemoved 0 packages\n",
+      "stderr": ""
+    }
+  ],
+  "status": "ok"
+}

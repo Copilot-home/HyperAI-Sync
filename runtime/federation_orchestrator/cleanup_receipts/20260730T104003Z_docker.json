@@ -1,0 +1,28 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "docker",
+  "started_at": "2026-07-30T10:40:02Z",
+  "completed_at": "2026-07-30T10:40:03Z",
+  "dry_run": false,
+  "include_recyclable": true,
+  "disk_before_mb": 399,
+  "disk_after_mb": 408,
+  "freed_mb": 9,
+  "action_count": 2,
+  "error_count": 0,
+  "actions": [
+    {
+      "command": "docker system prune -f",
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Error response from daemon: failed to prune build cache: write /var/lib/docker/buildkit/containerd-overlayfs/metadata_v2.db: input/output error\n"
+    },
+    {
+      "command": "docker builder prune -f",
+      "rc": 100,
+      "stdout": "",
+      "stderr": "ERROR: rpc error: code = Internal desc = write /var/lib/docker/buildkit/containerd-overlayfs/metadata_v2.db: input/output error\n"
+    }
+  ],
+  "status": "ok"
+}

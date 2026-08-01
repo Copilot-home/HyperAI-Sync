@@ -1,0 +1,69 @@
+{
+  "generated_at": "2026-07-31T10:59:06Z",
+  "verdict": "LOCAL_LINEAGE_F2_TO_F3_VERIFIED + FULL_CAUSAL_MISSION_VERIFIED + OBSERVER_GUARDS_PRESENT",
+  "verdict_note": "F0/F1 remain UNBOUND external references; F2->F3 local lineage, single causal mission, and observer guards are verified. Lineage convergence F0->F3 and autonomous ecosystem not yet proven.",
+  "checks": {
+    "secret_redaction": {
+      "ok": true,
+      "files_modified": 15,
+      "redactions": 20,
+      "broker_masked_keys_removed": true
+    },
+    "qualifier_path_independence": {
+      "ok": true,
+      "qualified_from_3_cwd": [
+        "27/35"
+      ]
+    },
+    "external_frame_binding": {
+      "f0_f1_bound": 4,
+      "f0_f1_unbound": 7,
+      "ok": true
+    },
+    "convergence_matrix": {
+      "invariants": 10,
+      "policy_to_runtime_propagation_status": "IMPROVED"
+    },
+    "full_causal_mission": {
+      "ok": true,
+      "mission_id": "full-causal-2026-07-31T105619.773412Z",
+      "edge_count": 6,
+      "utc_value": "2026-07-31T10:56:19.858857+00:00"
+    },
+    "observer_guards": {
+      "ok": true,
+      "duration_sec": 0.091,
+      "peak_rss_mb": 46.86
+    },
+    "runtime_health": {
+      "broker_status": {
+        "ok": true,
+        "status_code": null,
+        "body_prefix": "{\"timestamp\":\"2026-07-31T10:59:06.771322Z\",\"env_source\":\"/Users/andy/.config/hyp"
+      },
+      "gateway_health": {
+        "ok": true,
+        "status_code": null,
+        "body_prefix": "{\"status\":\"ok\",\"apo\":\"personal\",\"node\":\"Andy-2.local\"}"
+      }
+    },
+    "no_secret_leak_in_runtime_artifacts": true
+  },
+  "not_proven": [
+    "LINEAGE_CONVERGENCE_F0_TO_F3",
+    "AUTONOMOUS_ECOSYSTEM",
+    "ONE_VERIFIED_LIVING_CYCLE (persistent scheduler)"
+  ],
+  "artifact_index": [
+    "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/secret_redaction_receipt.json",
+    "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/qualifier_path_independence_receipt.json",
+    "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/external_frame_binding_receipt.json",
+    "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/policy_to_runtime_propagation_receipt.json",
+    "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/frame_convergence_matrix.json",
+    "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/living_cycle_validation_receipt.json",
+    "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/full_causal_mission_execution_log.json",
+    "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/observer_resource_budget_receipt.json",
+    "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/observer_failure_injection_receipt.json",
+    "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/LIVING_CYCLE_LINEAGE_CONVERGENCE_REPORT.md"
+  ]
+}

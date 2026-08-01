@@ -1,0 +1,38 @@
+/Users/andy/.antigravity-ide/extensions
+/Users/andy/.apo/gateway
+/Users/andy/.axcanon/memory
+/Users/andy/.cache/outlines
+/Users/andy/.codex/plugins
+/Users/andy/.config/axcanon
+/Users/andy/.docker/
+/Users/andy/.gemini/antigravity-ide
+/Users/andy/.hyperai/logs
+/Users/andy/.lmstudio/
+/Users/andy/.local/bin
+/Users/andy/.local/share
+/Users/andy/.multi/cache
+/Users/andy/.npm/_logs
+/Users/andy/.ollama/logs
+/Users/andy/.ollama/models
+/Users/andy/.ssh/agent
+/Users/andy/Applications/
+/Users/andy/Desktop/
+/Users/andy/Documents/Dadroit JSON Generator
+/Users/andy/Downloads/
+/Users/andy/HyperAI-Sync/
+/Users/andy/HyperAI/
+/Users/andy/Library/Accessibility
+/Users/andy/Library/Application Support
+/Users/andy/Library/Caches
+/Users/andy/Library/Containers
+/Users/andy/Library/Developer
+/Users/andy/Library/Logs
+/Users/andy/Library/Photos
+/Users/andy/Library/Shortcuts
+/Users/andy/Library/com.pieces.os
+/Users/andy/Music/
+/Users/andy/Pictures/Photos Library.photoslibrary
+/Users/andy/axcontrol/
+/Users/andy/openapi-servers/
+/Users/andy/vscode-edge-devtools/
+/Users/andy/workbench/aios_runtime_orchestrator

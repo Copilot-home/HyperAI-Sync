@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-07-31T10:56:35.142437Z",
+  "mission": "full_causal_mission",
+  "duration_sec": 0.093,
+  "duration_budget_sec": 60.0,
+  "duration_status": "OK",
+  "peak_rss_mb": 46.08,
+  "rss_budget_mb": 512.0,
+  "rss_status": "OK",
+  "cpu_percent": 0.1,
+  "cpu_budget_percent": 80.0,
+  "cpu_status": "OK",
+  "retries_total": 0,
+  "failure_injection": "invalid_lease_id",
+  "failure_count": 0
+}

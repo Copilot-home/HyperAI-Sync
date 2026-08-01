@@ -1,0 +1,23 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "pip",
+  "started_at": "2026-07-30T16:38:49Z",
+  "completed_at": "2026-07-30T16:39:02Z",
+  "dry_run": true,
+  "include_recyclable": false,
+  "disk_before_mb": 6920,
+  "disk_after_mb": 6680,
+  "freed_mb": 0.02,
+  "action_count": 1,
+  "error_count": 0,
+  "actions": [
+    {
+      "path": "/Users/andy/HyperAI-Sync/tools/__pycache__",
+      "status": "dry_run",
+      "reason": null,
+      "dry_run": true,
+      "estimated_mb": 0.01953125
+    }
+  ],
+  "status": "ok"
+}

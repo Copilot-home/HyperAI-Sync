@@ -1,0 +1,1808 @@
+{
+  "audited_at": "2026-07-30T22:18:14.759972+00:00",
+  "total_nodes": 35,
+  "qualified_count": 35,
+  "health_summary": {
+    "HEALTHY": 9,
+    "PARTIAL": 25,
+    "DEGRADED": 0,
+    "STALE": 0,
+    "FAILED": 1,
+    "UNKNOWN": 0
+  },
+  "nodes": [
+    {
+      "id": "apo_upstream_macbook_ollama",
+      "type": "provider",
+      "location": "apo_gateway",
+      "endpoint": "http://127.0.0.1:11434/v1",
+      "port": 11434,
+      "capabilities": [
+        "name",
+        "base_url",
+        "env_key"
+      ],
+      "authority": "inference_upstreams",
+      "state": "declared",
+      "health": "PARTIAL",
+      "health_note": "ollama pid 864 listening, HTTP 404 (auth/endpoint mismatch)",
+      "lease": {
+        "port": 11434,
+        "host": "127.0.0.1"
+      },
+      "lineage": "apo_gateway",
+      "cost": "unmeasured",
+      "value": "inference_upstreams",
+      "processes": [],
+      "listeners": [
+        {
+          "command": "ollama",
+          "pid": "864",
+          "user": "andy",
+          "fd": "3u",
+          "node": "TCP",
+          "name": "*:11434"
+        }
+      ],
+      "http_probe": {
+        "status": 404,
+        "reachable": true,
+        "sample": "HTTP Error 404: Not Found"
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "requires_env_key": false
+      },
+      "timestamp": "2026-07-30T22:18:10.342647+00:00"
+    },
+    {
+      "id": "apo_upstream_titan_ollama",
+      "type": "provider",
+      "location": "apo_gateway",
+      "endpoint": "http://192.168.3.84:11434/v1",
+      "port": 11434,
+      "capabilities": [
+        "name",
+        "base_url",
+        "env_key"
+      ],
+      "authority": "inference_upstreams",
+      "state": "declared",
+      "health": "PARTIAL",
+      "health_note": "ollama pid 864 listening, HTTP 404 (auth/endpoint mismatch)",
+      "lease": {
+        "port": 11434,
+        "host": "192.168.3.84"
+      },
+      "lineage": "apo_gateway",
+      "cost": "unmeasured",
+      "value": "inference_upstreams",
+      "processes": [],
+      "listeners": [
+        {
+          "command": "ollama",
+          "pid": "864",
+          "user": "andy",
+          "fd": "3u",
+          "node": "TCP",
+          "name": "*:11434"
+        }
+      ],
+      "http_probe": {
+        "status": 404,
+        "reachable": true,
+        "sample": "HTTP Error 404: Not Found"
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "requires_env_key": false
+      },
+      "timestamp": "2026-07-30T22:18:10.481563+00:00"
+    },
+    {
+      "id": "apo_upstream_macmini_ollama",
+      "type": "provider",
+      "location": "apo_gateway",
+      "endpoint": "http://192.168.3.28:11434/v1",
+      "port": 11434,
+      "capabilities": [
+        "name",
+        "base_url",
+        "env_key"
+      ],
+      "authority": "inference_upstreams",
+      "state": "declared",
+      "health": "PARTIAL",
+      "health_note": "ollama pid 864 listening, HTTP None",
+      "lease": {
+        "port": 11434,
+        "host": "192.168.3.28"
+      },
+      "lineage": "apo_gateway",
+      "cost": "unmeasured",
+      "value": "inference_upstreams",
+      "processes": [],
+      "listeners": [
+        {
+          "command": "ollama",
+          "pid": "864",
+          "user": "andy",
+          "fd": "3u",
+          "node": "TCP",
+          "name": "*:11434"
+        }
+      ],
+      "http_probe": {
+        "status": null,
+        "reachable": false,
+        "sample": "<urlopen error [Errno 61] Connection refused>"
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "requires_env_key": false
+      },
+      "timestamp": "2026-07-30T22:18:11.648102+00:00"
+    },
+    {
+      "id": "apo_upstream_lmstudio",
+      "type": "provider",
+      "location": "apo_gateway",
+      "endpoint": "http://127.0.0.1:1235/v1",
+      "port": 1235,
+      "capabilities": [
+        "name",
+        "base_url",
+        "env_key"
+      ],
+      "authority": "inference_upstreams",
+      "state": "declared",
+      "health": "PARTIAL",
+      "health_note": "Bionic pid 51004 listening, HTTP 401 (auth/endpoint mismatch)",
+      "lease": {
+        "port": 1235,
+        "host": "127.0.0.1"
+      },
+      "lineage": "apo_gateway",
+      "cost": "unmeasured",
+      "value": "inference_upstreams",
+      "processes": [
+        {
+          "uid": "501",
+          "pid": "51072",
+          "ppid": "51004",
+          "command": "/Applications/Bionic.app/Contents/Frameworks/Bionic Helper (Renderer).app/Contents/MacOS/Bionic Helper (Renderer) --type=renderer --user-data-dir=/Users/andy/Library/Application Support/Bionic --app-path=/Applications/Bionic.app/Contents/Resources/app --no-sandbox --no-zygote --lang=vi --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=5 --time-ticks-at-unix-epoch=-1785363626356708 --launch-time-ticks=79801892475 --shared-files --field-trial-handle=1718379636,r,1713481580886926522,7904605661336833699,262144 --enable-features=PdfUseShowSaveFilePicker,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=DropInputEventsWhilePaintHolding,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts,TraceSiteInstanceGetProcessCreation --variations-seed-version --pseudonymization-salt-handle=1935764596,r,7849891708323589420,766715537181256442,4 --trace-process-track-uuid=3190708990997080739 --lmstudio-window-key=window-2147483646 --lmstudio-project-identifier=07db96ab-fdb8-4af3-a4f1-4a2c68bd7654 --lmstudio-window-context=%7B%22type%22%3A%22workspace%22%2C%22projectIdentifiers%22%3A%5B%2207db96ab-fdb8-4af3-a4f1-4a2c68bd7654%22%5D%2C%22activeProjectIdentifier%22%3A%2207db96ab-fdb8-4af3-a4f1-4a2c68bd7654%22%7D"
+        },
+        {
+          "uid": "501",
+          "pid": "3852",
+          "ppid": "1169",
+          "command": "/Users/andy/.lmstudio/.internal/utils/node -e \\012function connectPort(port) {\\012  const handlersMap = new Map();\\012  return {\\012    postMessage: data => process.send({ port: port, data }),\\012    on: (event, handler) => {\\012      if (event !== \"message\") {\\012        throw new Error(\"Unsupported event: \" + event);\\012      }\\012      const innerHandler = payload => {\\012        if (payload.port === port) {\\012          handler({ data: payload.data });\\012        }\\012      }\\012      handlersMap.set(handler, innerHandler);\\012      process.on('message', innerHandler);\\012    },\\012    off: (event, handler) => {\\012      if (event !== \"message\") {\\012        throw new Error(\"Unsupported event: \" + event);\\012      }\\012      const innerHandler = handlersMap.get(handler);\\012      if (innerHandler) {\\012        process.off('message', innerHandler);\\012        handlersMap.delete(handler);\\012      }\\012    },\\012  };\\012}\\012process.parentPort = connectPort(0);\\012process.rcPort = connectPort(1);\\012process.resourcesPath = \"/Applications/LM Studio.app/Contents/Resources\";\\012require(\"/Applications/LM Studio.app/Contents/Resources/app/.webpack/lib/systemresourcesworker.js\"); /Applications/LM Studio.app/Contents/Resources/app/.webpack/lib/systemresourcesworker.js /Applications/LM Studio.app/Contents/Resources/app/.webpack/bin/liblmstudio/metal/liblmstudio_bindings.node"
+        },
+        {
+          "uid": "501",
+          "pid": "51016",
+          "ppid": "51004",
+          "command": "/Users/andy/.lmstudio/.internal/utils/node -e \\012function connectPort(port) {\\012  const handlersMap = new Map();\\012  return {\\012    postMessage: data => process.send({ port: port, data }),\\012    on: (event, handler) => {\\012      if (event !== \"message\") {\\012        throw new Error(\"Unsupported event: \" + event);\\012      }\\012      const innerHandler = payload => {\\012        if (payload.port === port) {\\012          handler({ data: payload.data });\\012        }\\012      }\\012      handlersMap.set(handler, innerHandler);\\012      process.on('message', innerHandler);\\012    },\\012    off: (event, handler) => {\\012      if (event !== \"message\") {\\012        throw new Error(\"Unsupported event: \" + event);\\012      }\\012      const innerHandler = handlersMap.get(handler);\\012      if (innerHandler) {\\012        process.off('message', innerHandler);\\012        handlersMap.delete(handler);\\012      }\\012    },\\012  };\\012}\\012process.parentPort = connectPort(0);\\012process.rcPort = connectPort(1);\\012process.resourcesPath = \"/Applications/Bionic.app/Contents/Resources\";\\012require(\"/Applications/Bionic.app/Contents/Resources/app/.webpack-bionic/lib/systemresourcesworker.js\"); /Applications/Bionic.app/Contents/Resources/app/.webpack-bionic/lib/systemresourcesworker.js /Applications/Bionic.app/Contents/Resources/app/.webpack-bionic/bin/liblmstudio/metal/liblmstudio_bindings.node"
+        }
+      ],
+      "listeners": [
+        {
+          "command": "Bionic",
+          "pid": "51004",
+          "user": "andy",
+          "fd": "66u",
+          "node": "TCP",
+          "name": "127.0.0.1:1235"
+        }
+      ],
+      "http_probe": {
+        "status": 401,
+        "reachable": true,
+        "sample": "HTTP Error 401: Unauthorized"
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "requires_env_key": true
+      },
+      "timestamp": "2026-07-30T22:18:11.819353+00:00"
+    },
+    {
+      "id": "openapi_tool_time",
+      "type": "openapi_tool_server",
+      "location": "apo_gateway",
+      "endpoint": "http://127.0.0.1:8901",
+      "port": 8901,
+      "capabilities": [
+        "name",
+        "base_url",
+        "health_path"
+      ],
+      "authority": "tool_surface",
+      "state": "declared",
+      "health": "PARTIAL",
+      "health_note": "Python pid 39718 listening, HTTP 404 (auth/endpoint mismatch)",
+      "lease": {
+        "port": 8901,
+        "host": "127.0.0.1"
+      },
+      "lineage": "apo_gateway",
+      "cost": "unmeasured",
+      "value": "tool_surface",
+      "processes": [
+        {
+          "uid": "266",
+          "pid": "155",
+          "ppid": "1",
+          "command": "/usr/libexec/timed"
+        },
+        {
+          "uid": "501",
+          "pid": "2491",
+          "ppid": "1155",
+          "command": "/Applications/Antigravity IDE.app/Contents/Frameworks/Antigravity IDE Helper (Renderer).app/Contents/MacOS/Antigravity IDE Helper (Renderer) --type=renderer --user-data-dir=/Users/andy/Library/Application Support/Antigravity IDE --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --app-path=/Applications/Antigravity IDE.app/Contents/Resources/app --enable-sandbox --enable-blink-features=HighlightAPI --disable-blink-features=FontMatchingCTMigration,StandardizedBrowserZoom, --lang=vi --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=13 --time-ticks-at-unix-epoch=-1785363626076011 --launch-time-ticks=92404053 --shared-files --field-trial-handle=1718379636,r,5882868924522039865,13442562099303937124,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,PdfUseShowSaveFilePicker,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=CalculateNativeWinOcclusion,LocalNetworkAccessChecks,MacWebContentsOcclusion,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708998493415531 --vscode-window-config=vscode:7b6c61b2-00fb-44c9-bb94-6707b8339b2e --seatbelt-client=65"
+        },
+        {
+          "uid": "501",
+          "pid": "15562",
+          "ppid": "1",
+          "command": "bash -c pkill -f \"uvicorn main:app --host 127.0.0.1 --port 8911\" 2>/dev/null; sleep 2; set -a; . /Users/andy/.config/hyperai/credentials.env; set +a; cd /Users/andy/openapi-servers/servers/sql && DATABASE_URL=sqlite:////tmp/apo_runtime.db nohup /Users/andy/openapi-servers/.venv/bin/uvicorn main:app --host 127.0.0.1 --port 8911 > /Users/andy/.apo/gateway/sql.log 2>&1 &"
+        }
+      ],
+      "listeners": [
+        {
+          "command": "Python",
+          "pid": "39718",
+          "user": "andy",
+          "fd": "10u",
+          "node": "TCP",
+          "name": "127.0.0.1:8901"
+        }
+      ],
+      "http_probe": {
+        "status": 404,
+        "reachable": true,
+        "sample": "HTTP Error 404: Not Found"
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "requires_credentials": false
+      },
+      "timestamp": "2026-07-30T22:18:11.940102+00:00"
+    },
+    {
+      "id": "openapi_tool_weather",
+      "type": "openapi_tool_server",
+      "location": "apo_gateway",
+      "endpoint": "http://127.0.0.1:8902",
+      "port": 8902,
+      "capabilities": [
+        "name",
+        "base_url",
+        "health_path"
+      ],
+      "authority": "tool_surface",
+      "state": "declared",
+      "health": "PARTIAL",
+      "health_note": "Python pid 39719 listening, HTTP 404 (auth/endpoint mismatch)",
+      "lease": {
+        "port": 8902,
+        "host": "127.0.0.1"
+      },
+      "lineage": "apo_gateway",
+      "cost": "unmeasured",
+      "value": "tool_surface",
+      "processes": [
+        {
+          "uid": "501",
+          "pid": "806",
+          "ppid": "1",
+          "command": "com.apple.weather.menu"
+        },
+        {
+          "uid": "501",
+          "pid": "4435",
+          "ppid": "1",
+          "command": "/System/Applications/Weather.app/Contents/PlugIns/WeatherWidget.appex/Contents/MacOS/WeatherWidget -LaunchArguments eyJlbmhhbmNlZFNlY3VyaXR5IjpmYWxzZSwidHlwZSI6MSwic2VydmljZU5hbWUiOiJjb20uYXBwbGUud2VhdGhlci53aWRnZXQifQ=="
+        }
+      ],
+      "listeners": [
+        {
+          "command": "Python",
+          "pid": "39719",
+          "user": "andy",
+          "fd": "10u",
+          "node": "TCP",
+          "name": "127.0.0.1:8902"
+        }
+      ],
+      "http_probe": {
+        "status": 404,
+        "reachable": true,
+        "sample": "HTTP Error 404: Not Found"
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "requires_credentials": false
+      },
+      "timestamp": "2026-07-30T22:18:12.087474+00:00"
+    },
+    {
+      "id": "openapi_tool_filesystem",
+      "type": "openapi_tool_server",
+      "location": "apo_gateway",
+      "endpoint": "http://127.0.0.1:8903",
+      "port": 8903,
+      "capabilities": [
+        "name",
+        "base_url",
+        "health_path"
+      ],
+      "authority": "tool_surface",
+      "state": "declared",
+      "health": "PARTIAL",
+      "health_note": "Python pid 39720 listening, HTTP 404 (auth/endpoint mismatch)",
+      "lease": {
+        "port": 8903,
+        "host": "127.0.0.1"
+      },
+      "lineage": "apo_gateway",
+      "cost": "unmeasured",
+      "value": "tool_surface",
+      "processes": [],
+      "listeners": [
+        {
+          "command": "Python",
+          "pid": "39720",
+          "user": "andy",
+          "fd": "10u",
+          "node": "TCP",
+          "name": "127.0.0.1:8903"
+        }
+      ],
+      "http_probe": {
+        "status": 404,
+        "reachable": true,
+        "sample": "HTTP Error 404: Not Found"
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "requires_credentials": false
+      },
+      "timestamp": "2026-07-30T22:18:12.202269+00:00"
+    },
+    {
+      "id": "openapi_tool_git",
+      "type": "openapi_tool_server",
+      "location": "apo_gateway",
+      "endpoint": "http://127.0.0.1:8904",
+      "port": 8904,
+      "capabilities": [
+        "name",
+        "base_url",
+        "health_path"
+      ],
+      "authority": "tool_surface",
+      "state": "declared",
+      "health": "PARTIAL",
+      "health_note": "Python pid 39721 listening, HTTP 404 (auth/endpoint mismatch)",
+      "lease": {
+        "port": 8904,
+        "host": "127.0.0.1"
+      },
+      "lineage": "apo_gateway",
+      "cost": "unmeasured",
+      "value": "tool_surface",
+      "processes": [
+        {
+          "uid": "501",
+          "pid": "3557",
+          "ppid": "2183",
+          "command": "/Applications/Antigravity IDE.app/Contents/Frameworks/Antigravity IDE Helper (Plugin).app/Contents/MacOS/Antigravity IDE Helper (Plugin) /Users/andy/.antigravity-ide/extensions/github.vscode-github-actions-0.32.3-universal/dist/server-node.js --node-ipc --clientProcessId=2183"
+        }
+      ],
+      "listeners": [
+        {
+          "command": "Python",
+          "pid": "39721",
+          "user": "andy",
+          "fd": "10u",
+          "node": "TCP",
+          "name": "127.0.0.1:8904"
+        }
+      ],
+      "http_probe": {
+        "status": 404,
+        "reachable": true,
+        "sample": "HTTP Error 404: Not Found"
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "requires_credentials": false
+      },
+      "timestamp": "2026-07-30T22:18:12.318506+00:00"
+    },
+    {
+      "id": "openapi_tool_memory",
+      "type": "openapi_tool_server",
+      "location": "apo_gateway",
+      "endpoint": "http://127.0.0.1:8905",
+      "port": 8905,
+      "capabilities": [
+        "name",
+        "base_url",
+        "health_path"
+      ],
+      "authority": "tool_surface",
+      "state": "declared",
+      "health": "PARTIAL",
+      "health_note": "Python pid 39722 listening, HTTP 404 (auth/endpoint mismatch)",
+      "lease": {
+        "port": 8905,
+        "host": "127.0.0.1"
+      },
+      "lineage": "apo_gateway",
+      "cost": "unmeasured",
+      "value": "tool_surface",
+      "processes": [
+        {
+          "uid": "501",
+          "pid": "2491",
+          "ppid": "1155",
+          "command": "/Applications/Antigravity IDE.app/Contents/Frameworks/Antigravity IDE Helper (Renderer).app/Contents/MacOS/Antigravity IDE Helper (Renderer) --type=renderer --user-data-dir=/Users/andy/Library/Application Support/Antigravity IDE --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --app-path=/Applications/Antigravity IDE.app/Contents/Resources/app --enable-sandbox --enable-blink-features=HighlightAPI --disable-blink-features=FontMatchingCTMigration,StandardizedBrowserZoom, --lang=vi --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=13 --time-ticks-at-unix-epoch=-1785363626076011 --launch-time-ticks=92404053 --shared-files --field-trial-handle=1718379636,r,5882868924522039865,13442562099303937124,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,PdfUseShowSaveFilePicker,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=CalculateNativeWinOcclusion,LocalNetworkAccessChecks,MacWebContentsOcclusion,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708998493415531 --vscode-window-config=vscode:7b6c61b2-00fb-44c9-bb94-6707b8339b2e --seatbelt-client=65"
+        },
+        {
+          "uid": "501",
+          "pid": "51072",
+          "ppid": "51004",
+          "command": "/Applications/Bionic.app/Contents/Frameworks/Bionic Helper (Renderer).app/Contents/MacOS/Bionic Helper (Renderer) --type=renderer --user-data-dir=/Users/andy/Library/Application Support/Bionic --app-path=/Applications/Bionic.app/Contents/Resources/app --no-sandbox --no-zygote --lang=vi --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=5 --time-ticks-at-unix-epoch=-1785363626356708 --launch-time-ticks=79801892475 --shared-files --field-trial-handle=1718379636,r,1713481580886926522,7904605661336833699,262144 --enable-features=PdfUseShowSaveFilePicker,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=DropInputEventsWhilePaintHolding,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts,TraceSiteInstanceGetProcessCreation --variations-seed-version --pseudonymization-salt-handle=1935764596,r,7849891708323589420,766715537181256442,4 --trace-process-track-uuid=3190708990997080739 --lmstudio-window-key=window-2147483646 --lmstudio-project-identifier=07db96ab-fdb8-4af3-a4f1-4a2c68bd7654 --lmstudio-window-context=%7B%22type%22%3A%22workspace%22%2C%22projectIdentifiers%22%3A%5B%2207db96ab-fdb8-4af3-a4f1-4a2c68bd7654%22%5D%2C%22activeProjectIdentifier%22%3A%2207db96ab-fdb8-4af3-a4f1-4a2c68bd7654%22%7D"
+        },
+        {
+          "uid": "501",
+          "pid": "35821",
+          "ppid": "35803",
+          "command": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/150.0.7871.187/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer) --type=renderer --metrics-client-id=99addbd8-6020-4187-bf38-a07366bef4e4 --extension-process --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --lang=vi --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=10 --time-ticks-at-unix-epoch=-1785363626349421 --launch-time-ticks=71319849469 --shared-files --metrics-shmem-handle=1752395122,r,8193355061349154810,7051072774948238797,2097152 --field-trial-handle=1718379636,r,9560380636635868530,3919985061898289861,262144 --enable-features=DevToolsProtocolMonitor,JXLImageFormat --variations-seed-version=20260730-010032.011000-production --pseudonymization-salt-handle=1935764596,r,5342196030350579412,3250588766842493673,4 --trace-process-track-uuid=3190708995682289984 --seatbelt-client=78"
+        }
+      ],
+      "listeners": [
+        {
+          "command": "Python",
+          "pid": "39722",
+          "user": "andy",
+          "fd": "10u",
+          "node": "TCP",
+          "name": "127.0.0.1:8905"
+        }
+      ],
+      "http_probe": {
+        "status": 404,
+        "reachable": true,
+        "sample": "HTTP Error 404: Not Found"
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "requires_credentials": false
+      },
+      "timestamp": "2026-07-30T22:18:12.434778+00:00"
+    },
+    {
+      "id": "openapi_tool_quotes",
+      "type": "openapi_tool_server",
+      "location": "apo_gateway",
+      "endpoint": "http://127.0.0.1:8906",
+      "port": 8906,
+      "capabilities": [
+        "name",
+        "base_url",
+        "health_path"
+      ],
+      "authority": "tool_surface",
+      "state": "declared",
+      "health": "HEALTHY",
+      "health_note": "Python pid 11491 listening, HTTP 200",
+      "lease": {
+        "port": 8906,
+        "host": "127.0.0.1"
+      },
+      "lineage": "apo_gateway",
+      "cost": "unmeasured",
+      "value": "tool_surface",
+      "processes": [
+        {
+          "uid": "501",
+          "pid": "11490",
+          "ppid": "1",
+          "command": "bash -c cd /Users/andy/openapi-servers/servers/quotes-ui && nohup /Users/andy/openapi-servers/.venv/bin/uvicorn main:app --host 127.0.0.1 --port 8906 > /Users/andy/.apo/gateway/quotes_ui.log 2>&1 &"
+        }
+      ],
+      "listeners": [
+        {
+          "command": "Python",
+          "pid": "11491",
+          "user": "andy",
+          "fd": "10u",
+          "node": "TCP",
+          "name": "127.0.0.1:8906"
+        }
+      ],
+      "http_probe": {
+        "status": 200,
+        "reachable": true,
+        "sample": "{\"status\":\"healthy\"}"
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "requires_credentials": false
+      },
+      "timestamp": "2026-07-30T22:18:12.563969+00:00"
+    },
+    {
+      "id": "openapi_tool_flashcards",
+      "type": "openapi_tool_server",
+      "location": "apo_gateway",
+      "endpoint": "http://127.0.0.1:8907",
+      "port": 8907,
+      "capabilities": [
+        "name",
+        "base_url",
+        "health_path"
+      ],
+      "authority": "tool_surface",
+      "state": "declared",
+      "health": "PARTIAL",
+      "health_note": "Python pid 11512 listening, HTTP 404 (auth/endpoint mismatch)",
+      "lease": {
+        "port": 8907,
+        "host": "127.0.0.1"
+      },
+      "lineage": "apo_gateway",
+      "cost": "unmeasured",
+      "value": "tool_surface",
+      "processes": [
+        {
+          "uid": "501",
+          "pid": "11511",
+          "ppid": "1",
+          "command": "bash -c cd /Users/andy/openapi-servers/servers/flashcards && nohup /Users/andy/openapi-servers/.venv/bin/uvicorn main:app --host 127.0.0.1 --port 8907 > /Users/andy/.apo/gateway/flashcards.log 2>&1 &"
+        }
+      ],
+      "listeners": [
+        {
+          "command": "Python",
+          "pid": "11512",
+          "user": "andy",
+          "fd": "10u",
+          "node": "TCP",
+          "name": "127.0.0.1:8907"
+        }
+      ],
+      "http_probe": {
+        "status": 404,
+        "reachable": true,
+        "sample": "HTTP Error 404: Not Found"
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "requires_credentials": false
+      },
+      "timestamp": "2026-07-30T22:18:12.687759+00:00"
+    },
+    {
+      "id": "openapi_tool_time_ui",
+      "type": "openapi_tool_server",
+      "location": "apo_gateway",
+      "endpoint": "http://127.0.0.1:8908",
+      "port": 8908,
+      "capabilities": [
+        "name",
+        "base_url",
+        "health_path"
+      ],
+      "authority": "tool_surface",
+      "state": "declared",
+      "health": "PARTIAL",
+      "health_note": "Python pid 11537 listening, HTTP 404 (auth/endpoint mismatch)",
+      "lease": {
+        "port": 8908,
+        "host": "127.0.0.1"
+      },
+      "lineage": "apo_gateway",
+      "cost": "unmeasured",
+      "value": "tool_surface",
+      "processes": [
+        {
+          "uid": "501",
+          "pid": "11536",
+          "ppid": "1",
+          "command": "bash -c cd /Users/andy/openapi-servers/servers/time-ui && nohup /Users/andy/openapi-servers/.venv/bin/uvicorn main:app --host 127.0.0.1 --port 8908 > /Users/andy/.apo/gateway/time_ui.log 2>&1 &"
+        }
+      ],
+      "listeners": [
+        {
+          "command": "Python",
+          "pid": "11537",
+          "user": "andy",
+          "fd": "10u",
+          "node": "TCP",
+          "name": "127.0.0.1:8908"
+        }
+      ],
+      "http_probe": {
+        "status": 404,
+        "reachable": true,
+        "sample": "HTTP Error 404: Not Found"
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "requires_credentials": false
+      },
+      "timestamp": "2026-07-30T22:18:12.805766+00:00"
+    },
+    {
+      "id": "openapi_tool_summarizer",
+      "type": "openapi_tool_server",
+      "location": "apo_gateway",
+      "endpoint": "http://127.0.0.1:8909",
+      "port": 8909,
+      "capabilities": [
+        "name",
+        "base_url",
+        "health_path"
+      ],
+      "authority": "tool_surface",
+      "state": "declared",
+      "health": "PARTIAL",
+      "health_note": "Python pid 11979 listening, HTTP 404 (auth/endpoint mismatch)",
+      "lease": {
+        "port": 8909,
+        "host": "127.0.0.1"
+      },
+      "lineage": "apo_gateway",
+      "cost": "unmeasured",
+      "value": "tool_surface",
+      "processes": [
+        {
+          "uid": "501",
+          "pid": "11979",
+          "ppid": "11978",
+          "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python .venv/bin/uvicorn servers.summarizer_tool.main:app --host 127.0.0.1 --port 8909"
+        },
+        {
+          "uid": "501",
+          "pid": "11978",
+          "ppid": "1",
+          "command": "bash -c cd /Users/andy/openapi-servers && MODEL_URL=http://127.0.0.1:11434 MODEL=qwen2.5:1.5b nohup .venv/bin/uvicorn servers.summarizer_tool.main:app --host 127.0.0.1 --port 8909 > /Users/andy/.apo/gateway/summarizer_tool.log 2>&1 &"
+        }
+      ],
+      "listeners": [
+        {
+          "command": "Python",
+          "pid": "11979",
+          "user": "andy",
+          "fd": "10u",
+          "node": "TCP",
+          "name": "127.0.0.1:8909"
+        }
+      ],
+      "http_probe": {
+        "status": 404,
+        "reachable": true,
+        "sample": "HTTP Error 404: Not Found"
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "requires_credentials": false
+      },
+      "timestamp": "2026-07-30T22:18:12.921856+00:00"
+    },
+    {
+      "id": "openapi_tool_bitcoin",
+      "type": "openapi_tool_server",
+      "location": "apo_gateway",
+      "endpoint": "http://127.0.0.1:8910",
+      "port": 8910,
+      "capabilities": [
+        "name",
+        "base_url",
+        "health_path"
+      ],
+      "authority": "tool_surface",
+      "state": "declared",
+      "health": "PARTIAL",
+      "health_note": "Python pid 12224 listening, HTTP 404 (auth/endpoint mismatch)",
+      "lease": {
+        "port": 8910,
+        "host": "127.0.0.1"
+      },
+      "lineage": "apo_gateway",
+      "cost": "unmeasured",
+      "value": "tool_surface",
+      "processes": [
+        {
+          "uid": "501",
+          "pid": "12223",
+          "ppid": "1",
+          "command": "bash -c cd /Users/andy/openapi-servers/servers/bitcoin-price-predictor && nohup /Users/andy/openapi-servers/.venv/bin/uvicorn main:app --host 127.0.0.1 --port 8910 > /Users/andy/.apo/gateway/bitcoin_predictor.log 2>&1 &"
+        }
+      ],
+      "listeners": [
+        {
+          "command": "Python",
+          "pid": "12224",
+          "user": "andy",
+          "fd": "10u",
+          "node": "TCP",
+          "name": "127.0.0.1:8910"
+        }
+      ],
+      "http_probe": {
+        "status": 404,
+        "reachable": true,
+        "sample": "HTTP Error 404: Not Found"
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "requires_credentials": false
+      },
+      "timestamp": "2026-07-30T22:18:13.039627+00:00"
+    },
+    {
+      "id": "openapi_tool_sql",
+      "type": "openapi_tool_server",
+      "location": "apo_gateway",
+      "endpoint": "http://127.0.0.1:8911",
+      "port": 8911,
+      "capabilities": [
+        "name",
+        "base_url",
+        "health_path"
+      ],
+      "authority": "tool_surface",
+      "state": "declared",
+      "health": "PARTIAL",
+      "health_note": "Python pid 15563 listening, HTTP 404 (auth/endpoint mismatch)",
+      "lease": {
+        "port": 8911,
+        "host": "127.0.0.1"
+      },
+      "lineage": "apo_gateway",
+      "cost": "unmeasured",
+      "value": "tool_surface",
+      "processes": [
+        {
+          "uid": "501",
+          "pid": "15562",
+          "ppid": "1",
+          "command": "bash -c pkill -f \"uvicorn main:app --host 127.0.0.1 --port 8911\" 2>/dev/null; sleep 2; set -a; . /Users/andy/.config/hyperai/credentials.env; set +a; cd /Users/andy/openapi-servers/servers/sql && DATABASE_URL=sqlite:////tmp/apo_runtime.db nohup /Users/andy/openapi-servers/.venv/bin/uvicorn main:app --host 127.0.0.1 --port 8911 > /Users/andy/.apo/gateway/sql.log 2>&1 &"
+        }
+      ],
+      "listeners": [
+        {
+          "command": "Python",
+          "pid": "15563",
+          "user": "andy",
+          "fd": "11u",
+          "node": "TCP",
+          "name": "127.0.0.1:8911"
+        }
+      ],
+      "http_probe": {
+        "status": 404,
+        "reachable": true,
+        "sample": "HTTP Error 404: Not Found"
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "requires_credentials": true
+      },
+      "timestamp": "2026-07-30T22:18:13.162833+00:00"
+    },
+    {
+      "id": "openapi_tool_external_rag",
+      "type": "openapi_tool_server",
+      "location": "apo_gateway",
+      "endpoint": "http://127.0.0.1:8912",
+      "port": 8912,
+      "capabilities": [
+        "name",
+        "base_url",
+        "health_path"
+      ],
+      "authority": "tool_surface",
+      "state": "declared",
+      "health": "PARTIAL",
+      "health_note": "Python pid 28465 listening, HTTP 404 (auth/endpoint mismatch)",
+      "lease": {
+        "port": 8912,
+        "host": "127.0.0.1"
+      },
+      "lineage": "apo_gateway",
+      "cost": "unmeasured",
+      "value": "tool_surface",
+      "processes": [
+        {
+          "uid": "501",
+          "pid": "28463",
+          "ppid": "1",
+          "command": "bash -c cd /Users/andy/openapi-servers/servers/external-rag && nohup /Users/andy/openapi-servers/.venv/bin/python -m uvicorn main:app --host 127.0.0.1 --port 8912 > /Users/andy/.apo/gateway/external_rag.log 2>&1 &\\012sleep 25 && curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:8912/openapi.json && echo \" external_rag\""
+        }
+      ],
+      "listeners": [
+        {
+          "command": "Python",
+          "pid": "28465",
+          "user": "andy",
+          "fd": "18u",
+          "node": "TCP",
+          "name": "127.0.0.1:8912"
+        }
+      ],
+      "http_probe": {
+        "status": 404,
+        "reachable": true,
+        "sample": "HTTP Error 404: Not Found"
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "requires_credentials": true
+      },
+      "timestamp": "2026-07-30T22:18:13.283665+00:00"
+    },
+    {
+      "id": "openapi_tool_slack",
+      "type": "openapi_tool_server",
+      "location": "apo_gateway",
+      "endpoint": "http://127.0.0.1:8913",
+      "port": 8913,
+      "capabilities": [
+        "name",
+        "base_url",
+        "health_path"
+      ],
+      "authority": "tool_surface",
+      "state": "declared",
+      "health": "PARTIAL",
+      "health_note": "Python pid 24405 listening, HTTP 404 (auth/endpoint mismatch)",
+      "lease": {
+        "port": 8913,
+        "host": "127.0.0.1"
+      },
+      "lineage": "apo_gateway",
+      "cost": "unmeasured",
+      "value": "tool_surface",
+      "processes": [
+        {
+          "uid": "501",
+          "pid": "32147",
+          "ppid": "1",
+          "command": "/Applications/Slack.app/Contents/MacOS/Slack"
+        },
+        {
+          "uid": "501",
+          "pid": "32158",
+          "ppid": "32147",
+          "command": "/Applications/Slack.app/Contents/Frameworks/Slack Helper (Renderer).app/Contents/MacOS/Slack Helper (Renderer) --type=renderer --user-data-dir=/Users/andy/Library/Containers/com.tinyspeck.slackmacgap/Data/Library/Application Support/Slack --standard-schemes=app,slack-webapp-dev --enable-sandbox --secure-schemes=app,slack-webapp-dev,sentry-ipc --bypasscsp-schemes=slack-webapp-dev,sentry-ipc --cors-schemes=slack-webapp-dev,sentry-ipc --fetch-schemes=slack-webapp-dev,sentry-ipc --service-worker-schemes=slack-webapp-dev --app-path=/Applications/Slack.app/Contents/Resources/app-arm64.asar --enable-sandbox --enable-blink-features=ExperimentalJSProfiler --disable-blink-features=CustomizableSelect --force-color-profile=display-p3-d65 --lang=vi --num-raster-threads=4 --enable-zero-copy --enable-main-frame-before-activation --renderer-client-id=5 --time-ticks-at-unix-epoch=-1785363626293480 --launch-time-ticks=70392935981 --shared-files --field-trial-handle=1718379636,r,8239818555606844226,4809180975744704131,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,PdfUseShowSaveFilePicker,ScreenCaptureKitMac,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=AllowAggressiveThrottlingWithWebSocket,CalculateNativeWinOcclusion,DropInputEventsWhilePaintHolding,EnableWatermarkView,EnumerateDevicesRelaxedCache,HardwareMediaKeyHandling,IntensiveWakeUpThrottling,LocalNetworkAccessChecks,LogJsConsoleMessages,PostQuantumKyber,RequestInitiatorSiteLockEnfocement,ScreenAIOCREnabled,SkipEmptyDisplayHotplugEvent,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts,TraceSiteInstanceGetProcessCreation,WebRtcHideLocalIpsWithMdns,WinRetrieveSuggestionsOnlyOnDemand --variations-seed-version --pseudonymization-salt-handle=1935764596,r,4490797345827432269,7000117922969793443,4 --trace-process-track-uuid=3190708990997080739 --window-type=main --seatbelt-client=20"
+        },
+        {
+          "uid": "501",
+          "pid": "32162",
+          "ppid": "32147",
+          "command": "/Applications/Slack.app/Contents/Frameworks/Slack Helper.app/Contents/MacOS/Slack Helper --type=utility --utility-sub-type=audio.mojom.AudioService --lang=vi --service-sandbox-type=audio --message-loop-type-ui --user-data-dir=/Users/andy/Library/Containers/com.tinyspeck.slackmacgap/Data/Library/Application Support/Slack --standard-schemes=app,slack-webapp-dev --enable-sandbox --secure-schemes=app,slack-webapp-dev,sentry-ipc --bypasscsp-schemes=slack-webapp-dev,sentry-ipc --cors-schemes=slack-webapp-dev,sentry-ipc --fetch-schemes=slack-webapp-dev,sentry-ipc --service-worker-schemes=slack-webapp-dev --shared-files --field-trial-handle=1718379636,r,8239818555606844226,4809180975744704131,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,PdfUseShowSaveFilePicker,ScreenCaptureKitMac,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=AllowAggressiveThrottlingWithWebSocket,CalculateNativeWinOcclusion,DropInputEventsWhilePaintHolding,EnableWatermarkView,EnumerateDevicesRelaxedCache,HardwareMediaKeyHandling,IntensiveWakeUpThrottling,LocalNetworkAccessChecks,LogJsConsoleMessages,PostQuantumKyber,RequestInitiatorSiteLockEnfocement,ScreenAIOCREnabled,SkipEmptyDisplayHotplugEvent,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts,TraceSiteInstanceGetProcessCreation,WebRtcHideLocalIpsWithMdns,WinRetrieveSuggestionsOnlyOnDemand --variations-seed-version --pseudonymization-salt-handle=1935764596,r,4490797345827432269,7000117922969793443,4 --trace-process-track-uuid=3190708991934122588 --seatbelt-client=75"
+        }
+      ],
+      "listeners": [
+        {
+          "command": "Python",
+          "pid": "24405",
+          "user": "andy",
+          "fd": "10u",
+          "node": "TCP",
+          "name": "127.0.0.1:8913"
+        }
+      ],
+      "http_probe": {
+        "status": 404,
+        "reachable": true,
+        "sample": "HTTP Error 404: Not Found"
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "requires_credentials": true
+      },
+      "timestamp": "2026-07-30T22:18:13.401499+00:00"
+    },
+    {
+      "id": "openapi_tool_google_pse",
+      "type": "openapi_tool_server",
+      "location": "apo_gateway",
+      "endpoint": "http://127.0.0.1:8914",
+      "port": 8914,
+      "capabilities": [
+        "name",
+        "base_url",
+        "health_path"
+      ],
+      "authority": "tool_surface",
+      "state": "declared",
+      "health": "HEALTHY",
+      "health_note": "Python pid 24407 listening, HTTP 200",
+      "lease": {
+        "port": 8914,
+        "host": "127.0.0.1"
+      },
+      "lineage": "apo_gateway",
+      "cost": "unmeasured",
+      "value": "tool_surface",
+      "processes": [
+        {
+          "uid": "501",
+          "pid": "24404",
+          "ppid": "1",
+          "command": "bash -c pkill -f 'uvicorn main:app --host 127.0.0.1 --port 8913'; pkill -f 'uvicorn main:app --host 127.0.0.1 --port 8914'; sleep 2; cd /Users/andy/openapi-servers/servers/slack && nohup /Users/andy/openapi-servers/.venv/bin/uvicorn main:app --host 127.0.0.1 --port 8913 > /Users/andy/.apo/gateway/slack.log 2>&1 &\\012cd /Users/andy/openapi-servers/servers/google-pse && nohup /Users/andy/openapi-servers/.venv/bin/uvicorn main:app --host 127.0.0.1 --port 8914 > /Users/andy/.apo/gateway/google_pse.log 2>&1 &\\012sleep 2 && curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:8913/openapi.json && echo \" slack\" && curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:8914/openapi.json && echo \" gse\""
+        },
+        {
+          "uid": "501",
+          "pid": "24403",
+          "ppid": "1",
+          "command": "bash -c pkill -f 'uvicorn main:app --host 127.0.0.1 --port 8913'; pkill -f 'uvicorn main:app --host 127.0.0.1 --port 8914'; sleep 2; cd /Users/andy/openapi-servers/servers/slack && nohup /Users/andy/openapi-servers/.venv/bin/uvicorn main:app --host 127.0.0.1 --port 8913 > /Users/andy/.apo/gateway/slack.log 2>&1 &\\012cd /Users/andy/openapi-servers/servers/google-pse && nohup /Users/andy/openapi-servers/.venv/bin/uvicorn main:app --host 127.0.0.1 --port 8914 > /Users/andy/.apo/gateway/google_pse.log 2>&1 &\\012sleep 2 && curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:8913/openapi.json && echo \" slack\" && curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:8914/openapi.json && echo \" gse\""
+        }
+      ],
+      "listeners": [
+        {
+          "command": "Python",
+          "pid": "24407",
+          "user": "andy",
+          "fd": "10u",
+          "node": "TCP",
+          "name": "127.0.0.1:8914"
+        }
+      ],
+      "http_probe": {
+        "status": 200,
+        "reachable": true,
+        "sample": "{\"status\":\"healthy\",\"service\":\"google-pse\"}"
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "requires_credentials": true
+      },
+      "timestamp": "2026-07-30T22:18:13.524820+00:00"
+    },
+    {
+      "id": "mcp_pieces",
+      "type": "mcp_server",
+      "location": "apo_gateway",
+      "endpoint": "http://127.0.0.1:39300",
+      "port": 39300,
+      "capabilities": [
+        "name",
+        "base_url",
+        "sse_path"
+      ],
+      "authority": "mcp_bridge",
+      "state": "declared",
+      "health": "PARTIAL",
+      "health_note": "Pieces pid 876 listening, HTTP 404 (auth/endpoint mismatch)",
+      "lease": {
+        "port": 39300,
+        "host": "127.0.0.1"
+      },
+      "lineage": "apo_gateway",
+      "cost": "unmeasured",
+      "value": "mcp_bridge",
+      "processes": [
+        {
+          "uid": "501",
+          "pid": "876",
+          "ppid": "1",
+          "command": "/Applications/Pieces OS.app/Contents/MacOS/Pieces OS"
+        },
+        {
+          "uid": "501",
+          "pid": "807",
+          "ppid": "1",
+          "command": "/usr/bin/open -W /Applications/Pieces OS.app"
+        }
+      ],
+      "listeners": [
+        {
+          "command": "Pieces",
+          "pid": "876",
+          "user": "andy",
+          "fd": "21u",
+          "node": "TCP",
+          "name": "127.0.0.1:39300"
+        }
+      ],
+      "http_probe": {
+        "status": 404,
+        "reachable": true,
+        "sample": "HTTP Error 404: Not Found"
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "requires_local_transport": true
+      },
+      "timestamp": "2026-07-30T22:18:13.644241+00:00"
+    },
+    {
+      "id": "mcp_docker_mcp",
+      "type": "mcp_server",
+      "location": "apo_gateway",
+      "endpoint": "http://127.0.0.1:8811",
+      "port": 8811,
+      "capabilities": [
+        "name",
+        "base_url",
+        "sse_path"
+      ],
+      "authority": "mcp_bridge",
+      "state": "declared",
+      "health": "FAILED",
+      "health_note": "no process and no listener",
+      "lease": {
+        "port": 8811,
+        "host": "127.0.0.1"
+      },
+      "lineage": "apo_gateway",
+      "cost": "unmeasured",
+      "value": "mcp_bridge",
+      "processes": [],
+      "listeners": [],
+      "http_probe": {
+        "status": null,
+        "reachable": false,
+        "sample": "<urlopen error [Errno 61] Connection refused>"
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "requires_local_transport": true
+      },
+      "timestamp": "2026-07-30T22:18:13.761197+00:00"
+    },
+    {
+      "id": "credential_broker",
+      "type": "http_service",
+      "location": "hyperai_credentials",
+      "endpoint": "http://127.0.0.1:8765",
+      "port": 8765,
+      "capabilities": [
+        "base_url",
+        "health_path",
+        "proxy_path"
+      ],
+      "authority": "credential_authority",
+      "state": "declared",
+      "health": "HEALTHY",
+      "health_note": "Python pid 39662 listening, HTTP 200",
+      "lease": {
+        "port": 8765,
+        "host": "127.0.0.1"
+      },
+      "lineage": "hyperai_credentials",
+      "cost": "unmeasured",
+      "value": "credential_authority",
+      "processes": [],
+      "listeners": [
+        {
+          "command": "Python",
+          "pid": "39662",
+          "user": "andy",
+          "fd": "10u",
+          "node": "TCP",
+          "name": "127.0.0.1:8765"
+        }
+      ],
+      "http_probe": {
+        "status": 200,
+        "reachable": true,
+        "sample": "{\"timestamp\":\"2026-07-30T22:18:13.832042Z\",\"env_source\":\"/Users/andy/.config/hyperai/credentials.env\",\"total_keys\":76,\"a"
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "secret_lease_required": true
+      },
+      "timestamp": "2026-07-30T22:18:13.834197+00:00"
+    },
+    {
+      "id": "apo_gateway",
+      "type": "http_service",
+      "location": "hyperai",
+      "endpoint": "http://127.0.0.1:9011",
+      "port": 9011,
+      "capabilities": [
+        "base_url",
+        "health_path",
+        "models_path",
+        "tools_path"
+      ],
+      "authority": "model_tool_gateway",
+      "state": "declared",
+      "health": "HEALTHY",
+      "health_note": "Python pid 24643 listening, HTTP 200",
+      "lease": {
+        "port": 9011,
+        "host": "127.0.0.1"
+      },
+      "lineage": "hyperai",
+      "cost": "unmeasured",
+      "value": "model_tool_gateway",
+      "processes": [
+        {
+          "uid": "501",
+          "pid": "24641",
+          "ppid": "1",
+          "command": "bash -c cd /Users/andy/.apo/gateway && nohup python3 apo_gateway.py > /Users/andy/.apo/gateway/apo_gateway.log 2>&1 &\\012sleep 3 && curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:9011/tools/slack/openapi.json && echo \" slack via apo\""
+        },
+        {
+          "uid": "501",
+          "pid": "24643",
+          "ppid": "24641",
+          "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python apo_gateway.py"
+        }
+      ],
+      "listeners": [
+        {
+          "command": "Python",
+          "pid": "24643",
+          "user": "andy",
+          "fd": "10u",
+          "node": "TCP",
+          "name": "127.0.0.1:9011"
+        }
+      ],
+      "http_probe": {
+        "status": 200,
+        "reachable": true,
+        "sample": "{\"status\":\"ok\",\"apo\":\"personal\",\"node\":\"Andy-2.local\"}"
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "openai_compatible_shape": true
+      },
+      "timestamp": "2026-07-30T22:18:13.906181+00:00"
+    },
+    {
+      "id": "agent_os_dashboard",
+      "type": "http_service",
+      "location": "hyperai",
+      "endpoint": "http://127.0.0.1:8777",
+      "port": 8777,
+      "capabilities": [
+        "base_url"
+      ],
+      "authority": "runtime_cockpit",
+      "state": "declared",
+      "health": "HEALTHY",
+      "health_note": "Python pid 29819 listening, HTTP 200",
+      "lease": {
+        "port": 8777,
+        "host": "127.0.0.1"
+      },
+      "lineage": "hyperai",
+      "cost": "unmeasured",
+      "value": "runtime_cockpit",
+      "processes": [],
+      "listeners": [
+        {
+          "command": "Python",
+          "pid": "29819",
+          "user": "andy",
+          "fd": "10u",
+          "node": "TCP",
+          "name": "127.0.0.1:8777"
+        }
+      ],
+      "http_probe": {
+        "status": 200,
+        "reachable": true,
+        "sample": "\n    <html>\n    <head><title>Agent OS Dashboard</title>\n    <meta http-equiv=\"refresh\" content=\"5\">\n    <style>\n        "
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "internal_dashboard": true
+      },
+      "timestamp": "2026-07-30T22:18:13.979818+00:00"
+    },
+    {
+      "id": "lmstudio_bionic_api",
+      "type": "openai_compatible_server",
+      "location": "lmstudio",
+      "endpoint": "http://127.0.0.1:1235/v1",
+      "port": 1235,
+      "capabilities": [
+        "base_url",
+        "models_path",
+        "token_required"
+      ],
+      "authority": "local_inference",
+      "state": "declared",
+      "health": "PARTIAL",
+      "health_note": "Bionic pid 51004 listening, HTTP 401 (auth/endpoint mismatch)",
+      "lease": {
+        "port": 1235,
+        "host": "127.0.0.1"
+      },
+      "lineage": "lmstudio",
+      "cost": "unmeasured",
+      "value": "local_inference",
+      "processes": [],
+      "listeners": [
+        {
+          "command": "Bionic",
+          "pid": "51004",
+          "user": "andy",
+          "fd": "66u",
+          "node": "TCP",
+          "name": "127.0.0.1:1235"
+        }
+      ],
+      "http_probe": {
+        "status": 401,
+        "reachable": true,
+        "sample": "HTTP Error 401: Unauthorized"
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "requires_bearer_token_env": "LMSTUDIO_API_KEY",
+        "embedding_worker_missing": true
+      },
+      "timestamp": "2026-07-30T22:18:14.050372+00:00"
+    },
+    {
+      "id": "bionic_app",
+      "type": "desktop_electron_runtime",
+      "location": "element_labs",
+      "endpoint": "http://127.0.0.1:52993",
+      "port": 52993,
+      "capabilities": [
+        "base_url"
+      ],
+      "authority": "ai_agent_surface",
+      "state": "declared",
+      "health": "PARTIAL",
+      "health_note": "Bionic pid 51004 listening, HTTP 404 (auth/endpoint mismatch)",
+      "lease": {
+        "port": 52993,
+        "host": "127.0.0.1"
+      },
+      "lineage": "element_labs",
+      "cost": "unmeasured",
+      "value": "ai_agent_surface",
+      "processes": [],
+      "listeners": [
+        {
+          "command": "Bionic",
+          "pid": "51004",
+          "user": "andy",
+          "fd": "65u",
+          "node": "TCP",
+          "name": "127.0.0.1:52993"
+        }
+      ],
+      "http_probe": {
+        "status": 404,
+        "reachable": true,
+        "sample": "HTTP Error 404: Not Found"
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "app_bundle": "/Applications/Bionic.app"
+      },
+      "timestamp": "2026-07-30T22:18:14.122076+00:00"
+    },
+    {
+      "id": "ollama_macbook",
+      "type": "model_substrate",
+      "location": "ollama",
+      "endpoint": "http://127.0.0.1:11434",
+      "port": 11434,
+      "capabilities": [
+        "base_url",
+        "api_path"
+      ],
+      "authority": "local_inference",
+      "state": "declared",
+      "health": "PARTIAL",
+      "health_note": "ollama pid 864 listening, HTTP 404 (auth/endpoint mismatch)",
+      "lease": {
+        "port": 11434,
+        "host": "127.0.0.1"
+      },
+      "lineage": "ollama",
+      "cost": "unmeasured",
+      "value": "local_inference",
+      "processes": [],
+      "listeners": [
+        {
+          "command": "ollama",
+          "pid": "864",
+          "user": "andy",
+          "fd": "3u",
+          "node": "TCP",
+          "name": "*:11434"
+        }
+      ],
+      "http_probe": {
+        "status": 404,
+        "reachable": true,
+        "sample": "HTTP Error 404: Not Found"
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "local_only": true
+      },
+      "timestamp": "2026-07-30T22:18:14.191634+00:00"
+    },
+    {
+      "id": "pieces_mcp",
+      "type": "mcp_server",
+      "location": "pieces",
+      "endpoint": "http://127.0.0.1:39300",
+      "port": 39300,
+      "capabilities": [
+        "base_url",
+        "sse_path"
+      ],
+      "authority": "mcp_bridge",
+      "state": "declared",
+      "health": "PARTIAL",
+      "health_note": "Pieces pid 876 listening, HTTP 404 (auth/endpoint mismatch)",
+      "lease": {
+        "port": 39300,
+        "host": "127.0.0.1"
+      },
+      "lineage": "pieces",
+      "cost": "unmeasured",
+      "value": "mcp_bridge",
+      "processes": [],
+      "listeners": [
+        {
+          "command": "Pieces",
+          "pid": "876",
+          "user": "andy",
+          "fd": "21u",
+          "node": "TCP",
+          "name": "127.0.0.1:39300"
+        }
+      ],
+      "http_probe": {
+        "status": 404,
+        "reachable": true,
+        "sample": "HTTP Error 404: Not Found"
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "token_in_path": true
+      },
+      "timestamp": "2026-07-30T22:18:14.266115+00:00"
+    },
+    {
+      "id": "finalai",
+      "type": "http_service",
+      "location": "finalai",
+      "endpoint": "http://127.0.0.1:50520",
+      "port": 50520,
+      "capabilities": [
+        "base_url",
+        "models_path"
+      ],
+      "authority": "inference_runtime",
+      "state": "declared",
+      "health": "HEALTHY",
+      "health_note": "Python pid 809 listening, HTTP 200",
+      "lease": {
+        "port": 50520,
+        "host": "127.0.0.1"
+      },
+      "lineage": "finalai",
+      "cost": "unmeasured",
+      "value": "inference_runtime",
+      "processes": [
+        {
+          "uid": "501",
+          "pid": "809",
+          "ppid": "1",
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /Users/andy/.local/bin/finalai-openai-proxy.py --host 127.0.0.1 --port 50520"
+        }
+      ],
+      "listeners": [
+        {
+          "command": "Python",
+          "pid": "809",
+          "user": "andy",
+          "fd": "4u",
+          "node": "TCP",
+          "name": "127.0.0.1:50520"
+        }
+      ],
+      "http_probe": {
+        "status": 200,
+        "reachable": true,
+        "sample": "{\"object\": \"list\", \"data\": [{\"id\": \"finalai-titan\", \"object\": \"model\", \"created\": 1785449894, \"owned_by\": \"titan-finalai"
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "backend_reachability_unknown": true
+      },
+      "timestamp": "2026-07-30T22:18:14.337622+00:00"
+    },
+    {
+      "id": "redis_local",
+      "type": "cache_store",
+      "location": "redis",
+      "endpoint": "redis://127.0.0.1:6379",
+      "port": 6379,
+      "capabilities": [
+        "base_url"
+      ],
+      "authority": "memory_cache",
+      "state": "declared",
+      "health": "PARTIAL",
+      "health_note": "redis-ser pid 787 listening, HTTP None",
+      "lease": {
+        "port": 6379,
+        "host": "127.0.0.1"
+      },
+      "lineage": "redis",
+      "cost": "unmeasured",
+      "value": "memory_cache",
+      "processes": [],
+      "listeners": [
+        {
+          "command": "redis-ser",
+          "pid": "787",
+          "user": "andy",
+          "fd": "6u",
+          "node": "TCP",
+          "name": "127.0.0.1:6379"
+        },
+        {
+          "command": "redis-ser",
+          "pid": "787",
+          "user": "andy",
+          "fd": "7u",
+          "node": "TCP",
+          "name": "[::1]:6379"
+        }
+      ],
+      "http_probe": {
+        "status": null,
+        "reachable": false,
+        "sample": "<urlopen error unknown url type: redis>"
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "no_password_local": true
+      },
+      "timestamp": "2026-07-30T22:18:14.406059+00:00"
+    },
+    {
+      "id": "hyperai_product_runtime",
+      "type": "app_runtime",
+      "location": "hyperai-user-control-system",
+      "endpoint": "http://127.0.0.1:5000",
+      "port": 5000,
+      "capabilities": [
+        "base_url",
+        "frontend_url",
+        "backend_file"
+      ],
+      "authority": "product_shell",
+      "state": "declared",
+      "health": "PARTIAL",
+      "health_note": "ControlCe pid 526 listening, HTTP 403 (auth/endpoint mismatch)",
+      "lease": {
+        "port": 5000,
+        "host": "127.0.0.1",
+        "frontend_port": 4173
+      },
+      "lineage": "hyperai-user-control-system",
+      "cost": "unmeasured",
+      "value": "product_shell",
+      "processes": [],
+      "listeners": [
+        {
+          "command": "ControlCe",
+          "pid": "526",
+          "user": "andy",
+          "fd": "11u",
+          "node": "TCP",
+          "name": "*:5000"
+        },
+        {
+          "command": "ControlCe",
+          "pid": "526",
+          "user": "andy",
+          "fd": "12u",
+          "node": "TCP",
+          "name": "*:5000"
+        }
+      ],
+      "http_probe": {
+        "status": 403,
+        "reachable": true,
+        "sample": "HTTP Error 403: Forbidden"
+      },
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "stale_port_occupied_by_controlce": true,
+        "windows_only_canonical": true
+      },
+      "timestamp": "2026-07-30T22:18:14.477191+00:00"
+    },
+    {
+      "id": "docker_desktop",
+      "type": "container_fabric",
+      "location": "docker",
+      "endpoint": "",
+      "port": 12434,
+      "capabilities": [
+        "socket_path",
+        "daemon_port"
+      ],
+      "authority": "infrastructure_substrate",
+      "state": "declared",
+      "health": "PARTIAL",
+      "health_note": "com.docke pid 37054 listening, HTTP None",
+      "lease": {
+        "port": 12434,
+        "host": "127.0.0.1"
+      },
+      "lineage": "docker",
+      "cost": "unmeasured",
+      "value": "infrastructure_substrate",
+      "processes": [],
+      "listeners": [
+        {
+          "command": "com.docke",
+          "pid": "37054",
+          "user": "andy",
+          "fd": "59u",
+          "node": "TCP",
+          "name": "127.0.0.1:12434"
+        }
+      ],
+      "http_probe": {},
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "degraded_after_disk_pressure": true
+      },
+      "timestamp": "2026-07-30T22:18:14.549215+00:00"
+    },
+    {
+      "id": "federation_orchestrator",
+      "type": "registry",
+      "location": "aios",
+      "endpoint": "",
+      "port": null,
+      "capabilities": [
+        "registry_path",
+        "ooda_contract"
+      ],
+      "authority": "mission_router",
+      "state": "declared",
+      "health": "HEALTHY",
+      "health_note": "artifact exists: /Users/andy/HyperAI-Sync/runtime/federation_orchestrator",
+      "lease": {
+        "source_of_truth": "aios_ecosystem_runtime_registry.json"
+      },
+      "lineage": "aios",
+      "cost": "unmeasured",
+      "value": "mission_router",
+      "processes": [],
+      "listeners": [],
+      "http_probe": {},
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "read_only_when_product_stale": true
+      },
+      "timestamp": "2026-07-30T22:18:14.597431+00:00"
+    },
+    {
+      "id": "memory_writer",
+      "type": "service_runtime",
+      "location": "aios",
+      "endpoint": "",
+      "port": null,
+      "capabilities": [
+        "script",
+        "state",
+        "journal"
+      ],
+      "authority": "evidence_recorder",
+      "state": "declared",
+      "health": "HEALTHY",
+      "health_note": "artifact exists: /Users/andy/HyperAI-Sync/tools/update_memory.py",
+      "lease": {},
+      "lineage": "aios",
+      "cost": "unmeasured",
+      "value": "evidence_recorder",
+      "processes": [],
+      "listeners": [],
+      "http_probe": {},
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "single_writer": true
+      },
+      "timestamp": "2026-07-30T22:18:14.645119+00:00"
+    },
+    {
+      "id": "codex_operator_runtime",
+      "type": "desktop_operator_runtime",
+      "location": "codex",
+      "endpoint": "",
+      "port": null,
+      "capabilities": [
+        "codex_config",
+        "mcp_config"
+      ],
+      "authority": "worker_surface",
+      "state": "declared",
+      "health": "HEALTHY",
+      "health_note": "artifact exists: /Users/andy/.codex/config.toml",
+      "lease": {},
+      "lineage": "codex",
+      "cost": "unmeasured",
+      "value": "worker_surface",
+      "processes": [],
+      "listeners": [],
+      "http_probe": {},
+      "log_path": null,
+      "log_tail": "",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "not_mission_root_by_default": true
+      },
+      "timestamp": "2026-07-30T22:18:14.691119+00:00"
+    },
+    {
+      "id": "aios_mission_router",
+      "type": "service_runtime",
+      "location": "aios",
+      "endpoint": "",
+      "port": 9001,
+      "capabilities": [
+        "cli_path",
+        "mcp_server_path"
+      ],
+      "authority": "local_root",
+      "state": "declared",
+      "health": "PARTIAL",
+      "health_note": "Python pid 63375 listening, HTTP None",
+      "lease": {
+        "daemon_port": 9001,
+        "host": "127.0.0.1"
+      },
+      "lineage": "aios",
+      "cost": "unmeasured",
+      "value": "local_root",
+      "processes": [
+        {
+          "uid": "501",
+          "pid": "63375",
+          "ppid": "1",
+          "command": "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /Users/andy/workbench/aios_runtime_orchestrator/aios_mission_router.py daemon --host 127.0.0.1 --port 9001"
+        }
+      ],
+      "listeners": [
+        {
+          "command": "Python",
+          "pid": "63375",
+          "user": "andy",
+          "fd": "3u",
+          "node": "TCP",
+          "name": "127.0.0.1:9001"
+        }
+      ],
+      "http_probe": {},
+      "log_path": "/Users/andy/Library/Logs/aios_mission_router.log",
+      "log_tail": "2026-07-30T22:04:00.843461+00:00 127.0.0.1 \"GET /health HTTP/1.1\" 200 -\n2026-07-30T22:04:46.063118+00:00 127.0.0.1 \"GET /health HTTP/1.1\" 200 -\n2026-07-30T22:04:57.864807+00:00 127.0.0.1 \"GET /health ",
+      "qualified": true,
+      "missing_fields": [],
+      "gates": {
+        "shell_fallback_blocked_until_allowed": true
+      },
+      "timestamp": "2026-07-30T22:18:14.759944+00:00"
+    }
+  ]
+}

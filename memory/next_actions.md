@@ -1,3 +1,3 @@
 # Next Actions
 
-- Verify 192.168.3.28:11434 Ollama if macmini is expected live; otherwise update canon to mark macmini_ollama CURRENTLY_UNREACHABLE.
+- Decide whether to reactivate APOmegaEndpoint (requires cleaning terminated duplicates and likely System Settings approval/reboot) or continue with DB-only observation bridge.

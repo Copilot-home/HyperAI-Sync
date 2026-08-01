@@ -1,0 +1,717 @@
+{
+  "audited_at": "2026-07-31T10:41:01.870225+00:00",
+  "total": 35,
+  "qualified": 27,
+  "plans": [
+    {
+      "id": "apo_upstream_macbook_ollama",
+      "role": "PROVIDER",
+      "observed_runtime": true,
+      "role_resolved": true,
+      "authority_resolved": true,
+      "auth_resolved": true,
+      "dependencies_resolved": true,
+      "health_probed": true,
+      "lifecycle_known": true,
+      "operationally_qualified": true,
+      "missing": [],
+      "compute_claim": "launchd_or_daemon",
+      "proposed_binding": "ready for gate approval",
+      "pids": [
+        796,
+        831,
+        864
+      ]
+    },
+    {
+      "id": "apo_upstream_titan_ollama",
+      "role": "PROVIDER",
+      "observed_runtime": false,
+      "role_resolved": false,
+      "authority_resolved": false,
+      "auth_resolved": true,
+      "dependencies_resolved": false,
+      "health_probed": false,
+      "lifecycle_known": true,
+      "operationally_qualified": false,
+      "missing": [
+        "observed_runtime",
+        "role_resolved",
+        "authority_resolved",
+        "dependencies_resolved",
+        "health_probed"
+      ],
+      "compute_claim": "manual_or_recycle",
+      "proposed_binding": "bind when observed_runtime,role_resolved,authority_resolved,dependencies_resolved,health_probed resolved",
+      "pids": []
+    },
+    {
+      "id": "apo_upstream_macmini_ollama",
+      "role": "PROVIDER",
+      "observed_runtime": false,
+      "role_resolved": false,
+      "authority_resolved": false,
+      "auth_resolved": true,
+      "dependencies_resolved": false,
+      "health_probed": false,
+      "lifecycle_known": true,
+      "operationally_qualified": false,
+      "missing": [
+        "observed_runtime",
+        "role_resolved",
+        "authority_resolved",
+        "dependencies_resolved",
+        "health_probed"
+      ],
+      "compute_claim": "manual_or_recycle",
+      "proposed_binding": "bind when observed_runtime,role_resolved,authority_resolved,dependencies_resolved,health_probed resolved",
+      "pids": []
+    },
+    {
+      "id": "apo_upstream_lmstudio",
+      "role": "PROVIDER",
+      "observed_runtime": true,
+      "role_resolved": true,
+      "authority_resolved": true,
+      "auth_resolved": true,
+      "dependencies_resolved": true,
+      "health_probed": true,
+      "lifecycle_known": true,
+      "operationally_qualified": true,
+      "missing": [],
+      "compute_claim": "process_group",
+      "proposed_binding": "ready for gate approval",
+      "pids": [
+        3852,
+        8954,
+        51016,
+        51072,
+        51110,
+        52858
+      ]
+    },
+    {
+      "id": "openapi_tool_time",
+      "role": "TOOL",
+      "observed_runtime": true,
+      "role_resolved": true,
+      "authority_resolved": true,
+      "auth_resolved": true,
+      "dependencies_resolved": true,
+      "health_probed": true,
+      "lifecycle_known": true,
+      "operationally_qualified": true,
+      "missing": [],
+      "compute_claim": "process_group",
+      "proposed_binding": "ready for gate approval",
+      "pids": [
+        39718
+      ]
+    },
+    {
+      "id": "openapi_tool_weather",
+      "role": "TOOL",
+      "observed_runtime": true,
+      "role_resolved": true,
+      "authority_resolved": true,
+      "auth_resolved": true,
+      "dependencies_resolved": true,
+      "health_probed": true,
+      "lifecycle_known": true,
+      "operationally_qualified": true,
+      "missing": [],
+      "compute_claim": "process_group",
+      "proposed_binding": "ready for gate approval",
+      "pids": [
+        39719
+      ]
+    },
+    {
+      "id": "openapi_tool_filesystem",
+      "role": "TOOL",
+      "observed_runtime": true,
+      "role_resolved": true,
+      "authority_resolved": true,
+      "auth_resolved": true,
+      "dependencies_resolved": true,
+      "health_probed": true,
+      "lifecycle_known": true,
+      "operationally_qualified": true,
+      "missing": [],
+      "compute_claim": "process_group",
+      "proposed_binding": "ready for gate approval",
+      "pids": [
+        39720
+      ]
+    },
+    {
+      "id": "openapi_tool_git",
+      "role": "TOOL",
+      "observed_runtime": true,
+      "role_resolved": true,
+      "authority_resolved": true,
+      "auth_resolved": true,
+      "dependencies_resolved": true,
+      "health_probed": true,
+      "lifecycle_known": true,
+      "operationally_qualified": true,
+      "missing": [],
+      "compute_claim": "process_group",
+      "proposed_binding": "ready for gate approval",
+      "pids": [
+        39721
+      ]
+    },
+    {
+      "id": "openapi_tool_memory",
+      "role": "TOOL",
+      "observed_runtime": true,
+      "role_resolved": true,
+      "authority_resolved": true,
+      "auth_resolved": true,
+      "dependencies_resolved": true,
+      "health_probed": true,
+      "lifecycle_known": true,
+      "operationally_qualified": true,
+      "missing": [],
+      "compute_claim": "process_group",
+      "proposed_binding": "ready for gate approval",
+      "pids": [
+        39722
+      ]
+    },
+    {
+      "id": "openapi_tool_quotes",
+      "role": "TOOL",
+      "observed_runtime": true,
+      "role_resolved": true,
+      "authority_resolved": true,
+      "auth_resolved": true,
+      "dependencies_resolved": true,
+      "health_probed": true,
+      "lifecycle_known": true,
+      "operationally_qualified": true,
+      "missing": [],
+      "compute_claim": "process_group",
+      "proposed_binding": "ready for gate approval",
+      "pids": [
+        11490,
+        11491
+      ]
+    },
+    {
+      "id": "openapi_tool_flashcards",
+      "role": "TOOL",
+      "observed_runtime": true,
+      "role_resolved": true,
+      "authority_resolved": true,
+      "auth_resolved": true,
+      "dependencies_resolved": true,
+      "health_probed": true,
+      "lifecycle_known": true,
+      "operationally_qualified": true,
+      "missing": [],
+      "compute_claim": "process_group",
+      "proposed_binding": "ready for gate approval",
+      "pids": [
+        11511,
+        11512
+      ]
+    },
+    {
+      "id": "openapi_tool_time_ui",
+      "role": "TOOL",
+      "observed_runtime": true,
+      "role_resolved": true,
+      "authority_resolved": true,
+      "auth_resolved": true,
+      "dependencies_resolved": true,
+      "health_probed": true,
+      "lifecycle_known": true,
+      "operationally_qualified": true,
+      "missing": [],
+      "compute_claim": "process_group",
+      "proposed_binding": "ready for gate approval",
+      "pids": [
+        11536,
+        11537
+      ]
+    },
+    {
+      "id": "openapi_tool_summarizer",
+      "role": "TOOL",
+      "observed_runtime": true,
+      "role_resolved": true,
+      "authority_resolved": true,
+      "auth_resolved": true,
+      "dependencies_resolved": true,
+      "health_probed": true,
+      "lifecycle_known": true,
+      "operationally_qualified": true,
+      "missing": [],
+      "compute_claim": "process_group",
+      "proposed_binding": "ready for gate approval",
+      "pids": [
+        11978,
+        11979
+      ]
+    },
+    {
+      "id": "openapi_tool_bitcoin",
+      "role": "TOOL",
+      "observed_runtime": true,
+      "role_resolved": true,
+      "authority_resolved": true,
+      "auth_resolved": true,
+      "dependencies_resolved": true,
+      "health_probed": true,
+      "lifecycle_known": true,
+      "operationally_qualified": true,
+      "missing": [],
+      "compute_claim": "process_group",
+      "proposed_binding": "ready for gate approval",
+      "pids": [
+        12223,
+        12224
+      ]
+    },
+    {
+      "id": "openapi_tool_sql",
+      "role": "TOOL",
+      "observed_runtime": true,
+      "role_resolved": true,
+      "authority_resolved": true,
+      "auth_resolved": true,
+      "dependencies_resolved": true,
+      "health_probed": true,
+      "lifecycle_known": true,
+      "operationally_qualified": true,
+      "missing": [],
+      "compute_claim": "process_group",
+      "proposed_binding": "ready for gate approval",
+      "pids": [
+        15562,
+        15563
+      ]
+    },
+    {
+      "id": "openapi_tool_external_rag",
+      "role": "TOOL",
+      "observed_runtime": true,
+      "role_resolved": true,
+      "authority_resolved": true,
+      "auth_resolved": true,
+      "dependencies_resolved": true,
+      "health_probed": true,
+      "lifecycle_known": true,
+      "operationally_qualified": true,
+      "missing": [],
+      "compute_claim": "process_group",
+      "proposed_binding": "ready for gate approval",
+      "pids": [
+        28463,
+        28465,
+        28475
+      ]
+    },
+    {
+      "id": "openapi_tool_slack",
+      "role": "TOOL",
+      "observed_runtime": true,
+      "role_resolved": true,
+      "authority_resolved": true,
+      "auth_resolved": false,
+      "dependencies_resolved": true,
+      "health_probed": true,
+      "lifecycle_known": true,
+      "operationally_qualified": false,
+      "missing": [
+        "auth:SLACK_BOT_TOKEN",
+        "auth:SLACK_TEAM_ID"
+      ],
+      "compute_claim": "process_group",
+      "proposed_binding": "bind when auth:SLACK_BOT_TOKEN,auth:SLACK_TEAM_ID resolved",
+      "pids": [
+        24403,
+        24404,
+        24405
+      ]
+    },
+    {
+      "id": "openapi_tool_google_pse",
+      "role": "TOOL",
+      "observed_runtime": true,
+      "role_resolved": true,
+      "authority_resolved": true,
+      "auth_resolved": false,
+      "dependencies_resolved": true,
+      "health_probed": true,
+      "lifecycle_known": true,
+      "operationally_qualified": false,
+      "missing": [
+        "auth:GOOGLE_PSE_CX"
+      ],
+      "compute_claim": "process_group",
+      "proposed_binding": "bind when auth:GOOGLE_PSE_CX resolved",
+      "pids": [
+        24403,
+        24404,
+        24407
+      ]
+    },
+    {
+      "id": "mcp_pieces",
+      "role": "MCP",
+      "observed_runtime": true,
+      "role_resolved": true,
+      "authority_resolved": true,
+      "auth_resolved": true,
+      "dependencies_resolved": true,
+      "health_probed": true,
+      "lifecycle_known": true,
+      "operationally_qualified": true,
+      "missing": [],
+      "compute_claim": "launchd_or_daemon",
+      "proposed_binding": "ready for gate approval",
+      "pids": [
+        18272,
+        19359
+      ]
+    },
+    {
+      "id": "mcp_docker_mcp",
+      "role": "MCP",
+      "observed_runtime": false,
+      "role_resolved": false,
+      "authority_resolved": false,
+      "auth_resolved": true,
+      "dependencies_resolved": false,
+      "health_probed": false,
+      "lifecycle_known": true,
+      "operationally_qualified": false,
+      "missing": [
+        "observed_runtime",
+        "role_resolved",
+        "authority_resolved",
+        "dependencies_resolved",
+        "health_probed"
+      ],
+      "compute_claim": "manual_or_recycle",
+      "proposed_binding": "bind when observed_runtime,role_resolved,authority_resolved,dependencies_resolved,health_probed resolved",
+      "pids": []
+    },
+    {
+      "id": "credential_broker",
+      "role": "BROKER",
+      "observed_runtime": true,
+      "role_resolved": true,
+      "authority_resolved": true,
+      "auth_resolved": true,
+      "dependencies_resolved": true,
+      "health_probed": true,
+      "lifecycle_known": true,
+      "operationally_qualified": true,
+      "missing": [],
+      "compute_claim": "process_group",
+      "proposed_binding": "ready for gate approval",
+      "pids": [
+        10344,
+        10357
+      ]
+    },
+    {
+      "id": "apo_gateway",
+      "role": "PROVIDER",
+      "observed_runtime": true,
+      "role_resolved": true,
+      "authority_resolved": true,
+      "auth_resolved": true,
+      "dependencies_resolved": true,
+      "health_probed": true,
+      "lifecycle_known": true,
+      "operationally_qualified": true,
+      "missing": [],
+      "compute_claim": "process_group",
+      "proposed_binding": "ready for gate approval",
+      "pids": [
+        24641,
+        24643
+      ]
+    },
+    {
+      "id": "agent_os_dashboard",
+      "role": "WORKER",
+      "observed_runtime": true,
+      "role_resolved": true,
+      "authority_resolved": true,
+      "auth_resolved": true,
+      "dependencies_resolved": true,
+      "health_probed": true,
+      "lifecycle_known": true,
+      "operationally_qualified": true,
+      "missing": [],
+      "compute_claim": "none",
+      "proposed_binding": "ready for gate approval",
+      "pids": [
+        29817,
+        29819
+      ]
+    },
+    {
+      "id": "lmstudio_bionic_api",
+      "role": "PROVIDER",
+      "observed_runtime": true,
+      "role_resolved": true,
+      "authority_resolved": true,
+      "auth_resolved": true,
+      "dependencies_resolved": true,
+      "health_probed": true,
+      "lifecycle_known": true,
+      "operationally_qualified": true,
+      "missing": [],
+      "compute_claim": "process_group",
+      "proposed_binding": "ready for gate approval",
+      "pids": [
+        3852,
+        8954,
+        37293,
+        51004,
+        51007,
+        51010,
+        51011,
+        51016,
+        51072,
+        51110,
+        52858
+      ]
+    },
+    {
+      "id": "bionic_app",
+      "role": "WORKER",
+      "observed_runtime": true,
+      "role_resolved": true,
+      "authority_resolved": true,
+      "auth_resolved": true,
+      "dependencies_resolved": true,
+      "health_probed": true,
+      "lifecycle_known": true,
+      "operationally_qualified": true,
+      "missing": [],
+      "compute_claim": "none",
+      "proposed_binding": "ready for gate approval",
+      "pids": [
+        51004,
+        51007,
+        51010,
+        51011,
+        51016,
+        51072,
+        52858
+      ]
+    },
+    {
+      "id": "ollama_macbook",
+      "role": "PROVIDER",
+      "observed_runtime": true,
+      "role_resolved": true,
+      "authority_resolved": true,
+      "auth_resolved": true,
+      "dependencies_resolved": true,
+      "health_probed": true,
+      "lifecycle_known": true,
+      "operationally_qualified": true,
+      "missing": [],
+      "compute_claim": "launchd_or_daemon",
+      "proposed_binding": "ready for gate approval",
+      "pids": [
+        796,
+        831,
+        864
+      ]
+    },
+    {
+      "id": "pieces_mcp",
+      "role": "MCP",
+      "observed_runtime": true,
+      "role_resolved": true,
+      "authority_resolved": true,
+      "auth_resolved": true,
+      "dependencies_resolved": true,
+      "health_probed": true,
+      "lifecycle_known": true,
+      "operationally_qualified": true,
+      "missing": [],
+      "compute_claim": "launchd_or_daemon",
+      "proposed_binding": "ready for gate approval",
+      "pids": [
+        18272,
+        19359
+      ]
+    },
+    {
+      "id": "finalai",
+      "role": "PROVIDER",
+      "observed_runtime": true,
+      "role_resolved": true,
+      "authority_resolved": true,
+      "auth_resolved": true,
+      "dependencies_resolved": true,
+      "health_probed": true,
+      "lifecycle_known": true,
+      "operationally_qualified": true,
+      "missing": [],
+      "compute_claim": "launchd_or_daemon",
+      "proposed_binding": "ready for gate approval",
+      "pids": [
+        809
+      ]
+    },
+    {
+      "id": "redis_local",
+      "role": "MEMORY",
+      "observed_runtime": true,
+      "role_resolved": true,
+      "authority_resolved": true,
+      "auth_resolved": true,
+      "dependencies_resolved": true,
+      "health_probed": true,
+      "lifecycle_known": true,
+      "operationally_qualified": true,
+      "missing": [],
+      "compute_claim": "none",
+      "proposed_binding": "ready for gate approval",
+      "pids": [
+        787,
+        809,
+        2540,
+        10064
+      ]
+    },
+    {
+      "id": "hyperai_product_runtime",
+      "role": "PRODUCT",
+      "observed_runtime": false,
+      "role_resolved": false,
+      "authority_resolved": false,
+      "auth_resolved": true,
+      "dependencies_resolved": false,
+      "health_probed": false,
+      "lifecycle_known": true,
+      "operationally_qualified": false,
+      "missing": [
+        "observed_runtime",
+        "role_resolved",
+        "authority_resolved",
+        "dependencies_resolved",
+        "health_probed"
+      ],
+      "compute_claim": "manual_or_recycle",
+      "proposed_binding": "bind when observed_runtime,role_resolved,authority_resolved,dependencies_resolved,health_probed resolved",
+      "pids": []
+    },
+    {
+      "id": "docker_desktop",
+      "role": "INFRA",
+      "observed_runtime": true,
+      "role_resolved": true,
+      "authority_resolved": true,
+      "auth_resolved": true,
+      "dependencies_resolved": true,
+      "health_probed": true,
+      "lifecycle_known": true,
+      "operationally_qualified": true,
+      "missing": [],
+      "compute_claim": "none",
+      "proposed_binding": "ready for gate approval",
+      "pids": [
+        37164,
+        37180,
+        37186,
+        37193,
+        37199,
+        37265,
+        37293
+      ]
+    },
+    {
+      "id": "federation_orchestrator",
+      "role": "ORCHESTRATOR",
+      "observed_runtime": false,
+      "role_resolved": false,
+      "authority_resolved": false,
+      "auth_resolved": true,
+      "dependencies_resolved": false,
+      "health_probed": false,
+      "lifecycle_known": true,
+      "operationally_qualified": false,
+      "missing": [
+        "observed_runtime",
+        "role_resolved",
+        "authority_resolved",
+        "dependencies_resolved",
+        "health_probed"
+      ],
+      "compute_claim": "manual_or_recycle",
+      "proposed_binding": "bind when observed_runtime,role_resolved,authority_resolved,dependencies_resolved,health_probed resolved",
+      "pids": []
+    },
+    {
+      "id": "memory_writer",
+      "role": "MEMORY",
+      "observed_runtime": false,
+      "role_resolved": false,
+      "authority_resolved": false,
+      "auth_resolved": true,
+      "dependencies_resolved": false,
+      "health_probed": false,
+      "lifecycle_known": true,
+      "operationally_qualified": false,
+      "missing": [
+        "observed_runtime",
+        "role_resolved",
+        "authority_resolved",
+        "dependencies_resolved",
+        "health_probed"
+      ],
+      "compute_claim": "manual_or_recycle",
+      "proposed_binding": "bind when observed_runtime,role_resolved,authority_resolved,dependencies_resolved,health_probed resolved",
+      "pids": []
+    },
+    {
+      "id": "codex_operator_runtime",
+      "role": "WORKER",
+      "observed_runtime": true,
+      "role_resolved": true,
+      "authority_resolved": true,
+      "auth_resolved": true,
+      "dependencies_resolved": true,
+      "health_probed": true,
+      "lifecycle_known": true,
+      "operationally_qualified": true,
+      "missing": [],
+      "compute_claim": "none",
+      "proposed_binding": "ready for gate approval",
+      "pids": [
+        72140
+      ]
+    },
+    {
+      "id": "aios_mission_router",
+      "role": "ROOT",
+      "observed_runtime": true,
+      "role_resolved": true,
+      "authority_resolved": true,
+      "auth_resolved": true,
+      "dependencies_resolved": true,
+      "health_probed": true,
+      "lifecycle_known": true,
+      "operationally_qualified": true,
+      "missing": [],
+      "compute_claim": "launchd_or_daemon",
+      "proposed_binding": "ready for gate approval",
+      "pids": [
+        63375
+      ]
+    }
+  ]
+}

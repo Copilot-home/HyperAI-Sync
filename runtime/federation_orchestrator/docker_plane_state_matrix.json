@@ -1,0 +1,255 @@
+{
+  "HOST_RESOURCE_PLANE": {
+    "current_state": "BOUND",
+    "same_frame_evidence": [
+      "df_root",
+      "df_data",
+      "df_home",
+      "vm_stat",
+      "memory_pressure",
+      "docker_raw"
+    ],
+    "dependencies": [],
+    "resource_cost": {
+      "docker_raw_gb": 460.43,
+      "root_df": "Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on\n/dev/disk3s3s1   460Gi    15Gi   2.5Gi    86%    459k   26M    2%   /\n",
+      "data_df": "Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on\n/dev/disk3s1   460Gi   412Gi   2.5Gi   100%    5.4M   26M   17%   /System/Volumes/Data\n",
+      "home_df": "Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on\n/dev/disk3s1   460Gi   412Gi   2.5Gi   100%    5.4M   26M   17%   /System/Volumes/Data\n"
+    },
+    "failure_signature": null,
+    "value_produced": "capacity to sustain Docker",
+    "confidence": "HIGH",
+    "unknowns": [
+      "actual physical blocks of Docker.raw",
+      "memory pressure trend"
+    ]
+  },
+  "DESKTOP_UI_PLANE": {
+    "current_state": "ALIVE",
+    "same_frame_evidence": [
+      "desktop_processes"
+    ],
+    "dependencies": [
+      "HOST_RESOURCE_PLANE"
+    ],
+    "resource_cost": null,
+    "failure_signature": null,
+    "value_produced": "user control surface",
+    "confidence": "HIGH",
+    "unknowns": []
+  },
+  "BACKEND_CONTROL_PLANE": {
+    "current_state": "ALIVE",
+    "same_frame_evidence": [
+      "desktop_processes",
+      "socket_lsof"
+    ],
+    "dependencies": [
+      "HOST_RESOURCE_PLANE"
+    ],
+    "resource_cost": null,
+    "failure_signature": null,
+    "value_produced": "API control",
+    "confidence": "HIGH",
+    "unknowns": [
+      "backend responsiveness"
+    ]
+  },
+  "VIRTUALIZATION_VM_PLANE": {
+    "current_state": "PROCESS_ALIVE",
+    "same_frame_evidence": [
+      "desktop_processes",
+      "vm/console.log",
+      "vm/init.log"
+    ],
+    "dependencies": [
+      "HOST_RESOURCE_PLANE",
+      "PERSISTENT_DATA_PLANE"
+    ],
+    "resource_cost": null,
+    "failure_signature": null,
+    "value_produced": "Linux VM for engine",
+    "confidence": "HIGH",
+    "unknowns": [
+      "VM filesystem state"
+    ]
+  },
+  "ENGINE_DAEMON_PLANE": {
+    "current_state": "ALIVE",
+    "same_frame_evidence": [
+      "docker_ps",
+      "docker_info",
+      "sock_ping"
+    ],
+    "dependencies": [
+      "VIRTUALIZATION_VM_PLANE",
+      "BACKEND_CONTROL_PLANE"
+    ],
+    "resource_cost": null,
+    "failure_signature": null,
+    "value_produced": "container orchestration",
+    "confidence": "HIGH",
+    "unknowns": [
+      "daemon latency"
+    ]
+  },
+  "SOCKET_AND_CONTEXT_PLANE": {
+    "current_state": "PRESENT",
+    "same_frame_evidence": [
+      "sockets",
+      "docker_context",
+      "socket_lsof"
+    ],
+    "dependencies": [
+      "ENGINE_DAEMON_PLANE"
+    ],
+    "resource_cost": null,
+    "failure_signature": null,
+    "value_produced": "client-to-daemon path",
+    "confidence": "MEDIUM",
+    "unknowns": [
+      "daemon on the other side"
+    ]
+  },
+  "CONTAINER_RUNTIME_PLANE": {
+    "current_state": "4 running",
+    "same_frame_evidence": [
+      "docker_ps"
+    ],
+    "dependencies": [
+      "ENGINE_DAEMON_PLANE"
+    ],
+    "resource_cost": null,
+    "failure_signature": null,
+    "value_produced": "container execution",
+    "confidence": "HIGH",
+    "unknowns": [
+      "health of each container"
+    ]
+  },
+  "NETWORK_AND_PORT_FORWARDING_PLANE": {
+    "current_state": "UNVERIFIED",
+    "same_frame_evidence": [
+      "published_ports"
+    ],
+    "dependencies": [
+      "CONTAINER_RUNTIME_PLANE"
+    ],
+    "resource_cost": null,
+    "failure_signature": null,
+    "value_produced": "host/container network reachability",
+    "confidence": "LOW",
+    "unknowns": [
+      "actual reachability"
+    ]
+  },
+  "BUILD_AND_BUILDKIT_PLANE": {
+    "current_state": "PROCESS_ALIVE",
+    "same_frame_evidence": [
+      "buildx",
+      "desktop_processes"
+    ],
+    "dependencies": [
+      "ENGINE_DAEMON_PLANE"
+    ],
+    "resource_cost": null,
+    "failure_signature": null,
+    "value_produced": "image build",
+    "confidence": "MEDIUM",
+    "unknowns": [
+      "builder active"
+    ]
+  },
+  "KUBERNETES_PLANE": {
+    "current_state": "UNVERIFIED",
+    "same_frame_evidence": [
+      "kube_context"
+    ],
+    "dependencies": [
+      "ENGINE_DAEMON_PLANE"
+    ],
+    "resource_cost": null,
+    "failure_signature": null,
+    "value_produced": "K8s cluster",
+    "confidence": "LOW",
+    "unknowns": [
+      "kubectl not available or context missing"
+    ]
+  },
+  "EXTENSION_SERVICE_PLANE": {
+    "current_state": "UNVERIFIED",
+    "same_frame_evidence": [
+      "docker_extension"
+    ],
+    "dependencies": [
+      "ENGINE_DAEMON_PLANE"
+    ],
+    "resource_cost": null,
+    "failure_signature": null,
+    "value_produced": "extension UX",
+    "confidence": "LOW",
+    "unknowns": [
+      "extension list may hang"
+    ]
+  },
+  "AI_INFERENCE_SANDBOX_PLANE": {
+    "current_state": "UNVERIFIED",
+    "same_frame_evidence": [
+      "desktop_processes"
+    ],
+    "dependencies": [
+      "CONTAINER_RUNTIME_PLANE",
+      "NETWORK_AND_PORT_FORWARDING_PLANE"
+    ],
+    "resource_cost": null,
+    "failure_signature": null,
+    "value_produced": "AI sandbox",
+    "confidence": "LOW",
+    "unknowns": [
+      "no active probe"
+    ]
+  },
+  "MCP_CAPABILITY_PLANE": {
+    "current_state": "INACTIVE",
+    "same_frame_evidence": [
+      "mcp_port",
+      "mcp_http"
+    ],
+    "dependencies": [
+      "NETWORK_AND_PORT_FORWARDING_PLANE",
+      "CONTAINER_RUNTIME_PLANE"
+    ],
+    "resource_cost": null,
+    "failure_signature": null,
+    "value_produced": "MCP server",
+    "confidence": "LOW",
+    "unknowns": [
+      "MCP value not verified"
+    ]
+  },
+  "PERSISTENT_DATA_PLANE": {
+    "current_state": "BOUND",
+    "same_frame_evidence": [
+      "docker_raw",
+      "df_dockerraw"
+    ],
+    "dependencies": [
+      "HOST_RESOURCE_PLANE"
+    ],
+    "resource_cost": {
+      "path": "/Users/andy/Library/Containers/com.docker.docker/Data/vms/0/data/Docker.raw",
+      "size_bytes": 494384709632,
+      "size_gb": 460.43,
+      "du_preview": "7.1G\t/Users/andy/Library/Containers/com.docker.docker/Data/vms/0/data/Docker.raw",
+      "ls_preview": "-rw-r--r--  1 andy  staff   460G Jul 31 20:10 /Users/andy/Library/Containers/com.docker.docker/Data/vms/0/data/Docker.raw",
+      "exists": true
+    },
+    "failure_signature": null,
+    "value_produced": "state persistence",
+    "confidence": "HIGH",
+    "unknowns": [
+      "write amplification",
+      "sparse vs allocated"
+    ]
+  }
+}

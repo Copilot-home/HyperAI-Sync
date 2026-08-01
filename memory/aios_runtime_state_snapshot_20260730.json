@@ -1,0 +1,753 @@
+{
+  "schema_version": "2026-07-30.aios-cross-system-state.v1",
+  "collected_at": "2026-07-30T15:34:54.621927+00:00",
+  "host": "MacBook_M2",
+  "orchestration_mode": "agent_chain",
+  "agent_chain_mission_id": "mission-7203556b7d204b3d",
+  "green_chain_probes": {
+    "phoenix_9001": {
+      "status": 200,
+      "body": "{\"capability_claim\": \"health_and_audit_only\", \"classification\": \"LIVE\", \"host\": \"0.0.0.0\", \"port\": 9001, \"probes\": {\"oll"
+    },
+    "finalai_proxy_50520": {
+      "status": 200,
+      "body": "{\"object\": \"list\", \"data\": [{\"id\": \"finalai-titan\", \"object\": \"model\", \"created\": 1785425692, \"owned_by\": \"titan-finalai"
+    },
+    "ollama_11434": {
+      "status": 200,
+      "body": "{\"models\":[{\"name\":\"gpt-5.5:latest\",\"model\":\"gpt-5.5:latest\",\"modified_at\":\"2026-07-29T22:32:59.845232367+07:00\",\"size\":"
+    },
+    "apΩ_gateway_9011": {
+      "status": 200,
+      "body": "{\"status\":\"ok\",\"apo\":\"personal\",\"node\":\"Andy-2.local\"}"
+    },
+    "credentials_8765": {
+      "status": 200,
+      "body": "{\"timestamp\":\"2026-07-30T15:34:52.291963Z\",\"env_source\":\"/run/secrets/credentials.env\",\"total_keys\":77,\"active_keys\":{\"d"
+    },
+    "redis_6379": {
+      "open": true
+    },
+    "pieces_39300": {
+      "status": null,
+      "error": "HTTP Error 404: Not Found"
+    },
+    "postman_10533": {
+      "status": null,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    "titan_5052": {
+      "status": null,
+      "error": "<urlopen error timed out>"
+    }
+  },
+  "launchd_snapshot": [
+    "82929\t0\tcom.hyperai.phoenix.bridge",
+    "-\t0\tcom.hyperai.orchestrator",
+    "61300\t120\tcom.hyperai.os.master",
+    "-\t0\tcom.hyperai.clawbot.metrics",
+    "-\t0\tcom.hyperai.escalation",
+    "809\t0\tcom.hyperai.finalai-openai-proxy",
+    "-\t0\tcom.hyperai.telemetry.router.loop",
+    "-\t0\tcom.hyperai.nightwatch",
+    "-\t0\tcom.hyperai.startup"
+  ],
+  "disk_df": "Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on\n/dev/disk3s1   460Gi   402Gi    16Gi    97%    5.4M  171M    3%   /System/Volumes/Data",
+  "docker_state_ref": "/Users/andy/HyperAI-Sync/memory/docker_state_snapshot_20260730.json",
+  "docker_state": {
+    "schema_version": "2026-07-30.docker-state-snapshot.v1",
+    "collected_at": "2026-07-30T15:33:49.494153+00:00",
+    "host": "MacBook_M2",
+    "docker_context": "desktop-linux",
+    "info": {
+      "ID": "b3f637da-a758-4a55-a02d-e42d80a4cd42",
+      "Containers": 5,
+      "ContainersRunning": 5,
+      "ContainersPaused": 0,
+      "ContainersStopped": 0,
+      "Images": 5,
+      "Driver": "overlayfs",
+      "DriverStatus": [
+        [
+          "driver-type",
+          "io.containerd.snapshotter.v1"
+        ]
+      ],
+      "Plugins": {
+        "Volume": [
+          "local"
+        ],
+        "Network": [
+          "bridge",
+          "host",
+          "ipvlan",
+          "macvlan",
+          "null",
+          "overlay"
+        ],
+        "Authorization": null,
+        "Log": [
+          "awslogs",
+          "fluentd",
+          "gcplogs",
+          "gelf",
+          "journald",
+          "json-file",
+          "local",
+          "splunk",
+          "syslog"
+        ]
+      },
+      "MemoryLimit": true,
+      "SwapLimit": true,
+      "CpuCfsPeriod": true,
+      "CpuCfsQuota": true,
+      "CPUShares": true,
+      "CPUSet": true,
+      "PidsLimit": true,
+      "IPv4Forwarding": true,
+      "Debug": false,
+      "NFd": 86,
+      "OomKillDisable": false,
+      "NGoroutines": 119,
+      "SystemTime": "2026-07-30T15:33:49.895796138Z",
+      "LoggingDriver": "json-file",
+      "CgroupDriver": "cgroupfs",
+      "CgroupVersion": "2",
+      "NEventsListener": 14,
+      "KernelVersion": "6.12.76-linuxkit",
+      "OperatingSystem": "Docker Desktop",
+      "OSVersion": "",
+      "OSType": "linux",
+      "Architecture": "aarch64",
+      "IndexServerAddress": "https://index.docker.io/v1/",
+      "RegistryConfig": {
+        "InsecureRegistryCIDRs": [
+          "::1/128",
+          "127.0.0.0/8"
+        ],
+        "IndexConfigs": {
+          "docker.io": {
+            "Name": "docker.io",
+            "Mirrors": [],
+            "Secure": true,
+            "Official": true
+          },
+          "hubproxy.docker.internal:5555": {
+            "Name": "hubproxy.docker.internal:5555",
+            "Mirrors": [],
+            "Secure": false,
+            "Official": false
+          }
+        },
+        "Mirrors": []
+      },
+      "NCPU": 10,
+      "MemTotal": 8321515520,
+      "GenericResources": null,
+      "DockerRootDir": "/var/lib/docker",
+      "HttpProxy": "http.docker.internal:3128",
+      "HttpsProxy": "http.docker.internal:3128",
+      "NoProxy": "hubproxy.docker.internal",
+      "Name": "docker-desktop",
+      "Labels": [
+        "com.docker.desktop.address=unix:///Users/andy/Library/Containers/com.docker.docker/Data/docker-cli.sock"
+      ],
+      "ExperimentalBuild": false,
+      "ServerVersion": "29.6.2",
+      "Runtimes": {
+        "io.containerd.runc.v2": {
+          "path": "runc",
+          "status": {
+            "org.opencontainers.runtime-spec.features": "{\"ociVersionMin\":\"1.0.0\",\"ociVersionMax\":\"1.2.1\",\"hooks\":[\"prestart\",\"createRuntime\",\"createContainer\",\"startContainer\",\"poststart\",\"poststop\"],\"mountOptions\":[\"async\",\"atime\",\"bind\",\"defaults\",\"dev\",\"diratime\",\"dirsync\",\"exec\",\"iversion\",\"lazytime\",\"loud\",\"mand\",\"noatime\",\"nodev\",\"nodiratime\",\"noexec\",\"noiversion\",\"nolazytime\",\"nomand\",\"norelatime\",\"nostrictatime\",\"nosuid\",\"nosymfollow\",\"private\",\"ratime\",\"rbind\",\"rdev\",\"rdiratime\",\"relatime\",\"remount\",\"rexec\",\"rnoatime\",\"rnodev\",\"rnodiratime\",\"rnoexec\",\"rnorelatime\",\"rnostrictatime\",\"rnosuid\",\"rnosymfollow\",\"ro\",\"rprivate\",\"rrelatime\",\"rro\",\"rrw\",\"rshared\",\"rslave\",\"rstrictatime\",\"rsuid\",\"rsymfollow\",\"runbindable\",\"rw\",\"shared\",\"silent\",\"slave\",\"strictatime\",\"suid\",\"symfollow\",\"sync\",\"tmpcopyup\",\"unbindable\"],\"linux\":{\"namespaces\":[\"cgroup\",\"ipc\",\"mount\",\"network\",\"pid\",\"time\",\"user\",\"uts\"],\"capabilities\":[\"CAP_CHOWN\",\"CAP_DAC_OVERRIDE\",\"CAP_DAC_READ_SEARCH\",\"CAP_FOWNER\",\"CAP_FSETID\",\"CAP_KILL\",\"CAP_SETGID\",\"CAP_SETUID\",\"CAP_SETPCAP\",\"CAP_LINUX_IMMUTABLE\",\"CAP_NET_BIND_SERVICE\",\"CAP_NET_BROADCAST\",\"CAP_NET_ADMIN\",\"CAP_NET_RAW\",\"CAP_IPC_LOCK\",\"CAP_IPC_OWNER\",\"CAP_SYS_MODULE\",\"CAP_SYS_RAWIO\",\"CAP_SYS_CHROOT\",\"CAP_SYS_PTRACE\",\"CAP_SYS_PACCT\",\"CAP_SYS_ADMIN\",\"CAP_SYS_BOOT\",\"CAP_SYS_NICE\",\"CAP_SYS_RESOURCE\",\"CAP_SYS_TIME\",\"CAP_SYS_TTY_CONFIG\",\"CAP_MKNOD\",\"CAP_LEASE\",\"CAP_AUDIT_WRITE\",\"CAP_AUDIT_CONTROL\",\"CAP_SETFCAP\",\"CAP_MAC_OVERRIDE\",\"CAP_MAC_ADMIN\",\"CAP_SYSLOG\",\"CAP_WAKE_ALARM\",\"CAP_BLOCK_SUSPEND\",\"CAP_AUDIT_READ\",\"CAP_PERFMON\",\"CAP_BPF\",\"CAP_CHECKPOINT_RESTORE\"],\"cgroup\":{\"v1\":true,\"v2\":true,\"systemd\":true,\"systemdUser\":true,\"rdma\":true},\"seccomp\":{\"enabled\":true,\"actions\":[\"SCMP_ACT_ALLOW\",\"SCMP_ACT_ERRNO\",\"SCMP_ACT_KILL\",\"SCMP_ACT_KILL_PROCESS\",\"SCMP_ACT_KILL_THREAD\",\"SCMP_ACT_LOG\",\"SCMP_ACT_NOTIFY\",\"SCMP_ACT_TRACE\",\"SCMP_ACT_TRAP\"],\"operators\":[\"SCMP_CMP_EQ\",\"SCMP_CMP_GE\",\"SCMP_CMP_GT\",\"SCMP_CMP_LE\",\"SCMP_CMP_LT\",\"SCMP_CMP_MASKED_EQ\",\"SCMP_CMP_NE\"],\"archs\":[\"SCMP_ARCH_AARCH64\",\"SCMP_ARCH_ARM\",\"SCMP_ARCH_MIPS\",\"SCMP_ARCH_MIPS64\",\"SCMP_ARCH_MIPS64N32\",\"SCMP_ARCH_MIPSEL\",\"SCMP_ARCH_MIPSEL64\",\"SCMP_ARCH_MIPSEL64N32\",\"SCMP_ARCH_PPC\",\"SCMP_ARCH_PPC64\",\"SCMP_ARCH_PPC64LE\",\"SCMP_ARCH_RISCV64\",\"SCMP_ARCH_S390\",\"SCMP_ARCH_S390X\",\"SCMP_ARCH_X32\",\"SCMP_ARCH_X86\",\"SCMP_ARCH_X86_64\"],\"knownFlags\":[\"SECCOMP_FILTER_FLAG_TSYNC\",\"SECCOMP_FILTER_FLAG_SPEC_ALLOW\",\"SECCOMP_FILTER_FLAG_LOG\"],\"supportedFlags\":[\"SECCOMP_FILTER_FLAG_TSYNC\",\"SECCOMP_FILTER_FLAG_SPEC_ALLOW\",\"SECCOMP_FILTER_FLAG_LOG\"]},\"apparmor\":{\"enabled\":true},\"selinux\":{\"enabled\":true},\"intelRdt\":{\"enabled\":true},\"mountExtensions\":{\"idmap\":{\"enabled\":true}}},\"annotations\":{\"io.github.seccomp.libseccomp.version\":\"2.5.4\",\"org.opencontainers.runc.checkpoint.enabled\":\"true\",\"org.opencontainers.runc.commit\":\"v1.3.6-0-g491b69ba\",\"org.opencontainers.runc.version\":\"1.3.6\\n\"},\"potentiallyUnsafeConfigAnnotations\":[\"bundle\",\"org.systemd.property.\",\"org.criu.config\"]}"
+          }
+        },
+        "runc": {
+          "path": "runc",
+          "status": {
+            "org.opencontainers.runtime-spec.features": "{\"ociVersionMin\":\"1.0.0\",\"ociVersionMax\":\"1.2.1\",\"hooks\":[\"prestart\",\"createRuntime\",\"createContainer\",\"startContainer\",\"poststart\",\"poststop\"],\"mountOptions\":[\"async\",\"atime\",\"bind\",\"defaults\",\"dev\",\"diratime\",\"dirsync\",\"exec\",\"iversion\",\"lazytime\",\"loud\",\"mand\",\"noatime\",\"nodev\",\"nodiratime\",\"noexec\",\"noiversion\",\"nolazytime\",\"nomand\",\"norelatime\",\"nostrictatime\",\"nosuid\",\"nosymfollow\",\"private\",\"ratime\",\"rbind\",\"rdev\",\"rdiratime\",\"relatime\",\"remount\",\"rexec\",\"rnoatime\",\"rnodev\",\"rnodiratime\",\"rnoexec\",\"rnorelatime\",\"rnostrictatime\",\"rnosuid\",\"rnosymfollow\",\"ro\",\"rprivate\",\"rrelatime\",\"rro\",\"rrw\",\"rshared\",\"rslave\",\"rstrictatime\",\"rsuid\",\"rsymfollow\",\"runbindable\",\"rw\",\"shared\",\"silent\",\"slave\",\"strictatime\",\"suid\",\"symfollow\",\"sync\",\"tmpcopyup\",\"unbindable\"],\"linux\":{\"namespaces\":[\"cgroup\",\"ipc\",\"mount\",\"network\",\"pid\",\"time\",\"user\",\"uts\"],\"capabilities\":[\"CAP_CHOWN\",\"CAP_DAC_OVERRIDE\",\"CAP_DAC_READ_SEARCH\",\"CAP_FOWNER\",\"CAP_FSETID\",\"CAP_KILL\",\"CAP_SETGID\",\"CAP_SETUID\",\"CAP_SETPCAP\",\"CAP_LINUX_IMMUTABLE\",\"CAP_NET_BIND_SERVICE\",\"CAP_NET_BROADCAST\",\"CAP_NET_ADMIN\",\"CAP_NET_RAW\",\"CAP_IPC_LOCK\",\"CAP_IPC_OWNER\",\"CAP_SYS_MODULE\",\"CAP_SYS_RAWIO\",\"CAP_SYS_CHROOT\",\"CAP_SYS_PTRACE\",\"CAP_SYS_PACCT\",\"CAP_SYS_ADMIN\",\"CAP_SYS_BOOT\",\"CAP_SYS_NICE\",\"CAP_SYS_RESOURCE\",\"CAP_SYS_TIME\",\"CAP_SYS_TTY_CONFIG\",\"CAP_MKNOD\",\"CAP_LEASE\",\"CAP_AUDIT_WRITE\",\"CAP_AUDIT_CONTROL\",\"CAP_SETFCAP\",\"CAP_MAC_OVERRIDE\",\"CAP_MAC_ADMIN\",\"CAP_SYSLOG\",\"CAP_WAKE_ALARM\",\"CAP_BLOCK_SUSPEND\",\"CAP_AUDIT_READ\",\"CAP_PERFMON\",\"CAP_BPF\",\"CAP_CHECKPOINT_RESTORE\"],\"cgroup\":{\"v1\":true,\"v2\":true,\"systemd\":true,\"systemdUser\":true,\"rdma\":true},\"seccomp\":{\"enabled\":true,\"actions\":[\"SCMP_ACT_ALLOW\",\"SCMP_ACT_ERRNO\",\"SCMP_ACT_KILL\",\"SCMP_ACT_KILL_PROCESS\",\"SCMP_ACT_KILL_THREAD\",\"SCMP_ACT_LOG\",\"SCMP_ACT_NOTIFY\",\"SCMP_ACT_TRACE\",\"SCMP_ACT_TRAP\"],\"operators\":[\"SCMP_CMP_EQ\",\"SCMP_CMP_GE\",\"SCMP_CMP_GT\",\"SCMP_CMP_LE\",\"SCMP_CMP_LT\",\"SCMP_CMP_MASKED_EQ\",\"SCMP_CMP_NE\"],\"archs\":[\"SCMP_ARCH_AARCH64\",\"SCMP_ARCH_ARM\",\"SCMP_ARCH_MIPS\",\"SCMP_ARCH_MIPS64\",\"SCMP_ARCH_MIPS64N32\",\"SCMP_ARCH_MIPSEL\",\"SCMP_ARCH_MIPSEL64\",\"SCMP_ARCH_MIPSEL64N32\",\"SCMP_ARCH_PPC\",\"SCMP_ARCH_PPC64\",\"SCMP_ARCH_PPC64LE\",\"SCMP_ARCH_RISCV64\",\"SCMP_ARCH_S390\",\"SCMP_ARCH_S390X\",\"SCMP_ARCH_X32\",\"SCMP_ARCH_X86\",\"SCMP_ARCH_X86_64\"],\"knownFlags\":[\"SECCOMP_FILTER_FLAG_TSYNC\",\"SECCOMP_FILTER_FLAG_SPEC_ALLOW\",\"SECCOMP_FILTER_FLAG_LOG\"],\"supportedFlags\":[\"SECCOMP_FILTER_FLAG_TSYNC\",\"SECCOMP_FILTER_FLAG_SPEC_ALLOW\",\"SECCOMP_FILTER_FLAG_LOG\"]},\"apparmor\":{\"enabled\":true},\"selinux\":{\"enabled\":true},\"intelRdt\":{\"enabled\":true},\"mountExtensions\":{\"idmap\":{\"enabled\":true}}},\"annotations\":{\"io.github.seccomp.libseccomp.version\":\"2.5.4\",\"org.opencontainers.runc.checkpoint.enabled\":\"true\",\"org.opencontainers.runc.commit\":\"v1.3.6-0-g491b69ba\",\"org.opencontainers.runc.version\":\"1.3.6\\n\"},\"potentiallyUnsafeConfigAnnotations\":[\"bundle\",\"org.systemd.property.\",\"org.criu.config\"]}"
+          }
+        }
+      },
+      "DefaultRuntime": "runc",
+      "Swarm": {
+        "NodeID": "",
+        "NodeAddr": "",
+        "LocalNodeState": "inactive",
+        "ControlAvailable": false,
+        "Error": "",
+        "RemoteManagers": null
+      },
+      "LiveRestoreEnabled": false,
+      "Isolation": "",
+      "InitBinary": "docker-init",
+      "ContainerdCommit": {
+        "ID": "e53c7c1516c3b2bff98eb76f1f4117477e6f4e66"
+      },
+      "RuncCommit": {
+        "ID": "v1.3.6-0-g491b69ba"
+      },
+      "InitCommit": {
+        "ID": "de40ad0"
+      },
+      "SecurityOptions": [
+        "name=seccomp,profile=builtin",
+        "name=cgroupns"
+      ],
+      "FirewallBackend": {
+        "Driver": "iptables"
+      },
+      "CDISpecDirs": [
+        "/etc/cdi",
+        "/var/run/cdi"
+      ],
+      "DiscoveredDevices": [
+        {
+          "Source": "cdi",
+          "ID": "docker.com/gpu=webgpu"
+        }
+      ],
+      "Containerd": {
+        "Address": "/run/containerd/containerd.sock",
+        "Namespaces": {
+          "Containers": "moby",
+          "Plugins": "plugins.moby"
+        }
+      },
+      "Warnings": null,
+      "ClientInfo": {
+        "Debug": false,
+        "Version": "29.6.2",
+        "DefaultAPIVersion": "1.55",
+        "GitCommit": "dfc4efb",
+        "GoVersion": "go1.26.5",
+        "Os": "darwin",
+        "Arch": "arm64",
+        "BuildTime": "Thu Jul 16 16:11:17 2026",
+        "Context": "desktop-linux",
+        "Plugins": [
+          {
+            "SchemaVersion": "0.1.0",
+            "Vendor": "Docker Inc.",
+            "Version": "v1.103.0",
+            "ShortDescription": "Docker AI Agent Runner",
+            "Name": "agent",
+            "Path": "/Users/andy/.docker/cli-plugins/docker-agent"
+          },
+          {
+            "SchemaVersion": "0.1.0",
+            "Vendor": "Docker Inc.",
+            "Version": "v1.27.0",
+            "ShortDescription": "Docker AI Agent - Ask Gordon",
+            "Name": "ai",
+            "Path": "/Users/andy/.docker/cli-plugins/docker-ai"
+          },
+          {
+            "SchemaVersion": "0.1.0",
+            "Vendor": "Docker Inc.",
+            "Version": "v0.35.0-desktop.2",
+            "ShortDescription": "Docker Buildx",
+            "Name": "buildx",
+            "Path": "/Users/andy/.docker/cli-plugins/docker-buildx"
+          },
+          {
+            "SchemaVersion": "0.1.0",
+            "Vendor": "Docker Inc.",
+            "Version": "v5.3.1",
+            "ShortDescription": "Docker Compose",
+            "Name": "compose",
+            "Path": "/Users/andy/.docker/cli-plugins/docker-compose"
+          },
+          {
+            "SchemaVersion": "0.1.0",
+            "Vendor": "Docker Inc.",
+            "Version": "0.0.47",
+            "ShortDescription": "Get a shell into any image or container",
+            "Name": "debug",
+            "Path": "/Users/andy/.docker/cli-plugins/docker-debug"
+          },
+          {
+            "SchemaVersion": "0.1.0",
+            "Vendor": "Docker Inc.",
+            "Version": "v0.4.2",
+            "ShortDescription": "Docker Desktop commands",
+            "Name": "desktop",
+            "Path": "/Users/andy/.docker/cli-plugins/docker-desktop"
+          },
+          {
+            "SchemaVersion": "0.1.0",
+            "Vendor": "Docker Inc.",
+            "Version": "v0.0.7",
+            "ShortDescription": "CLI for managing Docker Hardened Images",
+            "Name": "dhi",
+            "Path": "/Users/andy/.docker/cli-plugins/docker-dhi"
+          },
+          {
+            "SchemaVersion": "0.1.0",
+            "Vendor": "Docker Inc.",
+            "Version": "v0.2.31",
+            "ShortDescription": "Manages Docker extensions",
+            "Name": "extension",
+            "Path": "/Users/andy/.docker/cli-plugins/docker-extension"
+          },
+          {
+            "SchemaVersion": "0.1.0",
+            "Vendor": "Docker Inc.",
+            "Version": "v1.4.0",
+            "ShortDescription": "Creates Docker-related starter files for your project",
+            "Name": "init",
+            "Path": "/Users/andy/.docker/cli-plugins/docker-init"
+          },
+          {
+            "SchemaVersion": "0.1.0",
+            "Vendor": "Docker Inc.",
+            "Version": "v0.43.1",
+            "ShortDescription": "Docker MCP Plugin",
+            "Name": "mcp",
+            "Path": "/Users/andy/.docker/cli-plugins/docker-mcp"
+          },
+          {
+            "SchemaVersion": "0.1.0",
+            "Vendor": "Docker Inc.",
+            "Version": "v1.2.6",
+            "ShortDescription": "Docker Model Runner",
+            "Name": "model",
+            "Path": "/Users/andy/.docker/cli-plugins/docker-model"
+          },
+          {
+            "SchemaVersion": "0.1.0",
+            "Vendor": "Docker Inc.",
+            "Version": "v0.6.9",
+            "ShortDescription": "Docker Offload",
+            "Name": "offload",
+            "Path": "/Users/andy/.docker/cli-plugins/docker-offload"
+          },
+          {
+            "SchemaVersion": "0.1.0",
+            "Vendor": "Docker Inc.",
+            "Version": "v0.2.0",
+            "ShortDescription": "Docker Pass Secrets Manager Plugin (beta)",
+            "Name": "pass",
+            "Path": "/Users/andy/.docker/cli-plugins/docker-pass"
+          },
+          {
+            "SchemaVersion": "0.1.0",
+            "Vendor": "Docker Inc.",
+            "Version": "v0.13.0",
+            "ShortDescription": "\"docker sandbox\" is deprecated, use Docker Sandboxes instead",
+            "URL": "https://www.docker.com/products/docker-sandboxes",
+            "Hidden": true,
+            "Name": "sandbox",
+            "Path": "/Users/andy/.docker/cli-plugins/docker-sandbox"
+          },
+          {
+            "SchemaVersion": "0.1.0",
+            "Vendor": "Docker Inc.",
+            "Version": "v1.23.1",
+            "ShortDescription": "Docker Scout",
+            "Name": "scout",
+            "Path": "/Users/andy/.docker/cli-plugins/docker-scout"
+          }
+        ],
+        "Warnings": null
+      }
+    },
+    "df": [
+      {
+        "Active": "5",
+        "Reclaimable": "0B (0%)",
+        "Size": "2.197GB",
+        "TotalCount": "5",
+        "Type": "Images"
+      },
+      {
+        "Active": "5",
+        "Reclaimable": "0B (0%)",
+        "Size": "10.38MB",
+        "TotalCount": "5",
+        "Type": "Containers"
+      },
+      {
+        "Active": "3",
+        "Reclaimable": "0B (0%)",
+        "Size": "1.431GB",
+        "TotalCount": "3",
+        "Type": "Local Volumes"
+      },
+      {
+        "Active": "0",
+        "Reclaimable": "0B",
+        "Size": "0B",
+        "TotalCount": "0",
+        "Type": "Build Cache"
+      }
+    ],
+    "containers": [
+      {
+        "Command": "\"python -m uvicorn t…\"",
+        "CreatedAt": "2026-07-30 18:04:02 +0700 +07",
+        "HealthStatus": "none",
+        "ID": "166c426ce14c",
+        "Image": "hyperai-credentials:latest",
+        "Labels": "com.docker.compose.config-hash=795178e8d9455abde756e434ac01f800b44bdaac9f88ff932f2f474e334d0235,com.docker.compose.container-number=1,com.docker.compose.depends_on=,com.docker.compose.image=sha256:7714cf60d17261da72fb379a5bbd213d70b399871655dc0714c1cf9a012986ca,com.docker.compose.oneoff=False,com.docker.compose.project.config_files=/Users/andy/HyperAI-Sync/docker-compose.yml,com.docker.compose.project.working_dir=/Users/andy/HyperAI-Sync,com.docker.compose.project=hyperai-sync,com.docker.compose.service=hyperai-credentials,com.docker.compose.version=5.3.1,desktop.docker.io/binds/0/Source=/Users/andy/.config/hyperai/credentials.env,desktop.docker.io/binds/0/SourceKind=hostFile,desktop.docker.io/binds/0/Target=/run/secrets/credentials.env,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/8765/tcp=127.0.0.1:8765",
+        "LocalVolumes": "0",
+        "Mounts": "/host_mnt/User…",
+        "Names": "hyperai-credentials",
+        "Networks": "hyperai-sync_default",
+        "Platform": {
+          "architecture": "arm64",
+          "os": "linux"
+        },
+        "Ports": "127.0.0.1:8765->8765/tcp",
+        "RunningFor": "4 hours ago",
+        "Size": "0B",
+        "State": "running",
+        "Status": "Up 4 hours"
+      },
+      {
+        "Command": "\"/bin/cloud-provider…\"",
+        "CreatedAt": "2026-07-27 10:42:22 +0700 +07",
+        "HealthStatus": "none",
+        "ID": "35a145fdc08f",
+        "Image": "docker/desktop-cloud-provider-kind:v0.6.0",
+        "Labels": "desktop.docker.io/binds/0/Source=/var/run/docker.sock,desktop.docker.io/binds/0/SourceKind=dockerSocketProxied,desktop.docker.io/binds/0/Target=/var/run/docker.sock,desktop.docker.io/ports.scheme=v2,io.kubernetes.pod.namespace=kube-system",
+        "LocalVolumes": "1",
+        "Mounts": "c87b43b4e9429b…,/run/host-serv…",
+        "Names": "kind-cloud-provider",
+        "Networks": "kind",
+        "Platform": {
+          "architecture": "arm64",
+          "os": "linux"
+        },
+        "Ports": "2375-2376/tcp",
+        "RunningFor": "3 days ago",
+        "Size": "0B",
+        "State": "running",
+        "Status": "Up 4 hours"
+      },
+      {
+        "Command": "\"/bin/registry\"",
+        "CreatedAt": "2026-07-27 10:42:16 +0700 +07",
+        "HealthStatus": "healthy",
+        "ID": "c2297c91a7cc",
+        "Image": "docker/desktop-containerd-registry-mirror:v0.0.4",
+        "Labels": "desktop.docker.io/ports.scheme=v2,io.kubernetes.pod.namespace=kube-system",
+        "LocalVolumes": "0",
+        "Mounts": "/run/container…",
+        "Names": "kind-registry-mirror",
+        "Networks": "kind",
+        "Platform": {
+          "architecture": "arm64",
+          "os": "linux"
+        },
+        "Ports": "",
+        "RunningFor": "3 days ago",
+        "Size": "0B",
+        "State": "running",
+        "Status": "Up 4 hours (healthy)"
+      },
+      {
+        "Command": "\"/usr/local/bin/entr…\"",
+        "CreatedAt": "2026-07-27 10:41:53 +0700 +07",
+        "HealthStatus": "none",
+        "ID": "8e24611954af",
+        "Image": "kindest/node:v1.36.1",
+        "Labels": "desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/6443/tcp=127.0.0.1:62056,io.kubernetes.pod.namespace=kube-system,io.x-k8s.kind.cluster=desktop,io.x-k8s.kind.role=control-plane",
+        "LocalVolumes": "1",
+        "Mounts": "/etc/kind/host…,/lib/modules,e25ff2ecccae6f…",
+        "Names": "desktop-control-plane",
+        "Networks": "kind",
+        "Platform": {
+          "architecture": "arm64",
+          "os": "linux"
+        },
+        "Ports": "127.0.0.1:62056->6443/tcp",
+        "RunningFor": "3 days ago",
+        "Size": "0B",
+        "State": "running",
+        "Status": "Up 4 hours"
+      },
+      {
+        "Command": "\"/usr/local/bin/runt…\"",
+        "CreatedAt": "2026-07-01 02:13:05 +0700 +07",
+        "HealthStatus": "none",
+        "ID": "1c74c307a859",
+        "Image": "9b50c0a0c9a0",
+        "Labels": "com.docker.compose.config-hash=c502e186f31697d325a1655b272be2aff5cb3eed1d26cbfbdf7317138f38c15e,com.docker.compose.container-number=1,com.docker.compose.depends_on=,com.docker.compose.image=sha256:9b50c0a0c9a0e5bdeaccf05eb0cbbe710ee845e1cee001d7041f90897f1cede0,com.docker.compose.oneoff=False,com.docker.compose.project.config_files=/Users/andy/Library/Containers/com.docker.docker/Data/extensions/prizz_deep-dive/vm/docker-compose.yaml,com.docker.compose.project.working_dir=/Users/andy/Library/Containers/com.docker.docker/Data/extensions/prizz_deep-dive/vm,com.docker.compose.project=prizz_deep-dive-desktop-extension,com.docker.compose.service=deep-dive,com.docker.compose.version=5.1.4,com.docker.desktop.extension.api.version=>=0.4.2,com.docker.desktop.extension.icon=https://raw.githubusercontent.com/pRizz/deep-dive/main/ui/public/scuba.svg,com.docker.desktop.extension.name=Deep Dive,com.docker.desktop.extension=true,com.docker.extension.additional-urls=[{\"title\":\"Documentation\",\"url\":\"https://github.com/pRizz/deep-dive\"},{\"title\":\"Issues\",\"url\":\"https://github.com/pRizz/deep-dive/issues\"}],com.docker.extension.categories=utility-tools,com.docker.extension.changelog=Various fixes and improvements. See <a href=\"https://github.com/pRizz/deep-dive/releases\">https://github.com/pRizz/deep-dive/releases</a> for details.,com.docker.extension.detailed-description=<h1>Deep Dive</h1><p><a href=\"https://github.com/pRizz/deep-dive\"><img src=\"https://img.shields.io/github/stars/pRizz/deep-dive\" alt=\"GitHub Stars\" /></a> <a href=\"https://github.com/pRizz/deep-dive/actions/workflows/ci.yml\"><img src=\"https://github.com/pRizz/deep-dive/actions/workflows/ci.yml/badge.svg\" alt=\"CI\" /></a> <a href=\"https://github.com/pRizz/deep-dive/releases\"><img src=\"https://img.shields.io/github/v/release/pRizz/deep-dive?display_name=tag\" alt=\"Release\" /></a> <a href=\"https://hub.docker.com/r/prizz/deep-dive\"><img src=\"https://img.shields.io/docker/v/prizz/deep-dive?sort=semver&label=prizz%2Fdeep-dive\" alt=\"Docker Image\" /></a> <a href=\"https://hub.docker.com/r/prizz/deep-dive\"><img src=\"https://img.shields.io/docker/pulls/prizz/deep-dive\" alt=\"Docker Pulls\" /></a> <a href=\"https://hub.docker.com/r/prizz/deep-dive\"><img src=\"https://img.shields.io/docker/image-size/prizz/deep-dive/latest\" alt=\"Docker Image Size\" /></a> <a href=\"https://github.com/pRizz/deep-dive/blob/main/LICENSE\"><img src=\"https://img.shields.io/github/license/pRizz/deep-dive\" alt=\"License\" /></a></p><p>A Docker extension that helps you explore a docker image, layer contents, and discover ways to shrink the size of your Docker/OCI image.</p><p>Built on top of the Dive CLI: <a href=\"https://github.com/pRizz/dive\">pRizz/dive</a>, a fork of the excellent <a href=\"https://github.com/wagoodman/dive\">wagoodman/dive</a> CLI tool.</p><p>Based on the original extension by Prakhar Srivastav: <a href=\"https://github.com/prakhar1989/dive-in\">https://github.com/prakhar1989/dive-in</a></p><p>Deep Dive is free and open source: <a href=\"https://github.com/pRizz/deep-dive\">https://github.com/pRizz/deep-dive</a></p><p>Docker Hub repository: <a href=\"https://hub.docker.com/r/prizz/deep-dive\">https://hub.docker.com/r/prizz/deep-dive</a></p><p>Install in your Docker Desktop or Docker Desktop CLI with</p><pre><code>docker extension install prizz/deep-dive</code></pre>,com.docker.extension.publisher-url=https://github.com/pRizz,com.docker.extension.screenshots=[{\"alt\":\"Main page\", \"url\":\"https://github.com/pRizz/deep-dive/blob/main/screenshots/1.png?raw=true\"}, {\"alt\":\"Analysis results\", \"url\":\"https://github.com/pRizz/deep-dive/blob/main/screenshots/2.png?raw=true\"}, {\"alt\":\"History\", \"url\":\"https://github.com/pRizz/deep-dive/blob/main/screenshots/3.png?raw=true\"}],desktop.docker.io/binds/1/Source=/var/run/docker.sock,desktop.docker.io/binds/1/SourceKind=dockerSocketProxied,desktop.docker.io/binds/1/Target=/var/run/docker.sock,desktop.docker.io/ports.scheme=v2,org.opencontainers.image.description=Explore docker images, layer contents, and discover ways to shrink the size of your Docker/OCI image.,org.opencontainers.image.revision=1c58da110a662b2d4140cf82aaf7784537f61239,org.opencontainers.image.title=Deep Dive,org.opencontainers.image.vendor=Peter Ryszkiewicz,org.opencontainers.image.version=1.0.98",
+        "LocalVolumes": "1",
+        "Mounts": "prizz_deep-div…,/run/guest-ser…,/run/host-serv…",
+        "Names": "prizz_deep-dive-desktop-extension-service",
+        "Networks": "prizz_deep-dive-desktop-extension_default",
+        "Platform": {
+          "architecture": "arm64",
+          "os": "linux"
+        },
+        "Ports": "",
+        "RunningFor": "4 weeks ago",
+        "Size": "0B",
+        "State": "running",
+        "Status": "Up 4 hours"
+      }
+    ],
+    "images": [
+      {
+        "Containers": "1",
+        "CreatedAt": "2026-07-30 18:04:00 +0700 +07",
+        "CreatedSince": "4 hours ago",
+        "Digest": "<none>",
+        "ID": "7714cf60d172",
+        "Repository": "hyperai-credentials",
+        "SharedSize": "N/A",
+        "Size": "251MB",
+        "Tag": "latest",
+        "UniqueSize": "N/A"
+      },
+      {
+        "Containers": "1",
+        "CreatedAt": "2026-06-05 01:56:28 +0700 +07",
+        "CreatedSince": "7 weeks ago",
+        "Digest": "<none>",
+        "ID": "1de142695bb0",
+        "Repository": "docker/desktop-containerd-registry-mirror",
+        "SharedSize": "N/A",
+        "Size": "51.1MB",
+        "Tag": "v0.0.4",
+        "UniqueSize": "N/A"
+      },
+      {
+        "Containers": "1",
+        "CreatedAt": "2026-06-05 01:48:20 +0700 +07",
+        "CreatedSince": "7 weeks ago",
+        "Digest": "<none>",
+        "ID": "46d51b990e97",
+        "Repository": "docker/desktop-cloud-provider-kind",
+        "SharedSize": "N/A",
+        "Size": "587MB",
+        "Tag": "v0.6.0",
+        "UniqueSize": "N/A"
+      },
+      {
+        "Containers": "1",
+        "CreatedAt": "2026-06-02 08:29:41 +0700 +07",
+        "CreatedSince": "8 weeks ago",
+        "Digest": "<none>",
+        "ID": "3489c7674813",
+        "Repository": "kindest/node",
+        "SharedSize": "N/A",
+        "Size": "1.27GB",
+        "Tag": "v1.36.1",
+        "UniqueSize": "N/A"
+      },
+      {
+        "Containers": "1",
+        "CreatedAt": "2026-05-31 05:04:49 +0700 +07",
+        "CreatedSince": "2 months ago",
+        "Digest": "",
+        "ID": "9b50c0a0c9a0",
+        "Repository": "prizz/deep-dive",
+        "SharedSize": "N/A",
+        "Size": "48MB",
+        "Tag": "<none>",
+        "UniqueSize": "N/A"
+      }
+    ],
+    "volumes": [
+      {
+        "Availability": "N/A",
+        "Driver": "local",
+        "Group": "N/A",
+        "Labels": "com.docker.volume.anonymous=",
+        "Links": "N/A",
+        "Mountpoint": "/var/lib/docker/volumes/c87b43b4e9429b310d91b24fcf2323a25843e740513a6c49be3cc5829a5c5bda/_data",
+        "Name": "c87b43b4e9429b310d91b24fcf2323a25843e740513a6c49be3cc5829a5c5bda",
+        "Scope": "local",
+        "Size": "N/A",
+        "Status": "N/A"
+      },
+      {
+        "Availability": "N/A",
+        "Driver": "local",
+        "Group": "N/A",
+        "Labels": "com.docker.volume.anonymous=",
+        "Links": "N/A",
+        "Mountpoint": "/var/lib/docker/volumes/e25ff2ecccae6f345e71792b2515850a7c337094cf158b03460242be9824c519/_data",
+        "Name": "e25ff2ecccae6f345e71792b2515850a7c337094cf158b03460242be9824c519",
+        "Scope": "local",
+        "Size": "N/A",
+        "Status": "N/A"
+      },
+      {
+        "Availability": "N/A",
+        "Driver": "local",
+        "Group": "N/A",
+        "Labels": "com.docker.compose.config-hash=7802fff6a6b80a3328144cab21af73a0aec6c93cad1fe8784c1b2805e3be0fb2,com.docker.compose.project=prizz_deep-dive-desktop-extension,com.docker.compose.version=5.1.4,com.docker.compose.volume=deep-dive-history",
+        "Links": "N/A",
+        "Mountpoint": "/var/lib/docker/volumes/prizz_deep-dive-desktop-extension_deep-dive-history/_data",
+        "Name": "prizz_deep-dive-desktop-extension_deep-dive-history",
+        "Scope": "local",
+        "Size": "N/A",
+        "Status": "N/A"
+      }
+    ],
+    "networks": [
+      {
+        "CreatedAt": "2026-07-30 11:43:24.635688002 +0000 UTC",
+        "Driver": "bridge",
+        "ID": "c6316c5000e1",
+        "IPv4": "true",
+        "IPv6": "false",
+        "Internal": "false",
+        "Labels": "",
+        "Name": "bridge",
+        "Scope": "local"
+      },
+      {
+        "CreatedAt": "2026-06-30 19:09:20.712246458 +0000 UTC",
+        "Driver": "host",
+        "ID": "ebfe67403812",
+        "IPv4": "true",
+        "IPv6": "false",
+        "Internal": "false",
+        "Labels": "",
+        "Name": "host",
+        "Scope": "local"
+      },
+      {
+        "CreatedAt": "2026-07-30 11:04:02.107355005 +0000 UTC",
+        "Driver": "bridge",
+        "ID": "76f5ee62d89d",
+        "IPv4": "true",
+        "IPv6": "false",
+        "Internal": "false",
+        "Labels": "com.docker.compose.config-hash=8567bdd08884e21698273519b9cf77dabfa87bf6c8f7406f357bbd2184845aab,com.docker.compose.network=default,com.docker.compose.project=hyperai-sync,com.docker.compose.version=5.3.1",
+        "Name": "hyperai-sync_default",
+        "Scope": "local"
+      },
+      {
+        "CreatedAt": "2026-06-30 19:10:59.379830463 +0000 UTC",
+        "Driver": "bridge",
+        "ID": "c64ac1fd7598",
+        "IPv4": "true",
+        "IPv6": "true",
+        "Internal": "false",
+        "Labels": "",
+        "Name": "kind",
+        "Scope": "local"
+      },
+      {
+        "CreatedAt": "2026-06-30 19:09:20.710392833 +0000 UTC",
+        "Driver": "null",
+        "ID": "fc0278130d88",
+        "IPv4": "true",
+        "IPv6": "false",
+        "Internal": "false",
+        "Labels": "",
+        "Name": "none",
+        "Scope": "local"
+      },
+      {
+        "CreatedAt": "2026-06-30 19:13:05.346407715 +0000 UTC",
+        "Driver": "bridge",
+        "ID": "7185364a4366",
+        "IPv4": "true",
+        "IPv6": "false",
+        "Internal": "false",
+        "Labels": "com.docker.compose.config-hash=97560bf5db43b779375d2eee11707176b5835101252ecce09adc169352ebad9b,com.docker.compose.network=default,com.docker.compose.project=prizz_deep-dive-desktop-extension,com.docker.compose.version=5.1.4",
+        "Name": "prizz_deep-dive-desktop-extension_default",
+        "Scope": "local"
+      }
+    ],
+    "contexts": [
+      {
+        "Current": false,
+        "Description": "Current DOCKER_HOST based configuration",
+        "DockerEndpoint": "unix:///var/run/docker.sock",
+        "Error": "",
+        "Name": "default"
+      },
+      {
+        "Current": true,
+        "Description": "Docker Desktop",
+        "DockerEndpoint": "unix:///Users/andy/.docker/run/docker.sock",
+        "Error": "",
+        "Name": "desktop-linux"
+      }
+    ],
+    "buildx": "NAME/NODE              DRIVER/ENDPOINT                          STATUS    BUILDKIT   PLATFORMS\ncloud-sowhat1989-kkk   cloud                                                         \n \\_ linux-arm64         \\_ cloud://sowhat1989/kkk_linux-arm64   running   v0.30.0    linux/arm64*, linux/arm (+2)\n \\_ linux-amd64         \\_ cloud://sowhat1989/kkk_linux-amd64   running   v0.30.0    linux/amd64* (+4), linux/386\ndefault                docker                                                        \n \\_ default             \\_ default                              running   v0.31.2    linux/amd64 (+2), linux/arm64, linux/ppc64le, linux/s390x, (2 more)\ndesktop-linux*         docker                                                        \n \\_ desktop-linux       \\_ desktop-linux                        running   v0.31.2    linux/amd64 (+2), linux/arm64, linux/ppc64le, linux/s390x, (2 more)\n",
+    "plugins": "ID        NAME      DESCRIPTION   ENABLED\n",
+    "cleanup_actions": [
+      {
+        "command": "docker image prune -a -f",
+        "reclaimed_gb": 10.33,
+        "timestamp": "2026-07-30T12:03+00:00"
+      },
+      {
+        "command": "docker volume prune -a -f",
+        "reclaimed_mb": 233.8,
+        "timestamp": "2026-07-30T15:31+00:00"
+      },
+      {
+        "command": "docker buildx prune -a -f",
+        "reclaimed_gb": 1.155,
+        "timestamp": "2026-07-30T15:32+00:00"
+      },
+      {
+        "command": "docker system prune -a -f --volumes",
+        "reclaimed": "0B",
+        "timestamp": "2026-07-30T15:32+00:00"
+      },
+      {
+        "command": "docker run --rm --entrypoint python hyperai-credentials:latest -c 'print(...)'",
+        "result": "Docker container runtime OK",
+        "timestamp": "2026-07-30T15:33+00:00"
+      }
+    ],
+    "health_status": {
+      "daemon": "running",
+      "containers_running": 5,
+      "containers_stopped": 0,
+      "images_unused": 0,
+      "volumes_unused": 0,
+      "build_cache": "0B",
+      "reclaimable_total": "0B",
+      "functional_test": "PASS"
+    },
+    "anomalies": [
+      "Remote buildx builder 'cloud-sowhat1989-kkk' registered; check if intended",
+      "Docker HTTP/HTTPS proxy set to http.docker.internal:3128; no impact observed",
+      "Insecure registries include hubproxy.docker.internal:5555 and loopback"
+    ],
+    "cross_system_tags": [
+      "container_fabric",
+      "docker_desktop",
+      "hyperai_credentials",
+      "kind_cluster",
+      "buildx_cloud"
+    ]
+  },
+  "ai_devtool_cross_system_tags": [
+    "ollama_local_models",
+    "finalai_proxy",
+    "phoenix_bridge",
+    "apΩ_gateway",
+    "credentials_service",
+    "redis_state",
+    "pieces_surface",
+    "postman_surface",
+    "docker_desktop",
+    "kind_cluster",
+    "os_master",
+    "nightwatch",
+    "telemetry_router"
+  ],
+  "drift_watch_points": [
+    "Docker build cache > 1GB",
+    "Unused docker volumes > 0",
+    "Stopped docker containers > 0",
+    "Phoenix :9001 not returning 200",
+    "Titan 192.168.3.158:5052 not reachable",
+    "com.hyperai.os.master PID missing",
+    "com.hyperai.finalai-openai-proxy PID missing"
+  ],
+  "metadata_pool_note": "This snapshot is intended for AI devtool cross-system state reconciliation. Update on every autonomous cycle or after any mutation."
+}

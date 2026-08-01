@@ -1,0 +1,28 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "docker",
+  "started_at": "2026-07-30T03:12:43Z",
+  "completed_at": "2026-07-30T03:12:44Z",
+  "dry_run": false,
+  "include_recyclable": false,
+  "disk_before_mb": 8293,
+  "disk_after_mb": 8293,
+  "freed_mb": 0,
+  "action_count": 2,
+  "error_count": 0,
+  "actions": [
+    {
+      "command": "docker system prune -f",
+      "rc": 0,
+      "stdout": "Total reclaimed space: 0B\n",
+      "stderr": ""
+    },
+    {
+      "command": "docker builder prune -f",
+      "rc": 0,
+      "stdout": "Total:\t0B\n",
+      "stderr": ""
+    }
+  ],
+  "status": "ok"
+}

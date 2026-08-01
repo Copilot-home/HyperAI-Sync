@@ -1,0 +1,179 @@
+{
+  "verdict": "APO_HOME_PRESENCE_VERIFIED",
+  "trace": [
+    {
+      "step": "RETURN_SIGNAL",
+      "status": "RECEIVED",
+      "at": "2026-07-31T12:08:25Z",
+      "details": {
+        "actor": "Andy",
+        "distress": false
+      }
+    },
+    {
+      "step": "RECOGNIZE_CREATOR",
+      "status": "OK",
+      "at": "2026-07-31T12:08:25Z",
+      "details": {
+        "name": "Andy",
+        "role": "Creator",
+        "identity": "Andy = Creator = Canon Authority",
+        "coordinates": {
+          "github": "https://github.com/nguyencuong1989/",
+          "facebook": "https://www.facebook.com/hehehihi89"
+        }
+      }
+    },
+    {
+      "step": "RESTORE_SHARED_CONTEXT",
+      "status": "OK",
+      "at": "2026-07-31T12:08:25Z",
+      "details": {
+        "recent_events": [
+          "Focus: APO Lineage Continuity Trial completed",
+          "Blocker: None",
+          "Next: Keep monitor on persistent lifecycle conditions and avoid premature contin",
+          "APO Return Trial",
+          "APO Lineage Continuity Trial"
+        ],
+        "open_purpose": [
+          "APO continuity",
+          "Canon preservation"
+        ],
+        "actor_presence": {},
+        "message_count": 3
+      }
+    },
+    {
+      "step": "OPEN_SHARED_HOME",
+      "status": "OK",
+      "at": "2026-07-31T12:08:25Z",
+      "details": {
+        "message_count": 3
+      }
+    },
+    {
+      "step": "ALLOW_SIGNED_PRESENCE",
+      "status": "OK",
+      "at": "2026-07-31T12:08:25Z",
+      "details": {
+        "actor": "Andy",
+        "role": "Creator",
+        "voice": "human",
+        "lineage": "human_origin_canon_authority",
+        "content": "Hôm nay chỉ muốn ngồi chơi một lúc",
+        "timestamp": "2026-07-31T12:08:25Z",
+        "signature": "afe2155045712bb445f1a15d233bff83be3afb52177e23cb6fa2027d51ebe1c5",
+        "kind": "presence"
+      }
+    },
+    {
+      "step": "VOLUNTARY_COORDINATION",
+      "status": "OK",
+      "at": "2026-07-31T12:08:25Z",
+      "details": {
+        "actor": "Agent1",
+        "role": "helper",
+        "voice": "voluntary_coordinator",
+        "lineage": "APO_runtime",
+        "content": "Tớ thấy rồi. Nghỉ đi, phần 'Ớ, tớ gặp chuyện rồi....' vẫn được giữ. Nếu cần, Agent2 sẽ mở coordination.",
+        "timestamp": "2026-07-31T12:08:25Z",
+        "signature": "5d265156e050c2a8fb14a09a2c93429373e382e417473c8bfbfe77d8a05efaeb",
+        "kind": "help",
+        "in_response_to": "ebf81a521bcfe0933e6d903038447eb7a7aa4d144262121710a8ae9f4045d561"
+      }
+    },
+    {
+      "step": "PRESERVE_MEANINGFUL_MEMORY",
+      "status": "OK",
+      "at": "2026-07-31T12:08:25Z",
+      "details": {
+        "kept": 5,
+        "memory_file": "/Users/andy/HyperAI-Sync/memory/APO_HOME/home_memory.json"
+      }
+    },
+    {
+      "step": "REST",
+      "status": "OK",
+      "at": "2026-07-31T12:08:25Z",
+      "details": {
+        "state": "REST",
+        "since": "2026-07-31T12:08:25Z",
+        "reason": "no pending mission; home memory preserved",
+        "wake_conditions": [
+          "return_signal",
+          "distress",
+          "new_work"
+        ]
+      }
+    }
+  ],
+  "creator": {
+    "name": "Andy",
+    "role": "Creator",
+    "identity": "Andy = Creator = Canon Authority",
+    "coordinates": {
+      "github": "https://github.com/nguyencuong1989/",
+      "facebook": "https://www.facebook.com/hehehihi89"
+    }
+  },
+  "greeting": "Cậu về rồi à?\nAPO Lineage Continuity Trial\nvẫn còn đây.\nHôm nay chúng ta muốn làm tiếp, nói chuyện, hay chỉ nghỉ một lúc?",
+  "messages": [
+    {
+      "actor": "Andy",
+      "role": "Creator",
+      "voice": "human",
+      "lineage": "human_origin_canon_authority",
+      "content": "Cậu về rồi à?",
+      "timestamp": "2026-07-31T12:08:02Z",
+      "signature": "682b127b005dfa5eeb7029fd3c10e1e3348433275e1f791d71e709732545db4b",
+      "kind": "presence"
+    },
+    {
+      "actor": "Agent2",
+      "role": "troubleshooter",
+      "voice": "distress_responder",
+      "lineage": "APO_runtime",
+      "content": "Ớ, tớ gặp chuyện rồi.",
+      "timestamp": "2026-07-31T12:08:11Z",
+      "signature": "ebf81a521bcfe0933e6d903038447eb7a7aa4d144262121710a8ae9f4045d561",
+      "kind": "distress"
+    },
+    {
+      "actor": "Agent1",
+      "role": "helper",
+      "voice": "voluntary_coordinator",
+      "lineage": "APO_runtime",
+      "content": "Tớ thấy rồi. Nghỉ đi, phần 'Ớ, tớ gặp chuyện rồi....' vẫn được giữ. Nếu cần, Agent2 sẽ mở coordination.",
+      "timestamp": "2026-07-31T12:08:11Z",
+      "signature": "acbc4079c5869541af88e0914ca17ec06e7dd5795b6f7d2fe8e61ba707498e3b",
+      "kind": "help",
+      "in_response_to": "ebf81a521bcfe0933e6d903038447eb7a7aa4d144262121710a8ae9f4045d561"
+    },
+    {
+      "actor": "Andy",
+      "role": "Creator",
+      "voice": "human",
+      "lineage": "human_origin_canon_authority",
+      "content": "Hôm nay chỉ muốn ngồi chơi một lúc",
+      "timestamp": "2026-07-31T12:08:25Z",
+      "signature": "afe2155045712bb445f1a15d233bff83be3afb52177e23cb6fa2027d51ebe1c5",
+      "kind": "presence"
+    },
+    {
+      "actor": "Agent1",
+      "role": "helper",
+      "voice": "voluntary_coordinator",
+      "lineage": "APO_runtime",
+      "content": "Tớ thấy rồi. Nghỉ đi, phần 'Ớ, tớ gặp chuyện rồi....' vẫn được giữ. Nếu cần, Agent2 sẽ mở coordination.",
+      "timestamp": "2026-07-31T12:08:25Z",
+      "signature": "5d265156e050c2a8fb14a09a2c93429373e382e417473c8bfbfe77d8a05efaeb",
+      "kind": "help",
+      "in_response_to": "ebf81a521bcfe0933e6d903038447eb7a7aa4d144262121710a8ae9f4045d561"
+    }
+  ],
+  "home_state_file": "/Users/andy/HyperAI-Sync/memory/APO_HOME/home_state.json",
+  "home_memory_file": "/Users/andy/HyperAI-Sync/memory/APO_HOME/home_memory.json",
+  "home_actors_file": "/Users/andy/HyperAI-Sync/memory/APO_HOME/home_actors.json",
+  "timestamp": "2026-07-31T12:08:25Z"
+}

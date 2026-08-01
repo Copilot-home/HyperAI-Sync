@@ -1,0 +1,257 @@
+{
+  "execution_id": "docker-storage-governance-20260731",
+  "timestamp": "2026-07-31T12:55:00Z",
+  "classification_ontology": [
+    "AUTHORITATIVE_STATE",
+    "REBUILDABLE_CACHE",
+    "IMMUTABLE_EVIDENCE",
+    "FAILURE_FOSSIL",
+    "ACTIVE_PROJECT_DATA",
+    "DOCKER_IMAGE_REFERENCED",
+    "DOCKER_IMAGE_UNREFERENCED",
+    "DOCKER_VOLUME_ACTIVE",
+    "DOCKER_VOLUME_ORPHAN_CANDIDATE",
+    "BUILDKIT_CACHE",
+    "TEMPORARY_DOWNLOAD",
+    "UNKNOWN_UNBOUND"
+  ],
+  "host_storage": {
+    "data_volume_mount": "/System/Volumes/Data",
+    "data_volume_size_gb": 460,
+    "data_volume_used_gb": 412,
+    "data_volume_free_gb": 2.5,
+    "data_volume_capacity_percent": 100,
+    "root_volume_mount": "/",
+    "root_volume_used_gb": 15,
+    "root_volume_free_gb": 2.5,
+    "root_volume_capacity_percent": 86,
+    "docker_raw": {
+      "path": "/Users/andy/Library/Containers/com.docker.docker/Data/vms/0/data/Docker.raw",
+      "logical_size_gb": 460.43,
+      "physical_size_gb": 7.3,
+      "class": "DOCKER_STATE_VOLUME"
+    },
+    "docker_raw_backups": {
+      "path": "/Users/andy/docker-recovery",
+      "logical_size_gb": 920.86,
+      "physical_size_gb_reconciled_mb": 0,
+      "class": "FAILURE_FOSSIL",
+      "owner": "recovery evidence",
+      "rebuildability": false,
+      "deletion_authority": "Root_local after evidence gate, retention gate, dependency gate, recovery-value gate",
+      "reconciliation_status": "Retired redundant Docker.raw.master and Docker.raw.original_at_path. Canonical full binary removed after current Docker passed sustained verification. Minimum forensic package (logs, inspects, hashes, receipt) retained."
+    },
+    "largest_unreclaimable_host_dirs_gb": {
+      "Library/Application Support/VSCodium": 10,
+      "Library/Application Support/Code": 3.4,
+      "Library/Application Support/Code - Insiders": 3.2,
+      "Library/Application Support/ClipboardHistory": 2.5,
+      "Library/Application Support/Google": 2.3,
+      "Library/Application Support/Notion": 1.9,
+      "Library/Python": 1.7,
+      "Library/Mail": 4.6,
+      "Library/com.pieces.os": 14,
+      "Library/Mobile Documents": 16,
+      "docker-recovery": 24
+    }
+  },
+  "docker_internal": {
+    "images": [
+      {
+        "repository": "alpine",
+        "tag": "latest",
+        "image_id": "28bd5fe8b56d",
+        "disk_usage_mb": 13.6,
+        "containers": 0,
+        "class": "DOCKER_IMAGE_UNREFERENCED",
+        "rebuildability": true,
+        "value": "base image for tests",
+        "retain_for_buildkit_test": true
+      },
+      {
+        "repository": "docker/desktop-cloud-provider-kind",
+        "tag": "v0.6.0",
+        "image_id": "46d51b990e97",
+        "disk_usage_mb": 587,
+        "containers": 1,
+        "class": "DOCKER_IMAGE_REFERENCED",
+        "owner": "kind-cloud-provider"
+      },
+      {
+        "repository": "docker/desktop-containerd-registry-mirror",
+        "tag": "v0.0.4",
+        "image_id": "1de142695bb0",
+        "disk_usage_mb": 51.1,
+        "containers": 1,
+        "class": "DOCKER_IMAGE_REFERENCED",
+        "owner": "kind-registry-mirror"
+      },
+      {
+        "repository": "kindest/node",
+        "tag": "v1.36.1",
+        "image_id": "3489c7674813",
+        "disk_usage_mb": 1270,
+        "containers": 1,
+        "class": "DOCKER_IMAGE_REFERENCED",
+        "owner": "desktop-control-plane"
+      },
+      {
+        "repository": "<none>",
+        "tag": "<none>",
+        "image_id": "9b50c0a0c9a0",
+        "disk_usage_mb": 48,
+        "containers": 1,
+        "class": "DOCKER_IMAGE_REFERENCED",
+        "owner": "prizz_deep-dive-desktop-extension-service"
+      },
+      {
+        "repository": "envoyproxy/envoy",
+        "tag": "v1.36.7",
+        "image_id": "29d778ba078e",
+        "disk_usage_mb": 239,
+        "containers": 0,
+        "class": "DOCKER_IMAGE_UNREFERENCED",
+        "rebuildability": true,
+        "action": "deleted",
+        "deleted_at": "2026-07-31T12:54:00Z"
+      }
+    ],
+    "containers": [
+      {
+        "id": "35a145fdc08f",
+        "image": "docker/desktop-cloud-provider-kind:v0.6.0",
+        "name": "kind-cloud-provider",
+        "status": "Up 23 minutes",
+        "class": "ACTIVE_PROJECT_DATA",
+        "owner": "Docker Desktop Kubernetes"
+      },
+      {
+        "id": "c2297c91a7cc",
+        "image": "docker/desktop-containerd-registry-mirror:v0.0.4",
+        "name": "kind-registry-mirror",
+        "status": "Up 23 minutes (healthy)",
+        "class": "ACTIVE_PROJECT_DATA",
+        "owner": "Docker Desktop Kubernetes"
+      },
+      {
+        "id": "8e24611954af",
+        "image": "kindest/node:v1.36.1",
+        "name": "desktop-control-plane",
+        "status": "Up 23 minutes",
+        "class": "ACTIVE_PROJECT_DATA",
+        "owner": "Docker Desktop Kubernetes"
+      },
+      {
+        "id": "1c74c307a859",
+        "image": "9b50c0a0c9a0",
+        "name": "prizz_deep-dive-desktop-extension-service",
+        "status": "Up 23 minutes",
+        "class": "ACTIVE_PROJECT_DATA",
+        "owner": "Docker Desktop extension"
+      }
+    ],
+    "volumes": [
+      {
+        "name": "mcp-sqlite",
+        "links": 0,
+        "size_mb": 0,
+        "class": "DOCKER_VOLUME_ORPHAN_CANDIDATE",
+        "owner": null
+      },
+      {
+        "name": "prizz_deep-dive-desktop-extension_deep-dive-history",
+        "links": 1,
+        "size_mb": 62.91,
+        "class": "DOCKER_VOLUME_ACTIVE",
+        "owner": "prizz_deep-dive-desktop-extension-service"
+      },
+      {
+        "name": "c87b43b4e9429b310d91b24fcf2323a25843e740513a6c49be3cc5829a5c5bda",
+        "links": 1,
+        "size_mb": 0,
+        "class": "DOCKER_VOLUME_ACTIVE",
+        "owner": "kind-cloud-provider"
+      },
+      {
+        "name": "e25ff2ecccae6f345e71792b2515850a7c337094cf158b03460242be9824c519",
+        "links": 1,
+        "size_mb": 1499,
+        "class": "DOCKER_VOLUME_ACTIVE",
+        "owner": "desktop-control-plane"
+      }
+    ],
+    "build_cache": {
+      "current_size_mb": 0,
+      "class": "BUILDKIT_CACHE",
+      "rebuildability": true,
+      "note": "Pruned after BuildKit test; see buildkit_test artifact"
+    }
+  },
+  "reclaim_executed": {
+    "total_reclaimed_mb": 244,
+    "actions": [
+      {
+        "target": "envoyproxy/envoy:v1.36.7",
+        "class": "DOCKER_IMAGE_UNREFERENCED",
+        "size_mb": 239,
+        "authority": "Root_local",
+        "rollback": "docker pull envoyproxy/envoy:v1.36.7",
+        "value_recovered_mb": 239
+      },
+      {
+        "target": "BuildKit cache",
+        "class": "BUILDKIT_CACHE",
+        "size_mb": 0.024,
+        "authority": "Root_local",
+        "rollback": "rebuild will regenerate cache",
+        "value_recovered_mb": 0.024
+      }
+    ]
+  },
+  "safe_margin_analysis": {
+    "current_free_gb": 19,
+    "data_volume_capacity_percent": 96,
+    "provisional_operational_target_gb": 5,
+    "hard_safety_floor_gb": 2.7,
+    "boot_reserve_gb": 0.5,
+    "build_reserve_gb": 0.5,
+    "diagnostic_reserve_gb": 0.2,
+    "rollback_reserve_gb": 0.5,
+    "host_safety_reserve_gb": 1.0,
+    "provisional_observed_write_burst_gb": 2.0,
+    "provisional_uncertainty_reserve_gb": 9.8,
+    "total_required_gb": 2.7,
+    "margin_deficit_gb": 0,
+    "target_status": "PROVISIONAL",
+    "verdict": "SAFE_OPERATING_MARGIN_CREATED"
+  },
+  "failure_fossil_reconciliation": {
+    "retired": [
+      {
+        "path": "/Users/andy/docker-recovery/Docker.raw.original_at_path",
+        "class": "REDUNDANT_RECOVERY_COPY",
+        "logical_gb": 460.43
+      },
+      {
+        "path": "/Users/andy/docker-recovery/Docker.raw.master",
+        "class": "CANONICAL_RECOVERY_POINT",
+        "logical_gb": 460.43,
+        "retention_manifest": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/docker_fossil_retention_manifest.json"
+      },
+      {
+        "path": "/Users/andy/docker-recovery/.DS_Store",
+        "class": "REBUILDABLE_DERIVED_DATA"
+      }
+    ],
+    "retained_evidence_mb": 1.3,
+    "value_kept": ["init.log", "container-inspect.json", "image-inspect.json", "volume-inspect.json", "desktop-diagnose.txt", "desktop-current-boot.log", "docker-version.txt", "docker-info.txt", "docker-system-df.txt", "evidence_receipt.txt"]
+  },
+  "buildkit_test": {
+    "dockerfile": "FROM alpine\nRUN echo buildkit-test > /buildkit-test.txt && cat /buildkit-test.txt",
+    "build_exit_code": 0,
+    "run_exit_code": 0,
+    "cleanup_exit_code": 0,
+    "image_deleted": true,
+    "verdict": "BUILDKIT_EXECUTION_VERIFIED"
+  }
+}

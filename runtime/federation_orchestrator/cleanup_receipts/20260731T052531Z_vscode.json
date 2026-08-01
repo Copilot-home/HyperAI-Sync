@@ -1,0 +1,58 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "vscode",
+  "started_at": "2026-07-31T05:25:31Z",
+  "completed_at": "2026-07-31T05:25:31Z",
+  "dry_run": false,
+  "include_recyclable": false,
+  "disk_before_mb": 5771,
+  "disk_after_mb": 5771,
+  "freed_mb": 0,
+  "action_count": 6,
+  "error_count": 0,
+  "actions": [
+    {
+      "path": "/Users/andy/Library/Application Support/Code/CachedExtensionVSIXs",
+      "status": "missing",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.0
+    },
+    {
+      "path": "/Users/andy/Library/Application Support/Code/Crashpad",
+      "status": "missing",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.0
+    },
+    {
+      "path": "/Users/andy/Library/Application Support/Code/logs",
+      "status": "missing",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.0
+    },
+    {
+      "path": "/Users/andy/Library/Application Support/Code - Insiders/CachedExtensionVSIXs",
+      "status": "missing",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.0
+    },
+    {
+      "path": "/Users/andy/Library/Application Support/Code - Insiders/Crashpad",
+      "status": "missing",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.0
+    },
+    {
+      "path": "/Users/andy/Library/Application Support/Code - Insiders/logs",
+      "status": "missing",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.0
+    }
+  ],
+  "status": "ok"
+}

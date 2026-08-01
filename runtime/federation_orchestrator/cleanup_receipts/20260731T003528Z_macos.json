@@ -1,0 +1,135 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "macos",
+  "started_at": "2026-07-31T00:35:25Z",
+  "completed_at": "2026-07-31T00:35:28Z",
+  "dry_run": false,
+  "include_recyclable": false,
+  "disk_before_mb": 9505,
+  "disk_after_mb": 9858,
+  "freed_mb": 353,
+  "action_count": 17,
+  "error_count": 0,
+  "actions": [
+    {
+      "path": "/Users/andy/Library/Caches/pip",
+      "status": "missing",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.0
+    },
+    {
+      "path": "/Users/andy/Library/Caches/node-gyp",
+      "status": "missing",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.0
+    },
+    {
+      "path": "/Users/andy/Library/Caches/GeoServices",
+      "status": "deleted",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 49.90625
+    },
+    {
+      "path": "/Users/andy/Library/Caches/com.apple.helpd",
+      "status": "deleted",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 29.0546875
+    },
+    {
+      "path": "/Users/andy/Library/Caches/com.apple.parsecd",
+      "status": "deleted",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 16.23046875
+    },
+    {
+      "path": "/Users/andy/Library/Caches/typescript",
+      "status": "missing",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.0
+    },
+    {
+      "path": "/Users/andy/Library/Caches/fanal",
+      "status": "missing",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.0
+    },
+    {
+      "path": "/Users/andy/Library/Caches/com.grammarly.ProjectLlama",
+      "status": "deleted",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.01953125
+    },
+    {
+      "path": "/Users/andy/Library/Caches/com.apple.python",
+      "status": "deleted",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 1.0859375
+    },
+    {
+      "path": "/Users/andy/Library/Caches/com.openai.chat",
+      "status": "missing",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.0
+    },
+    {
+      "path": "/Users/andy/.cache/puppeteer",
+      "status": "missing",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.0
+    },
+    {
+      "path": "/Users/andy/.cache/clojure-lsp",
+      "status": "missing",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.0
+    },
+    {
+      "path": "/Users/andy/.cache/altimate-code",
+      "status": "missing",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.0
+    },
+    {
+      "path": "/Users/andy/.cache/opencode",
+      "status": "missing",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.0
+    },
+    {
+      "path": "/Users/andy/.cache/kilo",
+      "status": "missing",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.0
+    },
+    {
+      "path": "/Users/andy/.cache/chrome-devtools-mcp",
+      "status": "missing",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.0
+    },
+    {
+      "path": "/Users/andy/.cache/ms-playwright",
+      "status": "missing",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.0
+    }
+  ],
+  "status": "ok"
+}

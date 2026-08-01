@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "nodes": [
+    {
+      "id": "ngrok_docker_extension",
+      "kind": "tunnel_runtime",
+      "role": "PRIMARY_TUNNEL_RUNTIME",
+      "owner": "docker_desktop_extension",
+      "surfaces": {
+        "docker_image": "ngrok/ngrok-docker-extension:1.0.0",
+        "docker_container_name": "ngrok_ngrok-docker-extension-desktop-extension-service",
+        "container_state_path": "/data/state.json",
+        "container_backend_socket": "/run/guest-services/backend.sock",
+        "dashboard_endpoint": "lindsay-southbound-jimmie.ngrok-free.dev"
+      },
+      "defaults": {
+        "tunnel_target_host": "127.0.0.1",
+        "tunnel_target_port": 8080
+      },
+      "gates": {
+        "allow_expose_ports": [8080],
+        "sensitive_ports_require_explicit_gate": [5000, 9999, 11434, 11435]
+      }
+    },
+    {
+      "id": "ngrok_host_cli",
+      "kind": "tunnel_runtime",
+      "role": "DIAGNOSTIC_FALLBACK",
+      "owner": "host",
+      "surfaces": {
+        "binary": "/opt/homebrew/bin/ngrok",
+        "config_path": "/Users/andy/Library/Application Support/ngrok/ngrok.yml"
+      },
+      "defaults": {
+        "tunnel_target_host": "127.0.0.1",
+        "tunnel_target_port": 8080
+      },
+      "notes": [
+        "Host CLI cannot stop/list sessions without a real NGROK_API_KEY; authtoken is not an API key."
+      ]
+    }
+  ]
+}
+

@@ -1,8 +1,8 @@
 {
-  "cycle_number": 31,
-  "persisted_at": "2026-07-29T12:01:14Z",
+  "cycle_number": 1140,
+  "persisted_at": "2026-08-01T18:24:26Z",
   "policy": {
-    "state_transition": "disk_low",
+    "state_transition": "disk_critical",
     "selected_action": "runtime_cleanup",
     "core_ready": false,
     "managed_runtime_health": "unknown",
@@ -11,23 +11,23 @@
     "backend_classification": "offline",
     "frontend_classification": "offline",
     "runtime_strategy": "local_first_probe",
-    "disk_state": "MINIMUM_RECOVERED",
-    "disk_free_mb": 5479,
+    "disk_state": "CRITICAL",
+    "disk_free_mb": 117,
     "manifest_policy": {
       "boundary_state": "projection_missing",
       "selected_action": "runtime_cleanup",
-      "disk_state": "MINIMUM_RECOVERED",
-      "disk_free_mb": 5479,
-      "updated_at": "2026-07-29T12:01:14Z"
+      "disk_state": "CRITICAL",
+      "disk_free_mb": 117,
+      "updated_at": "2026-08-01T18:24:26Z"
     },
     "managed_runtime": {
       "backendUrl": null,
       "frontendUrl": null,
       "mode": "local_first"
     },
-    "action_reason": "Disk low (5479 MiB free); run disposable cleanup.",
-    "runtime_validated_at": "2026-07-29T12:01:14Z",
+    "action_reason": "Disk CRITICAL (117 MiB free); trigger AIOS_CLEANUP_CANON execution.",
+    "runtime_validated_at": "2026-08-01T18:24:26Z",
     "boundary_proof_status": "none"
   },
-  "updated_at": "2026-07-29T12:01:14Z"
+  "updated_at": "2026-08-01T18:24:26Z"
 }

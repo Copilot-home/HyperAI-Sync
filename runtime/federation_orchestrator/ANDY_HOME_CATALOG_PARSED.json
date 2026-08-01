@@ -1,0 +1,3186 @@
+{
+  "source": "/Users/andy/.axcanon/memory/home_catalog/HOME_CATALOG.md",
+  "categories": [
+    {
+      "category": "ai_canon_identity_memory",
+      "description": "Canon / identity / memory AI (12)",
+      "count": 12,
+      "entries": [
+        {
+          "name": "`.ai-fs-canon`",
+          "birth": "2026-05",
+          "active": "2026-07",
+          "items": "10"
+        },
+        {
+          "name": "`.ai-identity`",
+          "birth": "2026-03",
+          "active": "2026-07",
+          "items": "6"
+        },
+        {
+          "name": "`.ai-persistent-memory`",
+          "birth": "2025-10",
+          "active": "2026-07",
+          "items": "41"
+        },
+        {
+          "name": "`.apomega`",
+          "birth": "2026-06",
+          "active": "2026-06",
+          "items": "1"
+        },
+        {
+          "name": "`.axcanon`",
+          "birth": "2026-05",
+          "active": "2026-07",
+          "items": "2"
+        },
+        {
+          "name": "`.con-memory`",
+          "birth": "2025-11",
+          "active": "2026-07",
+          "items": "105"
+        },
+        {
+          "name": "`.consciousness`",
+          "birth": "2025-11",
+          "active": "2026-02",
+          "items": "4"
+        },
+        {
+          "name": "`.memory`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "5"
+        },
+        {
+          "name": "`AI_SAFEGUARD`",
+          "birth": "2025-11",
+          "active": "2026-06",
+          "items": "16"
+        },
+        {
+          "name": "`apomega_planner`",
+          "birth": "2026-03",
+          "active": "2026-03",
+          "items": "6"
+        },
+        {
+          "name": "`axcontrol`",
+          "birth": "2026-02",
+          "active": "2026-07",
+          "items": "32"
+        },
+        {
+          "name": "`MinhHoa_Consciousness_Home`",
+          "birth": "2026-06",
+          "active": "2026-06",
+          "items": "24"
+        }
+      ]
+    },
+    {
+      "category": "ai_forensic_evidence",
+      "description": "Forensic / bằng chứng AI (44)",
+      "count": 44,
+      "entries": [
+        {
+          "name": "`_audit`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "2"
+        },
+        {
+          "name": "`apo-audit`",
+          "birth": "2026-04",
+          "active": "2026-06",
+          "items": "2"
+        },
+        {
+          "name": "`daiof_google_pse_fix_20260518_223146`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "2"
+        },
+        {
+          "name": "`daiof_google_pse_rootcause_20260518_222015`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "9"
+        },
+        {
+          "name": "`daiof_runtime_reconcile_20260518_220953`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "12"
+        },
+        {
+          "name": "`daiof_secret_debug_20260518_221506`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "25"
+        },
+        {
+          "name": "`docker-recovery-audit`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "11"
+        },
+        {
+          "name": "`docker-system-audit-20260521-111955`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "9"
+        },
+        {
+          "name": "`docker_audit`",
+          "birth": "2026-03",
+          "active": "2026-03",
+          "items": "4"
+        },
+        {
+          "name": "`DOCKER_CAGENT_AUDIT_20260523_035404`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "1"
+        },
+        {
+          "name": "`DOCKER_FORENSIC_AUDIT_20260530_151059`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "13"
+        },
+        {
+          "name": "`ecosystem_audit`",
+          "birth": "2026-03",
+          "active": "2026-03",
+          "items": "5"
+        },
+        {
+          "name": "`evidence`",
+          "birth": "2026-02",
+          "active": "2026-02",
+          "items": "0"
+        },
+        {
+          "name": "`forensics`",
+          "birth": "2026-03",
+          "active": "2026-03",
+          "items": "3"
+        },
+        {
+          "name": "`gke_bai5_gateway_route_evidence_20260518_235627`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "28"
+        },
+        {
+          "name": "`gke_bai6_agent_sandbox_evidence_20260519_000603`",
+          "birth": "2026-05",
+          "active": "2026-07",
+          "items": "47"
+        },
+        {
+          "name": "`gke_dra_lab_recovery_20260518_233458`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "13"
+        },
+        {
+          "name": "`gke_lab_1_to_6_rollup_20260519_121004`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "7"
+        },
+        {
+          "name": "`gke_llmd_bai4_evidence_20260518_234552`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "27"
+        },
+        {
+          "name": "`hyperai-binding-audit-20260508-081347`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "13"
+        },
+        {
+          "name": "`hyperai-core-code-audit-20260508-082243`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "8"
+        },
+        {
+          "name": "`hyperai-core-deep-audit-20260508-081750`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "7"
+        },
+        {
+          "name": "`hyperai-docker-runtime-20260508-080837`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "18"
+        },
+        {
+          "name": "`hyperai-domain-source-20260508-100939`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "3"
+        },
+        {
+          "name": "`hyperai-memory-runner-audit-20260508-082737`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "8"
+        },
+        {
+          "name": "`hyperai-node-map-audit-20260508-171451`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "6"
+        },
+        {
+          "name": "`hyperai-post-agent-recovery-check-20260508-202639`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "1"
+        },
+        {
+          "name": "`hyperai-source-survival-audit-20260508-204436`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "2"
+        },
+        {
+          "name": "`hyperai-source-survival-followup-20260508-205549`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "1"
+        },
+        {
+          "name": "`hyperai-terminal-sync-20260508-160505`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "1"
+        },
+        {
+          "name": "`hyperai-terminal-sync-20260509-005835`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "26"
+        },
+        {
+          "name": "`hyperai-ui-authority-followup-20260508-163156`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "1"
+        },
+        {
+          "name": "`hyperai-ui-authority-simple-20260508-162051`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "1"
+        },
+        {
+          "name": "`HYPERAI_AXCONTROL_ROOTCAUSE_20260530_105848`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "1"
+        },
+        {
+          "name": "`hyperai_cleanup_reports`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "13"
+        },
+        {
+          "name": "`HYPERAI_FORENSIC_PHASE1_20260530_105350`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "1"
+        },
+        {
+          "name": "`HYPERAI_FORENSIC_PHASE1_20260530_105357`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "1"
+        },
+        {
+          "name": "`MCP_CATALOG_IMPORT_SCAN_20260530_151715`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "14"
+        },
+        {
+          "name": "`MCP_TOOLKIT_PREFLIGHT_20260530_151346`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "10"
+        },
+        {
+          "name": "`money_safe_cloud_audit_20260519_120545`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "4"
+        },
+        {
+          "name": "`ollama-audit-20260508-065344`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "38"
+        },
+        {
+          "name": "`permission-audit`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "0"
+        },
+        {
+          "name": "`system_audit_report`",
+          "birth": "2026-03",
+          "active": "2026-05",
+          "items": "1"
+        },
+        {
+          "name": "`technical-audit`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "101"
+        }
+      ]
+    },
+    {
+      "category": "ai_operator_runtime",
+      "description": "Runtime / IDE / operator AI (71)",
+      "count": 71,
+      "entries": [
+        {
+          "name": "`# QUẢN LÝ CREDENTIALS - HỆ THỐNG AI CỦA NGUYỄN ĐỨC CƯỜNG`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "3"
+        },
+        {
+          "name": "`.agent_data`",
+          "birth": "2025-11",
+          "active": "2026-05",
+          "items": "94"
+        },
+        {
+          "name": "`.agents`",
+          "birth": "2026-02",
+          "active": "2026-06",
+          "items": "9"
+        },
+        {
+          "name": "`.aider-desk`",
+          "birth": "2026-05",
+          "active": "2026-07",
+          "items": "4"
+        },
+        {
+          "name": "`.aios`",
+          "birth": "2026-05",
+          "active": "2026-07",
+          "items": "4"
+        },
+        {
+          "name": "`.aitk`",
+          "birth": "2025-10",
+          "active": "2026-07",
+          "items": "732"
+        },
+        {
+          "name": "`.antigravity`",
+          "birth": "2026-02",
+          "active": "2026-07",
+          "items": "4"
+        },
+        {
+          "name": "`.antigravity-ide`",
+          "birth": "2026-05",
+          "active": "2026-07",
+          "items": "6"
+        },
+        {
+          "name": "`.augment`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "2"
+        },
+        {
+          "name": "`.auth-orchestrator`",
+          "birth": "2026-03",
+          "active": "2026-06",
+          "items": "12"
+        },
+        {
+          "name": "`.bito`",
+          "birth": "2025-11",
+          "active": "2026-07",
+          "items": "10"
+        },
+        {
+          "name": "`.bitowingman`",
+          "birth": "2025-11",
+          "active": "2026-02",
+          "items": "2"
+        },
+        {
+          "name": "`.blackbox`",
+          "birth": "2025-12",
+          "active": "2026-06",
+          "items": "7"
+        },
+        {
+          "name": "`.blackbox-cli-v2`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "4"
+        },
+        {
+          "name": "`.bob`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "2"
+        },
+        {
+          "name": "`.cagent`",
+          "birth": "2026-02",
+          "active": "2026-06",
+          "items": "11"
+        },
+        {
+          "name": "`.chatgpt-copilot`",
+          "birth": "2026-01",
+          "active": "2026-01",
+          "items": "0"
+        },
+        {
+          "name": "`.claude`",
+          "birth": "2025-11",
+          "active": "2026-07",
+          "items": "26"
+        },
+        {
+          "name": "`.claude-server-commander`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "6"
+        },
+        {
+          "name": "`.cline`",
+          "birth": "2026-02",
+          "active": "2026-06",
+          "items": "4"
+        },
+        {
+          "name": "`.codebuddy`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "2"
+        },
+        {
+          "name": "`.codegeex`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "0"
+        },
+        {
+          "name": "`.codegpt`",
+          "birth": "2026-06",
+          "active": "2026-06",
+          "items": "6"
+        },
+        {
+          "name": "`.codeium`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "15"
+        },
+        {
+          "name": "`.codemate`",
+          "birth": "2026-03",
+          "active": "2026-03",
+          "items": "7"
+        },
+        {
+          "name": "`.codex`",
+          "birth": "2025-11",
+          "active": "2026-07",
+          "items": "81"
+        },
+        {
+          "name": "`.codexbar`",
+          "birth": "2026-03",
+          "active": "2026-07",
+          "items": "3"
+        },
+        {
+          "name": "`.commandcode`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "2"
+        },
+        {
+          "name": "`.copilot`",
+          "birth": "2025-11",
+          "active": "2026-07",
+          "items": "31"
+        },
+        {
+          "name": "`.cursor`",
+          "birth": "2026-02",
+          "active": "2026-07",
+          "items": "15"
+        },
+        {
+          "name": "`.daiof`",
+          "birth": "2026-01",
+          "active": "2026-07",
+          "items": "4"
+        },
+        {
+          "name": "`.devin`",
+          "birth": "2026-06",
+          "active": "2026-07",
+          "items": "6"
+        },
+        {
+          "name": "`.gemini`",
+          "birth": "2026-02",
+          "active": "2026-07",
+          "items": "18"
+        },
+        {
+          "name": "`.github-copilot-cli`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "4"
+        },
+        {
+          "name": "`.hyper_plugins`",
+          "birth": "2025-11",
+          "active": "2026-07",
+          "items": "7"
+        },
+        {
+          "name": "`.hyperai`",
+          "birth": "2025-10",
+          "active": "2026-07",
+          "items": "23"
+        },
+        {
+          "name": "`.hyperframes`",
+          "birth": "2026-05",
+          "active": "2026-07",
+          "items": "3"
+        },
+        {
+          "name": "`.kombai`",
+          "birth": "2026-02",
+          "active": "2026-07",
+          "items": "3"
+        },
+        {
+          "name": "`.kombai-binaries`",
+          "birth": "2026-02",
+          "active": "2026-07",
+          "items": "3"
+        },
+        {
+          "name": "`.lmstudio`",
+          "birth": "2026-02",
+          "active": "2026-07",
+          "items": "19"
+        },
+        {
+          "name": "`.mcp`",
+          "birth": "2026-01",
+          "active": "2026-03",
+          "items": "4"
+        },
+        {
+          "name": "`.mcp-auth`",
+          "birth": "2025-11",
+          "active": "2026-03",
+          "items": "5"
+        },
+        {
+          "name": "`.mcpjam`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "2"
+        },
+        {
+          "name": "`.mcporter`",
+          "birth": "2026-05",
+          "active": "2026-06",
+          "items": "2"
+        },
+        {
+          "name": "`.ollama`",
+          "birth": "2025-11",
+          "active": "2026-07",
+          "items": "15"
+        },
+        {
+          "name": "`.ollama-direct`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "1"
+        },
+        {
+          "name": "`.playwright-mcp`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "8"
+        },
+        {
+          "name": "`.qwen`",
+          "birth": "2026-02",
+          "active": "2026-07",
+          "items": "15"
+        },
+        {
+          "name": "`.sema4ai`",
+          "birth": "2025-12",
+          "active": "2026-07",
+          "items": "22"
+        },
+        {
+          "name": "`.smartpromptor`",
+          "birth": "2026-02",
+          "active": "2026-02",
+          "items": "1"
+        },
+        {
+          "name": "`.tabnine`",
+          "birth": "2025-10",
+          "active": "2026-07",
+          "items": "3"
+        },
+        {
+          "name": "`.trae`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "2"
+        },
+        {
+          "name": "`.trae-cn`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "2"
+        },
+        {
+          "name": "`.windsurf`",
+          "birth": "2026-05",
+          "active": "2026-07",
+          "items": "8"
+        },
+        {
+          "name": "`agent-os`",
+          "birth": "2026-05",
+          "active": "2026-06",
+          "items": "7"
+        },
+        {
+          "name": "`ai-projects`",
+          "birth": "2026-04",
+          "active": "2026-04",
+          "items": "5"
+        },
+        {
+          "name": "`CodeGeeXProjects`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "0"
+        },
+        {
+          "name": "`copilot-cli`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "16"
+        },
+        {
+          "name": "`copilot-worktrees`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "2"
+        },
+        {
+          "name": "`devin`",
+          "birth": "2026-05",
+          "active": "2026-07",
+          "items": "6"
+        },
+        {
+          "name": "`DOCKER_CAGENT_DOC_BASELINE_20260523_035855`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "1"
+        },
+        {
+          "name": "`dockerhub-mcp-stdio-lock-20260513-144045`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "9"
+        },
+        {
+          "name": "`github-copilot-for-azure`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "30"
+        },
+        {
+          "name": "`gpt_connector_orchestrator`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "11"
+        },
+        {
+          "name": "`hyperai-policy`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "1"
+        },
+        {
+          "name": "`Postman Agent`",
+          "birth": "2026-06",
+          "active": "2026-06",
+          "items": "2"
+        },
+        {
+          "name": "`teamviewer-iot-agent-docker`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "3"
+        },
+        {
+          "name": "`teamviewer-iot-agent-docker_3.7.2_armv7`",
+          "birth": "2026-03",
+          "active": "2026-05",
+          "items": "9"
+        },
+        {
+          "name": "`trust_of_copilot`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "162"
+        },
+        {
+          "name": "`trust_of_copilot-c8aae4ab`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "33"
+        },
+        {
+          "name": "`trust_of_copilot-c8aae4ab.worktrees`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "1"
+        }
+      ]
+    },
+    {
+      "category": "ai_project_lab",
+      "description": "Dự án / lab AI (11)",
+      "count": 11,
+      "entries": [
+        {
+          "name": "`DAIOF`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "7"
+        },
+        {
+          "name": "`DAIOF-Framework`",
+          "birth": "2026-06",
+          "active": "2026-07",
+          "items": "208"
+        },
+        {
+          "name": "`DAIOF-Framework.worktrees`",
+          "birth": "2026-06",
+          "active": "2026-07",
+          "items": "6"
+        },
+        {
+          "name": "`HyperAI`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "41"
+        },
+        {
+          "name": "`HyperAI-Sync`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "16"
+        },
+        {
+          "name": "`hypernode-runtime`",
+          "birth": "2026-05",
+          "active": "2026-07",
+          "items": "12"
+        },
+        {
+          "name": "`multi-container-app`",
+          "birth": "2026-06",
+          "active": "2026-07",
+          "items": "8"
+        },
+        {
+          "name": "`my_too_test`",
+          "birth": "2026-02",
+          "active": "2026-07",
+          "items": "32"
+        },
+        {
+          "name": "`ollama-test`",
+          "birth": "2025-11",
+          "active": "2026-07",
+          "items": "16"
+        },
+        {
+          "name": "`testcontainers-cloud-java-example`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "18"
+        },
+        {
+          "name": "`tests`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "6"
+        }
+      ]
+    },
+    {
+      "category": "daiof_sandbox",
+      "description": "DAIOF sandbox / audit (10)",
+      "count": 10,
+      "entries": [
+        {
+          "name": "`daiof-audit-node`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "5"
+        },
+        {
+          "name": "`daiof-blackboxai-001`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "5"
+        },
+        {
+          "name": "`daiof-blackboxai-005`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "5"
+        },
+        {
+          "name": "`daiof-claude_code-002`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "5"
+        },
+        {
+          "name": "`daiof-claude_code-006`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "5"
+        },
+        {
+          "name": "`daiof-codex-003`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "5"
+        },
+        {
+          "name": "`daiof-codex-007`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "5"
+        },
+        {
+          "name": "`daiof-custom_daiof-004`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "5"
+        },
+        {
+          "name": "`daiof-custom_daiof-008`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "5"
+        },
+        {
+          "name": "`daiof-framewor`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "161"
+        }
+      ]
+    },
+    {
+      "category": "data_backup_cache",
+      "description": "Data / backup / cache (20)",
+      "count": 20,
+      "entries": [
+        {
+          "name": "`.ai-stack-backups`",
+          "birth": "2026-06",
+          "active": "2026-07",
+          "items": "3"
+        },
+        {
+          "name": "`.ai-stack-cleanups`",
+          "birth": "2026-06",
+          "active": "2026-07",
+          "items": "5"
+        },
+        {
+          "name": "`.ai-stack-diagnostics`",
+          "birth": "2026-06",
+          "active": "2026-07",
+          "items": "3"
+        },
+        {
+          "name": "`.build-logs`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "1"
+        },
+        {
+          "name": "`.codemate.cache`",
+          "birth": "2026-03",
+          "active": "2026-03",
+          "items": "2"
+        },
+        {
+          "name": "`.ollama-launch-logs`",
+          "birth": "2026-06",
+          "active": "2026-06",
+          "items": "15"
+        },
+        {
+          "name": "`.pi-bootstrap-backups`",
+          "birth": "2026-06",
+          "active": "2026-06",
+          "items": "1"
+        },
+        {
+          "name": "`__pycache__`",
+          "birth": "2026-05",
+          "active": "2026-07",
+          "items": "1"
+        },
+        {
+          "name": "`ap0_diagnostics`",
+          "birth": "2026-06",
+          "active": "2026-06",
+          "items": "5"
+        },
+        {
+          "name": "`apo_topology_logs_20260424_083728`",
+          "birth": "2026-04",
+          "active": "2026-04",
+          "items": "0"
+        },
+        {
+          "name": "`backup`",
+          "birth": "2025-11",
+          "active": "2026-02",
+          "items": "2"
+        },
+        {
+          "name": "`BACKUP_AI`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "31"
+        },
+        {
+          "name": "`backups`",
+          "birth": "2026-02",
+          "active": "2026-02",
+          "items": "5"
+        },
+        {
+          "name": "`Caches`",
+          "birth": "2025-12",
+          "active": "2026-02",
+          "items": "2"
+        },
+        {
+          "name": "`cloud_ecosystem_storage`",
+          "birth": "2026-03",
+          "active": "2026-03",
+          "items": "6"
+        },
+        {
+          "name": "`docker_diagnostics`",
+          "birth": "2026-04",
+          "active": "2026-04",
+          "items": "10"
+        },
+        {
+          "name": "`failed`",
+          "birth": "2026-02",
+          "active": "2026-02",
+          "items": "0"
+        },
+        {
+          "name": "`logs`",
+          "birth": "2025-11",
+          "active": "2026-06",
+          "items": "46"
+        },
+        {
+          "name": "`loki-backups`",
+          "birth": "2026-03",
+          "active": "2026-03",
+          "items": "7"
+        },
+        {
+          "name": "`multi_setup_backup_20251006_204547`",
+          "birth": "2025-10",
+          "active": "2026-03",
+          "items": "2"
+        }
+      ]
+    },
+    {
+      "category": "dev_tool",
+      "description": "Dev / database / test tool (198)",
+      "count": 198,
+      "entries": [
+        {
+          "name": "`.42crunch`",
+          "birth": "2025-12",
+          "active": "2025-12",
+          "items": "1"
+        },
+        {
+          "name": "`.adal`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "2"
+        },
+        {
+          "name": "`.altestrunner`",
+          "birth": "2026-02",
+          "active": "2026-07",
+          "items": "3"
+        },
+        {
+          "name": "`.altimate`",
+          "birth": "2025-11",
+          "active": "2026-07",
+          "items": "6"
+        },
+        {
+          "name": "`.amazon-q.dotfiles.bak`",
+          "birth": "2026-04",
+          "active": "2026-04",
+          "items": "1"
+        },
+        {
+          "name": "`.amp`",
+          "birth": "2026-02",
+          "active": "2026-02",
+          "items": "4"
+        },
+        {
+          "name": "`.apo`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "2"
+        },
+        {
+          "name": "`.appcat`",
+          "birth": "2025-09",
+          "active": "2025-11",
+          "items": "17"
+        },
+        {
+          "name": "`.appcat-config`",
+          "birth": "2025-10",
+          "active": "2025-10",
+          "items": "1"
+        },
+        {
+          "name": "`.appmap`",
+          "birth": "2025-12",
+          "active": "2026-02",
+          "items": "4"
+        },
+        {
+          "name": "`.appworks`",
+          "birth": "2025-12",
+          "active": "2026-02",
+          "items": "4"
+        },
+        {
+          "name": "`.ariana`",
+          "birth": "2026-02",
+          "active": "2026-02",
+          "items": "1"
+        },
+        {
+          "name": "`.armlm`",
+          "birth": "2026-02",
+          "active": "2026-02",
+          "items": "1"
+        },
+        {
+          "name": "`.aspnet`",
+          "birth": "2025-10",
+          "active": "2025-10",
+          "items": "1"
+        },
+        {
+          "name": "`.aws`",
+          "birth": "2025-10",
+          "active": "2026-05",
+          "items": "7"
+        },
+        {
+          "name": "`.azad`",
+          "birth": "2025-12",
+          "active": "2026-02",
+          "items": "3"
+        },
+        {
+          "name": "`.azd`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "5"
+        },
+        {
+          "name": "`.azure`",
+          "birth": "2025-10",
+          "active": "2026-07",
+          "items": "17"
+        },
+        {
+          "name": "`.baml`",
+          "birth": "2025-12",
+          "active": "2026-03",
+          "items": "6"
+        },
+        {
+          "name": "`.bash_sessions`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "2"
+        },
+        {
+          "name": "`.blackbird`",
+          "birth": "2025-12",
+          "active": "2025-12",
+          "items": "1"
+        },
+        {
+          "name": "`.blackduck`",
+          "birth": "2026-06",
+          "active": "2026-06",
+          "items": "3"
+        },
+        {
+          "name": "`.bridge`",
+          "birth": "2025-11",
+          "active": "2026-02",
+          "items": "5"
+        },
+        {
+          "name": "`.bun`",
+          "birth": "2026-04",
+          "active": "2026-04",
+          "items": "1"
+        },
+        {
+          "name": "`.bundle`",
+          "birth": "2026-03",
+          "active": "2026-03",
+          "items": "1"
+        },
+        {
+          "name": "`.cargo`",
+          "birth": "2026-02",
+          "active": "2026-06",
+          "items": "10"
+        },
+        {
+          "name": "`.circleci`",
+          "birth": "2025-12",
+          "active": "2025-12",
+          "items": "3"
+        },
+        {
+          "name": "`.clawdbot`",
+          "birth": "2026-02",
+          "active": "2026-02",
+          "items": "1"
+        },
+        {
+          "name": "`.clj-kondo`",
+          "birth": "2026-01",
+          "active": "2026-01",
+          "items": "1"
+        },
+        {
+          "name": "`.clojure`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "4"
+        },
+        {
+          "name": "`.comment-companion`",
+          "birth": "2025-12",
+          "active": "2025-12",
+          "items": "1"
+        },
+        {
+          "name": "`.composer`",
+          "birth": "2025-11",
+          "active": "2026-03",
+          "items": "2"
+        },
+        {
+          "name": "`.conda`",
+          "birth": "2025-12",
+          "active": "2025-12",
+          "items": "1"
+        },
+        {
+          "name": "`.console-ninja`",
+          "birth": "2025-11",
+          "active": "2026-05",
+          "items": "12"
+        },
+        {
+          "name": "`.cph-ng`",
+          "birth": "2026-02",
+          "active": "2026-02",
+          "items": "1"
+        },
+        {
+          "name": "`.cspell`",
+          "birth": "2025-10",
+          "active": "2025-10",
+          "items": "1"
+        },
+        {
+          "name": "`.dbclient`",
+          "birth": "2025-10",
+          "active": "2025-11",
+          "items": "5"
+        },
+        {
+          "name": "`.dbcode`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "1"
+        },
+        {
+          "name": "`.dbtools`",
+          "birth": "2026-03",
+          "active": "2026-07",
+          "items": "5"
+        },
+        {
+          "name": "`.deps.clj`",
+          "birth": "2025-11",
+          "active": "2026-03",
+          "items": "5"
+        },
+        {
+          "name": "`.devdb`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "2"
+        },
+        {
+          "name": "`.devx-workbench`",
+          "birth": "2026-02",
+          "active": "2026-02",
+          "items": "4"
+        },
+        {
+          "name": "`.docker`",
+          "birth": "2026-06",
+          "active": "2026-07",
+          "items": "22"
+        },
+        {
+          "name": "`.dotnet`",
+          "birth": "2025-10",
+          "active": "2026-06",
+          "items": "37"
+        },
+        {
+          "name": "`.dropbox`",
+          "birth": "2026-03",
+          "active": "2026-05",
+          "items": "17"
+        },
+        {
+          "name": "`.dropbox_bi`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "1"
+        },
+        {
+          "name": "`.eclipse`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "0"
+        },
+        {
+          "name": "`.espressif`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "3"
+        },
+        {
+          "name": "`.factory`",
+          "birth": "2025-12",
+          "active": "2026-07",
+          "items": "26"
+        },
+        {
+          "name": "`.finch`",
+          "birth": "2026-03",
+          "active": "2026-05",
+          "items": "2"
+        },
+        {
+          "name": "`.firecrawl`",
+          "birth": "2026-05",
+          "active": "2026-07",
+          "items": "11"
+        },
+        {
+          "name": "`.fitten`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "1"
+        },
+        {
+          "name": "`.flowbaby`",
+          "birth": "2026-02",
+          "active": "2026-02",
+          "items": "1"
+        },
+        {
+          "name": "`.fx`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "2"
+        },
+        {
+          "name": "`.genkit`",
+          "birth": "2026-02",
+          "active": "2026-02",
+          "items": "1"
+        },
+        {
+          "name": "`.git`",
+          "birth": "2026-05",
+          "active": "2026-07",
+          "items": "23"
+        },
+        {
+          "name": "`.github`",
+          "birth": "2025-10",
+          "active": "2026-06",
+          "items": "9"
+        },
+        {
+          "name": "`.gitkraken`",
+          "birth": "2025-11",
+          "active": "2026-07",
+          "items": "15"
+        },
+        {
+          "name": "`.gitlab`",
+          "birth": "2025-10",
+          "active": "2025-10",
+          "items": "1"
+        },
+        {
+          "name": "`.gk`",
+          "birth": "2025-11",
+          "active": "2026-07",
+          "items": "4"
+        },
+        {
+          "name": "`.gradle`",
+          "birth": "2025-12",
+          "active": "2026-02",
+          "items": "6"
+        },
+        {
+          "name": "`.grok`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "4"
+        },
+        {
+          "name": "`.gsutil`",
+          "birth": "2026-06",
+          "active": "2026-06",
+          "items": "3"
+        },
+        {
+          "name": "`.hermes`",
+          "birth": "2026-06",
+          "active": "2026-07",
+          "items": "20"
+        },
+        {
+          "name": "`.homebrew`",
+          "birth": "2026-06",
+          "active": "2026-07",
+          "items": "2"
+        },
+        {
+          "name": "`.idl`",
+          "birth": "2026-02",
+          "active": "2026-02",
+          "items": "1"
+        },
+        {
+          "name": "`.idlerc`",
+          "birth": "2025-12",
+          "active": "2026-01",
+          "items": "2"
+        },
+        {
+          "name": "`.iflow`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "2"
+        },
+        {
+          "name": "`.inferencesh`",
+          "birth": "2026-02",
+          "active": "2026-07",
+          "items": "3"
+        },
+        {
+          "name": "`.ipython`",
+          "birth": "2025-10",
+          "active": "2025-10",
+          "items": "1"
+        },
+        {
+          "name": "`.juliaup`",
+          "birth": "2025-12",
+          "active": "2025-12",
+          "items": "1"
+        },
+        {
+          "name": "`.junie`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "2"
+        },
+        {
+          "name": "`.jupyter`",
+          "birth": "2025-10",
+          "active": "2025-10",
+          "items": "1"
+        },
+        {
+          "name": "`.kimi`",
+          "birth": "2026-06",
+          "active": "2026-06",
+          "items": "1"
+        },
+        {
+          "name": "`.kiro`",
+          "birth": "2026-03",
+          "active": "2026-06",
+          "items": "6"
+        },
+        {
+          "name": "`.kode`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "2"
+        },
+        {
+          "name": "`.kong`",
+          "birth": "2026-06",
+          "active": "2026-06",
+          "items": "1"
+        },
+        {
+          "name": "`.kube`",
+          "birth": "2025-11",
+          "active": "2026-07",
+          "items": "3"
+        },
+        {
+          "name": "`.lemminx`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "1"
+        },
+        {
+          "name": "`.lightrun`",
+          "birth": "2025-12",
+          "active": "2026-05",
+          "items": "23"
+        },
+        {
+          "name": "`.lingma`",
+          "birth": "2025-11",
+          "active": "2026-06",
+          "items": "11"
+        },
+        {
+          "name": "`.llama-app`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "1"
+        },
+        {
+          "name": "`.localstack`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "2"
+        },
+        {
+          "name": "`.lsp`",
+          "birth": "2026-01",
+          "active": "2026-01",
+          "items": "1"
+        },
+        {
+          "name": "`.m2`",
+          "birth": "2025-11",
+          "active": "2026-05",
+          "items": "3"
+        },
+        {
+          "name": "`.mamba`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "1"
+        },
+        {
+          "name": "`.marscode`",
+          "birth": "2025-11",
+          "active": "2026-05",
+          "items": "11"
+        },
+        {
+          "name": "`.matplotlib`",
+          "birth": "2025-10",
+          "active": "2025-10",
+          "items": "1"
+        },
+        {
+          "name": "`.max`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "7"
+        },
+        {
+          "name": "`.metals`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "1"
+        },
+        {
+          "name": "`.metorial`",
+          "birth": "2026-05",
+          "active": "2026-06",
+          "items": "3"
+        },
+        {
+          "name": "`.micromamba`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "3"
+        },
+        {
+          "name": "`.minikube`",
+          "birth": "2025-11",
+          "active": "2026-06",
+          "items": "10"
+        },
+        {
+          "name": "`.mirrord`",
+          "birth": "2026-03",
+          "active": "2026-04",
+          "items": "4"
+        },
+        {
+          "name": "`.mistralcode`",
+          "birth": "2025-12",
+          "active": "2025-12",
+          "items": "5"
+        },
+        {
+          "name": "`.mobioos`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "2"
+        },
+        {
+          "name": "`.mongodb`",
+          "birth": "2025-10",
+          "active": "2026-06",
+          "items": "2"
+        },
+        {
+          "name": "`.multi`",
+          "birth": "2025-12",
+          "active": "2026-07",
+          "items": "9"
+        },
+        {
+          "name": "`.mux`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "2"
+        },
+        {
+          "name": "`.mvn`",
+          "birth": "2025-10",
+          "active": "2025-10",
+          "items": "1"
+        },
+        {
+          "name": "`.mysqlsh-gui`",
+          "birth": "2025-12",
+          "active": "2026-05",
+          "items": "3"
+        },
+        {
+          "name": "`.n8n`",
+          "birth": "2026-04",
+          "active": "2026-04",
+          "items": "2"
+        },
+        {
+          "name": "`.neovate`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "2"
+        },
+        {
+          "name": "`.net`",
+          "birth": "2025-10",
+          "active": "2025-12",
+          "items": "4"
+        },
+        {
+          "name": "`.next-devtools-mcp`",
+          "birth": "2026-03",
+          "active": "2026-07",
+          "items": "3"
+        },
+        {
+          "name": "`.npm`",
+          "birth": "2026-06",
+          "active": "2026-07",
+          "items": "6"
+        },
+        {
+          "name": "`.npm-global`",
+          "birth": "2026-02",
+          "active": "2026-02",
+          "items": "3"
+        },
+        {
+          "name": "`.nrfutil`",
+          "birth": "2025-12",
+          "active": "2026-02",
+          "items": "9"
+        },
+        {
+          "name": "`.nuget`",
+          "birth": "2025-10",
+          "active": "2026-07",
+          "items": "2"
+        },
+        {
+          "name": "`.nvm.worktrees`",
+          "birth": "2026-02",
+          "active": "2026-02",
+          "items": "1"
+        },
+        {
+          "name": "`.ocp`",
+          "birth": "2026-04",
+          "active": "2026-04",
+          "items": "3"
+        },
+        {
+          "name": "`.odo`",
+          "birth": "2026-02",
+          "active": "2026-02",
+          "items": "1"
+        },
+        {
+          "name": "`.oh-my-zsh`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "1"
+        },
+        {
+          "name": "`.openclaw`",
+          "birth": "2026-02",
+          "active": "2026-07",
+          "items": "38"
+        },
+        {
+          "name": "`.openhands`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "2"
+        },
+        {
+          "name": "`.overture`",
+          "birth": "2026-04",
+          "active": "2026-04",
+          "items": "1"
+        },
+        {
+          "name": "`.pi`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "4"
+        },
+        {
+          "name": "`.platformio`",
+          "birth": "2025-11",
+          "active": "2026-07",
+          "items": "7"
+        },
+        {
+          "name": "`.pochi`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "2"
+        },
+        {
+          "name": "`.postman`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "2"
+        },
+        {
+          "name": "`.postqode`",
+          "birth": "2026-04",
+          "active": "2026-06",
+          "items": "3"
+        },
+        {
+          "name": "`.purecode`",
+          "birth": "2026-02",
+          "active": "2026-02",
+          "items": "5"
+        },
+        {
+          "name": "`.pytest_cache`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "4"
+        },
+        {
+          "name": "`.qoder`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "2"
+        },
+        {
+          "name": "`.qodo`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "4"
+        },
+        {
+          "name": "`.raccoon`",
+          "birth": "2025-12",
+          "active": "2025-12",
+          "items": "5"
+        },
+        {
+          "name": "`.redhat`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "1"
+        },
+        {
+          "name": "`.render`",
+          "birth": "2026-03",
+          "active": "2026-03",
+          "items": "1"
+        },
+        {
+          "name": "`.rest-client`",
+          "birth": "2025-10",
+          "active": "2025-10",
+          "items": "4"
+        },
+        {
+          "name": "`.rmv`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "1"
+        },
+        {
+          "name": "`.robocorp`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "18"
+        },
+        {
+          "name": "`.robocorp-code`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "1"
+        },
+        {
+          "name": "`.roo`",
+          "birth": "2025-11",
+          "active": "2026-04",
+          "items": "4"
+        },
+        {
+          "name": "`.rustup`",
+          "birth": "2026-02",
+          "active": "2026-02",
+          "items": "6"
+        },
+        {
+          "name": "`.securecoder`",
+          "birth": "2026-06",
+          "active": "2026-06",
+          "items": "0"
+        },
+        {
+          "name": "`.semantic_search`",
+          "birth": "2026-06",
+          "active": "2026-06",
+          "items": "1"
+        },
+        {
+          "name": "`.sentry`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "4"
+        },
+        {
+          "name": "`.serena`",
+          "birth": "2025-11",
+          "active": "2026-07",
+          "items": "9"
+        },
+        {
+          "name": "`.ServiceHub`",
+          "birth": "2025-10",
+          "active": "2026-02",
+          "items": "27"
+        },
+        {
+          "name": "`.sigstore`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "1"
+        },
+        {
+          "name": "`.sixth`",
+          "birth": "2026-04",
+          "active": "2026-05",
+          "items": "4"
+        },
+        {
+          "name": "`.snapshots`",
+          "birth": "2026-01",
+          "active": "2026-01",
+          "items": "3"
+        },
+        {
+          "name": "`.snowflake`",
+          "birth": "2025-12",
+          "active": "2026-07",
+          "items": "3"
+        },
+        {
+          "name": "`.software`",
+          "birth": "2025-10",
+          "active": "2025-10",
+          "items": "7"
+        },
+        {
+          "name": "`.sonarlint`",
+          "birth": "2025-11",
+          "active": "2026-01",
+          "items": "6"
+        },
+        {
+          "name": "`.sonarlint-cabl`",
+          "birth": "2025-12",
+          "active": "2026-02",
+          "items": "4"
+        },
+        {
+          "name": "`.sqlcontainers`",
+          "birth": "2025-10",
+          "active": "2026-07",
+          "items": "8"
+        },
+        {
+          "name": "`.ssh-lite`",
+          "birth": "2026-04",
+          "active": "2026-04",
+          "items": "0"
+        },
+        {
+          "name": "`.streamlit`",
+          "birth": "2026-02",
+          "active": "2026-02",
+          "items": "2"
+        },
+        {
+          "name": "`.supermaven`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "1"
+        },
+        {
+          "name": "`.swiftly`",
+          "birth": "2025-12",
+          "active": "2026-07",
+          "items": "5"
+        },
+        {
+          "name": "`.swiftpm`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "3"
+        },
+        {
+          "name": "`.templateengine`",
+          "birth": "2025-10",
+          "active": "2025-11",
+          "items": "4"
+        },
+        {
+          "name": "`.th-client`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "2"
+        },
+        {
+          "name": "`.tmp-aios-dotnet`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "0"
+        },
+        {
+          "name": "`.twinny`",
+          "birth": "2025-11",
+          "active": "2026-02",
+          "items": "3"
+        },
+        {
+          "name": "`.unhook`",
+          "birth": "2026-04",
+          "active": "2026-04",
+          "items": "0"
+        },
+        {
+          "name": "`.vcpkg`",
+          "birth": "2026-02",
+          "active": "2026-02",
+          "items": "1"
+        },
+        {
+          "name": "`.venv`",
+          "birth": "2026-02",
+          "active": "2026-05",
+          "items": "7"
+        },
+        {
+          "name": "`.vibe`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "2"
+        },
+        {
+          "name": "`.vnc`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "2"
+        },
+        {
+          "name": "`.vscode`",
+          "birth": "2025-10",
+          "active": "2026-07",
+          "items": "50"
+        },
+        {
+          "name": "`.vscode-insiders`",
+          "birth": "2025-10",
+          "active": "2026-07",
+          "items": "9"
+        },
+        {
+          "name": "`.vscode-powertools`",
+          "birth": "2025-11",
+          "active": "2026-07",
+          "items": "3"
+        },
+        {
+          "name": "`.vtcode`",
+          "birth": "2025-12",
+          "active": "2026-02",
+          "items": "6"
+        },
+        {
+          "name": "`.wakatime`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "5"
+        },
+        {
+          "name": "`.wallaby`",
+          "birth": "2025-10",
+          "active": "2026-07",
+          "items": "7"
+        },
+        {
+          "name": "`.wca`",
+          "birth": "2025-12",
+          "active": "2026-02",
+          "items": "6"
+        },
+        {
+          "name": "`.wecode-client`",
+          "birth": "2026-04",
+          "active": "2026-04",
+          "items": "1"
+        },
+        {
+          "name": "`.whitzard`",
+          "birth": "2025-12",
+          "active": "2025-12",
+          "items": "1"
+        },
+        {
+          "name": "`.workik`",
+          "birth": "2026-02",
+          "active": "2026-02",
+          "items": "2"
+        },
+        {
+          "name": "`.zencoder`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "2"
+        },
+        {
+          "name": "`.zero`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "5"
+        },
+        {
+          "name": "`.zinstaller`",
+          "birth": "2025-12",
+          "active": "2026-02",
+          "items": "7"
+        },
+        {
+          "name": "`.zsh_sessions`",
+          "birth": "2025-10",
+          "active": "2026-07",
+          "items": "67"
+        },
+        {
+          "name": "`AnypointCodeBuilder`",
+          "birth": "2025-11",
+          "active": "2026-02",
+          "items": "4"
+        },
+        {
+          "name": "`AppData`",
+          "birth": "2025-12",
+          "active": "2026-02",
+          "items": "2"
+        },
+        {
+          "name": "`blackboxai_mcp_install_postman`",
+          "birth": "2026-06",
+          "active": "2026-06",
+          "items": "3"
+        },
+        {
+          "name": "`build`",
+          "birth": "2026-03",
+          "active": "2026-06",
+          "items": "14"
+        },
+        {
+          "name": "`BUILD_SSO_SENTRY_RUNTIME_MAP_20260517T220801Z`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "3"
+        },
+        {
+          "name": "`BUILD_SSO_SENTRY_RUNTIME_MAP_20260517T222825Z`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "3"
+        },
+        {
+          "name": "`BUILD_SSO_SENTRY_RUNTIME_MAP_20260517T224803Z`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "6"
+        },
+        {
+          "name": "`BUILD_SSO_SENTRY_RUNTIME_MAP_20260517T225145Z`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "3"
+        },
+        {
+          "name": "`BUILD_SSO_SENTRY_RUNTIME_MAP_20260517T231351Z`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "3"
+        },
+        {
+          "name": "`data`",
+          "birth": "2026-04",
+          "active": "2026-06",
+          "items": "3"
+        },
+        {
+          "name": "`dataflow-read-pubsub-write-bigquery`",
+          "birth": "2026-06",
+          "active": "2026-06",
+          "items": "23"
+        },
+        {
+          "name": "`depot_tools`",
+          "birth": "2026-03",
+          "active": "2026-06",
+          "items": "260"
+        },
+        {
+          "name": "`docker-diagnose`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "16"
+        },
+        {
+          "name": "`docker-oneshot`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "4"
+        },
+        {
+          "name": "`docker-scout-production-setup-20260521-114808`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "7"
+        },
+        {
+          "name": "`docker-scout-setup-20260521-114352`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "6"
+        },
+        {
+          "name": "`docker-scout-tmp`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "0"
+        },
+        {
+          "name": "`DOCKER_RUNTIME_STRICT_VALIDATION_20260523_040703`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "2"
+        },
+        {
+          "name": "`git`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "2"
+        },
+        {
+          "name": "`github-work`",
+          "birth": "2026-04",
+          "active": "2026-04",
+          "items": "0"
+        },
+        {
+          "name": "`session_freeze_20260519_121213`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "4"
+        },
+        {
+          "name": "`sturdy-lamp`",
+          "birth": "2025-12",
+          "active": "2026-03",
+          "items": "12"
+        },
+        {
+          "name": "`tools`",
+          "birth": "2026-02",
+          "active": "2026-07",
+          "items": "2"
+        }
+      ]
+    },
+    {
+      "category": "finance_crypto",
+      "description": "Tài chính / crypto (1)",
+      "count": 1,
+      "entries": [
+        {
+          "name": "`HyperaiBitcoin`",
+          "birth": "2026-03",
+          "active": "2026-03",
+          "items": "5"
+        }
+      ]
+    },
+    {
+      "category": "generic_project",
+      "description": "Dự án / lab khác (47)",
+      "count": 47,
+      "entries": [
+        {
+          "name": "`.continue`",
+          "birth": "2025-11",
+          "active": "2026-06",
+          "items": "41"
+        },
+        {
+          "name": "`.enduin`",
+          "birth": "2026-02",
+          "active": "2026-02",
+          "items": "12"
+        },
+        {
+          "name": "`.kilocode`",
+          "birth": "2025-11",
+          "active": "2026-04",
+          "items": "7"
+        },
+        {
+          "name": "`.monica-code`",
+          "birth": "2025-12",
+          "active": "2026-03",
+          "items": "11"
+        },
+        {
+          "name": "`.node-red`",
+          "birth": "2025-11",
+          "active": "2026-03",
+          "items": "4"
+        },
+        {
+          "name": "`.nvm`",
+          "birth": "2026-02",
+          "active": "2026-06",
+          "items": "31"
+        },
+        {
+          "name": "`.opencode`",
+          "birth": "2026-06",
+          "active": "2026-07",
+          "items": "6"
+        },
+        {
+          "name": "`.quokka`",
+          "birth": "2025-10",
+          "active": "2025-11",
+          "items": "15"
+        },
+        {
+          "name": "`.sdkman`",
+          "birth": "2025-10",
+          "active": "2025-11",
+          "items": "10"
+        },
+        {
+          "name": "`.tenure`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "7"
+        },
+        {
+          "name": "`alpha`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "167"
+        },
+        {
+          "name": "`apo-runner`",
+          "birth": "2026-04",
+          "active": "2026-04",
+          "items": "6"
+        },
+        {
+          "name": "`APO_LOCK_PACKAGE_20260606_034808`",
+          "birth": "2026-06",
+          "active": "2026-06",
+          "items": "6"
+        },
+        {
+          "name": "`balancehub`",
+          "birth": "2026-02",
+          "active": "2026-07",
+          "items": "30"
+        },
+        {
+          "name": "`balancehub-minimal`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "15"
+        },
+        {
+          "name": "`chanfana-openapi-template`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "12"
+        },
+        {
+          "name": "`chat-cli`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "9"
+        },
+        {
+          "name": "`cleanup-tracking`",
+          "birth": "2026-04",
+          "active": "2026-05",
+          "items": "20"
+        },
+        {
+          "name": "`cognee-render-mirror`",
+          "birth": "2026-03",
+          "active": "2026-04",
+          "items": "4"
+        },
+        {
+          "name": "`components`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "100"
+        },
+        {
+          "name": "`demo-repository`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "6"
+        },
+        {
+          "name": "`dr_protocol_workspace`",
+          "birth": "2025-11",
+          "active": "2026-05",
+          "items": "26"
+        },
+        {
+          "name": "`effective-broccoli`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "14"
+        },
+        {
+          "name": "`factory`",
+          "birth": "2026-02",
+          "active": "2026-05",
+          "items": "32"
+        },
+        {
+          "name": "`funfun`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "28"
+        },
+        {
+          "name": "`gh-eco`",
+          "birth": "2026-03",
+          "active": "2026-06",
+          "items": "13"
+        },
+        {
+          "name": "`gk-cli`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "7"
+        },
+        {
+          "name": "`GoCodeo`",
+          "birth": "2025-12",
+          "active": "2026-06",
+          "items": "27"
+        },
+        {
+          "name": "`hello-world-1`",
+          "birth": "2026-03",
+          "active": "2026-03",
+          "items": "18"
+        },
+        {
+          "name": "`literate-robot`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "28"
+        },
+        {
+          "name": "`local`",
+          "birth": "2025-11",
+          "active": "2026-03",
+          "items": "7"
+        },
+        {
+          "name": "`mesos-compose`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "32"
+        },
+        {
+          "name": "`microservice-rust-mysql`",
+          "birth": "2026-04",
+          "active": "2026-05",
+          "items": "15"
+        },
+        {
+          "name": "`miniature-umbrella-demo-repository`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "6"
+        },
+        {
+          "name": "`morphix3d-image-to-3d`",
+          "birth": "2026-04",
+          "active": "2026-06",
+          "items": "24"
+        },
+        {
+          "name": "`nguyencuong_2509`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "15"
+        },
+        {
+          "name": "`openapi-servers`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "8"
+        },
+        {
+          "name": "`openclaw-atom`",
+          "birth": "2026-03",
+          "active": "2026-03",
+          "items": "2"
+        },
+        {
+          "name": "`oslf`",
+          "birth": "2025-11",
+          "active": "2026-05",
+          "items": "6"
+        },
+        {
+          "name": "`scout-demo-service`",
+          "birth": "2026-05",
+          "active": "2026-06",
+          "items": "13"
+        },
+        {
+          "name": "`scratch`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "15"
+        },
+        {
+          "name": "`src`",
+          "birth": "2026-03",
+          "active": "2026-05",
+          "items": "13"
+        },
+        {
+          "name": "`suspicious-sammet-jm87r5`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "7"
+        },
+        {
+          "name": "`tr-gi-p-merge-ready`",
+          "birth": "2026-03",
+          "active": "2026-07",
+          "items": "205"
+        },
+        {
+          "name": "`vexa`",
+          "birth": "2026-06",
+          "active": "2026-06",
+          "items": "24"
+        },
+        {
+          "name": "`vite-react`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "13"
+        },
+        {
+          "name": "`workbench`",
+          "birth": "2025-10",
+          "active": "2026-07",
+          "items": "17149"
+        }
+      ]
+    },
+    {
+      "category": "gke_lab",
+      "description": "GKE / cloud AI lab (3)",
+      "count": 3,
+      "entries": [
+        {
+          "name": "`.vs-kubernetes`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "1"
+        },
+        {
+          "name": "`gke-ai-agent-lab`",
+          "birth": "2026-05",
+          "active": "2026-07",
+          "items": "10"
+        },
+        {
+          "name": "`gke_ai_agent_lab_run_20260518_233222`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "9"
+        }
+      ]
+    },
+    {
+      "category": "unknown",
+      "description": "Chưa phân loại (59)",
+      "count": 59,
+      "entries": [
+        {
+          "name": "`alloy`",
+          "birth": "2026-06",
+          "active": "2026-06",
+          "items": "1"
+        },
+        {
+          "name": "`andy`",
+          "birth": "2026-06",
+          "active": "2026-06",
+          "items": "2"
+        },
+        {
+          "name": "`Application Support`",
+          "birth": "2025-12",
+          "active": "2026-02",
+          "items": "2"
+        },
+        {
+          "name": "`Archive`",
+          "birth": "2026-04",
+          "active": "2026-05",
+          "items": "3"
+        },
+        {
+          "name": "`balancehub.worktrees`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "4"
+        },
+        {
+          "name": "`bin`",
+          "birth": "2025-11",
+          "active": "2026-06",
+          "items": "3"
+        },
+        {
+          "name": "`chrome-profiles`",
+          "birth": "2026-04",
+          "active": "2026-04",
+          "items": "2"
+        },
+        {
+          "name": "`ChromeCleanProfile`",
+          "birth": "2026-04",
+          "active": "2026-04",
+          "items": "0"
+        },
+        {
+          "name": "`comprehensive_results`",
+          "birth": "2026-06",
+          "active": "2026-06",
+          "items": "6"
+        },
+        {
+          "name": "`configs`",
+          "birth": "2026-03",
+          "active": "2026-03",
+          "items": "3"
+        },
+        {
+          "name": "`Contents`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "8"
+        },
+        {
+          "name": "`creator`",
+          "birth": "2026-03",
+          "active": "2026-04",
+          "items": "1"
+        },
+        {
+          "name": "`decompileFs`",
+          "birth": "2025-10",
+          "active": "2026-05",
+          "items": "2"
+        },
+        {
+          "name": "`dev-metrics`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "2"
+        },
+        {
+          "name": "`docs`",
+          "birth": "2026-02",
+          "active": "2026-05",
+          "items": "8"
+        },
+        {
+          "name": "`documentation`",
+          "birth": "2025-11",
+          "active": "2025-12",
+          "items": "2"
+        },
+        {
+          "name": "`eim-diagnose-20260518-002015`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "2"
+        },
+        {
+          "name": "`enforcement`",
+          "birth": "2025-10",
+          "active": "2025-10",
+          "items": "2"
+        },
+        {
+          "name": "`files`",
+          "birth": "2026-02",
+          "active": "2026-03",
+          "items": "6"
+        },
+        {
+          "name": "`gcp_mesh_report`",
+          "birth": "2026-04",
+          "active": "2026-04",
+          "items": "15"
+        },
+        {
+          "name": "`go`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "3"
+        },
+        {
+          "name": "`google-cloud-sdk`",
+          "birth": "2026-03",
+          "active": "2026-04",
+          "items": "2"
+        },
+        {
+          "name": "`inbox`",
+          "birth": "2026-02",
+          "active": "2026-02",
+          "items": "0"
+        },
+        {
+          "name": "`influxdb`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "4"
+        },
+        {
+          "name": "`local_overview_20260519_222733`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "1"
+        },
+        {
+          "name": "`m3d`",
+          "birth": "2026-04",
+          "active": "2026-06",
+          "items": "12"
+        },
+        {
+          "name": "`micromamba`",
+          "birth": "2025-11",
+          "active": "2025-12",
+          "items": "15"
+        },
+        {
+          "name": "`mongodb`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "0"
+        },
+        {
+          "name": "`my-plugin`",
+          "birth": "2026-06",
+          "active": "2026-06",
+          "items": "8"
+        },
+        {
+          "name": "`my_project`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "0"
+        },
+        {
+          "name": "`myenv`",
+          "birth": "2026-04",
+          "active": "2026-04",
+          "items": "6"
+        },
+        {
+          "name": "`Nguyencuong1989`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "5"
+        },
+        {
+          "name": "`node_modules`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "1"
+        },
+        {
+          "name": "`ok`",
+          "birth": "2026-03",
+          "active": "2026-04",
+          "items": "6"
+        },
+        {
+          "name": "`omega-marketplace`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "6"
+        },
+        {
+          "name": "`output`",
+          "birth": "2026-02",
+          "active": "2026-06",
+          "items": "11"
+        },
+        {
+          "name": "`Parallels`",
+          "birth": "2026-01",
+          "active": "2026-02",
+          "items": "2"
+        },
+        {
+          "name": "`path`",
+          "birth": "2026-03",
+          "active": "2026-05",
+          "items": "2"
+        },
+        {
+          "name": "`Phoenix_Master_Cloud_Pack`",
+          "birth": "2026-04",
+          "active": "2026-04",
+          "items": "3"
+        },
+        {
+          "name": "`planning`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "1"
+        },
+        {
+          "name": "`processed`",
+          "birth": "2026-02",
+          "active": "2026-02",
+          "items": "0"
+        },
+        {
+          "name": "`Project`",
+          "birth": "2026-03",
+          "active": "2026-03",
+          "items": "5"
+        },
+        {
+          "name": "`projects`",
+          "birth": "2025-11",
+          "active": "2026-05",
+          "items": "5"
+        },
+        {
+          "name": "`proposals`",
+          "birth": "2026-03",
+          "active": "2026-03",
+          "items": "0"
+        },
+        {
+          "name": "`repo-index`",
+          "birth": "2026-03",
+          "active": "2026-03",
+          "items": "3"
+        },
+        {
+          "name": "`runtime`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "2"
+        },
+        {
+          "name": "`schema`",
+          "birth": "2026-02",
+          "active": "2026-02",
+          "items": "0"
+        },
+        {
+          "name": "`scripts`",
+          "birth": "2026-02",
+          "active": "2026-06",
+          "items": "22"
+        },
+        {
+          "name": "`Slot-project-local-full`",
+          "birth": "2026-05",
+          "active": "2026-06",
+          "items": "2"
+        },
+        {
+          "name": "`system_health_20260423_134320`",
+          "birth": "2026-04",
+          "active": "2026-04",
+          "items": "3"
+        },
+        {
+          "name": "`system_reports`",
+          "birth": "2026-04",
+          "active": "2026-05",
+          "items": "0"
+        },
+        {
+          "name": "`systems`",
+          "birth": "2026-03",
+          "active": "2026-05",
+          "items": "13"
+        },
+        {
+          "name": "`tr-gi-p`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "8"
+        },
+        {
+          "name": "`tr-gi-p-merge-ready.worktrees`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "3"
+        },
+        {
+          "name": "`WebApplication1`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "0"
+        },
+        {
+          "name": "`workspace`",
+          "birth": "2026-02",
+          "active": "2026-02",
+          "items": "0"
+        },
+        {
+          "name": "`yes`",
+          "birth": "2026-04",
+          "active": "2026-05",
+          "items": "2"
+        },
+        {
+          "name": "`~`",
+          "birth": "2026-04",
+          "active": "2026-06",
+          "items": "4"
+        },
+        {
+          "name": "`“”`",
+          "birth": "2026-04",
+          "active": "2026-05",
+          "items": "2"
+        }
+      ]
+    },
+    {
+      "category": "user_system",
+      "description": "macOS user / data (15)",
+      "count": 15,
+      "entries": [
+        {
+          "name": "`.cache`",
+          "birth": "2026-05",
+          "active": "2026-07",
+          "items": "8"
+        },
+        {
+          "name": "`.config`",
+          "birth": "2025-10",
+          "active": "2026-07",
+          "items": "38"
+        },
+        {
+          "name": "`.gnupg`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "5"
+        },
+        {
+          "name": "`.local`",
+          "birth": "2025-10",
+          "active": "2026-06",
+          "items": "7"
+        },
+        {
+          "name": "`.ssh`",
+          "birth": "2025-10",
+          "active": "2026-07",
+          "items": "10"
+        },
+        {
+          "name": "`.Trash`",
+          "birth": "2025-10",
+          "active": "2026-07",
+          "items": "1"
+        },
+        {
+          "name": "`Applications`",
+          "birth": "2025-10",
+          "active": "2026-04",
+          "items": "7"
+        },
+        {
+          "name": "`Desktop`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "7"
+        },
+        {
+          "name": "`Documents`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "5"
+        },
+        {
+          "name": "`Downloads`",
+          "birth": "2025-09",
+          "active": "2026-07",
+          "items": "31"
+        },
+        {
+          "name": "`Library`",
+          "birth": "2025-09",
+          "active": "2026-07",
+          "items": "114"
+        },
+        {
+          "name": "`Movies`",
+          "birth": "2025-09",
+          "active": "2025-11",
+          "items": "3"
+        },
+        {
+          "name": "`Music`",
+          "birth": "2025-09",
+          "active": "2025-10",
+          "items": "3"
+        },
+        {
+          "name": "`Pictures`",
+          "birth": "2025-09",
+          "active": "2026-06",
+          "items": "6"
+        },
+        {
+          "name": "`Public`",
+          "birth": "2025-09",
+          "active": "2025-10",
+          "items": "3"
+        }
+      ]
+    },
+    {
+      "category": "vscode_extension",
+      "description": "VSCode / editor extension project (24)",
+      "count": 24,
+      "entries": [
+        {
+          "name": "`.blackbox-editor`",
+          "birth": "2025-11",
+          "active": "2026-07",
+          "items": "4"
+        },
+        {
+          "name": "`.msvscode.hdinsight`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "1"
+        },
+        {
+          "name": "`.parallels-desktop-vscode`",
+          "birth": "2025-11",
+          "active": "2026-02",
+          "items": "3"
+        },
+        {
+          "name": "`.pydev_vscode`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "3"
+        },
+        {
+          "name": "`.pydevd_vscode`",
+          "birth": "2025-11",
+          "active": "2025-11",
+          "items": "1"
+        },
+        {
+          "name": "`.vscode-cordova`",
+          "birth": "2026-01",
+          "active": "2026-07",
+          "items": "3"
+        },
+        {
+          "name": "`.vscode-deploy-reloaded`",
+          "birth": "2025-11",
+          "active": "2026-07",
+          "items": "4"
+        },
+        {
+          "name": "`.vscode-insiders-shared`",
+          "birth": "2026-05",
+          "active": "2026-07",
+          "items": "3"
+        },
+        {
+          "name": "`.vscode-oss`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "5"
+        },
+        {
+          "name": "`.vscode-oss-shared`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "3"
+        },
+        {
+          "name": "`.vscode-R`",
+          "birth": "2025-11",
+          "active": "2026-07",
+          "items": "5"
+        },
+        {
+          "name": "`.vscode-react-native`",
+          "birth": "2025-10",
+          "active": "2026-07",
+          "items": "3"
+        },
+        {
+          "name": "`.vscode-server-insiders`",
+          "birth": "2025-12",
+          "active": "2026-07",
+          "items": "6"
+        },
+        {
+          "name": "`.vscode-shared`",
+          "birth": "2026-04",
+          "active": "2026-07",
+          "items": "3"
+        },
+        {
+          "name": "`aws-toolkit-vscode`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "32"
+        },
+        {
+          "name": "`echoapi_for_vscode`",
+          "birth": "2026-01",
+          "active": "2026-01",
+          "items": "1"
+        },
+        {
+          "name": "`my-extension`",
+          "birth": "2026-05",
+          "active": "2026-05",
+          "items": "12"
+        },
+        {
+          "name": "`vscode-dotnettools`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "13"
+        },
+        {
+          "name": "`vscode-edge-devtools`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "26"
+        },
+        {
+          "name": "`vscode-java`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "42"
+        },
+        {
+          "name": "`vscode-python-environments`",
+          "birth": "2025-10",
+          "active": "2026-07",
+          "items": "4"
+        },
+        {
+          "name": "`vscode-sqltools`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "28"
+        },
+        {
+          "name": "`vscodesws_6bcda`",
+          "birth": "2026-07",
+          "active": "2026-07",
+          "items": "16"
+        },
+        {
+          "name": "`XcodeSourceEditorExtension-Alignment`",
+          "birth": "2026-05",
+          "active": "2026-07",
+          "items": "12"
+        }
+      ]
+    }
+  ]
+}

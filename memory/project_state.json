@@ -1,33 +1,11 @@
 {
-  "last_updated": "2026-07-29T13:00:20Z",
-  "current_focus": "Ollama lineage live verification",
-  "latest_summary": "Probed Ollama lineage across native Mac, Docker, and AP\u03a9 routing. Only native Ollama.app (PID 13894, port 11434) and remote Titan (192.168.3.84:11434) are live. Docker descendants (ollama-brain, FinalAI, prod) and HyperAI network/volumes are absent from current Docker state. Port 11435 is not in use. AP\u03a9 routes macbook_ollama to 127.0.0.1:11434, titan_ollama to 192.168.3.84:11434, macmini_ollama to 192.168.3.28:11434 (unreachable Ollama), and lmstudio/Bionic to 127.0.0.1:1234.",
-  "active_blockers": [],
-  "next_actions": [
-    "Verify 192.168.3.28:11434 Ollama if macmini is expected live; otherwise update canon to mark macmini_ollama CURRENTLY_UNREACHABLE."
+  "last_updated": "2026-08-01T19:04:32Z",
+  "current_focus": "APOmegaOS OODA bridge health check",
+  "latest_summary": "30-second probe: APOmegaOODABridge still running (PID 46876), APOmegaStateDaemon running (PID 26486), APOmegaOS.app running. APOmegaEndpoint remains terminated (4 duplicates). receipts.db event count unchanged at 53,082; /var/log/APOmegaOS/observations still empty. No new OODA logs generated. Disk at 100% capacity, 183Mi available.",
+  "active_blockers": [
+    "APOmegaEndpoint terminated; disk critical"
   ],
-  "closure_state": {
-    "status": "local-runtime-bound",
-    "reason": "AP\u03a9 gateway fully bound: Ollama, Bionic/LM Studio (1234), OpenRouter, GitHub Models, Google, Microsoft Foundry (gpt-5.4), 5 OpenAPI tool servers (Docker on 8901-8905), GCP controlled proxy, product backend. Credential broker healthy. No plaintext secrets in logs. Rollback bundles present.",
-    "tests": "Self-healing: /health ok, /v1/models ok, 5 /tools/{name}/openapi.json ok, Bionic /v1/chat/completions ok, Bionic /v1/embeddings FAIL (400 missing embeddingworker.js). Docker tool servers restarted and healthy.",
-    "evidence": [
-      "memory/AP\u03a9_UNIFIED_STACK_POST_RESTART_20260729T0923Z.md",
-      "memory/AP\u03a9_UNIFIED_STACK_DOCKER_ATTEMPT_20260729T0912Z.md",
-      "memory/AP\u03a9_UNIFIED_STACK_E2E_RERUN_20260729T0845Z.md",
-      "memory/AP\u03a9_UNIFIED_STACK_COMPLETION_REPORT_20260729.md",
-      "/Users/andy/.apo/gateway/apo_config.yaml",
-      "/Users/andy/.apo/gateway/apo_gateway.py",
-      "/Users/andy/.apo/gateway/backups/",
-      "/Users/andy/openapi-servers/compose.yaml",
-      "/Users/andy/openapi-servers/servers/git/Dockerfile",
-      "/tmp/apo_gateway.log",
-      "memory/AP\u03a9_BIONIC_SYSTEM_OVERVIEW_20260729T1130Z.md",
-      "memory/SOCRATIC_CYCLE_BIONIC_PORT_41343_20260729.md",
-      "memory/SELF_HEALING_BIONIC_EMBEDDING_PROBE_20260729.md",
-      "/Users/andy/AGENTS.md",
-      "/Users/andy/.codex/AGENTS.md",
-      "/Users/andy/HyperAI-Sync/AGENTS.md",
-      "memory/SKILL_TOOL_PATH_VALIDATION_FIX_20260729.md"
-    ]
-  }
+  "next_actions": [
+    "Decide whether to reactivate APOmegaEndpoint (requires cleaning terminated duplicates and likely System Settings approval/reboot) or continue with DB-only observation bridge."
+  ]
 }

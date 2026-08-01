@@ -1,0 +1,1507 @@
+{
+  "audited_at": "2026-07-31T10:41:01.866717+00:00",
+  "entries": [
+    {
+      "id": "apo_upstream_macbook_ollama",
+      "role": "PROVIDER",
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/Applications/Ollama.app/Contents/Frameworks/Squirrel.framework/Versions/A/Squirrel",
+        "/"
+      ],
+      "network_scope": [],
+      "authority_resolved": true,
+      "notes": []
+    },
+    {
+      "id": "apo_upstream_titan_ollama",
+      "role": "PROVIDER",
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "apo_upstream_macmini_ollama",
+      "role": "PROVIDER",
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "apo_upstream_lmstudio",
+      "role": "PROVIDER",
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/Users/andy/.lmstudio/.internal/utils/node",
+        "/"
+      ],
+      "network_scope": [],
+      "authority_resolved": true,
+      "notes": []
+    },
+    {
+      "id": "openapi_tool_time",
+      "role": "TOOL",
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "read_scope": [],
+      "write_scope": [
+        "/private/tmp/openapi_time_8901.log"
+      ],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+        "/Users/andy/openapi-servers/servers/time"
+      ],
+      "network_scope": [
+        "127.0.0.1:8901"
+      ],
+      "authority_resolved": true,
+      "notes": []
+    },
+    {
+      "id": "openapi_tool_weather",
+      "role": "TOOL",
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "read_scope": [],
+      "write_scope": [
+        "/private/tmp/openapi_weather_8902.log"
+      ],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+        "/Users/andy/openapi-servers/servers/weather"
+      ],
+      "network_scope": [
+        "127.0.0.1:8902"
+      ],
+      "authority_resolved": true,
+      "notes": []
+    },
+    {
+      "id": "openapi_tool_filesystem",
+      "role": "TOOL",
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "read_scope": [],
+      "write_scope": [
+        "/private/tmp/openapi_filesystem_8903.log"
+      ],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+        "/Users/andy/openapi-servers/servers/filesystem"
+      ],
+      "network_scope": [
+        "127.0.0.1:8903"
+      ],
+      "authority_resolved": true,
+      "notes": []
+    },
+    {
+      "id": "openapi_tool_git",
+      "role": "TOOL",
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "read_scope": [],
+      "write_scope": [
+        "/private/tmp/openapi_git_8904.log"
+      ],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+        "/Users/andy/openapi-servers/servers/git"
+      ],
+      "network_scope": [
+        "127.0.0.1:8904"
+      ],
+      "authority_resolved": true,
+      "notes": []
+    },
+    {
+      "id": "openapi_tool_memory",
+      "role": "TOOL",
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "read_scope": [],
+      "write_scope": [
+        "/private/tmp/openapi_memory_8905.log"
+      ],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+        "/Users/andy/openapi-servers/servers/memory"
+      ],
+      "network_scope": [
+        "127.0.0.1:8905"
+      ],
+      "authority_resolved": true,
+      "notes": []
+    },
+    {
+      "id": "openapi_tool_quotes",
+      "role": "TOOL",
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/bash/5.3.9/bin/bash",
+        "/Users/andy/openapi-servers/servers/quotes-ui"
+      ],
+      "network_scope": [],
+      "authority_resolved": true,
+      "notes": []
+    },
+    {
+      "id": "openapi_tool_flashcards",
+      "role": "TOOL",
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/bash/5.3.9/bin/bash",
+        "/Users/andy/openapi-servers/servers/flashcards"
+      ],
+      "network_scope": [],
+      "authority_resolved": true,
+      "notes": []
+    },
+    {
+      "id": "openapi_tool_time_ui",
+      "role": "TOOL",
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/bash/5.3.9/bin/bash",
+        "/Users/andy/openapi-servers/servers/time-ui"
+      ],
+      "network_scope": [],
+      "authority_resolved": true,
+      "notes": []
+    },
+    {
+      "id": "openapi_tool_summarizer",
+      "role": "TOOL",
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/bash/5.3.9/bin/bash",
+        "/Users/andy/openapi-servers"
+      ],
+      "network_scope": [],
+      "authority_resolved": true,
+      "notes": []
+    },
+    {
+      "id": "openapi_tool_bitcoin",
+      "role": "TOOL",
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/bash/5.3.9/bin/bash",
+        "/Users/andy/openapi-servers/servers/bitcoin-price-predictor"
+      ],
+      "network_scope": [],
+      "authority_resolved": true,
+      "notes": []
+    },
+    {
+      "id": "openapi_tool_sql",
+      "role": "TOOL",
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/bash/5.3.9/bin/bash",
+        "/Users/andy/openapi-servers/servers/sql"
+      ],
+      "network_scope": [],
+      "authority_resolved": true,
+      "notes": []
+    },
+    {
+      "id": "openapi_tool_external_rag",
+      "role": "TOOL",
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/bash/5.3.9/bin/bash",
+        "/Users/andy/openapi-servers/servers/external-rag"
+      ],
+      "network_scope": [],
+      "authority_resolved": true,
+      "notes": []
+    },
+    {
+      "id": "openapi_tool_slack",
+      "role": "TOOL",
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/bash/5.3.9/bin/bash",
+        "/Users/andy/openapi-servers/servers/slack"
+      ],
+      "network_scope": [],
+      "authority_resolved": true,
+      "notes": []
+    },
+    {
+      "id": "openapi_tool_google_pse",
+      "role": "TOOL",
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/bash/5.3.9/bin/bash",
+        "/Users/andy/openapi-servers/servers/slack"
+      ],
+      "network_scope": [],
+      "authority_resolved": true,
+      "notes": []
+    },
+    {
+      "id": "mcp_pieces",
+      "role": "MCP",
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "read_scope": [],
+      "write_scope": [
+        "/Users/andy/Library/com.pieces.os/production/Pieces/couchbase.cblite2/db.sqlite3",
+        "/Users/andy/Library/com.pieces.os/production/native_audio/logs/native_audio.2026-07-31.log",
+        "/Users/andy/Library/com.pieces.os/production/native_vision/logs/native_vision.2026-07-31.log"
+      ],
+      "execute_scope": [
+        "/Applications/Pieces OS.app/Contents/MacOS/Pieces OS",
+        "/"
+      ],
+      "network_scope": [
+        "192.168.3.192:64957",
+        "127.0.0.1:50999",
+        "192.168.3.192:65050",
+        "127.0.0.1:39300",
+        "192.168.3.192:65153",
+        "192.168.3.192:63160",
+        "192.168.3.192:65346",
+        "192.168.3.192:63960",
+        "192.168.3.192:65040",
+        "192.168.3.192:63884"
+      ],
+      "authority_resolved": true,
+      "notes": []
+    },
+    {
+      "id": "mcp_docker_mcp",
+      "role": "MCP",
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "credential_broker",
+      "role": "BROKER",
+      "authority": [
+        "OBSERVE",
+        "AUTH",
+        "VERIFY"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/bash/5.3.9/bin/bash",
+        "/Users/andy/HyperAI-Sync"
+      ],
+      "network_scope": [],
+      "authority_resolved": true,
+      "notes": []
+    },
+    {
+      "id": "apo_gateway",
+      "role": "PROVIDER",
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/bash/5.3.9/bin/bash",
+        "/Users/andy/.apo/gateway"
+      ],
+      "network_scope": [],
+      "authority_resolved": true,
+      "notes": []
+    },
+    {
+      "id": "agent_os_dashboard",
+      "role": "WORKER",
+      "authority": [
+        "OBSERVE",
+        "READ",
+        "WRITE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/bash/5.3.9/bin/bash",
+        "/Users/andy/HyperAI"
+      ],
+      "network_scope": [],
+      "authority_resolved": true,
+      "notes": []
+    },
+    {
+      "id": "lmstudio_bionic_api",
+      "role": "PROVIDER",
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/Users/andy/.lmstudio/.internal/utils/node",
+        "/"
+      ],
+      "network_scope": [],
+      "authority_resolved": true,
+      "notes": []
+    },
+    {
+      "id": "bionic_app",
+      "role": "WORKER",
+      "authority": [
+        "OBSERVE",
+        "READ",
+        "WRITE"
+      ],
+      "read_scope": [
+        "/Applications/Bionic.app"
+      ],
+      "write_scope": [],
+      "execute_scope": [
+        "/Applications/Bionic.app/Contents/MacOS/Bionic",
+        "/"
+      ],
+      "network_scope": [
+        "127.0.0.1:52993",
+        "192.168.3.192:52119",
+        "127.0.0.1:1235"
+      ],
+      "authority_resolved": true,
+      "notes": []
+    },
+    {
+      "id": "ollama_macbook",
+      "role": "PROVIDER",
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/Applications/Ollama.app/Contents/Frameworks/Squirrel.framework/Versions/A/Squirrel",
+        "/"
+      ],
+      "network_scope": [],
+      "authority_resolved": true,
+      "notes": []
+    },
+    {
+      "id": "pieces_mcp",
+      "role": "MCP",
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "read_scope": [],
+      "write_scope": [
+        "/Users/andy/Library/com.pieces.os/production/Pieces/couchbase.cblite2/db.sqlite3",
+        "/Users/andy/Library/com.pieces.os/production/native_audio/logs/native_audio.2026-07-31.log",
+        "/Users/andy/Library/com.pieces.os/production/native_vision/logs/native_vision.2026-07-31.log"
+      ],
+      "execute_scope": [
+        "/Applications/Pieces OS.app/Contents/MacOS/Pieces OS",
+        "/"
+      ],
+      "network_scope": [
+        "192.168.3.192:64957",
+        "127.0.0.1:50999",
+        "192.168.3.192:65050",
+        "127.0.0.1:39300",
+        "192.168.3.192:65153",
+        "192.168.3.192:63160",
+        "192.168.3.192:65346",
+        "192.168.3.192:63960",
+        "192.168.3.192:65040",
+        "192.168.3.192:63884"
+      ],
+      "authority_resolved": true,
+      "notes": []
+    },
+    {
+      "id": "finalai",
+      "role": "PROVIDER",
+      "authority": [
+        "OBSERVE",
+        "INVOKE",
+        "READ"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python",
+        "/"
+      ],
+      "network_scope": [
+        "127.0.0.1:50520"
+      ],
+      "authority_resolved": true,
+      "notes": []
+    },
+    {
+      "id": "redis_local",
+      "role": "MEMORY",
+      "authority": [
+        "OBSERVE",
+        "READ",
+        "WRITE"
+      ],
+      "read_scope": [
+        "/opt/homebrew"
+      ],
+      "write_scope": [],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/redis/8.8.1/bin/redis-server",
+        "/opt/homebrew/var/db/redis"
+      ],
+      "network_scope": [
+        "127.0.0.1:6379",
+        "[::1]:6379"
+      ],
+      "authority_resolved": true,
+      "notes": []
+    },
+    {
+      "id": "hyperai_product_runtime",
+      "role": "PRODUCT",
+      "authority": [
+        "OBSERVE",
+        "READ",
+        "WRITE",
+        "EXECUTE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "docker_desktop",
+      "role": "INFRA",
+      "authority": [
+        "OBSERVE",
+        "ALLOCATE",
+        "EXECUTE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/Applications/Docker.app/Contents/MacOS/com.docker.virtualization",
+        "/Users/andy/Library/Containers/com.docker.docker/Data"
+      ],
+      "network_scope": [],
+      "authority_resolved": true,
+      "notes": []
+    },
+    {
+      "id": "federation_orchestrator",
+      "role": "ORCHESTRATOR",
+      "authority": [
+        "OBSERVE",
+        "PLAN",
+        "ROUTE",
+        "VERIFY"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "memory_writer",
+      "role": "MEMORY",
+      "authority": [
+        "OBSERVE",
+        "READ",
+        "WRITE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "codex_operator_runtime",
+      "role": "WORKER",
+      "authority": [
+        "OBSERVE",
+        "READ",
+        "WRITE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/Users/andy/.codex/plugins/cache/openai-bundled/chrome/26.721.81911/extension-host/macos/arm64/ChatGPT for Chrome",
+        "/Users/andy/.codex/plugins/cache/openai-bundled/chrome/26.721.81911/extension-host/macos/arm64"
+      ],
+      "network_scope": [],
+      "authority_resolved": true,
+      "notes": []
+    },
+    {
+      "id": "aios_mission_router",
+      "role": "ROOT",
+      "authority": [
+        "OBSERVE",
+        "PLAN",
+        "ROUTE",
+        "VERIFY",
+        "AUTH",
+        "ALLOCATE",
+        "REVOKE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+        "/Users/andy/workbench/aios_runtime_orchestrator"
+      ],
+      "network_scope": [
+        "127.0.0.1:9001"
+      ],
+      "authority_resolved": true,
+      "notes": []
+    },
+    {
+      "id": "discovered_pid_323",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/Library/PrivilegedHelperTools/com.docker.vmnetd"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_526",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/System/Library/CoreServices/ControlCenter.app/Contents/MacOS/ControlCenter",
+        "/"
+      ],
+      "network_scope": [
+        "*:7000",
+        "*:5000"
+      ],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_2617",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/bin/zsh",
+        "/Users/andy/tr-gi-p-merge-ready.worktrees/codex/execution-canvas"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_2700",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/node/26.4.0/bin/node",
+        "/"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_2707",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/node/26.4.0/bin/node",
+        "/"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_2708",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/node/26.4.0/bin/node",
+        "/"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_2779",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/Applications/Antigravity IDE.app/Contents/Frameworks/Antigravity IDE Helper (Plugin).app/Contents/MacOS/Antigravity IDE Helper (Plugin)",
+        "/Users/andy/tr-gi-p-merge-ready.worktrees/codex/execution-canvas"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_3557",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/Applications/Antigravity IDE.app/Contents/Frameworks/Antigravity IDE Helper (Plugin).app/Contents/MacOS/Antigravity IDE Helper (Plugin)",
+        "/Users/andy/tr-gi-p-merge-ready.worktrees/codex/execution-canvas"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_3612",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+        "/"
+      ],
+      "network_scope": [
+        "127.0.0.1:51499"
+      ],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_4812",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [
+        "/Users/andy/.hyperai/logs/consciousness_monitor.log",
+        "/Users/andy/.hyperai/logs/consciousness_monitor_error.log"
+      ],
+      "execute_scope": [
+        "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python",
+        "/"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_4813",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [
+        "/Users/andy/.hyperai/logs/process_manager.log",
+        "/Users/andy/.hyperai/logs/process_manager_error.log"
+      ],
+      "execute_scope": [
+        "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python",
+        "/"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_9100",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/System/Library/PrivateFrameworks/IntelligenceFlowContextRuntime.framework/Versions/A/intelligencecontextd",
+        "/"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_9153",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [
+        "/Users/andy/.hyperai/logs/os_master.log",
+        "/Users/andy/.hyperai/logs/os_master_error.log"
+      ],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+        "/"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_10069",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/node/26.4.0/bin/node",
+        "/Users/andy"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_10079",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/node/26.4.0/bin/node",
+        "/Users/andy"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_10177",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/node/26.4.0/bin/node",
+        "/Users/andy"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_10195",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/node/26.4.0/bin/node",
+        "/Users/andy"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_10207",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/node/26.4.0/bin/node",
+        "/Users/andy"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_10407",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+        "/"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_37050",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/Applications/Docker.app/Contents/MacOS/com.docker.backend",
+        "/Users/andy/Library/Containers/com.docker.docker/Data"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_37054",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [
+        "/Users/andy/.config",
+        "/Users/andy/HyperAI-Sync"
+      ],
+      "write_scope": [
+        "/Users/andy/.axcanon/memory/secrets/SECRETS_SYNC_INDEX.json",
+        "/Users/andy/HyperAI-Sync/memory/Sigma_APO_Complete_System_Documentation.md"
+      ],
+      "execute_scope": [
+        "/Applications/Docker.app/Contents/MacOS/com.docker.backend",
+        "/Users/andy/Library/Containers/com.docker.docker/Data"
+      ],
+      "network_scope": [
+        "127.0.0.1:62056",
+        "127.0.0.1:12434"
+      ],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_37055",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/Applications/Docker.app/Contents/MacOS/com.docker.backend",
+        "/Users/andy/Library/Containers/com.docker.docker/Data"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_37163",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [
+        "/Users/andy/.config",
+        "/Users/andy/HyperAI-Sync"
+      ],
+      "write_scope": [
+        "/Users/andy/.axcanon/memory/secrets/SECRETS_SYNC_INDEX.json",
+        "/Users/andy/HyperAI-Sync/memory/Sigma_APO_Complete_System_Documentation.md"
+      ],
+      "execute_scope": [
+        "/Applications/Docker.app/Contents/MacOS/com.docker.build",
+        "/Users/andy/Library/Containers/com.docker.docker/Data"
+      ],
+      "network_scope": [
+        "192.168.3.192:53730",
+        "192.168.3.192:53699"
+      ],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_1",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/sbin/launchd"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_640",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/System/Library/CoreServices/Spotlight.app/Contents/MacOS/Spotlight",
+        "/"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_1155",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [
+        "/Users/andy/Library/Application Support/Antigravity IDE/logs/20260730T052148/window1/mcpServer.claude-desktop.null.MCP_DOCKER.log",
+        "/Users/andy/Library/Application Support/Antigravity IDE/logs/20260730T052148/window1/mcpServer.claude-desktop.null.My Pieces Memory.log",
+        "/Users/andy/Library/Application Support/Antigravity IDE/logs/20260730T052148/window1/mcpServer.claude-desktop.null.pieces.log",
+        "/Users/andy/Library/Application Support/Antigravity IDE/logs/20260730T052148/window1/mcpServer.cursor.null.MCP_DOCKER.log",
+        "/Users/andy/Library/Application Support/Antigravity IDE/logs/20260730T052148/window1/mcpServer.cursor.null.pieces.log",
+        "/Users/andy/Library/Application Support/Antigravity IDE/logs/20260730T052148/window1/mcpServer.googlecloudtools.datacloudNotebooks MCP.log",
+        "/Users/andy/Library/Application Support/Antigravity IDE/logs/20260730T052148/window1/mcpServer.googlecloudtools.datacloudVisualization MCP.log"
+      ],
+      "execute_scope": [
+        "/Applications/Antigravity IDE.app/Contents/MacOS/Electron",
+        "/"
+      ],
+      "network_scope": [
+        "127.0.0.1:51018",
+        "127.0.0.1:51107",
+        "127.0.0.1:51017"
+      ],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_1169",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [
+        "/Applications/LM Studio.app"
+      ],
+      "write_scope": [],
+      "execute_scope": [
+        "/Applications/LM Studio.app/Contents/MacOS/LM Studio",
+        "/"
+      ],
+      "network_scope": [
+        "127.0.0.1:1234",
+        "127.0.0.1:41343"
+      ],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_2156",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [
+        "/Applications/LM Studio.app"
+      ],
+      "write_scope": [],
+      "execute_scope": [
+        "/Applications/LM Studio.app/Contents/Frameworks/LM Studio Helper (GPU).app/Contents/MacOS/LM Studio Helper (GPU)",
+        "/"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_2183",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [
+        "/Users/andy/Library/Application Support/Antigravity IDE/logs/20260730T052148/window1/exthost/googlecloudtools.datacloud/Google Cloud Data Agent Kit.log",
+        "/Users/andy/Library/Application Support/Antigravity IDE/logs/20260730T052148/window1/exthost/googlecloudtools.datacloud/Jupyter Server Log.log",
+        "/Users/andy/Library/Application Support/Antigravity IDE/logs/20260730T052148/window1/exthost/openai.chatgpt/Codex.log",
+        "/Users/andy/Library/Application Support/Antigravity IDE/logs/20260730T052148/window1/exthost/output_logging_20260730T052152/10-RB Ollama Release Verify.log",
+        "/Users/andy/Library/Application Support/Antigravity IDE/logs/20260730T052148/window1/exthost/output_logging_20260730T052152/11-RB Ollama Security.log",
+        "/Users/andy/Library/Application Support/Antigravity IDE/logs/20260730T052148/window1/exthost/output_logging_20260730T052152/12-RB Ollama Quality.log",
+        "/Users/andy/Library/Application Support/Antigravity IDE/logs/20260730T052148/window1/exthost/output_logging_20260730T052152/13-RB Ollama Reliability.log",
+        "/Users/andy/Library/Application Support/Antigravity IDE/logs/20260730T052148/window1/exthost/output_logging_20260730T052152/14-RB Ollama Session Recovery.log",
+        "/Users/andy/Library/Application Support/Antigravity IDE/logs/20260730T052148/window1/exthost/output_logging_20260730T052152/15-RB Ollama Permissions.log",
+        "/Users/andy/Library/Application Support/Antigravity IDE/logs/20260730T052148/window1/exthost/output_logging_20260730T052152/16-RB Ollama Collaboration.log"
+      ],
+      "execute_scope": [
+        "/Applications/Antigravity IDE.app/Contents/Frameworks/Antigravity IDE Helper (Plugin).app/Contents/MacOS/Antigravity IDE Helper (Plugin)",
+        "/"
+      ],
+      "network_scope": [
+        "127.0.0.1:63434",
+        "127.0.0.1:51223",
+        "[::1]:3001",
+        "127.0.0.1:51224",
+        "127.0.0.1:51283",
+        "*:23333",
+        "127.0.0.1:51221",
+        "127.0.0.1:3001",
+        "127.0.0.1:51161",
+        "127.0.0.1:7779"
+      ],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_2206",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/Applications/Antigravity IDE.app/Contents/Frameworks/Antigravity IDE Helper.app/Contents/MacOS/Antigravity IDE Helper",
+        "/"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_2359",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/Applications/Antigravity IDE.app/Contents/Frameworks/Antigravity IDE Helper.app/Contents/MacOS/Antigravity IDE Helper",
+        "/"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_2582",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/Applications/Antigravity IDE.app/Contents/Resources/app/extensions/antigravity/bin/language_server_macos_arm",
+        "/"
+      ],
+      "network_scope": [
+        "127.0.0.1:51172",
+        "127.0.0.1:51180",
+        "127.0.0.1:51173",
+        "127.0.0.1:51181",
+        "127.0.0.1:51213",
+        "127.0.0.1:51178",
+        "192.168.3.192:64714",
+        "127.0.0.1:51179",
+        "192.168.3.192:59666"
+      ],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_2691",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/Library/PrivilegedHelperTools/ChromeRemoteDesktopHost.app/Contents/MacOS/remoting_me2me_host",
+        "/"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_3642",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python",
+        "/"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_3704",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [
+        "/Applications/LM Studio.app"
+      ],
+      "write_scope": [],
+      "execute_scope": [
+        "/Applications/LM Studio.app/Contents/Frameworks/LM Studio Helper.app/Contents/MacOS/LM Studio Helper",
+        "/"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_4594",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [
+        "/opt/homebrew"
+      ],
+      "write_scope": [],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/node@22/22.23.1/bin/node",
+        "/Users/andy"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_10078",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/opt/homebrew/Cellar/node/26.4.0/bin/node",
+        "/Users/andy"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_35803",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        "/"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_37183",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [
+        "/Users/andy/Library/Containers/com.docker.docker/Data/vms/0/data/Docker.raw"
+      ],
+      "execute_scope": [
+        "/System/Library/Frameworks/Virtualization.framework/Versions/A/XPCServices/com.apple.Virtualization.VirtualMachine.xpc/Contents/MacOS/com.apple.Virtualization.VirtualMachine",
+        "/"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    },
+    {
+      "id": "discovered_pid_97740",
+      "role": "UNKNOWN",
+      "authority": [
+        "OBSERVE"
+      ],
+      "read_scope": [],
+      "write_scope": [],
+      "execute_scope": [
+        "/System/Library/PrivateFrameworks/VoiceShortcuts.framework/Versions/A/Support/siriactionsd",
+        "/"
+      ],
+      "network_scope": [],
+      "authority_resolved": false,
+      "notes": [
+        "needs explicit write-authority grant before mutation"
+      ]
+    }
+  ]
+}

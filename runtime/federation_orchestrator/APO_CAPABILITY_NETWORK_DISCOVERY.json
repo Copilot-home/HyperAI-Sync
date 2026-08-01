@@ -1,0 +1,572 @@
+{
+  "execution_id": "apo-capability-network-discovery-20260731",
+  "timestamp": "2026-07-31T14:10:00Z",
+  "principle": "Capability is not the server. Capability is the value path across source, build, runtime, route, auth, and memory.",
+  "transport_planes": {
+    "HOST_LOOPBACK": {
+      "meaning": "127.0.0.1:* connections between host processes",
+      "examples": [
+        "APO Gateway :9011",
+        "OpenAPI servers :8901-8914",
+        "AIOS Orchestrator :9001",
+        "FinalAI :50520",
+        "Ollama :11434"
+      ],
+      "ownership": "macOS + process authority",
+      "verified": true
+    },
+    "DOCKER_BRIDGE": {
+      "meaning": "Docker Linux bridge for containers",
+      "examples": [
+        "kind-control-plane :62056",
+        "kind-cloud-provider :2375-2376"
+      ],
+      "ownership": "Docker Desktop",
+      "verified": true,
+      "note": "No OpenAPI servers currently running in Docker. Credential service has Dockerfile but is running on host."
+    },
+    "HOST_PORT_FORWARDING": {
+      "meaning": "Container ports published to host",
+      "examples": [
+        "desktop-control-plane 127.0.0.1:62056->6443"
+      ],
+      "ownership": "Docker Desktop / kind",
+      "verified": true
+    },
+    "UNIX_SOCKET": {
+      "meaning": "Local IPC sockets",
+      "examples": [
+        "Docker daemon /var/run/docker.sock (not used by APO)",
+        "Ollama may use unix socket internally"
+      ],
+      "ownership": "macOS / process",
+      "verified": false
+    },
+    "HTTP_OPENAPI": {
+      "meaning": "OpenAPI HTTP routes over loopback",
+      "examples": [
+        "APO /tools/{name}/{path}",
+        "/tools/time/get_current_utc_time"
+      ],
+      "ownership": "APO Gateway",
+      "verified": true
+    },
+    "REDIS": {
+      "meaning": "In-memory key/value state",
+      "examples": [
+        "127.0.0.1:6379"
+      ],
+      "ownership": "utility plane",
+      "verified": true,
+      "used_by": "unknown, likely OODA/queue state"
+    },
+    "MCP_STDIO": {
+      "meaning": "MCP over stdio (server launched as child)",
+      "examples": [
+        "Possible in Antigravity IDE / Codex runtime"
+      ],
+      "ownership": "MCP host",
+      "verified": false
+    },
+    "PLUGIN_RUNTIME": {
+      "meaning": "IDE/Editor plugin lifecycle",
+      "examples": [
+        "LM Studio plugin :1234/:41343",
+        "Pieces OS :39300/:50999",
+        "Antigravity IDE :3001/:23333/:7779"
+      ],
+      "ownership": "respective app",
+      "verified": true
+    },
+    "LEASE_GATED_PROXY": {
+      "meaning": "Credential broker issues X-Lease-Id for APO tool proxy",
+      "examples": [
+        "Credential broker :8765",
+        "APO Gateway tools_proxy"
+      ],
+      "ownership": "Credential Broker",
+      "verified": true,
+      "tested": false
+    },
+    "MISSION_ROUTING": {
+      "meaning": "AIOS Runtime Orchestrator mission planning / skill selection",
+      "examples": [
+        "127.0.0.1:9001/mission/plan",
+        "/skills.route"
+      ],
+      "ownership": "AIOS Runtime Orchestrator",
+      "verified": true,
+      "tested": true
+    }
+  },
+  "capability_network": {
+    "source": {
+      "actors": [
+        "User/Creator",
+        "AIOS Runtime Orchestrator",
+        "Devin",
+        "HyperAI OODA",
+        "HyperAI Agent OS"
+      ],
+      "role": "initiates mission / selects capability"
+    },
+    "route": {
+      "actors": [
+        "APO Gateway :9011",
+        "AIOS mission/skill routing"
+      ],
+      "role": "maps capability name to runtime address"
+    },
+    "auth": {
+      "actors": [
+        "Credential Broker :8765"
+      ],
+      "role": "issues short-lived X-Lease-Id if required"
+    },
+    "execute": {
+      "actors": [
+        "OpenAPI servers :8901-8914",
+        "Docker (potential)",
+        "model runtimes"
+      ],
+      "role": "performs capability"
+    },
+    "verify": {
+      "actors": [
+        "Devin",
+        "AIOS Runtime Orchestrator",
+        "Verifier scripts"
+      ],
+      "role": "checks output correctness / lineage"
+    },
+    "memory": {
+      "actors": [
+        "HyperAI-Sync memory/",
+        ".con-memory/conversations.db",
+        "Pieces OS"
+      ],
+      "role": "persists mission trace and value"
+    }
+  },
+  "open_api_server_lineage": [
+    {
+      "server": "time",
+      "port": 8901,
+      "source_dir": "/Users/andy/openapi-servers/servers/time",
+      "build_artifact": "main.py + requirements.txt + Dockerfile",
+      "image_or_runtime": "host uvicorn from /Users/andy/openapi-servers/.venv",
+      "process_command": ".venv/bin/uvicorn main:app --host 127.0.0.1 --port 8901",
+      "network_transport": "HTTP_OPENAPI",
+      "listen_address": "127.0.0.1:8901",
+      "gateway_route": "APO /tools/time/*",
+      "auth_requirement": "none (public)",
+      "capability": "time utilities",
+      "consuming_actor": "Devin + AIOS (tested)",
+      "verified_mission": "APO_CAPABILITY_MISSION_TRACE.json",
+      "states": {
+        "SOURCE_PRESENT": true,
+        "BUILT": false,
+        "REGISTERED": true,
+        "ROUTABLE": true,
+        "LISTENING": true,
+        "RESPONSIVE": true,
+        "MISSION_USED": true,
+        "VALUE_VERIFIED": true,
+        "HISTORICAL": false
+      }
+    },
+    {
+      "server": "weather",
+      "port": 8902,
+      "source_dir": "/Users/andy/openapi-servers/servers/weather",
+      "build_artifact": "main.py + requirements.txt + Dockerfile",
+      "image_or_runtime": "host uvicorn",
+      "process_command": ".venv/bin/uvicorn main:app --host 127.0.0.1 --port 8902",
+      "network_transport": "HTTP_OPENAPI",
+      "listen_address": "127.0.0.1:8902",
+      "gateway_route": "APO /tools/weather/*",
+      "auth_requirement": "none",
+      "capability": "weather forecast",
+      "consuming_actor": "Devin (live forecast + memory persistence)",
+      "verified_mission": "APO_CAPABILITY_MISSION_TRACE_WEATHER.json",
+      "states": {
+        "SOURCE_PRESENT": true,
+        "BUILT": false,
+        "REGISTERED": true,
+        "ROUTABLE": true,
+        "LISTENING": true,
+        "RESPONSIVE": true,
+        "MISSION_USED": true,
+        "VALUE_VERIFIED": true,
+        "HISTORICAL": false
+      }
+    },
+    {
+      "server": "filesystem",
+      "port": 8903,
+      "source_dir": "/Users/andy/openapi-servers/servers/filesystem",
+      "build_artifact": "main.py + requirements.txt + Dockerfile",
+      "image_or_runtime": "host uvicorn",
+      "process_command": ".venv/bin/uvicorn main:app --host 127.0.0.1 --port 8903",
+      "network_transport": "HTTP_OPENAPI",
+      "listen_address": "127.0.0.1:8903",
+      "gateway_route": "APO /tools/filesystem/*",
+      "auth_requirement": "none (path allowlist)",
+      "capability": "file read/write/list/search",
+      "consuming_actor": "Devin (write/read test in /Users/andy/tmp)",
+      "verified_mission": "APO_CAPABILITY_MISSION_TRACE_FILESYSTEM.json",
+      "states": {
+        "SOURCE_PRESENT": true,
+        "BUILT": false,
+        "REGISTERED": true,
+        "ROUTABLE": true,
+        "LISTENING": true,
+        "RESPONSIVE": true,
+        "MISSION_USED": true,
+        "VALUE_VERIFIED": true,
+        "HISTORICAL": false
+      }
+    },
+    {
+      "server": "git",
+      "port": 8904,
+      "source_dir": "/Users/andy/openapi-servers/servers/git",
+      "build_artifact": "main.py + requirements.txt + Dockerfile",
+      "image_or_runtime": "host uvicorn",
+      "process_command": ".venv/bin/uvicorn main:app --host 127.0.0.1 --port 8904",
+      "network_transport": "HTTP_OPENAPI",
+      "listen_address": "127.0.0.1:8904",
+      "gateway_route": "APO /tools/git/*",
+      "auth_requirement": "none (git config)",
+      "capability": "git operations",
+      "consuming_actor": "Devin",
+      "verified_mission": null,
+      "states": {
+        "SOURCE_PRESENT": true,
+        "BUILT": false,
+        "REGISTERED": true,
+        "ROUTABLE": true,
+        "LISTENING": true,
+        "RESPONSIVE": true,
+        "MISSION_USED": false,
+        "VALUE_VERIFIED": false,
+        "HISTORICAL": false
+      }
+    },
+    {
+      "server": "memory",
+      "port": 8905,
+      "source_dir": "/Users/andy/openapi-servers/servers/memory",
+      "build_artifact": "main.py + requirements.txt + Dockerfile",
+      "image_or_runtime": "host uvicorn",
+      "process_command": ".venv/bin/uvicorn main:app --host 127.0.0.1 --port 8905",
+      "network_transport": "HTTP_OPENAPI",
+      "listen_address": "127.0.0.1:8905",
+      "gateway_route": "APO /tools/memory/*",
+      "auth_requirement": "none",
+      "capability": "knowledge graph (entity/relation/observation)",
+      "consuming_actor": "weather mission (write), Devin (read)",
+      "verified_mission": "APO_CAPABILITY_MISSION_TRACE_WEATHER.json",
+      "states": {
+        "SOURCE_PRESENT": true,
+        "BUILT": false,
+        "REGISTERED": true,
+        "ROUTABLE": true,
+        "LISTENING": true,
+        "RESPONSIVE": true,
+        "MISSION_USED": true,
+        "VALUE_VERIFIED": true,
+        "HISTORICAL": false
+      }
+    },
+    {
+      "server": "quotes",
+      "port": 8906,
+      "source_dir": "/Users/andy/openapi-servers/servers/quotes-ui",
+      "build_artifact": "main.py + requirements.txt + Dockerfile",
+      "image_or_runtime": "host uvicorn",
+      "process_command": ".venv/bin/uvicorn main:app --host 127.0.0.1 --port 8906",
+      "network_transport": "HTTP_OPENAPI",
+      "listen_address": "127.0.0.1:8906",
+      "gateway_route": "APO /tools/quotes/*",
+      "auth_requirement": "none",
+      "capability": "quote display UI",
+      "consuming_actor": "unknown",
+      "verified_mission": null,
+      "states": {
+        "SOURCE_PRESENT": true,
+        "BUILT": false,
+        "REGISTERED": true,
+        "ROUTABLE": true,
+        "LISTENING": true,
+        "RESPONSIVE": true,
+        "MISSION_USED": false,
+        "VALUE_VERIFIED": false,
+        "HISTORICAL": false
+      }
+    },
+    {
+      "server": "flashcards",
+      "port": 8907,
+      "source_dir": "/Users/andy/openapi-servers/servers/flashcards",
+      "build_artifact": "main.py + requirements.txt + Dockerfile",
+      "image_or_runtime": "host uvicorn",
+      "process_command": ".venv/bin/uvicorn main:app --host 127.0.0.1 --port 8907",
+      "network_transport": "HTTP_OPENAPI",
+      "listen_address": "127.0.0.1:8907",
+      "gateway_route": "APO /tools/flashcards/*",
+      "auth_requirement": "none",
+      "capability": "flashcard display UI",
+      "consuming_actor": "unknown",
+      "verified_mission": null,
+      "states": {
+        "SOURCE_PRESENT": true,
+        "BUILT": false,
+        "REGISTERED": true,
+        "ROUTABLE": true,
+        "LISTENING": true,
+        "RESPONSIVE": true,
+        "MISSION_USED": false,
+        "VALUE_VERIFIED": false,
+        "HISTORICAL": false
+      }
+    },
+    {
+      "server": "time_ui",
+      "port": 8908,
+      "source_dir": "/Users/andy/openapi-servers/servers/time-ui",
+      "build_artifact": "main.py + requirements.txt + Dockerfile",
+      "image_or_runtime": "host uvicorn",
+      "process_command": ".venv/bin/uvicorn main:app --host 127.0.0.1 --port 8908",
+      "network_transport": "HTTP_OPENAPI",
+      "listen_address": "127.0.0.1:8908",
+      "gateway_route": "APO /tools/time_ui/*",
+      "auth_requirement": "none",
+      "capability": "time UI display",
+      "consuming_actor": "unknown",
+      "verified_mission": null,
+      "states": {
+        "SOURCE_PRESENT": true,
+        "BUILT": false,
+        "REGISTERED": true,
+        "ROUTABLE": true,
+        "LISTENING": true,
+        "RESPONSIVE": true,
+        "MISSION_USED": false,
+        "VALUE_VERIFIED": false,
+        "HISTORICAL": false
+      }
+    },
+    {
+      "server": "summarizer",
+      "port": 8909,
+      "source_dir": "/Users/andy/openapi-servers/servers/summarizer_tool",
+      "build_artifact": "main.py + requirements.txt + docker-compose.yml",
+      "image_or_runtime": "host uvicorn with MODEL=qwen2.5:1.5b",
+      "process_command": "cd /Users/andy/openapi-servers && .venv/bin/uvicorn servers.summarizer_tool.main:app --host 127.0.0.1 --port 8909",
+      "network_transport": "HTTP_OPENAPI",
+      "listen_address": "127.0.0.1:8909",
+      "gateway_route": "APO /tools/summarizer/*",
+      "auth_requirement": "none",
+      "capability": "text summarization",
+      "consuming_actor": "Devin (text summary via Ollama qwen2.5:1.5b)",
+      "verified_mission": "APO_CAPABILITY_MISSION_TRACE_SUMMARIZER.json",
+      "states": {
+        "SOURCE_PRESENT": true,
+        "BUILT": false,
+        "REGISTERED": true,
+        "ROUTABLE": true,
+        "LISTENING": true,
+        "RESPONSIVE": true,
+        "MISSION_USED": true,
+        "VALUE_VERIFIED": true,
+        "HISTORICAL": false
+      }
+    },
+    {
+      "server": "bitcoin",
+      "port": 8910,
+      "source_dir": "/Users/andy/openapi-servers/servers/bitcoin-price-predictor",
+      "build_artifact": "main.py + requirements.txt (no Dockerfile)",
+      "image_or_runtime": "host uvicorn",
+      "process_command": ".venv/bin/uvicorn main:app --host 127.0.0.1 --port 8910",
+      "network_transport": "HTTP_OPENAPI",
+      "listen_address": "127.0.0.1:8910",
+      "gateway_route": "APO /tools/bitcoin/*",
+      "auth_requirement": "none",
+      "capability": "bitcoin price analysis",
+      "consuming_actor": "Devin (price by date, stat endpoint degraded)",
+      "verified_mission": "APO_CAPABILITY_MISSION_TRACE_BITCOIN_PREDICTOR.json",
+      "states": {
+        "SOURCE_PRESENT": true,
+        "BUILT": false,
+        "REGISTERED": true,
+        "ROUTABLE": true,
+        "LISTENING": true,
+        "RESPONSIVE": true,
+        "MISSION_USED": true,
+        "VALUE_VERIFIED": false,
+        "HISTORICAL": false,
+        "ROUTE_PROVEN": true,
+        "ENDPOINT_DEGRADED": true
+      }
+    },
+    {
+      "server": "sql",
+      "port": 8911,
+      "source_dir": "/Users/andy/openapi-servers/servers/sql",
+      "build_artifact": "main.py + requirements.txt (no Dockerfile)",
+      "image_or_runtime": "host uvicorn",
+      "process_command": "cd /Users/andy/openapi-servers/servers/sql; DATABASE_URL=sqlite:////tmp/apo_runtime.db .venv/bin/uvicorn main:app --host 127.0.0.1 --port 8911",
+      "network_transport": "HTTP_OPENAPI",
+      "listen_address": "127.0.0.1:8911",
+      "gateway_route": "APO /tools/sql/*",
+      "auth_requirement": "none",
+      "capability": "SQL chat",
+      "consuming_actor": "Devin (nl-to-sql with sql, answer, raw_result)",
+      "verified_mission": "APO_CAPABILITY_MISSION_TRACE_SQL.json",
+      "states": {
+        "SOURCE_PRESENT": true,
+        "BUILT": false,
+        "REGISTERED": true,
+        "ROUTABLE": true,
+        "LISTENING": true,
+        "RESPONSIVE": true,
+        "MISSION_USED": true,
+        "VALUE_VERIFIED": true,
+        "HISTORICAL": false,
+        "VALUE_DEGRADED": false
+      }
+    },
+    {
+      "server": "external_rag",
+      "port": 8912,
+      "source_dir": "/Users/andy/openapi-servers/servers/external-rag",
+      "build_artifact": "main.py + requirements.txt (no Dockerfile)",
+      "image_or_runtime": "host uvicorn",
+      "process_command": ".venv/bin/python -m uvicorn main:app --host 127.0.0.1 --port 8912",
+      "network_transport": "HTTP_OPENAPI",
+      "listen_address": "127.0.0.1:8912",
+      "gateway_route": "APO /tools/external_rag/*",
+      "auth_requirement": "none",
+      "capability": "retrieval from vectorstore",
+      "consuming_actor": "Devin (retrieval + langchain API drift fix)",
+      "verified_mission": "APO_CAPABILITY_MISSION_TRACE_EXTERNAL_RAG.json",
+      "states": {
+        "SOURCE_PRESENT": true,
+        "BUILT": false,
+        "REGISTERED": true,
+        "ROUTABLE": true,
+        "LISTENING": true,
+        "RESPONSIVE": true,
+        "MISSION_USED": true,
+        "VALUE_VERIFIED": true,
+        "HISTORICAL": false,
+        "VALUE_DEGRADED": false
+      }
+    },
+    {
+      "server": "slack",
+      "port": 8913,
+      "source_dir": "/Users/andy/openapi-servers/servers/slack",
+      "build_artifact": "main.py + requirements.txt + Dockerfile",
+      "image_or_runtime": "host uvicorn",
+      "process_command": ".venv/bin/uvicorn main:app --host 127.0.0.1 --port 8913",
+      "network_transport": "HTTP_OPENAPI",
+      "listen_address": "127.0.0.1:8913",
+      "gateway_route": "APO /tools/slack/*",
+      "auth_requirement": "SLACK_BOT_TOKEN in environment",
+      "capability": "Slack operations",
+      "consuming_actor": "unknown",
+      "verified_mission": null,
+      "states": {
+        "SOURCE_PRESENT": true,
+        "BUILT": false,
+        "REGISTERED": true,
+        "ROUTABLE": true,
+        "LISTENING": true,
+        "RESPONSIVE": true,
+        "MISSION_USED": false,
+        "VALUE_VERIFIED": false,
+        "HISTORICAL": false
+      }
+    },
+    {
+      "server": "google_pse",
+      "port": 8914,
+      "source_dir": "/Users/andy/openapi-servers/servers/google-pse",
+      "build_artifact": "main.py + requirements.txt + Dockerfile",
+      "image_or_runtime": "host uvicorn",
+      "process_command": ".venv/bin/uvicorn main:app --host 127.0.0.1 --port 8914",
+      "network_transport": "HTTP_OPENAPI",
+      "listen_address": "127.0.0.1:8914",
+      "gateway_route": "APO /tools/google_pse/*",
+      "auth_requirement": "GOOGLE_PSE_API_KEY + PSE_CX in environment",
+      "capability": "Google Programmable Search",
+      "consuming_actor": "Devin (search query; broker denied lease)",
+      "verified_mission": "APO_CAPABILITY_MISSION_TRACE_GOOGLE_PSE.json",
+      "states": {
+        "SOURCE_PRESENT": true,
+        "BUILT": false,
+        "REGISTERED": true,
+        "ROUTABLE": true,
+        "LISTENING": true,
+        "RESPONSIVE": true,
+        "MISSION_USED": true,
+        "VALUE_VERIFIED": false,
+        "HISTORICAL": false,
+        "LEASE_GATED_PROXY": true,
+        "FAILURE_EDGE_VERIFIED": true
+      }
+    }
+  ],
+  "docker_role": {
+    "description": "Docker is a build and containerization substrate, not the owner of the OpenAPI capability network. It currently runs a local Kubernetes kind cluster and registry. The OpenAPI servers run as host uvicorn processes.",
+    "docker_containers": [
+      "kind-cloud-provider",
+      "kind-registry-mirror",
+      "desktop-control-plane",
+      "prizz_deep-dive-desktop-extension-service"
+    ],
+    "docker_openapi_overlap": false,
+    "docker_build_artifacts": "OpenAPI servers have Dockerfiles but are not running in Docker.",
+    "docker_network": "bridge for kind cluster; separate from APO HTTP_OPENAPI plane"
+  },
+  "authority_flow": {
+    "AIOS Runtime Orchestrator": [
+      "mission selection",
+      "skill routing"
+    ],
+    "APO Gateway": [
+      "capability route lookup",
+      "proxy request"
+    ],
+    "Credential Broker": [
+      "X-Lease-Id issuance (optional)",
+      "provider proxy auth"
+    ],
+    "OpenAPI Server": [
+      "execution"
+    ],
+    "HyperAI-Sync memory": [
+      "trace persistence"
+    ]
+  },
+  "gross_value_assessment": {
+    "value_verified_edges": [
+      "time",
+      "weather",
+      "memory",
+      "summarizer",
+      "filesystem",
+      "external_rag",
+      "sql"
+    ],
+    "value_unverified_but_responsive": 13,
+    "dormant_servers_not_in_apo_registry": 4,
+    "coordination_gain": "high once each server has a verified mission trace",
+    "friction": "OpenAPI servers run on host, not Docker; APO registry in apo_config.yaml; no auto-restart policy; no dynamic service discovery"
+  },
+  "verdict": "APO_CAPABILITY_NETWORK_DISCOVERED",
+  "verdict_reasoning": "The network has multiple transport planes. OpenAPI servers are currently routed through APO Gateway over host loopback HTTP. One complete mission (time) has been traced from AIOS plan to APO to OpenAPI to memory. 13 other servers are responsive but not yet mission-verified. Docker is a separate substrate, not the runtime plane for these servers."
+}

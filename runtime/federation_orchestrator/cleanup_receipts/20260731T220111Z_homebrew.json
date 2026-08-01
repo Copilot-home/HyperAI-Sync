@@ -1,0 +1,22 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "homebrew",
+  "started_at": "2026-07-31T22:00:03Z",
+  "completed_at": "2026-07-31T22:01:11Z",
+  "dry_run": false,
+  "include_recyclable": true,
+  "disk_before_mb": 339,
+  "disk_after_mb": 328,
+  "freed_mb": 0,
+  "action_count": 1,
+  "error_count": 0,
+  "actions": [
+    {
+      "command": "brew cleanup -s",
+      "rc": 1,
+      "stdout": "Removing: /opt/homebrew/Cellar/azure-cli/2.83.0... (3,139 files, 42.7MB)\n==> This operation has freed approximately 42.7MB of disk space.\n",
+      "stderr": "Warning: Skipping ada-url: most recent version 4.0.0 not installed\nWarning: Skipping aom: most recent version 3.14.1 not installed\nWarning: Skipping asciinema: most recent version 3.2.1 not installed\n"
+    }
+  ],
+  "status": "ok"
+}

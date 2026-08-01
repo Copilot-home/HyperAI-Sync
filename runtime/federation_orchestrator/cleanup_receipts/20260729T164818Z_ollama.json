@@ -1,0 +1,23 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "ollama",
+  "started_at": "2026-07-29T16:48:18Z",
+  "completed_at": "2026-07-29T16:48:18Z",
+  "dry_run": false,
+  "include_recyclable": false,
+  "disk_before_mb": 6311,
+  "disk_after_mb": 6311,
+  "freed_mb": 0,
+  "action_count": 1,
+  "error_count": 0,
+  "actions": [
+    {
+      "path": "/Users/andy/Library/Caches/ollama",
+      "status": "deleted",
+      "reason": null,
+      "dry_run": false,
+      "estimated_mb": 0.0
+    }
+  ],
+  "status": "ok"
+}

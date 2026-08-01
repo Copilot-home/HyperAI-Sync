@@ -54,7 +54,7 @@ Response (success):
   "lease": {
     "lease_id": "lease-...",
     "active_key_ref": "OPENAI_API_KEY_3",
-    "masked_key": "sk-pro...ezMA",
+    "masked_key": "<REDACTED>",
     "expires_at": "...",
     "calls_remaining": 60
   }

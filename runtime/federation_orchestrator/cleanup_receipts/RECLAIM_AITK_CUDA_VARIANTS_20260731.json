@@ -1,0 +1,25 @@
+{
+  "execution_id": "reclaim_aitk_cuda_variants_20260731",
+  "timestamp": "2026-07-31T14:37:00Z",
+  "principle": "Local root applies evidence gates: duplicate, unusable hardware, no active process, lineage preserved.",
+  "candidate_id": "reclaim_002",
+  "description": "Delete three AITK DeepSeek R1 Distill Qwen 1.5B CUDA variants because this host has no NVIDIA GPU/CUDA and the CPU variant is retained",
+  "deleted_paths": [
+    "/Users/andy/.aitk/models/DeepSeek/deepseek-r1-distill-qwen-1.5b-cuda-int4-awq-block-128-acc-level-4",
+    "/Users/andy/.aitk/models/DeepSeek/deepseek-r1-distill-qwen-1.5b-cuda-int4-rtn-block-32-acc-level-4",
+    "/Users/andy/.aitk/models/DeepSeek/deepseek-r1-distill-qwen-1.5b-cuda-int4-rtn-block-32"
+  ],
+  "retained_path": "/Users/andy/.aitk/models/DeepSeek/deepseek-r1-distill-qwen-1.5b-cpu-int4-rtn-block-32-acc-level-4",
+  "space_reclaimed_mb": 3895.9,
+  "space_reclaimed_gb": 3.8,
+  "gate_decision": "LOCAL_ROOT_APPROVED",
+  "gate_evidence": {
+    "classification": "UNUSABLE_ON_THIS_HARDWARE",
+    "dependency": "CPU variant intact; no aitk process running; model can be re-downloaded",
+    "lineage": "same base model (DeepSeek R1 Distill Qwen 1.5B); only quantization/runtime target differs",
+    "value": "frees 3.8 GB without losing 1.5B model capability",
+    "risk": "low",
+    "future_cost": "low; can re-download if CUDA hardware is added"
+  },
+  "verdict": "SUCCESS"
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "docker",
+  "started_at": "2026-07-30T18:23:57Z",
+  "completed_at": "2026-07-30T18:23:57Z",
+  "dry_run": true,
+  "include_recyclable": false,
+  "disk_before_mb": 8002,
+  "disk_after_mb": 8001,
+  "freed_mb": 10.01,
+  "action_count": 1,
+  "error_count": 0,
+  "actions": [
+    {
+      "command": "docker system df",
+      "rc": 0,
+      "stdout": "TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE\nImages          15        4         7.781GB   5.489GB (70%)\nContainers      4         4         10.01MB   0B (0%)\nLocal Volumes   4         3         1.495GB   0B (0%)\nBuild Cache     7         0         85.39MB   0B\n",
+      "stderr": "",
+      "status": "dry_run"
+    }
+  ],
+  "status": "ok"
+}

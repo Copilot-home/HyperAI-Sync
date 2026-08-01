@@ -1,0 +1,27 @@
+{
+  "execution_id": "reclaim_hold_14b_and_bionic_20260731",
+  "timestamp": "2026-07-31T14:40:00Z",
+  "principle": "Local root applies evidence gates: if the item is not duplicate, not obsolete, and not safe to rebuild, HOLD.",
+  "candidates": [
+    {
+      "candidate_id": "reclaim_003",
+      "path": "/Users/andy/.aitk/models/Microsoft/deepseek-r1-distill-qwen-14b-generic-cpu-3",
+      "decision": "HOLD",
+      "final_verdict": "NOT_INCOMPLETE",
+      "evidence": "download.tmp is 0B; model.onnx.data is 12GB; model appears complete and operational. CPU variant. No evidence of corruption.",
+      "risk_if_deleted": "high (would lose 14B CPU model, not recoverable without re-download)",
+      "gate": "DEPENDENCY_GATE_FAILED"
+    },
+    {
+      "candidate_id": "reclaim_004",
+      "path": "/Users/andy/.lmstudio/apps/bionic/.internal/staged-updates-app/lms-update-unzipped1785452451156",
+      "decision": "HOLD",
+      "final_verdict": "PENDING_UPDATE",
+      "evidence": "staged Bionic.app version 1.0.4+9; installed /Applications/Bionic.app version 1.0.3+3; staged is newer update payload, not leftover.",
+      "risk_if_deleted": "high (would prevent Bionic from updating to 1.0.4)",
+      "gate": "DEPENDENCY_GATE_FAILED"
+    }
+  ],
+  "verdict": "HOLD",
+  "verdict_reasoning": "Both candidates failed the dependency/lineage gate. They are not duplicates or dead files; they are active/pending assets. No deletion performed."
+}

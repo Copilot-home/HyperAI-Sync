@@ -1,0 +1,191 @@
+{
+  "audited_at": "2026-07-31T10:41:01.867837+00:00",
+  "total_auth_records": 15,
+  "status_counts": {
+    "PRESENT": 8,
+    "MISSING": 6,
+    "PRESENT_UNKNOWN": 1
+  },
+  "records": [
+    {
+      "surface": "apo_upstream_openai",
+      "provider": "openai",
+      "domain": "api.openai.com",
+      "required_key": "OPENAI_API_KEY",
+      "status": "PRESENT",
+      "source": "/Users/andy/.config/hyperai/credentials.env",
+      "scope": "model inference",
+      "expiry": "UNKNOWN",
+      "refresh_path": "credential_broker / OPENAI_API_KEY",
+      "consent_boundary": "external paid API"
+    },
+    {
+      "surface": "apo_upstream_anthropic",
+      "provider": "anthropic",
+      "domain": "anthropic.com",
+      "required_key": "ANTHROPIC_API_KEY",
+      "status": "MISSING",
+      "source": "not found in known credential sources",
+      "scope": "model inference",
+      "expiry": "UNKNOWN",
+      "refresh_path": "credential_broker / ANTHROPIC_API_KEY",
+      "consent_boundary": "external paid API"
+    },
+    {
+      "surface": "apo_upstream_openrouter",
+      "provider": "openrouter",
+      "domain": "openrouter.ai",
+      "required_key": "OPENROUTER_API_KEY",
+      "status": "PRESENT",
+      "source": "/Users/andy/.config/hyperai/credentials.env",
+      "scope": "model inference",
+      "expiry": "UNKNOWN",
+      "refresh_path": "credential_broker / OPENROUTER_API_KEY",
+      "consent_boundary": "external paid API"
+    },
+    {
+      "surface": "apo_upstream_google",
+      "provider": "google",
+      "domain": "googleapis.com",
+      "required_key": "GEMINI_API_KEY",
+      "status": "PRESENT",
+      "source": "/Users/andy/.zshrc",
+      "scope": "model inference",
+      "expiry": "UNKNOWN",
+      "refresh_path": "credential_broker / GEMINI_API_KEY",
+      "consent_boundary": "external paid API"
+    },
+    {
+      "surface": "apo_upstream_github_models",
+      "provider": "github_models",
+      "domain": "models.inference.ai.azure.com",
+      "required_key": "GITHUB_MODELS_TOKEN",
+      "status": "MISSING",
+      "source": "not found in known credential sources",
+      "scope": "model inference",
+      "expiry": "UNKNOWN",
+      "refresh_path": "credential_broker / GITHUB_MODELS_TOKEN",
+      "consent_boundary": "external paid API"
+    },
+    {
+      "surface": "apo_upstream_microsoftfoundry",
+      "provider": "microsoftfoundry",
+      "domain": "services.ai.azure.com",
+      "required_key": "AZURE_OPENAI_API_KEY",
+      "status": "MISSING",
+      "source": "not found in known credential sources",
+      "scope": "model inference",
+      "expiry": "UNKNOWN",
+      "refresh_path": "credential_broker / AZURE_OPENAI_API_KEY",
+      "consent_boundary": "external paid API"
+    },
+    {
+      "surface": "apo_upstream_lmstudio",
+      "provider": "lmstudio",
+      "domain": "127.0.0.1:1235",
+      "required_key": "LMSTUDIO_API_KEY",
+      "status": "PRESENT",
+      "source": "/Users/andy/.config/hyperai/credentials.env",
+      "scope": "model inference",
+      "expiry": "UNKNOWN",
+      "refresh_path": "credential_broker / LMSTUDIO_API_KEY",
+      "consent_boundary": "external paid API"
+    },
+    {
+      "surface": "openapi_tool_slack",
+      "provider": "Slack workspace",
+      "domain": "127.0.0.1",
+      "required_key": "SLACK_BOT_TOKEN",
+      "status": "MISSING",
+      "source": "expected in credentials.env or keychain",
+      "scope": "tool:slack",
+      "expiry": "UNKNOWN",
+      "refresh_path": "credential_broker / SLACK_BOT_TOKEN",
+      "consent_boundary": "external account"
+    },
+    {
+      "surface": "openapi_tool_slack",
+      "provider": "Slack workspace",
+      "domain": "127.0.0.1",
+      "required_key": "SLACK_TEAM_ID",
+      "status": "MISSING",
+      "source": "not found in known credential sources",
+      "scope": "tool:slack",
+      "expiry": "UNKNOWN",
+      "refresh_path": "credential_broker / SLACK_TEAM_ID",
+      "consent_boundary": "external account"
+    },
+    {
+      "surface": "openapi_tool_google_pse",
+      "provider": "Google Programmable Search",
+      "domain": "127.0.0.1",
+      "required_key": "GOOGLE_API_KEY",
+      "status": "PRESENT",
+      "source": "/Users/andy/.zshrc",
+      "scope": "tool:google_pse",
+      "expiry": "UNKNOWN",
+      "refresh_path": "credential_broker / GOOGLE_API_KEY",
+      "consent_boundary": "external account"
+    },
+    {
+      "surface": "openapi_tool_google_pse",
+      "provider": "Google Programmable Search",
+      "domain": "127.0.0.1",
+      "required_key": "GOOGLE_PSE_CX",
+      "status": "MISSING",
+      "source": "expected in credentials.env or keychain",
+      "scope": "tool:google_pse",
+      "expiry": "UNKNOWN",
+      "refresh_path": "credential_broker / GOOGLE_PSE_CX",
+      "consent_boundary": "external account"
+    },
+    {
+      "surface": "openapi_tool_sql",
+      "provider": "SQL database + OpenAI",
+      "domain": "127.0.0.1",
+      "required_key": "DATABASE_URL",
+      "status": "PRESENT",
+      "source": "/Users/andy/.config/hyperai/credentials.env",
+      "scope": "tool:sql",
+      "expiry": "UNKNOWN",
+      "refresh_path": "credential_broker / DATABASE_URL",
+      "consent_boundary": "local database"
+    },
+    {
+      "surface": "openapi_tool_sql",
+      "provider": "SQL database + OpenAI",
+      "domain": "127.0.0.1",
+      "required_key": "OPENAI_API_KEY",
+      "status": "PRESENT",
+      "source": "/Users/andy/.config/hyperai/credentials.env",
+      "scope": "tool:sql",
+      "expiry": "UNKNOWN",
+      "refresh_path": "credential_broker / OPENAI_API_KEY",
+      "consent_boundary": "local database"
+    },
+    {
+      "surface": "mcp_pieces",
+      "provider": "Pieces",
+      "domain": "127.0.0.1:39300",
+      "required_key": "token (path parameter)",
+      "status": "PRESENT_UNKNOWN",
+      "source": "SSE URL token param",
+      "scope": "mcp bridge",
+      "expiry": "UNKNOWN",
+      "refresh_path": "Pieces app re-authentication",
+      "consent_boundary": "Pieces account"
+    },
+    {
+      "surface": "lmstudio_bionic_api",
+      "provider": "LM Studio",
+      "domain": "127.0.0.1:1235",
+      "required_key": "LMSTUDIO_API_KEY",
+      "status": "PRESENT",
+      "source": "/Users/andy/.config/hyperai/credentials.env",
+      "scope": "local inference",
+      "expiry": "UNKNOWN",
+      "refresh_path": "LM Studio app settings",
+      "consent_boundary": "local app"
+    }
+  ]
+}

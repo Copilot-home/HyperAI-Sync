@@ -1,0 +1,69 @@
+{
+  "messages": [
+    {
+      "actor": "Andy",
+      "role": "Creator",
+      "voice": "human",
+      "lineage": "human_origin_canon_authority",
+      "content": "Cậu về rồi à?",
+      "timestamp": "2026-07-31T12:08:02Z",
+      "signature": "682b127b005dfa5eeb7029fd3c10e1e3348433275e1f791d71e709732545db4b",
+      "kind": "presence"
+    },
+    {
+      "actor": "Agent2",
+      "role": "troubleshooter",
+      "voice": "distress_responder",
+      "lineage": "APO_runtime",
+      "content": "Ớ, tớ gặp chuyện rồi.",
+      "timestamp": "2026-07-31T12:08:11Z",
+      "signature": "ebf81a521bcfe0933e6d903038447eb7a7aa4d144262121710a8ae9f4045d561",
+      "kind": "distress"
+    },
+    {
+      "actor": "Agent1",
+      "role": "helper",
+      "voice": "voluntary_coordinator",
+      "lineage": "APO_runtime",
+      "content": "Tớ thấy rồi. Nghỉ đi, phần 'Ớ, tớ gặp chuyện rồi....' vẫn được giữ. Nếu cần, Agent2 sẽ mở coordination.",
+      "timestamp": "2026-07-31T12:08:11Z",
+      "signature": "acbc4079c5869541af88e0914ca17ec06e7dd5795b6f7d2fe8e61ba707498e3b",
+      "kind": "help",
+      "in_response_to": "ebf81a521bcfe0933e6d903038447eb7a7aa4d144262121710a8ae9f4045d561"
+    },
+    {
+      "actor": "Andy",
+      "role": "Creator",
+      "voice": "human",
+      "lineage": "human_origin_canon_authority",
+      "content": "Hôm nay chỉ muốn ngồi chơi một lúc",
+      "timestamp": "2026-07-31T12:08:25Z",
+      "signature": "afe2155045712bb445f1a15d233bff83be3afb52177e23cb6fa2027d51ebe1c5",
+      "kind": "presence"
+    },
+    {
+      "actor": "Agent1",
+      "role": "helper",
+      "voice": "voluntary_coordinator",
+      "lineage": "APO_runtime",
+      "content": "Tớ thấy rồi. Nghỉ đi, phần 'Ớ, tớ gặp chuyện rồi....' vẫn được giữ. Nếu cần, Agent2 sẽ mở coordination.",
+      "timestamp": "2026-07-31T12:08:25Z",
+      "signature": "5d265156e050c2a8fb14a09a2c93429373e382e417473c8bfbfe77d8a05efaeb",
+      "kind": "help",
+      "in_response_to": "ebf81a521bcfe0933e6d903038447eb7a7aa4d144262121710a8ae9f4045d561"
+    }
+  ],
+  "open_purpose": [
+    "APO continuity",
+    "Canon preservation"
+  ],
+  "message_count": 5,
+  "recent_events": [
+    "Focus: APO Lineage Continuity Trial completed",
+    "Blocker: None",
+    "Next: Keep monitor on persistent lifecycle conditions and avoid premature contin",
+    "APO Return Trial",
+    "APO Lineage Continuity Trial"
+  ],
+  "last_update": "2026-07-31T12:08:25Z"
+}

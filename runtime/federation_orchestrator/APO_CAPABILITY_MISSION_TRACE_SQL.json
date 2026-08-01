@@ -1,0 +1,123 @@
+{
+  "execution_id": "apo-capability-mission-trace-sql-20260731",
+  "timestamp": "2026-07-31T15:45:00Z",
+  "mission_text": "Get SQL database schema and nl-to-sql answer through APO sql capability",
+  "value_verified": true,
+  "stages": [
+    {
+      "stage": "SCHEMA",
+      "actor": "APO Gateway",
+      "surface": "http://127.0.0.1:9011/tools/sql/schema",
+      "request": {
+        "method": "GET"
+      },
+      "response": {
+        "status_code": 200,
+        "schema": "CREATE TABLE runtimes (id INTEGER, name TEXT, status TEXT, port INTEGER, PRIMARY KEY (id))",
+        "sample_rows": [
+          {"id": 1, "name": "APΩ", "status": "running", "port": 9011},
+          {"id": 2, "name": "LM Studio", "status": "running", "port": 1235},
+          {"id": 3, "name": "Ollama", "status": "running", "port": 11434}
+        ]
+      },
+      "state": "ROUTABLE_AND_RESPONSIVE"
+    },
+    {
+      "stage": "QUERY",
+      "actor": "APO Gateway",
+      "surface": "http://127.0.0.1:9011/tools/sql/chat_sql",
+      "request": {
+        "method": "POST",
+        "body": {"query": "list all runtimes and their status"}
+      },
+      "response": {
+        "status_code": 200,
+        "sql": "SELECT name, status FROM runtimes;",
+        "answer": "The runtimes and their statuses are as follows:\n- APΩ: running\n- LM Studio: running\n- Ollama: running\n- Docker MCP: running\n- OpenAPI time: running\n- OpenAPI weather: running\n- OpenAPI summarizer: running\n- OpenAPI bitcoin: running",
+        "raw_result": [
+          ["APΩ", "running"],
+          ["LM Studio", "running"],
+          ["Ollama", "running"],
+          ["Docker MCP", "running"],
+          ["OpenAPI time", "running"],
+          ["OpenAPI weather", "running"],
+          ["OpenAPI summarizer", "running"],
+          ["OpenAPI bitcoin", "running"]
+        ]
+      },
+      "state": "VALUE_VERIFIED"
+    },
+    {
+      "stage": "FIX",
+      "actor": "Devin",
+      "surface": "sql/main.py",
+      "original_bug": "SQLDatabaseChain with return_sql=True returned markdown SQL; server extracted null sql and raw_result; raw_result was a string but Pydantic model expected list",
+      "fix_actions": [
+        "add clean_sql() to strip markdown code fences and SQLQuery/SQLResult noise",
+        "use sql_chain with return_sql=True to get generated SQL, then execute cleaned SQL manually",
+        "use llm.invoke() to generate natural-language answer from SQL + raw result",
+        "parse raw_result string with ast.literal_eval to satisfy Optional[list] response model"
+      ],
+      "state": "PATCHED_AND_RESTARTED"
+    }
+  ],
+  "network_edges": [
+    {
+      "source_actor": "Devin",
+      "destination_actor": "APO Gateway",
+      "transport": "HTTP",
+      "address": "127.0.0.1:9011",
+      "request_type": "POST /tools/sql/chat_sql",
+      "response_type": "SQLChatOutput",
+      "auth": "none",
+      "verified": true,
+      "value": "nl-to-sql"
+    },
+    {
+      "source_actor": "APO Gateway",
+      "destination_actor": "sql OpenAPI server",
+      "transport": "HTTP",
+      "address": "127.0.0.1:8911",
+      "request_type": "POST /chat_sql",
+      "response_type": "SQLChatOutput",
+      "auth": "none",
+      "verified": true,
+      "value": "sql + answer + raw result"
+    },
+    {
+      "source_actor": "sql OpenAPI server",
+      "destination_actor": "local sqlite",
+      "transport": "in-process",
+      "address": "/tmp/apo_runtime.db",
+      "request_type": "execute cleaned SQL",
+      "response_type": "rows",
+      "auth": "none",
+      "verified": true,
+      "value": "data"
+    },
+    {
+      "source_actor": "sql OpenAPI server",
+      "destination_actor": "LLM proxy",
+      "transport": "HTTP",
+      "address": "http://127.0.0.1:9011/v1",
+      "request_type": "chat completions",
+      "response_type": "natural language answer",
+      "auth": "none",
+      "verified": true,
+      "value": "answer generation"
+    }
+  ],
+  "consumed_capabilities": ["sql", "LLM proxy"],
+  "produced_value": "verified APO nl-to-sql with complete SQL, raw result and natural-language answer; fixed output parsing bug",
+  "gross_value_formula": {
+    "VerifiedMissionValue": "schema + nl-to-sql + raw result + answer",
+    "CoordinationGain": "APO routes to sql server, sql server routes to LLM",
+    "DependencyUnlock": "proves DATA + LANGUAGE axes together",
+    "FutureComputeSaved": "can query /tmp/apo_runtime.db conversationally",
+    "RuntimeCost": "2 LLM calls + 1 SQL exec",
+    "NetworkFriction": "low",
+    "HumanBurden": "none"
+  },
+  "verdict": "VALUE_VERIFIED",
+  "verdict_reasoning": "The sql capability now completes the full mission: APO routes to sql server, server generates SQL, cleans markdown, executes against sqlite, and asks LLM to summarize. Output now contains sql, answer, and raw_result. This proves the DATA axis."
+}

@@ -44,7 +44,18 @@
     ],
     "default_hyperai_command": "python tools/hyperai_autonomous_cycle.py --agent-chain",
     "preservation_only_command": "python tools/hyperai_autonomous_cycle.py",
-    "implementation_handoff": "Use the generated route plan before touching product app code or external surfaces."
+    "implementation_handoff": "Use the generated route plan before touching product app code or external surfaces.",
+    "canon_binding": [
+      "memory/AIOS_LOCAL_CODEX_OPERATOR_RUNTIME.md",
+      "memory/AIOS_CREATOR_AI_COEXISTENCE_WORKFLOW.md",
+      "memory/AIOS_INVARIANTS.md",
+      "runtime/federation_orchestrator/aios_ecosystem_runtime_registry.json"
+    ],
+    "llm_binding": {
+      "engine": "ollama_local_models",
+      "model_alias": "apo/apple",
+      "reasoning_scope": "worker_reasoning_and_mission_dispatch"
+    }
   },
   "drift_guards": [
     "Reports must state orchestration_mode and agent_chain_status before claiming HyperAI executed the task.",

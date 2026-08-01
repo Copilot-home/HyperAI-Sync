@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-07-30T23:29:27Z",
+  "execution_hash": "065677fa372d69e705d835e191338be3f75bf093608745347546f145b02ee92f",
+  "version": 2,
+  "actions": [
+    {
+      "surface": "openai",
+      "provider": "openai",
+      "status": "COMPLETED",
+      "current_status": "COMPLETED",
+      "old_key_id": "key_PkJCYiZB6uUHrKmg",
+      "new_key_id": "key_TrzfkCilOwj8gKux",
+      "new_key_masked": "<REDACTED>",
+      "consent_boundary": "none",
+      "recovery_path": "admin API: create service account -> update OPENAI_API_KEY_3 -> restart broker -> delete old user API key",
+      "verification": "broker /status healthy: openai",
+      "completed_at": "2026-07-30T23:14:25.620805+00:00"
+    },
+    {
+      "surface": "openapi_tool_slack",
+      "provider": "slack",
+      "status": "PLANNED",
+      "current_status": "MISSING",
+      "required_scope": "channels:read, chat:write, users:read, reactions:write",
+      "credential_reference": "SLACK_BOT_TOKEN / SLACK_TEAM_ID",
+      "consent_boundary": "Creator must authorize Slack app install / workspace",
+      "recovery_path": [
+        "identify or create Slack app",
+        "OAuth install to workspace",
+        "broker loads SLACK_BOT_TOKEN",
+        "resolve SLACK_TEAM_ID via auth.test",
+        "verify with Slack API"
+      ],
+      "verification_probe": "GET /health on openapi_tool_slack + broker /status slack healthy"
+    },
+    {
+      "surface": "openapi_tool_google_pse",
+      "provider": "google_pse",
+      "status": "PLANNED",
+      "current_status": "MISSING",
+      "required_scope": "customsearch.readonly",
+      "credential_reference": "GOOGLE_PSE_CX",
+      "consent_boundary": "Creator must confirm CSE ownership / creation",
+      "recovery_path": [
+        "locate existing CSE in Google console",
+        "if none, create CSE as external consent action",
+        "bind GOOGLE_PSE_CX",
+        "verify with real search query through broker"
+      ],
+      "verification_probe": "GET /health on openapi_tool_google_pse + broker /status google_pse healthy"
+    }
+  ]
+}

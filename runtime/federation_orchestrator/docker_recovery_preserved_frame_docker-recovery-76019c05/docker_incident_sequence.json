@@ -1,0 +1,98 @@
+[
+  {
+    "timestamp": "2026-07-31T10:24:10",
+    "source": "vm/init.log",
+    "event": "{\"component\":\"kmsg\",\"level\":\"info\",\"msg\":\"I/O error, dev vda, sector 483789968 op 0x1:(WRITE) flags 0x9800 phys_seg 1 prio class 2\",\"time\":\"2026-07-31T10:24:10.778777958Z\"}",
+    "kind": "FAILURE"
+  },
+  {
+    "timestamp": "2026-07-31T10:24:10",
+    "source": "vm/init.log",
+    "event": "{\"component\":\"kmsg\",\"level\":\"info\",\"msg\":\"Aborting journal on device vda1-8.\",\"time\":\"2026-07-31T10:24:10.778858250Z\"}",
+    "kind": "FAILURE"
+  },
+  {
+    "timestamp": "2026-07-31T10:24:10",
+    "source": "vm/init.log",
+    "event": "{\"component\":\"kmsg\",\"level\":\"info\",\"msg\":\"I/O error, dev vda, sector 482347008 op 0x1:(WRITE) flags 0x9800 phys_seg 1 prio class 2\",\"time\":\"2026-07-31T10:24:10.778871833Z\"}",
+    "kind": "FAILURE"
+  },
+  {
+    "timestamp": "2026-07-31T10:24:10",
+    "source": "vm/init.log",
+    "event": "{\"component\":\"kmsg\",\"level\":\"info\",\"msg\":\"Buffer I/O error on dev vda1, logical block 60293120, lost sync page write\",\"time\":\"2026-07-31T10:24:10.778902792Z\"}",
+    "kind": "FAILURE"
+  },
+  {
+    "timestamp": "2026-07-31T10:24:10",
+    "source": "vm/init.log",
+    "event": "{\"component\":\"kmsg\",\"level\":\"info\",\"msg\":\"JBD2: I/O error when updating journal superblock for vda1-8.\",\"time\":\"2026-07-31T10:24:10.778916417Z\"}",
+    "kind": "FAILURE"
+  },
+  {
+    "timestamp": "2026-07-31T10:24:10",
+    "source": "vm/init.log",
+    "event": "{\"component\":\"kmsg\",\"level\":\"info\",\"msg\":\"I/O error, dev vda, sector 2048 op 0x1:(WRITE) flags 0x3800 phys_seg 1 prio class 2\",\"time\":\"2026-07-31T10:24:10.972010958Z\"}",
+    "kind": "FAILURE"
+  },
+  {
+    "timestamp": "2026-07-31T10:24:10",
+    "source": "vm/init.log",
+    "event": "{\"component\":\"kmsg\",\"level\":\"info\",\"msg\":\"Buffer I/O error on dev vda1, logical block 0, lost sync page write\",\"time\":\"2026-07-31T10:24:10.972041625Z\"}",
+    "kind": "FAILURE"
+  },
+  {
+    "timestamp": "2026-07-31T10:24:10",
+    "source": "vm/init.log",
+    "event": "{\"component\":\"kmsg\",\"level\":\"info\",\"msg\":\"EXT4-fs (vda1): I/O error while writing superblock\",\"time\":\"2026-07-31T10:24:10.972087333Z\"}",
+    "kind": "FAILURE"
+  },
+  {
+    "timestamp": "2026-07-31T10:24:10",
+    "source": "vm/init.log",
+    "event": "{\"component\":\"kmsg\",\"level\":\"info\",\"msg\":\"EXT4-fs (vda1): Remounting filesystem read-only\",\"time\":\"2026-07-31T10:24:10.972804417Z\"}",
+    "kind": "FAILURE"
+  },
+  {
+    "timestamp": "2026-07-31T10:24:15",
+    "source": "vm/init.log",
+    "event": "{\"component\":\"command\",\"driver\":\"json-file\",\"error\":\"error writing log entry: write /var/lib/docker/containers/35a145fdc08f79f0d24eeabee98ea443f89bd70c4889302852dfc7908c2ab492/35a145fdc08f79f0d24eeabe",
+    "kind": "FAILURE"
+  },
+  {
+    "timestamp": "2026-07-31T10:24:15",
+    "source": "vm/init.log",
+    "event": "{\"component\":\"command\",\"driver\":\"json-file\",\"error\":\"error writing log entry: write /var/lib/docker/containers/35a145fdc08f79f0d24eeabee98ea443f89bd70c4889302852dfc7908c2ab492/35a145fdc08f79f0d24eeabe",
+    "kind": "FAILURE"
+  },
+  {
+    "timestamp": "2026-07-31T10:24:15",
+    "source": "vm/init.log",
+    "event": "{\"component\":\"command\",\"driver\":\"json-file\",\"error\":\"error writing log entry: write /var/lib/docker/containers/35a145fdc08f79f0d24eeabee98ea443f89bd70c4889302852dfc7908c2ab492/35a145fdc08f79f0d24eeabe",
+    "kind": "FAILURE"
+  },
+  {
+    "timestamp": "2026-07-31T10:24:18",
+    "source": "vm/console.log",
+    "event": "[2026-07-31T10:24:18.541657379Z][initd.ipcstream] 23469db6-procd /pause/events --> 2026-07-31T10:24:18.540849129Z (9c4837e3) pause resuming: Docker Desktop is resuming...",
+    "kind": "RECOVERY"
+  },
+  {
+    "timestamp": "2026-07-31T10:24:18",
+    "source": "vm/console.log",
+    "event": "[2026-07-31T10:24:18.542682254Z][initd.ipcstream] 23469db6-procd /pause/events --> 2026-07-31T10:24:18.540985629Z (83557003) pause resumed: Docker Desktop is running",
+    "kind": "RECOVERY"
+  },
+  {
+    "timestamp": "2026-07-31T10:24:18",
+    "source": "vm/init.log",
+    "event": "{\"component\":\"command\",\"containerID\":\"c2297c91a7cc13c99e5f08e49397d54c0c32d25831eda28b1b52d224025fe23c\",\"error\":\"rpc error: code = Unknown desc = blob sha256:1de142695bb068e49b4c8abb7f1eab5b215f23ba93",
+    "kind": "FAILURE"
+  },
+  {
+    "timestamp": "2026-07-31T10:24:18",
+    "source": "vm/init.log",
+    "event": "{\"component\":\"command\",\"containerID\":\"35a145fdc08f79f0d24eeabee98ea443f89bd70c4889302852dfc7908c2ab492\",\"error\":\"rpc error: code = Unknown desc = blob sha256:46d51b990e97493119aac0907bcf50fd69660dc863",
+    "kind": "FAILURE"
+  }
+]

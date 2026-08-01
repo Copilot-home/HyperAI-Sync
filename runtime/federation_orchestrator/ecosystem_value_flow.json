@@ -1,0 +1,176 @@
+{
+  "generated_at": "2026-07-30T23:29:27Z",
+  "execution_hash": "065677fa372d69e705d835e191338be3f75bf093608745347546f145b02ee92f",
+  "version": 2,
+  "value_flow": {
+    "ROUTING": {
+      "nodes": [
+        "aios_mission_router",
+        "federation_orchestrator",
+        "apo_gateway"
+      ],
+      "input": "mission / request",
+      "output": "routed call / plan",
+      "upstream": "creator, runtime",
+      "downstream": "all lanes",
+      "authority": "OBSERVE PLAN ROUTE VERIFY",
+      "compute": "gateway routing",
+      "value": "correct dispatch",
+      "failure": "wrong route / loop"
+    },
+    "AUTH": {
+      "nodes": [
+        "credential_broker"
+      ],
+      "input": "capability request",
+      "output": "scoped lease / proof",
+      "upstream": "Keychain, OAuth, providers",
+      "downstream": "execution lane",
+      "authority": "AUTH VERIFY",
+      "compute": "broker validation",
+      "value": "secure identity",
+      "failure": "unauthorized"
+    },
+    "SECURITY": {
+      "nodes": [
+        "security_openai_rotation"
+      ],
+      "input": "exposure / drift alert",
+      "output": "incident receipt / rotated credential",
+      "upstream": "scanner, audit",
+      "downstream": "auth lane",
+      "authority": "AUDIT REVOKE ROTATE",
+      "compute": "verification calls",
+      "value": "continuity of trust",
+      "failure": "credential compromise"
+    },
+    "VERIFICATION": {
+      "nodes": [
+        "verify_generated_artifacts",
+        "health probes",
+        "evidence collectors"
+      ],
+      "input": "claim / output",
+      "output": "proof / delta",
+      "upstream": "all execution lanes",
+      "downstream": "memory / routing",
+      "authority": "OBSERVE VERIFY",
+      "compute": "probe / test",
+      "value": "truth preserved",
+      "failure": "false claim accepted"
+    },
+    "KNOWLEDGE": {
+      "nodes": [
+        "ollama_macbook",
+        "apo_upstream_macbook_ollama",
+        "apo_upstream_lmstudio",
+        "lmstudio_bionic_api",
+        "finalai",
+        "openapi_tool_google_pse"
+      ],
+      "input": "query / prompt",
+      "output": "model response / search result",
+      "upstream": "execution / routing",
+      "downstream": "execution / memory",
+      "authority": "OBSERVE INVOKE READ",
+      "compute": "LLM / search",
+      "value": "inference value",
+      "failure": "no model"
+    },
+    "EXECUTION": {
+      "nodes": [
+        "bionic_app",
+        "codex_operator_runtime",
+        "agent_os_dashboard",
+        "mcp_pieces",
+        "pieces_mcp",
+        "mcp_docker_mcp",
+        "openapi_tool_*"
+      ],
+      "input": "tool call / task",
+      "output": "result / side effect",
+      "upstream": "routing / knowledge",
+      "downstream": "memory / product",
+      "authority": "OBSERVE INVOKE READ WRITE",
+      "compute": "tool process",
+      "value": "task completion",
+      "failure": "tool failure"
+    },
+    "COMMUNICATION": {
+      "nodes": [
+        "openapi_tool_slack"
+      ],
+      "input": "message / mention",
+      "output": "sent message / reaction",
+      "upstream": "routing",
+      "downstream": "memory",
+      "authority": "OBSERVE INVOKE READ",
+      "compute": "Slack API",
+      "value": "team coordination",
+      "failure": "Slack unreachable"
+    },
+    "MEMORY": {
+      "nodes": [
+        "redis_local",
+        "memory_writer",
+        "openapi_tool_memory"
+      ],
+      "input": "read / write",
+      "output": "stored state",
+      "upstream": "all lanes",
+      "downstream": "all lanes",
+      "authority": "OBSERVE READ WRITE",
+      "compute": "redis / disk",
+      "value": "continuity",
+      "failure": "state loss"
+    },
+    "PRODUCT": {
+      "nodes": [
+        "hyperai_product_runtime"
+      ],
+      "input": "user action",
+      "output": "UI state",
+      "upstream": "runtime",
+      "downstream": "user",
+      "authority": "OBSERVE READ WRITE EXECUTE",
+      "compute": "frontend / backend",
+      "value": "user value",
+      "failure": "product down"
+    },
+    "INFRASTRUCTURE": {
+      "nodes": [
+        "docker_desktop"
+      ],
+      "input": "container / net request",
+      "output": "runtime fabric",
+      "upstream": "OS",
+      "downstream": "all",
+      "authority": "OBSERVE ALLOCATE EXECUTE",
+      "compute": "Docker daemon",
+      "value": "runtime fabric",
+      "failure": "Docker down"
+    },
+    "STANDBY_PROJECTION": {
+      "nodes": [
+        "apo_upstream_titan_ollama",
+        "apo_upstream_macmini_ollama"
+      ],
+      "input": "n/a",
+      "output": "n/a",
+      "upstream": "host offline",
+      "downstream": "host offline",
+      "authority": "NONE",
+      "compute": "0",
+      "value": "lineage preserved",
+      "failure": "n/a"
+    }
+  },
+  "flow": {
+    "source": "creator intent + OS processes",
+    "interpret": "ROUTING lane",
+    "plan": "ROUTING lane maps to capability map",
+    "execute": "AUTH \u2192 KNOWLEDGE \u2192 EXECUTION/COMMUNICATION \u2192 PRODUCT",
+    "verify": "SECURITY + VERIFICATION lanes",
+    "record": "MEMORY lane"
+  }
+}

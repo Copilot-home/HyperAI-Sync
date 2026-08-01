@@ -1,0 +1,22 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "homebrew",
+  "started_at": "2026-07-31T12:44:47Z",
+  "completed_at": "2026-07-31T12:45:30Z",
+  "dry_run": false,
+  "include_recyclable": false,
+  "disk_before_mb": 2508,
+  "disk_after_mb": 2556,
+  "freed_mb": 48,
+  "action_count": 1,
+  "error_count": 0,
+  "actions": [
+    {
+      "command": "brew cleanup -s",
+      "rc": 1,
+      "stdout": "Removing: /opt/homebrew/Cellar/azure-cli/2.83.0... (3,139 files, 42.7MB)\nRemoving: /Users/andy/Library/Caches/Homebrew/bootsnap/.DS_Store... (6.1KB)\n==> This operation has freed approximately 42.7MB of disk space.\n",
+      "stderr": "✔︎ JSON API packages.arm64_tahoe.jws.json\nWarning: Skipping ada-url: most recent version 4.0.0 not installed\nWarning: Skipping aom: most recent version 3.14.1 not installed\nWarning: Skipping asciinema"
+    }
+  ],
+  "status": "ok"
+}

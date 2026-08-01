@@ -1,0 +1,137 @@
+--- /Users/andy/HyperAI-Sync/rollback/gate1_20260730/aios_mission_router.py.bak	2026-07-31 05:01:15
++++ /Users/andy/workbench/aios_runtime_orchestrator/aios_mission_router.py	2026-07-31 05:03:23
+@@ -17,6 +17,11 @@
+ import sys
+ from pathlib import Path
+ from typing import Any
++
++# Daemon imports (Gate 1)
++import http.server
++import socketserver
++import threading
+ 
+ HOME = Path("/Users/andy")
+ CANON_PATH = HOME / ".codex" / "AGENTS.md"
+@@ -1490,8 +1495,101 @@
+         return json.loads(raw)
+     except json.JSONDecodeError as exc:
+         raise SystemExit(f"Invalid JSON argument: {exc}") from exc
++
++
++# Daemon surface (Gate 1): HTTP gate exposing read-only verification and routing.
++# No auto-execution; POST /mission/plan plans only and returns the packet.
++ROUTER_LOG = Path.home() / "Library" / "Logs" / "aios_mission_router.log"
++RUNTIME_REGISTRY = Path(__file__).resolve().with_name("runtime_registry.json")
++
++
++class RouterHTTPHandler(http.server.BaseHTTPRequestHandler):
++    def log_message(self, fmt: str, *args: Any) -> None:
++        msg = f"{dt.datetime.now(dt.timezone.utc).isoformat()} {self.address_string()} {fmt % args}\n"
++        ROUTER_LOG.parent.mkdir(parents=True, exist_ok=True)
++        with ROUTER_LOG.open("a", encoding="utf-8") as f:
++            f.write(msg)
++
++    def _send_json(self, code: int, body: Any) -> None:
++        data = json.dumps(body, ensure_ascii=False, indent=2).encode("utf-8")
++        self.send_response(code)
++        self.send_header("Content-Type", "application/json")
++        self.send_header("Content-Length", str(len(data)))
++        self.end_headers()
++        self.wfile.write(data)
+ 
++    def _send_text(self, code: int, body: str) -> None:
++        data = body.encode("utf-8")
++        self.send_response(code)
++        self.send_header("Content-Type", "text/plain; charset=utf-8")
++        self.send_header("Content-Length", str(len(data)))
++        self.end_headers()
++        self.wfile.write(data)
+ 
++    def do_GET(self) -> None:
++        if self.path == "/health":
++            self._send_json(200, verify_run())
++        elif self.path == "/runtime/list":
++            if RUNTIME_REGISTRY.exists():
++                self._send_json(200, json.loads(RUNTIME_REGISTRY.read_text()))
++            else:
++                self._send_json(503, {"error": "runtime_registry.json not found"})
++        elif self.path == "/":
++            body = (
++                "AIOS Mission Router Local Root\n"
++                "GET /health\n"
++                "GET /runtime/list\n"
++                "POST /mission/plan\n"
++                "POST /skills.route\n"
++            )
++            self._send_text(200, body)
++        else:
++            self._send_json(404, {"error": "not found"})
++
++    def do_POST(self) -> None:
++        length = int(self.headers.get("Content-Length", "0"))
++        raw = self.rfile.read(length).decode("utf-8")
++        try:
++            payload = json.loads(raw) if raw else {}
++        except json.JSONDecodeError as exc:
++            self._send_json(400, {"error": f"Invalid JSON: {exc}"})
++            return
++
++        if self.path == "/mission/plan":
++            result = mission_plan(
++                payload.get("mission_text", ""),
++                payload.get("target_surface", "unspecified"),
++                payload.get("risk_class", "unknown"),
++                payload.get("requested_action", "inspect"),
++                payload.get("approval_state", "not_approved"),
++            )
++            self._send_json(200, result)
++        elif self.path == "/skills.route":
++            result = route_skills(
++                payload.get("mission_text", ""),
++                payload.get("target_surface", "unspecified"),
++                payload.get("risk_class", "unknown"),
++                payload.get("requested_action", "inspect"),
++                payload.get("approval_state", "not_approved"),
++            )
++            self._send_json(200, result)
++        else:
++            self._send_json(404, {"error": "not found"})
++
++
++def run_daemon(host: str = "127.0.0.1", port: int = 9001) -> int:
++    """Run the AIOS mission router as a local daemon.
++
++    Exposes read-only /health, /runtime/list and planning /skills.route,
++    /mission/plan. No auto-execution. No auto-mutation.
++    """
++    address = (host, port)
++    with socketserver.TCPServer(address, RouterHTTPHandler) as httpd:
++        print(f"AIOS mission router daemon listening on {host}:{port}", file=sys.stderr)
++        httpd.serve_forever()
++    return 0
++
++
+ def build_parser() -> argparse.ArgumentParser:
+     parser = argparse.ArgumentParser(description="AIOS mission router bridge")
+     sub = parser.add_subparsers(dest="command", required=True)
+@@ -1558,6 +1656,11 @@
+     dak.add_argument("--approval-state", default="not_approved")
+ 
+     sub.add_parser("verify.run")
++
++    daemon = sub.add_parser("daemon")
++    daemon.add_argument("--host", default="127.0.0.1")
++    daemon.add_argument("--port", type=int, default=9001)
++
+     return parser
+ 
+ 
+@@ -1628,6 +1731,8 @@
+         emit(dak_run(args.task, args.requested_action, args.approval_state))
+     elif args.command == "verify.run":
+         emit(verify_run())
++    elif args.command == "daemon":
++        return run_daemon(args.host, args.port)
+     return 0
+ 
+ 

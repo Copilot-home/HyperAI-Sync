@@ -1,0 +1,142 @@
+{
+  "generated_at": "2026-07-31T10:58:04Z",
+  "contradiction_fixes": [
+    {
+      "claimed_unqualified": 8,
+      "actual_unqualified": 8,
+      "correction": "qualified=27/35 means unqualified=8, not 8",
+      "unqualified_nodes": [
+        {
+          "id": "apo_upstream_titan_ollama",
+          "missing": [
+            "observed_runtime",
+            "role_resolved",
+            "authority_resolved",
+            "dependencies_resolved",
+            "health_probed"
+          ]
+        },
+        {
+          "id": "apo_upstream_macmini_ollama",
+          "missing": [
+            "observed_runtime",
+            "role_resolved",
+            "authority_resolved",
+            "dependencies_resolved",
+            "health_probed"
+          ]
+        },
+        {
+          "id": "openapi_tool_slack",
+          "missing": [
+            "auth:SLACK_BOT_TOKEN",
+            "auth:SLACK_TEAM_ID"
+          ]
+        },
+        {
+          "id": "openapi_tool_google_pse",
+          "missing": [
+            "auth:GOOGLE_PSE_CX"
+          ]
+        },
+        {
+          "id": "mcp_docker_mcp",
+          "missing": [
+            "observed_runtime",
+            "role_resolved",
+            "authority_resolved",
+            "dependencies_resolved",
+            "health_probed"
+          ]
+        },
+        {
+          "id": "hyperai_product_runtime",
+          "missing": [
+            "observed_runtime",
+            "role_resolved",
+            "authority_resolved",
+            "dependencies_resolved",
+            "health_probed"
+          ]
+        },
+        {
+          "id": "federation_orchestrator",
+          "missing": [
+            "observed_runtime",
+            "role_resolved",
+            "authority_resolved",
+            "dependencies_resolved",
+            "health_probed"
+          ]
+        },
+        {
+          "id": "memory_writer",
+          "missing": [
+            "observed_runtime",
+            "role_resolved",
+            "authority_resolved",
+            "dependencies_resolved",
+            "health_probed"
+          ]
+        }
+      ]
+    }
+  ],
+  "verdict": "FULL_CAUSAL_MISSION_VERIFIED",
+  "verdict_note": "single mission executed AUTH -> ROUTING -> EXECUTION -> VERIFICATION -> MEMORY; time-probe and auth-mission remain separate causal paths",
+  "time_probe_mission": {
+    "mission_id": "living-2026-07-30T23:29:27Z",
+    "AUTH_lane_causal": false,
+    "next_action_selection": {
+      "selection_policy": "DETERMINISTIC_POLICY_SELECTED_NEXT_ACTION",
+      "note": "not SELF_DIRECTED_SCORING; no score function yet",
+      "candidate_set": [
+        "apo_upstream_titan_ollama",
+        "apo_upstream_macmini_ollama",
+        "openapi_tool_slack",
+        "openapi_tool_google_pse",
+        "mcp_docker_mcp",
+        "hyperai_product_runtime",
+        "federation_orchestrator",
+        "memory_writer"
+      ],
+      "ordering_rule": "auth gaps first, then unobserved, then first remaining unqualified",
+      "selected_candidate": "resolve auth for openapi_tool_slack: auth:SLACK_BOT_TOKEN, auth:SLACK_TEAM_ID",
+      "rejected_candidates": [
+        "apo_upstream_titan_ollama",
+        "apo_upstream_macmini_ollama",
+        "openapi_tool_google_pse",
+        "mcp_docker_mcp",
+        "hyperai_product_runtime",
+        "federation_orchestrator",
+        "memory_writer"
+      ],
+      "external_consent_required": true,
+      "expected_unlock_count": null
+    }
+  },
+  "auth_mission": {
+    "mission_id": "auth-mission-2026-07-31T00:00:27Z",
+    "AUTH_lane_causal": true,
+    "lease_id": "lease-6b4643e876a64e4d",
+    "lease_status": true,
+    "proxy_status": 200,
+    "models_preview": [
+      "gpt-4-0613",
+      "gpt-4",
+      "gpt-3.5-turbo"
+    ],
+    "verified": true
+  },
+  "full_causal_mission": {
+    "mission_id": "full-causal-2026-07-31T105619.773412Z",
+    "AUTH_lane_causal": true,
+    "ROUTING_lane_causal": true,
+    "EXECUTION_lane_causal": true,
+    "VERIFICATION_lane_causal": true,
+    "MEMORY_lane_causal": true,
+    "lease_id": "lease-d8034453081145d3",
+    "utc_value": "2026-07-31T10:56:19.858857+00:00",
+    "edge_count": 6
+  }
+}

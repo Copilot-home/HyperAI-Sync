@@ -1,0 +1,97 @@
+{
+  "execution_id": "apo-capability-mission-trace-summarizer-20260731",
+  "timestamp": "2026-07-31T14:48:00Z",
+  "mission_text": "Summarize a sentence about APO Gateway using the local summarizer",
+  "value_verified": true,
+  "stages": [
+    {
+      "stage": "ROUTE",
+      "actor": "APO Gateway",
+      "surface": "http://127.0.0.1:9011/tools/summarizer/summarize/text",
+      "request": {
+        "method": "POST",
+        "headers": {"Content-Type": "application/json"},
+        "body": {
+          "text": "APO Gateway is a unified router for OpenAPI servers running on localhost. It proxies requests from port 9011 to 14 specialized servers on ports 8901-8914.",
+          "model": "qwen2.5:1.5b",
+          "max_length": 50
+        }
+      },
+      "response": {
+        "status_code": 200,
+        "body": {
+          "status": "success",
+          "summary": "APO Gateway is a router that forwards requests from localhost:9011 to four dedicated servers listening on ports 8901 through 8914."
+        }
+      },
+      "transport": "HTTP_OPENAPI",
+      "auth": "none",
+      "state": "ROUTABLE_AND_RESPONSIVE"
+    },
+    {
+      "stage": "EXECUTE",
+      "actor": "summarizer OpenAPI server",
+      "surface": "http://127.0.0.1:8909",
+      "runtime_type": "host uvicorn",
+      "docker": false,
+      "downstream": "Ollama :11434 /v1/chat/completions",
+      "model_used": "qwen2.5:1.5b",
+      "state": "EXECUTED"
+    },
+    {
+      "stage": "VERIFY",
+      "actor": "Devin",
+      "surface": "semantic sanity",
+      "verification": "summary preserves subject (APO Gateway) and action (routes/proxies) but undercounts 'four' instead of 'fourteen'; output is coherent and returned in <2s",
+      "state": "VALUE_VERIFIED_WITH_DEGRADATION"
+    }
+  ],
+  "network_edges": [
+    {
+      "source_actor": "Devin",
+      "destination_actor": "APO Gateway",
+      "transport": "HTTP",
+      "address": "127.0.0.1:9011",
+      "request_type": "POST /tools/summarizer/summarize/text",
+      "response_type": "summary JSON",
+      "auth": "none",
+      "verified": true,
+      "value": "text summary"
+    },
+    {
+      "source_actor": "APO Gateway",
+      "destination_actor": "summarizer OpenAPI server",
+      "transport": "HTTP",
+      "address": "127.0.0.1:8909",
+      "request_type": "POST /summarize/text",
+      "response_type": "summary JSON",
+      "auth": "none",
+      "verified": true,
+      "value": "summary"
+    },
+    {
+      "source_actor": "summarizer OpenAPI server",
+      "destination_actor": "Ollama",
+      "transport": "HTTP",
+      "address": "127.0.0.1:11434/v1/chat/completions",
+      "request_type": "chat completion",
+      "response_type": "generated summary",
+      "auth": "none (local Ollama)",
+      "verified": true,
+      "value": "inference"
+    }
+  ],
+  "consumed_capabilities": ["summarizer", "ollama"],
+  "produced_value": "verified APO summarizer route and Ollama model runtime integration",
+  "gross_value_formula": {
+    "VerifiedMissionValue": "text summarization",
+    "CoordinationGain": "connects APO, OpenAPI server, Ollama model runtime",
+    "DependencyUnlock": "proves LANGUAGE capability via local model",
+    "FutureComputeSaved": "can summarize inputs without external API",
+    "RuntimeCost": "Ollama qwen2.5:1.5b load + inference",
+    "NetworkFriction": "low",
+    "HumanMicromanagement": "none"
+  },
+  "verdict": "VALUE_VERIFIED_WITH_DEGRADATION",
+  "verdict_reasoning": "Summarizer executed end-to-end through APO, produced coherent output, and demonstrated the Ollama-backed LANGUAGE axis. Output has a minor numerical inaccuracy (four vs fourteen) but the capability network edge is proven."
+}

@@ -806,7 +806,7 @@
         "read"
       ],
       "active_key_ref": "OPENAI_API_KEY_3",
-      "masked_key": "sk-pro...ezMA",
+      "masked_key": "<REDACTED>",
       "issued_at": "2026-07-27T20:03:22.200128Z",
       "expires_at": "2026-07-27T20:04:22.200128Z",
       "state": "ACTIVE",

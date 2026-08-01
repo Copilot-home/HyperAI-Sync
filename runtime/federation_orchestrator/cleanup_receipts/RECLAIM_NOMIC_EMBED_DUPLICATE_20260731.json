@@ -1,0 +1,28 @@
+{
+  "execution_id": "reclaim_nomic_embed_duplicate_20260731",
+  "timestamp": "2026-07-31T14:35:00Z",
+  "principle": "Local root applies evidence gates: duplicate, identical, unused, lineage preserved, low risk.",
+  "candidate_id": "reclaim_001",
+  "description": "Delete old LM Studio llmster 0.0.19-2 bundle of nomic-embed-text-v1.5 because three other identical copies exist",
+  "deleted_path": "/Users/andy/.lmstudio/llmster/0.0.19-2/.bundle/bin/bundled-models/nomic-ai/nomic-embed-text-v1.5-GGUF",
+  "retained_paths": [
+    "/Users/andy/.lmstudio/.internal/bundled-models/nomic-ai/nomic-embed-text-v1.5-GGUF",
+    "/Users/andy/.lmstudio/apps/bionic/.internal/bundled-models/nomic-ai/nomic-embed-text-v1.5-GGUF",
+    "/Users/andy/.lmstudio/llmster/0.0.20-1/.bundle/bin/bundled-models/nomic-ai/nomic-embed-text-v1.5-GGUF"
+  ],
+  "sha256_verified": "d4e388894e09cf3816e8b0896d81d265b55e7a9fff9ab03fe8bf4ef5e11295ac",
+  "all_copies_identical": true,
+  "no_open_file_handles": true,
+  "space_reclaimed_mb": 80.2,
+  "space_reclaimed_gb": 0.08,
+  "gate_decision": "LOCAL_ROOT_APPROVED",
+  "gate_evidence": {
+    "classification": "REBUILDABLE_DUPLICATE",
+    "dependency": "no active process references 0.0.19-2",
+    "lineage": "same model version, same file hash, newer copies exist",
+    "value": "frees 80 MB without losing capability",
+    "risk": "low (3 identical copies remain)",
+    "future_cost": "if needed, can be redownloaded or copied from another bundle"
+  },
+  "verdict": "SUCCESS"
+}

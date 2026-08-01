@@ -1,0 +1,105 @@
+{
+  "policy_name": "DOCKER_WORKLOAD_ADMISSION_CONTROL",
+  "effective_at": "2026-07-31T12:55:00Z",
+  "authority": "Root_local",
+  "creator_boundary_triggers": [
+    "delete Docker image with unverified dependency",
+    "delete Docker volume",
+    "delete container with project state",
+    "compact or migrate Docker.raw",
+    "factory reset Docker Desktop",
+    "disable Kubernetes with data loss"
+  ],
+  "storage_state": {
+    "data_volume_capacity_percent": 96,
+    "data_volume_free_gb": 19,
+    "hard_safety_floor_gb": 2.7,
+    "provisional_operational_target_gb": 5,
+    "safe_margin_required_gb": 2.7,
+    "margin_deficit_gb": 0,
+    "provisional_target_status": "REACHED",
+    "verdict": "SAFE_OPERATING_MARGIN_CREATED"
+  },
+  "admission_gates": {
+    "BASE_ENGINE": {
+      "status": "GRANTED",
+      "evidence": ["socket 200", "docker version 0", "docker ps 0", "0 new I/O errors"]
+    },
+    "BUILDKIT_EXECUTION": {
+      "status": "GRANTED",
+      "evidence": ["docker build -t buildkit-test:local passed", "container run passed", "image cleanup passed"]
+    },
+    "DOCKER_MCP": {
+      "status": "DENIED",
+      "reason": "No MCP listener on port 8811; must be qualified in a separate mission"
+    },
+    "HEAVY_WORKLOAD": {
+      "status": "DENIED",
+      "reason": "data volume still at 96% (> 90% pressure floor); provisional safe margin reached but no headroom for heavy write bursts"
+    },
+    "KUBERNETES": {
+      "status": "DENIED",
+      "reason": "Kubernetes is running inside Docker Desktop; admission requires data volume < 90% and explicit workload value"
+    },
+    "AI_INFERENCE_SANDBOX": {
+      "status": "DENIED",
+      "reason": "data volume at 96%; high write and memory footprint not safe until storage pressure reduced below 90%"
+    }
+  },
+  "admission_rules": [
+    {
+      "stage": 0,
+      "name": "BASE_ENGINE",
+      "requirements": ["daemon responsive", "socket stable"],
+      "max_concurrent": null
+    },
+    {
+      "stage": 1,
+      "name": "BUILDKIT_EXECUTION",
+      "requirements": ["BASE_ENGINE", "safe margin for build context"],
+      "max_concurrent": 1
+    },
+    {
+      "stage": 2,
+      "name": "DOCKER_MCP",
+      "requirements": ["BASE_ENGINE", "reversible action", "independent verification", "memory delta"],
+      "max_concurrent": 1
+    },
+    {
+      "stage": 3,
+      "name": "APO_VERIFIED_WORKLOADS",
+      "requirements": ["BASE_ENGINE", "BUILDKIT_EXECUTION", "declared value", "owner", "rollback path"],
+      "max_concurrent": null
+    },
+    {
+      "stage": 4,
+      "name": "OPTIONAL_EXTENSIONS",
+      "requirements": ["BASE_ENGINE", "extension value proven", "owner"],
+      "max_concurrent": null
+    },
+    {
+      "stage": 5,
+      "name": "KUBERNETES_INFERENCE_SANDBOX",
+      "requirements": ["safe margin >= 5 GB", "BASE_ENGINE", "BUILDKIT_EXECUTION", "owner", "value"],
+      "max_concurrent": null
+    }
+  ],
+  "workload_budget_schema": {
+    "capability": "required",
+    "expected_value": "required",
+    "disk_budget_mb": "required",
+    "memory_budget_mb": "required",
+    "write_rate_budget_mbps": "recommended",
+    "dependencies": "required",
+    "stop_condition": "required",
+    "rollback_path": "required"
+  },
+  "auto_quiesce_conditions": {
+    "data_volume_free_below_gb": 1.0,
+    "docker_raw_physical_growth_rate_mbps": 100,
+    "vm_io_error_detected": true,
+    "new_container_churn_per_minute": 20
+  },
+  "final_verdict": "DOCKER_SUSTAINABILITY_PARTIAL",
+  "verdict_reasoning": "Safe operating margin created (19 GiB > 2.7 GiB hard floor and 5 GiB provisional target). Base engine and BuildKit execution verified. Failure fossil reconciled. Data volume still at 96% (> 90% pressure floor), so heavy workload and Kubernetes admission remain denied. Storage pressure reduced but not eliminated."
+}

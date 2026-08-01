@@ -1,0 +1,251 @@
+{
+  "generated_at": "2026-07-31T00:00:27Z",
+  "time_probe_mission": {
+    "mission_id": "living-2026-07-30T23:29:27Z",
+    "AUTH_lane_causal": false,
+    "AUTH_lane_note": "time tool does not require broker token; broker status was observed but not on execution path",
+    "stages": [
+      {
+        "stage": "WAKE",
+        "actor": "aios_living_loop",
+        "authority": "MEMORY",
+        "inputs": [
+          "project_state.json"
+        ],
+        "outputs": [
+          "waked state"
+        ]
+      },
+      {
+        "stage": "OBSERVE",
+        "actor": "aios_living_loop",
+        "authority": "SELF-OBSERVATION",
+        "inputs": [
+          "runtime_discovery_snapshot.json",
+          "broker /status",
+          "apo_gateway /health"
+        ],
+        "outputs": [
+          "qualified count",
+          "health booleans"
+        ]
+      },
+      {
+        "stage": "IDENTIFY NEED",
+        "actor": "aios_living_loop",
+        "authority": "ROOT/PLANNING",
+        "inputs": [
+          "unqualified node list"
+        ],
+        "outputs": [
+          "need statement"
+        ]
+      },
+      {
+        "stage": "SELECT_PURPOSE",
+        "actor": "aios_living_loop",
+        "authority": "ROOT/PLANNING",
+        "inputs": [
+          "need"
+        ],
+        "outputs": [
+          "purpose: time-probe"
+        ]
+      },
+      {
+        "stage": "ASSIGN MISSIONS",
+        "actor": "aios_living_loop",
+        "authority": "ROOT/PLANNING",
+        "inputs": [
+          "purpose"
+        ],
+        "outputs": [
+          "lane missions"
+        ]
+      },
+      {
+        "stage": "EXCHANGE INFORMATION",
+        "actor": "aios_living_loop",
+        "authority": "RUNTIME BUS",
+        "inputs": [
+          "lane states"
+        ],
+        "outputs": [
+          "published states"
+        ]
+      },
+      {
+        "stage": "EXECUTE",
+        "actor": "apo_gateway \u2192 openapi_tool_time",
+        "authority": "ROUTING + EXECUTION",
+        "inputs": [
+          "GET /tools/time/get_current_utc_time"
+        ],
+        "outputs": [
+          "HTTP 200, body"
+        ]
+      },
+      {
+        "stage": "VERIFY",
+        "actor": "aios_living_loop",
+        "authority": "VERIFICATION",
+        "inputs": [
+          "HTTP response"
+        ],
+        "outputs": [
+          "verified: true/false"
+        ]
+      },
+      {
+        "stage": "LEARN",
+        "actor": "aios_living_loop",
+        "authority": "RUNTIME LEARNING",
+        "inputs": [
+          "verification result"
+        ],
+        "outputs": [
+          "learning booleans"
+        ]
+      },
+      {
+        "stage": "UPDATE MEMORY",
+        "actor": "aios_living_loop",
+        "authority": "MEMORY",
+        "inputs": [
+          "state, journal, todo"
+        ],
+        "outputs": [
+          "written files"
+        ]
+      },
+      {
+        "stage": "SELECT_NEXT_ACTION",
+        "actor": "aios_living_loop",
+        "authority": "ROOT/PLANNING",
+        "inputs": [
+          "learning + unqualified list"
+        ],
+        "outputs": [
+          "next_action"
+        ]
+      }
+    ]
+  },
+  "auth_mission": {
+    "mission_id": "auth-mission-2026-07-30T23:58:55Z",
+    "AUTH_lane_causal": true,
+    "AUTH_lane_note": "lease issued by broker and consumed by /proxy/openai/models; auth is on causal path",
+    "stages": [
+      {
+        "stage": "WAKE",
+        "actor": "aios_auth_mission",
+        "authority": "MEMORY",
+        "inputs": [
+          "project_state.json"
+        ],
+        "outputs": [
+          "waked state"
+        ]
+      },
+      {
+        "stage": "OBSERVE",
+        "actor": "aios_auth_mission",
+        "authority": "SELF-OBSERVATION",
+        "inputs": [
+          "broker /status"
+        ],
+        "outputs": [
+          "broker healthy"
+        ]
+      },
+      {
+        "stage": "SELECT_PURPOSE",
+        "actor": "aios_auth_mission",
+        "authority": "ROOT/PLANNING",
+        "inputs": [
+          "need"
+        ],
+        "outputs": [
+          "purpose: verify broker lease"
+        ]
+      },
+      {
+        "stage": "ASSIGN MISSIONS",
+        "actor": "aios_auth_mission",
+        "authority": "ROOT/PLANNING",
+        "inputs": [
+          "purpose"
+        ],
+        "outputs": [
+          "AUTH/EXECUTE/VERIFY/MEMORY"
+        ]
+      },
+      {
+        "stage": "AUTH",
+        "actor": "credential_broker",
+        "authority": "AUTH",
+        "inputs": [
+          "POST /capability"
+        ],
+        "outputs": [
+          "lease_id"
+        ]
+      },
+      {
+        "stage": "EXECUTE",
+        "actor": "credential_broker \u2192 OpenAI",
+        "authority": "AUTH + EXECUTION",
+        "inputs": [
+          "X-Lease-Id"
+        ],
+        "outputs": [
+          "OpenAI /models response"
+        ]
+      },
+      {
+        "stage": "VERIFY",
+        "actor": "aios_auth_mission",
+        "authority": "VERIFICATION",
+        "inputs": [
+          "HTTP 200 + model list"
+        ],
+        "outputs": [
+          "verified: true"
+        ]
+      },
+      {
+        "stage": "LEARN",
+        "actor": "aios_auth_mission",
+        "authority": "RUNTIME LEARNING",
+        "inputs": [
+          "result"
+        ],
+        "outputs": [
+          "auth_lane_issuing_lease, lease_token_usable, openai_access"
+        ]
+      },
+      {
+        "stage": "UPDATE MEMORY",
+        "actor": "aios_auth_mission",
+        "authority": "MEMORY",
+        "inputs": [
+          "auth_mission_execution_log.json"
+        ],
+        "outputs": [
+          "written log"
+        ]
+      },
+      {
+        "stage": "SELECT_NEXT_ACTION",
+        "actor": "aios_auth_mission",
+        "authority": "ROOT/PLANNING",
+        "inputs": [
+          "result"
+        ],
+        "outputs": [
+          "next action"
+        ]
+      }
+    ]
+  }
+}

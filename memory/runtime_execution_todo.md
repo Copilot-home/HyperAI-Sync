@@ -28,3 +28,30 @@
 - mission: telemetry router attached to HyperAI runtime surface
 - target_surface: HyperAI-Sync/runtime/telemetry_router
 - next: consume reports from HyperAI runtime path
+
+## AIOS Runtime Queue Item - 2026-07-30T23:17:13.134971+00:00
+- mission: Capability dispatch and auth topology stabilization
+- target_surface: local_runtime
+- completed: OpenAI credential rotation, host topology fix, 7 dispatch artifacts generated, qualifier 27/35
+- next: Execute Slack + Google PSE auth recovery; qualify/suppress mcp_docker_mcp and 16 unknown processes; clean stale product runtime and memory_writer
+
+## AIOS Runtime Queue Item - 2026-07-30T23:28:43Z
+- mission: execute a closed-loop time-probe through routing, execution, and verification lanes
+- verified: False
+- next: resolve auth for openapi_tool_slack: auth:SLACK_BOT_TOKEN, auth:SLACK_TEAM_ID
+
+## AIOS Runtime Queue Item - 2026-07-30T23:29:04Z
+- mission: execute a closed-loop time-probe through routing, execution, and verification lanes
+- verified: True
+- next: resolve auth for openapi_tool_slack: auth:SLACK_BOT_TOKEN, auth:SLACK_TEAM_ID
+
+## AIOS Runtime Queue Item - 2026-07-30T23:29:30Z
+- mission: execute a closed-loop time-probe through routing, execution, and verification lanes
+- verified: True
+- next: resolve auth for openapi_tool_slack: auth:SLACK_BOT_TOKEN, auth:SLACK_TEAM_ID
+
+## AIOS Runtime Queue Item - 2026-07-31T00:01:03.567196+00:00
+- mission: Lineage convergence for living cycle completed
+- target_surface: local_runtime
+- completed: F0→F1→F2→F3 convergence artifacts, contradiction fixes, AUTH lane proven causal via auth-mission
+- next: Implement scheduler/keepalive; run single mission with all lanes causal; resolve Slack/Google PSE auth; classify 7 unqualified nodes

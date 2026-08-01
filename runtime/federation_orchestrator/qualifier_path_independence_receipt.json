@@ -1,0 +1,95 @@
+{
+  "generated_at": "2026-07-31T10:42:29.398033Z",
+  "verdict": "PATH_INDEPENDENT",
+  "qualifier": "/Users/andy/HyperAI-Sync/tools/aios_runtime_qualification.py",
+  "runtime_root_env_used": "/Users/andy/HyperAI-Sync",
+  "test_runs": [
+    {
+      "cwd": "/",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "le \"/Users/andy/HyperAI-Sync/tools/aios_runtime_qualification.py\", line 1244\n    global HYPER, RUNTIME, OUT\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: name 'HYPER' is used prior to global declaration",
+      "started_at": "2026-07-31T10:42:29.256032+00:00",
+      "completed_at": "2026-07-31T10:42:29.305458+00:00",
+      "qualified": "27/35",
+      "unqualified_ids": [
+        "apo_upstream_macmini_ollama",
+        "apo_upstream_titan_ollama",
+        "federation_orchestrator",
+        "hyperai_product_runtime",
+        "mcp_docker_mcp",
+        "memory_writer",
+        "openapi_tool_google_pse",
+        "openapi_tool_slack"
+      ],
+      "unqualified_count": 8,
+      "binding_plan_hash": "cb29c32e9cf150f212d1cb12c8fdb980ce0917c67bb1185f79255c749c46f5d7"
+    },
+    {
+      "cwd": "/Users/andy",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "le \"/Users/andy/HyperAI-Sync/tools/aios_runtime_qualification.py\", line 1244\n    global HYPER, RUNTIME, OUT\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: name 'HYPER' is used prior to global declaration",
+      "started_at": "2026-07-31T10:42:29.306299+00:00",
+      "completed_at": "2026-07-31T10:42:29.351883+00:00",
+      "qualified": "27/35",
+      "unqualified_ids": [
+        "apo_upstream_macmini_ollama",
+        "apo_upstream_titan_ollama",
+        "federation_orchestrator",
+        "hyperai_product_runtime",
+        "mcp_docker_mcp",
+        "memory_writer",
+        "openapi_tool_google_pse",
+        "openapi_tool_slack"
+      ],
+      "unqualified_count": 8,
+      "binding_plan_hash": "cb29c32e9cf150f212d1cb12c8fdb980ce0917c67bb1185f79255c749c46f5d7"
+    },
+    {
+      "cwd": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "le \"/Users/andy/HyperAI-Sync/tools/aios_runtime_qualification.py\", line 1244\n    global HYPER, RUNTIME, OUT\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: name 'HYPER' is used prior to global declaration",
+      "started_at": "2026-07-31T10:42:29.352340+00:00",
+      "completed_at": "2026-07-31T10:42:29.397630+00:00",
+      "qualified": "27/35",
+      "unqualified_ids": [
+        "apo_upstream_macmini_ollama",
+        "apo_upstream_titan_ollama",
+        "federation_orchestrator",
+        "hyperai_product_runtime",
+        "mcp_docker_mcp",
+        "memory_writer",
+        "openapi_tool_google_pse",
+        "openapi_tool_slack"
+      ],
+      "unqualified_count": 8,
+      "binding_plan_hash": "cb29c32e9cf150f212d1cb12c8fdb980ce0917c67bb1185f79255c749c46f5d7"
+    }
+  ],
+  "comparison": {
+    "all_qualified_same": true,
+    "all_unqualified_same": true,
+    "observed_qualified_values": [
+      "27/35"
+    ],
+    "divergence": [
+      {
+        "cwd": "/",
+        "qualified": "27/35",
+        "unqualified_count": 8
+      },
+      {
+        "cwd": "/Users/andy",
+        "qualified": "27/35",
+        "unqualified_count": 8
+      },
+      {
+        "cwd": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator",
+        "qualified": "27/35",
+        "unqualified_count": 8
+      }
+    ]
+  }
+}

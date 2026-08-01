@@ -1,0 +1,92 @@
+{
+  "schema_version": "2026-04-18.aios-connector-canon-map.v1",
+  "created_at": "2026-07-30T16:47:00+07:00",
+  "purpose": "Map canonical connector roles to runtime surfaces, canons, and LLM bindings so each connector reasons and acts within its declared role.",
+  "connectors": {
+    "conductor": {
+      "surface_id": "federation_orchestrator",
+      "canon_binding": [
+        "memory/AIOS_AUTONOMOUS_OODA_WORKFLOW.md",
+        "memory/AIOS_EXECUTION_SEMANTICS_CANON.md",
+        "memory/AIOS_INVARIANTS.md"
+      ],
+      "llm_binding": {
+        "engine": "ollama_local_models",
+        "model_alias": "apo/apple",
+        "reasoning_scope": "mission_routing_and_surface_selection"
+      }
+    },
+    "mcp_hub": {
+      "surface_id": "docker_mcp_gateway",
+      "canon_binding": [
+        "memory/AIOS_CONNECTOR_CANON_MAP.md",
+        "memory/APΩ_CONNECTOR_CONTROL_PLANE_CANON.md"
+      ],
+      "llm_binding": null
+    },
+    "github": {
+      "surface_id": "git_sync_transport",
+      "canon_binding": [
+        "memory/AIOS_TWO_MACHINE_GIT_SYNC_STANDARDIZATION_PLAN.md"
+      ],
+      "llm_binding": null
+    },
+    "llm_engine": {
+      "surface_id": "ollama_local_models",
+      "canon_binding": [
+        "memory/AIOS_MODEL_NATIVE_RUNTIME_CANON.md",
+        "memory/OLLAMA_LINEAGE_VERIFY_20260729.md"
+      ],
+      "llm_binding": {
+        "engine": "ollama_local_models",
+        "model_alias": "apo/apple",
+        "reasoning_scope": "local_inference"
+      }
+    },
+    "runtime_observer": {
+      "surface_id": "verification_truth",
+      "canon_binding": [
+        "memory/AIOS_DRIFT_VERIFICATION_PROTOCOL.md",
+        "memory/AIOS_INVARIANTS.md"
+      ],
+      "llm_binding": {
+        "engine": "ollama_local_models",
+        "model_alias": "apo/apple",
+        "reasoning_scope": "drift_detection"
+      }
+    },
+    "tech_debt_auditor": {
+      "surface_id": "codex_operator_runtime",
+      "canon_binding": [
+        "memory/AIOS_LOCAL_CODEX_OPERATOR_RUNTIME.md",
+        "memory/AIOS_DRIFT_VERIFICATION_PROTOCOL.md"
+      ],
+      "llm_binding": {
+        "engine": "ollama_local_models",
+        "model_alias": "apo/apple",
+        "reasoning_scope": "code_and_runtime_audit"
+      }
+    },
+    "telegram": {
+      "surface_id": "telegram_treasury_economy",
+      "canon_binding": [
+        "memory/AIOS_TELEGRAM_MASTERY_SKILL.md",
+        "memory/AIOS_LOCAL_LLM_TELEGRAM_COORDINATION.md",
+        "memory/AIOS_ECONOMY_OPERATING_BRIEF.md"
+      ],
+      "llm_binding": {
+        "engine": "ollama_local_models",
+        "model_alias": "apo/apple",
+        "reasoning_scope": "relay_and_deal_artifact"
+      }
+    },
+    "web_agent": {
+      "surface_id": "mcp_connectors",
+      "canon_binding": [
+        "memory/AIOS_CONNECTOR_CANON_MAP.md",
+        "memory/APΩ_CONNECTOR_CONTROL_PLANE_CANON.md"
+      ],
+      "llm_binding": null
+    }
+  }
+}

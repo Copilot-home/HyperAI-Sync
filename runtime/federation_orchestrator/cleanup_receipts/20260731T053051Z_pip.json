@@ -1,0 +1,22 @@
+{
+  "schema_version": "2026-07-27.cleanup-receipt.v1",
+  "system": "pip",
+  "started_at": "2026-07-31T05:30:32Z",
+  "completed_at": "2026-07-31T05:30:51Z",
+  "dry_run": false,
+  "include_recyclable": false,
+  "disk_before_mb": 5796,
+  "disk_after_mb": 5795,
+  "freed_mb": 0,
+  "action_count": 1,
+  "error_count": 0,
+  "actions": [
+    {
+      "command": "pip cache purge",
+      "rc": 0,
+      "stdout": "Files removed: 0 (0 bytes)\nDirectories removed: 0\n",
+      "stderr": "WARNING: No matching packages\n"
+    }
+  ],
+  "status": "ok"
+}

@@ -1,0 +1,648 @@
+--- /Users/andy/HyperAI-Sync/rollback/gate1_20260730/runtime_registry.json.bak	2026-07-31 05:01:15
++++ /Users/andy/workbench/aios_runtime_orchestrator/runtime_registry.json	2026-07-31 05:02:40
+@@ -1,44 +1,617 @@
+ {
+-  "version": 1,
++  "version": 2,
+   "nodes": [
+     {
+-      "id": "ngrok_docker_extension",
+-      "kind": "tunnel_runtime",
+-      "role": "PRIMARY_TUNNEL_RUNTIME",
+-      "owner": "docker_desktop_extension",
++      "id": "apo_upstream_macbook_ollama",
++      "kind": "provider",
++      "role": "inference_upstreams",
++      "owner": "apo_gateway",
+       "surfaces": {
+-        "docker_image": "ngrok/ngrok-docker-extension:1.0.0",
+-        "docker_container_name": "ngrok_ngrok-docker-extension-desktop-extension-service",
+-        "container_state_path": "/data/state.json",
+-        "container_backend_socket": "/run/guest-services/backend.sock",
+-        "dashboard_endpoint": "lindsay-southbound-jimmie.ngrok-free.dev"
++        "name": "macbook_ollama",
++        "base_url": "http://127.0.0.1:11434/v1",
++        "env_key": null
+       },
+       "defaults": {
+-        "tunnel_target_host": "127.0.0.1",
+-        "tunnel_target_port": 8080
++        "port": 11434,
++        "host": "127.0.0.1"
+       },
+       "gates": {
+-        "allow_expose_ports": [8080],
+-        "sensitive_ports_require_explicit_gate": [5000, 9999, 11434, 11435]
++        "requires_env_key": false
+       }
+     },
+     {
+-      "id": "ngrok_host_cli",
+-      "kind": "tunnel_runtime",
+-      "role": "DIAGNOSTIC_FALLBACK",
+-      "owner": "host",
++      "id": "apo_upstream_titan_ollama",
++      "kind": "provider",
++      "role": "inference_upstreams",
++      "owner": "apo_gateway",
+       "surfaces": {
+-        "binary": "/opt/homebrew/bin/ngrok",
+-        "config_path": "/Users/andy/Library/Application Support/ngrok/ngrok.yml"
++        "name": "titan_ollama",
++        "base_url": "http://192.168.3.84:11434/v1",
++        "env_key": null
+       },
+       "defaults": {
+-        "tunnel_target_host": "127.0.0.1",
+-        "tunnel_target_port": 8080
++        "port": 11434,
++        "host": "192.168.3.84"
+       },
+-      "notes": [
+-        "Host CLI cannot stop/list sessions without a real NGROK_API_KEY; authtoken is not an API key."
+-      ]
++      "gates": {
++        "requires_env_key": false
++      }
++    },
++    {
++      "id": "apo_upstream_macmini_ollama",
++      "kind": "provider",
++      "role": "inference_upstreams",
++      "owner": "apo_gateway",
++      "surfaces": {
++        "name": "macmini_ollama",
++        "base_url": "http://192.168.3.28:11434/v1",
++        "env_key": null
++      },
++      "defaults": {
++        "port": 11434,
++        "host": "192.168.3.28"
++      },
++      "gates": {
++        "requires_env_key": false
++      }
++    },
++    {
++      "id": "apo_upstream_lmstudio",
++      "kind": "provider",
++      "role": "inference_upstreams",
++      "owner": "apo_gateway",
++      "surfaces": {
++        "name": "lmstudio",
++        "base_url": "http://127.0.0.1:1235/v1",
++        "env_key": "LMSTUDIO_API_KEY"
++      },
++      "defaults": {
++        "port": 1235,
++        "host": "127.0.0.1"
++      },
++      "gates": {
++        "requires_env_key": true
++      }
++    },
++    {
++      "id": "openapi_tool_time",
++      "kind": "openapi_tool_server",
++      "role": "tool_surface",
++      "owner": "apo_gateway",
++      "surfaces": {
++        "name": "time",
++        "base_url": "http://127.0.0.1:8901",
++        "health_path": "/health"
++      },
++      "defaults": {
++        "port": 8901,
++        "host": "127.0.0.1"
++      },
++      "gates": {
++        "requires_credentials": false
++      }
++    },
++    {
++      "id": "openapi_tool_weather",
++      "kind": "openapi_tool_server",
++      "role": "tool_surface",
++      "owner": "apo_gateway",
++      "surfaces": {
++        "name": "weather",
++        "base_url": "http://127.0.0.1:8902",
++        "health_path": "/health"
++      },
++      "defaults": {
++        "port": 8902,
++        "host": "127.0.0.1"
++      },
++      "gates": {
++        "requires_credentials": false
++      }
++    },
++    {
++      "id": "openapi_tool_filesystem",
++      "kind": "openapi_tool_server",
++      "role": "tool_surface",
++      "owner": "apo_gateway",
++      "surfaces": {
++        "name": "filesystem",
++        "base_url": "http://127.0.0.1:8903",
++        "health_path": "/health"
++      },
++      "defaults": {
++        "port": 8903,
++        "host": "127.0.0.1"
++      },
++      "gates": {
++        "requires_credentials": false
++      }
++    },
++    {
++      "id": "openapi_tool_git",
++      "kind": "openapi_tool_server",
++      "role": "tool_surface",
++      "owner": "apo_gateway",
++      "surfaces": {
++        "name": "git",
++        "base_url": "http://127.0.0.1:8904",
++        "health_path": "/health"
++      },
++      "defaults": {
++        "port": 8904,
++        "host": "127.0.0.1"
++      },
++      "gates": {
++        "requires_credentials": false
++      }
++    },
++    {
++      "id": "openapi_tool_memory",
++      "kind": "openapi_tool_server",
++      "role": "tool_surface",
++      "owner": "apo_gateway",
++      "surfaces": {
++        "name": "memory",
++        "base_url": "http://127.0.0.1:8905",
++        "health_path": "/health"
++      },
++      "defaults": {
++        "port": 8905,
++        "host": "127.0.0.1"
++      },
++      "gates": {
++        "requires_credentials": false
++      }
++    },
++    {
++      "id": "openapi_tool_quotes",
++      "kind": "openapi_tool_server",
++      "role": "tool_surface",
++      "owner": "apo_gateway",
++      "surfaces": {
++        "name": "quotes",
++        "base_url": "http://127.0.0.1:8906",
++        "health_path": "/health"
++      },
++      "defaults": {
++        "port": 8906,
++        "host": "127.0.0.1"
++      },
++      "gates": {
++        "requires_credentials": false
++      }
++    },
++    {
++      "id": "openapi_tool_flashcards",
++      "kind": "openapi_tool_server",
++      "role": "tool_surface",
++      "owner": "apo_gateway",
++      "surfaces": {
++        "name": "flashcards",
++        "base_url": "http://127.0.0.1:8907",
++        "health_path": "/health"
++      },
++      "defaults": {
++        "port": 8907,
++        "host": "127.0.0.1"
++      },
++      "gates": {
++        "requires_credentials": false
++      }
++    },
++    {
++      "id": "openapi_tool_time_ui",
++      "kind": "openapi_tool_server",
++      "role": "tool_surface",
++      "owner": "apo_gateway",
++      "surfaces": {
++        "name": "time_ui",
++        "base_url": "http://127.0.0.1:8908",
++        "health_path": "/health"
++      },
++      "defaults": {
++        "port": 8908,
++        "host": "127.0.0.1"
++      },
++      "gates": {
++        "requires_credentials": false
++      }
++    },
++    {
++      "id": "openapi_tool_summarizer",
++      "kind": "openapi_tool_server",
++      "role": "tool_surface",
++      "owner": "apo_gateway",
++      "surfaces": {
++        "name": "summarizer",
++        "base_url": "http://127.0.0.1:8909",
++        "health_path": "/health"
++      },
++      "defaults": {
++        "port": 8909,
++        "host": "127.0.0.1"
++      },
++      "gates": {
++        "requires_credentials": false
++      }
++    },
++    {
++      "id": "openapi_tool_bitcoin",
++      "kind": "openapi_tool_server",
++      "role": "tool_surface",
++      "owner": "apo_gateway",
++      "surfaces": {
++        "name": "bitcoin",
++        "base_url": "http://127.0.0.1:8910",
++        "health_path": "/health"
++      },
++      "defaults": {
++        "port": 8910,
++        "host": "127.0.0.1"
++      },
++      "gates": {
++        "requires_credentials": false
++      }
++    },
++    {
++      "id": "openapi_tool_sql",
++      "kind": "openapi_tool_server",
++      "role": "tool_surface",
++      "owner": "apo_gateway",
++      "surfaces": {
++        "name": "sql",
++        "base_url": "http://127.0.0.1:8911",
++        "health_path": "/health"
++      },
++      "defaults": {
++        "port": 8911,
++        "host": "127.0.0.1"
++      },
++      "gates": {
++        "requires_credentials": true
++      }
++    },
++    {
++      "id": "openapi_tool_external_rag",
++      "kind": "openapi_tool_server",
++      "role": "tool_surface",
++      "owner": "apo_gateway",
++      "surfaces": {
++        "name": "external_rag",
++        "base_url": "http://127.0.0.1:8912",
++        "health_path": "/health"
++      },
++      "defaults": {
++        "port": 8912,
++        "host": "127.0.0.1"
++      },
++      "gates": {
++        "requires_credentials": true
++      }
++    },
++    {
++      "id": "openapi_tool_slack",
++      "kind": "openapi_tool_server",
++      "role": "tool_surface",
++      "owner": "apo_gateway",
++      "surfaces": {
++        "name": "slack",
++        "base_url": "http://127.0.0.1:8913",
++        "health_path": "/health"
++      },
++      "defaults": {
++        "port": 8913,
++        "host": "127.0.0.1"
++      },
++      "gates": {
++        "requires_credentials": true
++      }
++    },
++    {
++      "id": "openapi_tool_google_pse",
++      "kind": "openapi_tool_server",
++      "role": "tool_surface",
++      "owner": "apo_gateway",
++      "surfaces": {
++        "name": "google_pse",
++        "base_url": "http://127.0.0.1:8914",
++        "health_path": "/health"
++      },
++      "defaults": {
++        "port": 8914,
++        "host": "127.0.0.1"
++      },
++      "gates": {
++        "requires_credentials": true
++      }
++    },
++    {
++      "id": "mcp_pieces",
++      "kind": "mcp_server",
++      "role": "mcp_bridge",
++      "owner": "apo_gateway",
++      "surfaces": {
++        "name": "pieces",
++        "base_url": "http://127.0.0.1:39300",
++        "sse_path": "/sse"
++      },
++      "defaults": {
++        "port": 39300,
++        "host": "127.0.0.1"
++      },
++      "gates": {
++        "requires_local_transport": true
++      }
++    },
++    {
++      "id": "mcp_docker_mcp",
++      "kind": "mcp_server",
++      "role": "mcp_bridge",
++      "owner": "apo_gateway",
++      "surfaces": {
++        "name": "docker_mcp",
++        "base_url": "http://127.0.0.1:8811",
++        "sse_path": "/sse"
++      },
++      "defaults": {
++        "port": 8811,
++        "host": "127.0.0.1"
++      },
++      "gates": {
++        "requires_local_transport": true
++      }
++    },
++    {
++      "id": "credential_broker",
++      "kind": "http_service",
++      "role": "credential_authority",
++      "owner": "hyperai_credentials",
++      "surfaces": {
++        "base_url": "http://127.0.0.1:8765",
++        "health_path": "/status",
++        "proxy_path": "/proxy"
++      },
++      "defaults": {
++        "port": 8765,
++        "host": "127.0.0.1"
++      },
++      "gates": {
++        "secret_lease_required": true
++      }
++    },
++    {
++      "id": "apo_gateway",
++      "kind": "http_service",
++      "role": "model_tool_gateway",
++      "owner": "hyperai",
++      "surfaces": {
++        "base_url": "http://127.0.0.1:9011",
++        "health_path": "/health",
++        "models_path": "/v1/models",
++        "tools_path": "/tools"
++      },
++      "defaults": {
++        "port": 9011,
++        "host": "127.0.0.1"
++      },
++      "gates": {
++        "openai_compatible_shape": true
++      }
++    },
++    {
++      "id": "agent_os_dashboard",
++      "kind": "http_service",
++      "role": "runtime_cockpit",
++      "owner": "hyperai",
++      "surfaces": {
++        "base_url": "http://127.0.0.1:8777"
++      },
++      "defaults": {
++        "port": 8777,
++        "host": "127.0.0.1"
++      },
++      "gates": {
++        "internal_dashboard": true
++      }
++    },
++    {
++      "id": "lmstudio_bionic_api",
++      "kind": "openai_compatible_server",
++      "role": "local_inference",
++      "owner": "lmstudio",
++      "surfaces": {
++        "base_url": "http://127.0.0.1:1235/v1",
++        "models_path": "/v1/models",
++        "token_required": true
++      },
++      "defaults": {
++        "port": 1235,
++        "host": "127.0.0.1"
++      },
++      "gates": {
++        "requires_bearer_token_env": "LMSTUDIO_API_KEY",
++        "embedding_worker_missing": true
++      }
++    },
++    {
++      "id": "bionic_app",
++      "kind": "desktop_electron_runtime",
++      "role": "ai_agent_surface",
++      "owner": "element_labs",
++      "surfaces": {
++        "base_url": "http://127.0.0.1:52993"
++      },
++      "defaults": {
++        "port": 52993,
++        "host": "127.0.0.1"
++      },
++      "gates": {
++        "app_bundle": "/Applications/Bionic.app"
++      }
++    },
++    {
++      "id": "ollama_macbook",
++      "kind": "model_substrate",
++      "role": "local_inference",
++      "owner": "ollama",
++      "surfaces": {
++        "base_url": "http://127.0.0.1:11434",
++        "api_path": "/api"
++      },
++      "defaults": {
++        "port": 11434,
++        "host": "127.0.0.1"
++      },
++      "gates": {
++        "local_only": true
++      }
++    },
++    {
++      "id": "pieces_mcp",
++      "kind": "mcp_server",
++      "role": "mcp_bridge",
++      "owner": "pieces",
++      "surfaces": {
++        "base_url": "http://127.0.0.1:39300",
++        "sse_path": "/mcp/sse"
++      },
++      "defaults": {
++        "port": 39300,
++        "host": "127.0.0.1"
++      },
++      "gates": {
++        "token_in_path": true
++      }
++    },
++    {
++      "id": "finalai",
++      "kind": "http_service",
++      "role": "inference_runtime",
++      "owner": "finalai",
++      "surfaces": {
++        "base_url": "http://127.0.0.1:50520",
++        "models_path": "/v1/models"
++      },
++      "defaults": {
++        "port": 50520,
++        "host": "127.0.0.1"
++      },
++      "gates": {
++        "backend_reachability_unknown": true
++      }
++    },
++    {
++      "id": "redis_local",
++      "kind": "cache_store",
++      "role": "memory_cache",
++      "owner": "redis",
++      "surfaces": {
++        "base_url": "redis://127.0.0.1:6379"
++      },
++      "defaults": {
++        "port": 6379,
++        "host": "127.0.0.1"
++      },
++      "gates": {
++        "no_password_local": true
++      }
++    },
++    {
++      "id": "hyperai_product_runtime",
++      "kind": "app_runtime",
++      "role": "product_shell",
++      "owner": "hyperai-user-control-system",
++      "surfaces": {
++        "base_url": "http://127.0.0.1:5000",
++        "frontend_url": "http://127.0.0.1:4173",
++        "backend_file": "backend/server.js"
++      },
++      "defaults": {
++        "port": 5000,
++        "host": "127.0.0.1",
++        "frontend_port": 4173
++      },
++      "gates": {
++        "stale_port_occupied_by_controlce": true,
++        "windows_only_canonical": true
++      }
++    },
++    {
++      "id": "docker_desktop",
++      "kind": "container_fabric",
++      "role": "infrastructure_substrate",
++      "owner": "docker",
++      "surfaces": {
++        "socket_path": "/var/run/docker.sock",
++        "daemon_port": 12434
++      },
++      "defaults": {
++        "port": 12434,
++        "host": "127.0.0.1"
++      },
++      "gates": {
++        "degraded_after_disk_pressure": true
++      }
++    },
++    {
++      "id": "federation_orchestrator",
++      "kind": "registry",
++      "role": "mission_router",
++      "owner": "aios",
++      "surfaces": {
++        "registry_path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator",
++        "ooda_contract": "ooda_control_contract.json"
++      },
++      "defaults": {
++        "source_of_truth": "aios_ecosystem_runtime_registry.json"
++      },
++      "gates": {
++        "read_only_when_product_stale": true
++      }
++    },
++    {
++      "id": "memory_writer",
++      "kind": "service_runtime",
++      "role": "evidence_recorder",
++      "owner": "aios",
++      "surfaces": {
++        "script": "tools/update_memory.py",
++        "state": "memory/project_state.json",
++        "journal": "memory/work_journal.md"
++      },
++      "gates": {
++        "single_writer": true
++      }
++    },
++    {
++      "id": "codex_operator_runtime",
++      "kind": "desktop_operator_runtime",
++      "role": "worker_surface",
++      "owner": "codex",
++      "surfaces": {
++        "codex_config": "/Users/andy/.codex/config.toml",
++        "mcp_config": "/Users/andy/HyperAI-Sync/.vscode/mcp.json"
++      },
++      "gates": {
++        "not_mission_root_by_default": true
++      }
++    },
++    {
++      "id": "aios_mission_router",
++      "kind": "service_runtime",
++      "role": "local_root",
++      "owner": "aios",
++      "surfaces": {
++        "cli_path": "/Users/andy/workbench/aios_runtime_orchestrator/aios_mission_router.py",
++        "mcp_server_path": "/Users/andy/workbench/aios_runtime_orchestrator/mcp_server.py"
++      },
++      "defaults": {
++        "daemon_port": 9001,
++        "host": "127.0.0.1"
++      },
++      "gates": {
++        "shell_fallback_blocked_until_allowed": true
++      }
+     }
+   ]
+-}
+-
++}
+\ No newline at end of file

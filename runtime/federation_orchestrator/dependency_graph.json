@@ -1,0 +1,1642 @@
+{
+  "audited_at": "2026-07-31T10:41:01.869044+00:00",
+  "nodes": [
+    {
+      "id": "apo_upstream_macbook_ollama",
+      "type": "registry_surface",
+      "pids": [
+        796,
+        831,
+        864
+      ]
+    },
+    {
+      "id": "apo_upstream_titan_ollama",
+      "type": "registry_surface",
+      "pids": []
+    },
+    {
+      "id": "apo_upstream_macmini_ollama",
+      "type": "registry_surface",
+      "pids": []
+    },
+    {
+      "id": "apo_upstream_lmstudio",
+      "type": "registry_surface",
+      "pids": [
+        3852,
+        8954,
+        51016,
+        51072,
+        51110,
+        52858
+      ]
+    },
+    {
+      "id": "openapi_tool_time",
+      "type": "registry_surface",
+      "pids": [
+        39718
+      ]
+    },
+    {
+      "id": "openapi_tool_weather",
+      "type": "registry_surface",
+      "pids": [
+        39719
+      ]
+    },
+    {
+      "id": "openapi_tool_filesystem",
+      "type": "registry_surface",
+      "pids": [
+        39720
+      ]
+    },
+    {
+      "id": "openapi_tool_git",
+      "type": "registry_surface",
+      "pids": [
+        39721
+      ]
+    },
+    {
+      "id": "openapi_tool_memory",
+      "type": "registry_surface",
+      "pids": [
+        39722
+      ]
+    },
+    {
+      "id": "openapi_tool_quotes",
+      "type": "registry_surface",
+      "pids": [
+        11490,
+        11491
+      ]
+    },
+    {
+      "id": "openapi_tool_flashcards",
+      "type": "registry_surface",
+      "pids": [
+        11511,
+        11512
+      ]
+    },
+    {
+      "id": "openapi_tool_time_ui",
+      "type": "registry_surface",
+      "pids": [
+        11536,
+        11537
+      ]
+    },
+    {
+      "id": "openapi_tool_summarizer",
+      "type": "registry_surface",
+      "pids": [
+        11978,
+        11979
+      ]
+    },
+    {
+      "id": "openapi_tool_bitcoin",
+      "type": "registry_surface",
+      "pids": [
+        12223,
+        12224
+      ]
+    },
+    {
+      "id": "openapi_tool_sql",
+      "type": "registry_surface",
+      "pids": [
+        15562,
+        15563
+      ]
+    },
+    {
+      "id": "openapi_tool_external_rag",
+      "type": "registry_surface",
+      "pids": [
+        28463,
+        28465,
+        28475
+      ]
+    },
+    {
+      "id": "openapi_tool_slack",
+      "type": "registry_surface",
+      "pids": [
+        24403,
+        24404,
+        24405
+      ]
+    },
+    {
+      "id": "openapi_tool_google_pse",
+      "type": "registry_surface",
+      "pids": [
+        24403,
+        24404,
+        24407
+      ]
+    },
+    {
+      "id": "mcp_pieces",
+      "type": "registry_surface",
+      "pids": [
+        18272,
+        19359
+      ]
+    },
+    {
+      "id": "mcp_docker_mcp",
+      "type": "registry_surface",
+      "pids": []
+    },
+    {
+      "id": "credential_broker",
+      "type": "registry_surface",
+      "pids": [
+        10344,
+        10357
+      ]
+    },
+    {
+      "id": "apo_gateway",
+      "type": "registry_surface",
+      "pids": [
+        24641,
+        24643
+      ]
+    },
+    {
+      "id": "agent_os_dashboard",
+      "type": "registry_surface",
+      "pids": [
+        29817,
+        29819
+      ]
+    },
+    {
+      "id": "lmstudio_bionic_api",
+      "type": "registry_surface",
+      "pids": [
+        3852,
+        8954,
+        37293,
+        51004,
+        51007,
+        51010,
+        51011,
+        51016,
+        51072,
+        51110,
+        52858
+      ]
+    },
+    {
+      "id": "bionic_app",
+      "type": "registry_surface",
+      "pids": [
+        51004,
+        51007,
+        51010,
+        51011,
+        51016,
+        51072,
+        52858
+      ]
+    },
+    {
+      "id": "ollama_macbook",
+      "type": "registry_surface",
+      "pids": [
+        796,
+        831,
+        864
+      ]
+    },
+    {
+      "id": "pieces_mcp",
+      "type": "registry_surface",
+      "pids": [
+        18272,
+        19359
+      ]
+    },
+    {
+      "id": "finalai",
+      "type": "registry_surface",
+      "pids": [
+        809
+      ]
+    },
+    {
+      "id": "redis_local",
+      "type": "registry_surface",
+      "pids": [
+        787,
+        809,
+        2540,
+        10064
+      ]
+    },
+    {
+      "id": "hyperai_product_runtime",
+      "type": "registry_surface",
+      "pids": []
+    },
+    {
+      "id": "docker_desktop",
+      "type": "registry_surface",
+      "pids": [
+        37164,
+        37180,
+        37186,
+        37193,
+        37199,
+        37265,
+        37293
+      ]
+    },
+    {
+      "id": "federation_orchestrator",
+      "type": "registry_surface",
+      "pids": []
+    },
+    {
+      "id": "memory_writer",
+      "type": "registry_surface",
+      "pids": []
+    },
+    {
+      "id": "codex_operator_runtime",
+      "type": "registry_surface",
+      "pids": [
+        72140
+      ]
+    },
+    {
+      "id": "aios_mission_router",
+      "type": "registry_surface",
+      "pids": [
+        63375
+      ]
+    },
+    {
+      "id": "pid_323",
+      "type": "discovered_process",
+      "pids": [
+        323
+      ]
+    },
+    {
+      "id": "pid_526",
+      "type": "discovered_process",
+      "pids": [
+        526
+      ]
+    },
+    {
+      "id": "pid_2617",
+      "type": "discovered_process",
+      "pids": [
+        2617
+      ]
+    },
+    {
+      "id": "pid_2700",
+      "type": "discovered_process",
+      "pids": [
+        2700
+      ]
+    },
+    {
+      "id": "pid_2707",
+      "type": "discovered_process",
+      "pids": [
+        2707
+      ]
+    },
+    {
+      "id": "pid_2708",
+      "type": "discovered_process",
+      "pids": [
+        2708
+      ]
+    },
+    {
+      "id": "pid_2779",
+      "type": "discovered_process",
+      "pids": [
+        2779
+      ]
+    },
+    {
+      "id": "pid_3557",
+      "type": "discovered_process",
+      "pids": [
+        3557
+      ]
+    },
+    {
+      "id": "pid_3612",
+      "type": "discovered_process",
+      "pids": [
+        3612
+      ]
+    },
+    {
+      "id": "pid_4812",
+      "type": "discovered_process",
+      "pids": [
+        4812
+      ]
+    },
+    {
+      "id": "pid_4813",
+      "type": "discovered_process",
+      "pids": [
+        4813
+      ]
+    },
+    {
+      "id": "pid_9100",
+      "type": "discovered_process",
+      "pids": [
+        9100
+      ]
+    },
+    {
+      "id": "pid_9153",
+      "type": "discovered_process",
+      "pids": [
+        9153
+      ]
+    },
+    {
+      "id": "pid_10069",
+      "type": "discovered_process",
+      "pids": [
+        10069
+      ]
+    },
+    {
+      "id": "pid_10079",
+      "type": "discovered_process",
+      "pids": [
+        10079
+      ]
+    },
+    {
+      "id": "pid_10177",
+      "type": "discovered_process",
+      "pids": [
+        10177
+      ]
+    },
+    {
+      "id": "pid_10195",
+      "type": "discovered_process",
+      "pids": [
+        10195
+      ]
+    },
+    {
+      "id": "pid_10207",
+      "type": "discovered_process",
+      "pids": [
+        10207
+      ]
+    },
+    {
+      "id": "pid_10407",
+      "type": "discovered_process",
+      "pids": [
+        10407
+      ]
+    },
+    {
+      "id": "pid_37050",
+      "type": "discovered_process",
+      "pids": [
+        37050
+      ]
+    },
+    {
+      "id": "pid_37054",
+      "type": "discovered_process",
+      "pids": [
+        37054
+      ]
+    },
+    {
+      "id": "pid_37055",
+      "type": "discovered_process",
+      "pids": [
+        37055
+      ]
+    },
+    {
+      "id": "pid_37163",
+      "type": "discovered_process",
+      "pids": [
+        37163
+      ]
+    },
+    {
+      "id": "pid_1",
+      "type": "discovered_process",
+      "pids": [
+        1
+      ]
+    },
+    {
+      "id": "pid_640",
+      "type": "discovered_process",
+      "pids": [
+        640
+      ]
+    },
+    {
+      "id": "pid_1155",
+      "type": "discovered_process",
+      "pids": [
+        1155
+      ]
+    },
+    {
+      "id": "pid_1169",
+      "type": "discovered_process",
+      "pids": [
+        1169
+      ]
+    },
+    {
+      "id": "pid_2156",
+      "type": "discovered_process",
+      "pids": [
+        2156
+      ]
+    },
+    {
+      "id": "pid_2183",
+      "type": "discovered_process",
+      "pids": [
+        2183
+      ]
+    },
+    {
+      "id": "pid_2206",
+      "type": "discovered_process",
+      "pids": [
+        2206
+      ]
+    },
+    {
+      "id": "pid_2359",
+      "type": "discovered_process",
+      "pids": [
+        2359
+      ]
+    },
+    {
+      "id": "pid_2582",
+      "type": "discovered_process",
+      "pids": [
+        2582
+      ]
+    },
+    {
+      "id": "pid_2691",
+      "type": "discovered_process",
+      "pids": [
+        2691
+      ]
+    },
+    {
+      "id": "pid_3642",
+      "type": "discovered_process",
+      "pids": [
+        3642
+      ]
+    },
+    {
+      "id": "pid_3704",
+      "type": "discovered_process",
+      "pids": [
+        3704
+      ]
+    },
+    {
+      "id": "pid_4594",
+      "type": "discovered_process",
+      "pids": [
+        4594
+      ]
+    },
+    {
+      "id": "pid_10078",
+      "type": "discovered_process",
+      "pids": [
+        10078
+      ]
+    },
+    {
+      "id": "pid_35803",
+      "type": "discovered_process",
+      "pids": [
+        35803
+      ]
+    },
+    {
+      "id": "pid_37183",
+      "type": "discovered_process",
+      "pids": [
+        37183
+      ]
+    },
+    {
+      "id": "pid_97740",
+      "type": "discovered_process",
+      "pids": [
+        97740
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "pid_1",
+      "target": "pid_323",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_526",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "com.apple.controlcenter",
+      "target": "pid_526",
+      "type": "CONTROL"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_787",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "homebrew.mxcl.redis",
+      "target": "pid_787",
+      "type": "CONTROL"
+    },
+    {
+      "source": "pid_787",
+      "target": "/opt/homebrew",
+      "type": "DEPENDS_FILE"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_796",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "com.ollama.ollama",
+      "target": "pid_796",
+      "type": "CONTROL"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_809",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "com.hyperai.finalai-openai-proxy",
+      "target": "pid_809",
+      "type": "CONTROL"
+    },
+    {
+      "source": "pid_796",
+      "target": "pid_831",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_831",
+      "target": "/Users/andy/.ollama",
+      "type": "DEPENDS_FILE"
+    },
+    {
+      "source": "pid_831",
+      "target": "pid_864",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_864",
+      "target": "/Users/andy/.ollama",
+      "type": "DEPENDS_FILE"
+    },
+    {
+      "source": "pid_2359",
+      "target": "pid_2540",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_2540",
+      "target": "pid_2617",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_2582",
+      "target": "pid_2700",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_2582",
+      "target": "pid_2707",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_2582",
+      "target": "pid_2708",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_2183",
+      "target": "pid_2779",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_2183",
+      "target": "pid_3557",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_2183",
+      "target": "pid_3612",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_1169",
+      "target": "pid_3852",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_4812",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_4813",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_1169",
+      "target": "pid_8954",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_9100",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "com.apple.intelligencecontextd",
+      "target": "pid_9100",
+      "type": "CONTROL"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_9153",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "com.hyperai.os.master",
+      "target": "pid_9153",
+      "type": "CONTROL"
+    },
+    {
+      "source": "pid_10064",
+      "target": "pid_10069",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_10064",
+      "target": "pid_10079",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_10069",
+      "target": "pid_10177",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_10078",
+      "target": "pid_10195",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_10079",
+      "target": "pid_10207",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_10064",
+      "target": "pid_10344",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_10344",
+      "target": "pid_10357",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_10064",
+      "target": "pid_10407",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_11490",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_11490",
+      "target": "pid_11491",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_11491",
+      "target": "/Users/andy/.apo",
+      "type": "DEPENDS_FILE"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_11511",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_11511",
+      "target": "pid_11512",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_11512",
+      "target": "/Users/andy/.apo",
+      "type": "DEPENDS_FILE"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_11536",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_11536",
+      "target": "pid_11537",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_11537",
+      "target": "/Users/andy/.apo",
+      "type": "DEPENDS_FILE"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_11978",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_11978",
+      "target": "pid_11979",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_11979",
+      "target": "/Users/andy/.apo",
+      "type": "DEPENDS_FILE"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_12223",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_12223",
+      "target": "pid_12224",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_12224",
+      "target": "/Users/andy/.apo",
+      "type": "DEPENDS_FILE"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_15562",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_15562",
+      "target": "pid_15563",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_15563",
+      "target": "/Users/andy/.apo",
+      "type": "DEPENDS_FILE"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_18272",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "application.com.pieces.os.266536926.266536932",
+      "target": "pid_18272",
+      "type": "CONTROL"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_19359",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "application.com.pieces.x.266547326.266547332",
+      "target": "pid_19359",
+      "type": "CONTROL"
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_19359",
+      "target": "pid_18272",
+      "type": "CONNECTS_TO",
+      "port": 39300
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_24403",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_24404",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_24403",
+      "target": "pid_24405",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_24405",
+      "target": "/Users/andy/.apo",
+      "type": "DEPENDS_FILE"
+    },
+    {
+      "source": "pid_24404",
+      "target": "pid_24407",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_24407",
+      "target": "/Users/andy/.apo",
+      "type": "DEPENDS_FILE"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_24641",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_24641",
+      "target": "pid_24643",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_24643",
+      "target": "/Users/andy/.apo",
+      "type": "DEPENDS_FILE"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_28463",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_28463",
+      "target": "pid_28465",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_28465",
+      "target": "/Users/andy/.apo",
+      "type": "DEPENDS_FILE"
+    },
+    {
+      "source": "pid_28465",
+      "target": "pid_28475",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_28475",
+      "target": "/Users/andy/.apo",
+      "type": "DEPENDS_FILE"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_29817",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_29817",
+      "target": "pid_29819",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_29819",
+      "target": "/Users/andy/.apo",
+      "type": "DEPENDS_FILE"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_37050",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "application.com.docker.docker.265852103.265852269",
+      "target": "pid_37050",
+      "type": "CONTROL"
+    },
+    {
+      "source": "pid_37050",
+      "target": "pid_37054",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_37054",
+      "target": "/Users/andy/.config",
+      "type": "DEPENDS_FILE"
+    },
+    {
+      "source": "pid_37054",
+      "target": "/Users/andy/HyperAI-Sync",
+      "type": "DEPENDS_FILE"
+    },
+    {
+      "source": "pid_37050",
+      "target": "pid_37055",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_37055",
+      "target": "pid_37163",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_37163",
+      "target": "/Users/andy/.config",
+      "type": "DEPENDS_FILE"
+    },
+    {
+      "source": "pid_37163",
+      "target": "/Users/andy/HyperAI-Sync",
+      "type": "DEPENDS_FILE"
+    },
+    {
+      "source": "pid_37054",
+      "target": "pid_37164",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_37055",
+      "target": "pid_37180",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_37180",
+      "target": "pid_37054",
+      "type": "CONNECTS_TO",
+      "port": 62056
+    },
+    {
+      "source": "pid_37180",
+      "target": "pid_37054",
+      "type": "CONNECTS_TO",
+      "port": 62056
+    },
+    {
+      "source": "pid_37180",
+      "target": "pid_37054",
+      "type": "CONNECTS_TO",
+      "port": 62056
+    },
+    {
+      "source": "pid_37180",
+      "target": "pid_37054",
+      "type": "CONNECTS_TO",
+      "port": 62056
+    },
+    {
+      "source": "pid_37180",
+      "target": "pid_37054",
+      "type": "CONNECTS_TO",
+      "port": 62056
+    },
+    {
+      "source": "pid_37180",
+      "target": "pid_37054",
+      "type": "CONNECTS_TO",
+      "port": 62056
+    },
+    {
+      "source": "pid_37180",
+      "target": "pid_37054",
+      "type": "CONNECTS_TO",
+      "port": 62056
+    },
+    {
+      "source": "pid_37180",
+      "target": "pid_37054",
+      "type": "CONNECTS_TO",
+      "port": 62056
+    },
+    {
+      "source": "pid_37180",
+      "target": "pid_37054",
+      "type": "CONNECTS_TO",
+      "port": 62056
+    },
+    {
+      "source": "pid_37180",
+      "target": "pid_37054",
+      "type": "CONNECTS_TO",
+      "port": 62056
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_37186",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_37180",
+      "target": "pid_37193",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_37180",
+      "target": "pid_37199",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_37180",
+      "target": "pid_37265",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_37055",
+      "target": "pid_37293",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_39718",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_39719",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_39720",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_39721",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_39722",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_51004",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "application.ai.elementlabs.bionic.263663980.263663988",
+      "target": "pid_51004",
+      "type": "CONTROL"
+    },
+    {
+      "source": "pid_51004",
+      "target": "/Applications/Bionic.app",
+      "type": "DEPENDS_FILE"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_51007",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_51004",
+      "target": "pid_51010",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_51010",
+      "target": "/Applications/Bionic.app",
+      "type": "DEPENDS_FILE"
+    },
+    {
+      "source": "pid_51004",
+      "target": "pid_51011",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_51011",
+      "target": "/Applications/Bionic.app",
+      "type": "DEPENDS_FILE"
+    },
+    {
+      "source": "pid_51004",
+      "target": "pid_51016",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_51004",
+      "target": "pid_51072",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_51072",
+      "target": "/Applications/Bionic.app",
+      "type": "DEPENDS_FILE"
+    },
+    {
+      "source": "pid_51004",
+      "target": "pid_51110",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_51004",
+      "target": "pid_52858",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_63375",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "com.aios.mission.router",
+      "target": "pid_63375",
+      "type": "CONTROL"
+    },
+    {
+      "source": "pid_35803",
+      "target": "pid_72140",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_640",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "com.apple.Spotlight",
+      "target": "pid_640",
+      "type": "CONTROL"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_1155",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "application.com.google.antigravity-ide.245493370.245493938",
+      "target": "pid_1155",
+      "type": "CONTROL"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_1169",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "application.ai.elementlabs.lmstudio.72073127.255764902",
+      "target": "pid_1169",
+      "type": "CONTROL"
+    },
+    {
+      "source": "pid_1169",
+      "target": "/Applications/LM Studio.app",
+      "type": "DEPENDS_FILE"
+    },
+    {
+      "source": "pid_1169",
+      "target": "pid_2156",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_2156",
+      "target": "/Applications/LM Studio.app",
+      "type": "DEPENDS_FILE"
+    },
+    {
+      "source": "pid_1155",
+      "target": "pid_2183",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_2183",
+      "target": "pid_2582",
+      "type": "CONNECTS_TO",
+      "port": 51213
+    },
+    {
+      "source": "pid_2183",
+      "target": "pid_2582",
+      "type": "CONNECTS_TO",
+      "port": 51172
+    },
+    {
+      "source": "pid_1155",
+      "target": "pid_2206",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_1155",
+      "target": "pid_2359",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_2183",
+      "target": "pid_2582",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_2582",
+      "target": "pid_2183",
+      "type": "CONNECTS_TO",
+      "port": 51161
+    },
+    {
+      "source": "pid_2582",
+      "target": "pid_2183",
+      "type": "CONNECTS_TO",
+      "port": 51161
+    },
+    {
+      "source": "pid_2582",
+      "target": "pid_2183",
+      "type": "CONNECTS_TO",
+      "port": 51161
+    },
+    {
+      "source": "pid_2582",
+      "target": "pid_2183",
+      "type": "CONNECTS_TO",
+      "port": 51161
+    },
+    {
+      "source": "pid_795",
+      "target": "pid_2691",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_3612",
+      "target": "pid_3642",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_1169",
+      "target": "pid_3704",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_3704",
+      "target": "/Applications/LM Studio.app",
+      "type": "DEPENDS_FILE"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_4594",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "homebrew.mxcl.code-server",
+      "target": "pid_4594",
+      "type": "CONTROL"
+    },
+    {
+      "source": "pid_4594",
+      "target": "/opt/homebrew",
+      "type": "DEPENDS_FILE"
+    },
+    {
+      "source": "pid_965",
+      "target": "pid_10064",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_10064",
+      "target": "pid_10078",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_35803",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "application.com.google.Chrome.136056369.260873503",
+      "target": "pid_35803",
+      "type": "CONTROL"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_37183",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "pid_1",
+      "target": "pid_97740",
+      "type": "PARENT_OF"
+    },
+    {
+      "source": "com.apple.siriactionsd",
+      "target": "pid_97740",
+      "type": "CONTROL"
+    },
+    {
+      "source": "apo_gateway",
+      "target": "openapi_tool_time",
+      "type": "ROUTE",
+      "port": 8901
+    },
+    {
+      "source": "apo_gateway",
+      "target": "openapi_tool_weather",
+      "type": "ROUTE",
+      "port": 8902
+    },
+    {
+      "source": "apo_gateway",
+      "target": "openapi_tool_filesystem",
+      "type": "ROUTE",
+      "port": 8903
+    },
+    {
+      "source": "apo_gateway",
+      "target": "openapi_tool_git",
+      "type": "ROUTE",
+      "port": 8904
+    },
+    {
+      "source": "apo_gateway",
+      "target": "openapi_tool_memory",
+      "type": "ROUTE",
+      "port": 8905
+    },
+    {
+      "source": "apo_gateway",
+      "target": "openapi_tool_quotes",
+      "type": "ROUTE",
+      "port": 8906
+    },
+    {
+      "source": "apo_gateway",
+      "target": "openapi_tool_flashcards",
+      "type": "ROUTE",
+      "port": 8907
+    },
+    {
+      "source": "apo_gateway",
+      "target": "openapi_tool_time_ui",
+      "type": "ROUTE",
+      "port": 8908
+    },
+    {
+      "source": "apo_gateway",
+      "target": "openapi_tool_summarizer",
+      "type": "ROUTE",
+      "port": 8909
+    },
+    {
+      "source": "apo_gateway",
+      "target": "openapi_tool_bitcoin",
+      "type": "ROUTE",
+      "port": 8910
+    },
+    {
+      "source": "apo_gateway",
+      "target": "openapi_tool_sql",
+      "type": "ROUTE",
+      "port": 8911
+    },
+    {
+      "source": "apo_gateway",
+      "target": "openapi_tool_external_rag",
+      "type": "ROUTE",
+      "port": 8912
+    },
+    {
+      "source": "apo_gateway",
+      "target": "openapi_tool_slack",
+      "type": "ROUTE",
+      "port": 8913
+    },
+    {
+      "source": "apo_gateway",
+      "target": "openapi_tool_google_pse",
+      "type": "ROUTE",
+      "port": 8914
+    }
+  ]
+}

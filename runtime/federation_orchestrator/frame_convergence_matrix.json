@@ -1,0 +1,305 @@
+{
+  "generated_at": "2026-07-31T10:58:04Z",
+  "semantics": {
+    "baseline_frame": "F0",
+    "current_frame": "F3",
+    "delta_rules": [
+      "baseline UNBOUND -> NOT_COMPARABLE",
+      "both frames bound -> PRESERVED / IMPROVED / REGRESSED / CONTRADICTED",
+      "current evidence missing -> NOT_PROVEN"
+    ],
+    "lineage_conclusion": "F2->F3 local lineage is bound; full causal mission and observer guards verified; F0/F1 remain external references; F0->F1->F2->F3 convergence not proven"
+  },
+  "invariants": {
+    "multi-memory": {
+      "F0": {
+        "binding_status": "UNBOUND",
+        "state": "NOT_LOCATED",
+        "evidence": "no F0 multi-memory artifact bound"
+      },
+      "F1": {
+        "binding_status": "UNBOUND",
+        "state": "NOT_LOCATED",
+        "evidence": "no F1 multi-memory artifact bound"
+      },
+      "F2": {
+        "binding_status": "LOCAL_CONTENT_BOUND",
+        "state": "EVIDENCE_PRESENT",
+        "evidence": "project_state.json, runtime_registry, binding_plan"
+      },
+      "F3": {
+        "binding_status": "LOCAL_CONTENT_BOUND",
+        "state": "EVIDENCE_PRESENT",
+        "evidence": "project_state.json, work_journal, runtime_execution_todo, mission logs updated"
+      },
+      "baseline_binding": "UNBOUND",
+      "current_binding": "LOCAL_CONTENT_BOUND",
+      "baseline_state": "NOT_LOCATED",
+      "current_state": "EVIDENCE_PRESENT",
+      "delta_status": "NOT_COMPARABLE",
+      "comparison_basis": "F0 binding UNBOUND vs F3 binding LOCAL_CONTENT_BOUND",
+      "evidence": "project_state.json, work_journal, runtime_execution_todo, mission logs updated"
+    },
+    "multi-authority": {
+      "F0": {
+        "binding_status": "UNBOUND",
+        "state": "NOT_LOCATED",
+        "evidence": "no F0 authority artifact"
+      },
+      "F1": {
+        "binding_status": "UNBOUND",
+        "state": "NOT_LOCATED",
+        "evidence": "no F1 authority artifact"
+      },
+      "F2": {
+        "binding_status": "LOCAL_CONTENT_BOUND",
+        "state": "EVIDENCE_PRESENT",
+        "evidence": "authority_matrix.json, auth_topology.json"
+      },
+      "F3": {
+        "binding_status": "LOCAL_CONTENT_BOUND",
+        "state": "EVIDENCE_PRESENT",
+        "evidence": "mission_authority_trace.json separates Root, AUTH, EXECUTE, VERIFY, MEMORY"
+      },
+      "baseline_binding": "UNBOUND",
+      "current_binding": "LOCAL_CONTENT_BOUND",
+      "baseline_state": "NOT_LOCATED",
+      "current_state": "EVIDENCE_PRESENT",
+      "delta_status": "NOT_COMPARABLE",
+      "comparison_basis": "F0 binding UNBOUND vs F3 binding LOCAL_CONTENT_BOUND",
+      "evidence": "mission_authority_trace.json separates Root, AUTH, EXECUTE, VERIFY, MEMORY"
+    },
+    "four-state capability": {
+      "F0": {
+        "binding_status": "UNBOUND",
+        "state": "NOT_LOCATED",
+        "evidence": "no F0 four-state artifact"
+      },
+      "F1": {
+        "binding_status": "UNBOUND",
+        "state": "NOT_LOCATED",
+        "evidence": "no F1 four-state artifact"
+      },
+      "F2": {
+        "binding_status": "LOCAL_CONTENT_BOUND",
+        "state": "EVIDENCE_PRESENT",
+        "evidence": "runtime_registry state field"
+      },
+      "F3": {
+        "binding_status": "LOCAL_CONTENT_BOUND",
+        "state": "EVIDENCE_PRESENT",
+        "evidence": "capability_state_transition_matrix.json with Active/Configured/Registered/Historical + overlay"
+      },
+      "baseline_binding": "UNBOUND",
+      "current_binding": "LOCAL_CONTENT_BOUND",
+      "baseline_state": "NOT_LOCATED",
+      "current_state": "EVIDENCE_PRESENT",
+      "delta_status": "NOT_COMPARABLE",
+      "comparison_basis": "F0 binding UNBOUND vs F3 binding LOCAL_CONTENT_BOUND",
+      "evidence": "capability_state_transition_matrix.json with Active/Configured/Registered/Historical + overlay"
+    },
+    "self-observation": {
+      "F0": {
+        "binding_status": "UNBOUND",
+        "state": "NOT_LOCATED",
+        "evidence": "no F0 self-observation metrics"
+      },
+      "F1": {
+        "binding_status": "UNBOUND",
+        "state": "NOT_LOCATED",
+        "evidence": "no F1 self-observation metrics"
+      },
+      "F2": {
+        "binding_status": "LOCAL_CONTENT_BOUND",
+        "state": "EVIDENCE_PRESENT",
+        "evidence": "runtime_discovery_snapshot.json and qualifier process scan"
+      },
+      "F3": {
+        "binding_status": "LOCAL_CONTENT_BOUND",
+        "state": "EVIDENCE_PRESENT",
+        "evidence": "qualifier observed 98 processes; broker/apo health probed"
+      },
+      "baseline_binding": "UNBOUND",
+      "current_binding": "LOCAL_CONTENT_BOUND",
+      "baseline_state": "NOT_LOCATED",
+      "current_state": "EVIDENCE_PRESENT",
+      "delta_status": "NOT_COMPARABLE",
+      "comparison_basis": "F0 binding UNBOUND vs F3 binding LOCAL_CONTENT_BOUND",
+      "evidence": "qualifier observed 98 processes; broker/apo health probed"
+    },
+    "observer workload risk": {
+      "F0": {
+        "binding_status": "UNBOUND",
+        "state": "NOT_LOCATED",
+        "evidence": "no F0 observer guard"
+      },
+      "F1": {
+        "binding_status": "UNBOUND",
+        "state": "NOT_LOCATED",
+        "evidence": "no F1 observer guard"
+      },
+      "F2": {
+        "binding_status": "LOCAL_CONTENT_BOUND",
+        "state": "EVIDENCE_PRESENT",
+        "evidence": "observer_workload_guard.json created"
+      },
+      "F3": {
+        "binding_status": "POLICY_ENFORCED",
+        "state": "EVIDENCE_PRESENT",
+        "evidence": "run lock (flock), retry(3), backoff(1/2/4s), resource budgets, failure injection (broker_unreachable, invalid_lease_id)"
+      },
+      "baseline_binding": "UNBOUND",
+      "current_binding": "POLICY_ENFORCED",
+      "baseline_state": "NOT_LOCATED",
+      "current_state": "EVIDENCE_PRESENT",
+      "delta_status": "NOT_COMPARABLE",
+      "comparison_basis": "F0 binding UNBOUND vs F3 binding POLICY_ENFORCED",
+      "evidence": "run lock (flock), retry(3), backoff(1/2/4s), resource budgets, failure injection (broker_unreachable, invalid_lease_id)"
+    },
+    "policy-to-runtime propagation": {
+      "F0": {
+        "binding_status": "ENVIRONMENT_INHERITED",
+        "state": "EVIDENCE_PRESENT",
+        "evidence": "launchctl AX_* variables present"
+      },
+      "F1": {
+        "binding_status": "DOCUMENT_REFERENCE_ONLY",
+        "state": "EVIDENCE_PRESENT",
+        "evidence": "AIOS_CREATOR_JOURNEY_TRACE references invariants"
+      },
+      "F2": {
+        "binding_status": "CONFIG_LOADED",
+        "state": "EVIDENCE_PRESENT",
+        "evidence": "qualifier loads runtime_registry and APO config"
+      },
+      "F3": {
+        "binding_status": "POLICY_ENFORCED",
+        "state": "EVIDENCE_PRESENT",
+        "evidence": "APO gateway now verifies X-Lease-Id with broker before tool proxy; living loop loads APO config and registry"
+      },
+      "baseline_binding": "ENVIRONMENT_INHERITED",
+      "current_binding": "POLICY_ENFORCED",
+      "baseline_state": "EVIDENCE_PRESENT",
+      "current_state": "EVIDENCE_PRESENT",
+      "delta_status": "IMPROVED",
+      "comparison_basis": "F0 binding ENVIRONMENT_INHERITED vs F3 binding POLICY_ENFORCED",
+      "evidence": "APO gateway now verifies X-Lease-Id with broker before tool proxy; living loop loads APO config and registry"
+    },
+    "temporal-frame separation": {
+      "F0": {
+        "binding_status": "UNBOUND",
+        "state": "NOT_LOCATED",
+        "evidence": "no F0 timestamped frame artifact"
+      },
+      "F1": {
+        "binding_status": "UNBOUND",
+        "state": "NOT_LOCATED",
+        "evidence": "no F1 timestamped frame artifact"
+      },
+      "F2": {
+        "binding_status": "LOCAL_CONTENT_BOUND",
+        "state": "EVIDENCE_PRESENT",
+        "evidence": "artifact timestamps and execution hashes"
+      },
+      "F3": {
+        "binding_status": "LOCAL_CONTENT_BOUND",
+        "state": "EVIDENCE_PRESENT",
+        "evidence": "all current claims tagged with same-frame timestamps and hashes"
+      },
+      "baseline_binding": "UNBOUND",
+      "current_binding": "LOCAL_CONTENT_BOUND",
+      "baseline_state": "NOT_LOCATED",
+      "current_state": "EVIDENCE_PRESENT",
+      "delta_status": "NOT_COMPARABLE",
+      "comparison_basis": "F0 binding UNBOUND vs F3 binding LOCAL_CONTENT_BOUND",
+      "evidence": "all current claims tagged with same-frame timestamps and hashes"
+    },
+    "cache-not-current-proof": {
+      "F0": {
+        "binding_status": "UNBOUND",
+        "state": "NOT_LOCATED",
+        "evidence": "no F0 cache proof"
+      },
+      "F1": {
+        "binding_status": "UNBOUND",
+        "state": "NOT_LOCATED",
+        "evidence": "no F1 cache proof"
+      },
+      "F2": {
+        "binding_status": "LOCAL_CONTENT_BOUND",
+        "state": "EVIDENCE_PRESENT",
+        "evidence": "qualified flag separate from STANDBY_UNREACHABLE state"
+      },
+      "F3": {
+        "binding_status": "LOCAL_CONTENT_BOUND",
+        "state": "EVIDENCE_PRESENT",
+        "evidence": "qualifier_path_independence_receipt shows cwd no longer affects qualification"
+      },
+      "baseline_binding": "UNBOUND",
+      "current_binding": "LOCAL_CONTENT_BOUND",
+      "baseline_state": "NOT_LOCATED",
+      "current_state": "EVIDENCE_PRESENT",
+      "delta_status": "NOT_COMPARABLE",
+      "comparison_basis": "F0 binding UNBOUND vs F3 binding LOCAL_CONTENT_BOUND",
+      "evidence": "qualifier_path_independence_receipt shows cwd no longer affects qualification"
+    },
+    "failure fossil preservation": {
+      "F0": {
+        "binding_status": "UNBOUND",
+        "state": "NOT_LOCATED",
+        "evidence": "no F0 failure fossil artifact"
+      },
+      "F1": {
+        "binding_status": "UNBOUND",
+        "state": "NOT_LOCATED",
+        "evidence": "no F1 failure fossil artifact"
+      },
+      "F2": {
+        "binding_status": "LOCAL_CONTENT_BOUND",
+        "state": "EVIDENCE_PRESENT",
+        "evidence": "security_incident_receipt records old key, rotation, deletion"
+      },
+      "F3": {
+        "binding_status": "LOCAL_CONTENT_BOUND",
+        "state": "EVIDENCE_PRESENT",
+        "evidence": "secret_redaction_receipt removes partial credential masks; old backup shredded"
+      },
+      "baseline_binding": "UNBOUND",
+      "current_binding": "LOCAL_CONTENT_BOUND",
+      "baseline_state": "NOT_LOCATED",
+      "current_state": "EVIDENCE_PRESENT",
+      "delta_status": "NOT_COMPARABLE",
+      "comparison_basis": "F0 binding UNBOUND vs F3 binding LOCAL_CONTENT_BOUND",
+      "evidence": "secret_redaction_receipt removes partial credential masks; old backup shredded"
+    },
+    "value verification": {
+      "F0": {
+        "binding_status": "UNBOUND",
+        "state": "NOT_LOCATED",
+        "evidence": "no F0 value verification mission"
+      },
+      "F1": {
+        "binding_status": "UNBOUND",
+        "state": "NOT_LOCATED",
+        "evidence": "no F1 value verification mission"
+      },
+      "F2": {
+        "binding_status": "LOCAL_CONTENT_BOUND",
+        "state": "EVIDENCE_PRESENT",
+        "evidence": "verify_generated_artifacts.py and binding_plan"
+      },
+      "F3": {
+        "binding_status": "LOCAL_CONTENT_BOUND",
+        "state": "EVIDENCE_PRESENT",
+        "evidence": "time-probe and auth-mission verified; full causal mission AUTH->ROUTING->EXECUTION->VERIFICATION->MEMORY verified with HTTP 200 and UTC value"
+      },
+      "baseline_binding": "UNBOUND",
+      "current_binding": "LOCAL_CONTENT_BOUND",
+      "baseline_state": "NOT_LOCATED",
+      "current_state": "EVIDENCE_PRESENT",
+      "delta_status": "NOT_COMPARABLE",
+      "comparison_basis": "F0 binding UNBOUND vs F3 binding LOCAL_CONTENT_BOUND",
+      "evidence": "time-probe and auth-mission verified; full causal mission AUTH->ROUTING->EXECUTION->VERIFICATION->MEMORY verified with HTTP 200 and UTC value"
+    }
+  }
+}

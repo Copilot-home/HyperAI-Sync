@@ -1,0 +1,28 @@
+{
+  "execution_id": "docker-probe-fdede707",
+  "timestamp": "2026-07-31T13:10:27Z",
+  "host_build": "Darwin Andy-2.local 25.6.0 Darwin Kernel Version 25.6.0: Sun Jun 28 20:25:18 PDT 2026; root:xnu-12377.160.87.0.2~12/RELEASE_ARM64_T6020 arm64",
+  "macos_version": "ProductName:\t\tmacOS\nProductVersion:\t\t26.6\nBuildVersion:\t\t25G5057c",
+  "docker_version_exit": 0,
+  "docker_info_exit": 0,
+  "docker_ps_exit": 0,
+  "sock_ping": "200 0.003438",
+  "daemon_responsive": true,
+  "docker_process_count": 12,
+  "has_virtualization": true,
+  "has_backend": true,
+  "has_desktop_ui": true,
+  "mcp_http_status": "000 0.000184",
+  "docker_raw": {
+    "path": "/Users/andy/Library/Containers/com.docker.docker/Data/vms/0/data/Docker.raw",
+    "size_bytes": 494384709632,
+    "size_gb": 460.43,
+    "du_preview": "7.1G\t/Users/andy/Library/Containers/com.docker.docker/Data/vms/0/data/Docker.raw",
+    "ls_preview": "-rw-r--r--  1 andy  staff   460G Jul 31 20:10 /Users/andy/Library/Containers/com.docker.docker/Data/vms/0/data/Docker.raw",
+    "exists": true
+  },
+  "root_df": "Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on\n/dev/disk3s3s1   460Gi    15Gi   2.5Gi    86%    459k   26M    2%   /",
+  "data_df": "Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on\n/dev/disk3s1   460Gi   412Gi   2.5Gi   100%    5.4M   26M   17%   /System/Volumes/Data",
+  "home_df": "Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on\n/dev/disk3s1   460Gi   412Gi   2.5Gi   100%    5.4M   26M   17%   /System/Volumes/Data",
+  "io_error_count": 0
+}

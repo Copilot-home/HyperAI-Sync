@@ -1,0 +1,21 @@
+{
+  "incident_id": "sec-20260730231425",
+  "class": "exposed_api_key",
+  "provider": "openai",
+  "old_key_id": "key_PkJCYiZB6uUHrKmg",
+  "old_key_masked": "<REDACTED>",
+  "new_key_id": "key_TrzfkCilOwj8gKux",
+  "new_key_masked": "<REDACTED>",
+  "project_id": "proj_QeO1HsgWepb5Sz6LDyWjjcJ8",
+  "credentials_file": "/Users/andy/.config/hyperai/credentials.env",
+  "backup_file": "/Users/andy/.config/hyperai/credentials.env.bak.20260730231421",
+  "broker_restarted": true,
+  "old_key_deleted": true,
+  "timestamp": "2026-07-30T23:14:25.620805+00:00",
+  "after_hash": "01306d0a0e6338b4507da8c8be7223857af458dfff910ae2036f08f416b43051",
+  "before_hash": "4100f531652c39ec8f2e48bd8e40e0ae7439a73b1811394f613d75c2d3cf273a",
+  "rollback_path": "/Users/andy/.config/hyperai/credentials.env.bak.20260730231421",
+  "backup_shred_hash": "4100f531652c39ec8f2e48bd8e40e0ae7439a73b1811394f613d75c2d3cf273a",
+  "backup_retention": "shredded after rotation verification",
+  "updated_at": "2026-07-30T23:32:00Z"
+}

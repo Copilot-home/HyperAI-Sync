@@ -1,0 +1,136 @@
+{
+  "source": "APO Gateway /tools",
+  "timestamp": "2026-07-31T14:30:00Z",
+  "principle": "A tool is only verified if its OpenAPI spec is reachable through the APO Gateway proxy.",
+  "tools": [
+    {
+      "name": "time",
+      "base_url": "http://127.0.0.1:8901",
+      "openapi_proxy_url": "http://127.0.0.1:9011/tools/time/openapi.json",
+      "status_code": 200,
+      "title": "Secure Time Utilities API",
+      "healthy": true
+    },
+    {
+      "name": "weather",
+      "base_url": "http://127.0.0.1:8902",
+      "openapi_proxy_url": "http://127.0.0.1:9011/tools/weather/openapi.json",
+      "status_code": 200,
+      "title": "Weather API",
+      "healthy": true
+    },
+    {
+      "name": "filesystem",
+      "base_url": "http://127.0.0.1:8903",
+      "openapi_proxy_url": "http://127.0.0.1:9011/tools/filesystem/openapi.json",
+      "status_code": 200,
+      "title": "Secure Filesystem API",
+      "healthy": true
+    },
+    {
+      "name": "git",
+      "base_url": "http://127.0.0.1:8904",
+      "openapi_proxy_url": "http://127.0.0.1:9011/tools/git/openapi.json",
+      "status_code": 200,
+      "title": "Git Management API",
+      "healthy": true
+    },
+    {
+      "name": "memory",
+      "base_url": "http://127.0.0.1:8905",
+      "openapi_proxy_url": "http://127.0.0.1:9011/tools/memory/openapi.json",
+      "status_code": 200,
+      "title": "Knowledge Graph Server",
+      "healthy": true
+    },
+    {
+      "name": "quotes",
+      "base_url": "http://127.0.0.1:8906",
+      "openapi_proxy_url": "http://127.0.0.1:9011/tools/quotes/openapi.json",
+      "status_code": 200,
+      "title": "Quote Display API",
+      "healthy": true
+    },
+    {
+      "name": "flashcards",
+      "base_url": "http://127.0.0.1:8907",
+      "openapi_proxy_url": "http://127.0.0.1:9011/tools/flashcards/openapi.json",
+      "status_code": 200,
+      "title": "Simple Flashcard Display API",
+      "healthy": true
+    },
+    {
+      "name": "time_ui",
+      "base_url": "http://127.0.0.1:8908",
+      "openapi_proxy_url": "http://127.0.0.1:9011/tools/time_ui/openapi.json",
+      "status_code": 200,
+      "title": "Secure Time Utilities API",
+      "healthy": true
+    },
+    {
+      "name": "summarizer",
+      "base_url": "http://127.0.0.1:8909",
+      "openapi_proxy_url": "http://127.0.0.1:9011/tools/summarizer/openapi.json",
+      "status_code": 200,
+      "title": "Summarizing Server",
+      "healthy": true
+    },
+    {
+      "name": "bitcoin",
+      "base_url": "http://127.0.0.1:8910",
+      "openapi_proxy_url": "http://127.0.0.1:9011/tools/bitcoin/openapi.json",
+      "status_code": 200,
+      "title": "Bitcoin Price Predictor",
+      "healthy": true
+    },
+    {
+      "name": "sql",
+      "base_url": "http://127.0.0.1:8911",
+      "openapi_proxy_url": "http://127.0.0.1:9011/tools/sql/openapi.json",
+      "status_code": 200,
+      "title": "Chat with SQL API",
+      "healthy": true
+    },
+    {
+      "name": "external_rag",
+      "base_url": "http://127.0.0.1:8912",
+      "openapi_proxy_url": "http://127.0.0.1:9011/tools/external_rag/openapi.json",
+      "status_code": 200,
+      "title": "RAG Retriever API",
+      "healthy": true
+    },
+    {
+      "name": "slack",
+      "base_url": "http://127.0.0.1:8913",
+      "openapi_proxy_url": "http://127.0.0.1:9011/tools/slack/openapi.json",
+      "status_code": 200,
+      "title": "Slack API Server",
+      "healthy": true
+    },
+    {
+      "name": "google_pse",
+      "base_url": "http://127.0.0.1:8914",
+      "openapi_proxy_url": "http://127.0.0.1:9011/tools/google_pse/openapi.json",
+      "status_code": 200,
+      "title": "Google Programmable Search Engine API",
+      "healthy": true
+    }
+  ],
+  "healthy_count": 14,
+  "total": 14,
+  "credential_broker": {
+    "port": 8765,
+    "process": "tools/hyperai_credentials_service.py",
+    "cwd": "/Users/andy/HyperAI-Sync",
+    "status_endpoint": "/status",
+    "status_code": 200,
+    "active_keys": 9,
+    "unverified_keys": 7,
+    "expired_leases": 4,
+    "healthy": true
+  },
+  "lease_mechanism": "APO Gateway tools_proxy checks X-Lease-Id via credential broker at 127.0.0.1:8765/capability/{lease_id}. /status verified 200. If no X-Lease-Id, proxy proceeds. No lease test executed yet.",
+  "dormant_tools_not_in_registry": ["auth", "mcp-proxy"],
+  "verdict": "ALL_APO_TOOLS_HEALTHY_VIA_PROXY",
+  "verdict_reasoning": "All 14 tools in APO registry returned 200 OpenAPI title through the APO Gateway proxy. This confirms the registry and route layer are operational. Health/lease enforcement per tool is optional and not yet stress-tested."
+}

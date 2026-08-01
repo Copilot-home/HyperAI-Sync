@@ -1,0 +1,161 @@
+{
+  "execution_id": "docker-fossil-reconciliation-20260731",
+  "timestamp": "2026-07-31T13:08:00Z",
+  "source_directory": "/Users/andy/docker-recovery",
+  "classification_ontology": [
+    "CANONICAL_RECOVERY_POINT",
+    "UNIQUE_FAILURE_FOSSIL",
+    "REDUNDANT_RECOVERY_COPY",
+    "SUPERSEDED_ROLLBACK_IMAGE",
+    "METADATA_ONLY_REQUIRED",
+    "UNKNOWN_UNBOUND"
+  ],
+  "inventory": [
+    {
+      "path": "/Users/andy/docker-recovery/Docker.raw.master",
+      "class": "CANONICAL_RECOVERY_POINT",
+      "logical_size_bytes": 494384709632,
+      "physical_size_bytes_approx": 13107200000,
+      "stat_blocks_512": 25588288,
+      "stat_block_size_512": 512,
+      "mtime": "2026-07-29T16:17:37Z",
+      "hash_receipt_md5": "ae70898b36abe02fae35b36d56251d89",
+      "sample_verification": {
+        "first_100MB_md5": "e00296c02d9dfed42dfe43dda30c2366",
+        "last_100MB_md5": "07f850eea955f5419e26c1017ad10c5c"
+      },
+      "value_assessment": {
+        "V_forensic": true,
+        "V_rollback": true,
+        "V_unique_lineage": true,
+        "V_reconstruction": true,
+        "C_storage_gb": 12,
+        "C_host_pressure": true,
+        "C_failure_recurrence": false,
+        "C_future_management": true
+      },
+      "retention_decision": "RETIRE_AFTER_VERIFICATION",
+      "reason": "Canonical full-disk failure fossil. Current Docker Desktop has passed independent recovery and 180-second sustained validation with 0 new I/O errors. The failure state itself is not useful as a rollback target. Minimum forensic package (logs, inspects, version, init.log, hashes) is retained in evidence-20260729 and this manifest. Full binary retired to free 12 GB of storage debt."
+    },
+    {
+      "path": "/Users/andy/docker-recovery/Docker.raw.original_at_path",
+      "class": "REDUNDANT_RECOVERY_COPY",
+      "logical_size_bytes": 494384709632,
+      "physical_size_bytes_approx": 13107200000,
+      "stat_blocks_512": 25588288,
+      "stat_block_size_512": 512,
+      "mtime": "2026-07-29T16:17:37Z",
+      "hash_receipt_md5": "ae70898b36abe02fae35b36d56251d89",
+      "sample_verification": {
+        "first_100MB_md5": "e00296c02d9dfed42dfe43dda30c2366",
+        "last_100MB_md5": "07f850eea955f5419e26c1017ad10c5c"
+      },
+      "deduplication_evidence": "Identical logical size, mtime, and MD5 samples to Docker.raw.master. Receipt confirms same full-file MD5 as canonical.",
+      "value_assessment": {
+        "V_forensic": false,
+        "V_rollback": false,
+        "V_unique_lineage": false,
+        "V_reconstruction": false,
+        "C_storage_gb": 12,
+        "C_host_pressure": true,
+        "C_failure_recurrence": false,
+        "C_future_management": true
+      },
+      "retention_decision": "RETIRE",
+      "reason": "Redundant copy of canonical. No additional forensic or rollback value. Deletion recorded."
+    },
+    {
+      "path": "/Users/andy/docker-recovery/evidence-20260729",
+      "class": "UNIQUE_FAILURE_FOSSIL",
+      "logical_size_bytes": 1360000,
+      "physical_size_bytes_approx": 1360000,
+      "contents_summary": [
+        "evidence/container-inspect.json",
+        "evidence/containers.txt",
+        "evidence/desktop-current-boot.log",
+        "evidence/desktop-diagnose.txt",
+        "evidence/desktop-status.txt",
+        "evidence/docker-info.txt",
+        "evidence/docker-system-df.txt",
+        "evidence/docker-version.txt",
+        "evidence/image-inspect.json",
+        "evidence/images.txt",
+        "evidence/init.log",
+        "evidence/networks.txt",
+        "evidence/openapi-compose-ps.txt",
+        "evidence/openapi-compose-resolved.yaml",
+        "evidence/volume-inspect.json",
+        "evidence/volumes.txt",
+        "images/",
+        "volumes/"
+      ],
+      "value_assessment": {
+        "V_forensic": true,
+        "V_rollback": false,
+        "V_unique_lineage": true,
+        "V_reconstruction": true,
+        "C_storage_mb": 1.3,
+        "C_host_pressure": false,
+        "C_failure_recurrence": false,
+        "C_future_management": false
+      },
+      "retention_decision": "KEEP",
+      "reason": "Minimum forensic package: logs, inspects, container/volume lists, version info. Preserved as metadata lineage."
+    },
+    {
+      "path": "/Users/andy/docker-recovery/evidence_receipt.txt",
+      "class": "METADATA_ONLY_REQUIRED",
+      "logical_size_bytes": 702,
+      "value_assessment": {
+        "V_forensic": true,
+        "V_rollback": false,
+        "V_unique_lineage": true,
+        "V_reconstruction": true,
+        "C_storage_bytes": 702,
+        "C_host_pressure": false,
+        "C_failure_recurrence": false,
+        "C_future_management": false
+      },
+      "retention_decision": "KEEP",
+      "reason": "Original hash receipt linking Docker.raw to recovery artifacts."
+    },
+    {
+      "path": "/Users/andy/docker-recovery/.DS_Store",
+      "class": "REBUILDABLE_DERIVED_DATA",
+      "value_assessment": {
+        "V_forensic": false,
+        "V_rollback": false,
+        "V_unique_lineage": false,
+        "V_reconstruction": false,
+        "C_storage_bytes": 6148,
+        "C_host_pressure": false,
+        "C_failure_recurrence": false,
+        "C_future_management": false
+      },
+      "retention_decision": "DELETE",
+      "reason": "Finder metadata cache. Rebuildable. No lineage value."
+    }
+  ],
+  "deletion_ledger": {
+    "executed": [
+      "/Users/andy/docker-recovery/Docker.raw.original_at_path",
+      "/Users/andy/docker-recovery/.DS_Store"
+    ],
+    "planned": [
+      "/Users/andy/docker-recovery/Docker.raw.master"
+    ],
+    "retained_evidence": [
+      "/Users/andy/docker-recovery/evidence-20260729",
+      "/Users/andy/docker-recovery/evidence_receipt.txt"
+    ]
+  },
+  "current_docker_state": {
+    "docker_operational_verified": true,
+    "current_Docker.raw_blocks_512": 14882032,
+    "current_Docker.raw_logical_bytes": 494384709632,
+    "current_Docker.raw_physical_gb_approx": 7.1,
+    "rollback_usefulness_assessment": "Medium. Canonical backup is older/larger than current working raw. Current state has passed independent verification, but canonical can be restored if current raw fails during margin closure.",
+    "superseded_status": "PARTIAL",
+    "note": "Keep canonical until sustained stable frame confirms current raw. Re-evaluate after 24-72 hours."
+  }
+}
