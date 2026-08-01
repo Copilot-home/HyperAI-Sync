@@ -1,10 +1,10 @@
 {
   "loop": 1,
-  "timestamp": "2026-08-02T02:58:55",
-  "latest_log": "20260802T025641",
+  "timestamp": "2026-08-02T03:14:00",
+  "latest_log": "20260802T030311",
   "mcp_or_telemetry_lines": 0,
-  "listening_ports": 69,
+  "listening_ports": 90,
   "ai_extension_sources": [],
-  "disk_state": "460Gi 386Gi 23Gi 95%",
+  "disk_state": "460Gi 389Gi 17Gi 96%",
   "signal_health_score": 1
 }
