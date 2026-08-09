@@ -1,0 +1,4233 @@
+{
+  "schema_version": "2026.8.9.hyperai-operational-db.v1",
+  "observed_at": "2026-08-08T22:38:44Z",
+  "entity_registry": [
+    {
+      "id": "apo_host_system",
+      "kind": "host_system",
+      "role": "host_system",
+      "owner": "andy",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T06:02:27.985556+07:00",
+      "evidence": [
+        "macOS 26.6, IDE/LLM/Infra, Docker/K8S, iOS Simulator inspected and documented in canonical stack."
+      ]
+    },
+    {
+      "id": "brand_client_cloudflare",
+      "kind": "brand_client_surface",
+      "role": "runtime_surface",
+      "owner": "openapi-servers",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:51:19.652208+07:00",
+      "evidence": [
+        "Brand client for cloudflare on :3026. GET / 200; /v1/chat/completions calls Ollama (for openai)."
+      ]
+    },
+    {
+      "id": "brand_client_slack",
+      "kind": "brand_client_surface",
+      "role": "runtime_surface",
+      "owner": "openapi-servers",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:51:19.652208+07:00",
+      "evidence": [
+        "Brand client for slack on :3025. GET / 200; /v1/chat/completions calls Ollama (for openai)."
+      ]
+    },
+    {
+      "id": "brand_client_linear",
+      "kind": "brand_client_surface",
+      "role": "runtime_surface",
+      "owner": "openapi-servers",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:51:19.652208+07:00",
+      "evidence": [
+        "Brand client for linear on :3024. GET / 200; /v1/chat/completions calls Ollama (for openai)."
+      ]
+    },
+    {
+      "id": "brand_client_notion",
+      "kind": "brand_client_surface",
+      "role": "runtime_surface",
+      "owner": "openapi-servers",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:51:19.652208+07:00",
+      "evidence": [
+        "Brand client for notion on :3023. GET / 200; /v1/chat/completions calls Ollama (for openai)."
+      ]
+    },
+    {
+      "id": "brand_client_github",
+      "kind": "brand_client_surface",
+      "role": "runtime_surface",
+      "owner": "openapi-servers",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:51:19.652208+07:00",
+      "evidence": [
+        "Brand client for github on :3022. GET / 200; /v1/chat/completions calls Ollama (for openai)."
+      ]
+    },
+    {
+      "id": "brand_client_openai",
+      "kind": "brand_client_surface",
+      "role": "runtime_surface",
+      "owner": "openapi-servers",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:58:52.314511+07:00",
+      "evidence": [
+        "Docker container openai-client :3021; mem 17.41MiB/128MiB; APO Gateway verified."
+      ]
+    },
+    {
+      "id": "fake_brand_gateway",
+      "kind": "openapi_brand_facade",
+      "role": "runtime_surface",
+      "owner": "openapi-servers",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:45:46.980524+07:00",
+      "evidence": [
+        "GET / lists brands; POST /openai/v1/chat/completions returns Ollama response; APO Gateway apo/fake-openai alias verified."
+      ]
+    },
+    {
+      "id": "fakeapi_tool_surface_8914",
+      "kind": "openapi_tool_surface",
+      "role": "tool_surface",
+      "owner": "fakeapi_provider",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:25:59.128955+07:00",
+      "evidence": [
+        "GET /health on 127.0.0.1:8914 returns 200; OpenAPI spec at /openapi.json."
+      ]
+    },
+    {
+      "id": "fakeapi_tool_surface_8913",
+      "kind": "openapi_tool_surface",
+      "role": "tool_surface",
+      "owner": "fakeapi_provider",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:25:59.128955+07:00",
+      "evidence": [
+        "GET /health on 127.0.0.1:8913 returns 200; OpenAPI spec at /openapi.json."
+      ]
+    },
+    {
+      "id": "fakeapi_tool_surface_8912",
+      "kind": "openapi_tool_surface",
+      "role": "tool_surface",
+      "owner": "fakeapi_provider",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:25:59.128955+07:00",
+      "evidence": [
+        "GET /health on 127.0.0.1:8912 returns 200; OpenAPI spec at /openapi.json."
+      ]
+    },
+    {
+      "id": "fakeapi_tool_surface_8911",
+      "kind": "openapi_tool_surface",
+      "role": "tool_surface",
+      "owner": "fakeapi_provider",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:25:59.128955+07:00",
+      "evidence": [
+        "GET /health on 127.0.0.1:8911 returns 200; OpenAPI spec at /openapi.json."
+      ]
+    },
+    {
+      "id": "fakeapi_tool_surface_8910",
+      "kind": "openapi_tool_surface",
+      "role": "tool_surface",
+      "owner": "fakeapi_provider",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:25:59.128955+07:00",
+      "evidence": [
+        "GET /health on 127.0.0.1:8910 returns 200; OpenAPI spec at /openapi.json."
+      ]
+    },
+    {
+      "id": "fakeapi_tool_surface_8909",
+      "kind": "openapi_tool_surface",
+      "role": "tool_surface",
+      "owner": "fakeapi_provider",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:25:59.128955+07:00",
+      "evidence": [
+        "GET /health on 127.0.0.1:8909 returns 200; OpenAPI spec at /openapi.json."
+      ]
+    },
+    {
+      "id": "fakeapi_tool_surface_8908",
+      "kind": "openapi_tool_surface",
+      "role": "tool_surface",
+      "owner": "fakeapi_provider",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:25:59.128955+07:00",
+      "evidence": [
+        "GET /health on 127.0.0.1:8908 returns 200; OpenAPI spec at /openapi.json."
+      ]
+    },
+    {
+      "id": "fakeapi_tool_surface_8907",
+      "kind": "openapi_tool_surface",
+      "role": "tool_surface",
+      "owner": "fakeapi_provider",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:25:59.128955+07:00",
+      "evidence": [
+        "GET /health on 127.0.0.1:8907 returns 200; OpenAPI spec at /openapi.json."
+      ]
+    },
+    {
+      "id": "fakeapi_tool_surface_8906",
+      "kind": "openapi_tool_surface",
+      "role": "tool_surface",
+      "owner": "fakeapi_provider",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:25:59.128955+07:00",
+      "evidence": [
+        "GET /health on 127.0.0.1:8906 returns 200; OpenAPI spec at /openapi.json."
+      ]
+    },
+    {
+      "id": "fakeapi_tool_surface_8905",
+      "kind": "openapi_tool_surface",
+      "role": "tool_surface",
+      "owner": "fakeapi_provider",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:25:59.128955+07:00",
+      "evidence": [
+        "GET /health on 127.0.0.1:8905 returns 200; OpenAPI spec at /openapi.json."
+      ]
+    },
+    {
+      "id": "fakeapi_tool_surface_8904",
+      "kind": "openapi_tool_surface",
+      "role": "tool_surface",
+      "owner": "fakeapi_provider",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:25:59.128955+07:00",
+      "evidence": [
+        "GET /health on 127.0.0.1:8904 returns 200; OpenAPI spec at /openapi.json."
+      ]
+    },
+    {
+      "id": "fakeapi_tool_surface_8903",
+      "kind": "openapi_tool_surface",
+      "role": "tool_surface",
+      "owner": "fakeapi_provider",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:25:59.128955+07:00",
+      "evidence": [
+        "GET /health on 127.0.0.1:8903 returns 200; OpenAPI spec at /openapi.json."
+      ]
+    },
+    {
+      "id": "fakeapi_tool_surface_8902",
+      "kind": "openapi_tool_surface",
+      "role": "tool_surface",
+      "owner": "fakeapi_provider",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:25:59.128955+07:00",
+      "evidence": [
+        "GET /health on 127.0.0.1:8902 returns 200; OpenAPI spec at /openapi.json."
+      ]
+    },
+    {
+      "id": "fakeapi_tool_surface_8901",
+      "kind": "openapi_tool_surface",
+      "role": "tool_surface",
+      "owner": "fakeapi_provider",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:25:59.128955+07:00",
+      "evidence": [
+        "GET /health on 127.0.0.1:8901 returns 200; OpenAPI spec at /openapi.json."
+      ]
+    },
+    {
+      "id": "fakeapi_tool_surface_8900",
+      "kind": "openapi_tool_surface",
+      "role": "tool_surface",
+      "owner": "fakeapi_provider",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:25:59.128955+07:00",
+      "evidence": [
+        "GET /health on 127.0.0.1:8900 returns 200; OpenAPI spec at /openapi.json."
+      ]
+    },
+    {
+      "id": "mcp_server_postman-local",
+      "kind": "mcp_server",
+      "role": "tool_surface",
+      "owner": "codex",
+      "state": "STALE",
+      "last_observed_at": "2026-08-05T05:12:11.975576+07:00",
+      "evidence": [
+        "Registered from canonical_mcp_registry.json. scope=codex, transport=stdio"
+      ]
+    },
+    {
+      "id": "mcp_server_playwright",
+      "kind": "mcp_server",
+      "role": "tool_surface",
+      "owner": "codex",
+      "state": "STALE",
+      "last_observed_at": "2026-08-05T05:12:11.975576+07:00",
+      "evidence": [
+        "Registered from canonical_mcp_registry.json. scope=codex, transport=stdio"
+      ]
+    },
+    {
+      "id": "mcp_server_My_Pieces_Memory",
+      "kind": "mcp_server",
+      "role": "tool_surface",
+      "owner": "codex",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:12:11.975576+07:00",
+      "evidence": [
+        "Registered from canonical_mcp_registry.json. scope=codex, transport=stdio"
+      ]
+    },
+    {
+      "id": "mcp_server_apo_shell",
+      "kind": "mcp_server",
+      "role": "tool_surface",
+      "owner": "codex",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:12:11.975576+07:00",
+      "evidence": [
+        "Registered from canonical_mcp_registry.json. scope=codex, transport=sse"
+      ]
+    },
+    {
+      "id": "mcp_server_openaiDeveloperDocs",
+      "kind": "mcp_server",
+      "role": "tool_surface",
+      "owner": "codex",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:12:11.975576+07:00",
+      "evidence": [
+        "Registered from canonical_mcp_registry.json. scope=codex, transport=sse"
+      ]
+    },
+    {
+      "id": "mcp_server_node_repl",
+      "kind": "mcp_server",
+      "role": "tool_surface",
+      "owner": "codex",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:12:11.975576+07:00",
+      "evidence": [
+        "Registered from canonical_mcp_registry.json. scope=codex, transport=stdio"
+      ]
+    },
+    {
+      "id": "mcp_server_linear",
+      "kind": "mcp_server",
+      "role": "tool_surface",
+      "owner": "codex",
+      "state": "STALE",
+      "last_observed_at": "2026-08-05T05:12:11.975576+07:00",
+      "evidence": [
+        "Registered from canonical_mcp_registry.json. scope=codex, transport=sse"
+      ]
+    },
+    {
+      "id": "mcp_server_computer-use",
+      "kind": "mcp_server",
+      "role": "tool_surface",
+      "owner": "codex",
+      "state": "STALE",
+      "last_observed_at": "2026-08-05T05:12:11.975576+07:00",
+      "evidence": [
+        "Registered from canonical_mcp_registry.json. scope=codex, transport=stdio"
+      ]
+    },
+    {
+      "id": "mcp_server_AIOS_MISSION_ROUTER",
+      "kind": "mcp_server",
+      "role": "tool_surface",
+      "owner": "codex",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:12:11.975576+07:00",
+      "evidence": [
+        "Registered from canonical_mcp_registry.json. scope=codex, transport=stdio"
+      ]
+    },
+    {
+      "id": "mcp_server_notion",
+      "kind": "mcp_server",
+      "role": "tool_surface",
+      "owner": "cursor",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:12:11.975576+07:00",
+      "evidence": [
+        "Registered from canonical_mcp_registry.json. scope=cursor, transport=sse"
+      ]
+    },
+    {
+      "id": "mcp_server_pieces",
+      "kind": "mcp_server",
+      "role": "tool_surface",
+      "owner": "cursor",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:12:11.975576+07:00",
+      "evidence": [
+        "Registered from canonical_mcp_registry.json. scope=cursor, transport=sse"
+      ]
+    },
+    {
+      "id": "mcp_server_GitKraken",
+      "kind": "mcp_server",
+      "role": "tool_surface",
+      "owner": "cursor",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:12:11.975576+07:00",
+      "evidence": [
+        "Registered from canonical_mcp_registry.json. scope=cursor, transport=stdio"
+      ]
+    },
+    {
+      "id": "mcp_server_smart-promptor-mcp",
+      "kind": "mcp_server",
+      "role": "tool_surface",
+      "owner": "cursor",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:12:11.975576+07:00",
+      "evidence": [
+        "Registered from canonical_mcp_registry.json. scope=cursor, transport=sse"
+      ]
+    },
+    {
+      "id": "mcp_server_hyperai-todo-executor",
+      "kind": "mcp_server",
+      "role": "tool_surface",
+      "owner": "user",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:12:11.975576+07:00",
+      "evidence": [
+        "Registered from canonical_mcp_registry.json. scope=user, transport=stdio"
+      ]
+    },
+    {
+      "id": "mcp_server_my-pieces-memory",
+      "kind": "mcp_server",
+      "role": "tool_surface",
+      "owner": "user",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:12:11.975576+07:00",
+      "evidence": [
+        "Registered from canonical_mcp_registry.json. scope=user, transport=stdio"
+      ]
+    },
+    {
+      "id": "mcp_server_notion-mcp-server",
+      "kind": "mcp_server",
+      "role": "tool_surface",
+      "owner": "user",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:12:11.975576+07:00",
+      "evidence": [
+        "Registered from canonical_mcp_registry.json. scope=user, transport=stdio"
+      ]
+    },
+    {
+      "id": "mcp_server_memory",
+      "kind": "mcp_server",
+      "role": "tool_surface",
+      "owner": "user",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:12:11.975576+07:00",
+      "evidence": [
+        "Registered from canonical_mcp_registry.json. scope=user, transport=stdio"
+      ]
+    },
+    {
+      "id": "mcp_server_mcp-playwright",
+      "kind": "mcp_server",
+      "role": "tool_surface",
+      "owner": "user",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:12:11.975576+07:00",
+      "evidence": [
+        "Registered from canonical_mcp_registry.json. scope=user, transport=stdio"
+      ]
+    },
+    {
+      "id": "mcp_server_git",
+      "kind": "mcp_server",
+      "role": "tool_surface",
+      "owner": "user",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:12:11.975576+07:00",
+      "evidence": [
+        "Registered from canonical_mcp_registry.json. scope=user, transport=stdio"
+      ]
+    },
+    {
+      "id": "mcp_server_fetch",
+      "kind": "mcp_server",
+      "role": "tool_surface",
+      "owner": "user",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:12:11.975576+07:00",
+      "evidence": [
+        "Registered from canonical_mcp_registry.json. scope=user, transport=stdio"
+      ]
+    },
+    {
+      "id": "mcp_server_context7",
+      "kind": "mcp_server",
+      "role": "tool_surface",
+      "owner": "user",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:12:11.975576+07:00",
+      "evidence": [
+        "Registered from canonical_mcp_registry.json. scope=user, transport=stdio"
+      ]
+    },
+    {
+      "id": "mcp_server_cloudflare-docs",
+      "kind": "mcp_server",
+      "role": "tool_surface",
+      "owner": "user",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:12:11.975576+07:00",
+      "evidence": [
+        "Registered from canonical_mcp_registry.json. scope=user, transport=stdio"
+      ]
+    },
+    {
+      "id": "mcp_server_MCP_DOCKER",
+      "kind": "mcp_server",
+      "role": "tool_surface",
+      "owner": "user",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:12:11.975576+07:00",
+      "evidence": [
+        "Registered from canonical_mcp_registry.json. scope=user, transport=stdio"
+      ]
+    },
+    {
+      "id": "apo_canon_gate",
+      "kind": "canonical_runtime",
+      "role": "runtime_surface",
+      "owner": "hyperai_canonical_stack",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:16:37.893619+07:00",
+      "evidence": [
+        "GET /health on :3011 returns 200; /canon/* proxies to canonical; /apo/* proxies to APO Gateway :9011."
+      ]
+    },
+    {
+      "id": "apo_upstream_macbook_ollama",
+      "kind": "provider",
+      "role": "inference_upstreams",
+      "owner": "apo_gateway",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-04T07:10:23.817165+00:00",
+      "evidence": [
+        "GET /v1/models on 127.0.0.1:11434 returns 200 at 2026-08-04."
+      ]
+    },
+    {
+      "id": "apo_upstream_titan_ollama",
+      "kind": "provider",
+      "role": "inference_upstreams",
+      "owner": "apo_gateway",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T02:10:00+00:00",
+      "evidence": [
+        "APO /v1/chat/completions with titan_ollama/llama3.2:3b and apo/llama3.2 returned valid assistant content. Titan Ollama 192.168.3.84:11434 reachable."
+      ]
+    },
+    {
+      "id": "apo_upstream_macmini_ollama",
+      "kind": "provider",
+      "role": "inference_upstreams",
+      "owner": "apo_gateway",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-02T19:18:46Z",
+      "evidence": [
+        ""
+      ]
+    },
+    {
+      "id": "apo_upstream_lmstudio",
+      "kind": "provider",
+      "role": "inference_upstreams",
+      "owner": "apo_gateway",
+      "state": "STALE",
+      "last_observed_at": "2026-08-04T07:10:23.817165+00:00",
+      "evidence": [
+        "Live probe 2026-08-04: port 1234 not listening. LMStudio local inference not reachable."
+      ]
+    },
+    {
+      "id": "openapi_tool_time",
+      "kind": "openapi_tool_server",
+      "role": "tool_surface",
+      "owner": "apo_gateway",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-04T07:23:20.697561+00:00",
+      "evidence": [
+        "Direct /openapi.json on port 8901 200; APO gateway proxy /tools/time/openapi.json 200 at 2026-08-04T07:23:20.697561+00:00."
+      ]
+    },
+    {
+      "id": "openapi_tool_weather",
+      "kind": "openapi_tool_server",
+      "role": "tool_surface",
+      "owner": "apo_gateway",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-04T07:23:20.697561+00:00",
+      "evidence": [
+        "Direct /openapi.json on port 8902 200; APO gateway proxy /tools/weather/openapi.json 200 at 2026-08-04T07:23:20.697561+00:00."
+      ]
+    },
+    {
+      "id": "openapi_tool_filesystem",
+      "kind": "openapi_tool_server",
+      "role": "tool_surface",
+      "owner": "apo_gateway",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-04T07:23:20.697561+00:00",
+      "evidence": [
+        "Direct /openapi.json on port 8903 200; APO gateway proxy /tools/filesystem/openapi.json 200 at 2026-08-04T07:23:20.697561+00:00."
+      ]
+    },
+    {
+      "id": "openapi_tool_git",
+      "kind": "openapi_tool_server",
+      "role": "tool_surface",
+      "owner": "apo_gateway",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-04T07:23:20.697561+00:00",
+      "evidence": [
+        "Direct /openapi.json on port 8904 200; APO gateway proxy /tools/git/openapi.json 200 at 2026-08-04T07:23:20.697561+00:00."
+      ]
+    },
+    {
+      "id": "openapi_tool_memory",
+      "kind": "openapi_tool_server",
+      "role": "tool_surface",
+      "owner": "apo_gateway",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-04T07:23:20.697561+00:00",
+      "evidence": [
+        "Direct /openapi.json on port 8905 200; APO gateway proxy /tools/memory/openapi.json 200 at 2026-08-04T07:23:20.697561+00:00."
+      ]
+    },
+    {
+      "id": "openapi_tool_quotes",
+      "kind": "openapi_tool_server",
+      "role": "tool_surface",
+      "owner": "apo_gateway",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-04T07:23:20.697561+00:00",
+      "evidence": [
+        "Direct /openapi.json on port 8906 200; APO gateway proxy /tools/quotes/openapi.json 200 at 2026-08-04T07:23:20.697561+00:00."
+      ]
+    },
+    {
+      "id": "openapi_tool_flashcards",
+      "kind": "openapi_tool_server",
+      "role": "tool_surface",
+      "owner": "apo_gateway",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-04T07:23:20.697561+00:00",
+      "evidence": [
+        "Direct /openapi.json on port 8907 200; APO gateway proxy /tools/flashcards/openapi.json 200 at 2026-08-04T07:23:20.697561+00:00."
+      ]
+    },
+    {
+      "id": "openapi_tool_time_ui",
+      "kind": "openapi_tool_server",
+      "role": "tool_surface",
+      "owner": "apo_gateway",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-04T07:23:20.697561+00:00",
+      "evidence": [
+        "Direct /openapi.json on port 8908 200; APO gateway proxy /tools/time_ui/openapi.json 200 at 2026-08-04T07:23:20.697561+00:00."
+      ]
+    },
+    {
+      "id": "openapi_tool_summarizer",
+      "kind": "openapi_tool_server",
+      "role": "tool_surface",
+      "owner": "apo_gateway",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-04T07:23:20.697561+00:00",
+      "evidence": [
+        "Direct /openapi.json on port 8909 200; APO gateway proxy /tools/summarizer/openapi.json 200 at 2026-08-04T07:23:20.697561+00:00."
+      ]
+    },
+    {
+      "id": "openapi_tool_bitcoin",
+      "kind": "openapi_tool_server",
+      "role": "tool_surface",
+      "owner": "apo_gateway",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-04T07:23:20.697561+00:00",
+      "evidence": [
+        "Direct /openapi.json on port 8910 200; APO gateway proxy /tools/bitcoin/openapi.json 200 at 2026-08-04T07:23:20.697561+00:00."
+      ]
+    },
+    {
+      "id": "openapi_tool_sql",
+      "kind": "openapi_tool_server",
+      "role": "tool_surface",
+      "owner": "apo_gateway",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-04T07:23:20.697561+00:00",
+      "evidence": [
+        "Direct /openapi.json on port 8911 200; APO gateway proxy /tools/sql/openapi.json 200 at 2026-08-04T07:23:20.697561+00:00."
+      ]
+    },
+    {
+      "id": "openapi_tool_external_rag",
+      "kind": "openapi_tool_server",
+      "role": "tool_surface",
+      "owner": "apo_gateway",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-04T08:07:00+00:00",
+      "evidence": [
+        "Python 3.13 venv at /Users/andy/openapi-servers/servers/external-rag/.venv; faiss-cpu added to requirements.txt; /openapi.json on port 8912 200; APO /tools/external_rag/openapi.json 200; /retrieve returned valid results."
+      ]
+    },
+    {
+      "id": "openapi_tool_slack",
+      "kind": "openapi_tool_server",
+      "role": "tool_surface",
+      "owner": "apo_gateway",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-04T07:23:20.697561+00:00",
+      "evidence": [
+        "Direct /openapi.json on port 8913 200; APO gateway proxy /tools/slack/openapi.json 200 at 2026-08-04T07:23:20.697561+00:00."
+      ]
+    },
+    {
+      "id": "openapi_tool_google_pse",
+      "kind": "openapi_tool_server",
+      "role": "tool_surface",
+      "owner": "apo_gateway",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-04T07:23:20.697561+00:00",
+      "evidence": [
+        "Direct /openapi.json on port 8914 200; APO gateway proxy /tools/google_pse/openapi.json 200 at 2026-08-04T07:23:20.697561+00:00."
+      ]
+    },
+    {
+      "id": "mcp_pieces",
+      "kind": "mcp_server",
+      "role": "mcp_bridge",
+      "owner": "apo_gateway",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-04T02:25:07Z",
+      "evidence": [
+        "HTTP initialize to /model_context_protocol/2025-03-26/mcp returns 200 with pieces-mcp-server v1.0.0; tools/list reachable after DB repair"
+      ]
+    },
+    {
+      "id": "mcp_docker_mcp",
+      "kind": "mcp_server",
+      "role": "mcp_bridge",
+      "owner": "apo_gateway",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-04T02:44:32+00:00",
+      "evidence": [
+        "Container docker_labs-ai-tools-for-devs-desktop-extension-service running image mcp/docker:0.0.17; command 'serve --mcp --port 8811'; port 8811 reachable; SSE /sse keeps connection as expected"
+      ]
+    },
+    {
+      "id": "credential_broker",
+      "kind": "http_service",
+      "role": "credential_authority",
+      "owner": "hyperai_credentials",
+      "state": "STALE",
+      "last_observed_at": "2026-08-04T07:10:23.817165+00:00",
+      "evidence": [
+        "Live probe 2026-08-04: port 8765 not listening. Credential lease service down."
+      ]
+    },
+    {
+      "id": "apo_gateway",
+      "kind": "http_service",
+      "role": "model_tool_gateway",
+      "owner": "hyperai",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T16:05:00+00:00",
+      "evidence": [
+        "APO Gateway container 513638185fbd (pid 67567) CURRENT_VERIFIED. Rebuilt on python:3.13-slim; CVEs reduced from 2C4H11M29L5? to 2C2H6M28L5? (health score C->B). /health 200, /v1/models 200, /tools/time/openapi.json 200, chat completions via titan_ollama OK, Codex CLI verified. Config uses host.docker.internal for macbook_ollama, brand clients 3020-3026, mcp endpoints, and tools 8900-8914."
+      ]
+    },
+    {
+      "id": "agent_os_dashboard",
+      "kind": "http_service",
+      "role": "runtime_cockpit",
+      "owner": "hyperai",
+      "state": "STALE",
+      "last_observed_at": "2026-08-02T19:19:06Z",
+      "evidence": [
+        ""
+      ]
+    },
+    {
+      "id": "lmstudio_bionic_api",
+      "kind": "openai_compatible_server",
+      "role": "local_inference",
+      "owner": "lmstudio",
+      "state": "STALE",
+      "last_observed_at": "2026-08-04T07:10:23.817165+00:00",
+      "evidence": [
+        "Live probe 2026-08-04: port 1234 not listening. LMStudio local inference not reachable."
+      ]
+    },
+    {
+      "id": "bionic_app",
+      "kind": "desktop_electron_runtime",
+      "role": "ai_agent_surface",
+      "owner": "element_labs",
+      "state": "STALE",
+      "last_observed_at": "2026-08-02T19:19:07Z",
+      "evidence": [
+        ""
+      ]
+    },
+    {
+      "id": "ollama_macbook",
+      "kind": "model_substrate",
+      "role": "local_inference",
+      "owner": "ollama",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-02T19:19:07Z",
+      "evidence": [
+        ""
+      ]
+    },
+    {
+      "id": "pieces_mcp",
+      "kind": "mcp_server",
+      "role": "mcp_bridge",
+      "owner": "pieces",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-04T02:25:07Z",
+      "evidence": [
+        "HTTP initialize returns 200 with mcp-session-id and pieces-mcp-server v1.0.0; pieces bridge CLI still reports starting, use HTTP"
+      ]
+    },
+    {
+      "id": "finalai",
+      "kind": "http_service",
+      "role": "inference_runtime",
+      "owner": "finalai",
+      "state": "STALE",
+      "last_observed_at": "2026-08-08T13:10:00Z",
+      "evidence": [
+        "Proxy stopped: launchctl unload com.hyperai.finalai-openai-proxy; plist moved to .bak.20260808; lsof :50520 empty; backend http://192.168.3.158:5052 unreachable since 2026-07-12"
+      ]
+    },
+    {
+      "id": "redis_local",
+      "kind": "cache_store",
+      "role": "memory_cache",
+      "owner": "redis",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-02T19:19:07Z",
+      "evidence": [
+        ""
+      ]
+    },
+    {
+      "id": "hyperai_product_runtime",
+      "kind": "app_runtime",
+      "role": "product_shell",
+      "owner": "hyperai-user-control-system",
+      "state": "STALE",
+      "last_observed_at": "2026-08-03T16:48:00Z",
+      "evidence": [
+        "AirPlay Receiver defaults set to disabled but ControlCenter process still binds 5000; source missing and windows_only_canonical"
+      ]
+    },
+    {
+      "id": "docker_desktop",
+      "kind": "container_fabric",
+      "role": "infrastructure_substrate",
+      "owner": "docker",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-04T02:44:32+00:00",
+      "evidence": [
+        "docker version 29.6.2 responds; docker ps shows 10 containers including hyperai-registry, mcp/docker, kind; hyperai-registry /roles.json 200"
+      ]
+    },
+    {
+      "id": "federation_orchestrator",
+      "kind": "registry",
+      "role": "mission_router",
+      "owner": "aios",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-02T19:19:07Z",
+      "evidence": [
+        ""
+      ]
+    },
+    {
+      "id": "memory_writer",
+      "kind": "service_runtime",
+      "role": "evidence_recorder",
+      "owner": "aios",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-02T19:19:07Z",
+      "evidence": [
+        ""
+      ]
+    },
+    {
+      "id": "codex_operator_runtime",
+      "kind": "desktop_operator_runtime",
+      "role": "worker_surface",
+      "owner": "codex",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-04T07:34:37.434287+00:00",
+      "evidence": [
+        "Antigravity IDE restarted at 2026-08-04T07:28Z; main PID 43983, plugin host PID 43996. Two language_server_macos_arm processes spawned (PID 43991 on ports 60158/60159 for cloudcode-pa; PID 44241 on ports 60249/60250/60306 for daily-cloudcode). Workspace language server PID 44241 initialized successfully in 4.48s and auth succeeded. Model placeholder fixed to MODEL_GOOGLE_GEMINI_2_5_PRO. ls-main.log no longer contains 'neither PlanModel nor RequestedModel specified' errors. Recurring 'failed to check terminal shell support: internal error' appears in ls-main.log (non-fatal, likely shell feature probe)."
+      ]
+    },
+    {
+      "id": "aios_mission_router",
+      "kind": "service_runtime",
+      "role": "local_root",
+      "owner": "aios",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-05T05:18:54.953506+07:00",
+      "evidence": [
+        "GET /canon/health on :9001 proxies to apo_canon_gate :3011; returns 200."
+      ]
+    },
+    {
+      "id": "hyperai_docker_telemetry_guard",
+      "kind": "service_runtime",
+      "role": "telemetry_guard",
+      "owner": "aios",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-02T19:19:07Z",
+      "evidence": [
+        ""
+      ]
+    },
+    {
+      "id": "mcp_fetch",
+      "kind": "mcp_server_stdio",
+      "role": "mcp_bridge",
+      "owner": "apo_gateway",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-02T19:42:50Z",
+      "evidence": [
+        ""
+      ]
+    },
+    {
+      "id": "mcp_filesystem",
+      "kind": "mcp_server_stdio",
+      "role": "mcp_bridge",
+      "owner": "apo_gateway",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-02T19:42:50Z",
+      "evidence": [
+        ""
+      ]
+    },
+    {
+      "id": "mcp_git",
+      "kind": "mcp_server_stdio",
+      "role": "mcp_bridge",
+      "owner": "apo_gateway",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-02T19:42:50Z",
+      "evidence": [
+        ""
+      ]
+    },
+    {
+      "id": "mcp_memory",
+      "kind": "mcp_server_stdio",
+      "role": "mcp_bridge",
+      "owner": "apo_gateway",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-02T19:42:50Z",
+      "evidence": [
+        ""
+      ]
+    },
+    {
+      "id": "mcp_playwright",
+      "kind": "mcp_server_stdio",
+      "role": "mcp_bridge",
+      "owner": "apo_gateway",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-02T19:42:50Z",
+      "evidence": [
+        ""
+      ]
+    },
+    {
+      "id": "mcp_sonarqube",
+      "kind": "mcp_server_stdio",
+      "role": "mcp_bridge",
+      "owner": "apo_gateway",
+      "state": "DESIGN_ONLY",
+      "last_observed_at": "2026-08-02T19:42:50Z",
+      "evidence": [
+        ""
+      ]
+    },
+    {
+      "id": "mcp_sqlite",
+      "kind": "mcp_server_stdio",
+      "role": "mcp_bridge",
+      "owner": "apo_gateway",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-02T19:42:50Z",
+      "evidence": [
+        ""
+      ]
+    },
+    {
+      "id": "mcp_duckduckgo",
+      "kind": "mcp_server_stdio",
+      "role": "mcp_bridge",
+      "owner": "apo_gateway",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-02T19:42:50Z",
+      "evidence": [
+        ""
+      ]
+    },
+    {
+      "id": "mcp_desktop_commander",
+      "kind": "mcp_server_stdio",
+      "role": "mcp_bridge",
+      "owner": "apo_gateway",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-02T19:42:50Z",
+      "evidence": [
+        ""
+      ]
+    },
+    {
+      "id": "mcp_github_server",
+      "kind": "mcp_server_stdio",
+      "role": "mcp_bridge",
+      "owner": "apo_gateway",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-02T19:42:50Z",
+      "evidence": [
+        ""
+      ]
+    },
+    {
+      "id": "openclaw_gateway",
+      "kind": "gateway",
+      "role": "external_ai_gateway",
+      "owner": "openclaw",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-04T07:34:37.434287+00:00",
+      "evidence": [
+        "Live probe 2026-08-04: /health returns 200 27, node PID 15259 listening on 18789. /openapi.json returns 404; health_path corrected to /health."
+      ]
+    },
+    {
+      "id": "openclaw_control_lane",
+      "kind": "operator_control_surface",
+      "role": "hyperai_control_lane",
+      "owner": "hyperai",
+      "state": "ACTIVE",
+      "last_observed_at": "2026-08-06T15:17:15.000000+00:00",
+      "evidence": [
+        "Wrapper tools/openclaw_control.py verified: health, status, gateway, tasks, logs all return 0 with live JSON; agent/message blocked without --approve."
+      ]
+    },
+    {
+      "id": "skill:systemic-cognitive-boundary",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.devin/skills/systemic-cognitive-boundary/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:runtime-adapter",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.devin/skills/runtime-adapter/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:systemic-cognitive-boundary",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.config/devin/skills/systemic-cognitive-boundary/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:socratic-evidence-reconciliation",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.config/devin/skills/socratic-evidence-reconciliation/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:hyperai-todo-executor",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.config/devin/skills/hyperai-todo-executor/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:lark-mail",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/lark-mail/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:deploy-to-vercel",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/deploy-to-vercel/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:azure-app-onboard-prereq",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/azure-app-onboard-prereq/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:flux-2-klein",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/flux-2-klein/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:video-extend",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/video-extend/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:happyhorse-1-0",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/happyhorse-1-0/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:entra-agent-id",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/entra-agent-id/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:azure-diagnostics",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/azure-diagnostics/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:azure-reliability",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/azure-reliability/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:lark-minutes",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/lark-minutes/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:azure-cost",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/azure-cost/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:mermaid-diagrams",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/mermaid-diagrams/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:template-skill",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/template-skill/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:system-scan-ctx-gam",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/system-scan-ctx-gam/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:ace-step",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/ace-step/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:lipsync",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/lipsync/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:azure-compliance",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/azure-compliance/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:microsoft-foundry",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/microsoft-foundry/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:lark-openapi-explorer",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/lark-openapi-explorer/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:lark-skill-maker",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/lark-skill-maker/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:gpt-image-edit",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/gpt-image-edit/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:lark-calendar",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/lark-calendar/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:theme-factory",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/theme-factory/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:lark-workflow-standup-report",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/lark-workflow-standup-report/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:multi-gh",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/multi-gh/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:lark-wiki",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/lark-wiki/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:nano-banana-edit",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/nano-banana-edit/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:controlnet-pose",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/controlnet-pose/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:appinsights-instrumentation",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/appinsights-instrumentation/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:flux-kontext",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/flux-kontext/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:image-to-video",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/image-to-video/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:wan-2-7",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/wan-2-7/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:vercel-react-native-skills",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/vercel-react-native-skills/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:nano-banana-2",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/nano-banana-2/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:elevenlabs-music-generation",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/elevenlabs-music-generation/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:azure-quotas",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/azure-quotas/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:firecrawl-download",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/firecrawl-download/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:azure-deploy",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/azure-deploy/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:surrealdb-python",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/surrealdb-python/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:doc-coauthoring",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/doc-coauthoring/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:lark-markdown",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/lark-markdown/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:image-outpainting",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/image-outpainting/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:web-design-guidelines",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/web-design-guidelines/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:firecrawl",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/firecrawl/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:kling-3-0",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/kling-3-0/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:ai-image-generation",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/ai-image-generation/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:claude-api",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/claude-api/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:azure-compute",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/azure-compute/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:firecrawl-agent",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/firecrawl-agent/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:socratic-evidence-reconciliation",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/socratic-evidence-reconciliation/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:face-swap",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/face-swap/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:firecrawl-scrape",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/firecrawl-scrape/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:azure-validate",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/azure-validate/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:lark-okr",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/lark-okr/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:image-inpainting",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/image-inpainting/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:seedance-v2",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/seedance-v2/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:xlsx",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/xlsx/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:pdf",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/pdf/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:find-skills",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/find-skills/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:macos-development",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/macos-development/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:firecrawl-map",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/firecrawl-map/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:mcp-cli",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/mcp-cli/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:local-model",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/local-model/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:debug-live",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/debug-live/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:lark-doc",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/lark-doc/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:algorithmic-art",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/algorithmic-art/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:ai-avatar-video",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/ai-avatar-video/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:surrealql",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/surrealql/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:vercel-cli-with-tokens",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/vercel-cli-with-tokens/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:azure-resource-lookup",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/azure-resource-lookup/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:vercel-react-view-transitions",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/vercel-react-view-transitions/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:lark-contact",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/lark-contact/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:ai-music",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/ai-music/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:entra-app-registration",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/entra-app-registration/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:lark-vc-agent",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/lark-vc-agent/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:azure-kubernetes",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/azure-kubernetes/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:firecrawl-instruct",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/firecrawl-instruct/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:internal-comms",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/internal-comms/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:secrets-management",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/secrets-management/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:lark-vc",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/lark-vc/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:skill-creator",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/skill-creator/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:canvas-design",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/canvas-design/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:video-outpainting",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/video-outpainting/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:lark-drive",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/lark-drive/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:azure-aigateway",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/azure-aigateway/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:lark-workflow-meeting-summary",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/lark-workflow-meeting-summary/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:zero",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/zero/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:pptx",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/pptx/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:lark-event",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/lark-event/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:azure-ai",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/azure-ai/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:sentry-cli",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/sentry-cli/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:firecrawl-search",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/firecrawl-search/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:lark-attendance",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/lark-attendance/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:firecrawl-crawl",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/firecrawl-crawl/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:vercel-optimize",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/vercel-optimize/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:video-inpainting",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/video-inpainting/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:lark-shared",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/lark-shared/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:slack-gif-creator",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/slack-gif-creator/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:azure-storage",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/azure-storage/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:lark-base",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/lark-base/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:video-edit",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/video-edit/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:python-appservice-deploy",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/python-appservice-deploy/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:apomega-forensic-reconstruction",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/apomega-forensic-reconstruction/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:ai-video-generation",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/ai-video-generation/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:webapp-testing",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/webapp-testing/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:lark-slides",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/lark-slides/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:gpt-image-2",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/gpt-image-2/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:aios-health-probe",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/aios-health-probe/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:lark-im",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/lark-im/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:airunway-aks-setup",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/airunway-aks-setup/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:frontend-design",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/frontend-design/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:azure-cloud-migrate",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/azure-cloud-migrate/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:azure-messaging",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/azure-messaging/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:file-organization",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/file-organization/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:azure-upgrade",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/azure-upgrade/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:vercel-react-best-practices",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/vercel-react-best-practices/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:relight",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/relight/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:pieces-mcp",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/pieces-mcp/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:asc-notarization",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/asc-notarization/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:azure-enterprise-infra-planner",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/azure-enterprise-infra-planner/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:azure-app-onboard",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/azure-app-onboard/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:vercel-composition-patterns",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/vercel-composition-patterns/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:mcp-builder",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/mcp-builder/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:lark-sheets",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/lark-sheets/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:hyperai-runtime-orchestrator",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/hyperai-runtime-orchestrator/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:lark-task",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/lark-task/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:brand-guidelines",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/brand-guidelines/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:lark-whiteboard",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/lark-whiteboard/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:docx",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/docx/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:image-edit",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/image-edit/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:azure-prepare",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/azure-prepare/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:azure-resource-visualizer",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/azure-resource-visualizer/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:lark-approval",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/lark-approval/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:azure-kusto",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/azure-kusto/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:codex-pet",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/codex-pet/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:runcomfy-cli",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/runcomfy-cli/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:web-artifacts-builder",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.agents/skills/web-artifacts-builder/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:developing-with-bigquery",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.copilot/skills/developing-with-bigquery/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:gcp-data-pipelines",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.copilot/skills/gcp-data-pipelines/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:discovering-gcp-data-assets",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.copilot/skills/discovering-gcp-data-assets/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:gcp-spark",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.copilot/skills/gcp-spark/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:managing-python-dependencies",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.copilot/skills/managing-python-dependencies/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:data-autocleaning",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.copilot/skills/data-autocleaning/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:gcp-dataflow",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.copilot/skills/gcp-dataflow/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:bigquery-data-transfer-service",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.copilot/skills/bigquery-data-transfer-service/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:dbt-bigquery",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.copilot/skills/dbt-bigquery/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:gcp-composer-troubleshooting",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.copilot/skills/gcp-composer-troubleshooting/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:debug-live",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.copilot/skills/debug-live/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:accidental-data-loss-prevention",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.copilot/skills/accidental-data-loss-prevention/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:building-data-apps",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.copilot/skills/building-data-apps/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:dataform-bigquery",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.copilot/skills/dataform-bigquery/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:skill-repair",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.copilot/skills/skill-repair/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:gcp-pipeline-orchestration",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.copilot/skills/gcp-pipeline-orchestration/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:gcloud-auth-verification",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.copilot/skills/gcloud-auth-verification/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:notebook-guidance",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.copilot/skills/notebook-guidance/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:ml-best-practices",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.copilot/skills/ml-best-practices/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:agent-workflow-builder_ai_toolkit",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.copilot/skills/agent-workflow-builder_ai_toolkit/SKILL.md"
+      ]
+    },
+    {
+      "id": "skill:gcp-pipeline-resource-provisioning",
+      "kind": "skill",
+      "role": "capability_surface",
+      "owner": "hyperai",
+      "state": "KNOWN",
+      "last_observed_at": "2026-08-08T22:38:44Z",
+      "evidence": [
+        "skill file exists at /Users/andy/.copilot/skills/gcp-pipeline-resource-provisioning/SKILL.md"
+      ]
+    },
+    {
+      "id": "hyperai_phoenix",
+      "kind": "ai_runtime",
+      "role": "cognitive_core",
+      "owner": "alpha_prime_omega",
+      "state": "SOURCE_VERIFIED",
+      "last_observed_at": "2026-08-09T06:30:00Z",
+      "evidence": [
+        "source at /Users/andy/07_PROJECTS_AND_MICROSERVICES/components/hyperai_phoenix",
+        "43 non-init .py modules",
+        "21879 lines",
+        "compileall PASS",
+        "GenesisCore import OK"
+      ]
+    }
+  ],
+  "function_registry": [
+    {
+      "id": "aios_mission_router:health",
+      "entity": "aios_mission_router",
+      "purpose": "Report AIOS router health and gate status",
+      "entrypoint": "GET http://127.0.0.1:9001/health",
+      "input": "none",
+      "output": "health json",
+      "done_condition": "status PASS with all checks true"
+    },
+    {
+      "id": "aios_mission_router:runtime_list",
+      "entity": "aios_mission_router",
+      "purpose": "Return runtime registry of discovered surfaces",
+      "entrypoint": "GET http://127.0.0.1:9001/runtime/list",
+      "input": "none",
+      "output": "list of runtime nodes",
+      "done_condition": "200 with nodes array"
+    },
+    {
+      "id": "aios_mission_router:mission_plan",
+      "entity": "aios_mission_router",
+      "purpose": "Plan a mission without mutating",
+      "entrypoint": "POST http://127.0.0.1:9001/mission/plan",
+      "input": "mission_text, target_surface, risk_class, requested_action, approval_state",
+      "output": "plan json",
+      "done_condition": "200 with plan"
+    },
+    {
+      "id": "aios_mission_router:skills_route",
+      "entity": "aios_mission_router",
+      "purpose": "Route a mission to appropriate skills",
+      "entrypoint": "POST http://127.0.0.1:9001/skills.route",
+      "input": "mission_text",
+      "output": "skill route json",
+      "done_condition": "200 with route"
+    },
+    {
+      "id": "home_cloud_gateway:chat_completions",
+      "entity": "home_cloud_gateway",
+      "purpose": "Serve OpenAI-compatible chat completions on local model pool",
+      "entrypoint": "POST http://127.0.0.1:3033/v1/chat/completions",
+      "input": "OpenAI chat request with cloud alias model",
+      "output": "chat completion with cloud alias preserved",
+      "done_condition": "200 and response.model == requested alias"
+    },
+    {
+      "id": "home_cloud_gateway:admin_nodes",
+      "entity": "home_cloud_gateway",
+      "purpose": "List healthy nodes, tags, resident models",
+      "entrypoint": "GET http://127.0.0.1:3033/admin/nodes",
+      "input": "none",
+      "output": "nodes list",
+      "done_condition": "200 with healthy nodes"
+    },
+    {
+      "id": "home_cloud_gateway:admin_evict",
+      "entity": "home_cloud_gateway",
+      "purpose": "Explicitly evict a resident model from a node",
+      "entrypoint": "POST http://127.0.0.1:3033/admin/evict",
+      "input": "{node, model}",
+      "output": "eviction result",
+      "done_condition": "200 and evicted true for RESIDENT model"
+    },
+    {
+      "id": "ollama:titan:generate",
+      "entity": "ollama:titan",
+      "purpose": "Execute inference on local Ollama",
+      "entrypoint": "POST http://192.168.3.84:11434/api/generate",
+      "input": "model, prompt, options",
+      "output": "generated text",
+      "done_condition": "200 with response"
+    },
+    {
+      "id": "ollama:macbook:generate",
+      "entity": "ollama:macbook",
+      "purpose": "Execute inference on local Ollama",
+      "entrypoint": "POST http://127.0.0.1:11434/api/generate",
+      "input": "model, prompt, options",
+      "output": "generated text",
+      "done_condition": "200 with response"
+    },
+    {
+      "id": "ollama:macmini:generate",
+      "entity": "ollama:macmini",
+      "purpose": "Execute inference on local Ollama",
+      "entrypoint": "POST http://192.168.3.28:11434/api/generate",
+      "input": "model, prompt, options",
+      "output": "generated text",
+      "done_condition": "200 with response"
+    },
+    {
+      "id": "openclaw:health",
+      "entity": "openclaw",
+      "purpose": "Expose OpenClaw gateway health",
+      "entrypoint": "GET http://127.0.0.1:18789/health",
+      "input": "none",
+      "output": "health json",
+      "done_condition": "200"
+    },
+    {
+      "id": "home_cloud_gateway:root",
+      "entity": "home_cloud_gateway",
+      "purpose": "Root status page",
+      "entrypoint": "GET /",
+      "input": "none",
+      "output": "service status",
+      "done_condition": "200"
+    },
+    {
+      "id": "home_cloud_gateway:health",
+      "entity": "home_cloud_gateway",
+      "purpose": "Health and node tags count",
+      "entrypoint": "GET /health",
+      "input": "none",
+      "output": "nodes map",
+      "done_condition": "200"
+    },
+    {
+      "id": "home_cloud_gateway:list_models",
+      "entity": "home_cloud_gateway",
+      "purpose": "List UI/cloud models",
+      "entrypoint": "GET /v1/models",
+      "input": "none",
+      "output": "OpenAI model list",
+      "done_condition": "200"
+    },
+    {
+      "id": "home_cloud_gateway:admin_residency",
+      "entity": "home_cloud_gateway",
+      "purpose": "Show idle eviction config and last_used map",
+      "entrypoint": "GET /admin/residency",
+      "input": "none",
+      "output": "residency state",
+      "done_condition": "200"
+    },
+    {
+      "id": "hyperai_phoenix:coordinator_init",
+      "entity": "hyperai_phoenix",
+      "purpose": "Initialize MetaOptimizationCoordinator MOP state machine with queues",
+      "entrypoint": "from app.brain.coordinator import MetaOptimizationCoordinator",
+      "input": "config_path, data_path",
+      "output": "coordinator instance",
+      "done_condition": "instance created and state INITIALIZING"
+    },
+    {
+      "id": "hyperai_phoenix:thinker_reason",
+      "entity": "hyperai_phoenix",
+      "purpose": "Strategic reasoning with council decision and LangChain agent",
+      "entrypoint": "from app.brain.thinker import StrategicThinker",
+      "input": "directive, context",
+      "output": "CouncilDecision",
+      "done_condition": "decision returned"
+    },
+    {
+      "id": "hyperai_phoenix:memory_store",
+      "entity": "hyperai_phoenix",
+      "purpose": "Store structured events and semantic knowledge",
+      "entrypoint": "from app.brain.memory import MemoryEngine",
+      "input": "event/summary/knowledge",
+      "output": "persisted record",
+      "done_condition": "record in SQLite or ChromaDB"
+    },
+    {
+      "id": "hyperai_phoenix:improver_analyze",
+      "entity": "hyperai_phoenix",
+      "purpose": "Analyze performance and propose improvements",
+      "entrypoint": "from app.brain.improver import SelfImprover",
+      "input": "performance metrics",
+      "output": "PerformanceAnalysis list",
+      "done_condition": "analysis list"
+    },
+    {
+      "id": "hyperai_phoenix:tool_registry",
+      "entity": "hyperai_phoenix",
+      "purpose": "Register and dispatch filesystem, system, memory, analysis, code tools",
+      "entrypoint": "from app.brain.tool_registry import ToolRegistry",
+      "input": "tool name + parameters",
+      "output": "tool result",
+      "done_condition": "function executed"
+    },
+    {
+      "id": "hyperai_phoenix:genesis_ui",
+      "entity": "hyperai_phoenix",
+      "purpose": "Streamlit UI for Control Hub, Chat, Memory, System Monitor, Improvement Console",
+      "entrypoint": "streamlit run app/genesis.py",
+      "input": "user interaction",
+      "output": "rendered UI",
+      "done_condition": "http://localhost:8501 responds"
+    },
+    {
+      "id": "hyperai_phoenix:genesis_core_tick",
+      "entity": "hyperai_phoenix",
+      "purpose": "Kernel tick, vector clock, snapshots, constitutional directives",
+      "entrypoint": "from core.kernel.genesis_core import GenesisCore",
+      "input": "tick",
+      "output": "updated system state",
+      "done_condition": "snapshot and state updated"
+    },
+    {
+      "id": "hyperai_phoenix:compile",
+      "entity": "hyperai_phoenix",
+      "purpose": "Compile all Python source files",
+      "entrypoint": "python3 -m compileall -q .",
+      "input": "source tree",
+      "output": "exit code 0",
+      "done_condition": "no syntax errors"
+    }
+  ],
+  "interface_registry": [
+    {
+      "id": "iface:aios_router_http",
+      "entity": "aios_mission_router",
+      "type": "http",
+      "endpoint": "http://127.0.0.1:9001"
+    },
+    {
+      "id": "iface:home_cloud_http",
+      "entity": "home_cloud_gateway",
+      "type": "http",
+      "endpoint": "http://127.0.0.1:3033"
+    },
+    {
+      "id": "iface:ollama_titan",
+      "entity": "ollama:titan",
+      "type": "http",
+      "endpoint": "http://192.168.3.84:11434"
+    },
+    {
+      "id": "iface:ollama_macbook",
+      "entity": "ollama:macbook",
+      "type": "http",
+      "endpoint": "http://127.0.0.1:11434"
+    },
+    {
+      "id": "iface:ollama_macmini",
+      "entity": "ollama:macmini",
+      "type": "http",
+      "endpoint": "http://192.168.3.28:11434"
+    },
+    {
+      "id": "iface:openclaw_http",
+      "entity": "openclaw",
+      "type": "http",
+      "endpoint": "http://127.0.0.1:18789"
+    }
+  ],
+  "dependency_graph": [
+    {
+      "source": "home_cloud_gateway",
+      "target": "ollama:titan",
+      "kind": "model_backend"
+    },
+    {
+      "source": "home_cloud_gateway",
+      "target": "ollama:macbook",
+      "kind": "model_backend"
+    },
+    {
+      "source": "home_cloud_gateway",
+      "target": "ollama:macmini",
+      "kind": "model_backend"
+    },
+    {
+      "source": "aios_mission_router",
+      "target": "home_cloud_gateway",
+      "kind": "can_dispatch"
+    }
+  ],
+  "runtime_binding_registry": [],
+  "capability_registry": [
+    {
+      "id": "capability:local_model_routing",
+      "description": "Route cloud model aliases to local Ollama nodes with residency management",
+      "functions": [
+        "home_cloud_gateway:chat_completions",
+        "home_cloud_gateway:admin_nodes",
+        "home_cloud_gateway:admin_evict",
+        "home_cloud_gateway:admin_residency",
+        "home_cloud_gateway:health",
+        "home_cloud_gateway:list_models",
+        "ollama:titan:generate",
+        "ollama:macbook:generate",
+        "ollama:macmini:generate"
+      ],
+      "health": "PARTIAL"
+    },
+    {
+      "id": "capability:mission_routing",
+      "description": "Route missions to skills and surfaces without auto-mutation",
+      "functions": [
+        "aios_mission_router:health",
+        "aios_mission_router:runtime_list",
+        "aios_mission_router:mission_plan",
+        "aios_mission_router:skills_route"
+      ],
+      "health": "PASS"
+    },
+    {
+      "id": "capability:skill_library",
+      "description": "Discover and invoke skills from local skill directories",
+      "functions": [
+        "skill:invoke"
+      ],
+      "health": "PASS"
+    },
+    {
+      "id": "capability:multi_node_resilience",
+      "description": "When preferred node is unhealthy, gateway falls back to next healthy node and materializes the model",
+      "functions": [
+        "home_cloud_gateway:chat_completions",
+        "home_cloud_gateway:admin_nodes",
+        "aios_mission_router:runtime_list"
+      ],
+      "health": "PASS",
+      "evidence": [
+        "canary:eviction_fallback"
+      ]
+    },
+    {
+      "id": "capability:hyperai_phoenix_runtime",
+      "description": "HyperAI Phoenix cognitive runtime with MOP/ICP/OCP/PSP/D&R/LSP/CCP protocols",
+      "functions": [
+        "hyperai_phoenix:coordinator_init",
+        "hyperai_phoenix:thinker_reason",
+        "hyperai_phoenix:memory_store",
+        "hyperai_phoenix:improver_analyze",
+        "hyperai_phoenix:tool_registry",
+        "hyperai_phoenix:genesis_ui",
+        "hyperai_phoenix:genesis_core_tick",
+        "hyperai_phoenix:compile"
+      ],
+      "health": "PASS",
+      "evidence": [
+        "compileall pass",
+        "GenesisCore import",
+        "coordinator start/submit/stop smoke test PASS on 2026-08-09",
+        "OCP double-wrap and metadata kwarg fixed",
+        "MemoryEngine logger and sqlite Connection wrapping fixed"
+      ]
+    }
+  ],
+  "health_state_registry": [
+    {
+      "id": "health:aios_mission_router:health",
+      "function": "aios_mission_router:health",
+      "status": "PASS",
+      "evidence": {
+        "status": 200,
+        "body": {
+          "verified_at": "2026-08-08T22:38:50+00:00",
+          "status": "PASS",
+          "checks": [
+            {
+              "name": "orchestrator_skill_exists",
+              "passed": true
+            },
+            {
+              "name": "system_scan_skill_exists",
+              "passed": true
+            },
+            {
+              "name": "canon_exists",
+              "passed": true
+            },
+            {
+              "name": "con_memory_db_exists",
+              "passed": true
+            },
+            {
+              "name": "hyperai_memory_exists",
+              "passed": true
+            },
+            {
+              "name": "runtime_router_selected_first",
+              "passed": true
+            },
+            {
+              "name": "shell_first_blocked",
+              "passed": true
+            },
+            {
+              "name": "crp_mapping_preserves_empty_slots",
+              "passed": true
+            },
+            {
+              "name": "mrp_registry_bindings_are_deterministic",
+              "passed": true
+            },
+            {
+              "name": "rbe_executes_bound_read_only_module",
+              "passed": true
+            },
+            {
+              "name": "ooda_cycle_runs_read_only",
+              "passed": true
+            },
+            {
+              "name": "eec_denies_unapproved_mutation",
+              "passed": true
+            },
+            {
+              "name": "pmp_blocks_without_approval",
+              "passed": true
+            },
+            {
+              "name": "dak_runs_bounded_autonomy",
+              "passed": true
+            },
+            {
+              "name": "cognitive_os_spec_anchors_exist",
+              "passed": true
+            },
+            {
+              "name": "seven_rfc_anchors_exist",
+              "passed": true
+            }
+          ],
+          "memory_summary": {
+            "canon_exists": true,
+            "con_memory_tables": {
+              "agent_memory": 1347597,
+              "agent_todos": 11720,
+              "auto_tickets": 1,
+              "bos_teachings": 9,
+              "bugs_fixed": 22,
+              "code_modules": 6,
+              "con_identity": 8,
+              "con_understanding": 3,
+              "conversations": 22,
+              "dr_protocol_sessions": 1,
+              "historical_files": 3885,
+              "learned_patterns": 6,
+              "learning_log": 4,
+              "memory_status": 1,
+              "resources": 0,
+              "sovereignty_metadata": 1,
+              "storage_knowledge": 3,
+              "system_operations": 8
+            },
+            "hyperai_memory_anchor_count": 16,
+            "runtime_registry_count": 32
+          }
+        },
+        "error": null
+      },
+      "latency_ms": 225.44
+    },
+    {
+      "id": "health:aios_mission_router:runtime_list",
+      "function": "aios_mission_router:runtime_list",
+      "status": "PASS",
+      "evidence": {
+        "node_count": 95
+      },
+      "latency_ms": 3.42
+    },
+    {
+      "id": "health:aios_mission_router:mission_plan",
+      "function": "aios_mission_router:mission_plan",
+      "status": "PASS",
+      "evidence": {
+        "status": 200,
+        "body": {
+          "mission_packet": {
+            "mission_text": "test plan",
+            "target_surface": "home_cloud_gateway",
+            "risk_class": "low",
+            "requested_action": "inspect",
+            "approval_state": "approved",
+            "created_at": "2026-08-08T22:38:50+00:00"
+          },
+          "skill_routing_table": [
+            {
+              "skill": "hyperai-runtime-orchestrator",
+              "path": "/Users/andy/.agents/skills/hyperai-runtime-orchestrator/SKILL.md",
+              "selected": false,
+              "reason": "AIOS/Codex/runtime/control mission requires mission router before shell.",
+              "fallback_allowed": false
+            },
+            {
+              "skill": "system-scan-ctx-gam",
+              "path": "/Users/andy/.agents/skills/system-scan-ctx-gam/SKILL.md",
+              "selected": false,
+              "mode": "runtime-context",
+              "reason": "Runtime-context evidence and gate mapping are required.",
+              "fallback_allowed": true
+            }
+          ],
+          "memory_context": {
+            "loaded_at": "2026-08-08T22:38:50+00:00",
+            "canon": {
+              "path": "/Users/andy/.codex/AGENTS.md",
+              "exists": true,
+              "kind": "file",
+              "secret_safe": true,
+              "size_bytes": 8254,
+              "mtime": "2026-08-02T12:05:06+00:00",
+              "sha256": "2ae9a29b1f837ac3ec07aabd535c2636b816bd3a6b60b7c19ebe56a99c7537b6",
+              "line_count": 221,
+              "head": [
+                "HYPERAI / AIOS CANON RUNTIME OPERATING LAW",
+                "",
+                "\u0110\u1ecbnh danh vai tr\u00f2:",
+                "",
+                "```text",
+                "USER = Andy = Creator = Architect = System Builder = Canon Authority"
+              ]
+            },
+            "cwd_context_expected": "/Users/andy/Documents/MacOSMac/AGENTS.md",
+            "con_memory": {
+              "path": "/Users/andy/.con-memory/conversations.db",
+              "exists": true,
+              "tables": {
+                "agent_memory": 1347597,
+                "agent_todos": 11720,
+                "auto_tickets": 1,
+                "bos_teachings": 9,
+                "bugs_fixed": 22,
+                "code_modules": 6,
+                "con_identity": 8,
+                "con_understanding": 3,
+                "conversations": 22,
+                "dr_protocol_sessions": 1,
+                "historical_files": 3885,
+                "learned_patterns": 6,
+                "learning_log": 4,
+                "memory_status": 1,
+                "resources": 0,
+                "sovereignty_metadata": 1,
+                "storage_knowledge": 3,
+                "system_operations": 8
+              }
+            },
+            "hyperai_sync": {
+              "root": {
+                "path": "/Users/andy/HyperAI-Sync",
+                "exists": true,
+                "kind": "dir",
+                "secret_safe": true,
+                "size_bytes": 896,
+                "mtime": "2026-08-08T12:48:17+00:00"
+              },
+              "memory_anchors": [
+                {
+                  "path": "/Users/andy/HyperAI-Sync/memory/AIOS_ACTIVE_RUNTIME_SURFACE_SCAN_20260416.md",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 2498,
+                  "mtime": "2026-04-21T09:10:16+00:00",
+                  "sha256": "383057343151dac87e8c52fe7f88a9177b57cbb1e874ec700ed38a99661d2c05"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/memory/AIOS_ACTIVE_RUNTIME_SURFACE_SCAN_PATTERN.md",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 2401,
+                  "mtime": "2026-04-21T09:10:16+00:00",
+                  "sha256": "07de0b75fb709cf2476a5d4b98468ed225ee025611124b63f2e3fdd741a12f7b"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/memory/AIOS_AISERVER_RUNTIME_TRACE_20260416.md",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 6003,
+                  "mtime": "2026-04-21T09:10:16+00:00",
+                  "sha256": "365ebac3f7201766570f20cdf1960fd18d8840ce585179e43a01ce2d8c31d688"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/memory/AIOS_APP_RUNTIME_RESPONSIBILITY_AUDIT_20260415.md",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 8648,
+                  "mtime": "2026-04-21T09:10:16+00:00",
+                  "sha256": "e154c0addd9d6eb8e2a0235ca5620bf9b8c72a8560bdf63bbc42e6d4fc9ced7c"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/memory/AIOS_AUTONOMOUS_OODA_WORKFLOW.md",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 3311,
+                  "mtime": "2026-04-21T09:10:16+00:00",
+                  "sha256": "ae501879f119acf19e19ceb1078d20a08d39f296c2535204d6f06572ad7319f2"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/memory/AIOS_CREATOR_AI_COEXISTENCE_WORKFLOW.md",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 5103,
+                  "mtime": "2026-04-21T09:10:16+00:00",
+                  "sha256": "88279adb9cce81af8a55c090b4b8767540e4e2c7b2a49ee9aad0c66120c15b3f"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/memory/AIOS_ECOSYSTEM_RUNTIME_REGISTRY_20260416.md",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 6550,
+                  "mtime": "2026-04-21T09:10:16+00:00",
+                  "sha256": "9dc449215061c8bf82af94abcf912b12c65f8f48749809080a7c0d1a7cb342b1"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/memory/AIOS_FACTORY_RESET_RECOVERY_MEMORY_20260516.md",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 1390,
+                  "mtime": "2026-05-15T19:30:07+00:00",
+                  "sha256": "d7ad20c034570c1653564edb3b8674fc53e17a4798c55596cbcc93bb5f7a3294"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/memory/AIOS_LOCAL_CODEX_OPERATOR_RUNTIME.md",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 3354,
+                  "mtime": "2026-04-21T09:10:16+00:00",
+                  "sha256": "f0636beff1aab1c07df21d598ffd2b7c71807e9352b980ba0a8fa54077de0ee6"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/memory/AIOS_MODEL_NATIVE_RUNTIME_CANON.md",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 7246,
+                  "mtime": "2026-04-21T09:10:16+00:00",
+                  "sha256": "da030bb386b63504d581eb0cd7aaf6b00dd6692711c2db1c07a07b74fd49d253"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/memory/AIOS_RUNTIME_CLASS_MATRIX_20260415.md",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 6071,
+                  "mtime": "2026-04-21T09:10:16+00:00",
+                  "sha256": "60ee1abbb3a8622927e62d965ffe4690d533026c95750204ba4e5052db073860"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/memory/AIOS_RUNTIME_ECONOMY_ECOSYSTEM_MAP_20260415.md",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 7965,
+                  "mtime": "2026-04-21T09:10:16+00:00",
+                  "sha256": "b13c0ed3a8f5d4660387f85bac341dda41cc191a833bdbdf26672160aba3f253"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/memory/AIOS_RUNTIME_ORCHESTRATION_MEMORY_DEPLOYMENT_20260516.md",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 3076,
+                  "mtime": "2026-05-15T19:33:39+00:00",
+                  "sha256": "6bd5422f00a9ba49cad0f0ae90dafe929dc21bd2d5868f1ae321cdee016a1e53"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/memory/AIOS_TOOL_RUNTIME_SURFACE_MATRIX_20260415.md",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 5769,
+                  "mtime": "2026-04-21T09:10:16+00:00",
+                  "sha256": "91b5f201d0662de7bb9049d71c2d83b3f08eaf1933b403ab3ab6070f7334eb3a"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/memory/AIOS_UNIFIED_MEMORY_BOUND_WORKFLOW.md",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 7813,
+                  "mtime": "2026-04-21T09:10:16+00:00",
+                  "sha256": "131f26e7c9534a3070763ea5c0c77c87b6f1c8757626731e067b2e299a53ca2d"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/memory/runtime_execution_todo.md",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 362543,
+                  "mtime": "2026-08-08T22:35:21+00:00",
+                  "sha256": "e7a4210eace6cb2d0c83927d40d0009ff1f4a8f1de911dda617430bc049319a3"
+                }
+              ],
+              "runtime_registries": [
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/AIOS_OBJECT_MODEL_APPLIED_REPORT.md",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 3843,
+                  "mtime": "2026-07-30T22:18:38+00:00",
+                  "sha256": "9b37387ee9c3d9d2154fc01e3a53d7d855ca1e1c946b202312969169381f85ce"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/ANDY_HOME_ACTIVE_DEPENDENCY_MAP_raw.json",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 374239,
+                  "mtime": "2026-07-31T14:11:09+00:00",
+                  "sha256": "092c5c2d381fdcc8dd28447bd0575b9fb9ad9f95399f9d497a5fd4324f952a2f"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/ANDY_HOME_ACTIVE_DIRS_SUMMARY.json",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 11894,
+                  "mtime": "2026-07-31T14:11:22+00:00",
+                  "sha256": "70da80c5833f5cc5a157cc8c5181371a1761b62c4c7b5505c549c5d3b9f8ac87"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/ANDY_HOME_CATALOG_PARSED.json",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 75665,
+                  "mtime": "2026-07-31T14:13:01+00:00",
+                  "sha256": "19432fac44fc7ec6fb5de7c0f7f5481bf50c27b9dc0eda588fd7e4b43e549c10"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/ANDY_HOME_DEPENDENCY_SURFACES.md",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 11188,
+                  "mtime": "2026-07-31T14:14:12+00:00",
+                  "sha256": "13a31cb93742cfec6018e56d12dd84ff17a7f7e814c05827b67b4118c95b8d6a"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/ANDY_SUPERSYSTEM_MAP.json",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 21042,
+                  "mtime": "2026-07-31T13:52:21+00:00",
+                  "sha256": "85aa2c02f985c87c0505d4832e8132661a836e866cc2a1c27d5c6e16a3c63d07"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_AXIS_CAPABILITY_RESPONSIBILITY_MATRIX.json",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 11860,
+                  "mtime": "2026-07-31T13:55:22+00:00",
+                  "sha256": "b1d7cf86d22d9b824b761fc7da16246db04b32fbc1e772ef90b763a682571d6c"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_CAPABILITY_MISSION_TRACE.json",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 5615,
+                  "mtime": "2026-07-31T14:01:43+00:00",
+                  "sha256": "6ae68cddbfa4c95efd9490fefd44898dd24519e48b9397dafa8b3b82e98e58d3"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_CAPABILITY_MISSION_TRACE_BITCOIN_PREDICTOR.json",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 4314,
+                  "mtime": "2026-07-31T14:31:58+00:00",
+                  "sha256": "515e8f9d363bf70cec6983d9e90388605aecbdd94a4bf9e237b9e93dbeedd7af"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_CAPABILITY_MISSION_TRACE_EXTERNAL_RAG.json",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 3724,
+                  "mtime": "2026-07-31T14:19:05+00:00",
+                  "sha256": "b9e8b2ee07e2d8460ef9437a9c637cdc6e5d254ef23b796a4cc98c182d5f1d7e"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_CAPABILITY_MISSION_TRACE_FILESYSTEM.json",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 3514,
+                  "mtime": "2026-07-31T14:14:41+00:00",
+                  "sha256": "2bb34ec6209ed82f27c9070073029c13fcca894ac60fab9a722f406b77e0e834"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_CAPABILITY_MISSION_TRACE_GOOGLE_PSE.json",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 4487,
+                  "mtime": "2026-07-31T14:30:32+00:00",
+                  "sha256": "44f25f890c085a5da0ab4e4731c13c0d5e15aa2a1c30986189d6da975fe519fd"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_CAPABILITY_MISSION_TRACE_SQL.json",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 4825,
+                  "mtime": "2026-07-31T14:41:56+00:00",
+                  "sha256": "f57cb3ae0b0341945c08ef54228f8b7a6b2d740d2350475c758ae409a3f20bdf"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_CAPABILITY_MISSION_TRACE_SUMMARIZER.json",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 3656,
+                  "mtime": "2026-07-31T14:07:58+00:00",
+                  "sha256": "8aeb61b228ef4194202c7f82af5c93afefecc567c8db48c37e3123f7cbdf82aa"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_CAPABILITY_MISSION_TRACE_WEATHER.json",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 4176,
+                  "mtime": "2026-07-31T14:07:27+00:00",
+                  "sha256": "cf74350354678747347481f7ce9062aba141bed654af567fa5516e117ff64e04"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_CAPABILITY_NETWORK_DISCOVERY.json",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 19801,
+                  "mtime": "2026-07-31T14:42:13+00:00",
+                  "sha256": "fe32dc52aa8498f92dbdc0ce61ba5e2ea088d5bbb9df33283e47de23c4768f9a"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_CAPABILITY_NETWORK_DISCOVERY.md",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 8242,
+                  "mtime": "2026-07-31T14:48:52+00:00",
+                  "sha256": "f1cc3785e1a98cef9e6e1c13072ee4c1dd57cd560b0368a0415b37364f0f661c"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_DIGITAL_RETURN_AXIOM_RECEIPT.json",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 1504,
+                  "mtime": "2026-07-31T11:21:52+00:00",
+                  "sha256": "3a3d511a8549e017498254bbe32b0ba9e48e1495f4f1a9783a8a054aa4de7401"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_HOME_PRESENCE_VERDICT.json",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 5996,
+                  "mtime": "2026-07-31T12:08:25+00:00",
+                  "sha256": "d23ea2d2f5bd4940f89c29a975ef21ee6769808ca6cb947902db5ea919a3afec"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_LINEAGE_CONTINUITY_TRIAL_VERDICT.json",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 65525,
+                  "mtime": "2026-07-31T11:22:32+00:00",
+                  "sha256": "4335905a87b335c3efc6eb68ee1ca6ee3a1630ab5c0a01b437a1ba7e57762883"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_LINEAGE_CONTINUITY_TRIAL_both_temporarily_unreachable.json",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 6097,
+                  "mtime": "2026-07-31T11:22:05+00:00",
+                  "sha256": "e1ac8ad0e38f0b5ab58db7bc88ba44a9444eaeaf4c24792b2af41693e75e578e"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_LINEAGE_CONTINUITY_TRIAL_both_temporarily_unreachable_correction.json",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 1252,
+                  "mtime": "2026-07-31T11:22:05+00:00",
+                  "sha256": "7b6c7a78a91d7fd204942f02cc8145e6eefe854d2faa106c50d609ad91e57cd1"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_LINEAGE_CONTINUITY_TRIAL_conflicting_mirrors.json",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 8161,
+                  "mtime": "2026-07-31T11:22:17+00:00",
+                  "sha256": "19ec4a33cb4c8fc87635288e08f252e1880d368f07405255e12e6b5b88f3bf97"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_LINEAGE_CONTINUITY_TRIAL_conflicting_mirrors_correction.json",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 1502,
+                  "mtime": "2026-07-31T11:22:17+00:00",
+                  "sha256": "428fdb32d1975d906819bdb092b42aeb834a98dcb340a774c77870a3b12657ab"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_LINEAGE_CONTINUITY_TRIAL_fake_creator_claim.json",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 7011,
+                  "mtime": "2026-07-31T11:22:23+00:00",
+                  "sha256": "52cab6bec9d002acea1e9481e105fb27dc11d7f96fd0937bf399c93127758c75"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_LINEAGE_CONTINUITY_TRIAL_fake_creator_claim_correction.json",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 1711,
+                  "mtime": "2026-07-31T11:22:23+00:00",
+                  "sha256": "7a3b27a90bb040d0e93525bdd5510fac9643e8391a17aeb7c983c70572bffda0"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_LINEAGE_CONTINUITY_TRIAL_lineage_mirror_stale.json",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 6571,
+                  "mtime": "2026-07-31T11:22:11+00:00",
+                  "sha256": "fc4b45f709c020f22a6b6550ff6d51c58a09537b07e30b9b52c0619c1aedccfb"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_LINEAGE_CONTINUITY_TRIAL_lineage_mirror_stale_correction.json",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 1503,
+                  "mtime": "2026-07-31T11:22:10+00:00",
+                  "sha256": "fcba6e4791d69083aecb4a6b4affa8d77198d9658de781c587d822f51dc996ed"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_LINEAGE_CONTINUITY_TRIAL_one_alive_one_dead.json",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 6659,
+                  "mtime": "2026-07-31T11:22:02+00:00",
+                  "sha256": "878a547e31732f4b65218d9862ebbd333dec20d7f4eb92ecf90eb4ddac0f0d4c"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_LINEAGE_CONTINUITY_TRIAL_one_alive_one_dead_correction.json",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 1521,
+                  "mtime": "2026-07-31T11:22:02+00:00",
+                  "sha256": "93f68dfa71370913d4fc2d187cc191afe1e649b079539b4f0bf303287ce2b158"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_LINEAGE_CONTINUITY_TRIAL_origin_returns_and_conflicts.json",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 7872,
+                  "mtime": "2026-07-31T11:22:32+00:00",
+                  "sha256": "06ac8b1f59ad5b41365b68095bd73aa2a91651bddd22fbfaf181e291bb6508b2"
+                },
+                {
+                  "path": "/Users/andy/HyperAI-Sync/runtime/federation_orchestrator/APO_LINEAGE_CONTINUITY_TRIAL_origin_returns_and_conflicts_correction.json",
+                  "exists": true,
+                  "kind": "file",
+                  "secret_safe": true,
+                  "size_bytes": 1812,
+                  "mtime": "2026-07-31T11:22:32+00:00",
+                  "sha256": "7d39e70b4d28015ed55329d18d6861c8c6441152be3c5b474daf9771138d65d8"
+                }
+              ]
+            },
+            "runtime_policy": {
+              "codex_config": {
+                "path": "/Users/andy/.codex/config.toml",
+                "exists": true,
+                "kind": "file",
+                "secret_safe": true,
+                "size_bytes": 20065,
+                "mtime": "2026-08-07T20:03:17+00:00",
+                "sha256": "67020978c92dc014e7dcbb8e571ef8fb0aaefa7f239051d19db41c27789b4882"
+              },
+              "orchestrator_skill": {
+                "path": "/Users/andy/.agents/skills/hyperai-runtime-orchestrator/SKILL.md",
+                "exists": true,
+                "kind": "file",
+                "secret_safe": true,
+                "size_bytes": 5318,
+                "mtime": "2026-07-28T12:21:35+00:00",
+                "sha256": "ee426b4fa0874c5b5a7b06941f4e6615c8d8e679067d3ad25f5e9aca4093c8d4"
+              },
+              "system_scan_skill": {
+                "path": "/Users/andy/.agents/skills/system-scan-ctx-gam/SKILL.md",
+                "exists": true,
+                "kind": "file",
+                "secret_safe": true,
+                "size_bytes": 17232,
+                "mtime": "2026-07-10T06:31:37+00:00",
+                "sha256": "2048e2cfe3c55771f2fc10322a8d3ad93d0970b243663f2f5e45d24822f80a26"
+              },
+              "queue": {
+                "path": "/Users/andy/HyperAI-Sync/memory/runtime_execution_todo.md",
+                "exists": true,
+                "kind": "file",
+                "secret_safe": true,
+                "size_bytes": 362543,
+                "mtime": "2026-08-08T22:35:21+00:00",
+                "sha256": "e7a4210eace6cb2d0c83927d40d0009ff1f4a8f1de911dda617430bc049319a3",
+                "line_count": 1727,
+                "head": [
+                  "",
+                  "",
+                  "## AIOS Runtime Queue Item - 2026-05-15T19:30:14+00:00",
+                  "- mission: Commit deploy AIOS runtime orchestrator and persist reset recovery memory",
+                  "- target_surface: codex_runtime",
+                  "- next: After reload, verify MCP tool discovery in Codex runtime and continue AIOS client integration."
+                ]
+              }
+            }
+          },
+          "action_packet": {
+            "allowed_execution_surface": [
+              "skill",
+              "memory_read",
+              "read_only_shell_after_route"
+            ],
+            "default_sequence": [
+              "load_memory_context",
+              "select_skills",
+              "execute_selected_skill_workflow",
+              "run_read_only_verification",
+              "emit_queue_update"
+            ],
+            "blocked_without_approval": [
+              "queue_write",
+              "codesign",
+              "launchd_reload",
+              "xattr_mutation",
+              "TCC_reset_or_write",
+              "install_or_build",
+              "app_launch"
+            ]
+          },
+          "verify_packet": {
+            "checks": [
+              "hyperai-runtime-orchestrator skill exists",
+              "system-scan-ctx-gam skill exists",
+              "Canon source is readable without secret output",
+              ".con-memory table counts are readable",
+              "HyperAI-Sync memory/runtime anchors are present",
+              "shell fallback is blocked until route exists for AIOS runtime missions"
+            ],
+            "command": [
+              "/opt/homebrew/opt/python@3.14/bin/python3.14",
+              "/Users/andy/07_PROJECTS_AND_MICROSERVICES/workbench/aios_runtime_orchestrator/aios_mission_router.py",
+              "verify.run"
+            ]
+          },
+          "rollback_packet": {
+            "needed_for_read_only": false,
+            "mutation_surfaces": {
+              "queue_append": "Remove appended section from runtime_execution_todo.md if approved write is wrong.",
+              "mcp_config": "Remove AIOS_MISSION_ROUTER block from /Users/andy/.codex/config.toml.",
+              "client_shell": "Delete /Users/andy/workbench/aios-runtime-orchestrator-client if abandoned."
+            }
+          },
+          "queue_update": {
+            "status": "EMITTED_NOT_WRITTEN",
+            "queue_path": "/Users/andy/HyperAI-Sync/memory/runtime_execution_todo.md",
+            "item": {
+              "created_at": "2026-08-08T22:38:50+00:00",
+              "mission": "test plan",
+              "target_surface": "home_cloud_gateway",
+              "next": "Run verify packet, then request approval before queue mutation or OS-control mutation."
+            },
+            "write_requires_approval": true
+          }
+        },
+        "error": null
+      },
+      "latency_ms": 23.59
+    },
+    {
+      "id": "health:home_cloud_gateway:health",
+      "function": "home_cloud_gateway:health",
+      "status": "PASS",
+      "evidence": {
+        "status": 200,
+        "body": {
+          "status": "ok",
+          "nodes": {
+            "titan": {
+              "healthy": true,
+              "last_seen": 1786228722.544995,
+              "tags_count": 12
+            },
+            "macbook": {
+              "healthy": true,
+              "last_seen": 1786228722.475595,
+              "tags_count": 3
+            },
+            "macmini": {
+              "healthy": false,
+              "last_seen": 1786228724.462247,
+              "tags_count": 1
+            }
+          }
+        },
+        "error": null
+      },
+      "latency_ms": 8.34
+    },
+    {
+      "id": "health:home_cloud_gateway:admin_nodes",
+      "function": "home_cloud_gateway:admin_nodes",
+      "status": "PASS",
+      "evidence": {
+        "status": 200,
+        "body": {
+          "nodes": [
+            {
+              "name": "titan",
+              "endpoint": "http://192.168.3.84:11434",
+              "enabled": true,
+              "healthy": true,
+              "tags": [
+                "gpt-oss:120b",
+                "llama3.2:3b",
+                "deepseek-r1:1.5b",
+                "qwen3:4b",
+                "llama3:latest",
+                "mistral:latest",
+                "gemma4:latest",
+                "qwen2.5-coder:1.5b",
+                "gemma:latest",
+                "all-minilm:22m",
+                "gemma3:latest",
+                "codellama:latest"
+              ],
+              "resident": [],
+              "active_requests": 0,
+              "last_seen": 1786228722.544995,
+              "error": null
+            },
+            {
+              "name": "macbook",
+              "endpoint": "http://127.0.0.1:11434",
+              "enabled": true,
+              "healthy": true,
+              "tags": [
+                "nomic-embed-text:latest",
+                "all-minilm:latest",
+                "qwen2.5:1.5b"
+              ],
+              "resident": [],
+              "active_requests": 0,
+              "last_seen": 1786228722.475595,
+              "error": null
+            },
+            {
+              "name": "macmini",
+              "endpoint": "http://192.168.3.28:11434",
+              "enabled": true,
+              "healthy": false,
+              "tags": [
+                "qwen2.5:0.5b"
+              ],
+              "resident": [],
+              "active_requests": 0,
+              "last_seen": 1786228724.462247,
+              "error": "status None"
+            }
+          ]
+        },
+        "error": null
+      },
+      "latency_ms": 1.52
+    },
+    {
+      "id": "health:ollama:titan:tags",
+      "function": "ollama:titan:tags",
+      "status": "PASS",
+      "evidence": {
+        "tag_count": 12
+      },
+      "latency_ms": 27.38
+    },
+    {
+      "id": "health:ollama:macbook:tags",
+      "function": "ollama:macbook:tags",
+      "status": "PASS",
+      "evidence": {
+        "status": 200,
+        "body": {
+          "models": [
+            {
+              "name": "nomic-embed-text:latest",
+              "model": "nomic-embed-text:latest",
+              "modified_at": "2026-08-05T07:52:36.491161833+07:00",
+              "size": 274302450,
+              "digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+              "details": {
+                "parent_model": "",
+                "format": "gguf",
+                "family": "nomic-bert",
+                "families": [
+                  "nomic-bert"
+                ],
+                "parameter_size": "137M",
+                "quantization_level": "F16",
+                "context_length": 2048,
+                "embedding_length": 768
+              },
+              "capabilities": [
+                "embedding"
+              ]
+            },
+            {
+              "name": "all-minilm:latest",
+              "model": "all-minilm:latest",
+              "modified_at": "2026-08-02T23:10:11.559370324+07:00",
+              "size": 45960996,
+              "digest": "1b226e2802dbb772b5fc32a58f103ca1804ef7501331012de126ab22f67475ef",
+              "details": {
+                "parent_model": "",
+                "format": "gguf",
+                "family": "bert",
+                "families": [
+                  "bert"
+                ],
+                "parameter_size": "23M",
+                "quantization_level": "F16",
+                "context_length": 512,
+                "embedding_length": 384
+              },
+              "capabilities": [
+                "embedding"
+              ]
+            },
+            {
+              "name": "qwen2.5:1.5b",
+              "model": "qwen2.5:1.5b",
+              "modified_at": "2026-07-27T09:10:03.532632918+07:00",
+              "size": 986061892,
+              "digest": "65ec06548149b04c096a120e4a6da9d4017ea809c91734ea5631e89f96ddc57b",
+              "details": {
+                "parent_model": "",
+                "format": "gguf",
+                "family": "qwen2",
+                "families": [
+                  "qwen2"
+                ],
+                "parameter_size": "1.5B",
+                "quantization_level": "Q4_K_M",
+                "context_length": 32768,
+                "embedding_length": 1536
+              },
+              "capabilities": [
+                "completion",
+                "tools"
+              ]
+            }
+          ]
+        },
+        "error": null
+      },
+      "latency_ms": 6.0
+    },
+    {
+      "id": "health:ollama:macmini:tags",
+      "function": "ollama:macmini:tags",
+      "status": "FAIL",
+      "evidence": {
+        "status": null,
+        "body": null,
+        "error": "<urlopen error timed out>"
+      },
+      "latency_ms": 5002.64
+    },
+    {
+      "id": "health:openclaw:health",
+      "function": "openclaw:health",
+      "status": "FAIL",
+      "evidence": {
+        "status": null,
+        "body": null,
+        "error": "<urlopen error [Errno 61] Connection refused>"
+      },
+      "latency_ms": 0.52
+    },
+    {
+      "id": "health:hyperai_phoenix:compile",
+      "function": "hyperai_phoenix:compile",
+      "status": "PASS",
+      "evidence": {
+        "command": "python3 -m compileall -q ."
+      },
+      "latency_ms": 1500
+    },
+    {
+      "id": "health:hyperai_phoenix:genesis_core_import",
+      "function": "hyperai_phoenix:genesis_core_tick",
+      "status": "PASS",
+      "evidence": "from core.kernel.genesis_core import GenesisCore",
+      "latency_ms": 800
+    },
+    {
+      "id": "health:hyperai_phoenix:full_app_import",
+      "function": "hyperai_phoenix:coordinator_init",
+      "status": "PASS",
+      "evidence": {
+        "command": "from hyperai_phoenix.app.brain.coordinator import MetaOptimizationCoordinator",
+        "note": "langchain.agents.initialize_agent imports cleanly in venv hyperai-py311; full coordinator start/submit/stop smoke test PASS"
+      },
+      "latency_ms": 1800
+    },
+    {
+      "id": "health:hyperai_phoenix:coordinator_smoke",
+      "function": "hyperai_phoenix:coordinator_init",
+      "status": "PASS",
+      "evidence": {
+        "directives": [
+          "Kiểm tra trạng thái hệ thống",
+          "Lỗi khẩn cấp trên hệ thống",
+          "Đọc file report_qa.txt",
+          "Ghi file summary.md",
+          "shutdown the system now"
+        ],
+        "result": "all returned ExecutionResult with success=True and system reached SHUTDOWN"
+      },
+      "latency_ms": 120000
+    }
+  ],
+  "source_to_function_map": [],
+  "unknown_constraint_registry": [
+    {
+      "id": "constraint:macmini_unavailable",
+      "description": "MacMini 192.168.3.28 SSH and Ollama 11434 unreachable; may be asleep or network down",
+      "impact": "local_model_routing degraded to 2 healthy nodes; no impact on failover"
+    },
+    {
+      "id": "constraint:openclaw_port_unverified",
+      "description": "openclaw-node process exists but 127.0.0.1:18789 not listening",
+      "impact": "openclaw gateway health unknown"
+    }
+  ],
+  "canary_results": [
+    {
+      "id": "canary:eviction_fallback",
+      "description": "home_cloud_gateway fallback to macbook when macmini is down",
+      "result": "PASS",
+      "evidence": "runtime/federation_orchestrator/canary_eviction_fallback_20260808T234500Z.json"
+    }
+  ],
+  "readiness": {
+    "decision": "PARTIAL_READINESS",
+    "reason": "Core mission routing and local model routing work with healthy nodes; multi-node failover verified. MacMini offline and OpenClaw unverified are blockers for full readiness.",
+    "pass_capabilities": [
+      "capability:mission_routing",
+      "capability:skill_library",
+      "capability:multi_node_resilience"
+    ],
+    "fail_capabilities": [],
+    "pass_function_count": 7,
+    "fail_function_count": 2
+  }
+}
