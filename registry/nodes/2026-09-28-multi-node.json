@@ -1,0 +1,56 @@
+{
+  "schema": "hyperai.multi_node_sync.v1",
+  "generated_at": "2026-09-28T22:00:00+07:00",
+  "canonical_sources": {
+    "github_control_repo": "Copilot-home/hyperai-user-control-system",
+    "github_sync_repo": "Copilot-home/HyperAI-Sync",
+    "notion_workspace": "Lineage_AI",
+    "linear_teams": ["Lineage-ai", "Wwwwaa"]
+  },
+  "nodes": [
+    {
+      "id": "ai",
+      "device": "Remote Desktop Commander",
+      "os": "Windows 11 Pro 22631",
+      "arch": "x64",
+      "node": "24.7.0",
+      "python": "3.12.9",
+      "hyperai_repo": "C:/Users/pc/HyperAI_Phoenix_Master/hyperai-user-control-system",
+      "git_branch": "main",
+      "git_head": "db8a340",
+      "git_changed_files": 22,
+      "ollama": "11434",
+      "openclaw": "18789",
+      "llama_server_processes_observed": 2,
+      "constraint": "do not stop or restart llama-server"
+    },
+    {
+      "id": "Andy-3.local",
+      "device": "Remote Desktop Commander",
+      "os": "macOS 26.7.1",
+      "arch": "arm64",
+      "node": "26.4.0",
+      "python": "3.14.6",
+      "sync_repo": "/Users/andy/01_HYPERAI_FRAMEWORK/HyperAI-Sync",
+      "git_branch": "converge/20260728-eco",
+      "git_head": "b53c3bd1",
+      "git_changed_files": 38699,
+      "ollama": "11434 reachable",
+      "openclaw": "18789 HTTP 200",
+      "constraint": "do not reset or discard existing working-tree changes"
+    }
+  ],
+  "governance": {
+    "evidence_first": true,
+    "capability_authorization_execution_separate": true,
+    "unknown_is_not_pass": true,
+    "sync_policy": "canonical registry first; local mutation only after readback"
+  },
+  "current_delta": {
+    "titan": "active HyperAI control repo; 22 local changes",
+    "mac": "active HyperAI-Sync repo with 38699 local changes; no clean git synchronization attempted",
+    "notion": "connected; keyword search available; AI search requires plan",
+    "linear": "connected; Lineage-ai and Wwwwaa teams visible",
+    "neon": "connected but project is not scoped; project_id required before database inspection"
+  }
+}
