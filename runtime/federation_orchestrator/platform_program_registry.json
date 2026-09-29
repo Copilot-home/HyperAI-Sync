@@ -1,0 +1,112 @@
+{
+  "version": "platform-program-registry-v1",
+  "generated_at": "2026-09-29",
+  "purpose": "Track external platform programs relevant to the HyperAI autonomous repository network.",
+  "authority": {
+    "creator": "NguyenCuong1989",
+    "decision_owner": "creator",
+    "registry_role": "research_and_execution_input",
+    "not_authority_for": [
+      "funding_acceptance",
+      "legal_status",
+      "program_eligibility",
+      "external_account_entitlement"
+    ]
+  },
+  "ecosystem_context": {
+    "network_model": "autonomous_repository_network",
+    "core_repositories_observed": [
+      "NguyenCuong1989/DAIOF-Framework",
+      "NguyenCuong1989/hyperai1989",
+      "Copilot-home/HyperAI-Sync",
+      "Copilot-home/nguyencuong_2509"
+    ],
+    "current_execution_surface": "GitHub",
+    "architectural_contract": "evidence-gated lifecycle"
+  },
+  "programs": [
+    {
+      "id": "openai-codex-for-open-source",
+      "provider": "OpenAI",
+      "type": "open_source_maintainer_program",
+      "current_status": "RESEARCH_VERIFIED",
+      "benefits": [
+        "six months ChatGPT Pro with Codex",
+        "conditional Codex Security access",
+        "API credits through Codex Open Source Fund"
+      ],
+      "eligibility_signal": "core maintainer or widely used public project; projects important to the ecosystem may apply and explain their role",
+      "security_access": "case_by_case",
+      "architectural_relevance": [
+        "Codex-based repository maintenance",
+        "PR review automation",
+        "maintainer automation",
+        "security workflow"
+      ],
+      "source": "https://developers.openai.com/community/codex-for-oss",
+      "limitation": "Application does not itself prove acceptance or Codex Security entitlement."
+    },
+    {
+      "id": "github-open-source-programs",
+      "provider": "GitHub",
+      "type": "open_source_ecosystem_programs",
+      "current_status": "RESEARCH_VERIFIED",
+      "program_surfaces": [
+        "GitHub Fund",
+        "Secure Open Source Fund",
+        "GitHub Sponsors",
+        "Maintainer Community",
+        "GitHub Security Lab"
+      ],
+      "architectural_relevance": [
+        "repository network funding",
+        "open-source security work",
+        "maintainer support",
+        "ecosystem visibility"
+      ],
+      "source": "https://github.com/open-source",
+      "limitation": "Each program has separate eligibility and application/participation rules."
+    },
+    {
+      "id": "github-sponsors",
+      "provider": "GitHub",
+      "type": "maintainer_funding",
+      "current_status": "RESEARCH_VERIFIED",
+      "benefit": "Financial support for eligible open-source maintainers and organizations.",
+      "architectural_relevance": [
+        "sustainable repository maintenance",
+        "network-level open-source funding"
+      ],
+      "source": "https://github.com/sponsors",
+      "limitation": "Receiving funds depends on supported-region and account eligibility."
+    },
+    {
+      "id": "microsoft-for-startups",
+      "provider": "Microsoft",
+      "type": "startup_program",
+      "current_status": "RESEARCH_VERIFIED",
+      "benefits": [
+        "Azure startup credits",
+        "Azure AI capabilities",
+        "Azure services",
+        "Microsoft Marketplace and co-sell opportunities",
+        "startup technical and go-to-market support"
+      ],
+      "credit_path": "Up to $150,000 over time under current standard progression; investor-network-backed startups may receive expanded benefits.",
+      "architectural_relevance": [
+        "AI runtime infrastructure",
+        "cloud compute",
+        "enterprise deployment",
+        "marketplace distribution"
+      ],
+      "source": "https://learn.microsoft.com/en-us/startups/microsoft-for-startups/getting-started-mfs",
+      "limitation": "Credit progression depends on verified progress, service adoption and sustained Azure usage."
+    }
+  ],
+  "next_actions": [
+    "validate eligibility against actual repository ownership, public activity and maintainer role",
+    "prepare one canonical HyperAI ecosystem program packet",
+    "apply first to programs whose requirements match the existing public repository network",
+    "record application IDs and outcomes as evidence events"
+  ]
+}
